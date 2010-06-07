@@ -9,7 +9,9 @@ package org.lcx.robotframework.eclipse.launcher;
  * Contributors:
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
-
+/*******************************************************************************
+ * Modified for Robotframework Eclipe Library purpose
+ *******************************************************************************/
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -18,8 +20,6 @@ import java.security.*;
 import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-
-import org.apache.log4j.Logger;
 
 /**
  * The launcher for Eclipse.
@@ -33,9 +33,16 @@ import org.apache.log4j.Logger;
  * @noextend This class is not intended to be subclassed by clients.
  * @noinstantiate This class is not intended to be instantiated by clients.
  */
+@SuppressWarnings("unchecked")
 public class EclipseMain {
 	
+	/**
+	 * Added for Robotframework Eclipe Library purpose
+	 */
 	public static Class<?> starter;
+	/**
+	 * Added for Robotframework Eclipe Library purpose
+	 */
 	public static ClassLoader classLoader;
 
 	/**
@@ -559,6 +566,9 @@ public class EclipseMain {
 			parent = this.getClass().getClassLoader();
 		URLClassLoader loader = new StartupClassLoader(bootPath, parent);
 		Class clazz = loader.loadClass(STARTER);
+		/**
+		 * Added for Robotframework Eclipe Library purpose
+		 */
 		starter = clazz;
 		classLoader = loader;
 		Method method = clazz.getDeclaredMethod("run", new Class[] {String[].class, Runnable.class}); //$NON-NLS-1$
@@ -573,7 +583,6 @@ public class EclipseMain {
 				//could be a subclass of Throwable!
 				throw e;
 		}
-		System.out.println("starter="+starter);
 	}
 
 	/**

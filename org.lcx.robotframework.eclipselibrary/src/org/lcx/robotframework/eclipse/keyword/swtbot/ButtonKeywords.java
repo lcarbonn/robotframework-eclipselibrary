@@ -13,7 +13,7 @@ public class ButtonKeywords {
             + "| Click On Button | mnemonicText |\n")
     @ArgumentNames({"mnemonicText"})
         public void clickOnButton(String mnemonicText) throws Exception {
-    	SWTWorkbenchBot bot = new SWTWorkbenchBot();
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	bot.button(mnemonicText).click();
     }
 	
@@ -21,8 +21,9 @@ public class ButtonKeywords {
             + "Example:\n"
             + "| Click On Indexed Button | index |\n")
     @ArgumentNames({"index"})
-        public void clickOnIndexedButton(int index) throws Exception {
-    	SWTWorkbenchBot bot = new SWTWorkbenchBot();
-    	bot.button(index).click();
+        public void clickOnIndexedButton(String index) throws Exception {
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+    	int indexI = Integer.valueOf(index).intValue();
+    	bot.button(indexI).click();
     }
 }

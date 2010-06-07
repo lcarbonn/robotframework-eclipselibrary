@@ -12,5 +12,4 @@ public class SWTBotList extends SWTBotWidget {
 	public void select(String... items) throws SWTBotBridgeException {
 		SWTBotBridge.callMethod(widget, "select", (Object[])items);
 	}
-
 }

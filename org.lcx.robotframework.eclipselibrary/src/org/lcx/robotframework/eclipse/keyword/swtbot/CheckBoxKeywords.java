@@ -13,7 +13,7 @@ public class CheckBoxKeywords {
             + "| Click On Checkbox | mnemonicText |\n")
     @ArgumentNames({"mnemonicText"})
         public void clickOnCheckbox(String mnemonicText) throws Exception {
-    	SWTWorkbenchBot bot = new SWTWorkbenchBot();
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	bot.checkBox(mnemonicText).click();
     }
 	

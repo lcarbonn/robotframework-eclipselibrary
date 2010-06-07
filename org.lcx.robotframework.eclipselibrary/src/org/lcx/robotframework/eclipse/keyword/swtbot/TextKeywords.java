@@ -14,8 +14,8 @@ public class TextKeywords {
             + "| Insert Into Textfield | username | foo |\n")
     @ArgumentNames({"label", "text"})
         public void insertIntoTextfield(String label, String text) throws Exception {
-    	SWTWorkbenchBot bot = new SWTWorkbenchBot();
-    	SWTBotText t = bot.text(label);
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+    	SWTBotText t = bot.textWithLabel(label);
     	t.setText(text);
     }	
 	
