@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.lcx.robotframework.swtbot_feature_1.0.0.201006061939.jar" id="org.lcx.robotframework.swtbot_feature" version="1.0.0.201006061939">
+      <category name="swtbotplugin"/>
+   </feature>
+   <category-def name="swtbotplugin" label="swtbotplugin"/>
+</site>
