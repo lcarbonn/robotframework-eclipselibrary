@@ -14,7 +14,7 @@ public class TableKeywords {
             + "| Select Items On Table | item1 | item2 | ... \n")
     @ArgumentNames({"*itemsLabel"})
         public void selectItemsOnTable(String[] itemsLabel) throws Exception {
-    	SWTWorkbenchBot bot = new SWTWorkbenchBot();
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotTable table = bot.table();
     	table.select(itemsLabel);
     }

@@ -14,7 +14,7 @@ public class ShellKeywords {
             + "| Activate Shell | Add Task Repository |\n")
     @ArgumentNames({"text"})
         public void activateShell(String text) throws Exception {
-    	SWTWorkbenchBot bot = new SWTWorkbenchBot();
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotShell s = bot.shell(text);
     	s.activate();
     }	

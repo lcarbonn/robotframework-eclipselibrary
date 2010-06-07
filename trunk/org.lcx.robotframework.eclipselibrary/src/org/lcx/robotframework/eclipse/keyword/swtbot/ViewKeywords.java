@@ -13,7 +13,7 @@ public class ViewKeywords {
             + "| Click On View Toolbarbutton | Task Repositories | Add Task Repository... | \n")
     @ArgumentNames({"viewLabel", "toolbarLabel"})
         public void clickOnViewToolbarbutton(String viewLabel, String toolbarLabel) throws Exception {
-    	SWTWorkbenchBot bot = new SWTWorkbenchBot();
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	bot.viewByTitle(viewLabel).toolbarButton(toolbarLabel).click();
     }	
 	
