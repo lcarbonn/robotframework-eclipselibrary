@@ -6,11 +6,11 @@ import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
-import org.lcx.robotframework.swtbot.swt.finder.widget.SWTBotWidget;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 
 public class Conditions  {
 	
-	public static ICondition widgetIsEnabled(SWTWorkbenchBot SWTWorkbenchBot, SWTBotWidget widget) 
+	public static ICondition widgetIsEnabled(SWTWorkbenchBot SWTWorkbenchBot, AbstractSWTBotControl widget) 
 		throws SWTBotBridgeException {
 		try {
 			Class<?> c = SWTBotBridge.loadClass("org.eclipse.swtbot.eclipse.finder.waits.Conditions");

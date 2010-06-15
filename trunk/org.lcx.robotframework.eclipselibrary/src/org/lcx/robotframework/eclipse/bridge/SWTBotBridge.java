@@ -27,9 +27,9 @@ public class SWTBotBridge {
 				}
 				
 				// Eclipse is running?
-				Method isRunning = EclipseMain.starter.getDeclaredMethod("isRunning");
-				Object brunning = isRunning.invoke(EclipseMain.starter);
-				if(debug) System.out.println("Eclipse is running="+brunning);
+//				Method isRunning = EclipseMain.starter.getDeclaredMethod("isRunning");
+//				Object brunning = isRunning.invoke(EclipseMain.starter);
+//				if(debug) System.out.println("Eclipse is running="+brunning);
 	
 				//getSystemBundleContext
 				Method getSystemBundleContext = EclipseMain.starter.getDeclaredMethod("getSystemBundleContext");
@@ -143,11 +143,11 @@ public class SWTBotBridge {
 //					}
 //				}
 	
-				System.out.println("called static method="+methodName);
-				for (int i = 0; i < parameters.length; i++) {
-					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
-				}
-				System.out.println("\t of class="+className);
+//				System.out.println("called static method="+methodName);
+//				for (int i = 0; i < parameters.length; i++) {
+//					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
+//				}
+//				System.out.println("\t of class="+className);
 			}
 			
 			Class<?> c = loadClass(className);
@@ -168,6 +168,9 @@ public class SWTBotBridge {
 		if(debug) System.out.println("=====================================");
 		
 		try {
+			if(parameters.getClass().isArray()) {
+				return callMethodWithArray(instance, methodName, parameters);
+			}
 			Class<?>[] parameterTypes = new Class[parameters.length];
 			for (int i = 0; i < parameters.length; i++) {
 				if(parameters[i] instanceof Class<?> ) {
@@ -183,11 +186,11 @@ public class SWTBotBridge {
 //					}
 //				}
 	
-				System.out.println("called method="+methodName);
-				for (int i = 0; i < parameters.length; i++) {
-					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
-				}
-				System.out.println("\t on instance of class="+instance.getClass().getName());
+//				System.out.println("called method="+methodName);
+//				for (int i = 0; i < parameters.length; i++) {
+//					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
+//				}
+//				System.out.println("\t on instance of class="+instance.getClass().getName());
 			}
 			
 			Method method = instance.getClass().getMethod(methodName, parameterTypes);
