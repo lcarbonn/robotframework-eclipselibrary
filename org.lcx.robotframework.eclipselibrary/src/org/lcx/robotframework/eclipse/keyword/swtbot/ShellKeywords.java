@@ -1,7 +1,7 @@
 package org.lcx.robotframework.eclipse.keyword.swtbot;
 
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
-import org.lcx.robotframework.swtbot.swt.finder.widget.SWTBotShell;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotShell;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;

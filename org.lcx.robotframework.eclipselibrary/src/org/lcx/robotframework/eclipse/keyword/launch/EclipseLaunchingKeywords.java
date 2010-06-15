@@ -5,6 +5,7 @@
 package org.lcx.robotframework.eclipse.keyword.launch;
 
 import java.lang.Thread.UncaughtExceptionHandler;
+import java.lang.reflect.Method;
 
 import org.lcx.robotframework.eclipse.launcher.EclipseMain;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -56,18 +57,26 @@ public class EclipseLaunchingKeywords {
     	et.setUncaughtExceptionHandler(eh);
     	et.start();
 
-    	boolean forcedTimeout = false;
+		long timeout = 1000 * 60;
         for (int i = 0; i < args.length; i++) {
 //			System.out.println("args="+args[i]);
 			if(args[i].equals(TIMEOUT) && i<(args.length-1)) {
-				long timeout = Long.parseLong(args[i+1]);
-				Thread.sleep(timeout);
-				forcedTimeout = true;
-				System.out.println("timeout="+timeout);
+				timeout = Long.parseLong(args[i+1]);
+//				System.out.println("timeout="+timeout);
 			}
 		}
-        if(!forcedTimeout) {
-			Thread.sleep(1000 * 20);
+
+        boolean run = true;
+        long start = System.currentTimeMillis();
+        long end = start;
+        while(run && ((end-start)<timeout)) {
+			// Is Eclipse is running?
+        	Thread.sleep(1000);
+			Method method = EclipseMain.starter.getDeclaredMethod("isRunning");
+			boolean isRunning = ((Boolean)method.invoke(EclipseMain.starter)).booleanValue();
+//			if(debug) System.out.println("Eclipse is running="+isRunning);
+			if(isRunning) run = false;
+			end = System.currentTimeMillis();
         }
     	
     	return et;

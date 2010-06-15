@@ -4,7 +4,7 @@ import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.lcx.robotframework.swtbot.eclipse.finder.waits.Conditions;
 import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
-import org.lcx.robotframework.swtbot.swt.finder.widget.SWTBotWidget;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
@@ -19,7 +19,7 @@ public class WaitKeywords {
         public void waitUntilLastWidgetIsEnabled(String timeout) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	long timeoutL = Long.valueOf(timeout).longValue();
-    	SWTBotWidget widget = Context.getCurrentWidget();
+    	AbstractSWTBotControl widget = Context.getCurrentWidget();
 		ICondition condition = Conditions.widgetIsEnabled(bot, widget);
 		bot.waitUntil(condition, timeoutL);
     }

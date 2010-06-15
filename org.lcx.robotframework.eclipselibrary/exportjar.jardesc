@@ -11,8 +11,9 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <javaElement handleIdentifier="=org.lcx.robotframework.eclipselibrary/src"/>
         <folder path="/org.lcx.robotframework.eclipselibrary/lib"/>
+        <javaElement handleIdentifier="=org.lcx.robotframework.eclipselibrary/gensrc"/>
+        <javaElement handleIdentifier="=org.lcx.robotframework.eclipselibrary/src"/>
         <file path="/org.lcx.robotframework.eclipselibrary/log4j.properties"/>
     </selectedElements>
 </jardesc>
