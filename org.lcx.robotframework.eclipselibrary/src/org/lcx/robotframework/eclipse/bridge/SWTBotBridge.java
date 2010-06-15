@@ -168,9 +168,6 @@ public class SWTBotBridge {
 		if(debug) System.out.println("=====================================");
 		
 		try {
-			if(parameters.getClass().isArray()) {
-				return callMethodWithArray(instance, methodName, parameters);
-			}
 			Class<?>[] parameterTypes = new Class[parameters.length];
 			for (int i = 0; i < parameters.length; i++) {
 				if(parameters[i] instanceof Class<?> ) {
