@@ -2,7 +2,7 @@ package org.lcx.robotframework.swtbot.commons;
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
 
-public class AbstractSWTBotObject {
+public class AbstractSWTBotObject implements ISWTBotObject {
 
 	// the distant object on which reflection is made
 	protected Object distantObject;
@@ -11,7 +11,7 @@ public class AbstractSWTBotObject {
 		distantObject = o;
 	}
 
-	public Object getWidget() {
+	public Object getDistantObject() {
 		return distantObject;
 	}
 	

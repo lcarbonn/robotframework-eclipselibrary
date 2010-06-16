@@ -18,7 +18,7 @@ public class Conditions  {
 			Method method = c.getMethod("widgetIsEnabled", paramType);
 			method.setAccessible(true);
 			
-			Object o = method.invoke(null, widget.getWidget());
+			Object o = method.invoke(null, widget.getDistantObject());
 			Condition cond = new Condition(o);
 			return cond;
 		} catch (Exception e) {
