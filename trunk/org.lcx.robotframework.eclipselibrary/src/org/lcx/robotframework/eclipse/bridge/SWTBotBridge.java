@@ -4,6 +4,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 import org.lcx.robotframework.eclipse.launcher.EclipseMain;
+import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
+import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
 
 public class SWTBotBridge {
 
@@ -163,17 +165,23 @@ public class SWTBotBridge {
 		}
 	}
 	
-
 	public static Object callMethod(Object instance, String methodName, Object... parameters) throws SWTBotBridgeException {
 		if(debug) System.out.println("=====================================");
 		
 		try {
+			Object[] params = new Object[parameters.length];
 			Class<?>[] parameterTypes = new Class[parameters.length];
 			for (int i = 0; i < parameters.length; i++) {
 				if(parameters[i] instanceof Class<?> ) {
 					throw new SWTBotBridgeException("Object is a class, should call another method");
 				}
-				parameterTypes[i] = getClass(parameters[i]);
+				if(parameters[i] instanceof ICondition) {
+					parameterTypes[i] = loadClass("org.eclipse.swtbot.swt.finder.waits.ICondition");
+					params[i] = ((AbstractSWTBotObject)parameters[i]).getDistantObject();
+				} else {
+					parameterTypes[i] = getClass(parameters[i]);
+					params[i] = parameters[i];
+				}
 			}
 			if(debug) {
 //				for(Method m : instance.getClass().getMethods()) {
@@ -193,7 +201,7 @@ public class SWTBotBridge {
 			Method method = instance.getClass().getMethod(methodName, parameterTypes);
 			method.setAccessible(true);
 			
-			Object o = method.invoke(instance, parameters);
+			Object o = method.invoke(instance, params);
 			return o;
 		} catch (Exception e) {
 			e.printStackTrace();
