@@ -1,6 +1,8 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
+import java.util.List;
+
 import org.lcx.robotframework.swtbot.swt.finder.utils.Position;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
@@ -38,9 +40,9 @@ public class SWTBotStyledText extends AbstractSWTBotControl {
 	//public org.eclipse.swt.custom.Bullet org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotStyledText.getBulletOnLine(int)
 	//public org.eclipse.swt.graphics.RGB org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotStyledText.getLineBackground(int)
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotStyledText.getLines()
+	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> getLines() throws SWTBotBridgeException {
-//TODO: type=java.util.List<java.lang.String>
-		 return null;
+		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "getLines");
 	}
 
 	//public org.eclipse.swt.custom.StyleRange[] org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotStyledText.getStyles(int,int,int)

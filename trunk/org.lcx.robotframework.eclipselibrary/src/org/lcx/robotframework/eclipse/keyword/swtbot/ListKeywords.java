@@ -1,5 +1,7 @@
 package org.lcx.robotframework.eclipse.keyword.swtbot;
 
+import static org.junit.Assert.assertTrue;
+
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotList;
@@ -47,5 +49,23 @@ public class ListKeywords {
     	SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     	list.select(itemsLabel);
     }
+    
+    @RobotKeyword("Lines of indexed list should be equal to the givens text.\n\n"
+            + "Example:\n"
+            + "| List Lines Should Be Equal | 0 | line1 | line2 |\n")
+    @ArgumentNames({"index", "*lines"})
+        public void listLinesShouldBeEqual(String index, String... lines) throws Exception {
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+    	int indexI = Integer.valueOf(index).intValue();
+    	String[] ls = bot.list(indexI).getItems();
+    	for (String string : ls) {
+			System.out.println("line="+string);
+		}
+    	assertTrue(ls.length==lines.length);
+    	int i=0;
+    	for (String s : ls) {
+    		assertTrue(s.equals(lines[i++]));
+    	}
+    }	
 
 }

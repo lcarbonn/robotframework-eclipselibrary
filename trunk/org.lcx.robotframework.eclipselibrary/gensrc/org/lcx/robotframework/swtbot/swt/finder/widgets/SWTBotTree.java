@@ -1,6 +1,8 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
+import java.util.List;
+
 import org.lcx.robotframework.swtbot.swt.finder.utils.TableCollection;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
@@ -55,8 +57,8 @@ public class SWTBotTree extends AbstractSWTBotControl {
 
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem[] org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTree.getAllItems()
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem[] getAllItems() throws SWTBotBridgeException {
-//TODO: class=class [Lorg.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem;
-		 return null;
+		SWTBotTreeItem[] o = (SWTBotTreeItem[])SWTBotBridge.callMethodReturnSWTBotArray(distantObject, "getItems", SWTBotTreeItem.class);
+		return o;
 	}
 
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTree.getTreeItem(java.lang.String) throws org.lcx.robotframework.swtbot.swt.finder.exceptions.WidgetNotFoundException
@@ -108,9 +110,9 @@ public class SWTBotTree extends AbstractSWTBotControl {
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTree.columns()
+	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> columns() throws SWTBotBridgeException {
-//TODO: type=java.util.List<java.lang.String>
-		 return null;
+		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "columns");
 	}
 
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTree org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTree.unselect()
