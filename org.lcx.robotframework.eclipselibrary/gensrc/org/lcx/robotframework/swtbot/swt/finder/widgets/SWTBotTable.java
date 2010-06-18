@@ -1,6 +1,8 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
+import java.util.List;
+
 import org.lcx.robotframework.swtbot.swt.finder.utils.TableCollection;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
@@ -111,9 +113,9 @@ public class SWTBotTable extends AbstractSWTBotControl {
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.columns()
+	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> columns() throws SWTBotBridgeException {
-//TODO: type=java.util.List<java.lang.String>
-		 return null;
+		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "columns");
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.unselect()

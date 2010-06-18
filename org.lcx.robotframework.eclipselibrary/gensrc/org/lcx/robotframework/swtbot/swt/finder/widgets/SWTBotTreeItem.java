@@ -1,6 +1,8 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
+import java.util.List;
+
 import org.lcx.robotframework.swtbot.swt.finder.utils.TableRow;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
@@ -21,8 +23,8 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem[] org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.getItems()
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem[] getItems() throws SWTBotBridgeException {
-//TODO: class=class [Lorg.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem;
-		 return null;
+		SWTBotTreeItem[] o = (SWTBotTreeItem[])SWTBotBridge.callMethodReturnSWTBotArray(distantObject, "getItems", SWTBotTreeItem.class);
+		return o;
 	}
 
 	//public boolean org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.isChecked()
@@ -82,15 +84,15 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.getNodes(java.lang.String)
+	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem> getNodes(java.lang.String param0) throws SWTBotBridgeException {
-//TODO: type=java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem>
-		 return null;
+		 return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "getNodes", SWTBotTreeItem.class, param0);
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.getNodes()
+	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> getNodes() throws SWTBotBridgeException {
-//TODO: type=java.util.List<java.lang.String>
-		 return null;
+		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "columns");
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.check()

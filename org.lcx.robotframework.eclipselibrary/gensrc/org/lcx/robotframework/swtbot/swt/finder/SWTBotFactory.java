@@ -1,6 +1,8 @@
 package org.lcx.robotframework.swtbot.swt.finder;
 
 
+import java.util.List;
+
 import org.lcx.robotframework.swtbot.eclipse.finder.AbstractSWTBotFactory;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.finders.Finder;
@@ -144,8 +146,8 @@ public class SWTBotFactory extends AbstractSWTBotFactory {
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory.shells(java.lang.String,org.eclipse.swt.widgets.Shell)
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotShell[] org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory.shells()
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotShell[] shells() throws SWTBotBridgeException {
-		//TODO: class=class [Lorg.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotShell;
-		 return null;
+		SWTBotShell[] o = (SWTBotShell[])SWTBotBridge.callMethodReturnSWTBotArray(distantObject, "shells", SWTBotShell.class);
+		return o;
 	}
 
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTrayItem org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory.trayItem()
@@ -181,15 +183,15 @@ public class SWTBotFactory extends AbstractSWTBotFactory {
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory.trayItems(org.hamcrest.Matcher)
+	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTrayItem> trayItems(org.hamcrest.Matcher<?> param0) throws SWTBotBridgeException {
-		//TODO: type=java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTrayItem>
-		 return null;
+		 return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "trayItems", SWTBotTrayItem.class, param0);
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory.trayItems()
+	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTrayItem> trayItems() throws SWTBotBridgeException {
-		//TODO: type=java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTrayItem>
-		 return null;
+		 return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "trayItems", SWTBotTrayItem.class);
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory.waitUntil(org.lcx.robotframework.swtbot.swt.finder.waits.ICondition) throws org.lcx.robotframework.swtbot.swt.finder.widgets.TimeoutException

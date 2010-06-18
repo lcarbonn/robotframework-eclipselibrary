@@ -2,6 +2,8 @@ package org.lcx.robotframework.eclipse.bridge;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.lcx.robotframework.eclipse.launcher.EclipseMain;
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
@@ -232,6 +234,46 @@ public class SWTBotBridge {
 			return o;
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new SWTBotBridgeException(e);
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	public static List<?> callMethodReturnPrimitiveList(Object instance, String methodName, Object... parameters) throws SWTBotBridgeException {
+		List ls = new ArrayList();
+		Object o = SWTBotBridge.callMethod(instance, methodName);
+
+		Object iterator = SWTBotBridge.callMethod(o, "iterator");
+		while((Boolean)SWTBotBridge.callMethod(iterator, "hasNext")) {
+			Object item = SWTBotBridge.callMethod(iterator, "next");
+
+			System.out.println("line="+item);
+
+			ls.add(item);
+		}
+		return ls;
+
+	}
+	
+	public static List<?> callMethodReturnSWTBotList(Object instance, String methodName, Class<?> clazz, Object... parameters) throws SWTBotBridgeException {
+		try {
+			List<Object> ls = new ArrayList<Object>();
+			Object[] o = (Object[])SWTBotBridge.callMethod(instance, methodName);
+			for (Object distO : o) {
+				Constructor<?> c = clazz.getDeclaredConstructor(Object.class);
+				AbstractSWTBotObject localO = (AbstractSWTBotObject)c.newInstance(distO);
+				ls.add(localO);
+			}
+			return ls;
+		} catch (Exception e) {
+			throw new SWTBotBridgeException(e);
+		}
+	}
+
+	public static Object[] callMethodReturnSWTBotArray(Object instance, String methodName, Class<?> clazz, Object... parameters) throws SWTBotBridgeException {
+		try {
+			return callMethodReturnSWTBotList(instance, methodName, clazz, parameters).toArray();
+		} catch (Exception e) {
 			throw new SWTBotBridgeException(e);
 		}
 	}

@@ -1,6 +1,8 @@
 package org.lcx.robotframework.swtbot.eclipse.finder.widgets;
 
 
+import java.util.List;
+
 import org.lcx.robotframework.swtbot.swt.finder.utils.Position;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotStyledText;
@@ -52,9 +54,9 @@ public class SWTBotEclipseEditor extends SWTBotWorkbenchPart {
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor.getAutoCompleteProposals(java.lang.String)
+	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> getAutoCompleteProposals(java.lang.String param0) throws SWTBotBridgeException {
-		//TODO: type=java.util.List<java.lang.String>
-		 return null;
+		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "getAutoCompleteProposals");
 	}
 
 	//public org.eclipse.swt.custom.Bullet org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor.getBulletOnCurrentLine()
@@ -67,15 +69,15 @@ public class SWTBotEclipseEditor extends SWTBotWorkbenchPart {
 
 	//public org.eclipse.swt.graphics.RGB org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor.getLineBackground(int)
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor.getLines()
+	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> getLines() throws SWTBotBridgeException {
-		//TODO: type=java.util.List<java.lang.String>
-		 return null;
+		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "getLines");
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor.getQuickFixes()
+	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> getQuickFixes() throws SWTBotBridgeException {
-		//TODO: type=java.util.List<java.lang.String>
-		 return null;
+		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "getQuickFixes");
 	}
 
 	//public int org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor.getQuickfixListItemCount()
