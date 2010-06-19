@@ -1,9 +1,6 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
-import java.util.List;
-
-import org.lcx.robotframework.swtbot.swt.finder.utils.TableCollection;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
@@ -45,13 +42,13 @@ public class SWTBotTable extends AbstractSWTBotControl {
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.getTableItem(java.lang.String) throws org.lcx.robotframework.swtbot.swt.finder.exceptions.WidgetNotFoundException
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem getTableItem(java.lang.String param0) throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "getTableItem", param0);
-		return new SWTBotTableItem(o);
+		return new org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem(o);
 	}
 
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.getTableItem(int) throws org.lcx.robotframework.swtbot.swt.finder.exceptions.WidgetNotFoundException
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem getTableItem(int param0) throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "getTableItem", param0);
-		return new SWTBotTableItem(o);
+		return new org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem(o);
 	}
 
 	//public int org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.indexOfColumn(java.lang.String)
@@ -87,23 +84,23 @@ public class SWTBotTable extends AbstractSWTBotControl {
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableColumn org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.header(java.lang.String) throws org.lcx.robotframework.swtbot.swt.finder.exceptions.WidgetNotFoundException
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableColumn header(java.lang.String param0) throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "header", param0);
-		return new SWTBotTableColumn(o);
+		return new org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableColumn(o);
 	}
 
 	//public transient void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.select(int[])
 	public void select(int[] param0) throws SWTBotBridgeException {
-		SWTBotBridge.callMethodWithArray(distantObject, "select", (int[])param0);
+		SWTBotBridge.callMethod(distantObject, "select", (int[])param0);
 	}
 
 	//public transient void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.select(java.lang.String[])
 	public void select(java.lang.String[] param0) throws SWTBotBridgeException {
-		SWTBotBridge.callMethodWithArray(distantObject, "select", (Object[])param0);
+		SWTBotBridge.callMethod(distantObject, "select", (Object[])param0);
 	}
 
 	//public org.lcx.robotframework.swtbot.swt.finder.utils.TableCollection org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.selection()
 	public org.lcx.robotframework.swtbot.swt.finder.utils.TableCollection selection() throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "selection");
-		return new TableCollection(o);
+		return new org.lcx.robotframework.swtbot.swt.finder.utils.TableCollection(o);
 	}
 
 	//public int org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.columnCount()
@@ -115,7 +112,8 @@ public class SWTBotTable extends AbstractSWTBotControl {
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.columns()
 	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> columns() throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "columns");
+		return (java.util.List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "columns");
+
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable.unselect()

@@ -13,10 +13,10 @@ public class SWTBotShell extends AbstractSWTBotControl {
 	}
 
 	//public org.lcx.robotframework.swtbot.swt.finder.SWTBot org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotShell.bot()
-//	public org.lcx.robotframework.swtbot.swt.finder.SWTBot bot() throws SWTBotBridgeException {
-//		Object o = SWTBotBridge.callMethod(distantObject, "bot");
-//		return new SWTBot(o);
-//	}
+	public org.lcx.robotframework.swtbot.swt.finder.SWTBot bot() throws SWTBotBridgeException {
+		Object o = SWTBotBridge.callMethod(distantObject, "bot");
+		return new org.lcx.robotframework.swtbot.swt.finder.SWTBot(o);
+	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotShell.close() throws org.lcx.robotframework.swtbot.swt.finder.widgets.TimeoutException
 	public void close() throws SWTBotBridgeException {

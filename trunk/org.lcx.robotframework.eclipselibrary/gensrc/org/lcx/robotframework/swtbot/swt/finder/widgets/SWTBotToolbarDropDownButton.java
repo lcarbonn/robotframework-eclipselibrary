@@ -13,21 +13,11 @@ public class SWTBotToolbarDropDownButton extends AbstractSWTBotControl {
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarDropDownButton.menuItems(org.hamcrest.Matcher)
-//	public java.util.List<? extends org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu> menuItems(org.hamcrest.Matcher<org.eclipse.swt.widgets.MenuItem> param0) throws SWTBotBridgeException {
-//		//TODO: type=java.util.List<? extends org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu>
-//		 return null;
-//	}
-
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarDropDownButton.menuItem(org.hamcrest.Matcher)
-//	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu menuItem(org.hamcrest.Matcher<org.eclipse.swt.widgets.MenuItem> param0) throws SWTBotBridgeException {
-//		Object o = SWTBotBridge.callMethod(distantObject, "menuItem", param0);
-//		return new SWTBotMenu(o);
-//	}
-
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarDropDownButton.menuItem(java.lang.String)
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu menuItem(java.lang.String param0) throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "menuItem", param0);
-		return new SWTBotMenu(o);
+		return new org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu(o);
 	}
 
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarDropDownButton org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarDropDownButton.click()

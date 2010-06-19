@@ -1,9 +1,6 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
-import java.util.List;
-
-import org.lcx.robotframework.swtbot.swt.finder.utils.TableRow;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
@@ -18,13 +15,13 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.contextMenu(java.lang.String)
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu contextMenu(java.lang.String param0) throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "contextMenu", param0);
-		return new SWTBotMenu(o);
+		return new org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu(o);
 	}
 
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem[] org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.getItems()
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem[] getItems() throws SWTBotBridgeException {
-		SWTBotTreeItem[] o = (SWTBotTreeItem[])SWTBotBridge.callMethodReturnSWTBotArray(distantObject, "getItems", SWTBotTreeItem.class);
-		return o;
+		return (org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem[]) SWTBotBridge.callMethodReturnSWTBotArray(distantObject, "getItems", org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.class);
+
 	}
 
 	//public boolean org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.isChecked()
@@ -52,7 +49,7 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 	//public org.lcx.robotframework.swtbot.swt.finder.utils.TableRow org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.row()
 	public org.lcx.robotframework.swtbot.swt.finder.utils.TableRow row() throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "row");
-		return new TableRow(o);
+		return new org.lcx.robotframework.swtbot.swt.finder.utils.TableRow(o);
 	}
 
 	//public int org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.rowCount()
@@ -79,20 +76,22 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 
 	//public transient org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.expandNode(java.lang.String[])
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem expandNode(java.lang.String[] param0) throws SWTBotBridgeException {
-		distantObject = SWTBotBridge.callMethodWithArray(distantObject, "expandNode", (Object[])param0);
+		distantObject = SWTBotBridge.callMethod(distantObject, "expandNode", (Object[])param0);
 		return this;
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.getNodes(java.lang.String)
 	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem> getNodes(java.lang.String param0) throws SWTBotBridgeException {
-		 return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "getNodes", SWTBotTreeItem.class, param0);
+		return (java.util.List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "getNodes", param0);
+
 	}
 
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.getNodes()
 	@SuppressWarnings("unchecked")
 	public java.util.List<java.lang.String> getNodes() throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "columns");
+		return (java.util.List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "getNodes");
+
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.check()
@@ -143,7 +142,7 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 
 	//public transient org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.select(java.lang.String[])
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem select(java.lang.String[] param0) throws SWTBotBridgeException {
-		distantObject = SWTBotBridge.callMethodWithArray(distantObject, "select", (Object[])param0);
+		distantObject = SWTBotBridge.callMethod(distantObject, "select", (Object[])param0);
 		return this;
 	}
 

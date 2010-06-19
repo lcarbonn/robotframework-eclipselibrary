@@ -11,20 +11,20 @@ public class SWTBotEditor extends SWTBotWorkbenchPart {
 		super(o);
 	}
 
-	//public void org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor.saveAndClose()
-	public void saveAndClose() throws SWTBotBridgeException {
-		SWTBotBridge.callMethod(distantObject, "saveAndClose");
-	}
-
 	//public void org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor.setFocus()
 	public void setFocus() throws SWTBotBridgeException {
 		SWTBotBridge.callMethod(distantObject, "setFocus");
 	}
 
+	//public void org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor.saveAndClose()
+	public void saveAndClose() throws SWTBotBridgeException {
+		SWTBotBridge.callMethod(distantObject, "saveAndClose");
+	}
+
 	//public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor.toTextEditor()
 	public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor toTextEditor() throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "toTextEditor");
-		return new SWTBotEclipseEditor(o);
+		return new org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor(o);
 	}
 
 	//public void org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor.save()
