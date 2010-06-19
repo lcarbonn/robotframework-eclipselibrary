@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Date;
 
@@ -14,7 +15,15 @@ public class ClassScannerGen {
 	
 	public static String oldPackage = "org.eclipse.swtbot";
 	public static String newPackage = "org.lcx.robotframework.swtbot";
+	public static String swtbotEclipsePackage = "org.eclipse.swtbot.eclipse";
+	
 	public static String swtPackage = "org.eclipse.swt.";
+	public static String uiPackage = "org.eclipse.ui.";
+	public static String jfacePackage = "org.eclipse.jface.";
+	
+	public static String finderPackage = "org.eclipse.swtbot.swt.finder.finders";
+	public static String hamcrestPackage = "org.hamcrest";
+	public static String resultsPackage = "swtbot.swt.finder.results";
 
 	/**
 	 * @param args
@@ -28,7 +37,7 @@ public class ClassScannerGen {
 			
 //			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.AbstractSWTBot");
 //			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.AbstractSWTBotControl");
-/*			
+
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotButton");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotCCombo");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotCheckBox");
@@ -37,7 +46,7 @@ public class ClassScannerGen {
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotCTabItem");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotDateTime");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotLabel");
-			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotLink");
+//			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotLink");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotList");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotMenu");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotRadio");
@@ -60,28 +69,27 @@ public class ClassScannerGen {
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotTrayItem");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotTree");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem");
-*/
-//			scanner.scanClass("org.eclipse.swtbot.swt.finder.utils.Position", null, false);
-//			scanner.scanClass("org.eclipse.swtbot.swt.finder.utils.TableRow", null, false);
-//			scanner.scanClass("org.eclipse.swtbot.swt.finder.utils.TableCollection", null, false);
+
+			scanner.scanClass("org.eclipse.swtbot.swt.finder.utils.Position");
+			scanner.scanClass("org.eclipse.swtbot.swt.finder.utils.TableRow");
+			scanner.scanClass("org.eclipse.swtbot.swt.finder.utils.TableCollection");
 //			scanner.scanClass("org.eclipse.swtbot.swt.finder.finders.Finder", "AbstractSWTBotObject", true);
 			
-//			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart");
-//			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotCommand", "SWTBotWorkbenchPart", true);
-//			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor", "SWTBotWorkbenchPart", true);
-//			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotPerspective", "SWTBotWorkbenchPart", true);
-//			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView", "SWTBotWorkbenchPart", true);
-//			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEditor", "SWTBotWorkbenchPart", true);
-//			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotViewMenu");
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart");
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotCommand", "SWTBotWorkbenchPart", true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor", "SWTBotWorkbenchPart", true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotPerspective", "SWTBotWorkbenchPart", true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView", "SWTBotWorkbenchPart", true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEditor", "SWTBotWorkbenchPart", true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotViewMenu");
 
-//			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBotFactory", "AbstractSWTBotFactory", false);
-//			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBot", "SWTBotFactory", false);
+			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBotFactory", "AbstractSWTBotFactory", false);
+			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBot", "SWTBotFactory", false);
 			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot", "SWTBot", false);
 
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			// TODO: handle exception
 		}
 	}
 	
@@ -114,12 +122,36 @@ public class ClassScannerGen {
 		} else {
 			importsb.append("import org.lcx.robotframework.swtbot.eclipse.finder.AbstractSWTBotFactory;\n");
 			importsb.append("import org.lcx.robotframework.eclipse.context.Context;\n");
-			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.widgets.*;\n");
+//			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.widgets.*;\n");
+//			importsb.append("import org.lcx.robotframework.swtbot.eclipse.finder.widgets.*;\n");
+//			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.finders.Finder;\n");
+			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.SWTBot;\n");
+
 		}
 
 		importsb.append("import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;\n");
 		importsb.append("import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;\n");
 		
+		
+		if(className.equals("org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot")) {
+			
+			sb.append("\tprivate static SWTWorkbenchBot instance;\n\n");
+
+			sb.append("\tpublic static SWTWorkbenchBot getSWTWorkbenchBot() throws SWTBotBridgeException {\n");
+			sb.append("\t\tif(instance==null) {\n");
+			sb.append("\t\t\tinstance = new SWTWorkbenchBot();\n");
+			sb.append("\t\t}\n");
+			sb.append("\t\treturn instance;\n");
+			sb.append("\t}\n\n");
+
+			sb.append("\tpublic SWTWorkbenchBot() throws SWTBotBridgeException {\n");
+			sb.append("\t\tsuper(null);\n");
+			sb.append("\t\tSystem.out.println(\"Instanciation of SWTWorkbenchBot\");\n");
+			sb.append("\t\tdistantObject = SWTBotBridge.getSWTWorkbenchBot();\n");
+			sb.append("\t}\n\n");
+			
+			
+		}
 		// Constructor
 		if(widget) {
 	//		public SWTBotButton(Object o) {
@@ -135,45 +167,64 @@ public class ClassScannerGen {
 //				super();
 //			}
 			sb.append("\t");
-			sb.append("public "+name+"() throws SWTBotBridgeException {\n");
-			sb.append("\t\tsuper();\n");
+			sb.append("public "+name+"(Object o) throws SWTBotBridgeException {\n");
+			sb.append("\t\tsuper(o);\n");
 			sb.append("\t}\n\n");
 		}
 
 		for(Method m : clazz.getDeclaredMethods()) {
+			StringBuffer msb = new StringBuffer();
+			boolean addSuppressWarnings = false;
 			int modm = m.getModifiers();
 			if(Modifier.isPublic(modm) && !Modifier.isVolatile(modm)) {
 				System.out.println(m);
 				sb.append("\t//"+m+"\n");
+
+				// TODO : maybe one day !
 				if(m.toString().contains(swtPackage)) continue;
+				if(m.toString().contains(uiPackage)) continue;
+				if(m.toString().contains(hamcrestPackage)) continue;
+				if(m.toString().contains(resultsPackage)) continue;
+				if(m.toString().contains(finderPackage)) continue;
+				if(m.toString().contains(jfacePackage)) continue;
 				
-				sb.append("\tpublic ");
+				
+				if(m.getName().equals("toString") 
+						|| m.getName().equals("hashCode")
+						|| m.getName().equals("equals")) {
+					 continue;
+				}
+				
+				
+				msb.append("\tpublic ");
 				// return type
 				Type r = m.getGenericReturnType();
 				if(r instanceof Class<?>) {
 					Class<?> c = (Class<?>) r;
-					sb.append( getTypeName(c) );
+					msb.append( getTypeName(c) );
 				} else {
-					sb.append(r);
+					msb.append(r);
 				}
 				// method name
-				sb.append( " " + m .getName());
+				msb.append( " " + m .getName());
 				// parameters
-				sb.append("(");
+				msb.append("(");
 				int i = 0;
 				boolean first = true;
 				for(Type p : m.getGenericParameterTypes()) {
-					if(!first) sb.append(", ");
+					if(!first) msb.append(", ");
 					if(p instanceof Class<?>)
-						sb.append(getTypeName((Class<?>)p) + " param"+i++);
+						msb.append(getTypeName((Class<?>)p) + " param"+i++);
 					else 
-						sb.append(p.toString() + " param"+i++);
+						msb.append(p.toString() + " param"+i++);
 					first = false;
 				}
-
-				sb.append(") throws SWTBotBridgeException {\n");
+				msb.append(")");
+				
+				msb.append(" throws SWTBotBridgeException");
+				msb.append(" {\n");
 				// method source
-//				Type r = m.getGenericReturnType();
+
 				String instance = "distantObject";
 				if(r instanceof Class<?>) {
 					Class<?> c = (Class<?>) r;
@@ -181,25 +232,25 @@ public class ClassScannerGen {
 					if(c.getSimpleName().equals(name)) {
 //							widget = SWTBotBridge.callMethod(widget, "typeText", param0, param1);
 //							return this;
-						sb.append("\t\t"+instance+" = SWTBotBridge.callMethod("+instance+", \"");
-						sb.append(m.getName());
-						sb.append("\"");
-						printParam(m, sb);
-						sb.append(");\n");
-						sb.append("\t\treturn this;");
+						msb.append("\t\t"+instance+" = SWTBotBridge.callMethod("+instance+", \"");
+						msb.append(m.getName());
+						msb.append("\"");
+						printParam(m, msb);
+						msb.append(");\n");
+						msb.append("\t\treturn this;");
 					} else if(c.getPackage()!=null && c.getPackage().getName().startsWith(oldPackage)) {
 //						Object o = SWTBotBridge.callMethod(widget, "getTableItem", param0);
 //						return new SWTBotTableItem(o);
 						if(widget) {
 							// for widgets
-							sb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
-							sb.append(m.getName());
-							sb.append("\"");
-							printParam(m, sb);
-							sb.append(");\n");
-							sb.append("\t\treturn new ");
-							sb.append(c.getSimpleName());
-							sb.append("(o);");
+							msb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							printParam(m, msb);
+							msb.append(");\n");
+							msb.append("\t\treturn new ");
+							msb.append(c.getName());
+							msb.append("(o);");
 						} else {
 							// for bots
 	//						Object o = SWTBotBridge.callMethod(SWTWorkbenchBot, "viewByTitle", label);
@@ -207,91 +258,126 @@ public class ClassScannerGen {
 	//						Context.setCurrentWidget(w);
 	//						return w;
 							
-							sb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
-							sb.append(m.getName());
-							sb.append("\"");
-							printParam(m, sb);
-							sb.append(");\n");
-							sb.append("\t\t" + c.getSimpleName());
-							sb.append(" w = new ");
-							sb.append(c.getSimpleName());
-							sb.append("(o);\n");
-							sb.append("\t\tContext.setCurrentWidget(w);\n");
-							sb.append("\t\treturn w;");
+							msb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							printParam(m, msb);
+							msb.append(");\n");
+							msb.append("\t\t" + c.getName());
+							msb.append(" w = new ");
+							msb.append(c.getName());
+							msb.append("(o);\n");
+							if(!(c.getPackage().getName().startsWith(finderPackage))){
+								msb.append("\t\tContext.setCurrentWidget(w);\n");
+							}
+							msb.append("\t\treturn w;");
 						}
 						
 					} else {
 						if(c.equals(String.class)) {
-							sb.append("\t\treturn (String)SWTBotBridge.callMethod("+instance+", \"");
-							sb.append(m.getName());
-							sb.append("\"");
-							printParam(m, sb);
-							sb.append(");");
+							msb.append("\t\treturn (String)SWTBotBridge.callMethod("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							printParam(m, msb);
+							msb.append(");");
 						} else if (c.equals(void.class)) {
 //							SWTBotBridge.callMethod(widget, "setDate", param0);
-							sb.append("\t\tSWTBotBridge.callMethod("+instance+", \"");
-							sb.append(m.getName());
-							sb.append("\"");
-							printParam(m, sb);
-							sb.append(");");
+							msb.append("\t\tSWTBotBridge.callMethod("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							printParam(m, msb);
+							msb.append(");");
 						
 						} else if (c.equals(int.class)) {
 //								Integer i = (Integer)SWTBotBridge.callMethod(widget, "isActive");
 //								return i.intValue();
-							sb.append("\t\tInteger i = (Integer)SWTBotBridge.callMethod("+instance+", \"");
-							sb.append(m.getName());
-							sb.append("\"");
-							printParam(m, sb);
-							sb.append(");\n");
-							sb.append("\t\treturn i.intValue();");
+							msb.append("\t\tInteger i = (Integer)SWTBotBridge.callMethod("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							printParam(m, msb);
+							msb.append(");\n");
+							msb.append("\t\treturn i.intValue();");
 							
 						} else if (c.equals(boolean.class)) {
 //								Boolean b = (Boolean)SWTBotBridge.callMethod(widget, "isActive");
 //								return b.booleanValue();
-							sb.append("\t\tBoolean b = (Boolean)SWTBotBridge.callMethod("+instance+", \"");
-							sb.append(m.getName());
-							sb.append("\"");
-							printParam(m, sb);
-							sb.append(");\n");
-							sb.append("\t\treturn b.booleanValue();");
+							msb.append("\t\tBoolean b = (Boolean)SWTBotBridge.callMethod("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							printParam(m, msb);
+							msb.append(");\n");
+							msb.append("\t\treturn b.booleanValue();");
 						} else if (c.equals(Date.class)) {
 //							Object o = SWTBotBridge.callMethod(widget, "getDate");
 ////							date.getTime()
 //							Long l = (Long)SWTBotBridge.callMethod(o, "getTime");
 //							Date date = new Date(l.longValue());
 //							return date;
-							sb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
-							sb.append(m.getName());
-							sb.append("\"");
-							printParam(m, sb);
-							sb.append(");\n");
-							sb.append("\t\tLong l = (Long)SWTBotBridge.callMethod(o, \"getTime\");\n");
-							sb.append("\t\tjava.util.Date date = new java.util.Date(l.longValue());\n");
-							sb.append("\t\treturn date;");
+							msb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							printParam(m, msb);
+							msb.append(");\n");
+							msb.append("\t\tLong l = (Long)SWTBotBridge.callMethod(o, \"getTime\");\n");
+							msb.append("\t\tjava.util.Date date = new java.util.Date(l.longValue());\n");
+							msb.append("\t\treturn date;");
 						} else if (c.equals(String[].class)) {
 //							String[] o = (String[])SWTBotBridge.callMethod(widget, "items");
 //							return o;
-							sb.append("\t\tString[] o = (String[])SWTBotBridge.callMethod("+instance+", \"");
-							sb.append(m.getName());
-							sb.append("\"");
-							printParam(m, sb);
-							sb.append(");\n");
-							sb.append("\t\treturn o;");
+							msb.append("\t\tString[] o = (String[])SWTBotBridge.callMethod("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							printParam(m, msb);
+							msb.append(");\n");
+							msb.append("\t\treturn o;");
+						} else if (c.isArray()) {
+							//return (clazz[])SWTBotBridge.callMethodReturnSWTBotArray(instance, methodName, clazz, parameters);
+							// TODO : if primitive or not and if array
+							Class<?> type = (Class<?>)c.getComponentType();
+							System.out.println(type);
+							msb.append("\t\treturn ("+type.getName());
+							msb.append("[]) SWTBotBridge.callMethodReturnSWTBotArray("+instance+", \"");
+							msb.append(m.getName());
+							msb.append("\"");
+							msb.append(", ");
+							msb.append(type.getName()+".class");
+//							msb.append(", "+arraytype.class);
+							printParam(m, msb);
+							msb.append(");\n");
 						} else {
-							sb.append("\t\t//TODO: class="+c);
-							sb.append("\n\t\t return null;");
+						
+							msb.append("\t\t//TODO: class="+c);
+							msb.append("\n\t\t return null;");
 						}
 					}
 				} else {
-					sb.append("\t\t//TODO: type="+r);
-					sb.append("\n\t\t return null;");
+//					System.out.println("class="+((ParameterizedType)r).getClass());
+//					System.out.println("raw  ="+((ParameterizedType)r).getRawType());
+//					System.out.println("owner="+((ParameterizedType)r).getOwnerType());
+					if (((ParameterizedType)r).getRawType().equals(java.util.List.class)) {
+						//return (List<String>)SWTBotBridge.callMethodList(distantObject, "getLines");
+						// TODO : if primitive or not and if array
+						msb.append("\t\treturn (java.util.List)SWTBotBridge.callMethodReturnPrimitiveList("+instance+", \"");
+						msb.append(m.getName());
+						msb.append("\"");
+						printParam(m, msb);
+						msb.append(");\n");
+						addSuppressWarnings=true;
+					} else {
+						msb.append("\t\t//TODO: type="+r);
+						msb.append("\n\t\t return null;");
+					}
 				}
 				
-				sb.append("\n\t}\n");
-				sb.append("\n");
-			} else {
-				
+				msb.append("\n\t}\n");
+				msb.append("\n");
 			}
+			
+			if(addSuppressWarnings) {
+				sb.append("\t@SuppressWarnings(\"unchecked\")\n");
+			}
+			sb.append(msb.toString());
+
 		}
 		
 		sb.append("\n}\n");
