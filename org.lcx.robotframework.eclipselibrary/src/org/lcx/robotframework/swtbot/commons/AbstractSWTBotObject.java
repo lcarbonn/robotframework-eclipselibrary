@@ -24,5 +24,23 @@ public class AbstractSWTBotObject implements ISWTBotObject {
 		}
 	}
 	
+	public int hashCode() {
+		try {
+			Integer i = (Integer)SWTBotBridge.callMethod(distantObject, "hashCode");
+			return i.intValue();
+		} catch (Exception e) {
+			return -1;
+		}
+	}
+
+	public boolean equals(java.lang.Object param0) {
+		try {
+			Boolean b = (Boolean)SWTBotBridge.callMethod(distantObject, "equals", param0);
+			return b.booleanValue();
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
 	
 }

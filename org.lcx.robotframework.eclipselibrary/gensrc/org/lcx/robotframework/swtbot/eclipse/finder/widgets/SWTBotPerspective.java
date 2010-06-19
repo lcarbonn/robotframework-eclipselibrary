@@ -12,14 +12,6 @@ public class SWTBotPerspective extends SWTBotWorkbenchPart {
 	}
 
 	//public java.lang.String org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective.toString()
-	public java.lang.String toString() {
-		try {
-			return (String)SWTBotBridge.callMethod(distantObject, "toString");
-		} catch (Exception e) {
-			return e.toString();
-		}
-	}
-
 	//public boolean org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective.isActive()
 	public boolean isActive() throws SWTBotBridgeException {
 		Boolean b = (Boolean)SWTBotBridge.callMethod(distantObject, "isActive");

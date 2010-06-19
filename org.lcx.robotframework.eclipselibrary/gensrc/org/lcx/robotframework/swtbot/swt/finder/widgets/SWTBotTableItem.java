@@ -15,7 +15,7 @@ public class SWTBotTableItem extends AbstractSWTBotControl {
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem.contextMenu(java.lang.String) throws org.lcx.robotframework.swtbot.swt.finder.exceptions.WidgetNotFoundException
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu contextMenu(java.lang.String param0) throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "contextMenu", param0);
-		return new SWTBotMenu(o);
+		return new org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu(o);
 	}
 
 	//public boolean org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem.isChecked()
