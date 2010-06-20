@@ -1,9 +1,10 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
-import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
+import java.util.Date;
 
 
 public class SWTBotDateTime extends AbstractSWTBotControl {
@@ -16,7 +17,7 @@ public class SWTBotDateTime extends AbstractSWTBotControl {
 	public java.util.Date getDate() throws SWTBotBridgeException {
 		Object o = SWTBotBridge.callMethod(distantObject, "getDate");
 		Long l = (Long)SWTBotBridge.callMethod(o, "getTime");
-		java.util.Date date = new java.util.Date(l.longValue());
+		Date date = new Date(l.longValue());
 		return date;
 	}
 

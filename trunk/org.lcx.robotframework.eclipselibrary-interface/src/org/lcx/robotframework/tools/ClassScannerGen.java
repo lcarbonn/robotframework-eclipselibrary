@@ -7,6 +7,17 @@ import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
+import org.eclipse.swtbot.swt.finder.SWTBot;
+import org.eclipse.swtbot.swt.finder.widgets.AbstractSWTBotControl;
+import org.lcx.robotframework.swtbot.eclipse.finder.AbstractSWTBotFactory;
+import org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory;
 
 public class ClassScannerGen {
 
@@ -76,16 +87,16 @@ public class ClassScannerGen {
 //			scanner.scanClass("org.eclipse.swtbot.swt.finder.finders.Finder", "AbstractSWTBotObject", true);
 			
 			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart");
-			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotCommand", "SWTBotWorkbenchPart", true);
-			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor", "SWTBotWorkbenchPart", true);
-			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotPerspective", "SWTBotWorkbenchPart", true);
-			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView", "SWTBotWorkbenchPart", true);
-			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEditor", "SWTBotWorkbenchPart", true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotCommand", SWTBotWorkbenchPart.class, true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor", SWTBotWorkbenchPart.class, true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotPerspective", SWTBotWorkbenchPart.class, true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView", SWTBotWorkbenchPart.class, true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEditor", SWTBotWorkbenchPart.class, true);
 			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.widgets.SWTBotViewMenu");
 
-			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBotFactory", "AbstractSWTBotFactory", false);
-			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBot", "SWTBotFactory", false);
-			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot", "SWTBot", false);
+			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBotFactory", AbstractSWTBotFactory.class, false);
+			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBot", SWTBotFactory.class, false);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot", SWTBot.class, false);
 
 			
 		} catch (Exception e) {
@@ -94,13 +105,14 @@ public class ClassScannerGen {
 	}
 	
 	public void scanClass(String className) throws Exception {
-		scanClass(className, "AbstractSWTBotControl", true);
+		scanClass(className, AbstractSWTBotControl.class, true);
 	}
 
-	public void scanClass(String className, String extend, boolean widget) throws Exception {
+	public void scanClass(String className, Class<?> extend, boolean widget) throws Exception {
 		StringBuffer pacsb = new StringBuffer();
 		StringBuffer sb = new StringBuffer();
-		StringBuffer importsb = new StringBuffer();
+//		StringBuffer importsb = new StringBuffer();
+		Set<String> importSet = new HashSet<String>();
 		
 		System.out.println("_____________________________________");
 		Class<?> clazz = Class.forName(className);
@@ -115,22 +127,27 @@ public class ClassScannerGen {
 		
 		sb.append("public class ");
 		sb.append(name);
-		if(extend!=null) sb.append(" extends "+extend);
-		sb.append(" {\n\n");
-		if(widget) {
-			importsb.append("import "+newPackage+".swt.finder.widgets.AbstractSWTBotControl;\n");
-		} else {
-			importsb.append("import org.lcx.robotframework.swtbot.eclipse.finder.AbstractSWTBotFactory;\n");
-			importsb.append("import org.lcx.robotframework.eclipse.context.Context;\n");
-//			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.widgets.*;\n");
-//			importsb.append("import org.lcx.robotframework.swtbot.eclipse.finder.widgets.*;\n");
-//			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.finders.Finder;\n");
-			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.SWTBot;\n");
-
+		if(extend!=null) {
+			sb.append(" extends "+extend.getSimpleName());
+			importSet.add(extend.getName());
 		}
-
-		importsb.append("import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;\n");
-		importsb.append("import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;\n");
+		sb.append(" {\n\n");
+		
+		
+//		if(widget) {
+//			importsb.append("import "+newPackage+".swt.finder.widgets.AbstractSWTBotControl;\n");
+//		} else {
+//			importsb.append("import org.lcx.robotframework.swtbot.eclipse.finder.AbstractSWTBotFactory;\n");
+//			importsb.append("import org.lcx.robotframework.eclipse.context.Context;\n");
+////			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.widgets.*;\n");
+////			importsb.append("import org.lcx.robotframework.swtbot.eclipse.finder.widgets.*;\n");
+////			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.finders.Finder;\n");
+//			importsb.append("import org.lcx.robotframework.swtbot.swt.finder.SWTBot;\n");
+//
+//		}
+//
+//		importsb.append("import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;\n");
+//		importsb.append("import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;\n");
 		
 		
 		if(className.equals("org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot")) {
@@ -144,14 +161,16 @@ public class ClassScannerGen {
 			sb.append("\t\treturn instance;\n");
 			sb.append("\t}\n\n");
 
+			importSet.add("org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException");
+			
 			sb.append("\tpublic SWTWorkbenchBot() throws SWTBotBridgeException {\n");
 			sb.append("\t\tsuper(null);\n");
 			sb.append("\t\tSystem.out.println(\"Instanciation of SWTWorkbenchBot\");\n");
 			sb.append("\t\tdistantObject = SWTBotBridge.getSWTWorkbenchBot();\n");
 			sb.append("\t}\n\n");
 			
-			
 		}
+
 		// Constructor
 		if(widget) {
 	//		public SWTBotButton(Object o) {
@@ -171,12 +190,23 @@ public class ClassScannerGen {
 			sb.append("\t\tsuper(o);\n");
 			sb.append("\t}\n\n");
 		}
-
+		
+		SortedMap<String, Method> sm = new TreeMap<String, Method>();
+		
 		for(Method m : clazz.getDeclaredMethods()) {
+			String key = m.getName();
+			for (Type t : m.getGenericParameterTypes()) {
+				key = key + t;
+			}
+			sm.put(key, m);
+		}
+		Iterator<String> it = sm.keySet().iterator();
+		while(it.hasNext()) {
+			Method m = sm.get(it.next());
 			StringBuffer msb = new StringBuffer();
 			boolean addSuppressWarnings = false;
 			int modm = m.getModifiers();
-			if(Modifier.isPublic(modm) && !Modifier.isVolatile(modm)) {
+			if(Modifier.isPublic(modm)) { // && !Modifier.isVolatile(modm)) {
 				System.out.println(m);
 				sb.append("\t//"+m+"\n");
 
@@ -223,6 +253,10 @@ public class ClassScannerGen {
 				
 				msb.append(" throws SWTBotBridgeException");
 				msb.append(" {\n");
+
+				importSet.add("org.lcx.robotframework.eclipse.bridge.SWTBotBridge");
+				importSet.add("org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException");
+				
 				// method source
 
 				String instance = "distantObject";
@@ -249,8 +283,9 @@ public class ClassScannerGen {
 							printParam(m, msb);
 							msb.append(");\n");
 							msb.append("\t\treturn new ");
-							msb.append(c.getName());
+							msb.append(c.getSimpleName());
 							msb.append("(o);");
+							importSet.add(c.getName());
 						} else {
 							// for bots
 	//						Object o = SWTBotBridge.callMethod(SWTWorkbenchBot, "viewByTitle", label);
@@ -265,12 +300,14 @@ public class ClassScannerGen {
 							msb.append(");\n");
 							msb.append("\t\t" + c.getName());
 							msb.append(" w = new ");
-							msb.append(c.getName());
+							msb.append(c.getSimpleName());
 							msb.append("(o);\n");
 							if(!(c.getPackage().getName().startsWith(finderPackage))){
 								msb.append("\t\tContext.setCurrentWidget(w);\n");
 							}
 							msb.append("\t\treturn w;");
+							importSet.add(c.getName());
+							importSet.add("org.lcx.robotframework.eclipse.context.Context");
 						}
 						
 					} else {
@@ -319,8 +356,9 @@ public class ClassScannerGen {
 							printParam(m, msb);
 							msb.append(");\n");
 							msb.append("\t\tLong l = (Long)SWTBotBridge.callMethod(o, \"getTime\");\n");
-							msb.append("\t\tjava.util.Date date = new java.util.Date(l.longValue());\n");
+							msb.append("\t\tDate date = new Date(l.longValue());\n");
 							msb.append("\t\treturn date;");
+							importSet.add("java.util.Date");
 						} else if (c.equals(String[].class)) {
 //							String[] o = (String[])SWTBotBridge.callMethod(widget, "items");
 //							return o;
@@ -340,10 +378,11 @@ public class ClassScannerGen {
 							msb.append(m.getName());
 							msb.append("\"");
 							msb.append(", ");
-							msb.append(type.getName()+".class");
+							msb.append(type.getSimpleName()+".class");
 //							msb.append(", "+arraytype.class);
 							printParam(m, msb);
 							msb.append(");\n");
+							importSet.add(type.getName());
 						} else {
 						
 							msb.append("\t\t//TODO: class="+c);
@@ -357,12 +396,13 @@ public class ClassScannerGen {
 					if (((ParameterizedType)r).getRawType().equals(java.util.List.class)) {
 						//return (List<String>)SWTBotBridge.callMethodList(distantObject, "getLines");
 						// TODO : if primitive or not and if array
-						msb.append("\t\treturn (java.util.List)SWTBotBridge.callMethodReturnPrimitiveList("+instance+", \"");
+						msb.append("\t\treturn (List)SWTBotBridge.callMethodReturnPrimitiveList("+instance+", \"");
 						msb.append(m.getName());
 						msb.append("\"");
 						printParam(m, msb);
 						msb.append(");\n");
 						addSuppressWarnings=true;
+						importSet.add("java.util.List");
 					} else {
 						msb.append("\t\t//TODO: type="+r);
 						msb.append("\n\t\t return null;");
@@ -381,6 +421,12 @@ public class ClassScannerGen {
 		}
 		
 		sb.append("\n}\n");
+		
+		StringBuffer importsb = new StringBuffer();
+
+		for (String string : importSet) {
+			importsb.append("import "+string+";\n");
+		}
 		
 		String source = pacsb.toString() + "\n" + importsb.toString() +"\n\n"+ sb.toString();
 		source = source.replace(oldPackage, newPackage);

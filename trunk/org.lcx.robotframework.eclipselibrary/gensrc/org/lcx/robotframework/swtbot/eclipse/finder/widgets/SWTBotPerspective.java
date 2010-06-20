@@ -1,21 +1,15 @@
 package org.lcx.robotframework.swtbot.eclipse.finder.widgets;
 
 
-import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
+import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
 
 
 public class SWTBotPerspective extends SWTBotWorkbenchPart {
 
 	public SWTBotPerspective(Object o) {
 		super(o);
-	}
-
-	//public java.lang.String org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective.toString()
-	//public boolean org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective.isActive()
-	public boolean isActive() throws SWTBotBridgeException {
-		Boolean b = (Boolean)SWTBotBridge.callMethod(distantObject, "isActive");
-		return b.booleanValue();
 	}
 
 	//public void org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective.activate()
@@ -28,5 +22,12 @@ public class SWTBotPerspective extends SWTBotWorkbenchPart {
 		return (String)SWTBotBridge.callMethod(distantObject, "getLabel");
 	}
 
+	//public boolean org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective.isActive()
+	public boolean isActive() throws SWTBotBridgeException {
+		Boolean b = (Boolean)SWTBotBridge.callMethod(distantObject, "isActive");
+		return b.booleanValue();
+	}
+
+	//public java.lang.String org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective.toString()
 
 }
