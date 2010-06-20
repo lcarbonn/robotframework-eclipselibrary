@@ -1,9 +1,9 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
-import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 
 
 public class SWTBotCLabel extends AbstractSWTBotControl {

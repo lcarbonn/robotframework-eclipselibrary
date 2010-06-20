@@ -1,15 +1,21 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
-import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 
 
 public class SWTBotToolbarRadioButton extends AbstractSWTBotControl {
 
 	public SWTBotToolbarRadioButton(Object o) {
 		super(o);
+	}
+
+	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton.click()
+	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton click() throws SWTBotBridgeException {
+		distantObject = SWTBotBridge.callMethod(distantObject, "click");
+		return this;
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton.deselect()
@@ -31,12 +37,6 @@ public class SWTBotToolbarRadioButton extends AbstractSWTBotControl {
 	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton.toggle()
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton toggle() throws SWTBotBridgeException {
 		distantObject = SWTBotBridge.callMethod(distantObject, "toggle");
-		return this;
-	}
-
-	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton.click()
-	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton click() throws SWTBotBridgeException {
-		distantObject = SWTBotBridge.callMethod(distantObject, "click");
 		return this;
 	}
 

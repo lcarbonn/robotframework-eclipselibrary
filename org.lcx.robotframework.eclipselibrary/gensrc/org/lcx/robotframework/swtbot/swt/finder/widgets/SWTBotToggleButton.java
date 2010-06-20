@@ -1,9 +1,10 @@
 package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
-import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBot;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 
 
 public class SWTBotToggleButton extends AbstractSWTBotControl {
@@ -12,9 +13,10 @@ public class SWTBotToggleButton extends AbstractSWTBotControl {
 		super(o);
 	}
 
-	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToggleButton.unpress()
-	public void unpress() throws SWTBotBridgeException {
-		SWTBotBridge.callMethod(distantObject, "unpress");
+	//public volatile org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBot org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToggleButton.click()
+	public org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBot click() throws SWTBotBridgeException {
+		Object o = SWTBotBridge.callMethod(distantObject, "click");
+		return new AbstractSWTBot(o);
 	}
 
 	//public boolean org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToggleButton.isPressed()
@@ -28,10 +30,9 @@ public class SWTBotToggleButton extends AbstractSWTBotControl {
 		SWTBotBridge.callMethod(distantObject, "press");
 	}
 
-	//public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToggleButton org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToggleButton.click()
-	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToggleButton click() throws SWTBotBridgeException {
-		distantObject = SWTBotBridge.callMethod(distantObject, "click");
-		return this;
+	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToggleButton.unpress()
+	public void unpress() throws SWTBotBridgeException {
+		SWTBotBridge.callMethod(distantObject, "unpress");
 	}
 
 

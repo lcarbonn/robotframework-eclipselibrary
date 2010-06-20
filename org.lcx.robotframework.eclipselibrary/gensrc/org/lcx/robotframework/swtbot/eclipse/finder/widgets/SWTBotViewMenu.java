@@ -1,9 +1,9 @@
 package org.lcx.robotframework.swtbot.eclipse.finder.widgets;
 
 
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
-import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 
 
 public class SWTBotViewMenu extends AbstractSWTBotControl {
@@ -12,10 +12,9 @@ public class SWTBotViewMenu extends AbstractSWTBotControl {
 		super(o);
 	}
 
-	//public boolean org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu.isChecked()
-	public boolean isChecked() throws SWTBotBridgeException {
-		Boolean b = (Boolean)SWTBotBridge.callMethod(distantObject, "isChecked");
-		return b.booleanValue();
+	//public void org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu.click() throws org.lcx.robotframework.swtbot.swt.finder.exceptions.WidgetNotFoundException
+	public void click() throws SWTBotBridgeException {
+		SWTBotBridge.callMethod(distantObject, "click");
 	}
 
 	//public java.lang.Object org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu.getClickResult()
@@ -29,9 +28,10 @@ public class SWTBotViewMenu extends AbstractSWTBotControl {
 		return (String)SWTBotBridge.callMethod(distantObject, "getText");
 	}
 
-	//public void org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu.click() throws org.lcx.robotframework.swtbot.swt.finder.exceptions.WidgetNotFoundException
-	public void click() throws SWTBotBridgeException {
-		SWTBotBridge.callMethod(distantObject, "click");
+	//public boolean org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu.isChecked()
+	public boolean isChecked() throws SWTBotBridgeException {
+		Boolean b = (Boolean)SWTBotBridge.callMethod(distantObject, "isChecked");
+		return b.booleanValue();
 	}
 
 
