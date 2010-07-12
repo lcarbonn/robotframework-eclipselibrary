@@ -1,4 +1,4 @@
-package org.lcx.robotframework.eclipse.keyword.swtbot;
+package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.robotframework.javalib.annotation.ArgumentNames;

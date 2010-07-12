@@ -1,4 +1,4 @@
-package org.lcx.robotframework.eclipse.keyword.swtbot;
+package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -36,11 +36,11 @@ public class TrayKeywords {
     	bot.trayItemWithTooltip(tooltip);
     }	
 	
-    @RobotKeyword("Select Tray Item with the given tooltip\n\n"
+    @RobotKeyword("Select indexed Tray Item with the given tooltip\n\n"
             + "Example:\n"
-            + "| Select Tray Item With Tooltip | tooltip | 0 |\n")
+            + "| Select Indexed Tray Item With Tooltip | tooltip | 0 |\n")
     @ArgumentNames({"tooltip", "index"})
-        public void clickOnIndexedMenuWithKey(String tooltip, String index) throws Exception {
+        public void selectIndexedTrayItemWithTooltip(String tooltip, String index) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	int indexI = Integer.valueOf(index).intValue();
     	bot.trayItemWithTooltip(tooltip, indexI);
