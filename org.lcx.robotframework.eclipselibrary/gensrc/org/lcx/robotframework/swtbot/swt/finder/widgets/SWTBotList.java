@@ -37,12 +37,12 @@ public class SWTBotList extends AbstractSWTBotControl {
 
 	//public transient void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotList.select(int[])
 	public void select(int[] param0) throws SWTBotBridgeException {
-		SWTBotBridge.callMethod(distantObject, "select", (int[])param0);
+		SWTBotBridge.callMethodWithArray(distantObject, "select", (int[])param0);
 	}
 
 	//public transient void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotList.select(java.lang.String[])
 	public void select(java.lang.String[] param0) throws SWTBotBridgeException {
-		SWTBotBridge.callMethod(distantObject, "select", (Object[])param0);
+		SWTBotBridge.callMethodWithArray(distantObject, "select", (Object[])param0);
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotList.select(java.lang.String)
