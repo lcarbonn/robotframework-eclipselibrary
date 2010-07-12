@@ -70,7 +70,7 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 
 	//public transient org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.expandNode(java.lang.String[])
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem expandNode(java.lang.String[] param0) throws SWTBotBridgeException {
-		distantObject = SWTBotBridge.callMethod(distantObject, "expandNode", (Object[])param0);
+		distantObject = SWTBotBridge.callMethodWithArray(distantObject, "expandNode", (Object[])param0);
 		return this;
 	}
 
@@ -161,7 +161,7 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 
 	//public transient org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.select(java.lang.String[])
 	public org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem select(java.lang.String[] param0) throws SWTBotBridgeException {
-		distantObject = SWTBotBridge.callMethod(distantObject, "select", (Object[])param0);
+		distantObject = SWTBotBridge.callMethodWithArray(distantObject, "select", (Object[])param0);
 		return this;
 	}
 

@@ -1,4 +1,4 @@
-package org.lcx.robotframework.eclipse.keyword.swtbot;
+package org.lcx.robotframework.eclipse.keyword.eclipse;
 
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective;
