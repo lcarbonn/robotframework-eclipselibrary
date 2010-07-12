@@ -1,4 +1,4 @@
-package org.lcx.robotframework.eclipse.keyword.swtbot;
+package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem;

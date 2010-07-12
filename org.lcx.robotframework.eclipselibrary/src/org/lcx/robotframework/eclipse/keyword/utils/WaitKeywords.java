@@ -18,33 +18,70 @@ public class WaitKeywords {
 	
 	private void waitUntil(ICondition condition, String timeout, String interval) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+    	boolean isTimout = false;
+    	boolean isInterval = false;
+    	long timeoutL = -1;
+    	long intervalL = -1;
+    	
     	try {
-	    	long timeoutL = Long.valueOf(timeout).longValue();
-	    	long intervalL = Long.valueOf(interval).longValue();
-			bot.waitUntil(condition, timeoutL, intervalL);
+	    	if(timeout!=null) {
+	    		timeoutL = Long.valueOf(timeout).longValue();
+	    		isTimout=true;
+	    	}
 		} catch (NumberFormatException e) {
-			try {
-		    	long timeoutL = Long.valueOf(timeout).longValue();
-				bot.waitUntil(condition, timeoutL);
-			} catch (NumberFormatException e2) {
-				bot.waitUntil(condition);
-			}
+			//nothing to do
 		}
+		
+    	try {
+	    	if(interval!=null) {
+	    		intervalL = Long.valueOf(timeout).longValue();
+	    		isInterval=true;
+	    	}
+		} catch (NumberFormatException e) {
+			//nothing to do
+		}
+		
+		if(isTimout && isInterval) {
+			bot.waitUntil(condition, timeoutL, intervalL);
+		} else if (isTimout && !isInterval) {
+			bot.waitUntil(condition, timeoutL);
+		} else {
+			bot.waitUntil(condition);
+		}
+		
 	}
 	
 	private void waitWhile(ICondition condition, String timeout, String interval) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+    	boolean isTimout = false;
+    	boolean isInterval = false;
+    	long timeoutL = -1;
+    	long intervalL = -1;
+    	
     	try {
-	    	long timeoutL = Long.valueOf(timeout).longValue();
-	    	long intervalL = Long.valueOf(interval).longValue();
-			bot.waitWhile(condition, timeoutL, intervalL);
+	    	if(timeout!=null) {
+	    		timeoutL = Long.valueOf(timeout).longValue();
+	    		isTimout=true;
+	    	}
 		} catch (NumberFormatException e) {
-			try {
-		    	long timeoutL = Long.valueOf(timeout).longValue();
-				bot.waitUntil(condition, timeoutL);
-			} catch (NumberFormatException e2) {
-				bot.waitUntil(condition);
-			}
+			//nothing to do
+		}
+		
+    	try {
+	    	if(interval!=null) {
+	    		intervalL = Long.valueOf(timeout).longValue();
+	    		isInterval=true;
+	    	}
+		} catch (NumberFormatException e) {
+			//nothing to do
+		}
+		
+		if(isTimout && isInterval) {
+			bot.waitWhile(condition, timeoutL, intervalL);
+		} else if (isTimout && !isInterval) {
+			bot.waitWhile(condition, timeoutL);
+		} else {
+			bot.waitWhile(condition);
 		}
 	}
 

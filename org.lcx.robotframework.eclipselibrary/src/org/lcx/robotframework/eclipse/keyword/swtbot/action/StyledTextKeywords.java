@@ -1,4 +1,4 @@
-package org.lcx.robotframework.eclipse.keyword.swtbot;
+package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
 import static org.junit.Assert.assertTrue;
 
