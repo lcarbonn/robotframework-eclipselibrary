@@ -68,11 +68,11 @@ public class MenuActionKeywords {
     		menu.setFocus();
     	}
 	
-	@RobotKeyword("Get the menu with the given name\n\n"
+	@RobotKeyword("Find the sub menu with the given name\n\n"
             + "Example:\n"
-            + "| Get Menu With Name |\n")
+            + "| Find Sub Menu |\n")
     @ArgumentNames({"name"})
-        public void getMenuWithName(String name) throws Exception {
+        public void findSubMenu(String name) throws Exception {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		Context.setCurrentWidget(menu.menu(name));
     	}
