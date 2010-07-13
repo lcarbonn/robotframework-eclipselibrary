@@ -35,9 +35,9 @@ public class CheckBoxActionKeywords {
 	@RobotKeyword("Is the checkbox checked\n\n"
             + "Example:\n"
             + "| Is CheckBox Checked |\n")
-        public void isCheckBoxChecked() throws Exception {
+        public boolean isCheckBoxChecked() throws Exception {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
-    		checkbox.isChecked();
+    		return checkbox.isChecked();
     	}
 
 	@RobotKeyword("Is the checkbox active\n\n"

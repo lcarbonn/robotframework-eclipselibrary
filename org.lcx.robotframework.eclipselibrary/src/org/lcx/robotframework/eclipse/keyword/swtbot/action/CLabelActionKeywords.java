@@ -10,7 +10,7 @@ public class CLabelActionKeywords {
 
 	@RobotKeyword("Get the clabel alignment\n\n"
             + "Example:\n"
-            + "| Get CLAbel Alignment |\n")
+            + "| Get CLabel Alignment |\n")
         public int getCLabelAlignment() throws Exception {
     		SWTBotCLabel clabel = (SWTBotCLabel)Context.getCurrentWidget(SWTBotCLabel.class);
     		return clabel.alignment();
@@ -18,51 +18,51 @@ public class CLabelActionKeywords {
 
 	@RobotKeyword("Is the clabel active\n\n"
             + "Example:\n"
-            + "| Is CLAbel Active |\n")
-        public boolean isCLAbelActive() throws Exception {
+            + "| Is CLabel Active |\n")
+        public boolean isCLabelActive() throws Exception {
     		SWTBotCLabel clabel = (SWTBotCLabel)Context.getCurrentWidget(SWTBotCLabel.class);
     		return clabel.isActive();
     	}
 
 	@RobotKeyword("Is the clabel enabled\n\n"
             + "Example:\n"
-            + "| Is CLAbel Enabled |\n")
-        public boolean isCLAbelEnabled() throws Exception {
+            + "| Is CLabel Enabled |\n")
+        public boolean isCLabelEnabled() throws Exception {
     		SWTBotCLabel clabel = (SWTBotCLabel)Context.getCurrentWidget(SWTBotCLabel.class);
     		return clabel.isEnabled();
     	}
 
 	@RobotKeyword("Is the clabel visible\n\n"
             + "Example:\n"
-            + "| Is CLAbel Visible |\n")
-        public boolean isCLAbelVisible() throws Exception {
+            + "| Is CLabel Visible |\n")
+        public boolean isCLabelVisible() throws Exception {
     		SWTBotCLabel clabel = (SWTBotCLabel)Context.getCurrentWidget(SWTBotCLabel.class);
     		return clabel.isVisible();
     	}
 
 	@RobotKeyword("Get the text of the clabel\n\n"
             + "Example:\n"
-            + "| Get CLAbel Text |\n")
+            + "| Get CLabel Text |\n")
 //    @ArgumentNames({"text"})
-        public String getCLAbelText() throws Exception {
+        public String getCLabelText() throws Exception {
     		SWTBotCLabel clabel = (SWTBotCLabel)Context.getCurrentWidget(SWTBotCLabel.class);
     		return clabel.getText();
     	}
 	
 	@RobotKeyword("Get the tooltip text of the clabel\n\n"
             + "Example:\n"
-            + "| Get CLAbel Tooltip Text |\n")
+            + "| Get CLabel Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getCLAbelTooltipText() throws Exception {
+        public String getCLabelTooltipText() throws Exception {
     		SWTBotCLabel clabel = (SWTBotCLabel)Context.getCurrentWidget(SWTBotCLabel.class);
     		return clabel.getToolTipText();
     	}
 	
 	@RobotKeyword("Set the focus on the clabel\n\n"
             + "Example:\n"
-            + "| Set Focus On CLAbel |\n")
+            + "| Set Focus On CLabel |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnCLAbel() throws Exception {
+        public void setFocusOnCLabel() throws Exception {
     		SWTBotCLabel clabel = (SWTBotCLabel)Context.getCurrentWidget(SWTBotCLabel.class);
     		clabel.setFocus();
     	}
