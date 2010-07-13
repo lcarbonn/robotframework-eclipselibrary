@@ -3,10 +3,10 @@ package org.lcx.robotframework.swtbot.eclipse.finder.widgets;
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
-import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 
 
-public class SWTBotPerspective extends SWTBotWorkbenchPart {
+public class SWTBotPerspective extends AbstractSWTBotControl {
 
 	public SWTBotPerspective(Object o) {
 		super(o);
