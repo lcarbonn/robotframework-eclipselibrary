@@ -13,11 +13,13 @@ public class SWTBotText extends AbstractSWTBotControl {
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotText.notifyKeyboardEvent(int,char)
+	@Deprecated
 	public void notifyKeyboardEvent(int param0, char param1) throws SWTBotBridgeException {
 		SWTBotBridge.callMethod(distantObject, "notifyKeyboardEvent", param0, param1);
 	}
 
 	//public void org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotText.notifyKeyboardEvent(int,char,int)
+	@Deprecated
 	public void notifyKeyboardEvent(int param0, char param1, int param2) throws SWTBotBridgeException {
 		SWTBotBridge.callMethod(distantObject, "notifyKeyboardEvent", param0, param1, param2);
 	}

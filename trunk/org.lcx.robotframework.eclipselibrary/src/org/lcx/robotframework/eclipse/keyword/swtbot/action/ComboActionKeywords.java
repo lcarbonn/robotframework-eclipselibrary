@@ -19,8 +19,8 @@ public class ComboActionKeywords {
 	
 	@RobotKeyword("Get the items in the combo \n\n"
             + "Example:\n"
-            + "| Get Items In Combo |\n")
-        public String[] getItemsInCombo() throws Exception {
+            + "| Get Combo Items |\n")
+        public String[] getComboItems() throws Exception {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.items();
     	}
@@ -56,13 +56,7 @@ public class ComboActionKeywords {
         public void setSelectionIndexInCombo(String index) throws Exception {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		int indexI = -1;
-    		if(index!=null) {
-    			try {
-					indexI = Integer.valueOf(index).intValue();
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-    		}
+			indexI = Integer.valueOf(index).intValue();
     		if(indexI!=-1) {
     			combo.setSelection(indexI);
     		}
@@ -97,14 +91,7 @@ public class ComboActionKeywords {
         public void typeComboText(String text, String... interval) throws Exception {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		int intervalI = -1;
-    		if(interval!=null && interval.length==1) {
-    			try {
-    				intervalI = Integer.valueOf(interval[0]).intValue();
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-    		}
-
+			intervalI = Integer.valueOf(interval[0]).intValue();
     		if(text!=null && text.length()>0) {
     			if(intervalI!=-1) {
     				combo.typeText(text, intervalI);

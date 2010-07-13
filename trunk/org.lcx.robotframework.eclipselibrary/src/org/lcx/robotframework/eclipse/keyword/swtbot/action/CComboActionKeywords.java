@@ -19,8 +19,8 @@ public class CComboActionKeywords {
 	
 	@RobotKeyword("Get the items in the ccombo \n\n"
             + "Example:\n"
-            + "| Get Items In CCombo |\n")
-        public String[] getItemsInCCombo() throws Exception {
+            + "| Get CCombo Items |\n")
+        public String[] getCComboItems() throws Exception {
     		SWTBotCCombo ccombo = (SWTBotCCombo)Context.getCurrentWidget(SWTBotCCombo.class);
     		return ccombo.items();
     	}
@@ -56,13 +56,7 @@ public class CComboActionKeywords {
         public void setSelectionIndexInCCombo(String index) throws Exception {
     		SWTBotCCombo ccombo = (SWTBotCCombo)Context.getCurrentWidget(SWTBotCCombo.class);
     		int indexI = -1;
-    		if(index!=null) {
-    			try {
-					indexI = Integer.valueOf(index).intValue();
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-    		}
+			indexI = Integer.valueOf(index).intValue();
     		if(indexI!=-1) {
     			ccombo.setSelection(indexI);
     		}
