@@ -258,6 +258,11 @@ public class ClassScannerGen {
 				importSet.add("org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException");
 				
 				// method source
+				
+				String callMethod = "callMethod";
+				if(isArray(m)) {
+					callMethod = "callMethodWithArray";
+				}
 
 				String instance = "distantObject";
 				if(r instanceof Class<?>) {
@@ -266,18 +271,18 @@ public class ClassScannerGen {
 					if(c.getSimpleName().equals(name)) {
 //							widget = SWTBotBridge.callMethod(widget, "typeText", param0, param1);
 //							return this;
-						msb.append("\t\t"+instance+" = SWTBotBridge.callMethod("+instance+", \"");
+						msb.append("\t\t"+instance+" = SWTBotBridge."+callMethod+"("+instance+", \"");
 						msb.append(m.getName());
 						msb.append("\"");
 						printParam(m, msb);
 						msb.append(");\n");
 						msb.append("\t\treturn this;");
 					} else if(c.getPackage()!=null && c.getPackage().getName().startsWith(oldPackage)) {
-//						Object o = SWTBotBridge.callMethod(widget, "getTableItem", param0);
+//						Object o = SWTBotBridge."+callMethod+"(widget, "getTableItem", param0);
 //						return new SWTBotTableItem(o);
 						if(widget) {
 							// for widgets
-							msb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
+							msb.append("\t\tObject o = SWTBotBridge."+callMethod+"("+instance+", \"");
 							msb.append(m.getName());
 							msb.append("\"");
 							printParam(m, msb);
@@ -293,7 +298,7 @@ public class ClassScannerGen {
 	//						Context.setCurrentWidget(w);
 	//						return w;
 							
-							msb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
+							msb.append("\t\tObject o = SWTBotBridge."+callMethod+"("+instance+", \"");
 							msb.append(m.getName());
 							msb.append("\"");
 							printParam(m, msb);
@@ -312,14 +317,14 @@ public class ClassScannerGen {
 						
 					} else {
 						if(c.equals(String.class)) {
-							msb.append("\t\treturn (String)SWTBotBridge.callMethod("+instance+", \"");
+							msb.append("\t\treturn (String)SWTBotBridge."+callMethod+"("+instance+", \"");
 							msb.append(m.getName());
 							msb.append("\"");
 							printParam(m, msb);
 							msb.append(");");
 						} else if (c.equals(void.class)) {
 //							SWTBotBridge.callMethod(widget, "setDate", param0);
-							msb.append("\t\tSWTBotBridge.callMethod("+instance+", \"");
+							msb.append("\t\tSWTBotBridge."+callMethod+"("+instance+", \"");
 							msb.append(m.getName());
 							msb.append("\"");
 							printParam(m, msb);
@@ -328,7 +333,7 @@ public class ClassScannerGen {
 						} else if (c.equals(int.class)) {
 //								Integer i = (Integer)SWTBotBridge.callMethod(widget, "isActive");
 //								return i.intValue();
-							msb.append("\t\tInteger i = (Integer)SWTBotBridge.callMethod("+instance+", \"");
+							msb.append("\t\tInteger i = (Integer)SWTBotBridge."+callMethod+"("+instance+", \"");
 							msb.append(m.getName());
 							msb.append("\"");
 							printParam(m, msb);
@@ -338,7 +343,7 @@ public class ClassScannerGen {
 						} else if (c.equals(boolean.class)) {
 //								Boolean b = (Boolean)SWTBotBridge.callMethod(widget, "isActive");
 //								return b.booleanValue();
-							msb.append("\t\tBoolean b = (Boolean)SWTBotBridge.callMethod("+instance+", \"");
+							msb.append("\t\tBoolean b = (Boolean)SWTBotBridge."+callMethod+"("+instance+", \"");
 							msb.append(m.getName());
 							msb.append("\"");
 							printParam(m, msb);
@@ -350,7 +355,7 @@ public class ClassScannerGen {
 //							Long l = (Long)SWTBotBridge.callMethod(o, "getTime");
 //							Date date = new Date(l.longValue());
 //							return date;
-							msb.append("\t\tObject o = SWTBotBridge.callMethod("+instance+", \"");
+							msb.append("\t\tObject o = SWTBotBridge."+callMethod+"("+instance+", \"");
 							msb.append(m.getName());
 							msb.append("\"");
 							printParam(m, msb);
@@ -362,7 +367,7 @@ public class ClassScannerGen {
 						} else if (c.equals(String[].class)) {
 //							String[] o = (String[])SWTBotBridge.callMethod(widget, "items");
 //							return o;
-							msb.append("\t\tString[] o = (String[])SWTBotBridge.callMethod("+instance+", \"");
+							msb.append("\t\tString[] o = (String[])SWTBotBridge."+callMethod+"("+instance+", \"");
 							msb.append(m.getName());
 							msb.append("\"");
 							printParam(m, msb);
@@ -465,7 +470,7 @@ public class ClassScannerGen {
 		        		    cl = cl.getComponentType();
 		        		}
 		        		if(cl.isPrimitive())
-		        			sb.append("("+cl.getName());
+		        			sb.append("("+cl.getSimpleName());
 		        		else
 		        			sb.append("(Object");
 		        		for (int j = 0; j < dimensions; j++) {
@@ -479,7 +484,21 @@ public class ClassScannerGen {
 		}
 	}
 	
-    public String getTypeName(Class<?> type) {
+	public boolean isArray(Method m) {
+//		boolean first = true;
+		boolean isArray = false;
+		for(Type p : m.getGenericParameterTypes()) {
+			if(p instanceof Class<?>) {
+				Class<?> type = (Class<?>)p;
+		    	if (type.isArray()) {
+		    		isArray = true;
+		    	}
+			}
+		}
+		return isArray;
+	}
+
+	public String getTypeName(Class<?> type) {
     	if (type.isArray()) {
     	    try {
     		Class<?> cl = type;
