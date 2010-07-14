@@ -3,10 +3,9 @@ package org.lcx.robotframework.swtbot.eclipse.finder.widgets;
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
-import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
 
 
-public class SWTBotCommand extends SWTBotWorkbenchPart {
+public class SWTBotCommand extends SWTBotViewMenu {
 
 	public SWTBotCommand(Object o) {
 		super(o);
