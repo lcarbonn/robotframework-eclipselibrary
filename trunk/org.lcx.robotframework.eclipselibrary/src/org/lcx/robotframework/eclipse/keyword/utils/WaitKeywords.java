@@ -93,7 +93,7 @@ public class WaitKeywords {
     @ArgumentNames({"timeout", "interval"})
         public void waitUntilLastWidgetIsEnabled(String timeout, String interval) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
-    	AbstractSWTBotControl widget = Context.getCurrentWidget();
+    	AbstractSWTBotControl widget = (AbstractSWTBotControl)Context.getCurrentWidget();
 		ICondition condition = Conditions.widgetIsEnabled(bot, widget);
 		waitUntil(condition, timeout, interval);
     }
@@ -145,7 +145,7 @@ public class WaitKeywords {
     @ArgumentNames({"timeout", "interval"})
         public void waitWhileLastWidgetIsEnabled(String timeout, String interval) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
-    	AbstractSWTBotControl widget = Context.getCurrentWidget();
+    	AbstractSWTBotControl widget = (AbstractSWTBotControl)Context.getCurrentWidget();
 		ICondition condition = Conditions.widgetIsEnabled(bot, widget);
 		waitWhile(condition, timeout, interval);
     }

@@ -2,18 +2,18 @@ package org.lcx.robotframework.swtbot.eclipse.finder.widgets;
 
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
+import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarPushButton;
 import org.lcx.robotframework.swtbot.swt.finder.SWTBot;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarRadioButton;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarToggleButton;
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import java.util.List;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarDropDownButton;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton;
 
 
-public class SWTBotWorkbenchPart extends AbstractSWTBotControl {
+public class SWTBotWorkbenchPart extends AbstractSWTBotObject {
 
 	public SWTBotWorkbenchPart(Object o) {
 		super(o);

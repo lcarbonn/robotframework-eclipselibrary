@@ -14,7 +14,7 @@ public class ContextMenuFinderKeywords {
             + "| Find Context Menu | text | \n")
     @ArgumentNames({"text"})
         public void findContextMenu(String text) throws Exception {
-    	AbstractSWTBotControl widget = Context.getCurrentWidget();
+    	AbstractSWTBotControl widget = (AbstractSWTBotControl)Context.getCurrentWidget();
     	Context.setCurrentWidget(widget.contextMenu(text));
     }
-    }
+}

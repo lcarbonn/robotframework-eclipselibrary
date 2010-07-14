@@ -7,10 +7,8 @@ import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.swtbot.swt.finder.utils.Position;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu;
 import java.util.List;
-import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
 
-
-public class SWTBotEclipseEditor extends SWTBotWorkbenchPart {
+public class SWTBotEclipseEditor extends SWTBotEditor {
 
 	public SWTBotEclipseEditor(Object o) {
 		super(o);

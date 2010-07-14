@@ -1,13 +1,13 @@
 package org.lcx.robotframework.eclipse.context;
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
+import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
 
 public class Context {
 
 	private static Context context;
 	
-	private AbstractSWTBotControl currentWidget;
+	private AbstractSWTBotObject currentWidget;
 
 	public static Context currentContext() {
 		if(context==null) {
@@ -16,24 +16,24 @@ public class Context {
 		return context;
 	}
 	
-	public void setWidget(AbstractSWTBotControl widget) {
-		currentWidget = widget;
+	public void setWidget(AbstractSWTBotObject object) {
+		currentWidget = object;
 	}
 
-	public static void setCurrentWidget(AbstractSWTBotControl widget) {
+	public static void setCurrentWidget(AbstractSWTBotObject widget) {
 		System.out.println("setCurrentWidget="+widget.getClass().getName());
 		Context.currentContext().setWidget(widget);
 	}
 
-	public AbstractSWTBotControl getWidget() {
+	public AbstractSWTBotObject getWidget() {
 		return currentWidget;
 	}
 	
-	public static AbstractSWTBotControl getCurrentWidget() {
+	public static AbstractSWTBotObject getCurrentWidget() {
 		return Context.currentContext().getWidget();
 	}
 	
-	public static AbstractSWTBotControl getCurrentWidget(Class<?> clazz) throws SWTBotBridgeException {
+	public static AbstractSWTBotObject getCurrentWidget(Class<?> clazz) throws SWTBotBridgeException {
 		if(Context.currentContext().getWidget()==null) {
 			throw new SWTBotBridgeException("There's no widget in the context");
 		}
