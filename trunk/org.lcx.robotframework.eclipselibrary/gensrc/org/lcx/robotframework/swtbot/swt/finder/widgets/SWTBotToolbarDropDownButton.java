@@ -4,11 +4,10 @@ package org.lcx.robotframework.swtbot.swt.finder.widgets;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu;
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton;
 
 
-public class SWTBotToolbarDropDownButton extends AbstractSWTBotControl {
+public class SWTBotToolbarDropDownButton extends SWTBotToolbarButton {
 
 	public SWTBotToolbarDropDownButton(Object o) {
 		super(o);

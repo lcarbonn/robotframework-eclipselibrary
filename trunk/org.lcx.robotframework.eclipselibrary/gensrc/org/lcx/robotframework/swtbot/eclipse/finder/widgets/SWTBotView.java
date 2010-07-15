@@ -41,7 +41,7 @@ public class SWTBotView extends SWTBotWorkbenchPart {
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView.menus()
 	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu> menus() throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "menus");
+		return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "menus", org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu.class);
 
 	}
 

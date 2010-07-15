@@ -39,7 +39,7 @@ public class SWTBotWorkbenchPart extends AbstractSWTBotObject {
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart.getToolbarButtons()
 	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton> getToolbarButtons() throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "getToolbarButtons");
+		return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "getToolbarButtons", org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton.class);
 
 	}
 
