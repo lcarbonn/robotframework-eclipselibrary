@@ -94,7 +94,7 @@ public class SWTWorkbenchBot extends SWTBot {
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.editors()
 	@SuppressWarnings("unchecked")
 	public java.util.List<? extends org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor> editors() throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "editors");
+		return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "editors", org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor.class);
 
 	}
 
@@ -119,7 +119,7 @@ public class SWTWorkbenchBot extends SWTBot {
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.perspectives()
 	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective> perspectives() throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "perspectives");
+		return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "perspectives", org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective.class);
 
 	}
 
@@ -162,7 +162,7 @@ public class SWTWorkbenchBot extends SWTBot {
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.views()
 	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView> views() throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "views");
+		return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "views", org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView.class);
 
 	}
 

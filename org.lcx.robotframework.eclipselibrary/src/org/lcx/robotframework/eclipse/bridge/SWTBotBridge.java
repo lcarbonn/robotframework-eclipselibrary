@@ -258,10 +258,16 @@ public class SWTBotBridge {
 	public static List<?> callMethodReturnSWTBotList(Object instance, String methodName, Class<?> clazz, Object... parameters) throws SWTBotBridgeException {
 		try {
 			List<Object> ls = new ArrayList<Object>();
-			Object[] o = (Object[])SWTBotBridge.callMethod(instance, methodName);
-			for (Object distO : o) {
+			Object o = SWTBotBridge.callMethod(instance, methodName);
+			
+			Object iterator = SWTBotBridge.callMethod(o, "iterator");
+			while((Boolean)SWTBotBridge.callMethod(iterator, "hasNext")) {
+				Object item = SWTBotBridge.callMethod(iterator, "next");
+
+				System.out.println("line="+item);
+
 				Constructor<?> c = clazz.getDeclaredConstructor(Object.class);
-				AbstractSWTBotObject localO = (AbstractSWTBotObject)c.newInstance(distO);
+				AbstractSWTBotObject localO = (AbstractSWTBotObject)c.newInstance(item);
 				ls.add(localO);
 			}
 			return ls;
@@ -272,12 +278,25 @@ public class SWTBotBridge {
 
 	public static Object[] callMethodReturnSWTBotArray(Object instance, String methodName, Class<?> clazz, Object... parameters) throws SWTBotBridgeException {
 		try {
-			return callMethodReturnSWTBotList(instance, methodName, clazz, parameters).toArray();
+			Object[] o = (Object[])SWTBotBridge.callMethod(instance, methodName);
+			Object[] lo = new Object[o.length];
+			int i = 0;
+			for (Object distO : o) {
+
+				System.out.println("line="+distO);
+
+				Constructor<?> c = clazz.getDeclaredConstructor(Object.class);
+				AbstractSWTBotObject localO = (AbstractSWTBotObject)c.newInstance(distO);
+				lo[i] = localO;
+				i++;
+			}
+			return lo;
+//			return callMethodReturnSWTBotList(instance, methodName, clazz, parameters).toArray();
 		} catch (Exception e) {
 			throw new SWTBotBridgeException(e);
 		}
 	}
-
+	
 	private static Class<?> getClass(Object o) {
 		Class<?> clazz = o.getClass();
 		String name= clazz.getName();

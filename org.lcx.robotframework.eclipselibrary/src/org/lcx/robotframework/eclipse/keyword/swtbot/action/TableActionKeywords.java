@@ -155,9 +155,9 @@ public class TableActionKeywords {
 	@RobotKeyword("Select the table item at the given row\n\n"
 			+ "\t row the row number, 0 based."
             + "Example:\n"
-            + "| Select Table Item| 0 |\n")
+            + "| Select Table Item At Row | 0 |\n")
     @ArgumentNames({"row"})
-        public void selectTableItem(String row) throws Exception {
+        public void selectTableItemAtRow(String row) throws Exception {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		Integer r = Integer.valueOf(row).intValue();
     		Context.setCurrentWidget(table.getTableItem(r));

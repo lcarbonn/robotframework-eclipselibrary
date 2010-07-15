@@ -41,6 +41,7 @@ public class PerspectiveFinderKeywords {
 	}
 
 	@RobotKeyword("Find the perspective by its id\n\n"
+            + "there's a bug in SWTBot at the moment, java.lang.IndexOutOfBoundsException is raised\n"
             + "Example:\n"
             + "| Find Perspective By Id | id |\n")
     @ArgumentNames({"id"})
@@ -60,9 +61,9 @@ public class PerspectiveFinderKeywords {
 
 	@RobotKeyword("List all the perspectives label\n\n"
             + "Example:\n"
-            + "| List All Perspective Label | \n")
-    @ArgumentNames({"label"})
-    public String[] listAllPerspectiveLabel() throws SWTBotBridgeException{
+            + "| List All Perspectives Label | \n")
+//    @ArgumentNames({"label"})
+    public String[] listAllPerspectivesLabel() throws SWTBotBridgeException{
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	List<SWTBotPerspective> perspectives = bot.perspectives();
 		String[] a = new String[perspectives.size()];
@@ -73,4 +74,17 @@ public class PerspectiveFinderKeywords {
 		}
 		return a;
 	}
+
+	@RobotKeyword("List all the perspectives\n\n"
+            + "Example:\n"
+            + "| List All Perspectives| \n")
+//    @ArgumentNames({"label"})
+    public SWTBotPerspective[] listAllPerspectives() throws SWTBotBridgeException{
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+    	List<SWTBotPerspective> perspectives = bot.perspectives();
+    	SWTBotPerspective[] a = new SWTBotPerspective[perspectives.size()];
+    	perspectives.toArray(a);
+		return a;
+	}
+
 }
