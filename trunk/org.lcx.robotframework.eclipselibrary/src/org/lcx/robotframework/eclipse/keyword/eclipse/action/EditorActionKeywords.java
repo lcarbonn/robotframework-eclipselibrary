@@ -55,15 +55,19 @@ public class EditorActionKeywords {
     		editor.setFocus();
     	}
 	
-	@RobotKeyword("Set the focus on the editor\n\n"
+	@RobotKeyword("Get editor toolbars tooltip\n\n"
             + "Example:\n"
-            + "| Set Focus On Editor |\n")
+            + "| Get Editor ToolbarButtons tooltip |\n")
 //    @ArgumentNames({"text"})
         public String[] getEditorToolbarButtons() throws Exception {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		List<SWTBotToolbarButton> tbs = editor.getToolbarButtons();
     		String[] l = new String[tbs.size()];
-    		tbs.toArray(l);
+    		int i =0;
+    		for (SWTBotToolbarButton tb : tbs) {
+				l[i] = tb.getToolTipText();
+				i++;
+			}
     		return l;
     	}
 	
