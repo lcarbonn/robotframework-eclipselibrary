@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView;
-import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton;
+import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu;
+import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
 
@@ -55,16 +56,39 @@ public class ViewActionKeywords {
     		view.setFocus();
     	}
 	
-	@RobotKeyword("Set the focus on the view\n\n"
+	@RobotKeyword("Get a menu item matching the give label and optional index on the view\n\n"
             + "Example:\n"
-            + "| Set Focus On View |\n")
-//    @ArgumentNames({"text"})
-        public String[] getViewToolbarButtons() throws Exception {
+            + "| Get View Menu |\n")
+    @ArgumentNames({"label", "*index"})
+        public void getViewMenu(String label, String index) throws Exception {
     		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
-    		List<SWTBotToolbarButton> tbs = view.getToolbarButtons();
+    		int ind = -1;
+    		try {
+        		ind = Integer.valueOf(index).intValue();
+			} catch (Exception e) {
+				// nothing to do
+			}
+    		if(ind!=-1) {
+    			Context.setCurrentWidget(view.menu(label, ind));
+    		} else {
+    			Context.setCurrentWidget(view.menu(label));
+    		}
+    	}
+
+	@RobotKeyword("Get the list of menus label of the view\n\n"
+            + "Example:\n"
+            + "| Get View Menus Label |\n")
+//    @ArgumentNames({"text"})
+        public String[] getViewMenusLabel() throws Exception {
+    		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
+    		List<SWTBotViewMenu> tbs = view.menus();
     		String[] l = new String[tbs.size()];
-    		tbs.toArray(l);
+    		int i = 0;
+    		for (SWTBotViewMenu menu : tbs) {
+				l[i] = menu.getText();
+				i++;
+			}
     		return l;
     	}
-	
+
 }
