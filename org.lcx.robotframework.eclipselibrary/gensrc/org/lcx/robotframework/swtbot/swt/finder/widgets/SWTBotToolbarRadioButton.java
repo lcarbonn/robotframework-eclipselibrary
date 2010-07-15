@@ -3,10 +3,8 @@ package org.lcx.robotframework.swtbot.swt.finder.widgets;
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
-import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 
-
-public class SWTBotToolbarRadioButton extends AbstractSWTBotControl {
+public class SWTBotToolbarRadioButton extends SWTBotToolbarButton {
 
 	public SWTBotToolbarRadioButton(Object o) {
 		super(o);

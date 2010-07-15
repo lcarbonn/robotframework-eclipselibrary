@@ -1,5 +1,7 @@
 package org.lcx.robotframework.eclipse.keyword.eclipse.finder;
 
+import java.util.List;
+
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton;
@@ -14,6 +16,24 @@ import org.robotframework.javalib.annotation.RobotKeywords;
 @RobotKeywords
 public class ToolbarsFinderKeywords {
 
+	
+	@RobotKeyword("List all the toolbarButtons tooltip for the workbench part in context\n\n"
+            + "Example:\n"
+            + "| List Part All Toolbar Buttons Tooltip | \n")
+//    @ArgumentNames({"tooltip"})
+        public String[] listPartAllToolbarButtonsTooltip() throws Exception {
+    		SWTBotWorkbenchPart part = (SWTBotWorkbenchPart)Context.getCurrentWidget();
+   		
+        	List<SWTBotToolbarButton> tbs = part.getToolbarButtons();
+    		String[] a = new String[tbs.size()];
+    		int i = 0;
+        	for (SWTBotToolbarButton p : tbs) {
+        		a[i]=p.getToolTipText();
+        		i++;
+    		}
+    		return a;
+    	}
+	
 	@RobotKeyword("Find the toolbarButton with the given tooltip for the workbench part in context\n\n"
             + "Example:\n"
             + "| Find Part Toolbar Button | tooltip | \n")

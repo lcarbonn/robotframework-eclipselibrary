@@ -60,11 +60,11 @@ public class ViewActionKeywords {
             + "Example:\n"
             + "| Get View Menu |\n")
     @ArgumentNames({"label", "*index"})
-        public void getViewMenu(String label, String index) throws Exception {
+        public void getViewMenu(String label, String... index) throws Exception {
     		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
     		int ind = -1;
     		try {
-        		ind = Integer.valueOf(index).intValue();
+        		ind = Integer.valueOf(index[0]).intValue();
 			} catch (Exception e) {
 				// nothing to do
 			}

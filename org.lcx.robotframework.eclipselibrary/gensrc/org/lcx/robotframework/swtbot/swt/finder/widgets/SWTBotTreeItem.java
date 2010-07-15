@@ -108,7 +108,7 @@ public class SWTBotTreeItem extends AbstractSWTBotControl {
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.getNodes(java.lang.String)
 	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem> getNodes(java.lang.String param0) throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "getNodes", param0);
+		return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "getNodes", org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem.class, param0);
 
 	}
 

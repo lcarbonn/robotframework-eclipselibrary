@@ -37,10 +37,18 @@ public class Context {
 		if(Context.currentContext().getWidget()==null) {
 			throw new SWTBotBridgeException("There's no widget in the context");
 		}
-		if(!Context.currentContext().getWidget().getClass().equals(clazz)) {
+		Class<?> c = Context.currentContext().getWidget().getClass();
+		boolean isInstanceOf = false;
+		while(!isInstanceOf && !c.equals(Object.class)) {
+			if(c.equals(clazz)) isInstanceOf = true;	
+			c = c.getSuperclass();			
+		}
+		
+		if(!isInstanceOf) {
 			Class<?> wc = Context.currentContext().getWidget().getClass();
 			throw new SWTBotBridgeException("Widget (of class:"+wc.getName()+") in the context is not a instance of expected class:"+clazz.getName());
 		}
+		
 		return Context.currentContext().getWidget();
 	}
 }
