@@ -60,9 +60,9 @@ public class EditorFinderKeywords {
 
 	@RobotKeyword("List all the editors title\n\n"
             + "Example:\n"
-            + "| List All Editor Title | \n")
-    @ArgumentNames({"label"})
-    public String[] listAllEditorTitle() throws SWTBotBridgeException{
+            + "| List All Editors Title | \n")
+//    @ArgumentNames({"label"})
+    public String[] listAllEditorsTitle() throws SWTBotBridgeException{
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	List<? extends SWTBotEditor> editors = bot.editors();
 		String[] a = new String[editors.size()];
