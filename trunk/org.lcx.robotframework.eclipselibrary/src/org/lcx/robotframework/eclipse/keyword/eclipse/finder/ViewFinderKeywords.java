@@ -40,11 +40,23 @@ public class ViewFinderKeywords {
 		return bot.viewByTitle(title);
 	}
 
+	@RobotKeyword("List all the views\n\n"
+            + "Example:\n"
+            + "| List All Views | \n")
+    @ArgumentNames({"label"})
+    public String[] listAllViews() throws SWTBotBridgeException{
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+    	List<SWTBotView> views = bot.views();
+		String[] a = new String[views.size()];
+		views.toArray(a);
+		return a;
+	}
+
 	@RobotKeyword("List all the views title\n\n"
             + "Example:\n"
-            + "| List All View Title | \n")
+            + "| List All Views Title | \n")
     @ArgumentNames({"label"})
-    public String[] listAllViewTitle() throws SWTBotBridgeException{
+    public String[] listAllViewsTitle() throws SWTBotBridgeException{
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	List<SWTBotView> views = bot.views();
 		String[] a = new String[views.size()];

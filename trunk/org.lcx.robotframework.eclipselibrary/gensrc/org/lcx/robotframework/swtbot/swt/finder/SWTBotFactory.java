@@ -189,7 +189,7 @@ public class SWTBotFactory extends AbstractSWTBotFactory {
 	//public java.util.List org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory.trayItems()
 	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTrayItem> trayItems() throws SWTBotBridgeException {
-		return (List)SWTBotBridge.callMethodReturnPrimitiveList(distantObject, "trayItems");
+		return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "trayItems", org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTrayItem.class);
 
 	}
 

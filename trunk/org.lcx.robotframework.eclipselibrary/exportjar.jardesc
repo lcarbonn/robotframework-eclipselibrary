@@ -10,7 +10,7 @@
             <packagesToUnSeal/>
         </sealing>
     </manifest>
-    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
         <folder path="/org.lcx.robotframework.eclipselibrary/lib"/>
         <javaElement handleIdentifier="=org.lcx.robotframework.eclipselibrary/gensrc"/>
         <javaElement handleIdentifier="=org.lcx.robotframework.eclipselibrary/src"/>
