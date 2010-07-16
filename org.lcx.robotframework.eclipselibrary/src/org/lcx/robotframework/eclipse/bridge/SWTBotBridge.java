@@ -241,7 +241,7 @@ public class SWTBotBridge {
 	@SuppressWarnings("unchecked")
 	public static List<?> callMethodReturnPrimitiveList(Object instance, String methodName, Object... parameters) throws SWTBotBridgeException {
 		List ls = new ArrayList();
-		Object o = SWTBotBridge.callMethod(instance, methodName);
+		Object o = SWTBotBridge.callMethod(instance, methodName, parameters);
 
 		Object iterator = SWTBotBridge.callMethod(o, "iterator");
 		while((Boolean)SWTBotBridge.callMethod(iterator, "hasNext")) {
@@ -258,7 +258,7 @@ public class SWTBotBridge {
 	public static List<?> callMethodReturnSWTBotList(Object instance, String methodName, Class<?> clazz, Object... parameters) throws SWTBotBridgeException {
 		try {
 			List<Object> ls = new ArrayList<Object>();
-			Object o = SWTBotBridge.callMethod(instance, methodName);
+			Object o = SWTBotBridge.callMethod(instance, methodName, parameters);
 			
 			Object iterator = SWTBotBridge.callMethod(o, "iterator");
 			while((Boolean)SWTBotBridge.callMethod(iterator, "hasNext")) {
@@ -278,7 +278,7 @@ public class SWTBotBridge {
 
 	public static Object[] callMethodReturnSWTBotArray(Object instance, String methodName, Class<?> clazz, Object... parameters) throws SWTBotBridgeException {
 		try {
-			Object[] o = (Object[])SWTBotBridge.callMethod(instance, methodName);
+			Object[] o = (Object[])SWTBotBridge.callMethod(instance, methodName, parameters);
 			Object[] lo = new Object[o.length];
 			int i = 0;
 			for (Object distO : o) {

@@ -44,6 +44,15 @@ public class StyledTextActionKeywords {
     		return styledText.getText();
     	}
 	
+	@RobotKeyword("Set the text of the styledText\n\n"
+			+ "Example:\n"
+            + "| Set StyledText Text | text |\n")
+    @ArgumentNames({"text"})
+        public void setStyledTextText(String text) throws Exception {
+    		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
+			styledText.setText(text);
+    	}
+	
 	@RobotKeyword("Get the tooltip text of the styledText\n\n"
             + "Example:\n"
             + "| Get StyledText Tooltip Text |\n")
@@ -149,9 +158,9 @@ public class StyledTextActionKeywords {
 			+ "\t line the line number, 0 based."
             + "\t column the column number, 0 based."
 			+ "Example:\n"
-            + "| Insert StyledText Text | 0 | 0 | text | \n")
+            + "| Insert StyledText Text At Position | 0 | 0 | text | \n")
     @ArgumentNames({"line", "column", "text"})
-        public void insertStyledTextText(String line, String column, String text) throws Exception {
+        public void insertStyledTextTextAtPosition(String line, String column, String text) throws Exception {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(line!=null && column!=null) {
 				Integer l = Integer.valueOf(line).intValue();
