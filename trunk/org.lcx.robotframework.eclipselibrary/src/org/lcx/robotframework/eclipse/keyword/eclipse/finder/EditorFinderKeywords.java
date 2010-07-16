@@ -3,7 +3,9 @@ package org.lcx.robotframework.eclipse.keyword.eclipse.finder;
 import java.util.List;
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
+import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
+import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -73,4 +75,44 @@ public class EditorFinderKeywords {
 		}
 		return a;
 	}
+	
+	@RobotKeyword("Find the active eclipse editor\n\n"
+            + "Example:\n"
+            + "| Find Active Eclipse Editor |\n")
+//    @ArgumentNames({"*params"})
+    public SWTBotEclipseEditor findActiveEclipseEditor() throws SWTBotBridgeException{
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+		SWTBotEditor editor = bot.activeEditor();
+		SWTBotEclipseEditor ee = editor.toTextEditor();
+		Context.setCurrentWidget(ee);
+		return ee;
+	}
+
+	@RobotKeyword("Find the eclipse editor by its id\n\n"
+            + "Example:\n"
+            + "| Find Eclipse Editor By Id | id |\n")
+    @ArgumentNames({"id"})
+    public SWTBotEclipseEditor findEclipseEditorById(String id) throws SWTBotBridgeException{
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+		SWTBotEditor editor = bot.editorById(id);
+		editor.show();
+		SWTBotEclipseEditor ee = editor.toTextEditor();
+		Context.setCurrentWidget(ee);
+		return ee;
+	}
+
+	@RobotKeyword("Find the eclipse editor by its title\n\n"
+            + "Example:\n"
+            + "| Find Eclipse Editor By Title | title |\n")
+    @ArgumentNames({"title"})
+    public SWTBotEclipseEditor findEclipseEditorByLabel(String title) throws SWTBotBridgeException{
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();		
+		SWTBotEditor editor = bot.editorByTitle(title);
+		editor.show();
+		SWTBotEclipseEditor ee = editor.toTextEditor();
+		Context.setCurrentWidget(ee);
+		return ee;
+	}
+
+
 }
