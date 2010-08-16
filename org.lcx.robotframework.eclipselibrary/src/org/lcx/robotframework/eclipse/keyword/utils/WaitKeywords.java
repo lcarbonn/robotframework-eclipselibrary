@@ -15,6 +15,7 @@ import org.robotframework.javalib.annotation.RobotKeywords;
 @RobotKeywords
 public class WaitKeywords {
 
+	//TODO : change timeout and interval parameters to optional 
 	
 	private void waitUntil(ICondition condition, String timeout, String interval) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();

@@ -3,6 +3,7 @@ package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 import java.util.List;
 
 import org.lcx.robotframework.eclipse.context.Context;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTree;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -121,7 +122,8 @@ public class TreeItemActionKeywords {
 //    @ArgumentNames({"text"})
         public void selectTreeItem() throws Exception {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
-    		treeItem.select();
+    		treeItem = treeItem.select();
+    		Context.setCurrentWidget(treeItem);
     	}
 
 	@RobotKeyword("Uncheck the treeItem\n\n"
@@ -190,33 +192,54 @@ public class TreeItemActionKeywords {
     @ArgumentNames({"*text"})
         public void expandTreeItemNodes(String... text) throws Exception {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
-    		Context.setCurrentWidget(treeItem.expandNode(text));
+    		treeItem.expandNode(text);
+//    		Context.setCurrentWidget(treeItem.expandNode(text));
     	}
 	
-	@RobotKeyword("Get the treeItem node at the given row\n\n"
+	@RobotKeyword("Find the treeItem node with the given text or at the given row if numeric\n\n"
             + "Example:\n"
-            + "| Get TreeItem At Row | 0 | \n")
-    @ArgumentNames({"row"})
-        public void getTreeItemAtRow(String row) throws Exception {
-    		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
-    		int r = Integer.valueOf(row).intValue();
-    		Context.setCurrentWidget(treeItem.getNode(r));
-    	}
-
-	@RobotKeyword("Get the treeItem node with the given text\n\n"
-            + "Example:\n"
-            + "| Get TreeItem With Text | text | \n")
+            + "| find TreeItem | text | \n"
+            + "| find TreeItem | 0 | \n")
     @ArgumentNames({"text"})
-        public void getTreeItemWithText(String text) throws Exception {
+        public void findTreeItem(String text) throws Exception {
+			Object o = Context.getCurrentWidget();
+			if(o instanceof SWTBotTree) {
+	    		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
+	    		SWTBotTreeItem item = tree.getTreeItem(text);
+	    		Context.setCurrentWidget(item);
+	    		return;
+			}
+			
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
-    		Context.setCurrentWidget(treeItem.getNode(text));
+    		int row = -1;
+    		try {
+				row = Integer.valueOf(text).intValue(); 
+			} catch (Exception e) {
+				// nothing to do
+			}
+			if(row==-1) {
+				treeItem = treeItem.getNode(text);
+			} else {
+				treeItem = treeItem.getNode(row);
+			}
+    		Context.setCurrentWidget(treeItem);
     	}
 
-	@RobotKeyword("Get the index'th treeItem node with the given text\n\n"
+	@RobotKeyword("Find the treeItem node with the given parameter as text\n\n"
             + "Example:\n"
-            + "| Get TreeItem With Text At Index | text | 0 |\n")
+            + "| find TreeItem With Text | 0 | \n")
+    @ArgumentNames({"text"})
+        public void findTreeItemWithText(String text) throws Exception {
+    		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
+			treeItem = treeItem.getNode(text);
+    		Context.setCurrentWidget(treeItem);
+    	}
+
+	@RobotKeyword("Find the index'th treeItem node with the given text\n\n"
+            + "Example:\n"
+            + "| Find TreeItem At Index | text | 0 |\n")
     @ArgumentNames({"text", "index"})
-        public void getTreeItemWithTextAtIndex(String text, String index) throws Exception {
+        public void findTreeItemAtIndex(String text, String index) throws Exception {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		int i = Integer.valueOf(index).intValue();
     		Context.setCurrentWidget(treeItem.getNode(text, i));
@@ -257,7 +280,8 @@ public class TreeItemActionKeywords {
     @ArgumentNames({"name"})
         public void selectTreeItemWithName(String name) throws Exception {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
-    		Context.setCurrentWidget(treeItem.select(name));
+    		treeItem = treeItem.select(name);
+    		Context.setCurrentWidget(treeItem);
     	}
 
 	@RobotKeyword("Select the treeItem with the given names\n\n"
@@ -266,7 +290,8 @@ public class TreeItemActionKeywords {
     @ArgumentNames({"*name"})
         public void selectTreeItemWithNames(String... names) throws Exception {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
-    		Context.setCurrentWidget(treeItem.select(names));
+    		treeItem = treeItem.select(names);
+    		Context.setCurrentWidget(treeItem);
     	}
 	
 

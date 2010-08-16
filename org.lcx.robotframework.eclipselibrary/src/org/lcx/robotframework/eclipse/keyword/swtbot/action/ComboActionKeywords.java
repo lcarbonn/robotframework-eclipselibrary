@@ -84,14 +84,21 @@ public class ComboActionKeywords {
     		}
     	}
 
+	/* TODO : keyboard layout for text typing
 	@RobotKeyword("Type the text of the combo with optional interval between consecutives stroke\n\n"
             + "Example:\n"
-            + "| Type Combo Text | interval | \n")
+            + "| Type Combo Text | text | 10 \n")
     @ArgumentNames({"text", "*interval"})
         public void typeComboText(String text, String... interval) throws Exception {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		int intervalI = -1;
-			intervalI = Integer.valueOf(interval[0]).intValue();
+    		try {
+    			intervalI = Integer.valueOf(interval[0]).intValue();
+    		}
+    		catch (Exception e) {
+				// nothing to do
+			}
+    		
     		if(text!=null && text.length()>0) {
     			if(intervalI!=-1) {
     				combo.typeText(text, intervalI);
@@ -100,7 +107,8 @@ public class ComboActionKeywords {
     			}
     		}
     	}
-
+*/
+	
 	@RobotKeyword("Is the combo active\n\n"
             + "Example:\n"
             + "| Is Combo Active |\n")

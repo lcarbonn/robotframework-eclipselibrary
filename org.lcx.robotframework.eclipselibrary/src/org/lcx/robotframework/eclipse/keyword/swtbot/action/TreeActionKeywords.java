@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTree;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
@@ -126,13 +127,14 @@ public class TreeActionKeywords {
     		return a;
     	}
 
-	@RobotKeyword("Select the tree item with the given text\n\n"
+	@RobotKeyword("Find the tree treeItem with the given text\n\n"
             + "Example:\n"
-            + "| Select Tree Item With Text | text |\n")
+            + "| Find Tree TreeItem | text |\n")
     @ArgumentNames({"text"})
-        public void selectTreeItemWithText(String text) throws Exception {
+        public void findTreeTreeItem(String text) throws Exception {
     		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
-    		Context.setCurrentWidget(tree.getTreeItem(text));
+    		SWTBotTreeItem item = tree.getTreeItem(text);
+    		Context.setCurrentWidget(item);
     	}
 
 	@RobotKeyword("Expands the given tree nodes\n\n"
@@ -141,22 +143,24 @@ public class TreeActionKeywords {
     @ArgumentNames({"*text"})
         public void expandTreeNodes(String... text) throws Exception {
     		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
-    		Context.setCurrentWidget(tree.expandNode(text));
+    		tree.expandNode(text);
+//    		Context.setCurrentWidget(tree.expandNode(text));
     	}
 	
 	@RobotKeyword("Expands the given tree node recursivly\n\n"
             + "Example:\n"
-            + "| Expand Tree Node | text1 | text2 |\n")
+            + "| Expand Tree Node | text1 | true |\n")
     @ArgumentNames({"text", "recursive"})
         public void expandTreeNode(String text, String recursive) throws Exception {
     		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
     		boolean b = Boolean.valueOf(recursive).booleanValue();
-    		Context.setCurrentWidget(tree.expandNode(text, b));
+    		tree.expandNode(text, b);
+//    		Context.setCurrentWidget(tree.expandNode(text, b));
     	}
 	
 	@RobotKeyword("Select the indexed item(s) in the tree\n\n"
             + "Example:\n"
-            + "| Select Indexed Items In Tree |\n")
+            + "| Select Indexed Items In Tree | 0 | 1 |\n")
     @ArgumentNames({"*index"})
         public void selectIndexedItemsInTree(String... index) throws Exception {
     		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
@@ -170,7 +174,7 @@ public class TreeActionKeywords {
 
 	@RobotKeyword("Select the item(s) with the given text(s) in the tree\n\n"
             + "Example:\n"
-            + "| Select Items In Tree |\n")
+            + "| Select Items In Tree | item0 | item1 |\n")
     @ArgumentNames({"*text"})
         public void selectItemsInTree(String... text) throws Exception {
     		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);

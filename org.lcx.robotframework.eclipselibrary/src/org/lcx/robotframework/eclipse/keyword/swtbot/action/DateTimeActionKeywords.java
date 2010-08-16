@@ -65,9 +65,9 @@ public class DateTimeActionKeywords {
 	
 	@RobotKeyword("Get the date with teh given pattern (see java SimpleDateFormat patterns)\n\n"
             + "Example:\n"
-            + "| Get DateTime | yyyyy.MMMMM.dd |\n")
+            + "| Get DateTime Date | yyyyy.MMMMM.dd |\n")
     @ArgumentNames({"pattern"})
-        public String getDateTime(String pattern) throws Exception {
+        public String getDateTimeDate(String pattern) throws Exception {
     		SWTBotDateTime dateTime = (SWTBotDateTime)Context.getCurrentWidget(SWTBotDateTime.class);
     		Date date = dateTime.getDate();
     		if(pattern!=null) {
@@ -80,9 +80,9 @@ public class DateTimeActionKeywords {
 
 	@RobotKeyword("Set the date with teh given pattern (see java SimpleDateFormat patterns)\n\n"
             + "Example:\n"
-            + "| Set DateTime | 2010.12.31 | yyyyy.MM.dd \n")
-    @ArgumentNames({"date", "pattern"})
-        public void setDateTime(String date, String pattern) throws Exception {
+            + "| Set DateTime Date | yyyyy.MM.dd | 2010.12.31 \n")
+    @ArgumentNames({"pattern", "date"})
+        public void setDateTimeDate(String pattern, String date) throws Exception {
     		SWTBotDateTime dateTime = (SWTBotDateTime)Context.getCurrentWidget(SWTBotDateTime.class);
     		if(date !=null && pattern!=null) {
     			SimpleDateFormat sdf = new SimpleDateFormat(pattern);

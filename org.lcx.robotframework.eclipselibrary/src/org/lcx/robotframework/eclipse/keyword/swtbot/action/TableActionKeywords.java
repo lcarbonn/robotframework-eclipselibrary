@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableColumn;
+import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
@@ -152,33 +154,39 @@ public class TableActionKeywords {
     		table.doubleClick(r, c);
     	}
 
-	@RobotKeyword("Select the table item at the given row\n\n"
+	@RobotKeyword("Get the table item at the given row\n\n"
 			+ "\t row the row number, 0 based."
             + "Example:\n"
-            + "| Select Table Item At Row | 0 |\n")
+            + "| Get Table Item At Row | 0 |\n")
     @ArgumentNames({"row"})
-        public void selectTableItemAtRow(String row) throws Exception {
+        public SWTBotTableItem getTableItemAtRow(String row) throws Exception {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		Integer r = Integer.valueOf(row).intValue();
-    		Context.setCurrentWidget(table.getTableItem(r));
+    		SWTBotTableItem item = table.getTableItem(r);
+    		Context.setCurrentWidget(item);
+    		return item;
     	}
 
-	@RobotKeyword("Select the table item with the given text\n\n"
+	@RobotKeyword("Get the table item with the given text\n\n"
             + "Example:\n"
-            + "| Select Table Item With Text | text |\n")
+            + "| Get Table Item With Text | text |\n")
     @ArgumentNames({"text"})
-        public void selectTableItemWithText(String text) throws Exception {
+        public SWTBotTableItem getTableItemWithText(String text) throws Exception {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
-    		Context.setCurrentWidget(table.getTableItem(text));
+    		SWTBotTableItem item = table.getTableItem(text);
+    		Context.setCurrentWidget(item);
+    		return item;
     	}
 
-	@RobotKeyword("Select the table header with the given text\n\n"
+	@RobotKeyword("Get the table header with the given text\n\n"
             + "Example:\n"
-            + "| Select Table Header With Text | text |\n")
+            + "| Get Table Header With Text | text |\n")
     @ArgumentNames({"text"})
-        public void selectTableHeaderWithText(String text) throws Exception {
+        public SWTBotTableColumn getTableHeader(String text) throws Exception {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
-    		Context.setCurrentWidget(table.header(text));
+    		SWTBotTableColumn header = table.header(text);
+    		Context.setCurrentWidget(header);
+    		return header;
     	}
 
 	@RobotKeyword("Gets the index of the item matching the given item\n"
@@ -191,6 +199,17 @@ public class TableActionKeywords {
     		return table.indexOf(text);
     	}
 
+	@RobotKeyword("Gets the index of the item matching the given item and the given column\n"
+			+ " , or -1 if the item does not exist in the table.\n\n"
+            + "Example:\n"
+            + "\t column the column number, 0 based."
+            + "| Get Table Item Index In Column Name | text | name | \n")
+    @ArgumentNames({"text", "columnName"})
+        public int getTableItemIndexInColumnName(String text, String columnName) throws Exception {
+    		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
+    		return table.indexOf(text, columnName);
+    	}
+	
 	@RobotKeyword("Gets the index of the item matching the given item and the given column\n"
 			+ " , or -1 if the item does not exist in the table.\n\n"
             + "Example:\n"
@@ -215,7 +234,7 @@ public class TableActionKeywords {
 	
 	@RobotKeyword("Select the indexed item(s) in the table\n\n"
             + "Example:\n"
-            + "| Select Indexed Items In Table |\n")
+            + "| Select Indexed Items In Table | 0 | 1 |\n")
     @ArgumentNames({"*index"})
         public void selectIndexedItemsInTable(String... index) throws Exception {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
@@ -229,7 +248,7 @@ public class TableActionKeywords {
 
 	@RobotKeyword("Select the item(s) with the given text(s) in the table\n\n"
             + "Example:\n"
-            + "| Select Items In Table |\n")
+            + "| Select Items In Table | item0 | item1 |\n")
     @ArgumentNames({"*text"})
         public void selectItemsInTable(String... text) throws Exception {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);

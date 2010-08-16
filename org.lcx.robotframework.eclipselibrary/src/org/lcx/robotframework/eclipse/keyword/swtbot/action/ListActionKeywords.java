@@ -102,7 +102,7 @@ public class ListActionKeywords {
 	
 	@RobotKeyword("Select the indexed item(s) in the list\n\n"
             + "Example:\n"
-            + "| Select Indexed Items In List |\n")
+            + "| Select Indexed Items In List | 0 | 1 |\n")
     @ArgumentNames({"*index"})
         public void selectIndexedItemsInList(String... index) throws Exception {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
@@ -116,7 +116,7 @@ public class ListActionKeywords {
 
 	@RobotKeyword("Select the item(s) with the given text(s) in the list\n\n"
             + "Example:\n"
-            + "| Select Items In List |\n")
+            + "| Select Items In List | item 0 | item 1 |\n")
     @ArgumentNames({"*text"})
         public void selectItemsInList(String... text) throws Exception {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);

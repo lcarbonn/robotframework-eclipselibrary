@@ -66,5 +66,13 @@ public class RadioActionKeywords {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		radio.setFocus();
     	}
+
+	@RobotKeyword("Is the radio selected\n\n"
+            + "Example:\n"
+            + "| Is Radio Selected |\n")
+        public boolean isRadioSelected() throws Exception {
+    		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
+    		return radio.isSelected();
+    	}
 	
 }
