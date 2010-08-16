@@ -1,14 +1,12 @@
 #labels Featured,Installation
-= Introduction =
+= Installation =
 
 Robotframework Eclipse Library is based on :
- - robotframework v2.1.3
- - python v2.6
- - jython v2.2
- - Eclipse 3.5 (should work also on 3.4 but not tested!)
- - SWTBot 2.0
-
-= Installation =
+ * robotframework v2.1.3
+ * python v2.6
+ * jython v2.2
+ * Eclipse 3.5 (should work also on 3.4 but not tested!)
+ * SWTBot 2.0
 
 == Eclipse Plugin ==
  Before using Eclipse Library, you should install a plugin under Eclipse.
