@@ -1,6 +1,4 @@
-#summary Installation details.
 #labels Featured,Installation
-
 = Introduction =
 
 Robotframework Eclipse Library is based on :
@@ -10,7 +8,7 @@ Robotframework Eclipse Library is based on :
  - Eclipse 3.5 (should work also on 3.4 but not tested!)
  - SWTBot 2.0
 
-= Details =
+= Installation =
 
 == Eclipse Plugin ==
  Before using Eclipse Library, you should install a plugin under Eclipse.
