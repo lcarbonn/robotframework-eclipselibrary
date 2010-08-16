@@ -41,10 +41,10 @@ td.name, th.name {
   width: 10em;
 }
 </style>
-<title>Testeclipse Eclipseeditor</title>
+<title>Testeclipse Tree2</title>
 </head>
 <body>
-<h1>Testeclipse Eclipseeditor</h1>
+<h1>Testeclipse Tree2</h1>
 <table id="settings" border="1">
 <tr>
 <th class="name">Setting</th>
@@ -82,9 +82,9 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>file:/d:/eclipse/eclipse35</td>
+<td>file:/d:/bootstrap35-robot/rcpbot</td>
 <td>-data</td>
-<td>file:/d:/bootstrap35-robot/tv1</td>
+<td>file:/d:/bootstrap35-robot/rcpbot/workspace</td>
 </tr>
 <tr>
 <td class="name"></td>
@@ -95,226 +95,219 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find Perspective By Label</td>
-<td>Resource</td>
+<td>Find Tree</td>
+<td>1</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Activate Perspective</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find View By Title</td>
-<td>Project Explorer</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Show View</td>
+<td>Get Tree Columns</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find EclipseEditor By Label</td>
-<td>Test.java</td>
+<td>${count} =</td>
+<td>Count Tree Columns</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Show Eclipse Editor</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Set Focus On EclipseEditor</td>
-<td></td>
-<td></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>5</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>${text} =</td>
-<td>Get EclipseEditor Text</td>
-<td></td>
-<td></td>
+<td>Get Tree Cell</td>
+<td>1</td>
+<td>2</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Set EclipseEditor text</td>
+<td>Should Be Equal</td>
 <td>${text}</td>
+<td>1:2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text} =</td>
+<td>Get Tree Cell With Column Name</td>
+<td>2</td>
+<td>Column 3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>2:3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Tree TreeItem</td>
+<td>2:0</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Active</td>
+<td>${bool} =</td>
+<td>Is Tree Item Checked</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Tree Item</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Dirty</td>
+<td>${bool} =</td>
+<td>Is Tree Item Checked</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Uncheck Tree Item</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Enabled</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Count EclipseEditor Line</td>
-<td></td>
+<td>${bool} =</td>
+<td>Is Tree Item Checked</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Eclipse Editor Has Bullet On Current Line</td>
-<td></td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Eclipse Editor Has Bullet On Given Line</td>
+<td>Find Tree Item</td>
+<td>2,0:0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool} =</td>
+<td>Is Tree Item Expanded</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Tree</td>
 <td>1</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Get Eclipse Editor Lines</td>
+<td>Find Tree TreeItem</td>
+<td>2:0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Tree Item</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Expand Tree Item</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Get Eclipse Editor Selection</td>
+<td>${bool} =</td>
+<td>Is Tree Item Expanded</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool} =</td>
+<td>Is Tree Item Selected</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select Tree Item</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Get Eclipse Editor Text On Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Text On Given Line</td>
-<td>1</td>
+<td>${bool} =</td>
+<td>Is Tree Item Selected</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Get Eclipse Editor Title</td>
+<td>Should Be True</td>
+<td>${bool}</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Tooltip Text</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Insert Eclipse Editor Text At Position</td>
-<td>9</td>
-<td>1</td>
-<td>// this is another comment\n</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>1</td>
-<td>5</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Given Line</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Range</td>
-<td>1</td>
-<td>1</td>
-<td>5</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>10</td>
-<td>1</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Insert Eclipse Editor Text</td>
-<td>// this is a comment\n\n</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>9</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Comment</td>
-<td>Count EclipseEditor Quickfix List Item</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Comment</td>
-<td>Get Eclipse Editor Quick Fixes</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Comment</td>
-<td>Get Auto Complete Proposals For EclipseEditor</td>
-<td>ar</td>
 <td></td>
 </tr>
 <tr>
