@@ -64,9 +64,9 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Get Spinner Digits |\n")
 //    @ArgumentNames({"text"})
-        public void getSpinnerDigits() throws Exception {
+        public int getSpinnerDigits() throws Exception {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
-    		spinner.getDigits();
+    		return spinner.getDigits();
     	}
 
 	@RobotKeyword("Get the spinner maximum\n\n"

@@ -84,7 +84,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Get StyledText Selection |\n")
 //    @ArgumentNames({"text"})
-        public String getStyledTextLinesSelection() throws Exception {
+        public String getStyledTextSelection() throws Exception {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.getSelection();
     	}
@@ -175,7 +175,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Navigate To StyledText Position | 0 | 0 |\n")
     @ArgumentNames({"line", "column"})
-        public void navigatetToStyledTextPosition(String line, String column) throws Exception {
+        public void navigateToStyledTextPosition(String line, String column) throws Exception {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(line!=null && column!=null) {
 				Integer l = Integer.valueOf(line).intValue();
@@ -222,7 +222,7 @@ public class StyledTextActionKeywords {
 				styledText.selectRange(l, c, r);
     		}    	
     	}
-	
+	/* TODO : keyboard layout for text typing
 	@RobotKeyword("Type text into styledText\n\n"
 			+ "Example:\n"
             + "| Type StyledText Text | text | \n")
@@ -232,6 +232,9 @@ public class StyledTextActionKeywords {
 			styledText.typeText(text);
     	}
 
+*/
+	
+	/* TODO : keyboard layout for text typing
  	@RobotKeyword("Type text into styledText with the interval between consecutive key strokes\n\n"
 			+ "Example:\n"
             + "| Type StyledText Text With Interval | text | \n")
@@ -241,7 +244,9 @@ public class StyledTextActionKeywords {
     		Integer i = Integer.valueOf(interval).intValue();
 			styledText.typeText(text, i);
     	}
-
+*/
+	
+	/* TODO : keyboard layout for text typing
 	@RobotKeyword("Type the text into the styledText at the given position\n\n"
 			+ "\t line the line number, 0 based."
             + "\t column the column number, 0 based."
@@ -257,5 +262,6 @@ public class StyledTextActionKeywords {
 				styledText.typeText(l, c, text);
     		}    	
     	}
+*/
 
 }

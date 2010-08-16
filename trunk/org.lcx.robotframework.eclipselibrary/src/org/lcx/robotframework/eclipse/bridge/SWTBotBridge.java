@@ -11,7 +11,7 @@ import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
 
 public class SWTBotBridge {
 
-	private static boolean debug = true;
+	private static boolean debug = false;
 	
 	private static Object SWTBotBundle = null;
 	private static Object SWTBotService = null;
@@ -140,18 +140,11 @@ public class SWTBotBridge {
 				parameterTypes[i] = getClass(parameters[i]);
 			}
 			if(debug) {
-//				for(Method m : instance.getClass().getMethods()) {
-//					System.out.println("method="+m);
-//					for(Class<?> c : m.getParameterTypes()) {
-//						System.out.println("\tparamTypeClass="+c);
-//					}
-//				}
-	
-//				System.out.println("called static method="+methodName);
-//				for (int i = 0; i < parameters.length; i++) {
-//					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
-//				}
-//				System.out.println("\t of class="+className);
+				System.out.println("called static method="+methodName);
+				for (int i = 0; i < parameters.length; i++) {
+					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
+				}
+				System.out.println("\t of class="+className);
 			}
 			
 			Class<?> c = loadClass(className);
@@ -186,18 +179,17 @@ public class SWTBotBridge {
 				}
 			}
 			if(debug) {
-//				for(Method m : instance.getClass().getMethods()) {
-//					System.out.println("method="+m);
-//					for(Class<?> c : m.getParameterTypes()) {
-//						System.out.println("\tparamTypeClass="+c);
-//					}
-//				}
-	
-//				System.out.println("called method="+methodName);
-//				for (int i = 0; i < parameters.length; i++) {
-//					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
-//				}
-//				System.out.println("\t on instance of class="+instance.getClass().getName());
+				for(Method m : instance.getClass().getMethods()) {
+					System.out.println("method="+m);
+					for(Class<?> c : m.getParameterTypes()) {
+						System.out.println("\tparamTypeClass="+c);
+					}
+				}
+				System.out.println("called method="+methodName);
+				for (int i = 0; i < parameters.length; i++) {
+					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
+				}
+				System.out.println("\t on instance of class="+instance.getClass().getName());
 			}
 			
 			Method method = instance.getClass().getMethod(methodName, parameterTypes);
@@ -211,26 +203,30 @@ public class SWTBotBridge {
 		}
 	}
 
-	public static Object callMethodWithArray(Object instance, String methodName, Object... parameters) throws SWTBotBridgeException {
-//		System.out.println("=====================================");
-//		System.out.println("called method="+methodName+", parametersClass="+parameters.getClass().getName());
-//		for(Object p : parameters) {
-//			System.out.println("\t with param="+p+", of class="+p.getClass().getName());
-//		}
-//		System.out.println("\t on instance of class="+instance.getClass().getName());
+	public static Object callMethodWithArray(Object instance, String methodName, Object arrayParameter) throws SWTBotBridgeException {
+		if(debug) {
+			System.out.println("=====================================");
+			System.out.println("called method="+methodName+", parametersClass="+arrayParameter.getClass().getName());
+			System.out.println("\t on instance of class="+instance.getClass().getName());
+		}
 
+		if(!arrayParameter.getClass().isArray()) {
+			throw new SWTBotBridgeException("Method callMethodWithArray should be called with a array as parameter");
+		}
+		
 		try {
-
-//			for(Method m : instance.getClass().getMethods()) {
-//				System.out.println("method="+m);
-//				for(Class<?> c : m.getParameterTypes()) {
-//					System.out.println("\tparamTypeClass="+c);
-//				}
-//			}
+			if(debug) {
+				for(Method m : instance.getClass().getMethods()) {
+					System.out.println("method="+m);
+					for(Class<?> c : m.getParameterTypes()) {
+						System.out.println("\tparamTypeClass="+c);
+					}
+				}
+			}
 			
-			Method method = instance.getClass().getMethod(methodName, parameters.getClass());
+			Method method = instance.getClass().getMethod(methodName, arrayParameter.getClass());
 			//parameters passed with (Object) instead of Object[] to pass it as one single array object
-			Object o = method.invoke(instance, (Object)parameters);
+			Object o = method.invoke(instance, (Object)arrayParameter);
 			return o;
 		} catch (Exception e) {
 			e.printStackTrace();

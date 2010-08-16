@@ -59,9 +59,18 @@ public class TextActionKeywords {
     		SWTBotText text = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
     		text.setFocus();
     	}
-	
 
-	
+	@RobotKeyword("Set text into text\n\n"
+			+ "Example:\n"
+            + "| Set Text Text | text | \n")
+    @ArgumentNames({"text"})
+        public void setTextText(String text) throws Exception {
+    		SWTBotText t = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
+			t.setText(text);
+    	}
+
+
+	/*
 	@RobotKeyword("Type text into text\n\n"
 			+ "Example:\n"
             + "| Type Text Text | text | \n")
@@ -80,7 +89,7 @@ public class TextActionKeywords {
     		Integer i = Integer.valueOf(interval).intValue();
 			t.typeText(text, i);
     	}
-
+*/
  	@RobotKeyword("Select the contents of the entire widget\n\n"
 			+ "Example:\n"
             + "| Select All Text | \n")
@@ -89,4 +98,5 @@ public class TextActionKeywords {
     		SWTBotText t = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
 			t.selectAll();
     	}
+
 }

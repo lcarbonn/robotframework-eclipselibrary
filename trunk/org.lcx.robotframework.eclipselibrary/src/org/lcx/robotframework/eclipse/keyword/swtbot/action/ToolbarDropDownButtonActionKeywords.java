@@ -68,11 +68,11 @@ public class ToolbarDropDownButtonActionKeywords {
     		toolbarDropDownButton.setFocus();
     	}
 	
-	@RobotKeyword("Select the submenu inside this menu item on the toolbarDropDownButton\n\n"
+	@RobotKeyword("Find the submenu inside this menu item on the toolbarDropDownButton\n\n"
             + "Example:\n"
-            + "| Select Menu In ToolbarDropDownButton | text | \n")
+            + "| Find Menu In ToolbarDropDownButton | text | \n")
     @ArgumentNames({"text"})
-        public void setFocusOnToolbarDropDownButton(String text) throws Exception {
+        public void findMenuInToolbarDropDownButton(String text) throws Exception {
     		SWTBotToolbarDropDownButton toolbarDropDownButton = (SWTBotToolbarDropDownButton)Context.getCurrentWidget(SWTBotToolbarDropDownButton.class);
     		Context.setCurrentWidget(toolbarDropDownButton.menuItem(text));
     	}

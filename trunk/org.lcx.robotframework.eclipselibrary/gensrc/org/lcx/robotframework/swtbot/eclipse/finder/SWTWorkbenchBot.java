@@ -26,6 +26,10 @@ public class SWTWorkbenchBot extends SWTBot {
 		super(null);
 		System.out.println("Instanciation of SWTWorkbenchBot");
 		distantObject = SWTBotBridge.getSWTWorkbenchBot();
+		// set Should Find Invisible Controls to true instead of receiving exception
+		// bot.getFinder().setShouldFindInvisibleControls(true);
+		Object o = SWTBotBridge.callMethod(distantObject, "getFinder");
+		SWTBotBridge.callMethod(o, "setShouldFindInvisibleControls", true);
 	}
 
 	public SWTWorkbenchBot(Object o) throws SWTBotBridgeException {
