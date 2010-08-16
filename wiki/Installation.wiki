@@ -10,16 +10,15 @@ Robotframework Eclipse Library is based on :
 
 == Eclipse Plugin ==
  Before using Eclipse Library, you should install a plugin under Eclipse.
- - Robotframework Eclipse Library plugin for SWTBot update site
+ * Robotframework Eclipse Library plugin for SWTBot update site
    [http://scrumvision.sourceforge.net/update-site/eclipselibrary]
-  This plugin will ask you installing SWTBot normaly.
+ This plugin will ask you installing SWTBot normaly.
  
 == Eclipse library ==
  Then download the eclipse library jar file.
- [http://robotframework-eclipselibrary.googlecode.com/files/eclipselibrary-0.1.jar]
+ * [http://robotframework-eclipselibrary.googlecode.com/files/eclipselibrary-0.1.jar]
 
 == Some test cases == 
-Thoses tests cases are used for unit testing of the library.
+Those test cases are used for unit testing of the library.
 You could use it as per exemple.
-
-[http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/]
+ * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/]
