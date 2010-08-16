@@ -41,10 +41,10 @@ td.name, th.name {
   width: 10em;
 }
 </style>
-<title>Testeclipse Eclipseeditor</title>
+<title>Testeclipse List</title>
 </head>
 <body>
-<h1>Testeclipse Eclipseeditor</h1>
+<h1>Testeclipse List</h1>
 <table id="settings" border="1">
 <tr>
 <th class="name">Setting</th>
@@ -82,9 +82,9 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>file:/d:/eclipse/eclipse35</td>
+<td>file:/d:/bootstrap35-robot/rcpbot</td>
 <td>-data</td>
-<td>file:/d:/bootstrap35-robot/tv1</td>
+<td>file:/d:/bootstrap35-robot/rcpbot/workspace</td>
 </tr>
 <tr>
 <td class="name"></td>
@@ -95,49 +95,7 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find Perspective By Label</td>
-<td>Resource</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Activate Perspective</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find View By Title</td>
-<td>Project Explorer</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Show View</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find EclipseEditor By Label</td>
-<td>Test.java</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Show Eclipse Editor</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Set Focus On EclipseEditor</td>
+<td>Find List</td>
 <td></td>
 <td></td>
 <td></td>
@@ -145,176 +103,183 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>${text} =</td>
-<td>Get EclipseEditor Text</td>
+<td>Get List Tooltip Text </td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Set EclipseEditor text</td>
+<td>Should Be Equal</td>
 <td>${text}</td>
+<td>tooltip of list</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool} =</td>
+<td>Is List Visible</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Active</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Is Eclipse Editor Dirty</td>
-<td></td>
+<td>Should Be True</td>
+<td>${bool}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Enabled</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Count EclipseEditor Line</td>
-<td></td>
+<td>${bool} =</td>
+<td>Is List Enabled</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Eclipse Editor Has Bullet On Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Eclipse Editor Has Bullet On Given Line</td>
-<td>1</td>
+<td>Should Be True</td>
+<td>${bool}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Get Eclipse Editor Lines</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Selection</td>
-<td></td>
+<td>${count}</td>
+<td>Count List Items</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Get Eclipse Editor Text On Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Text On Given Line</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Title</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Tooltip Text</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Insert Eclipse Editor Text At Position</td>
-<td>9</td>
-<td>1</td>
-<td>// this is another comment\n</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>1</td>
-<td>5</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Given Line</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Range</td>
-<td>1</td>
-<td>1</td>
-<td>5</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
 <td>10</td>
-<td>1</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Insert Eclipse Editor Text</td>
-<td>// this is a comment\n\n</td>
+<td>${count}</td>
+<td>Count List Selected Items</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>9</td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
 <td>0</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Comment</td>
-<td>Count EclipseEditor Quickfix List Item</td>
+<td>${count}</td>
+<td>Get Index Of Text In List</td>
+<td>Item 2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get List Items</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Comment</td>
-<td>Get Eclipse Editor Quick Fixes</td>
+<td>Get List Text</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Comment</td>
-<td>Get Auto Complete Proposals For EclipseEditor</td>
-<td>ar</td>
+<td>Get Selected List Items</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get Text Item At Index In List</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>Item 1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select Indexed Items In List</td>
+<td>1</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count List Selected Items</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select Items In List</td>
+<td>Item 4</td>
+<td>Item 5</td>
+<td>Item 8</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count List Selected Items</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect All List Items</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count List Selected Items</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr>

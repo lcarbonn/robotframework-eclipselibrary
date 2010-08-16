@@ -1,0 +1,603 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="RIDE" /> 
+<meta name="rf-template" content="False" /> 
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 0.1em solid black;
+}
+th, td {
+  border-style: solid;
+  border-width: 0.05em 0.1em;
+  border-color: black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  border-width: 0.1em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Testeclipse Table</title>
+</head>
+<body>
+<h1>Testeclipse Table</h1>
+<table id="settings" border="1">
+<tr>
+<th class="name">Setting</th>
+<th colspan="4">Value</th>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>EclipseLibraryKeywords.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table id="variables" border="1"></table>
+<table id="testcases" border="1">
+<tr>
+<th class="name">Test Case</th>
+<th>Action</th>
+<th colspan="3">Arguments</th>
+</tr>
+<tr>
+<td class="name"><a name="test_Launch Eclipse">Launch Eclipse</a></td>
+<td>Start Eclipse</td>
+<td>-consolelog</td>
+<td>-debug</td>
+<td>-install</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>file:/d:/bootstrap35-robot/rcpbot</td>
+<td>-data</td>
+<td>file:/d:/bootstrap35-robot/rcpbot/workspace</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>-nosplash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Table</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool} =</td>
+<td>Is Table Visible</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool} =</td>
+<td>Is Table Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get Table Tooltip Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>tooltip of table</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count Table Columns</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count Table Rows</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>128</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count Table Selected Items</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Double CLick Table Cell</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get Table Cell</td>
+<td>1</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>line 1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get Table Cell With Column Name</td>
+<td>2</td>
+<td>Location</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>line 2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Get Table Column Index</td>
+<td>Location</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Table Columns</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Get Table Item Index</td>
+<td>line 3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Get Table Item Index In Column</td>
+<td>line 3</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Get Table Item Index In Column Name</td>
+<td>line 3</td>
+<td>Location</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Get Table Item Index In Column</td>
+<td>line 4</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Table Text</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select Indexed Items In Table</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count Table Selected Items</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>Table Contains Item</td>
+<td>not in the table</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect All Table Items</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count Table Selected Items</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Table Header</td>
+<td>Resource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get Table Column Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>Resource</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get Table Column Tooltip Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>Resource</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Table Column</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Table</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select Items In Table</td>
+<td>item 0</td>
+<td>item 1</td>
+<td>item 3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>item 8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count Table Selected Items</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Table Item With Text</td>
+<td>item 0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get Table Item Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>item 0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>Is Table Item Checked</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Uncheck Table Item</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>Is Table Item Checked</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Table Item</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>Is Table Item Checked</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Table Item</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select Table Item</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Table</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count Table Selected Items</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Table Item At Row</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>Is Table Item Checked</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Table</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>Table Contains Item</td>
+<td>item 3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table id="keywords" border="1"></table>
+</body>
+</html>

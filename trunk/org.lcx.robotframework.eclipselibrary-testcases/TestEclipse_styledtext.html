@@ -41,10 +41,10 @@ td.name, th.name {
   width: 10em;
 }
 </style>
-<title>Testeclipse Eclipseeditor</title>
+<title>Testeclipse Styledtext</title>
 </head>
 <body>
-<h1>Testeclipse Eclipseeditor</h1>
+<h1>Testeclipse Styledtext</h1>
 <table id="settings" border="1">
 <tr>
 <th class="name">Setting</th>
@@ -82,9 +82,9 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>file:/d:/eclipse/eclipse35</td>
+<td>file:/d:/bootstrap35-robot/rcpbot</td>
 <td>-data</td>
-<td>file:/d:/bootstrap35-robot/tv1</td>
+<td>file:/d:/bootstrap35-robot/rcpbot/workspace</td>
 </tr>
 <tr>
 <td class="name"></td>
@@ -95,226 +95,282 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find Perspective By Label</td>
-<td>Resource</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Activate Perspective</td>
+<td>Find StyledText </td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find View By Title</td>
-<td>Project Explorer</td>
+<td>${isVisible} =</td>
+<td>Is StyledText Visible</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Show View</td>
+<td>Should Be True</td>
+<td>${isVisible}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${isEnabled} =</td>
+<td>Is StyledText Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${isEnabled}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${tooltip} =</td>
+<td>Get StyledText Tooltip Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${tooltip}</td>
+<td>tooltip for styled text</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Focus On StyledText</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find EclipseEditor By Label</td>
-<td>Test.java</td>
+<td>${count}</td>
+<td>Count StyledText Lines</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Show Eclipse Editor</td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get StyledText Lines</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Set Focus On EclipseEditor</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>${text} =</td>
-<td>Get EclipseEditor Text</td>
+<td>${oriText}</td>
+<td>Get StyledText Text</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Set EclipseEditor text</td>
 <td>${text}</td>
+<td>Get Text On Current StyledText Line</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Active</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Is Eclipse Editor Dirty</td>
-<td></td>
-<td></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>line 1</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Enabled</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Count EclipseEditor Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Eclipse Editor Has Bullet On Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Eclipse Editor Has Bullet On Given Line</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Lines</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Selection</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Text On Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Text On Given Line</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Title</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Tooltip Text</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Insert Eclipse Editor Text At Position</td>
-<td>9</td>
-<td>1</td>
-<td>// this is another comment\n</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>1</td>
-<td>5</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Given Line</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Range</td>
-<td>1</td>
-<td>1</td>
-<td>5</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>10</td>
+<td>${text}</td>
+<td>Get Text On Given StyledText Line</td>
 <td>1</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Insert Eclipse Editor Text</td>
-<td>// this is a comment\n\n</td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>line 2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>StyledText Has Bullet On Current Line</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>9</td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>StyledText Has Bullet On Given Line</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Insert StyledText Text</td>
+<td>line 1 bis\n</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${count}</td>
+<td>Count StyledText Lines</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Insert StyledText Text At Position</td>
 <td>0</td>
-<td></td>
+<td>0</td>
+<td>line 0\n</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Comment</td>
-<td>Count EclipseEditor Quickfix List Item</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Comment</td>
-<td>Get Eclipse Editor Quick Fixes</td>
+<td>${count}</td>
+<td>Count StyledText Lines</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Comment</td>
-<td>Get Auto Complete Proposals For EclipseEditor</td>
-<td>ar</td>
+<td>Should Be Equal As Integers</td>
+<td>${count}</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Navigate To StyledText Position</td>
+<td>1</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select StyledText Current Line</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get StyledText Selection</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>line 1 bis</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Insert StyledText Text At Position</td>
+<td>1</td>
+<td>4</td>
+<td>B</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select StyledText Given Line</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get StyledText Selection</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>lineB 1 bis</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select StyledText Range</td>
+<td>1</td>
+<td>4</td>
+<td>8</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>Get StyledText Selection</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${text}</td>
+<td>B 1 bis\n</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set StyledText Text</td>
+<td>${oriText}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${newText}</td>
+<td>Get StyledText Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${oriText}</td>
+<td>${newText}</td>
 <td></td>
 </tr>
 <tr>

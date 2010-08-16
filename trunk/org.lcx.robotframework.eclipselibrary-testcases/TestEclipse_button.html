@@ -41,10 +41,10 @@ td.name, th.name {
   width: 10em;
 }
 </style>
-<title>Testeclipse Eclipseeditor</title>
+<title>Testeclipse Button</title>
 </head>
 <body>
-<h1>Testeclipse Eclipseeditor</h1>
+<h1>Testeclipse Button</h1>
 <table id="settings" border="1">
 <tr>
 <th class="name">Setting</th>
@@ -82,9 +82,9 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>file:/d:/eclipse/eclipse35</td>
+<td>file:/d:/bootstrap35-robot/rcpbot</td>
 <td>-data</td>
-<td>file:/d:/bootstrap35-robot/tv1</td>
+<td>file:/d:/bootstrap35-robot/rcpbot/workspace</td>
 </tr>
 <tr>
 <td class="name"></td>
@@ -95,226 +95,275 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find Perspective By Label</td>
-<td>Resource</td>
+<td>Find Button</td>
+<td>Button 1</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Activate Perspective</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find View By Title</td>
-<td>Project Explorer</td>
+<td>${isVisible}</td>
+<td>Is Button Visible</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Show View</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find EclipseEditor By Label</td>
-<td>Test.java</td>
+<td>Should Be True</td>
+<td>${isVisible}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Show Eclipse Editor</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Set Focus On EclipseEditor</td>
-<td></td>
+<td>${isEnabled}</td>
+<td>Is Button Enabled</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>${text} =</td>
-<td>Get EclipseEditor Text</td>
+<td>Should Be True</td>
+<td>${isEnabled}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Set EclipseEditor text</td>
-<td>${text}</td>
+<td>${tooltip} =</td>
+<td>Get Button Tooltip Text</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Active</td>
+<td>Should Be Equal</td>
+<td>${tooltip}</td>
+<td>tooltip of button 1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Focus On Button</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Dirty</td>
+<td>Find Button</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Is Eclipse Editor Enabled</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Count EclipseEditor Line</td>
-<td></td>
+<td>${tooltip} =</td>
+<td>Get Button Tooltip Text</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Eclipse Editor Has Bullet On Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Eclipse Editor Has Bullet On Given Line</td>
-<td>1</td>
-<td></td>
+<td>Should Be Equal</td>
+<td>${tooltip}</td>
+<td>tooltip of button 1</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Get Eclipse Editor Lines</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Selection</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Text On Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Text On Given Line</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Title</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Get Eclipse Editor Tooltip Text</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Insert Eclipse Editor Text At Position</td>
-<td>9</td>
-<td>1</td>
-<td>// this is another comment\n</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>1</td>
-<td>5</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Current Line</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Given Line</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Select Eclipse Editor Range</td>
-<td>1</td>
-<td>1</td>
-<td>5</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>10</td>
+<td>Find Button</td>
+<td>Button 1</td>
 <td>1</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Insert Eclipse Editor Text</td>
-<td>// this is a comment\n\n</td>
+<td>${tooltip} =</td>
+<td>Get Button Tooltip Text</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Navigate To Eclipse Editor Position</td>
-<td>9</td>
+<td>Should Be Equal</td>
+<td>${tooltip}</td>
+<td>tooltip of button 3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>Button 1</td>
 <td>0</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Comment</td>
-<td>Count EclipseEditor Quickfix List Item</td>
+<td>${tooltip} =</td>
+<td>Get Button Tooltip Text</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Comment</td>
-<td>Get Eclipse Editor Quick Fixes</td>
+<td>Should Be Equal</td>
+<td>${tooltip}</td>
+<td>tooltip of button 1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>1</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Comment</td>
-<td>Get Auto Complete Proposals For EclipseEditor</td>
-<td>ar</td>
+<td>${tooltip} =</td>
+<td>Get Button Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${tooltip}</td>
+<td>Button 2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>Button 4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${isVisible}</td>
+<td>Is Button Visible</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${isVisible}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${isEnabled}</td>
+<td>Is Button Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${isEnabled}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>Button 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>Button 4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${isVisible}</td>
+<td>Is Button Visible</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${isVisible}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${isEnabled}</td>
+<td>Is Button Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${isEnabled}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>Button 2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>Button 4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${isVisible}</td>
+<td>Is Button Visible</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${isVisible}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${isEnabled}</td>
+<td>Is Button Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${isEnabled}</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
