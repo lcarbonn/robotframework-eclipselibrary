@@ -13,3 +13,11 @@ Robotframework Eclipse Library is based on [http://www.eclipse.org/swtbot/ SWTBo
  ** That means, you should put a widget into the context before calling methods on it.
  ** All keywords begining with "Find" will put the retieved widget in the context.
  ** Then you can call wodget specific keywords on it.
+
+== Eclipse Library limitations ==
+ * Eclipse Library uses _at the moment_ only standards eclipse components and SWT widgets.
+ * It interacts with simple SWTBot widget finders and actions
+ * Snapshots are not workking
+ * All direct SWT classes actions are not yet implemented (like colors for instance)
+ * keyboard shorcuts keywords are not yet implemented
+ * A log4j warning raises at Eclipse start, not yet debug!
