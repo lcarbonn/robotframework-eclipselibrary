@@ -3,8 +3,11 @@
 
 Robotframework Eclipse Library is based on [http://www.eclipse.org/swtbot/ SWTBot tool].
 
+== Eclipse Library Mechanism ==
  * Eclipse Library call SWTBot thru java reflexion API.
  * The Eclipse Library plugin make the interface between Eclipse Library and its keywords and the Eclipse internal SWTBot plugin.
+
+== Using Eclipse Library keywords on widgets ==
  * Eclipse Library manage a widget context.
  ** Only one widget is present in the context at one time.
  ** That means, you should put a widget into the context before calling methods on it.
