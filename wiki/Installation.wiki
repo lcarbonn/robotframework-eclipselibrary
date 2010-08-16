@@ -17,3 +17,9 @@ Robotframework Eclipse Library is based on :
 == Eclipse library ==
  Then download the eclipse library jar file.
  [http://robotframework-eclipselibrary.googlecode.com/files/eclipselibrary-0.1.jar]
+
+== Some test cases == 
+Thoses tests cases are used for unit testing of the library.
+You could use it as per exemple.
+
+[http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/]
