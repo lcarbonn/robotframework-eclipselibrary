@@ -1,0 +1,11 @@
+#labels Featured,documentation,keyword
+= Keywords documentation =
+
+Eclipse Library keywords documentation can be found under 
+[http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.html svn]
+
+= Keywords xml for RIDE completion=
+
+Additional XML file is provided to use with Robot IDE.
+This file should be added to PYTHONPATH
+It can be found under [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml svn]
