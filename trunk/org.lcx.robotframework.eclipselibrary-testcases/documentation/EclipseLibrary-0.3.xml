@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20100817 10:50:39" name="EclipseLibrary" type="library">
+<keywordspec generated="20100818 14:19:49" name="EclipseLibrary-0.3" type="library">
 <version>&amp;lt;unknown&amp;gt;</version>
-<doc>Documentation for test library `EclipseLibrary`.</doc>
+<doc>Documentation for test library `EclipseLibrary-0.3`.</doc>
 <kw name="Activate C Tab Item">
 <doc>Activate the cTabItem
 
@@ -2196,6 +2196,15 @@ insertText the text to be inserted before activating the auto-complete.Example:
 <arg>insertText</arg>
 </arguments>
 </kw>
+<kw name="Get Background Color">
+<doc>Get widget background color in RGB format
+
+Example:
+| ${color} | Get Background Color |
+| Should Be Equal | ${color} | #FF00CC</doc>
+<arguments>
+</arguments>
+</kw>
 <kw name="Get Button Text">
 <doc>Get the text of the button
 
@@ -2435,6 +2444,15 @@ Example:
 
 Example:
 | Get Editor ToolbarButtons tooltip |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get Foreground Color">
+<doc>Get widget foreground color in RGB format
+
+Example:
+| ${color} | Get Foreground Color |
+| Should Be Equal | ${color} | #FF00CC</doc>
 <arguments>
 </arguments>
 </kw>
