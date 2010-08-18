@@ -18,6 +18,6 @@ Robotframework Eclipse Library is based on [http://www.eclipse.org/swtbot/ SWTBo
  * Eclipse Library uses _at the moment_ only standards eclipse components and SWT widgets.
  * It interacts with simple SWTBot widget finders and actions
  * Snapshots are not workking
- * All direct SWT classes actions are not yet implemented (like colors for instance)
+ * All direct SWT classes actions are not yet implemented (except SWT colors)
  * keyboard shorcuts keywords are not yet implemented
  * A log4j warning raises at Eclipse start, not yet debug!
