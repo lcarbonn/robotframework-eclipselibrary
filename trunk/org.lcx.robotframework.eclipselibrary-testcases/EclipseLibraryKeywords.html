@@ -128,8 +128,15 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>Should Be True</td>
+<td>${_bool_} =</td>
 <td>Is Button Active</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${_bool_}</td>
 <td></td>
 <td></td>
 </tr>
@@ -156,8 +163,15 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>Should Not Be True</td>
+<td>${_bool_} =</td>
 <td>Is Button Active</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${_bool_}</td>
 <td></td>
 <td></td>
 </tr>
@@ -190,7 +204,7 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>${_bool_}</td>
+<td>${_bool_} =</td>
 <td>Is Button Visible</td>
 <td></td>
 <td></td>
@@ -198,6 +212,47 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>Should Be True</td>
+<td>${_bool_}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Should Not Be Visible">Should Not Be Visible</a></td>
+<td>[Arguments]</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td colspan="3">both mnemonic or index are optional\n<br />
+ If only one parameter is given and if it is numeric, it will be used as index\n</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${_bool_} =</td>
+<td>Is Button Visible</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
 <td>${_bool_}</td>
 <td></td>
 <td></td>
