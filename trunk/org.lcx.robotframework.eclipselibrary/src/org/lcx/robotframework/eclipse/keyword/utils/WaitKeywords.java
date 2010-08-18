@@ -17,7 +17,7 @@ public class WaitKeywords {
 
 	//TODO : change timeout and interval parameters to optional 
 	
-	private void waitUntil(ICondition condition, String timeout, String interval) throws SWTBotBridgeException {
+	private void waitUntil(ICondition condition, Long... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	boolean isTimout = false;
     	boolean isInterval = false;
@@ -25,8 +25,8 @@ public class WaitKeywords {
     	long intervalL = -1;
     	
     	try {
-	    	if(timeout!=null) {
-	    		timeoutL = Long.valueOf(timeout).longValue();
+	    	if(params[0]!=null) {
+	    		timeoutL = Long.valueOf(params[0]).longValue();
 	    		isTimout=true;
 	    	}
 		} catch (NumberFormatException e) {
@@ -34,8 +34,8 @@ public class WaitKeywords {
 		}
 		
     	try {
-	    	if(interval!=null) {
-	    		intervalL = Long.valueOf(timeout).longValue();
+	    	if(params[1]!=null) {
+	    		intervalL = Long.valueOf(params[1]).longValue();
 	    		isInterval=true;
 	    	}
 		} catch (NumberFormatException e) {
@@ -52,7 +52,7 @@ public class WaitKeywords {
 		
 	}
 	
-	private void waitWhile(ICondition condition, String timeout, String interval) throws SWTBotBridgeException {
+	private void waitWhile(ICondition condition, Long... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	boolean isTimout = false;
     	boolean isInterval = false;
@@ -60,8 +60,8 @@ public class WaitKeywords {
     	long intervalL = -1;
     	
     	try {
-	    	if(timeout!=null) {
-	    		timeoutL = Long.valueOf(timeout).longValue();
+	    	if(params[0]!=null) {
+	    		timeoutL = Long.valueOf(params[0]).longValue();
 	    		isTimout=true;
 	    	}
 		} catch (NumberFormatException e) {
@@ -69,8 +69,8 @@ public class WaitKeywords {
 		}
 		
     	try {
-	    	if(interval!=null) {
-	    		intervalL = Long.valueOf(timeout).longValue();
+	    	if(params[1]!=null) {
+	    		intervalL = Long.valueOf(params[1]).longValue();
 	    		isInterval=true;
 	    	}
 		} catch (NumberFormatException e) {
@@ -91,12 +91,12 @@ public class WaitKeywords {
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
             + "| Wait Until Last Widget Is Enabled | 500 | 10 |\n")
-    @ArgumentNames({"timeout", "interval"})
-        public void waitUntilLastWidgetIsEnabled(String timeout, String interval) throws Exception {
+    @ArgumentNames({"*params"})
+        public void waitUntilLastWidgetIsEnabled(Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	AbstractSWTBotControl widget = (AbstractSWTBotControl)Context.getCurrentWidget();
 		ICondition condition = Conditions.widgetIsEnabled(bot, widget);
-		waitUntil(condition, timeout, interval);
+		waitUntil(condition, params);
     }
     
     @RobotKeyword("Wait until the last selected shell widget closes\n"
@@ -105,11 +105,11 @@ public class WaitKeywords {
             + "Example:\n"
             + "| Wait Until Shell Closes | 500 | 10 |\n")
     @ArgumentNames({"timeout", "interval"})
-        public void waitUntilShellCloses(String timeout, String interval) throws Exception {
+        public void waitUntilShellCloses(Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
 		ICondition condition = Conditions.shellCloses(bot, shell);
-		waitUntil(condition, timeout, interval);
+		waitUntil(condition, params);
     }
     
     @RobotKeyword("Wait until shell with given text is active\n"
@@ -117,11 +117,11 @@ public class WaitKeywords {
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
             + "| Wait Until Shell Closes | This is the shell text | 500 | 0 \n")
-    @ArgumentNames({"text", "timeout", "interval"})
-        public void waitUntilShellIsActive(String text, String timeout, String interval) throws Exception {
+    @ArgumentNames({"text", "*params"})
+        public void waitUntilShellIsActive(String text, Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		ICondition condition = Conditions.shellIsActive(bot, text);
-		waitUntil(condition, timeout, interval);
+		waitUntil(condition, params);
     }
 
     @RobotKeyword("Wait until the last selected table have the proper number of rows\n"
@@ -129,13 +129,13 @@ public class WaitKeywords {
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
             + "| Wait Until Table Has Rows | 500 | 10 |\n")
-    @ArgumentNames({"rowCount", "timeout", "interval"})
-        public void waitUntilTableHasRows(String rowCount, String timeout, String interval) throws Exception {
+    @ArgumentNames({"rowCount", "*params"})
+        public void waitUntilTableHasRows(String rowCount, Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	int rowCountI = Integer.valueOf(rowCount).intValue();
     	SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
 		ICondition condition = Conditions.tableHasRows(bot, table, rowCountI);
-		waitUntil(condition, timeout, interval);
+		waitUntil(condition, params);
     }
     
 	@RobotKeyword("Wait while the last selected widget is enabled\n"
@@ -143,12 +143,12 @@ public class WaitKeywords {
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
             + "| Wait While Last Widget Is Enabled | 500 | 10 |\n")
-    @ArgumentNames({"timeout", "interval"})
-        public void waitWhileLastWidgetIsEnabled(String timeout, String interval) throws Exception {
+    @ArgumentNames({"*params"})
+        public void waitWhileLastWidgetIsEnabled(Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	AbstractSWTBotControl widget = (AbstractSWTBotControl)Context.getCurrentWidget();
 		ICondition condition = Conditions.widgetIsEnabled(bot, widget);
-		waitWhile(condition, timeout, interval);
+		waitWhile(condition, params);
     }
     
     @RobotKeyword("Wait while the last selected shell widget closes\n"
@@ -156,12 +156,12 @@ public class WaitKeywords {
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
             + "| Wait While Shell Closes | 500 | 10 |\n")
-    @ArgumentNames({"timeout", "interval"})
-        public void waitWhileShellCloses(String timeout, String interval) throws Exception {
+    @ArgumentNames({"*params"})
+        public void waitWhileShellCloses(Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
 		ICondition condition = Conditions.shellCloses(bot, shell);
-		waitWhile(condition, timeout, interval);
+		waitWhile(condition, params);
     }
     
     @RobotKeyword("Wait while shell with given text is active\n"
@@ -169,11 +169,11 @@ public class WaitKeywords {
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
             + "| Wait While Shell Closes | This is the shell text | 500 | 0 \n")
-    @ArgumentNames({"text", "timeout", "interval"})
-        public void waitWhileShellIsActive(String text, String timeout, String interval) throws Exception {
+    @ArgumentNames({"text", "*params"})
+        public void waitWhileShellIsActive(String text, Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		ICondition condition = Conditions.shellIsActive(bot, text);
-		waitWhile(condition, timeout, interval);
+		waitWhile(condition, params);
     }
 
     @RobotKeyword("Wait while the last selected table have the proper number of rows\n"
@@ -181,12 +181,12 @@ public class WaitKeywords {
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
             + "| Wait While Table Has Rows | 500 | 10 |\n")
-    @ArgumentNames({"rowCount", "timeout", "interval"})
-        public void waitWhileTableHasRows(String rowCount, String timeout, String interval) throws Exception {
+    @ArgumentNames({"rowCount", "*params"})
+        public void waitWhileTableHasRows(String rowCount, Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	int rowCountI = Integer.valueOf(rowCount).intValue();
     	SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
 		ICondition condition = Conditions.tableHasRows(bot, table, rowCountI);
-		waitWhile(condition, timeout, interval);
+		waitWhile(condition, params);
     }
 }
