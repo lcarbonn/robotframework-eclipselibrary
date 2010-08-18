@@ -3,6 +3,7 @@ package org.lcx.robotframework.swtbot.swt.finder.widgets;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
+import org.lcx.robotframework.swtbot.commons.Color;
 
 
 public class AbstractSWTBot extends AbstractSWTBotObject {
@@ -54,13 +55,23 @@ public class AbstractSWTBot extends AbstractSWTBotObject {
 		return s;
 	}
 	
-//	public org.eclipse.swt.graphics.Color backgroundColor() {
-//		
-//	}
-//	
-//	public org.eclipse.swt.graphics.Color foregroundColor() {
-//		
-//	}
+	public Color backgroundColor() throws SWTBotBridgeException {
+		Object color = SWTBotBridge.callMethod(distantObject, "backgroundColor");
+		Integer red = (Integer)SWTBotBridge.callMethod(color, "getRed");
+		Integer green = (Integer)SWTBotBridge.callMethod(color, "getGreen");
+		Integer blue = (Integer)SWTBotBridge.callMethod(color, "getBlue");
+		Color oColor = new Color(red.intValue(), green.intValue(), blue.intValue());
+		return oColor;
+	}
+	
+	public Color foregroundColor() throws SWTBotBridgeException {
+		Object color = SWTBotBridge.callMethod(distantObject, "foregroundColor");
+		Integer red = (Integer)SWTBotBridge.callMethod(color, "getRed");
+		Integer green = (Integer)SWTBotBridge.callMethod(color, "getGreen");
+		Integer blue = (Integer)SWTBotBridge.callMethod(color, "getBlue");
+		Color oColor = new Color(red.intValue(), green.intValue(), blue.intValue());
+		return oColor;
+	}
 	
 	public String getToolTipText() throws SWTBotBridgeException {
 		String s = (String)SWTBotBridge.callMethod(distantObject, "getToolTipText");
