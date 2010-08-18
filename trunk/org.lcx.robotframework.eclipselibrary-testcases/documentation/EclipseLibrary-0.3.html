@@ -366,6 +366,7 @@
 <a href="#Get Styled Text Selection" title="Get the styledText selection">Get&nbsp;Styled&nbsp;Text&nbsp;Selection</a>&nbsp;
 <a href="#Get Styled Text Text" title="Get the text of the styledText">Get&nbsp;Styled&nbsp;Text&nbsp;Text</a>&nbsp;
 <a href="#Get Styled Text Tooltip Text" title="Get the tooltip text of the styledText">Get&nbsp;Styled&nbsp;Text&nbsp;Tooltip&nbsp;Text</a>&nbsp;
+<a href="#Get TIMEOUT" title="Set SWTPreferences TIMEOUT as long">Get&nbsp;TIMEOUT</a>&nbsp;
 <a href="#Get Tab Item Text" title="Get the text of the tabItem">Get&nbsp;Tab&nbsp;Item&nbsp;Text</a>&nbsp;
 <a href="#Get Tab Item Tooltip Text" title="Get the tooltip text of the tabItem">Get&nbsp;Tab&nbsp;Item&nbsp;Tooltip&nbsp;Text</a>&nbsp;
 <a href="#Get Table Cell" title="Get the text of the cell of the table at the given position">Get&nbsp;Table&nbsp;Cell</a>&nbsp;
@@ -416,6 +417,15 @@
 <a href="#Get View Menu Text" title="Get the text of the viewMenu">Get&nbsp;View&nbsp;Menu&nbsp;Text</a>&nbsp;
 <a href="#Get View Menus Label" title="Get the list of menus label of the view">Get&nbsp;View&nbsp;Menus&nbsp;Label</a>&nbsp;
 <a href="#Get View Title" title="Get the title of the view">Get&nbsp;View&nbsp;Title</a>&nbsp;
+<a href="#GetDEFAUTL KEY" title="Get SWTPreferences DEFAULT_KEY">GetDEFAUTL&nbsp;KEY</a>&nbsp;
+<a href="#GetKEYBOARD LAYOUT" title="Get SWTPreferences KEYBOARD_LAYOUT">GetKEYBOARD&nbsp;LAYOUT</a>&nbsp;
+<a href="#GetKEYBOARD STRATEGY" title="Get SWTPreferences KEYBOARD_STRATEGY">GetKEYBOARD&nbsp;STRATEGY</a>&nbsp;
+<a href="#GetMAX ERROR SCREENSHOT COUNT" title="Get SWTPreferences MAX_ERROR_SCREENSHOT_COUNT as int">GetMAX&nbsp;ERROR&nbsp;SCREENSHOT&nbsp;COUNT</a>&nbsp;
+<a href="#GetPLAYBACK DELAY" title="Get SWTPreferences PLAYBACK_DELAY as long">GetPLAYBACK&nbsp;DELAY</a>&nbsp;
+<a href="#GetRECORDER FILE NAME" title="Get SWTPreferences RECORDER_FILE_NAME">GetRECORDER&nbsp;FILE&nbsp;NAME</a>&nbsp;
+<a href="#GetSCREENSHOT FORMAT" title="Get SWTPreferences SCREENSHOT_FORMAT">GetSCREENSHOT&nbsp;FORMAT</a>&nbsp;
+<a href="#GetSCREENSHOTS DIR" title="Get SWTPreferences SCREENSHOTS_DIR">GetSCREENSHOTS&nbsp;DIR</a>&nbsp;
+<a href="#GetTYPE INTERVAL" title="Get SWTPreferences TYPE_INTERVAL as int">GetTYPE&nbsp;INTERVAL</a>&nbsp;
 <a href="#Has Tree Items" title="Does the tree have items">Has&nbsp;Tree&nbsp;Items</a>&nbsp;
 <a href="#Insert Eclipse Editor Text" title="Insert text at the end of the eclipse editor ">Insert&nbsp;Eclipse&nbsp;Editor&nbsp;Text</a>&nbsp;
 <a href="#Insert Eclipse Editor Text At Position" title="Insert text at the given location of the eclipseEditor ">Insert&nbsp;Eclipse&nbsp;Editor&nbsp;Text&nbsp;At&nbsp;Position</a>&nbsp;
@@ -609,6 +619,15 @@
 <a href="#Set Spinner Selection" title="Set the spinner selection">Set&nbsp;Spinner&nbsp;Selection</a>&nbsp;
 <a href="#Set Styled Text Text" title="Set the text of the styledText">Set&nbsp;Styled&nbsp;Text&nbsp;Text</a>&nbsp;
 <a href="#Set Text Text" title="Set text into text">Set&nbsp;Text&nbsp;Text</a>&nbsp;
+<a href="#SetDEFAUTL KEY" title="Set SWTPreferences DEFAULT_KEY">SetDEFAUTL&nbsp;KEY</a>&nbsp;
+<a href="#SetKEYBOARD LAYOUT" title="Set SWTPreferences KEYBOARD_LAYOUT">SetKEYBOARD&nbsp;LAYOUT</a>&nbsp;
+<a href="#SetKEYBOARD STRATEGY" title="Set SWTPreferences KEYBOARD_STRATEGY">SetKEYBOARD&nbsp;STRATEGY</a>&nbsp;
+<a href="#SetMAX ERROR SCREENSHOT COUNT" title="Set SWTPreferences MAX_ERROR_SCREENSHOT_COUNT as int">SetMAX&nbsp;ERROR&nbsp;SCREENSHOT&nbsp;COUNT</a>&nbsp;
+<a href="#SetPLAYBACK DELAY" title="Set SWTPreferences PLAYBACK_DELAY as long">SetPLAYBACK&nbsp;DELAY</a>&nbsp;
+<a href="#SetRECORDER FILE NAME" title="Set SWTPreferences RECORDER_FILE_NAME">SetRECORDER&nbsp;FILE&nbsp;NAME</a>&nbsp;
+<a href="#SetSCREENSHOT FORMAT" title="Set SWTPreferences SCREENSHOT_FORMAT">SetSCREENSHOT&nbsp;FORMAT</a>&nbsp;
+<a href="#SetSCREENSHOTS DIR" title="Set SWTPreferences SCREENSHOTS_DIR">SetSCREENSHOTS&nbsp;DIR</a>&nbsp;
+<a href="#SetTYPE INTERVAL" title="Set SWTPreferences TYPE_INTERVAL as int">SetTYPE&nbsp;INTERVAL</a>&nbsp;
 <a href="#Show C Tab Item" title="Show the cTabItem">Show&nbsp;C&nbsp;Tab&nbsp;Item</a>&nbsp;
 <a href="#Show Eclipse Editor" title="Show the eclipseEditor">Show&nbsp;Eclipse&nbsp;Editor</a>&nbsp;
 <a href="#Show Editor" title="Show the editor">Show&nbsp;Editor</a>&nbsp;
@@ -5938,6 +5957,20 @@ Example:<br />
 </td>
 </tr>
 <tr>
+  <td class="kw"><a name="Get TIMEOUT"></a>Get TIMEOUT</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences TIMEOUT as long<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set TIMEOUT</td>
+<td>1000</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
   <td class="kw"><a name="Get Tab Item Text"></a>Get Tab Item Text</td>
   <td class="arg"></td>
   <td class="doc">Get the text of the tabItem<br />
@@ -6564,6 +6597,123 @@ Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Get View Title</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetDEFAUTL KEY"></a>GetDEFAUTL KEY</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences DEFAULT_KEY<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get DEFAULT_KEY</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetKEYBOARD LAYOUT"></a>GetKEYBOARD LAYOUT</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences KEYBOARD_LAYOUT<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get KEYBOARD_LAYOUT</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetKEYBOARD STRATEGY"></a>GetKEYBOARD STRATEGY</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences KEYBOARD_STRATEGY<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get KEYBOARD_STRATEGY</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetMAX ERROR SCREENSHOT COUNT"></a>GetMAX ERROR SCREENSHOT COUNT</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences MAX_ERROR_SCREENSHOT_COUNT as int<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get MAX_ERROR_SCREENSHOT_COUNT</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetPLAYBACK DELAY"></a>GetPLAYBACK DELAY</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences PLAYBACK_DELAY as long<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get PLAYBACK_DELAY</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetRECORDER FILE NAME"></a>GetRECORDER FILE NAME</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences RECORDER_FILE_NAME<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get RECORDER_FILE_NAME</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetSCREENSHOT FORMAT"></a>GetSCREENSHOT FORMAT</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences SCREENSHOT_FORMAT<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SCREENSHOT_FORMAT</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetSCREENSHOTS DIR"></a>GetSCREENSHOTS DIR</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences SCREENSHOTS_DIR<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SCREENSHOTS_DIR</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="GetTYPE INTERVAL"></a>GetTYPE INTERVAL</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTPreferences TYPE_INTERVAL as int<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get TYPE_INTERVAL</td>
 </tr>
 </table>
 </td>
@@ -9102,6 +9252,132 @@ Example:<br />
 </td>
 </tr>
 <tr>
+  <td class="kw"><a name="SetDEFAUTL KEY"></a>SetDEFAUTL KEY</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences DEFAULT_KEY<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set DEFAULT_KEY</td>
+<td>key</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="SetKEYBOARD LAYOUT"></a>SetKEYBOARD LAYOUT</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences KEYBOARD_LAYOUT<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set KEYBOARD_LAYOUT</td>
+<td>layout</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="SetKEYBOARD STRATEGY"></a>SetKEYBOARD STRATEGY</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences KEYBOARD_STRATEGY<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set KEYBOARD_STRATEGY</td>
+<td>stategy</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="SetMAX ERROR SCREENSHOT COUNT"></a>SetMAX ERROR SCREENSHOT COUNT</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences MAX_ERROR_SCREENSHOT_COUNT as int<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set MAX_ERROR_SCREENSHOT_COUNT</td>
+<td>20</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="SetPLAYBACK DELAY"></a>SetPLAYBACK DELAY</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences PLAYBACK_DELAY as long<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set PLAYBACK_DELAY</td>
+<td>100</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="SetRECORDER FILE NAME"></a>SetRECORDER FILE NAME</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences RECORDER_FILE_NAME<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set RECORDER_FILE_NAME</td>
+<td>filename</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="SetSCREENSHOT FORMAT"></a>SetSCREENSHOT FORMAT</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences SCREENSHOT_FORMAT<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SCREENSHOT_FORMAT</td>
+<td>format</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="SetSCREENSHOTS DIR"></a>SetSCREENSHOTS DIR</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences SCREENSHOTS_DIR<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SCREENSHOTS_DIR</td>
+<td>filename</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="SetTYPE INTERVAL"></a>SetTYPE INTERVAL</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTPreferences TYPE_INTERVAL as int<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set TYPE_INTERVAL</td>
+<td>20</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
   <td class="kw"><a name="Show C Tab Item"></a>Show C Tab Item</td>
   <td class="arg"></td>
   <td class="doc">Show the cTabItem<br />
@@ -9492,9 +9768,9 @@ Example:<br />
 </tr>
 </table>
 <p class="footer">
-Altogether 553 keywords.<br />
+Altogether 572 keywords.<br />
 Generated by <a href="http://code.google.com/p/robotframework/wiki/LibraryDocumentationTool">libdoc.py</a>
-on 2010-08-18 14:19:55.
+on 2010-08-18 15:02:47.
 </p>
 </body>
 </html>

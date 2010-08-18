@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20100818 14:19:49" name="EclipseLibrary-0.3" type="library">
+<keywordspec generated="20100818 15:02:41" name="EclipseLibrary-0.3" type="library">
 <version>&amp;lt;unknown&amp;gt;</version>
 <doc>Documentation for test library `EclipseLibrary-0.3`.</doc>
 <kw name="Activate C Tab Item">
@@ -2769,6 +2769,15 @@ Example:
 <arguments>
 </arguments>
 </kw>
+<kw name="Get TIMEOUT">
+<doc>Set SWTPreferences TIMEOUT as long
+
+Example:
+| Set TIMEOUT | 1000 |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
 <kw name="Get Tab Item Text">
 <doc>Get the text of the tabItem
 
@@ -3190,6 +3199,78 @@ Example:
 
 Example:
 | Get View Title |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetDEFAUTL KEY">
+<doc>Get SWTPreferences DEFAULT_KEY
+
+Example:
+| Get DEFAULT_KEY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetKEYBOARD LAYOUT">
+<doc>Get SWTPreferences KEYBOARD_LAYOUT
+
+Example:
+| Get KEYBOARD_LAYOUT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetKEYBOARD STRATEGY">
+<doc>Get SWTPreferences KEYBOARD_STRATEGY
+
+Example:
+| Get KEYBOARD_STRATEGY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetMAX ERROR SCREENSHOT COUNT">
+<doc>Get SWTPreferences MAX_ERROR_SCREENSHOT_COUNT as int
+
+Example:
+| Get MAX_ERROR_SCREENSHOT_COUNT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetPLAYBACK DELAY">
+<doc>Get SWTPreferences PLAYBACK_DELAY as long
+
+Example:
+| Get PLAYBACK_DELAY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetRECORDER FILE NAME">
+<doc>Get SWTPreferences RECORDER_FILE_NAME
+
+Example:
+| Get RECORDER_FILE_NAME |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSCREENSHOT FORMAT">
+<doc>Get SWTPreferences SCREENSHOT_FORMAT
+
+Example:
+| Get SCREENSHOT_FORMAT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSCREENSHOTS DIR">
+<doc>Get SWTPreferences SCREENSHOTS_DIR
+
+Example:
+| Get SCREENSHOTS_DIR |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetTYPE INTERVAL">
+<doc>Get SWTPreferences TYPE_INTERVAL as int
+
+Example:
+| Get TYPE_INTERVAL |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -4779,6 +4860,87 @@ Example:
 | Set Text Text | text |</doc>
 <arguments>
 <arg>text</arg>
+</arguments>
+</kw>
+<kw name="SetDEFAUTL KEY">
+<doc>Set SWTPreferences DEFAULT_KEY
+
+Example:
+| Set DEFAULT_KEY | key |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetKEYBOARD LAYOUT">
+<doc>Set SWTPreferences KEYBOARD_LAYOUT
+
+Example:
+| Set KEYBOARD_LAYOUT | layout |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetKEYBOARD STRATEGY">
+<doc>Set SWTPreferences KEYBOARD_STRATEGY
+
+Example:
+| Set KEYBOARD_STRATEGY | stategy |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetMAX ERROR SCREENSHOT COUNT">
+<doc>Set SWTPreferences MAX_ERROR_SCREENSHOT_COUNT as int
+
+Example:
+| Set MAX_ERROR_SCREENSHOT_COUNT | 20 |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetPLAYBACK DELAY">
+<doc>Set SWTPreferences PLAYBACK_DELAY as long
+
+Example:
+| Set PLAYBACK_DELAY | 100 |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetRECORDER FILE NAME">
+<doc>Set SWTPreferences RECORDER_FILE_NAME
+
+Example:
+| Set RECORDER_FILE_NAME | filename |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSCREENSHOT FORMAT">
+<doc>Set SWTPreferences SCREENSHOT_FORMAT
+
+Example:
+| Set SCREENSHOT_FORMAT | format |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSCREENSHOTS DIR">
+<doc>Set SWTPreferences SCREENSHOTS_DIR
+
+Example:
+| Set SCREENSHOTS_DIR | filename |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetTYPE INTERVAL">
+<doc>Set SWTPreferences TYPE_INTERVAL as int
+
+Example:
+| Set TYPE_INTERVAL | 20 |</doc>
+<arguments>
+<arg>value</arg>
 </arguments>
 </kw>
 <kw name="Show C Tab Item">
