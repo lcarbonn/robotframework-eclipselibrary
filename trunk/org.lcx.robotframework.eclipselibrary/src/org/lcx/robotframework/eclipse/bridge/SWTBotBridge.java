@@ -1,6 +1,7 @@
 package org.lcx.robotframework.eclipse.bridge;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -316,4 +317,47 @@ public class SWTBotBridge {
 		return clazz;
 	}
 
+	public static Object getStaticField(String className, String fieldName) throws SWTBotBridgeException {
+		if(debug) System.out.println("=====================================");
+		
+		try {
+			if(debug) {
+				System.out.println("called get static field="+fieldName);
+				System.out.println("\t of class="+className);
+			}
+			
+			Class<?> c = loadClass(className);
+
+			Field field = c.getField(fieldName);
+//			field.setAccessible(true);
+			
+			Object o = field.get(null);
+			return o;
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new SWTBotBridgeException(e);
+		}
+	}
+	
+	public static void setStaticField(String className, String fieldName, Object value) throws SWTBotBridgeException {
+		if(debug) System.out.println("=====================================");
+		
+		try {
+			if(debug) {
+				System.out.println("called set static field="+fieldName+", value="+value);
+				System.out.println("\t of class="+className);
+			}
+			
+			Class<?> c = loadClass(className);
+
+			Field field = c.getField(fieldName);
+//			field.setAccessible(true);
+			
+			field.set(null, value);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new SWTBotBridgeException(e);
+		}
+	}
+	
 }
