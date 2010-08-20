@@ -1,5 +1,7 @@
 package org.lcx.robotframework.eclipse.bridge;
 
+import org.lcx.robotframework.eclipse.keyword.utils.SWTBotKeywords;
+
 public class SWTBotBridgeException extends Exception {
 	
 	/**
@@ -8,22 +10,33 @@ public class SWTBotBridgeException extends Exception {
 	private static final long serialVersionUID = 1L;
 
 	public SWTBotBridgeException() {
-//		SWTUtils.captureScreenshot();
+		captureScreenshot();
 	}
 
 	public SWTBotBridgeException(String message) {
 		super(message);
-//		SWTUtils.captureScreenshot();
+		captureScreenshot();
 	}
 
 	public SWTBotBridgeException(Throwable cause) {
 		super(cause);
-//		SWTUtils.captureScreenshot();
+		captureScreenshot();
 	}
 
 	public SWTBotBridgeException(String message, Throwable cause) {
 		super(message, cause);
-//		SWTUtils.captureScreenshot();
+		captureScreenshot();
 	}
 
+	private String captureScreenshot() {
+		try {
+			if(SWTBotKeywords.IS_CAPTURE_SCREENSHOT_ON_ERROR) {
+				SWTBotKeywords k = new SWTBotKeywords();
+				return k.captureScreenshot(SWTBotKeywords.ERROR_SCREENSHOT_FILE_NAME);
+			}
+		} catch (Exception e) {
+			// do nothing
+		}
+		return null;
+	}
 }
