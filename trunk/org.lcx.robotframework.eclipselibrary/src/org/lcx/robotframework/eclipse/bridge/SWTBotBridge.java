@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.lcx.robotframework.eclipse.launcher.EclipseMain;
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
+import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
 
 public class SWTBotBridge {
@@ -112,7 +113,9 @@ public class SWTBotBridge {
 	public static Class<?> loadClass(String className) throws NoSuchMethodException, Exception {
 //		ClassLoader swtcl = getSwtbotservice().getClass().getClassLoader();
 //		System.out.println("getSwtbotservice classLoader="+swtcl);
-
+		if(SWTBotClassLoader==null) {
+			SWTWorkbenchBot.getSWTWorkbenchBot();
+		}
 		Class<?> c = SWTBotClassLoader.loadClass(className);
 
 		return c;

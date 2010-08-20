@@ -10,6 +10,8 @@ import java.util.Collections;
 import org.robotframework.javalib.library.AnnotationLibrary;
 
 public class EclipseLibrary extends AnnotationLibrary {
+	
+	private boolean debug = false;
 
     public static final String ROBOT_LIBRARY_SCOPE = "GLOBAL";
     private final AnnotationLibrary annotationLibrary = new AnnotationLibrary("org/lcx/robotframework/eclipse/keyword/**/*.class");
@@ -38,6 +40,15 @@ public class EclipseLibrary extends AnnotationLibrary {
     }
 
     public Object runKeyword(String keywordName, Object[] args) {
+    	if(debug) {
+    		System.out.println("runKeyword:"+keywordName);
+    		System.out.println("\targs:"+args.length);
+    		int i=0;
+    		for (Object object : args) {
+    			System.out.println("\t\targ["+i+"]:"+object+", of class="+object.getClass().getName());
+    			i++;
+			}
+    	}
         return annotationLibrary.runKeyword(keywordName, toStrings(args));
     }
 
