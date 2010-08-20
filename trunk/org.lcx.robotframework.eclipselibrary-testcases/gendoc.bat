@@ -3,7 +3,7 @@
 ::
 :: robotide.bat -- Python start up script for RobotIde on Windows
 :: 
-set eclipse_library_version=0.3
+set eclipse_library_version=0.4
 :: Jython executable to use. 
 set jython="C:\RobotFramework\jython2.2\jython.bat"
 set libdoc="C:\RobotFramework\Python26\Lib\site-packages\libdoc.py"
