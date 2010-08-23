@@ -7,6 +7,8 @@ Robotframework Eclipse Library is based on :
  * jython v2.2
  * Eclipse 3.5 (should work also on 3.4 but not tested!)
  * SWTBot 2.0
+ * Javalib core 0.8.1 with dependencies
+
 
 == Eclipse Plugin ==
  Before using Eclipse Library, you should install a plugin under Eclipse.
@@ -17,7 +19,7 @@ Robotframework Eclipse Library is based on :
 == Eclipse library ==
  Then download the latest eclipse library jar file.
  * [http://code.google.com/p/robotframework-swinglibrary/downloads/list]
- * Also [http://code.google.com/p/robotframework-javatools/wiki/JavalibCore javalib-core-0.8.1-jar-with-dependencies.jar] should be placed next to EclipseLibrary jar file
+ * Also [http://code.google.com/p/robotframework-javatools/wiki/JavalibCore javalib-core-x.x.x-jar-with-dependencies.jar] should be placed next to EclipseLibrary jar file
 
  Add Eclipse Library resource file in your test case as a resource.
  * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.html  EclipseLibraryKeywords.html]
