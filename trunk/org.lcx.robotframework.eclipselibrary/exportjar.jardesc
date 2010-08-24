@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
 <jardesc>
-    <jar path="C:/RobotFramework/TestEclipse/lib/eclipselibrary-0.4.jar"/>
+    <jar path="C:/RobotFramework/TestEclipse/lib/eclipselibrary-0.5.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/org.lcx.robotframework.eclipselibrary/exportjar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
