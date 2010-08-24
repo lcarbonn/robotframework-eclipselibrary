@@ -1,0 +1,130 @@
+<project name="EclipseLibrary" default="dist" basedir=".">
+    <description>
+        build file for RobotFramework Eclipse Library
+    </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="gensrc" location="gensrc"/>
+  <property name="build" location="build"/>
+  <property name="dist"  location="C:/RobotFramework/TestEclipse/lib"/>
+  <property name="version"  value="0.6"/>
+  <property name="doc"  value="C:/RobotFramework/TestEclipse/documentation"/>
+  <property name="jython"  location="C:/RobotFramework/jython2.2/jython.bat"/>
+  <property name="pythonpath"  location="C:/RobotFramework/Python26/Lib/site-packages"/>
+  <property name="libdoc"  location="${pythonpath}/libdoc.py"/>
+  <property name="javalibcore"  value="javalib-core-0.8.1-jar-with-dependencies.jar"/>
+  <property name="jarfile"  value="eclipselibrary-${version}.jar"/>
+  <property name="jarfilewithdep"  value="eclipselibrary-${version}-with-dependencies.jar"/>
+  
+  <property name="classpath"  location="C:/outils/jdk1.5.0_12/lib/tools.jar;${dist}/${jarfilewithdep}"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}:${gensrc}" destdir="${build}"
+      source="1.5"
+      target="1.5"
+      classpath="/lib/javalib-core-0.8.1-jar-with-dependencies.jar"
+      includeAntRuntime="false"
+    />
+  </target>
+
+  <target name="dist" depends="compile"
+        description="generate the distribution" >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}"/>
+
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+    <jar jarfile="${dist}/${jarfile}"
+       basedir="."
+       includes="log4j.properties">
+
+    <fileset dir="${build}"/>
+    <fileset dir="${src}"/>
+    <fileset dir="${gensrc}"/>
+
+    <manifest>
+      <!-- Who is building this jar? -->
+      <attribute name="Built-By" value="Laurent Carbonnaux"/>
+      <!-- Information about the program itself -->
+      <attribute name="Implementation-Vendor" value="ScrumVisionorg"/>
+      <attribute name="Implementation-Title" value="EclipseLibrary"/>
+      <attribute name="Implementation-Version" value="${version}"/>
+    </manifest>
+    
+    </jar>
+    <jar jarfile="${dist}/${jarfilewithdep}"
+       basedir="."
+       includes="log4j.properties">
+
+    <fileset dir="${build}"/>
+    <fileset dir="${src}"/>
+    <fileset dir="${gensrc}"/>
+    <zipfileset includes="**/*" src="lib/${javalibcore}"/>
+
+    <manifest>
+      <!-- Who is building this jar? -->
+      <attribute name="Built-By" value="Laurent Carbonnaux"/>
+      <!-- Information about the program itself -->
+      <attribute name="Implementation-Vendor" value="ScrumVisionorg"/>
+      <attribute name="Implementation-Title" value="EclipseLibrary"/>
+      <attribute name="Implementation-Version" value="${version}"/>
+    </manifest>
+    
+    </jar>
+
+    </target>
+
+  <target name="gendoc"
+        description="Keyword documentation generation" depends="dist">
+    <mkdir dir="${doc}"/>
+    <delete file="${doc}/EclipseLibrary-${version}.xml"/>
+    <delete file="${doc}/EclipseLibrary-${version}.html"/>
+
+    <!-- Gen the XML keyword file -->
+    <exec executable="${jython}" dir=".">
+      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdep}"/>
+      <env key="PYTHONPATH" path="${pythonpath}"/>
+      <arg value="-Dpython.path=${pythonpath}"/>
+      <arg value="${libdoc}"/>
+      <arg value="-f XML"/>
+      <arg value="-N EclipseLibrary-${version}"/>
+      <arg value="-o"/>
+      <arg path="${doc}"/>
+      <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
+    </exec>
+
+    <!-- Gen the HTML keyword documentation -->
+    <exec executable="${jython}" dir=".">
+      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdep}"/>
+      <env key="PYTHONPATH" path="${pythonpath}"/>
+      <arg value="-Dpython.path=${pythonpath}"/>
+      <arg value="${libdoc}"/>
+      <arg value="-f HTML"/>
+      <arg value="-N EclipseLibrary-${version}"/>
+      <arg value="-o"/>
+      <arg path="${doc}"/>
+      <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
+    </exec>
+
+    </target>
+    
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+  
+  <target name="debug">
+    <echo message="jarfilewithdep : ${dist}/${jarfilewithdep}"/>
+  </target>
+</project>
+
