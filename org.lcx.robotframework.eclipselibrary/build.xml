@@ -7,9 +7,9 @@
   <property name="gensrc" location="gensrc"/>
   <property name="build" location="build"/>
   <property name="dist"  location="C:/RobotFramework/TestEclipse/lib"/>
-  <property name="version"  value="0.6"/>
+  <property name="version"  value="0.7"/>
   <property name="doc"  value="C:/RobotFramework/TestEclipse/documentation"/>
-  <property name="jython"  location="C:/RobotFramework/jython2.2/jython.bat"/>
+  <property name="jython"  location="C:/RobotFramework/jython2.5.1/jython.bat"/>
   <property name="pythonpath"  location="C:/RobotFramework/Python26/Lib/site-packages"/>
   <property name="libdoc"  location="${pythonpath}/libdoc.py"/>
   <property name="javalibcore"  value="javalib-core-0.8.1-jar-with-dependencies.jar"/>
@@ -31,7 +31,7 @@
     <javac srcdir="${src}:${gensrc}" destdir="${build}"
       source="1.5"
       target="1.5"
-      classpath="/lib/javalib-core-0.8.1-jar-with-dependencies.jar"
+      classpath="lib/${javalibcore}"
       includeAntRuntime="false"
     />
   </target>
@@ -82,24 +82,10 @@
 
     </target>
 
-  <target name="gendoc"
-        description="Keyword documentation generation" depends="dist">
+  <target name="gendochtml"
+        description="Keyword documentation generation">
     <mkdir dir="${doc}"/>
-    <delete file="${doc}/EclipseLibrary-${version}.xml"/>
     <delete file="${doc}/EclipseLibrary-${version}.html"/>
-
-    <!-- Gen the XML keyword file -->
-    <exec executable="${jython}" dir=".">
-      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdep}"/>
-      <env key="PYTHONPATH" path="${pythonpath}"/>
-      <arg value="-Dpython.path=${pythonpath}"/>
-      <arg value="${libdoc}"/>
-      <arg value="-f XML"/>
-      <arg value="-N EclipseLibrary-${version}"/>
-      <arg value="-o"/>
-      <arg path="${doc}"/>
-      <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
-    </exec>
 
     <!-- Gen the HTML keyword documentation -->
     <exec executable="${jython}" dir=".">
@@ -107,15 +93,38 @@
       <env key="PYTHONPATH" path="${pythonpath}"/>
       <arg value="-Dpython.path=${pythonpath}"/>
       <arg value="${libdoc}"/>
-      <arg value="-f HTML"/>
-      <arg value="-N EclipseLibrary-${version}"/>
+      <!--<arg value="-f HTML"/>-->
+      <!--<arg value="-N EclipseLibrary-${version}.html"/>-->
       <arg value="-o"/>
-      <arg path="${doc}"/>
+      <arg path="${doc}/EclipseLibrary-${version}.html"/>
+      <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
+    </exec>
+
+    </target>
+
+  <target name="gendocxml"
+        description="Keyword documentation generation">
+    <mkdir dir="${doc}"/>
+    <delete file="${doc}/EclipseLibrary-${version}.xml"/>
+
+    <!-- Gen the XML keyword file -->
+    <exec executable="${jython}" dir=".">
+      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdep}"/>
+      <env key="PYTHONPATH" path="${pythonpath}"/>
+      <arg value="-Dpython.path=${pythonpath}"/>
+      <arg value="${libdoc}"/>
+      <!--<arg value="-f XML"/>-->
+      <!--<arg value="-N EclipseLibrary-${version}.xml"/>-->
+      <arg value="-o"/>
+      <arg path="${doc}/EclipseLibrary-${version}.xml"/>
       <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
     </exec>
 
     </target>
     
+  <target name="gendoc" depends="gendocxml, gendochtml"
+        description="Keyword documentations generation">
+  </target>
   <target name="clean"
         description="clean up" >
     <!-- Delete the ${build} and ${dist} directory trees -->

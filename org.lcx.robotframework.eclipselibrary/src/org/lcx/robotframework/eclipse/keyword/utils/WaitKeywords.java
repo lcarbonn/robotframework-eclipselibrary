@@ -116,7 +116,7 @@ public class WaitKeywords {
     		+ "or the optional timeout is reached (millisecond).\n"
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
-            + "| Wait Until Shell Closes | This is the shell text | 500 | 0 \n")
+            + "| Wait Until Shell Is Active | This is the shell text | 500 | 0 \n")
     @ArgumentNames({"text", "*params"})
         public void waitUntilShellIsActive(String text, Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
@@ -168,7 +168,7 @@ public class WaitKeywords {
     		+ "or the optional timeout is reached (millisecond).\n"
     		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
             + "Example:\n"
-            + "| Wait While Shell Closes | This is the shell text | 500 | 0 \n")
+            + "| Wait While Shell Is Active | This is the shell text | 500 | 0 \n")
     @ArgumentNames({"text", "*params"})
         public void waitWhileShellIsActive(String text, Long... params) throws Exception {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
@@ -189,4 +189,17 @@ public class WaitKeywords {
 		ICondition condition = Conditions.tableHasRows(bot, table, rowCountI);
 		waitWhile(condition, params);
     }
+
+    @RobotKeyword("Wait until shell with given text is active\n"
+    		+ "or the optional timeout is reached (millisecond).\n"
+    		+ "The optional interval is the delay between evaluating the condition after it has failed (millisecond)\n\n"
+            + "Example:\n"
+            + "| Wait Until Shell Closes | This is the shell text | 500 | 0 \n")
+    @ArgumentNames({"text", "timeout", "interval"})
+        public void waitUntilShellIsActiveBis(String text, long timeout, long interval) throws Exception {
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+		ICondition condition = Conditions.shellIsActive(bot, text);
+		waitUntil(condition, timeout, interval);
+    }
+
 }

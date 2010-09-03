@@ -72,11 +72,13 @@ public class EclipseLaunchingKeywords {
         while(run && ((end-start)<timeout)) {
 			// Is Eclipse is running?
         	Thread.sleep(1000);
-			Method method = EclipseMain.starter.getDeclaredMethod("isRunning");
-			boolean isRunning = ((Boolean)method.invoke(EclipseMain.starter)).booleanValue();
-//			if(debug) System.out.println("Eclipse is running="+isRunning);
-			if(isRunning) run = false;
-			end = System.currentTimeMillis();
+        	if (EclipseMain.starter!=null) {
+				Method method = EclipseMain.starter.getDeclaredMethod("isRunning");
+				boolean isRunning = ((Boolean)method.invoke(EclipseMain.starter)).booleanValue();
+	//			if(debug) System.out.println("Eclipse is running="+isRunning);
+				if(isRunning) run = false;
+				end = System.currentTimeMillis();
+        	}
         }
     	
     	return et;
