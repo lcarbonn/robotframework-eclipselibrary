@@ -4,7 +4,7 @@
 == Keywords documentation ==
 
 Eclipse Library keywords documentation can be found under 
-[http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.html svn]
+[http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary-0.7.html svn]
 
 == Keywords completion for RIDE ==
 
@@ -12,4 +12,4 @@ Additional XML file is provided to use keyword completipn with Robot IDE.
 
 This file should be added to PYTHONPATH
 
-It can be found under [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml svn]
+It can be found under [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary-0.7.xml svn]
