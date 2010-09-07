@@ -7,7 +7,7 @@
   <property name="gensrc" location="gensrc"/>
   <property name="build" location="build"/>
   <property name="dist"  location="C:/RobotFramework/TestEclipse/lib"/>
-  <property name="version"  value="0.7"/>
+  <property name="version"  value="0.8"/>
   <property name="doc"  value="C:/RobotFramework/TestEclipse/documentation"/>
   <property name="jython"  location="C:/RobotFramework/jython2.5.1/jython.bat"/>
   <property name="pythonpath"  location="C:/RobotFramework/Python26/Lib/site-packages"/>

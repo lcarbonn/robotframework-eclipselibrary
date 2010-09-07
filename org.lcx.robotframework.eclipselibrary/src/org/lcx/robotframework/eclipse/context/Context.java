@@ -1,3 +1,6 @@
+/*
+ * Copyright 2010 L. Carbonnaux
+ */
 package org.lcx.robotframework.eclipse.context;
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
@@ -21,7 +24,7 @@ public class Context {
 	}
 
 	public static void setCurrentWidget(AbstractSWTBotObject widget) {
-		System.out.println("setCurrentWidget="+widget.getClass().getName());
+		//System.out.println("setCurrentWidget="+widget.getClass().getName());
 		Context.currentContext().setWidget(widget);
 	}
 

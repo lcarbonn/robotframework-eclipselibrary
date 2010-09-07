@@ -1,3 +1,6 @@
+/*
+ * Copyright 2010 L. Carbonnaux
+ */
 package org.lcx.robotframework.swtbot.eclipse.finder;
 
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
