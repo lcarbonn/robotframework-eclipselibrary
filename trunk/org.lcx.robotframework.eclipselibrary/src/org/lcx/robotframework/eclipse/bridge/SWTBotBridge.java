@@ -1,3 +1,6 @@
+/*
+ * Copyright 2010 L. Carbonnaux
+ */
 package org.lcx.robotframework.eclipse.bridge;
 
 import java.lang.reflect.Constructor;
@@ -15,17 +18,22 @@ public class SWTBotBridge {
 
 	private static boolean debug = false;
 	
-	private static Object SWTBotBundle = null;
-	private static Object SWTBotService = null;
-	private static ClassLoader SWTBotClassLoader = null;
+	private static Object SWTBOTBUNDLE = null;
+	private static Object SWTBOTSERVICE = null;
+	private static ClassLoader SWTBOTCLASSLOADER = null;
 	
 	public final static String BUNDLE_NAME="org.lcx.robotframework.swtbotplugin";
 	public final static String BUNDLE_SERVICE="org.lcx.robotframework.swtbotplugin.service.SwtbotService";
 //	public final static String BUNDLE_VERSION="1.0.0.201005311531";
 	
+
+	private SWTBotBridge() {
+		super();
+	}
+
 	
 	public static Object getSwtbotbundle() throws Exception {
-		if(SWTBotBundle==null) {
+		if(SWTBOTBUNDLE==null) {
 			try {
 				if(debug) {
 					System.out.println("Find bundle name="+BUNDLE_NAME);
@@ -51,16 +59,16 @@ public class SWTBotBridge {
 					String name = completeName.substring(0, completeName.indexOf('_'));
 					if(name.equals(SWTBotBridge.BUNDLE_NAME)) {
 						if(debug) System.out.println("bundle name="+name);
-						SWTBotBundle = bundle;
+						SWTBOTBUNDLE = bundle;
 					}
 				}
-				if(SWTBotBundle!=null) {
-					if(debug) System.out.println("swtbotbundle="+SWTBotBundle);
-					if(debug) System.out.println("swtbotbundle class="+SWTBotBundle.getClass().getName());
+				if(SWTBOTBUNDLE!=null) {
+					if(debug) System.out.println("swtbotbundle="+SWTBOTBUNDLE);
+					if(debug) System.out.println("swtbotbundle class="+SWTBOTBUNDLE.getClass().getName());
 		
 					// state of the bundle
-					Method getState = SWTBotBundle.getClass().getMethod("getState");
-					Object state = getState.invoke(SWTBotBundle);
+					Method getState = SWTBOTBUNDLE.getClass().getMethod("getState");
+					Object state = getState.invoke(SWTBOTBUNDLE);
 					if(debug) System.out.println("swtbotbundle state="+state);
 				}
 				else throw new Exception("bundle named "+BUNDLE_NAME + " not found");
@@ -71,11 +79,11 @@ public class SWTBotBridge {
 			}
 				
 		}
-		return SWTBotBundle;
+		return SWTBOTBUNDLE;
 	}
 
 	public static Object getSwtbotservice() throws Exception {
-		if(SWTBotService==null) {
+		if(SWTBOTSERVICE==null) {
 			try {
 				ClassLoader swtcl = getSwtbotbundle().getClass().getClassLoader();
 				
@@ -84,9 +92,9 @@ public class SWTBotBridge {
 				Constructor<?>  swtcstring = swtstring.getDeclaredConstructor(new Class[] {String.class});
 				Object swtservice = swtcstring.newInstance(new Object[] {BUNDLE_SERVICE});
 				
-				Method loadClass = SWTBotBundle.getClass().getMethod("loadClass", new Class[] {String.class});
-				Class<?> service = (Class<?>)loadClass.invoke(SWTBotBundle, swtservice);
-				SWTBotService = service.newInstance();
+				Method loadClass = SWTBOTBUNDLE.getClass().getMethod("loadClass", new Class[] {String.class});
+				Class<?> service = (Class<?>)loadClass.invoke(SWTBOTBUNDLE, swtservice);
+				SWTBOTSERVICE = service.newInstance();
 			}
 			catch (Exception e) {
 				e.printStackTrace();
@@ -94,15 +102,15 @@ public class SWTBotBridge {
 			}
 
 		}
-		return SWTBotService;
+		return SWTBOTSERVICE;
 	}
 
 	public static Object getSWTWorkbenchBot() throws SWTBotBridgeException {
 		try {
 			Method getSWTWorkbenchBot = SWTBotBridge.getSwtbotservice().getClass().getDeclaredMethod("getSWTWorkbenchBot");
-			Object SWTWorkbenchBot = getSWTWorkbenchBot.invoke(SWTBotService);
+			Object SWTWorkbenchBot = getSWTWorkbenchBot.invoke(SWTBOTSERVICE);
 			if(debug) System.out.println("SWTWorkbenchBot classLoader="+SWTWorkbenchBot.getClass().getClassLoader());
-			SWTBotClassLoader = SWTWorkbenchBot.getClass().getClassLoader();
+			SWTBOTCLASSLOADER = SWTWorkbenchBot.getClass().getClassLoader();
 			return SWTWorkbenchBot;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -113,10 +121,10 @@ public class SWTBotBridge {
 	public static Class<?> loadClass(String className) throws NoSuchMethodException, Exception {
 //		ClassLoader swtcl = getSwtbotservice().getClass().getClassLoader();
 //		System.out.println("getSwtbotservice classLoader="+swtcl);
-		if(SWTBotClassLoader==null) {
+		if(SWTBOTCLASSLOADER==null) {
 			SWTWorkbenchBot.getSWTWorkbenchBot();
 		}
-		Class<?> c = SWTBotClassLoader.loadClass(className);
+		Class<?> c = SWTBOTCLASSLOADER.loadClass(className);
 
 		return c;
 	}

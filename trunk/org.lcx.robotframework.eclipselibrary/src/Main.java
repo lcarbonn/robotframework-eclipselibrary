@@ -1,3 +1,6 @@
+/*
+ * Copyright 2010 L. Carbonnaux
+ */
 import java.lang.Thread.UncaughtExceptionHandler;
 
 import org.lcx.robotframework.eclipse.keyword.launch.EclipseLaunchingKeywords;

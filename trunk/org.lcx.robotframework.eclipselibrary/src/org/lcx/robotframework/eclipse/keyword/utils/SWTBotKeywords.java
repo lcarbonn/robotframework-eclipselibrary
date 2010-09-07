@@ -1,3 +1,6 @@
+/*
+ * Copyright 2010 L. Carbonnaux
+ */
 package org.lcx.robotframework.eclipse.keyword.utils;
 
 import java.text.SimpleDateFormat;

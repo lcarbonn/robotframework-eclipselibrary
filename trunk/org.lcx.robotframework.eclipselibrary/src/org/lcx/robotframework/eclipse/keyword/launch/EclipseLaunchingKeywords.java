@@ -17,25 +17,18 @@ public class EclipseLaunchingKeywords {
 
 	private static final String TIMEOUT = "-timeout"; //$NON-NLS-1$
 	
-	@RobotKeyword("Launches Eclipse with the given arguments.\n\n"
-        + "Example:\n"
-        + "| Launch Eclipse |\n")
-    @ArgumentNames({"*args"})
-    public void launchEclipse(String[] args) throws Exception {
-    	startEclipseInSeparateThread(args);
-    }
-
-    @RobotKeyword("Alias for `Launch Eclipse` keyword\n")
+    @RobotKeyword("Start Eclipse with the given arguments in a separate thread\n")
     @ArgumentNames({"*args"})
     public void startEclipse(String[] args) throws Exception {
     	startEclipseInSeparateThread(args);
     }
 
-    @RobotKeyword("Launches Eclipse in a separate thread with the given arguments.\n"
-        + "This is useful if eclipse does something that blocks eg. opens up a dialog.\n\n"
-        + "Example:\n"
-        + "| Start Eclipse In Separate Thread | \n")
-    @ArgumentNames({"*args"})
+    /**
+     * Method is public for unit test purpose
+     * @param args
+     * @return Thread
+     * @throws Exception
+     */
     public Thread startEclipseInSeparateThread(final String[] args) throws Exception {
 		UncaughtExceptionHandler eh = new UncaughtExceptionHandler() {
 			

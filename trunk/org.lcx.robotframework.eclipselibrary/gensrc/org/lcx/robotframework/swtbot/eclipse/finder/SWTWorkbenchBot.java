@@ -1,3 +1,6 @@
+/*
+ * Copyright 2010 L. Carbonnaux
+ */
 package org.lcx.robotframework.swtbot.eclipse.finder;
 
 
@@ -22,9 +25,12 @@ public class SWTWorkbenchBot extends SWTBot {
 		return instance;
 	}
 
-	public SWTWorkbenchBot() throws SWTBotBridgeException {
+	private SWTWorkbenchBot() throws SWTBotBridgeException {
 		super(null);
 		System.out.println("Instanciation of SWTWorkbenchBot");
+		System.out.println("bridge cl="+SWTBotBridge.class.getClassLoader());
+		System.out.println("syscl in bridge="+ClassLoader.getSystemClassLoader());
+		
 		distantObject = SWTBotBridge.getSWTWorkbenchBot();
 		// set Should Find Invisible Controls to true instead of receiving exception
 		// bot.getFinder().setShouldFindInvisibleControls(true);
@@ -32,7 +38,7 @@ public class SWTWorkbenchBot extends SWTBot {
 		SWTBotBridge.callMethod(o, "setShouldFindInvisibleControls", true);
 	}
 
-	public SWTWorkbenchBot(Object o) throws SWTBotBridgeException {
+	private SWTWorkbenchBot(Object o) throws SWTBotBridgeException {
 		super(o);
 	}
 

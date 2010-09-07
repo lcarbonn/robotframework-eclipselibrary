@@ -1,3 +1,6 @@
+/*
+ * Copyright 2010 L. Carbonnaux
+ */
 package org.lcx.robotframework.eclipse.keyword.swtbotpref;
 
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
