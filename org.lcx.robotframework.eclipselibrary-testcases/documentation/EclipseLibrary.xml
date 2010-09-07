@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20100817 10:50:39" name="EclipseLibrary" type="library">
+<keywordspec generated="20100907 23:58:35" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
 <version>&amp;lt;unknown&amp;gt;</version>
-<doc>Documentation for test library `EclipseLibrary`.</doc>
+<scope>global</scope>
+<doc>Documentation for test library `org.lcx.robotframework.eclipse.EclipseLibrary`.</doc>
 <kw name="Activate C Tab Item">
 <doc>Activate the cTabItem
 
@@ -42,6 +43,16 @@ insertText the text to be inserted before activating the auto-complete.	 proposa
 <arguments>
 <arg>insertText</arg>
 <arg>proposalText</arg>
+</arguments>
+</kw>
+<kw name="Capture Screenshot">
+<doc>Captures a screenshot to the given file name.
+
+The file name will be prefixed with timestamp Example:
+| Capture Screenshot | screenshot.jpg |
+will produced 20100131_screenshot.jpg for instance</doc>
+<arguments>
+<arg>fileName</arg>
 </arguments>
 </kw>
 <kw name="Check Table Item">
@@ -2196,6 +2207,15 @@ insertText the text to be inserted before activating the auto-complete.Example:
 <arg>insertText</arg>
 </arguments>
 </kw>
+<kw name="Get Background Color">
+<doc>Get widget background color in RGB format
+
+Example:
+| ${color} | Get Background Color |
+| Should Be Equal | ${color} | #FF00CC</doc>
+<arguments>
+</arguments>
+</kw>
 <kw name="Get Button Text">
 <doc>Get the text of the button
 
@@ -2328,7 +2348,7 @@ Example:
 <doc>Get the date with teh given pattern (see java SimpleDateFormat patterns)
 
 Example:
-| Get DateTime Date | yyyyy.MMMMM.dd |</doc>
+| Get DateTime Date | yyyy.MM.dd |</doc>
 <arguments>
 <arg>pattern</arg>
 </arguments>
@@ -2435,6 +2455,15 @@ Example:
 
 Example:
 | Get Editor ToolbarButtons tooltip |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get Foreground Color">
+<doc>Get widget foreground color in RGB format
+
+Example:
+| ${color} | Get Foreground Color |
+| Should Be Equal | ${color} | #FF00CC</doc>
 <arguments>
 </arguments>
 </kw>
@@ -2748,6 +2777,14 @@ Example:
 
 Example:
 | Get StyledText Tooltip Text |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWT Bot Preferences TIMEOUT">
+<doc>Get SWTBotPreferences TIMEOUT as long
+
+Example:
+| Get SWTBotPreferences TIMEOUT |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -3172,6 +3209,78 @@ Example:
 
 Example:
 | Get View Title |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesDEFAULT KEY">
+<doc>Get SWTBotPreferences DEFAULT_KEY
+
+Example:
+| Get SWTBotPreferences DEFAULT_KEY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesKEYBOARD LAYOUT">
+<doc>Get SWTBotPreferences KEYBOARD_LAYOUT
+
+Example:
+| Get SWTBotPreferences KEYBOARD_LAYOUT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesKEYBOARD STRATEGY">
+<doc>Get SWTBotPreferences KEYBOARD_STRATEGY
+
+Example:
+| Get SWTBotPreferences KEYBOARD_STRATEGY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT">
+<doc>Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT as int
+
+Example:
+| Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesPLAYBACK DELAY">
+<doc>Get SWTBotPreferences PLAYBACK_DELAY as long
+
+Example:
+| Get SWTBotPreferences PLAYBACK_DELAY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesRECORDER FILE NAME">
+<doc>Get SWTBotPreferences RECORDER_FILE_NAME
+
+Example:
+| Get SWTBotPreferences RECORDER_FILE_NAME |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesSCREENSHOT FORMAT">
+<doc>Get SWTBotPreferences SCREENSHOT_FORMAT
+
+Example:
+| Get SWTBotPreferences SCREENSHOT_FORMAT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesSCREENSHOTS DIR">
+<doc>Get SWTBotPreferences SCREENSHOTS_DIR
+
+Example:
+| Get SWTBotPreferences SCREENSHOTS_DIR |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesTYPE INTERVAL">
+<doc>Get SWTBotPreferences TYPE_INTERVAL as int
+
+Example:
+| Get SWTBotPreferences TYPE_INTERVAL |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -4079,15 +4188,6 @@ Example:
 <arguments>
 </arguments>
 </kw>
-<kw name="Launch Eclipse">
-<doc>Launches Eclipse with the given arguments.
-
-Example:
-| Launch Eclipse |</doc>
-<arguments>
-<arg>*args</arg>
-</arguments>
-</kw>
 <kw name="List All Editors Title">
 <doc>List all the editors title
 
@@ -4407,6 +4507,16 @@ Example:
 <arg>text</arg>
 </arguments>
 </kw>
+<kw name="Set Capture Screenshot On Error">
+<doc>Set SWTBot to captures a screenshot to the given file name on error.
+
+The file name will be prefixed with timestamp Example:
+| Set Capture Screenshot On Error | screenshot.jpg |
+will produced 20100131_screenshot.jpg for instance</doc>
+<arguments>
+<arg>fileName</arg>
+</arguments>
+</kw>
 <kw name="Set Combo Text">
 <doc>Set the text of the combo
 
@@ -4420,7 +4530,7 @@ Example:
 <doc>Set the date with teh given pattern (see java SimpleDateFormat patterns)
 
 Example:
-| Set DateTime Date | yyyyy.MM.dd | 2010.12.31</doc>
+| Set DateTime Date | yyyy.MM.dd | 2010.12.31</doc>
 <arguments>
 <arg>pattern</arg>
 <arg>date</arg>
@@ -4754,6 +4864,15 @@ Example:
 <arg>text</arg>
 </arguments>
 </kw>
+<kw name="Set SWT Bot Preferences TIMEOUT">
+<doc>Set SWTBotPreferences TIMEOUT as long
+
+Example:
+| Set SWTBotPreferences TIMEOUT | 1000 |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
 <kw name="Set Text Text">
 <doc>Set text into text
 
@@ -4761,6 +4880,87 @@ Example:
 | Set Text Text | text |</doc>
 <arguments>
 <arg>text</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesDEFAULT KEY">
+<doc>Set SWTBotPreferences DEFAULT_KEY
+
+Example:
+| Set SWTBotPreferences DEFAULT_KEY | key |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesKEYBOARD LAYOUT">
+<doc>Set SWTBotPreferences KEYBOARD_LAYOUT
+
+Example:
+| Set SWTBotPreferences KEYBOARD_LAYOUT | layout |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesKEYBOARD STRATEGY">
+<doc>Set SWTBotPreferences KEYBOARD_STRATEGY
+
+Example:
+| Set SWTBotPreferences KEYBOARD_STRATEGY | stategy |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT">
+<doc>Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT as int
+
+Example:
+| Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT | 20 |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesPLAYBACK DELAY">
+<doc>Set SWTBotPreferences PLAYBACK_DELAY as long
+
+Example:
+| Set SWTBotPreferences PLAYBACK_DELAY | 100 |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesRECORDER FILE NAME">
+<doc>Set SWTBotPreferences RECORDER_FILE_NAME
+
+Example:
+| Set SWTBotPreferences RECORDER_FILE_NAME | filename |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesSCREENSHOT FORMAT">
+<doc>Set SWTBotPreferences SCREENSHOT_FORMAT
+
+The value must be one these: BMP, GIF, ICO, JPEG, JPG, PNG or TIFF. Example:
+| Set SWTBotPreferences SCREENSHOT_FORMAT | PNG |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesSCREENSHOTS DIR">
+<doc>Set SWTBotPreferences SCREENSHOTS_DIR
+
+Example:
+| Set SWTBotPreferences SCREENSHOTS_DIR | filename |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesTYPE INTERVAL">
+<doc>Set SWTBotPreferences TYPE_INTERVAL as int
+
+Example:
+| Set SWTBotPreferences TYPE_INTERVAL | 20 |</doc>
+<arguments>
+<arg>value</arg>
 </arguments>
 </kw>
 <kw name="Show C Tab Item">
@@ -4796,16 +4996,7 @@ Example:
 </arguments>
 </kw>
 <kw name="Start Eclipse">
-<doc>Alias for `Launch Eclipse` keyword</doc>
-<arguments>
-<arg>*args</arg>
-</arguments>
-</kw>
-<kw name="Start Eclipse In Separate Thread">
-<doc>Launches Eclipse in a separate thread with the given arguments. This is useful if eclipse does something that blocks eg. opens up a dialog.
-
-Example:
-| Start Eclipse In Separate Thread |</doc>
+<doc>Start Eclipse with the given arguments in a separate thread</doc>
 <arguments>
 <arg>*args</arg>
 </arguments>
@@ -4969,10 +5160,21 @@ Example:
 <doc>Wait until shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
 
 Example:
-| Wait Until Shell Closes | This is the shell text | 500 | 0</doc>
+| Wait Until Shell Is Active | This is the shell text | 500 | 0</doc>
 <arguments>
 <arg>text</arg>
 <arg>*params</arg>
+</arguments>
+</kw>
+<kw name="Wait Until Shell Is Active Bis">
+<doc>Wait until shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+
+Example:
+| Wait Until Shell Closes | This is the shell text | 500 | 0</doc>
+<arguments>
+<arg>text</arg>
+<arg>timeout</arg>
+<arg>interval</arg>
 </arguments>
 </kw>
 <kw name="Wait Until Table Has Rows">
@@ -5007,7 +5209,7 @@ Example:
 <doc>Wait while shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
 
 Example:
-| Wait While Shell Closes | This is the shell text | 500 | 0</doc>
+| Wait While Shell Is Active | This is the shell text | 500 | 0</doc>
 <arguments>
 <arg>text</arg>
 <arg>*params</arg>
