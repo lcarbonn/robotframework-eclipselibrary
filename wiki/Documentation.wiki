@@ -7,7 +7,7 @@
 
 == Keywords completion for RIDE ==
 
-Additional XML file is provided to use keyword completipn with Robot IDE.
+Additional XML file is provided to use keyword completion with [http://code.google.com/p/robotframework-ride RIDE].
 
 This file should be added to PYTHONPATH
 
