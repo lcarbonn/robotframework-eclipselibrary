@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20100907 23:58:35" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
+<keywordspec generated="20100908 22:11:29" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
 <version>&amp;lt;unknown&amp;gt;</version>
 <scope>global</scope>
 <doc>Documentation for test library `org.lcx.robotframework.eclipse.EclipseLibrary`.</doc>
