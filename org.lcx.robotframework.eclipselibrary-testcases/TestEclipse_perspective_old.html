@@ -15,10 +15,12 @@ table {
   border-collapse: collapse;
   empty-cells: show;
   margin: 1em 0em;
-  border: 1px solid black;
+  border: 0.1em solid black;
 }
 th, td {
-  border: 1px solid black;
+  border-style: solid;
+  border-width: 0.05em 0.1em;
+  border-color: black;
   padding: 0.1em 0.2em;
   height: 1.5em;
   width: 12em;
@@ -26,7 +28,7 @@ th, td {
 th {
   background-color: rgb(192, 192, 192);
   color: black;
-  height: 1.7em;
+  border-width: 0.1em;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.1em;
@@ -39,18 +41,18 @@ td.name, th.name {
   width: 10em;
 }
 </style>
-<title>A TestEclipseLibrary installation</title>
+<title>Testeclipse Perspective</title>
 </head>
 <body>
-<h1>A TestEclipseLibrary installation</h1>
+<h1>Testeclipse Perspective</h1>
 <table id="settings" border="1">
 <tr>
 <th class="name">Setting</th>
 <th colspan="4">Value</th>
 </tr>
 <tr>
-<td class="name">Library</td>
-<td>EclipseLibrary</td>
+<td class="name">Resource</td>
+<td>EclipseLibraryKeywords.html</td>
 <td></td>
 <td></td>
 <td></td>
@@ -82,47 +84,75 @@ td.name, th.name {
 <td>...</td>
 <td>file:/d:/eclipse/eclipse35</td>
 <td>-data</td>
-<td>file:/d:/bootstrap35-robot/rcpbot/workspace-blank</td>
+<td>file:/d:/bootstrap35-robot/tv1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>-nosplash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List All Perspectives</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List All Perspectives Label</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Active Perspective</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Default Perspective</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Comment</td>
-<td>Sleep</td>
-<td>1m</td>
-<td>wait for eclipse to start</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find Active View</td>
-<td></td>
-<td></td>
+<td>Find Perspective By Id</td>
+<td>planning</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find Active View</td>
-<td></td>
+<td>Find Perspective By Label</td>
+<td>Planning</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>${name} =</td>
-<td>Get View Title</td>
+<td>Find Active Perspective</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Should Be Equal</td>
-<td>${name}</td>
-<td>Welcome</td>
+<td>${oldactive} =</td>
+<td>Get Perspective Label</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>${activeStatus} =</td>
-<td>Is View Active</td>
+<td>Is Perspective Active</td>
 <td></td>
 <td></td>
 </tr>
@@ -135,84 +165,91 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>Set Focus On View</td>
+<td>Find Perspective By Label</td>
+<td>Debug</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Perspective Label</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Show View</td>
+<td>${activeStatus} =</td>
+<td>Is Perspective Active</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${activeStatus}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Activate Perspective</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Close View</td>
+<td>${activeStatus} =</td>
+<td>Is Perspective Active</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${activeStatus}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Perspective By Label</td>
+<td>${oldActive}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Perspective Label</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Find Active View</td>
+<td>${activeStatus} =</td>
+<td>Is Perspective Active</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${activeStatus}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Activate Perspective</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>${name} =</td>
-<td>Get View Title</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Should Be Equal</td>
-<td>${name}</td>
-<td>Project Explorer</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find Menu</td>
-<td>Help</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find Sub Menu</td>
-<td>Welcome</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Click Menu</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find Menu</td>
-<td>File</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Find Sub Menu</td>
-<td>Exit</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Click Menu</td>
+<td>Reset Active Perspective</td>
 <td></td>
 <td></td>
 <td></td>
