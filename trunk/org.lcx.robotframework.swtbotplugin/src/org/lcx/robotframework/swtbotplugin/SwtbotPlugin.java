@@ -1,5 +1,8 @@
 package org.lcx.robotframework.swtbotplugin;
 
+import java.lang.reflect.Method;
+
+import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.ui.IStartup;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -37,6 +40,25 @@ public class SwtbotPlugin extends AbstractUIPlugin {
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
+		
+		// set the plugin class loader to the eclipse library bridge
+		try {
+			ClassLoader syscl = ClassLoader.getSystemClassLoader();
+			Class<?> bridge = syscl.loadClass("org.lcx.robotframework.eclipse.bridge.SWTBotBridge");
+			Class<?> clclass = syscl.loadClass("java.lang.ClassLoader");
+			Method m = bridge.getDeclaredMethod("setSWTBOTCLASSLOADER", clclass);
+			m.invoke(bridge, this.getClass().getClassLoader());
+			
+			// set the SWTWorkbenchBot reference to the eclipse library bridge
+			SWTWorkbenchBot bot = new SWTWorkbenchBot();
+			Class<?> oclass = syscl.loadClass("java.lang.Object");
+			Method ms = bridge.getDeclaredMethod("setSWTWORKBENCHBOT", oclass);
+			ms.invoke(bridge, bot);
+			
+		} catch (ClassNotFoundException e) {
+			// plugin is not started under robotframework, so not a problem
+		}
+		
 	}
 
 	/*
