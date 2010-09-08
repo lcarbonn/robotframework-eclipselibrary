@@ -3,16 +3,17 @@
         build file for RobotFramework Eclipse Library
     </description>
   <!-- set global properties for this build -->
+  <property name="version"  value="0.9"/>
   <property name="src" location="src"/>
   <property name="gensrc" location="gensrc"/>
   <property name="build" location="build"/>
   <property name="dist"  location="C:/RobotFramework/TestEclipse/lib"/>
-  <property name="version"  value="0.8"/>
   <property name="doc"  value="C:/RobotFramework/TestEclipse/documentation"/>
   <property name="jython"  location="C:/RobotFramework/jython2.5.1/jython.bat"/>
   <property name="pythonpath"  location="C:/RobotFramework/Python26/Lib/site-packages"/>
   <property name="libdoc"  location="${pythonpath}/libdoc.py"/>
   <property name="javalibcore"  value="javalib-core-0.8.1-jar-with-dependencies.jar"/>
+  <property name="eclipselauncher"  value="org.eclipse.equinox.launcher_1.0.201.R35x_v20090715_unsigned.jar"/>
   <property name="jarfile"  value="eclipselibrary-${version}.jar"/>
   <property name="jarfilewithdep"  value="eclipselibrary-${version}-with-dependencies.jar"/>
   
@@ -33,6 +34,7 @@
       target="1.5"
       classpath="lib/${javalibcore}"
       includeAntRuntime="false"
+      debug="on"
     />
   </target>
 
@@ -40,6 +42,8 @@
         description="generate the distribution" >
     <!-- Create the distribution directory -->
     <mkdir dir="${dist}"/>
+
+  	<delete file="${dist}/${jarfile}"/>
 
     <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
     <jar jarfile="${dist}/${jarfile}"
@@ -54,12 +58,15 @@
       <!-- Who is building this jar? -->
       <attribute name="Built-By" value="Laurent Carbonnaux"/>
       <!-- Information about the program itself -->
-      <attribute name="Implementation-Vendor" value="ScrumVisionorg"/>
+      <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
       <attribute name="Implementation-Title" value="EclipseLibrary"/>
       <attribute name="Implementation-Version" value="${version}"/>
     </manifest>
     
     </jar>
+
+  	<delete file="${dist}/${jarfilewithdep}"/>
+  	
     <jar jarfile="${dist}/${jarfilewithdep}"
        basedir="."
        includes="log4j.properties">
@@ -68,12 +75,13 @@
     <fileset dir="${src}"/>
     <fileset dir="${gensrc}"/>
     <zipfileset includes="**/*" src="lib/${javalibcore}"/>
+    <zipfileset includes="**/*" src="lib/${eclipselauncher}"/>
 
     <manifest>
       <!-- Who is building this jar? -->
       <attribute name="Built-By" value="Laurent Carbonnaux"/>
       <!-- Information about the program itself -->
-      <attribute name="Implementation-Vendor" value="ScrumVisionorg"/>
+      <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
       <attribute name="Implementation-Title" value="EclipseLibrary"/>
       <attribute name="Implementation-Version" value="${version}"/>
     </manifest>
@@ -85,7 +93,7 @@
   <target name="gendochtml"
         description="Keyword documentation generation">
     <mkdir dir="${doc}"/>
-    <delete file="${doc}/EclipseLibrary-${version}.html"/>
+    <delete file="${doc}/EclipseLibrary.html"/>
 
     <!-- Gen the HTML keyword documentation -->
     <exec executable="${jython}" dir=".">
@@ -96,7 +104,7 @@
       <!--<arg value="-f HTML"/>-->
       <!--<arg value="-N EclipseLibrary-${version}.html"/>-->
       <arg value="-o"/>
-      <arg path="${doc}/EclipseLibrary-${version}.html"/>
+      <arg path="${doc}/EclipseLibrary.html"/>
       <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
     </exec>
 
@@ -105,7 +113,7 @@
   <target name="gendocxml"
         description="Keyword documentation generation">
     <mkdir dir="${doc}"/>
-    <delete file="${doc}/EclipseLibrary-${version}.xml"/>
+    <delete file="${doc}/EclipseLibrary.xml"/>
 
     <!-- Gen the XML keyword file -->
     <exec executable="${jython}" dir=".">
@@ -116,7 +124,7 @@
       <!--<arg value="-f XML"/>-->
       <!--<arg value="-N EclipseLibrary-${version}.xml"/>-->
       <arg value="-o"/>
-      <arg path="${doc}/EclipseLibrary-${version}.xml"/>
+      <arg path="${doc}/EclipseLibrary.xml"/>
       <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
     </exec>
 
