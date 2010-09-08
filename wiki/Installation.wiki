@@ -24,12 +24,12 @@ Robotframework Eclipse Library v0.7 now works on :
  
 == Eclipse library ==
  Then download the latest eclipse library jar file.
- * The standalone version [http://code.google.com/p/robotframework-swinglibrary/downloads/list eclipselibrary-x.x.jar]
- * plus the JavalibCore  [http://code.google.com/p/robotframework-javatools/wiki/JavalibCore javalib-core-x.x.x-jar-with-dependencies.jar]
- 
- * Or download the complete jar with dependencies that contains all the previous ones.[http://code.google.com/p/robotframework-swinglibrary/downloads/list eclipselibrary-x.x-with-dependencies.jar]
+ * The standalone version [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x.jar]
+ * Plus the JavalibCore  [http://code.google.com/p/robotframework-javatools/wiki/JavalibCore javalib-core-x.x.x-jar-with-dependencies.jar]
+  * Plus Eclipse Equinox launcher jar file (like org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar) that you should find under eclipse installation folder, under plugins
+ OR
+ * Download the complete jar with dependencies that contains all the previous ones.[http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x-with-dependencies.jar]
 
- * plus Eclipse Equinox launcher jar file (like org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar) that you should find under eclipse installation folder, under plugins
  
 
 Place files in 'lib' folder under your test suite
