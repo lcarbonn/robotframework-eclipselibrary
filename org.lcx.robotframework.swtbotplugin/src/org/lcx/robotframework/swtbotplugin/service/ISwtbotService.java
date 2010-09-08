@@ -1,9 +1,9 @@
 package org.lcx.robotframework.swtbotplugin.service;
 
-import org.eclipse.swt.widgets.Display;
+import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 
 public interface ISwtbotService {
 
-	public Display getDisplay();
+	public SWTWorkbenchBot getSWTWorkbenchBot();
 	
 }
