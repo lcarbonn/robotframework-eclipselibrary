@@ -9,7 +9,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.lcx.robotframework.eclipse.launcher.EclipseMain;
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
@@ -17,110 +16,18 @@ import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
 public class SWTBotBridge {
 
 	private static boolean debug = false;
+	private static boolean startingdebug = false;
 	
-	private static Object SWTBOTBUNDLE = null;
-	private static Object SWTBOTSERVICE = null;
 	private static ClassLoader SWTBOTCLASSLOADER = null;
+	private static Object SWTWORKBENCHBOT = null;
 	
-	public final static String BUNDLE_NAME="org.lcx.robotframework.swtbotplugin";
-	public final static String BUNDLE_SERVICE="org.lcx.robotframework.swtbotplugin.service.SwtbotService";
-//	public final static String BUNDLE_VERSION="1.0.0.201005311531";
+	private static boolean ISBRIDGEINITIATED = false;
 	
-
 	private SWTBotBridge() {
 		super();
 	}
-
-	
-	public static Object getSwtbotbundle() throws Exception {
-		if(SWTBOTBUNDLE==null) {
-			try {
-				if(debug) {
-					System.out.println("Find bundle name="+BUNDLE_NAME);
-					System.out.println("Starter in bridge="+EclipseMain.starter);
-				}
-				
-				// Eclipse is running?
-//				Method isRunning = EclipseMain.starter.getDeclaredMethod("isRunning");
-//				Object brunning = isRunning.invoke(EclipseMain.starter);
-//				if(debug) System.out.println("Eclipse is running="+brunning);
-	
-				//getSystemBundleContext
-				Method getSystemBundleContext = EclipseMain.starter.getDeclaredMethod("getSystemBundleContext");
-				Object bundleContext = getSystemBundleContext.invoke(EclipseMain.starter);
-				if(debug) System.out.println("bundleContext="+bundleContext.getClass().getName()+", bundleContext="+bundleContext);
-
-				//getSystemBundleContext.getBundles
-				Method getBundles = bundleContext.getClass().getDeclaredMethod("getBundles");
-				Object[] bs = (Object[])getBundles.invoke(bundleContext);
-				for (Object bundle : bs) {
-//					System.out.println("bundle="+bundle);
-					String completeName = bundle.toString();
-					String name = completeName.substring(0, completeName.indexOf('_'));
-					if(name.equals(SWTBotBridge.BUNDLE_NAME)) {
-						if(debug) System.out.println("bundle name="+name);
-						SWTBOTBUNDLE = bundle;
-					}
-				}
-				if(SWTBOTBUNDLE!=null) {
-					if(debug) System.out.println("swtbotbundle="+SWTBOTBUNDLE);
-					if(debug) System.out.println("swtbotbundle class="+SWTBOTBUNDLE.getClass().getName());
-		
-					// state of the bundle
-					Method getState = SWTBOTBUNDLE.getClass().getMethod("getState");
-					Object state = getState.invoke(SWTBOTBUNDLE);
-					if(debug) System.out.println("swtbotbundle state="+state);
-				}
-				else throw new Exception("bundle named "+BUNDLE_NAME + " not found");
-			}
-			catch (Exception e) {
-				e.printStackTrace();
-				throw new Exception("Error in SwtBotBundle Bridge to get the bundle\n Eclipse may not be completly started\n Add -timeout parameter to your Eclipse starting keyword", e);
-			}
-				
-		}
-		return SWTBOTBUNDLE;
-	}
-
-	public static Object getSwtbotservice() throws Exception {
-		if(SWTBOTSERVICE==null) {
-			try {
-				ClassLoader swtcl = getSwtbotbundle().getClass().getClassLoader();
-				
-				//loadclass SwtbotService
-				Class<?> swtstring = swtcl.loadClass("java.lang.String");
-				Constructor<?>  swtcstring = swtstring.getDeclaredConstructor(new Class[] {String.class});
-				Object swtservice = swtcstring.newInstance(new Object[] {BUNDLE_SERVICE});
-				
-				Method loadClass = SWTBOTBUNDLE.getClass().getMethod("loadClass", new Class[] {String.class});
-				Class<?> service = (Class<?>)loadClass.invoke(SWTBOTBUNDLE, swtservice);
-				SWTBOTSERVICE = service.newInstance();
-			}
-			catch (Exception e) {
-				e.printStackTrace();
-				throw new Exception("Error in SwtBotBundle Bridge to get the service\n Eclipse may not be completly started\n Add -timeout parameter to your Eclipse starting keyword", e);
-			}
-
-		}
-		return SWTBOTSERVICE;
-	}
-
-	public static Object getSWTWorkbenchBot() throws SWTBotBridgeException {
-		try {
-			Method getSWTWorkbenchBot = SWTBotBridge.getSwtbotservice().getClass().getDeclaredMethod("getSWTWorkbenchBot");
-			Object SWTWorkbenchBot = getSWTWorkbenchBot.invoke(SWTBOTSERVICE);
-			if(debug) System.out.println("SWTWorkbenchBot classLoader="+SWTWorkbenchBot.getClass().getClassLoader());
-			SWTBOTCLASSLOADER = SWTWorkbenchBot.getClass().getClassLoader();
-			return SWTWorkbenchBot;
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw new SWTBotBridgeException(e);
-		}
-	}
 	
 	public static Class<?> loadClass(String className) throws NoSuchMethodException, Exception {
-//		ClassLoader swtcl = getSwtbotservice().getClass().getClassLoader();
-//		System.out.println("getSwtbotservice classLoader="+swtcl);
 		if(SWTBOTCLASSLOADER==null) {
 			SWTWorkbenchBot.getSWTWorkbenchBot();
 		}
@@ -368,6 +275,45 @@ public class SWTBotBridge {
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new SWTBotBridgeException(e);
+		}
+	}
+
+
+	public static void setSWTBOTCLASSLOADER(ClassLoader sWTBOTCLASSLOADER) {
+		if(startingdebug) {
+			System.out.println("SWTBOTCLASSLOADER cl before="+SWTBOTCLASSLOADER);
+		}
+		SWTBOTCLASSLOADER = sWTBOTCLASSLOADER;
+		if(sWTBOTCLASSLOADER==null) {
+			ISBRIDGEINITIATED = false;
+		}
+
+		if(startingdebug) {
+			System.out.println("SWTBOTCLASSLOADER cl after ="+SWTBOTCLASSLOADER);
+		}
+	}
+
+
+	public static boolean isISBRIDGEINITIATED() {
+		return ISBRIDGEINITIATED;
+	}
+
+
+	public static Object getSWTWORKBENCHBOT() {
+		return SWTWORKBENCHBOT;
+	}
+
+
+	public static void setSWTWORKBENCHBOT(Object sWTWORKBENCHBOT) {
+		if(startingdebug) {
+			System.out.println("SWTWORKBENCHBOT before="+SWTWORKBENCHBOT);
+		}
+		
+		SWTWORKBENCHBOT = sWTWORKBENCHBOT;
+		ISBRIDGEINITIATED = (sWTWORKBENCHBOT!=null);
+
+		if(startingdebug) {
+			System.out.println("SWTWORKBENCHBOT after ="+SWTWORKBENCHBOT);
 		}
 	}
 	

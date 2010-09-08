@@ -28,10 +28,8 @@ public class SWTWorkbenchBot extends SWTBot {
 	private SWTWorkbenchBot() throws SWTBotBridgeException {
 		super(null);
 		System.out.println("Instanciation of SWTWorkbenchBot");
-		System.out.println("bridge cl="+SWTBotBridge.class.getClassLoader());
-		System.out.println("syscl in bridge="+ClassLoader.getSystemClassLoader());
 		
-		distantObject = SWTBotBridge.getSWTWorkbenchBot();
+		distantObject = SWTBotBridge.getSWTWORKBENCHBOT();
 		// set Should Find Invisible Controls to true instead of receiving exception
 		// bot.getFinder().setShouldFindInvisibleControls(true);
 		Object o = SWTBotBridge.callMethod(distantObject, "getFinder");
