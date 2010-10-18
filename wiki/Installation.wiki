@@ -34,7 +34,7 @@ Place files in 'lib' folder under your test suite
  * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.html  EclipseLibraryKeywords.html]
 
  Add Eclipse Library xml keyword specification file under PYTHON_PATH for keyword completion under RIDE
- * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibrary.xml  EclipseLibrary.xml]
+ * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml  EclipseLibrary.xml]
 
 == Some test cases == 
 Those test cases are used for unit testing of the library.
