@@ -38,5 +38,5 @@ Place files in 'lib' folder under your test suite
 
 == Some test cases == 
 Those test cases are used for unit testing of the library.
-You could use it as per exemple.
+You could use it as per samples.
  * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/]
