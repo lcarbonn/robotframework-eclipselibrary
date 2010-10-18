@@ -34,6 +34,11 @@ public class SWTWorkbenchBot extends SWTBot {
 		// bot.getFinder().setShouldFindInvisibleControls(true);
 		Object o = SWTBotBridge.callMethod(distantObject, "getFinder");
 		SWTBotBridge.callMethod(o, "setShouldFindInvisibleControls", true);
+		// set screenshot default path
+		// SWTBotPreferences.SCREENSHOTS_DIR = "./screenshots/";
+		SWTBotBridge.setStaticField("org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences",
+				"SCREENSHOTS_DIR", "./screenshots/");
+		
 	}
 
 	private SWTWorkbenchBot(Object o) throws SWTBotBridgeException {

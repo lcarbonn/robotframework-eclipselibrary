@@ -6,7 +6,6 @@ package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 import java.util.List;
 
 import org.lcx.robotframework.eclipse.context.Context;
-import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTree;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -199,60 +198,48 @@ public class TreeItemActionKeywords {
 //    		Context.setCurrentWidget(treeItem.expandNode(text));
     	}
 	
-	@RobotKeyword("Find the treeItem node with the given text or at the given row if numeric\n\n"
+	@RobotKeyword("Find the treeItem node with the given text and / or at the given row if numeric\n\n"
             + "Example:\n"
-            + "| find TreeItem | text | \n"
-            + "| find TreeItem | 0 | \n")
-    @ArgumentNames({"text"})
-        public void findTreeItem(String text) throws Exception {
-			Object o = Context.getCurrentWidget();
-			if(o instanceof SWTBotTree) {
-	    		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
-	    		SWTBotTreeItem item = tree.getTreeItem(text);
-	    		Context.setCurrentWidget(item);
-	    		return;
-			}
-			
+            + "| find TreeItem Node | text | \n"
+            + "| find TreeItem Node | 0 | \n"
+            + "| find TreeItem Node | text | 0 | \n")
+    @ArgumentNames({"*params"})
+        public void findTreeItemNode(String... params) throws Exception {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		int row = -1;
-    		try {
-				row = Integer.valueOf(text).intValue(); 
-			} catch (Exception e) {
-				// nothing to do
-			}
-			if(row==-1) {
+    		String text = null;
+        	int nbParam = params.length;
+        	if (nbParam==1) {
+	    		try {
+					row = Integer.valueOf(params[0]).intValue(); 
+				} catch (Exception e) {
+					text = params[0];
+				}
+        	}
+        	if (nbParam==2) {
+	    		try {
+					row = Integer.valueOf(params[1]).intValue(); 
+				} catch (Exception e) {
+					text = params[0];
+				}
+        	}
+        	
+			if(text!=null && row==-1) {
 				treeItem = treeItem.getNode(text);
-			} else {
+			} else if(text==null && row!=-1){
 				treeItem = treeItem.getNode(row);
+			} else if (text!=null && row!=-1){
+				treeItem = treeItem.getNode(text, row);
 			}
-    		Context.setCurrentWidget(treeItem);
-    	}
-
-	@RobotKeyword("Find the treeItem node with the given parameter as text\n\n"
-            + "Example:\n"
-            + "| find TreeItem With Text | 0 | \n")
-    @ArgumentNames({"text"})
-        public void findTreeItemWithText(String text) throws Exception {
-    		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
-			treeItem = treeItem.getNode(text);
-    		Context.setCurrentWidget(treeItem);
-    	}
-
-	@RobotKeyword("Find the index'th treeItem node with the given text\n\n"
-            + "Example:\n"
-            + "| Find TreeItem At Index | text | 0 |\n")
-    @ArgumentNames({"text", "index"})
-        public void findTreeItemAtIndex(String text, String index) throws Exception {
-    		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
-    		int i = Integer.valueOf(index).intValue();
-    		Context.setCurrentWidget(treeItem.getNode(text, i));
+			if(!(text==null && row == -1)) Context.setCurrentWidget(treeItem);
+			else throw new Exception("'Find TreeItem Node' keyword should receive 1 parameter at least but received 0");
     	}
 
 	@RobotKeyword("Get the treeItem nodes\n\n"
             + "Example:\n"
             + "| Get TreeItem Nodes | \n")
 //    @ArgumentNames({"text", "index"})
-        public String[] getTreeItemNodes(String text, String index) throws Exception {
+        public String[] getTreeItemNodes() throws Exception {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		List<String> list = treeItem.getNodes();
     		String[] a = new String[list.size()];
@@ -269,7 +256,7 @@ public class TreeItemActionKeywords {
     		return treeItem.rowCount();
     	}
 
-	@RobotKeyword("Double Click on the tableItem\n\n"
+	@RobotKeyword("Double Click on the treeItem\n\n"
             + "Example:\n"
             + "| Double Click TreeItem |\n")
         public void doubleClickTreeItem() throws Exception {

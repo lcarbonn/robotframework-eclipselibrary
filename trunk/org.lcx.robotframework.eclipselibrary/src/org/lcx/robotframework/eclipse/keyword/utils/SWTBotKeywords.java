@@ -29,7 +29,7 @@ public class SWTBotKeywords {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotPreferencesActionKeywords pref = new SWTBotPreferencesActionKeywords();
     	Date now = new Date(System.currentTimeMillis());
-    	String name = pref.getSWTBotPreferencesSCREENSHOTS_DIR() + sdf.format(now) + "_" +fileName;
+    	String name = pref.get_SWTBot_Preferences_SCREENSHOTS_DIR() + sdf.format(now) + "_" +fileName;
     	bot.captureScreenshot(name);
     	return "file://"+name;
 

@@ -103,6 +103,16 @@ public class ListActionKeywords {
     		return list.itemCount();
     	}
 	
+	@RobotKeyword("Select the indexed item in the list\n\n"
+            + "Example:\n"
+            + "| Select Indexed Item In List | 0 |\n")
+    @ArgumentNames({"index"})
+        public void selectIndexedItemInList(String index) throws Exception {
+    		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
+			int ind = Integer.valueOf(index).intValue();
+    		list.select(ind);
+    	}
+
 	@RobotKeyword("Select the indexed item(s) in the list\n\n"
             + "Example:\n"
             + "| Select Indexed Items In List | 0 | 1 |\n")
@@ -115,6 +125,15 @@ public class ListActionKeywords {
 				indexes[i] = ind;
 			}
     		list.select(indexes);
+    	}
+
+	@RobotKeyword("Select the item with the given text in the list\n\n"
+            + "Example:\n"
+            + "| Select Item In List | item 0 | \n")
+    @ArgumentNames({"text"})
+        public void selectItemInList(String text) throws Exception {
+    		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
+    		list.select(text);
     	}
 
 	@RobotKeyword("Select the item(s) with the given text(s) in the list\n\n"
