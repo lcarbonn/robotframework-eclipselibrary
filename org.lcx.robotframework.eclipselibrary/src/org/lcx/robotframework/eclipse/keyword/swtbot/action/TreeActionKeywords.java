@@ -140,6 +140,20 @@ public class TreeActionKeywords {
     		Context.setCurrentWidget(item);
     	}
 
+	@RobotKeyword("Get all the tree treeItems text as a array of string\n\n"
+            + "Example:\n"
+            + "| Get All Tree Items |\n")
+//    @ArgumentNames({"text"})
+        public String[] getAllTreeItems() throws Exception {
+    		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
+    		SWTBotTreeItem[] items = tree.getAllItems();
+    		String[] its = new String[items.length];
+    		for (int i = 0; i < items.length; i++) {
+				its[i] = items[i].getText();
+			}
+    		return its;
+    	}
+
 	@RobotKeyword("Expands the given tree nodes\n\n"
             + "Example:\n"
             + "| Expand Tree Nodes | text1 | text2 |\n")

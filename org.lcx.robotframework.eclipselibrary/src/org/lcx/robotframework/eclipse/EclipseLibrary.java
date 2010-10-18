@@ -14,6 +14,8 @@ public class EclipseLibrary extends AnnotationLibrary {
 	private boolean debug = false;
 
     public static final String ROBOT_LIBRARY_SCOPE = "GLOBAL";
+    public static final String ROBOT_LIBRARY_VERSION = "0.0.10";
+
     private final AnnotationLibrary annotationLibrary = new AnnotationLibrary("org/lcx/robotframework/eclipse/keyword/**/*.class");
     public static EclipseLibrary instance;
 

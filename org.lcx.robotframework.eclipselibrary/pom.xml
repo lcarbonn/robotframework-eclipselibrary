@@ -38,7 +38,7 @@
   <!-- Environment Settings -->
   <pluginRepositories>
     <pluginRepository>
-      <id>Codehous repository</id>
+      <id>Codehaus repository</id>
       <url>http://repository.codehaus.org</url>
     </pluginRepository>
   </pluginRepositories>

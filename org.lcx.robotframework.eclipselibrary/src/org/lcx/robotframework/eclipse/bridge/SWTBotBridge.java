@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.bridge;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -194,19 +195,18 @@ public class SWTBotBridge {
 	public static Object[] callMethodReturnSWTBotArray(Object instance, String methodName, Class<?> clazz, Object... parameters) throws SWTBotBridgeException {
 		try {
 			Object[] o = (Object[])SWTBotBridge.callMethod(instance, methodName, parameters);
-			Object[] lo = new Object[o.length];
+			Object lo = Array.newInstance(clazz, o.length);
 			int i = 0;
 			for (Object distO : o) {
 
-				System.out.println("line="+distO);
-
+				if(debug) System.out.println("line="+distO);
+				
 				Constructor<?> c = clazz.getDeclaredConstructor(Object.class);
 				AbstractSWTBotObject localO = (AbstractSWTBotObject)c.newInstance(distO);
-				lo[i] = localO;
+				Array.set(lo, i, localO);
 				i++;
 			}
-			return lo;
-//			return callMethodReturnSWTBotList(instance, methodName, clazz, parameters).toArray();
+			return (Object[])lo;
 		} catch (Exception e) {
 			throw new SWTBotBridgeException(e);
 		}
