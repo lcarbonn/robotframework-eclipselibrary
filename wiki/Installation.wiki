@@ -15,7 +15,7 @@ Robotframework Eclipse Library from v0.7 now works on :
  * Robotframework Eclipse Library plugin for SWTBot update site
    [http://scrumvision.sourceforge.net/update-site/eclipselibrary]
  This plugin will ask you installing SWTBot normaly.
- * if not, SWTBot plugins should be installed from [http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site Eclipse update site]
+ * if not, SWTBot plugins should be installed from [http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site SWTBot  update site]
 
  
 == Eclipse library ==
@@ -26,6 +26,8 @@ OR
  * The JavalibCore  [http://code.google.com/p/robotframework-javatools/wiki/JavalibCore javalib-core-x.x.x-jar-with-dependencies.jar]
  * The Eclipse Equinox launcher (like org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar) that you should find under eclipse installation folder, under plugins
 
+ Download the run.py python robotframework script for Eclipse tests
+ * [http://code.google.com/p/robotframework-eclipselibrary/downloads/list run.py]
 
 Place files in 'lib' folder under your test suite
 
