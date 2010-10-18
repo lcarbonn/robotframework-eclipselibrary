@@ -1,35 +1,31 @@
 #labels Featured,Installation
 = Installation =
 
-Robotframework Eclipse Library is based on :
- * robotframework v2.1.3
- * python v2.6
- * jython v2.2
- * Eclipse 3.5 (should work also on 3.4 but not tested!)
- * SWTBot 2.0
- * Javalib core 0.8.1 with dependencies
-
-Robotframework Eclipse Library v0.7 now works on :
+Robotframework Eclipse Library from v0.7 now works on :
  * robotframework v2.5.3
  * python v2.6
  * jython v2.5.1
  * RIDE v0.27
-
+ * Eclipse 3.5 (should work also on 3.4 but not tested!)
+ * SWTBot 2.0
+ * Javalib core 0.8.1 with dependencies
 
 == Eclipse Plugin ==
  Before using Eclipse Library, you should install a plugin under Eclipse.
  * Robotframework Eclipse Library plugin for SWTBot update site
    [http://scrumvision.sourceforge.net/update-site/eclipselibrary]
  This plugin will ask you installing SWTBot normaly.
+ * if not, SWTBot plugins should be installed from [http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site Eclipse update site]
+
  
 == Eclipse library ==
  Download the latest eclipse library jar file.
+ * The jar with all dependencies [http://code.google.com/p/robotframework- eclipselibrary/downloads/list eclipselibrary-x.x-with-dependencies.jar]
+OR
  * The EclipseLibrary [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x.jar]
  * The JavalibCore  [http://code.google.com/p/robotframework-javatools/wiki/JavalibCore javalib-core-x.x.x-jar-with-dependencies.jar]
  * The Eclipse Equinox launcher (like org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar) that you should find under eclipse installation folder, under plugins
- OR
- * The jar with all above dependencies [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x-with-dependencies.jar]
- 
+
 
 Place files in 'lib' folder under your test suite
 
