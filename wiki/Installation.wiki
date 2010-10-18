@@ -6,7 +6,7 @@ Robotframework Eclipse Library from v0.7 now works on :
  * python v2.6
  * jython v2.5.1
  * RIDE v0.27
- * Eclipse 3.5 (should work also on 3.4 but not tested!)
+ * Eclipse 3.5 (should work also on 3.4 and 3.6 but not tested!)
  * SWTBot 2.0
  * Javalib core 0.8.1 with dependencies
 
