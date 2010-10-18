@@ -25,14 +25,16 @@ OR
  * The EclipseLibrary [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x.jar]
  * The JavalibCore  [http://code.google.com/p/robotframework-javatools/wiki/JavalibCore javalib-core-x.x.x-jar-with-dependencies.jar]
  * The Eclipse Equinox launcher (like org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar) that you should find under eclipse installation folder, under plugins
+Place files in 'lib' folder under your test suite
 
  Download the run.py python robotframework script for Eclipse tests
  * [http://code.google.com/p/robotframework-eclipselibrary/downloads/list run.py]
 
-Place files in 'lib' folder under your test suite
-
  Add Eclipse Library resource file in your test case as a resource.
  * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.html  EclipseLibraryKeywords.html]
+
+ Add Eclipse Library xml keyword specification file under PYTHON_PATH for keyword completion under RIDE
+ * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.xml  EclipseLibraryKeywords.xml]
 
 == Some test cases == 
 Those test cases are used for unit testing of the library.
