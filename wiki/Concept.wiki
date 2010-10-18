@@ -14,6 +14,10 @@ Robotframework Eclipse Library is based on [http://www.eclipse.org/swtbot/ SWTBo
  ** All keywords begining with "Find" will put the retieved widget in the context.
  ** Then you can call widget specific keywords on it.
 
+== Time Format == 
+EclipseLibrary use the same format of time than [http://robotframework.googlecode.com/svn/tags/robotframework-2.5.4/doc/userguide/RobotFrameworkUserGuide.html#time-format RobotFramework]
+Example : 1d 2h 3m 4s 5ms
+
 == Eclipse Library limitations ==
  * Eclipse Library uses _at the moment_ only standards eclipse components and SWT widgets.
  * It interacts with simple SWTBot widget finders and actions
