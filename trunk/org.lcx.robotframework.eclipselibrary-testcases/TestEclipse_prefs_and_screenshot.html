@@ -15,12 +15,10 @@ table {
   border-collapse: collapse;
   empty-cells: show;
   margin: 1em 0em;
-  border: 0.1em solid black;
+  border: 1px solid black;
 }
 th, td {
-  border-style: solid;
-  border-width: 0.05em 0.1em;
-  border-color: black;
+  border: 1px solid black;
   padding: 0.1em 0.2em;
   height: 1.5em;
   width: 12em;
@@ -28,7 +26,7 @@ th, td {
 th {
   background-color: rgb(192, 192, 192);
   color: black;
-  border-width: 0.1em;
+  height: 1.7em;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.1em;
@@ -41,10 +39,10 @@ td.name, th.name {
   width: 10em;
 }
 </style>
-<title>Testeclipse Prefs And Screenshot</title>
+<title>TestEclipse prefs and screenshot</title>
 </head>
 <body>
-<h1>Testeclipse Prefs And Screenshot</h1>
+<h1>TestEclipse prefs and screenshot</h1>
 <table id="settings" border="1">
 <tr>
 <th class="name">Setting</th>
@@ -210,6 +208,13 @@ td.name, th.name {
 <td>${value} =</td>
 <td>Get SWTBotPreferences SCREENSHOTS_DIR</td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Capture Screenshot</td>
+<td>myscreen.jpg</td>
+<td># to test before setting the property and check if eclipse library manage it</td>
 <td></td>
 </tr>
 <tr>
