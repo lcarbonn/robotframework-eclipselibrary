@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20100908 22:11:29" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
-<version>&amp;lt;unknown&amp;gt;</version>
+<keywordspec generated="20101018 22:13:27" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
+<version>0.0.10</version>
 <scope>global</scope>
 <doc>Documentation for test library `org.lcx.robotframework.eclipse.EclipseLibrary`.</doc>
 <kw name="Activate C Tab Item">
@@ -431,7 +431,7 @@ row the row number, 0 based.	 column the column number, 0 based.Example:
 </arguments>
 </kw>
 <kw name="Double Click Tree Item">
-<doc>Double Click on the tableItem
+<doc>Double Click on the treeItem
 
 Example:
 | Double Click TreeItem |</doc>
@@ -2106,33 +2106,15 @@ Example:
 <arg>*params</arg>
 </arguments>
 </kw>
-<kw name="Find Tree Item">
-<doc>Find the treeItem node with the given text or at the given row if numeric
+<kw name="Find Tree Item Node">
+<doc>Find the treeItem node with the given text and / or at the given row if numeric
 
 Example:
-| find TreeItem | text |
-| find TreeItem | 0 |</doc>
+| find TreeItem Node | text |
+| find TreeItem Node | 0 |
+| find TreeItem Node | text | 0 |</doc>
 <arguments>
-<arg>text</arg>
-</arguments>
-</kw>
-<kw name="Find Tree Item At Index">
-<doc>Find the index'th treeItem node with the given text
-
-Example:
-| Find TreeItem At Index | text | 0 |</doc>
-<arguments>
-<arg>text</arg>
-<arg>index</arg>
-</arguments>
-</kw>
-<kw name="Find Tree Item With Text">
-<doc>Find the treeItem node with the given parameter as text
-
-Example:
-| find TreeItem With Text | 0 |</doc>
-<arguments>
-<arg>text</arg>
+<arg>*params</arg>
 </arguments>
 </kw>
 <kw name="Find Tree Tree Item">
@@ -2196,6 +2178,14 @@ Example:
 | Find View By Title | title |</doc>
 <arguments>
 <arg>tile</arg>
+</arguments>
+</kw>
+<kw name="Get All Tree Items">
+<doc>Get all the tree treeItems text as a array of string
+
+Example:
+| Get All Tree Items |</doc>
+<arguments>
 </arguments>
 </kw>
 <kw name="Get Auto Complete Proposals For Eclipse Editor">
@@ -2780,11 +2770,91 @@ Example:
 <arguments>
 </arguments>
 </kw>
-<kw name="Get SWT Bot Preferences TIMEOUT">
-<doc>Get SWTBotPreferences TIMEOUT as long
+<kw name="Get SWTBot Preferences DEFAULT KEY">
+<doc>Get SWTBotPreferences DEFAULT_KEY
+
+Example:
+| Get SWTBotPreferences DEFAULT_KEY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences DEFAULT POLL DELAY">
+<doc>Get SWTBotPreferences DEFAULT_POLL_DELAYL in milliseconds
+
+Example:
+| Get SWTBotPreferences DEFAULT_POLL_DELAY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences KEYBOARD LAYOUT">
+<doc>Get SWTBotPreferences KEYBOARD_LAYOUT
+
+Example:
+| Get SWTBotPreferences KEYBOARD_LAYOUT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences KEYBOARD STRATEGY">
+<doc>Get SWTBotPreferences KEYBOARD_STRATEGY
+
+Example:
+| Get SWTBotPreferences KEYBOARD_STRATEGY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences MAX ERROR SCREENSHOT COUNT">
+<doc>Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT
+
+Example:
+| Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences PLAYBACK DELAY">
+<doc>Get SWTBotPreferences PLAYBACK_DELAY in milliseconds
+
+Example:
+| Get SWTBotPreferences PLAYBACK_DELAY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences RECORDER FILE NAME">
+<doc>Get SWTBotPreferences RECORDER_FILE_NAME
+
+Example:
+| Get SWTBotPreferences RECORDER_FILE_NAME |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences SCREENSHOT FORMAT">
+<doc>Get SWTBotPreferences SCREENSHOT_FORMAT
+
+Example:
+| Get SWTBotPreferences SCREENSHOT_FORMAT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences SCREENSHOTS DIR">
+<doc>Get SWTBotPreferences SCREENSHOTS_DIR
+
+Example:
+| Get SWTBotPreferences SCREENSHOTS_DIR |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences TIMEOUT">
+<doc>Get SWTBotPreferences TIMEOUT in milliseconds
 
 Example:
 | Get SWTBotPreferences TIMEOUT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="Get SWTBot Preferences TYPE INTERVAL">
+<doc>Get SWTBotPreferences TYPE_INTERVAL in milliseconds
+
+Example:
+| Get SWTBotPreferences TYPE_INTERVAL |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -3143,7 +3213,6 @@ column the column number, 0 based.Example:
 Example:
 | Get TreeItem Nodes |</doc>
 <arguments>
-<arg>*&lt;unknown&gt;</arg>
 </arguments>
 </kw>
 <kw name="Get Tree Item Text">
@@ -3209,78 +3278,6 @@ Example:
 
 Example:
 | Get View Title |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesDEFAULT KEY">
-<doc>Get SWTBotPreferences DEFAULT_KEY
-
-Example:
-| Get SWTBotPreferences DEFAULT_KEY |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesKEYBOARD LAYOUT">
-<doc>Get SWTBotPreferences KEYBOARD_LAYOUT
-
-Example:
-| Get SWTBotPreferences KEYBOARD_LAYOUT |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesKEYBOARD STRATEGY">
-<doc>Get SWTBotPreferences KEYBOARD_STRATEGY
-
-Example:
-| Get SWTBotPreferences KEYBOARD_STRATEGY |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT">
-<doc>Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT as int
-
-Example:
-| Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesPLAYBACK DELAY">
-<doc>Get SWTBotPreferences PLAYBACK_DELAY as long
-
-Example:
-| Get SWTBotPreferences PLAYBACK_DELAY |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesRECORDER FILE NAME">
-<doc>Get SWTBotPreferences RECORDER_FILE_NAME
-
-Example:
-| Get SWTBotPreferences RECORDER_FILE_NAME |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesSCREENSHOT FORMAT">
-<doc>Get SWTBotPreferences SCREENSHOT_FORMAT
-
-Example:
-| Get SWTBotPreferences SCREENSHOT_FORMAT |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesSCREENSHOTS DIR">
-<doc>Get SWTBotPreferences SCREENSHOTS_DIR
-
-Example:
-| Get SWTBotPreferences SCREENSHOTS_DIR |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="GetSWTBotPreferencesTYPE INTERVAL">
-<doc>Get SWTBotPreferences TYPE_INTERVAL as int
-
-Example:
-| Get SWTBotPreferences TYPE_INTERVAL |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -4366,6 +4363,15 @@ line the line number, 0 based.	 column the column number, 0 based.	 length the l
 <arg>length</arg>
 </arguments>
 </kw>
+<kw name="Select Indexed Item In List">
+<doc>Select the indexed item in the list
+
+Example:
+| Select Indexed Item In List | 0 |</doc>
+<arguments>
+<arg>index</arg>
+</arguments>
+</kw>
 <kw name="Select Indexed Items In List">
 <doc>Select the indexed item(s) in the list
 
@@ -4391,6 +4397,15 @@ Example:
 | Select Indexed Items In Tree | 0 | 1 |</doc>
 <arguments>
 <arg>*index</arg>
+</arguments>
+</kw>
+<kw name="Select Item In List">
+<doc>Select the item with the given text in the list
+
+Example:
+| Select Item In List | item 0 |</doc>
+<arguments>
+<arg>text</arg>
 </arguments>
 </kw>
 <kw name="Select Items In List">
@@ -4864,11 +4879,105 @@ Example:
 <arg>text</arg>
 </arguments>
 </kw>
-<kw name="Set SWT Bot Preferences TIMEOUT">
-<doc>Set SWTBotPreferences TIMEOUT as long
+<kw name="Set SWTBot Preferences DEFAULT KEY">
+<doc>Set SWTBotPreferences DEFAULT_KEY
+
+The default key used to match SWT widgets. Defaults to org.eclipse.swtbot.widget.key.Example:
+| Set SWTBotPreferences DEFAULT_KEY | org.eclipse.swtbot.widget.key |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences DEFAULT POLL DELAY">
+<doc>Set SWTBotPreferences DEFAULT_POLL_DELAY in time format
+
+The default time delay between successive polling while waiting for a condition to be evaluated. Defaults to 500ms. Example:
+| Set SWTBotPreferences DEFAULT_POLL_DELAY | 500ms |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences KEYBOARD LAYOUT">
+<doc>Set SWTBotPreferences KEYBOARD_LAYOUT
+
+The keyboard layout. This value is autodetected at runtime. This can be set using the system property 'org.eclipse.swtbot.keyboard.layout'. Note: the layout must be of the form foo.bar.baz.[MAC_][LANGUAGE_][COUNTRY_][VARIANT_] This expects a file named 'foo/bar/baz/[MAC_][LANGUAGE_][COUNTRY_][VARIANT_].keyboard'
+
+Eg: Layout Name       | Configuration File com.foo.bar.MAC.EN.US | com/foo/bar/MAC_EN_US.keyboard com.foo.bar.MAC.EN_GB | com/foo/bar/MAC_EN_GB.keyboard com.foo.bar.FR_FR     | com/foo/bar/FR_FR.keyboard com.foo.bar.DE        | /com/foo/bar/DE.keyboard
 
 Example:
-| Set SWTBotPreferences TIMEOUT | 1000 |</doc>
+| Set SWTBotPreferences KEYBOARD_LAYOUT | layout |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences KEYBOARD STRATEGY">
+<doc>Set SWTBotPreferences KEYBOARD_STRATEGY
+
+The default keyboard strategy. Defaults to org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy Example:
+| Set SWTBotPreferences KEYBOARD_STRATEGY | org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences MAX ERROR SCREENSHOT COUNT">
+<doc>Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT
+
+The maximum number of screenshots that SWTBot should capture. Defaults to 100. Example:
+| Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT | 20 |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences PLAYBACK DELAY">
+<doc>Set SWTBotPreferences PLAYBACK_DELAY in time format
+
+The speed of playback in milliseconds. Defaults to 0 ms. Example:
+| Set SWTBotPreferences PLAYBACK_DELAY | 10 ms |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences RECORDER FILE NAME">
+<doc>Set SWTBotPreferences RECORDER_FILE_NAME
+
+The name of the file in which the recorder records. Defaults to 'swtbot.record.txt'. Example:
+| Set SWTBotPreferences RECORDER_FILE_NAME | filename |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences SCREENSHOT FORMAT">
+<doc>Set SWTBotPreferences SCREENSHOT_FORMAT
+
+The screenshot image format to be used. Defaults to 'jpeg' The value must be one these: BMP, GIF, ICO, JPEG, JPG, PNG or TIFF. Example:
+| Set SWTBotPreferences SCREENSHOT_FORMAT | PNG |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences SCREENSHOTS DIR">
+<doc>Set SWTBotPreferences SCREENSHOTS_DIR
+
+The directory in which screenshots should be generated. Defaults to './screenshots'. Example:
+| Set SWTBotPreferences SCREENSHOTS_DIR | ./screenshots |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences TIMEOUT">
+<doc>Set SWTBotPreferences TIMEOUT in time format
+
+The timeout for finding widgets among other things. Defaults to 5000ms Example:
+| Set SWTBotPreferences TIMEOUT | 1 s |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set SWTBot Preferences TYPE INTERVAL">
+<doc>Set SWTBotPreferences TYPE_INTERVAL in time format
+
+The the time interval in milliseconds between typing characters in a string. Defaults to 50ms Example:
+| Set SWTBotPreferences TYPE_INTERVAL | 20ms |</doc>
 <arguments>
 <arg>value</arg>
 </arguments>
@@ -4880,87 +4989,6 @@ Example:
 | Set Text Text | text |</doc>
 <arguments>
 <arg>text</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesDEFAULT KEY">
-<doc>Set SWTBotPreferences DEFAULT_KEY
-
-Example:
-| Set SWTBotPreferences DEFAULT_KEY | key |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesKEYBOARD LAYOUT">
-<doc>Set SWTBotPreferences KEYBOARD_LAYOUT
-
-Example:
-| Set SWTBotPreferences KEYBOARD_LAYOUT | layout |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesKEYBOARD STRATEGY">
-<doc>Set SWTBotPreferences KEYBOARD_STRATEGY
-
-Example:
-| Set SWTBotPreferences KEYBOARD_STRATEGY | stategy |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT">
-<doc>Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT as int
-
-Example:
-| Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT | 20 |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesPLAYBACK DELAY">
-<doc>Set SWTBotPreferences PLAYBACK_DELAY as long
-
-Example:
-| Set SWTBotPreferences PLAYBACK_DELAY | 100 |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesRECORDER FILE NAME">
-<doc>Set SWTBotPreferences RECORDER_FILE_NAME
-
-Example:
-| Set SWTBotPreferences RECORDER_FILE_NAME | filename |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesSCREENSHOT FORMAT">
-<doc>Set SWTBotPreferences SCREENSHOT_FORMAT
-
-The value must be one these: BMP, GIF, ICO, JPEG, JPG, PNG or TIFF. Example:
-| Set SWTBotPreferences SCREENSHOT_FORMAT | PNG |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesSCREENSHOTS DIR">
-<doc>Set SWTBotPreferences SCREENSHOTS_DIR
-
-Example:
-| Set SWTBotPreferences SCREENSHOTS_DIR | filename |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="SetSWTBotPreferencesTYPE INTERVAL">
-<doc>Set SWTBotPreferences TYPE_INTERVAL as int
-
-Example:
-| Set SWTBotPreferences TYPE_INTERVAL | 20 |</doc>
-<arguments>
-<arg>value</arg>
 </arguments>
 </kw>
 <kw name="Show C Tab Item">
@@ -5138,88 +5166,77 @@ Example:
 </arguments>
 </kw>
 <kw name="Wait Until Last Widget Is Enabled">
-<doc>Wait until the last selected widget is enabled or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+<doc>Wait until the last selected widget is enabled or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait Until Last Widget Is Enabled | 500 | 10 |</doc>
+| Wait Until Last Widget Is Enabled | 5 s | 10 ms |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
 </kw>
 <kw name="Wait Until Shell Closes">
-<doc>Wait until the last selected shell widget closes or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+<doc>Wait until the last selected shell widget closes or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait Until Shell Closes | 500 | 10 |</doc>
+| Wait Until Shell Closes | 5 s | 10 ms |</doc>
 <arguments>
 <arg>timeout</arg>
 <arg>interval</arg>
 </arguments>
 </kw>
 <kw name="Wait Until Shell Is Active">
-<doc>Wait until shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+<doc>Wait until shell with given text is active or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait Until Shell Is Active | This is the shell text | 500 | 0</doc>
+| Wait Until Shell Is Active | This is the shell text | 5 s | 10 ms |</doc>
 <arguments>
 <arg>text</arg>
 <arg>*params</arg>
 </arguments>
 </kw>
-<kw name="Wait Until Shell Is Active Bis">
-<doc>Wait until shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
-
-Example:
-| Wait Until Shell Closes | This is the shell text | 500 | 0</doc>
-<arguments>
-<arg>text</arg>
-<arg>timeout</arg>
-<arg>interval</arg>
-</arguments>
-</kw>
 <kw name="Wait Until Table Has Rows">
-<doc>Wait until the last selected table have the proper number of rows or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+<doc>Wait until the last selected table have the proper number of rows or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait Until Table Has Rows | 500 | 10 |</doc>
+| Wait Until Table Has Rows | 5 s | 10 ms |</doc>
 <arguments>
 <arg>rowCount</arg>
 <arg>*params</arg>
 </arguments>
 </kw>
 <kw name="Wait While Last Widget Is Enabled">
-<doc>Wait while the last selected widget is enabled or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+<doc>Wait while the last selected widget is enabled or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait While Last Widget Is Enabled | 500 | 10 |</doc>
+| Wait While Last Widget Is Enabled | 5 s | 10 ms |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
 </kw>
 <kw name="Wait While Shell Closes">
-<doc>Wait while the last selected shell widget closes or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+<doc>Wait while the last selected shell widget closes or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait While Shell Closes | 500 | 10 |</doc>
+| Wait While Shell Closes | 5 s | 10 ms |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
 </kw>
 <kw name="Wait While Shell Is Active">
-<doc>Wait while shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+<doc>Wait while shell with given text is active or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait While Shell Is Active | This is the shell text | 500 | 0</doc>
+| Wait While Shell Is Active | This is the shell text | 5 s | 10 s |</doc>
 <arguments>
 <arg>text</arg>
 <arg>*params</arg>
 </arguments>
 </kw>
 <kw name="Wait While Table Has Rows">
-<doc>Wait while the last selected table have the proper number of rows or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)
+<doc>Wait while the last selected table have the proper number of rows or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait While Table Has Rows | 500 | 10 |</doc>
+| Wait While Table Has Rows | 5 s | 10 ms |</doc>
 <arguments>
 <arg>rowCount</arg>
 <arg>*params</arg>

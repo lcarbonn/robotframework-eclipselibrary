@@ -86,6 +86,7 @@ a {
 </head>
 <body>
 <h1>org.lcx.robotframework.eclipse.EclipseLibrary</h1>
+<b>Version:</b> 0.0.10<br>
 <b>Scope:</b> global<br>
 <b>Named arguments: </b>
 not supported
@@ -200,7 +201,7 @@ not supported
 &nbsp;&middot;&nbsp;
 <a href="#Double Click Table Cell" title="Double Click on the given cell of table">Double&nbsp;Click&nbsp;Table&nbsp;Cell</a>
 &nbsp;&middot;&nbsp;
-<a href="#Double Click Tree Item" title="Double Click on the tableItem">Double&nbsp;Click&nbsp;Tree&nbsp;Item</a>
+<a href="#Double Click Tree Item" title="Double Click on the treeItem">Double&nbsp;Click&nbsp;Tree&nbsp;Item</a>
 &nbsp;&middot;&nbsp;
 <a href="#Eclipse Editor Has Bullet On Current Line" title="Does the eclipse editor has bullet on the current line">Eclipse&nbsp;Editor&nbsp;Has&nbsp;Bullet&nbsp;On&nbsp;Current&nbsp;Line</a>
 &nbsp;&middot;&nbsp;
@@ -496,11 +497,7 @@ not supported
 &nbsp;&middot;&nbsp;
 <a href="#Find Tree In Group" title="Find the tree in the given group with optional and index">Find&nbsp;Tree&nbsp;In&nbsp;Group</a>
 &nbsp;&middot;&nbsp;
-<a href="#Find Tree Item" title="Find the treeItem node with the given text or at the given row if numeric">Find&nbsp;Tree&nbsp;Item</a>
-&nbsp;&middot;&nbsp;
-<a href="#Find Tree Item At Index" title="Find the index'th treeItem node with the given text">Find&nbsp;Tree&nbsp;Item&nbsp;At&nbsp;Index</a>
-&nbsp;&middot;&nbsp;
-<a href="#Find Tree Item With Text" title="Find the treeItem node with the given parameter as text">Find&nbsp;Tree&nbsp;Item&nbsp;With&nbsp;Text</a>
+<a href="#Find Tree Item Node" title="Find the treeItem node with the given text and / or at the given row if numeric">Find&nbsp;Tree&nbsp;Item&nbsp;Node</a>
 &nbsp;&middot;&nbsp;
 <a href="#Find Tree Tree Item" title="Find the tree treeItem with the given text">Find&nbsp;Tree&nbsp;Tree&nbsp;Item</a>
 &nbsp;&middot;&nbsp;
@@ -513,6 +510,8 @@ not supported
 <a href="#Find View By Id" title="Find the view by its id">Find&nbsp;View&nbsp;By&nbsp;Id</a>
 &nbsp;&middot;&nbsp;
 <a href="#Find View By Title" title="Find the view by its title">Find&nbsp;View&nbsp;By&nbsp;Title</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get All Tree Items" title="Get all the tree treeItems text as a array of string">Get&nbsp;All&nbsp;Tree&nbsp;Items</a>
 &nbsp;&middot;&nbsp;
 <a href="#Get Auto Complete Proposals For Eclipse Editor" title="Gets the auto completion proposal matching the given text">Get&nbsp;Auto&nbsp;Complete&nbsp;Proposals&nbsp;For&nbsp;Eclipse&nbsp;Editor</a>
 &nbsp;&middot;&nbsp;
@@ -658,7 +657,27 @@ not supported
 &nbsp;&middot;&nbsp;
 <a href="#Get Styled Text Tooltip Text" title="Get the tooltip text of the styledText">Get&nbsp;Styled&nbsp;Text&nbsp;Tooltip&nbsp;Text</a>
 &nbsp;&middot;&nbsp;
-<a href="#Get SWT Bot Preferences TIMEOUT" title="Get SWTBotPreferences TIMEOUT as long">Get&nbsp;SWT&nbsp;Bot&nbsp;Preferences&nbsp;TIMEOUT</a>
+<a href="#Get SWTBot Preferences DEFAULT KEY" title="Get SWTBotPreferences DEFAULT_KEY">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;DEFAULT&nbsp;KEY</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences DEFAULT POLL DELAY" title="Get SWTBotPreferences DEFAULT_POLL_DELAYL in milliseconds">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;DEFAULT&nbsp;POLL&nbsp;DELAY</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences KEYBOARD LAYOUT" title="Get SWTBotPreferences KEYBOARD_LAYOUT">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;KEYBOARD&nbsp;LAYOUT</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences KEYBOARD STRATEGY" title="Get SWTBotPreferences KEYBOARD_STRATEGY">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;KEYBOARD&nbsp;STRATEGY</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences MAX ERROR SCREENSHOT COUNT" title="Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;MAX&nbsp;ERROR&nbsp;SCREENSHOT&nbsp;COUNT</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences PLAYBACK DELAY" title="Get SWTBotPreferences PLAYBACK_DELAY in milliseconds">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;PLAYBACK&nbsp;DELAY</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences RECORDER FILE NAME" title="Get SWTBotPreferences RECORDER_FILE_NAME">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;RECORDER&nbsp;FILE&nbsp;NAME</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences SCREENSHOT FORMAT" title="Get SWTBotPreferences SCREENSHOT_FORMAT">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;SCREENSHOT&nbsp;FORMAT</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences SCREENSHOTS DIR" title="Get SWTBotPreferences SCREENSHOTS_DIR">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;SCREENSHOTS&nbsp;DIR</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences TIMEOUT" title="Get SWTBotPreferences TIMEOUT in milliseconds">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;TIMEOUT</a>
+&nbsp;&middot;&nbsp;
+<a href="#Get SWTBot Preferences TYPE INTERVAL" title="Get SWTBotPreferences TYPE_INTERVAL in milliseconds">Get&nbsp;SWTBot&nbsp;Preferences&nbsp;TYPE&nbsp;INTERVAL</a>
 &nbsp;&middot;&nbsp;
 <a href="#Get Tab Item Text" title="Get the text of the tabItem">Get&nbsp;Tab&nbsp;Item&nbsp;Text</a>
 &nbsp;&middot;&nbsp;
@@ -759,24 +778,6 @@ not supported
 <a href="#Get View Menus Label" title="Get the list of menus label of the view">Get&nbsp;View&nbsp;Menus&nbsp;Label</a>
 &nbsp;&middot;&nbsp;
 <a href="#Get View Title" title="Get the title of the view">Get&nbsp;View&nbsp;Title</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesDEFAULT KEY" title="Get SWTBotPreferences DEFAULT_KEY">GetSWTBotPreferencesDEFAULT&nbsp;KEY</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesKEYBOARD LAYOUT" title="Get SWTBotPreferences KEYBOARD_LAYOUT">GetSWTBotPreferencesKEYBOARD&nbsp;LAYOUT</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesKEYBOARD STRATEGY" title="Get SWTBotPreferences KEYBOARD_STRATEGY">GetSWTBotPreferencesKEYBOARD&nbsp;STRATEGY</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT" title="Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT as int">GetSWTBotPreferencesMAX&nbsp;ERROR&nbsp;SCREENSHOT&nbsp;COUNT</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesPLAYBACK DELAY" title="Get SWTBotPreferences PLAYBACK_DELAY as long">GetSWTBotPreferencesPLAYBACK&nbsp;DELAY</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesRECORDER FILE NAME" title="Get SWTBotPreferences RECORDER_FILE_NAME">GetSWTBotPreferencesRECORDER&nbsp;FILE&nbsp;NAME</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesSCREENSHOT FORMAT" title="Get SWTBotPreferences SCREENSHOT_FORMAT">GetSWTBotPreferencesSCREENSHOT&nbsp;FORMAT</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesSCREENSHOTS DIR" title="Get SWTBotPreferences SCREENSHOTS_DIR">GetSWTBotPreferencesSCREENSHOTS&nbsp;DIR</a>
-&nbsp;&middot;&nbsp;
-<a href="#GetSWTBotPreferencesTYPE INTERVAL" title="Get SWTBotPreferences TYPE_INTERVAL as int">GetSWTBotPreferencesTYPE&nbsp;INTERVAL</a>
 &nbsp;&middot;&nbsp;
 <a href="#Has Tree Items" title="Does the tree have items">Has&nbsp;Tree&nbsp;Items</a>
 &nbsp;&middot;&nbsp;
@@ -1044,11 +1045,15 @@ not supported
 &nbsp;&middot;&nbsp;
 <a href="#Select Eclipse Editor Range" title="Select eclipseEditor range">Select&nbsp;Eclipse&nbsp;Editor&nbsp;Range</a>
 &nbsp;&middot;&nbsp;
+<a href="#Select Indexed Item In List" title="Select the indexed item in the list">Select&nbsp;Indexed&nbsp;Item&nbsp;In&nbsp;List</a>
+&nbsp;&middot;&nbsp;
 <a href="#Select Indexed Items In List" title="Select the indexed item(s) in the list">Select&nbsp;Indexed&nbsp;Items&nbsp;In&nbsp;List</a>
 &nbsp;&middot;&nbsp;
 <a href="#Select Indexed Items In Table" title="Select the indexed item(s) in the table">Select&nbsp;Indexed&nbsp;Items&nbsp;In&nbsp;Table</a>
 &nbsp;&middot;&nbsp;
 <a href="#Select Indexed Items In Tree" title="Select the indexed item(s) in the tree">Select&nbsp;Indexed&nbsp;Items&nbsp;In&nbsp;Tree</a>
+&nbsp;&middot;&nbsp;
+<a href="#Select Item In List" title="Select the item with the given text in the list">Select&nbsp;Item&nbsp;In&nbsp;List</a>
 &nbsp;&middot;&nbsp;
 <a href="#Select Items In List" title="Select the item(s) with the given text(s) in the list">Select&nbsp;Items&nbsp;In&nbsp;List</a>
 &nbsp;&middot;&nbsp;
@@ -1162,27 +1167,29 @@ not supported
 &nbsp;&middot;&nbsp;
 <a href="#Set Styled Text Text" title="Set the text of the styledText">Set&nbsp;Styled&nbsp;Text&nbsp;Text</a>
 &nbsp;&middot;&nbsp;
-<a href="#Set SWT Bot Preferences TIMEOUT" title="Set SWTBotPreferences TIMEOUT as long">Set&nbsp;SWT&nbsp;Bot&nbsp;Preferences&nbsp;TIMEOUT</a>
+<a href="#Set SWTBot Preferences DEFAULT KEY" title="Set SWTBotPreferences DEFAULT_KEY">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;DEFAULT&nbsp;KEY</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences DEFAULT POLL DELAY" title="Set SWTBotPreferences DEFAULT_POLL_DELAY in time format">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;DEFAULT&nbsp;POLL&nbsp;DELAY</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences KEYBOARD LAYOUT" title="Set SWTBotPreferences KEYBOARD_LAYOUT">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;KEYBOARD&nbsp;LAYOUT</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences KEYBOARD STRATEGY" title="Set SWTBotPreferences KEYBOARD_STRATEGY">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;KEYBOARD&nbsp;STRATEGY</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences MAX ERROR SCREENSHOT COUNT" title="Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;MAX&nbsp;ERROR&nbsp;SCREENSHOT&nbsp;COUNT</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences PLAYBACK DELAY" title="Set SWTBotPreferences PLAYBACK_DELAY in time format">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;PLAYBACK&nbsp;DELAY</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences RECORDER FILE NAME" title="Set SWTBotPreferences RECORDER_FILE_NAME">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;RECORDER&nbsp;FILE&nbsp;NAME</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences SCREENSHOT FORMAT" title="Set SWTBotPreferences SCREENSHOT_FORMAT">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;SCREENSHOT&nbsp;FORMAT</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences SCREENSHOTS DIR" title="Set SWTBotPreferences SCREENSHOTS_DIR">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;SCREENSHOTS&nbsp;DIR</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences TIMEOUT" title="Set SWTBotPreferences TIMEOUT in time format">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;TIMEOUT</a>
+&nbsp;&middot;&nbsp;
+<a href="#Set SWTBot Preferences TYPE INTERVAL" title="Set SWTBotPreferences TYPE_INTERVAL in time format ">Set&nbsp;SWTBot&nbsp;Preferences&nbsp;TYPE&nbsp;INTERVAL</a>
 &nbsp;&middot;&nbsp;
 <a href="#Set Text Text" title="Set text into text">Set&nbsp;Text&nbsp;Text</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesDEFAULT KEY" title="Set SWTBotPreferences DEFAULT_KEY">SetSWTBotPreferencesDEFAULT&nbsp;KEY</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesKEYBOARD LAYOUT" title="Set SWTBotPreferences KEYBOARD_LAYOUT">SetSWTBotPreferencesKEYBOARD&nbsp;LAYOUT</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesKEYBOARD STRATEGY" title="Set SWTBotPreferences KEYBOARD_STRATEGY">SetSWTBotPreferencesKEYBOARD&nbsp;STRATEGY</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT" title="Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT as int">SetSWTBotPreferencesMAX&nbsp;ERROR&nbsp;SCREENSHOT&nbsp;COUNT</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesPLAYBACK DELAY" title="Set SWTBotPreferences PLAYBACK_DELAY as long">SetSWTBotPreferencesPLAYBACK&nbsp;DELAY</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesRECORDER FILE NAME" title="Set SWTBotPreferences RECORDER_FILE_NAME">SetSWTBotPreferencesRECORDER&nbsp;FILE&nbsp;NAME</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesSCREENSHOT FORMAT" title="Set SWTBotPreferences SCREENSHOT_FORMAT">SetSWTBotPreferencesSCREENSHOT&nbsp;FORMAT</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesSCREENSHOTS DIR" title="Set SWTBotPreferences SCREENSHOTS_DIR">SetSWTBotPreferencesSCREENSHOTS&nbsp;DIR</a>
-&nbsp;&middot;&nbsp;
-<a href="#SetSWTBotPreferencesTYPE INTERVAL" title="Set SWTBotPreferences TYPE_INTERVAL as int">SetSWTBotPreferencesTYPE&nbsp;INTERVAL</a>
 &nbsp;&middot;&nbsp;
 <a href="#Show C Tab Item" title="Show the cTabItem">Show&nbsp;C&nbsp;Tab&nbsp;Item</a>
 &nbsp;&middot;&nbsp;
@@ -1231,8 +1238,6 @@ not supported
 <a href="#Wait Until Shell Closes" title="Wait until the last selected shell widget closes">Wait&nbsp;Until&nbsp;Shell&nbsp;Closes</a>
 &nbsp;&middot;&nbsp;
 <a href="#Wait Until Shell Is Active" title="Wait until shell with given text is active">Wait&nbsp;Until&nbsp;Shell&nbsp;Is&nbsp;Active</a>
-&nbsp;&middot;&nbsp;
-<a href="#Wait Until Shell Is Active Bis" title="Wait until shell with given text is active">Wait&nbsp;Until&nbsp;Shell&nbsp;Is&nbsp;Active&nbsp;Bis</a>
 &nbsp;&middot;&nbsp;
 <a href="#Wait Until Table Has Rows" title="Wait until the last selected table have the proper number of rows">Wait&nbsp;Until&nbsp;Table&nbsp;Has&nbsp;Rows</a>
 &nbsp;&middot;&nbsp;
@@ -1899,7 +1904,7 @@ row the row number, 0 based.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; col
 <tr>
   <td class="kw"><a name="Double Click Tree Item"></a>Double Click Tree Item</td>
   <td class="arg"></td>
-  <td class="doc">Double Click on the tableItem<br />
+  <td class="doc">Double Click on the treeItem<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
@@ -5455,47 +5460,25 @@ Example:<br />
 </td>
 </tr>
 <tr>
-  <td class="kw"><a name="Find Tree Item"></a>Find Tree Item</td>
-  <td class="arg">text</td>
-  <td class="doc">Find the treeItem node with the given text or at the given row if numeric<br />
+  <td class="kw"><a name="Find Tree Item Node"></a>Find Tree Item Node</td>
+  <td class="arg">*params</td>
+  <td class="doc">Find the treeItem node with the given text and / or at the given row if numeric<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
-<td>find TreeItem</td>
+<td>find TreeItem Node</td>
 <td>text</td>
+<td></td>
 </tr>
 <tr>
-<td>find TreeItem</td>
+<td>find TreeItem Node</td>
 <td>0</td>
-</tr>
-</table>
-</td>
+<td></td>
 </tr>
 <tr>
-  <td class="kw"><a name="Find Tree Item At Index"></a>Find Tree Item At Index</td>
-  <td class="arg">text, index</td>
-  <td class="doc">Find the index'th treeItem node with the given text<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Find TreeItem At Index</td>
+<td>find TreeItem Node</td>
 <td>text</td>
-<td>0</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="Find Tree Item With Text"></a>Find Tree Item With Text</td>
-  <td class="arg">text</td>
-  <td class="doc">Find the treeItem node with the given parameter as text<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>find TreeItem With Text</td>
 <td>0</td>
 </tr>
 </table>
@@ -5615,6 +5598,19 @@ Example:<br />
 <tr>
 <td>Find View By Title</td>
 <td>title</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get All Tree Items"></a>Get All Tree Items</td>
+  <td class="arg"></td>
+  <td class="doc">Get all the tree treeItems text as a array of string<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get All Tree Items</td>
 </tr>
 </table>
 </td>
@@ -6556,14 +6552,144 @@ Example:<br />
 </td>
 </tr>
 <tr>
-  <td class="kw"><a name="Get SWT Bot Preferences TIMEOUT"></a>Get SWT Bot Preferences TIMEOUT</td>
+  <td class="kw"><a name="Get SWTBot Preferences DEFAULT KEY"></a>Get SWTBot Preferences DEFAULT KEY</td>
   <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences TIMEOUT as long<br />
+  <td class="doc">Get SWTBotPreferences DEFAULT_KEY<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences DEFAULT_KEY</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences DEFAULT POLL DELAY"></a>Get SWTBot Preferences DEFAULT POLL DELAY</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences DEFAULT_POLL_DELAYL in milliseconds<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences DEFAULT_POLL_DELAY</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences KEYBOARD LAYOUT"></a>Get SWTBot Preferences KEYBOARD LAYOUT</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences KEYBOARD_LAYOUT<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences KEYBOARD_LAYOUT</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences KEYBOARD STRATEGY"></a>Get SWTBot Preferences KEYBOARD STRATEGY</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences KEYBOARD_STRATEGY<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences KEYBOARD_STRATEGY</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences MAX ERROR SCREENSHOT COUNT"></a>Get SWTBot Preferences MAX ERROR SCREENSHOT COUNT</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences PLAYBACK DELAY"></a>Get SWTBot Preferences PLAYBACK DELAY</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences PLAYBACK_DELAY in milliseconds<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences PLAYBACK_DELAY</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences RECORDER FILE NAME"></a>Get SWTBot Preferences RECORDER FILE NAME</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences RECORDER_FILE_NAME<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences RECORDER_FILE_NAME</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences SCREENSHOT FORMAT"></a>Get SWTBot Preferences SCREENSHOT FORMAT</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences SCREENSHOT_FORMAT<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences SCREENSHOT_FORMAT</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences SCREENSHOTS DIR"></a>Get SWTBot Preferences SCREENSHOTS DIR</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences SCREENSHOTS_DIR<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences SCREENSHOTS_DIR</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences TIMEOUT"></a>Get SWTBot Preferences TIMEOUT</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences TIMEOUT in milliseconds<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Get SWTBotPreferences TIMEOUT</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Get SWTBot Preferences TYPE INTERVAL"></a>Get SWTBot Preferences TYPE INTERVAL</td>
+  <td class="arg"></td>
+  <td class="doc">Get SWTBotPreferences TYPE_INTERVAL in milliseconds<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Get SWTBotPreferences TYPE_INTERVAL</td>
 </tr>
 </table>
 </td>
@@ -7084,7 +7210,7 @@ column the column number, 0 based.Example:<br />
 </tr>
 <tr>
   <td class="kw"><a name="Get Tree Item Nodes"></a>Get Tree Item Nodes</td>
-  <td class="arg">*<unknown></td>
+  <td class="arg"></td>
   <td class="doc">Get the treeItem nodes<br />
 <br />
 Example:<br />
@@ -7195,123 +7321,6 @@ Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Get View Title</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesDEFAULT KEY"></a>GetSWTBotPreferencesDEFAULT KEY</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences DEFAULT_KEY<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences DEFAULT_KEY</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesKEYBOARD LAYOUT"></a>GetSWTBotPreferencesKEYBOARD LAYOUT</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences KEYBOARD_LAYOUT<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences KEYBOARD_LAYOUT</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesKEYBOARD STRATEGY"></a>GetSWTBotPreferencesKEYBOARD STRATEGY</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences KEYBOARD_STRATEGY<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences KEYBOARD_STRATEGY</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT"></a>GetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT as int<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesPLAYBACK DELAY"></a>GetSWTBotPreferencesPLAYBACK DELAY</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences PLAYBACK_DELAY as long<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences PLAYBACK_DELAY</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesRECORDER FILE NAME"></a>GetSWTBotPreferencesRECORDER FILE NAME</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences RECORDER_FILE_NAME<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences RECORDER_FILE_NAME</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesSCREENSHOT FORMAT"></a>GetSWTBotPreferencesSCREENSHOT FORMAT</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences SCREENSHOT_FORMAT<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences SCREENSHOT_FORMAT</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesSCREENSHOTS DIR"></a>GetSWTBotPreferencesSCREENSHOTS DIR</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences SCREENSHOTS_DIR<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences SCREENSHOTS_DIR</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="GetSWTBotPreferencesTYPE INTERVAL"></a>GetSWTBotPreferencesTYPE INTERVAL</td>
-  <td class="arg"></td>
-  <td class="doc">Get SWTBotPreferences TYPE_INTERVAL as int<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Get SWTBotPreferences TYPE_INTERVAL</td>
 </tr>
 </table>
 </td>
@@ -9058,6 +9067,20 @@ line the line number, 0 based.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c
 </td>
 </tr>
 <tr>
+  <td class="kw"><a name="Select Indexed Item In List"></a>Select Indexed Item In List</td>
+  <td class="arg">index</td>
+  <td class="doc">Select the indexed item in the list<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Select Indexed Item In List</td>
+<td>0</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
   <td class="kw"><a name="Select Indexed Items In List"></a>Select Indexed Items In List</td>
   <td class="arg">*index</td>
   <td class="doc">Select the indexed item(s) in the list<br />
@@ -9098,6 +9121,20 @@ Example:<br />
 <td>Select Indexed Items In Tree</td>
 <td>0</td>
 <td>1</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Select Item In List"></a>Select Item In List</td>
+  <td class="arg">text</td>
+  <td class="doc">Select the item with the given text in the list<br />
+<br />
+Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Select Item In List</td>
+<td>item 0</td>
 </tr>
 </table>
 </td>
@@ -9837,15 +9874,159 @@ Example:<br />
 </td>
 </tr>
 <tr>
-  <td class="kw"><a name="Set SWT Bot Preferences TIMEOUT"></a>Set SWT Bot Preferences TIMEOUT</td>
+  <td class="kw"><a name="Set SWTBot Preferences DEFAULT KEY"></a>Set SWTBot Preferences DEFAULT KEY</td>
   <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences TIMEOUT as long<br />
+  <td class="doc">Set SWTBotPreferences DEFAULT_KEY<br />
+<br />
+The default key used to match SWT widgets. Defaults to org.eclipse.swtbot.widget.key.Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences DEFAULT_KEY</td>
+<td>org.eclipse.swtbot.widget.key</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences DEFAULT POLL DELAY"></a>Set SWTBot Preferences DEFAULT POLL DELAY</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences DEFAULT_POLL_DELAY in time format<br />
+<br />
+The default time delay between successive polling while waiting for a condition to be evaluated. Defaults to 500ms. Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences DEFAULT_POLL_DELAY</td>
+<td>500ms</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences KEYBOARD LAYOUT"></a>Set SWTBot Preferences KEYBOARD LAYOUT</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences KEYBOARD_LAYOUT<br />
+<br />
+The keyboard layout. This value is autodetected at runtime. This can be set using the system property 'org.eclipse.swtbot.keyboard.layout'. Note: the layout must be of the form foo.bar.baz.[MAC_][LANGUAGE_][COUNTRY_][VARIANT_] This expects a file named 'foo/bar/baz/[MAC_][LANGUAGE_][COUNTRY_][VARIANT_].keyboard'<br />
+<br />
+Eg: Layout Name &nbsp; &nbsp; &nbsp; | Configuration File com.foo.bar.MAC.EN.US | com/foo/bar/MAC_EN_US.keyboard com.foo.bar.MAC.EN_GB | com/foo/bar/MAC_EN_GB.keyboard com.foo.bar.FR_FR &nbsp; &nbsp; | com/foo/bar/FR_FR.keyboard com.foo.bar.DE &nbsp; &nbsp; &nbsp; &nbsp;| /com/foo/bar/DE.keyboard<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
+<td>Set SWTBotPreferences KEYBOARD_LAYOUT</td>
+<td>layout</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences KEYBOARD STRATEGY"></a>Set SWTBot Preferences KEYBOARD STRATEGY</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences KEYBOARD_STRATEGY<br />
+<br />
+The default keyboard strategy. Defaults to org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences KEYBOARD_STRATEGY</td>
+<td>org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences MAX ERROR SCREENSHOT COUNT"></a>Set SWTBot Preferences MAX ERROR SCREENSHOT COUNT</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT<br />
+<br />
+The maximum number of screenshots that SWTBot should capture. Defaults to 100. Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT</td>
+<td>20</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences PLAYBACK DELAY"></a>Set SWTBot Preferences PLAYBACK DELAY</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences PLAYBACK_DELAY in time format<br />
+<br />
+The speed of playback in milliseconds. Defaults to 0 ms. Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences PLAYBACK_DELAY</td>
+<td>10 ms</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences RECORDER FILE NAME"></a>Set SWTBot Preferences RECORDER FILE NAME</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences RECORDER_FILE_NAME<br />
+<br />
+The name of the file in which the recorder records. Defaults to 'swtbot.record.txt'. Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences RECORDER_FILE_NAME</td>
+<td>filename</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences SCREENSHOT FORMAT"></a>Set SWTBot Preferences SCREENSHOT FORMAT</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences SCREENSHOT_FORMAT<br />
+<br />
+The screenshot image format to be used. Defaults to 'jpeg' The value must be one these: BMP, GIF, ICO, JPEG, JPG, PNG or TIFF. Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences SCREENSHOT_FORMAT</td>
+<td>PNG</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences SCREENSHOTS DIR"></a>Set SWTBot Preferences SCREENSHOTS DIR</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences SCREENSHOTS_DIR<br />
+<br />
+The directory in which screenshots should be generated. Defaults to './screenshots'. Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences SCREENSHOTS_DIR</td>
+<td>./screenshots</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences TIMEOUT"></a>Set SWTBot Preferences TIMEOUT</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences TIMEOUT in time format<br />
+<br />
+The timeout for finding widgets among other things. Defaults to 5000ms Example:<br />
+<table border="1" class="doc">
+<tr>
 <td>Set SWTBotPreferences TIMEOUT</td>
-<td>1000</td>
+<td>1 s</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+  <td class="kw"><a name="Set SWTBot Preferences TYPE INTERVAL"></a>Set SWTBot Preferences TYPE INTERVAL</td>
+  <td class="arg">value</td>
+  <td class="doc">Set SWTBotPreferences TYPE_INTERVAL in time format<br />
+<br />
+The the time interval in milliseconds between typing characters in a string. Defaults to 50ms Example:<br />
+<table border="1" class="doc">
+<tr>
+<td>Set SWTBotPreferences TYPE_INTERVAL</td>
+<td>20ms</td>
 </tr>
 </table>
 </td>
@@ -9860,132 +10041,6 @@ Example:<br />
 <tr>
 <td>Set Text Text</td>
 <td>text</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesDEFAULT KEY"></a>SetSWTBotPreferencesDEFAULT KEY</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences DEFAULT_KEY<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences DEFAULT_KEY</td>
-<td>key</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesKEYBOARD LAYOUT"></a>SetSWTBotPreferencesKEYBOARD LAYOUT</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences KEYBOARD_LAYOUT<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences KEYBOARD_LAYOUT</td>
-<td>layout</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesKEYBOARD STRATEGY"></a>SetSWTBotPreferencesKEYBOARD STRATEGY</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences KEYBOARD_STRATEGY<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences KEYBOARD_STRATEGY</td>
-<td>stategy</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT"></a>SetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT as int<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT</td>
-<td>20</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesPLAYBACK DELAY"></a>SetSWTBotPreferencesPLAYBACK DELAY</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences PLAYBACK_DELAY as long<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences PLAYBACK_DELAY</td>
-<td>100</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesRECORDER FILE NAME"></a>SetSWTBotPreferencesRECORDER FILE NAME</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences RECORDER_FILE_NAME<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences RECORDER_FILE_NAME</td>
-<td>filename</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesSCREENSHOT FORMAT"></a>SetSWTBotPreferencesSCREENSHOT FORMAT</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences SCREENSHOT_FORMAT<br />
-<br />
-The value must be one these: BMP, GIF, ICO, JPEG, JPG, PNG or TIFF. Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences SCREENSHOT_FORMAT</td>
-<td>PNG</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesSCREENSHOTS DIR"></a>SetSWTBotPreferencesSCREENSHOTS DIR</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences SCREENSHOTS_DIR<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences SCREENSHOTS_DIR</td>
-<td>filename</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td class="kw"><a name="SetSWTBotPreferencesTYPE INTERVAL"></a>SetSWTBotPreferencesTYPE INTERVAL</td>
-  <td class="arg">value</td>
-  <td class="doc">Set SWTBotPreferences TYPE_INTERVAL as int<br />
-<br />
-Example:<br />
-<table border="1" class="doc">
-<tr>
-<td>Set SWTBotPreferences TYPE_INTERVAL</td>
-<td>20</td>
 </tr>
 </table>
 </td>
@@ -10263,14 +10318,14 @@ Example:<br />
 <tr>
   <td class="kw"><a name="Wait Until Last Widget Is Enabled"></a>Wait Until Last Widget Is Enabled</td>
   <td class="arg">*params</td>
-  <td class="doc">Wait until the last selected widget is enabled or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
+  <td class="doc">Wait until the last selected widget is enabled or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Wait Until Last Widget Is Enabled</td>
-<td>500</td>
-<td>10</td>
+<td>5 s</td>
+<td>10 ms</td>
 </tr>
 </table>
 </td>
@@ -10278,14 +10333,14 @@ Example:<br />
 <tr>
   <td class="kw"><a name="Wait Until Shell Closes"></a>Wait Until Shell Closes</td>
   <td class="arg">timeout, interval</td>
-  <td class="doc">Wait until the last selected shell widget closes or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
+  <td class="doc">Wait until the last selected shell widget closes or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Wait Until Shell Closes</td>
-<td>500</td>
-<td>10</td>
+<td>5 s</td>
+<td>10 ms</td>
 </tr>
 </table>
 </td>
@@ -10293,30 +10348,30 @@ Example:<br />
 <tr>
   <td class="kw"><a name="Wait Until Shell Is Active"></a>Wait Until Shell Is Active</td>
   <td class="arg">text, *params</td>
-  <td class="doc">Wait until shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
+  <td class="doc">Wait until shell with given text is active or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed<br />
 <br />
 Example:<br />
-| Wait Until Shell Is Active | This is the shell text | 500 | 0</td>
-</tr>
+<table border="1" class="doc">
 <tr>
-  <td class="kw"><a name="Wait Until Shell Is Active Bis"></a>Wait Until Shell Is Active Bis</td>
-  <td class="arg">text, timeout, interval</td>
-  <td class="doc">Wait until shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
-<br />
-Example:<br />
-| Wait Until Shell Closes | This is the shell text | 500 | 0</td>
+<td>Wait Until Shell Is Active</td>
+<td>This is the shell text</td>
+<td>5 s</td>
+<td>10 ms</td>
+</tr>
+</table>
+</td>
 </tr>
 <tr>
   <td class="kw"><a name="Wait Until Table Has Rows"></a>Wait Until Table Has Rows</td>
   <td class="arg">rowCount, *params</td>
-  <td class="doc">Wait until the last selected table have the proper number of rows or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
+  <td class="doc">Wait until the last selected table have the proper number of rows or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Wait Until Table Has Rows</td>
-<td>500</td>
-<td>10</td>
+<td>5 s</td>
+<td>10 ms</td>
 </tr>
 </table>
 </td>
@@ -10324,14 +10379,14 @@ Example:<br />
 <tr>
   <td class="kw"><a name="Wait While Last Widget Is Enabled"></a>Wait While Last Widget Is Enabled</td>
   <td class="arg">*params</td>
-  <td class="doc">Wait while the last selected widget is enabled or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
+  <td class="doc">Wait while the last selected widget is enabled or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Wait While Last Widget Is Enabled</td>
-<td>500</td>
-<td>10</td>
+<td>5 s</td>
+<td>10 ms</td>
 </tr>
 </table>
 </td>
@@ -10339,14 +10394,14 @@ Example:<br />
 <tr>
   <td class="kw"><a name="Wait While Shell Closes"></a>Wait While Shell Closes</td>
   <td class="arg">*params</td>
-  <td class="doc">Wait while the last selected shell widget closes or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
+  <td class="doc">Wait while the last selected shell widget closes or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Wait While Shell Closes</td>
-<td>500</td>
-<td>10</td>
+<td>5 s</td>
+<td>10 ms</td>
 </tr>
 </table>
 </td>
@@ -10354,31 +10409,39 @@ Example:<br />
 <tr>
   <td class="kw"><a name="Wait While Shell Is Active"></a>Wait While Shell Is Active</td>
   <td class="arg">text, *params</td>
-  <td class="doc">Wait while shell with given text is active or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
+  <td class="doc">Wait while shell with given text is active or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed<br />
 <br />
 Example:<br />
-| Wait While Shell Is Active | This is the shell text | 500 | 0</td>
+<table border="1" class="doc">
+<tr>
+<td>Wait While Shell Is Active</td>
+<td>This is the shell text</td>
+<td>5 s</td>
+<td>10 s</td>
+</tr>
+</table>
+</td>
 </tr>
 <tr>
   <td class="kw"><a name="Wait While Table Has Rows"></a>Wait While Table Has Rows</td>
   <td class="arg">rowCount, *params</td>
-  <td class="doc">Wait while the last selected table have the proper number of rows or the optional timeout is reached (millisecond). The optional interval is the delay between evaluating the condition after it has failed (millisecond)<br />
+  <td class="doc">Wait while the last selected table have the proper number of rows or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed<br />
 <br />
 Example:<br />
 <table border="1" class="doc">
 <tr>
 <td>Wait While Table Has Rows</td>
-<td>500</td>
-<td>10</td>
+<td>5 s</td>
+<td>10 ms</td>
 </tr>
 </table>
 </td>
 </tr>
 </table>
 <p id="footer">
-Altogether 574 keywords.<br />
+Altogether 576 keywords.<br />
 Generated by <a href="http://code.google.com/p/robotframework/wiki/LibraryDocumentationTool">libdoc.py</a>
-on 2010-09-08 22:11:41.
+on 2010-10-18 22:13:39.
 </p>
 </body>
 </html>
