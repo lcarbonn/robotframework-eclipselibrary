@@ -20,7 +20,7 @@ Robotframework Eclipse Library from v0.7 now works on :
  
 == Eclipse library ==
  Download the latest eclipse library jar file.
- * The jar with all dependencies [http://code.google.com/p/robotframework- eclipselibrary/downloads/list eclipselibrary-x.x-with-dependencies.jar]
+ * The jar with all dependencies [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x-with-dependencies.jar]
 OR
  * The EclipseLibrary [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x.jar]
  * The JavalibCore  [http://code.google.com/p/robotframework-javatools/wiki/JavalibCore javalib-core-x.x.x-jar-with-dependencies.jar]
