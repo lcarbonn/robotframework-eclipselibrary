@@ -24,7 +24,7 @@ Robotframework Eclipse Library from v0.7 now works on :
 OR
  * The `EclipseLibrary` [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x.jar]
  * The `JavalibCore`  [http://code.google.com/p/robotframework-javatools/downloads/list javalib-core-x.x.x-jar-with-dependencies.jar]
- * The Eclipse Equinox launcher (like org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar) that you should find under eclipse installation folder, under plugins
+ * The Eclipse Equinox launcher (like `org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar`) that you should find under eclipse installation folder, under plugins
 Place files in 'lib' folder under your test suite
 
  Download the run.py python robotframework script for Eclipse tests
