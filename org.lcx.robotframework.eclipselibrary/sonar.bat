@@ -1,1 +1,0 @@
-mvn sonar:sonar
