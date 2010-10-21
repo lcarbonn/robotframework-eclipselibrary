@@ -14,7 +14,7 @@ public class EclipseLibrary extends AnnotationLibrary {
 	private boolean debug = false;
 
     public static final String ROBOT_LIBRARY_SCOPE = "GLOBAL";
-    public static final String ROBOT_LIBRARY_VERSION = "0.0.10";
+    public static final String ROBOT_LIBRARY_VERSION = Configuration.getString("version"); //$NON-NLS-1$
 
     private final AnnotationLibrary annotationLibrary = new AnnotationLibrary("org/lcx/robotframework/eclipse/keyword/**/*.class");
     public static EclipseLibrary instance;
@@ -43,11 +43,11 @@ public class EclipseLibrary extends AnnotationLibrary {
 
     public Object runKeyword(String keywordName, Object[] args) {
     	if(debug) {
-    		System.out.println("runKeyword:"+keywordName);
-    		System.out.println("\targs:"+args.length);
+    		System.out.println("runKeyword:"+keywordName); //$NON-NLS-1$
+    		System.out.println("\targs:"+args.length); //$NON-NLS-1$
     		int i=0;
     		for (Object object : args) {
-    			System.out.println("\t\targ["+i+"]:"+object+", of class="+object.getClass().getName());
+    			System.out.println("\t\targ["+i+"]:"+object+", of class="+object.getClass().getName()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
     			i++;
 			}
     	}

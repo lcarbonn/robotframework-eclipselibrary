@@ -2,8 +2,9 @@
     <description>
         build file for RobotFramework Eclipse Library
     </description>
+  <!-- get version property -->
+  <property file="conf.properties"/>
   <!-- set global properties for this build -->
-  <property name="version"  value="0.10"/>
   <property name="src" location="src"/>
   <property name="gensrc" location="gensrc"/>
   <property name="build" location="build"/>
@@ -48,7 +49,7 @@
     <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
     <jar jarfile="${dist}/${jarfile}"
        basedir="."
-       includes="log4j.properties">
+       includes="log4j.properties, conf.properties">
 
     <fileset dir="${build}"/>
     <fileset dir="${src}"/>
@@ -69,7 +70,7 @@
   	
     <jar jarfile="${dist}/${jarfilewithdep}"
        basedir="."
-       includes="log4j.properties">
+    	includes="log4j.properties, conf.properties">
 
     <fileset dir="${build}"/>
     <fileset dir="${src}"/>
