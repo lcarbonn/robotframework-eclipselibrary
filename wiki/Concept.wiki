@@ -25,3 +25,8 @@ Example : 1d 2h 3m 4s 5ms
  * Snapshots are now working (since v0.4)
  * All direct SWT classes actions are not yet implemented (except SWT colors)
  * keyboard shorcuts keywords and keyboard layout are not yet implemented
+
+== Sample test cases ==
+Those test cases are used for kind of unit testing of the library.
+You could use it as per samples.
+ * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/]
