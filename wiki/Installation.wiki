@@ -39,8 +39,3 @@ Place files in 'lib' folder under your test suite
  Test your installation
  * Download [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/A_TestEclipseLibrary_installation.html installation test case]
  * Then launch in console : `run.py A_TestEclipseLibrary_installation.html`
-
-== Some test cases == 
-Those test cases are used for unit testing of the library.
-You could use it as per samples.
- * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/]
