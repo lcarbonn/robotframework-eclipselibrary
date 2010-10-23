@@ -15,7 +15,7 @@ Robotframework Eclipse Library is based on [http://www.eclipse.org/swtbot/ SWTBo
  ** Then you can call widget specific keywords on it.
 
 == Time Format == 
-EclipseLibrary use the same format of time than [http://robotframework.googlecode.com/svn/tags/robotframework-2.5.4/doc/userguide/RobotFrameworkUserGuide.html#time-format RobotFramework]
+`EclipseLibrary` use the same format of time than [http://robotframework.googlecode.com/svn/tags/robotframework-2.5.4/doc/userguide/RobotFrameworkUserGuide.html#time-format RobotFramework]
 
 Example : 1d 2h 3m 4s 5ms
 
