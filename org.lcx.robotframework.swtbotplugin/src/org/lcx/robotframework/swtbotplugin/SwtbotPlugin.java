@@ -14,6 +14,8 @@ public class SwtbotPlugin extends AbstractUIPlugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.lcx.robotframework.swtbotplugin";
+	
+	private static final boolean debug = false;
 
 	// The shared instance
 	private static SwtbotPlugin plugin;
@@ -41,23 +43,27 @@ public class SwtbotPlugin extends AbstractUIPlugin {
 		super.start(context);
 		plugin = this;
 		
+		if(debug) System.out.println("SwtbotPlugin for RF starting");
 		// set the plugin class loader to the eclipse library bridge
 		try {
 			ClassLoader syscl = ClassLoader.getSystemClassLoader();
 			Class<?> bridge = syscl.loadClass("org.lcx.robotframework.eclipse.bridge.SWTBotBridge");
 			Class<?> clclass = syscl.loadClass("java.lang.ClassLoader");
 			Method m = bridge.getDeclaredMethod("setSWTBOTCLASSLOADER", clclass);
-			m.invoke(bridge, this.getClass().getClassLoader());
+			m.invoke(null, this.getClass().getClassLoader());
 			
 			// set the SWTWorkbenchBot reference to the eclipse library bridge
 			SWTWorkbenchBot bot = new SWTWorkbenchBot();
 			Class<?> oclass = syscl.loadClass("java.lang.Object");
 			Method ms = bridge.getDeclaredMethod("setSWTWORKBENCHBOT", oclass);
-			ms.invoke(bridge, bot);
+			ms.invoke(null, bot);
 			
 		} catch (ClassNotFoundException e) {
 			// plugin is not started under robotframework, so not a problem
+			if(debug) System.out.println("SwtbotPlugin for RF on error");
+			e.printStackTrace();
 		}
+		if(debug) System.out.println("SwtbotPlugin for RF started");
 		
 	}
 
