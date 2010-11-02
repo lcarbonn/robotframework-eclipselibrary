@@ -75,8 +75,7 @@ public class SWTBotBridge {
 			Object o = method.invoke(parameters);
 			return o;
 		} catch (Exception e) {
-			e.printStackTrace();
-			throw new SWTBotBridgeException(e);
+			throw CauseException.generateException(e);
 		}
 	}
 	
@@ -118,8 +117,7 @@ public class SWTBotBridge {
 			Object o = method.invoke(instance, params);
 			return o;
 		} catch (Exception e) {
-			e.printStackTrace();
-			throw new SWTBotBridgeException(e);
+			throw CauseException.generateException(e);
 		}
 	}
 
@@ -149,8 +147,7 @@ public class SWTBotBridge {
 			Object o = method.invoke(instance, (Object)arrayParameter);
 			return o;
 		} catch (Exception e) {
-			e.printStackTrace();
-			throw new SWTBotBridgeException(e);
+			throw CauseException.generateException(e);
 		}
 	}
 
@@ -188,7 +185,7 @@ public class SWTBotBridge {
 			}
 			return ls;
 		} catch (Exception e) {
-			throw new SWTBotBridgeException(e);
+			throw CauseException.generateException(e);
 		}
 	}
 
@@ -208,7 +205,7 @@ public class SWTBotBridge {
 			}
 			return (Object[])lo;
 		} catch (Exception e) {
-			throw new SWTBotBridgeException(e);
+			throw CauseException.generateException(e);
 		}
 	}
 	
@@ -252,8 +249,7 @@ public class SWTBotBridge {
 			Object o = field.get(null);
 			return o;
 		} catch (Exception e) {
-			e.printStackTrace();
-			throw new SWTBotBridgeException(e);
+			throw CauseException.generateException(e);
 		}
 	}
 	
@@ -273,8 +269,7 @@ public class SWTBotBridge {
 			
 			field.set(null, value);
 		} catch (Exception e) {
-			e.printStackTrace();
-			throw new SWTBotBridgeException(e);
+			throw CauseException.generateException(e);
 		}
 	}
 

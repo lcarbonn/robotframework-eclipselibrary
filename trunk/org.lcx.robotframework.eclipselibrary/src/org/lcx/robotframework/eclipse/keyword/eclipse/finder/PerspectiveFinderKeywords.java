@@ -5,6 +5,7 @@ package org.lcx.robotframework.eclipse.keyword.eclipse.finder;
 
 import java.util.List;
 
+import org.lcx.robotframework.eclipse.bridge.CauseException;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective;
@@ -50,7 +51,15 @@ public class PerspectiveFinderKeywords {
     @ArgumentNames({"id"})
     public SWTBotPerspective findPerspectiveById(String id) throws SWTBotBridgeException{
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
-		return bot.perspectiveById(id);
+    	SWTBotPerspective persp = null;
+    	try {
+        	 persp = bot.perspectiveById(id);
+		} catch (SWTBotBridgeException e) {
+			if(CauseException.findCauseException(IndexOutOfBoundsException.class, e))
+				throw new SWTBotBridgeException("No perpspective were found with id="+id, e);
+			else throw e;
+		}
+		return persp;
 	}
 
 	@RobotKeyword("Find the perspective by its label\n\n"
@@ -59,7 +68,15 @@ public class PerspectiveFinderKeywords {
     @ArgumentNames({"label"})
     public SWTBotPerspective findPerspectiveByLabel(String label) throws SWTBotBridgeException{
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
-		return bot.perspectiveByLabel(label);
+    	SWTBotPerspective persp = null;
+    	try {
+        	 persp = bot.perspectiveByLabel(label);
+		} catch (SWTBotBridgeException e) {
+			if(CauseException.findCauseException(IndexOutOfBoundsException.class, e))
+				throw new SWTBotBridgeException("No perpspective were found with label="+label, e);
+			else throw e;
+		}
+		return persp;
 	}
 
 	@RobotKeyword("List all the perspectives label\n\n"

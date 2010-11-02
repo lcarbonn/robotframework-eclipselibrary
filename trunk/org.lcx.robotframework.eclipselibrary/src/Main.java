@@ -15,10 +15,17 @@ public class Main {
 		for(String keyword : el.getKeywordNames()){
 			System.out.println(keyword);
 		}
+
+		el.runKeyword("Start Eclipse", args);
+		String[] a = {"Resource"};
+		el.runKeyword("Find Perspective By Label", a);
+		el.runKeyword("Activate Perspective", new Object[0]);
 		
+	}		
+
+		
+	public static void testLaunchEclipse(String[] args) {
 		EclipseLaunchingKeywords elk = new EclipseLaunchingKeywords();
-		String[] s = new String[0];
-		Thread et =null;
 		UncaughtExceptionHandler eh = new UncaughtExceptionHandler() {
 			
 			public void uncaughtException(Thread t, Throwable e) {
@@ -26,17 +33,16 @@ public class Main {
 			}
 		};
 		try {
-			et = elk.startEclipseInSeparateThread(s);
-			System.out.println("lancé");
+			Thread et = elk.startEclipseInSeparateThread(args);
+			System.out.println("Eclipse Started");
 			et.setUncaughtExceptionHandler(eh);
-//			et.join();
+			et.join();
 			System.out.println("join");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("error");
+			System.out.println("Eclipse Error");
 		} finally {
-			System.out.println("terminé");
+			System.out.println("Eclipse Ended");
 		}
 	}
-
 }
