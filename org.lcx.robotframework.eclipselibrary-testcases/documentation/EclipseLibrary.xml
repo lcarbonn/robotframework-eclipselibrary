@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20101018 22:13:27" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
-<version>0.0.10</version>
+<keywordspec generated="20101102 18:49:40" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
+<version>0.11</version>
 <scope>global</scope>
 <doc>Documentation for test library `org.lcx.robotframework.eclipse.EclipseLibrary`.</doc>
 <kw name="Activate C Tab Item">
