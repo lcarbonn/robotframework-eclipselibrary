@@ -41,8 +41,8 @@ Place files in 'lib' folder under your test suite
  * Download [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/A_TestEclipseLibrary_installation.html installation test case]
  * Then launch in console : `run.py A_TestEclipseLibrary_installation.html`
 
- Eclipse may raise PermGen error or OutOfMemory exception.
- * It is then better to use robotframework standalone jar and set following parameters to the java command:
+ Eclipse may throw a `PermGen error` or `OutOfMemory` exception.
+ * It is then better to use [http://code.google.com/p/robotframework/wiki/JavaIntegration robotframework standalone jar] and set following parameters to the java command:
 {{{
 @echo off
 set ECLIPSE_LIBRARY=lib/eclipselibrary-0.11-with-dependencies.jar
