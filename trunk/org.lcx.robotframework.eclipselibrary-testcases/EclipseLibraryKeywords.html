@@ -224,7 +224,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="keyword_Should Not Be Visible">Should Not Be Visible</a></td>
+<td class="name"><a name="keyword_Button Should Not Be Visible">Button Should Not Be Visible</a></td>
 <td>[Arguments]</td>
 <td>${mnemonic}</td>
 <td>@{index}</td>
@@ -266,7 +266,49 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
+<td class="name"><a name="keyword_The view ${view_name} is opened">The view ${view_name} is opened</a></td>
+<td>Find View By Title</td>
+<td>${view_name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Show View</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>Is View Active</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td class="name"><a name="keyword_Start Eclipse with parameters">Start Eclipse with parameters</a></td>
+<td>[Arguments]</td>
+<td>${install}=file:/d:/eclipse/eclipse35</td>
+<td>${data}=file:/d:/bootstrap35-sv3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>Start Eclipse</td>
 <td>-consolelog</td>
 <td>-debug</td>
@@ -275,9 +317,212 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>file:/d:/eclipse/eclipse35</td>
+<td>${install}</td>
 <td>-data</td>
-<td>file:/d:/bootstrap35-robot/rcpbot/workspace-blank</td>
+<td>${data}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>-nosplash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Capture Screenshot On Error</td>
+<td>screenshot_error.jpg</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_The perspective ${perspective_name} is opened">The perspective ${perspective_name} is opened</a></td>
+<td>Find Perspective By Label</td>
+<td>${perspective_name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Activate Perspective</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}</td>
+<td>Is Perspective Active</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Label Should Be Enabled">Label Should Be Enabled</a></td>
+<td>[Arguments]</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Label</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}=</td>
+<td>Is Label Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Label Should Be Disabled">Label Should Be Disabled</a></td>
+<td>[Arguments]</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Label</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${bool}=</td>
+<td>Is Label Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${bool}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Button Should Be Enabled">Button Should Be Enabled</a></td>
+<td>[Arguments]</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td colspan="3">both mnemonic or index are optional\n<br>
+ If only one parameter is given and if it is numeric, it will be used as index\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${_bool_} =</td>
+<td>Is Button Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>${_bool_}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Button Should Be Disabled">Button Should Be Disabled</a></td>
+<td>[Arguments]</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td colspan="3">both mnemonic or index are optional\n<br>
+ If only one parameter is given and if it is numeric, it will be used as index\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Find Button</td>
+<td>${mnemonic}</td>
+<td>@{index}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${_bool_} =</td>
+<td>Is Button Enabled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${_bool_}</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td class="name"></td>
