@@ -58,6 +58,7 @@
     <manifest>
       <!-- Who is building this jar? -->
       <attribute name="Built-By" value="Laurent Carbonnaux"/>
+      <attribute name="Main-Class" value="Main"/>
       <!-- Information about the program itself -->
       <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
       <attribute name="Implementation-Title" value="EclipseLibrary"/>
@@ -81,6 +82,7 @@
     <manifest>
       <!-- Who is building this jar? -->
       <attribute name="Built-By" value="Laurent Carbonnaux"/>
+      <attribute name="Main-Class" value="Main"/>
       <!-- Information about the program itself -->
       <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
       <attribute name="Implementation-Title" value="EclipseLibrary"/>
