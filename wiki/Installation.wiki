@@ -36,6 +36,16 @@ Place files in 'lib' folder under your test suite
  Add Eclipse Library xml keyword specification file under PYTHON_PATH for keyword completion under RIDE
  * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml  EclipseLibrary.xml]
 
+== Running with Eclipse ==
  Test your installation
  * Download [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/A_TestEclipseLibrary_installation.html installation test case]
  * Then launch in console : `run.py A_TestEclipseLibrary_installation.html`
+
+ Eclipse may raise PermGen error or OutOfMemory exception.
+ * It is then better to use robotframework standalone jar and set following parameters to the java command:
+{{{
+@echo off
+set ECLIPSE_LIBRARY=lib/eclipselibrary-0.11-with-dependencies.jar
+set ROBOTFRAMEWORK=robotframework-2.5.4.1.jar
+java -Xms256m -Xmx512m -XX:PermSize=64M -XX:MaxPermSize=256M  -Xbootclasspath/a:%ECLIPSE_LIBRARY% -jar  %ROBOTFRAMEWORK% --debugfile jybot.log --loglevel TRACE --outputdir results %* 
+}}}
