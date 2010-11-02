@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Swtbotplugin
+Bundle-Name: RobotFramework EclipseLibrary Plugin
 Bundle-SymbolicName: org.lcx.robotframework.swtbotplugin;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.1.0.qualifier
 Bundle-Activator: org.lcx.robotframework.swtbotplugin.SwtbotPlugin
 Bundle-Vendor: scrumvision.org
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
