@@ -15,8 +15,9 @@ Robotframework Eclipse Library from v0.7 now works on :
  * Robotframework Eclipse Library plugin for SWTBot update site
    `http://scrumvision.sourceforge.net/update-site/eclipselibrary`
  This plugin will ask you installing SWTBot normaly.
- * if not, SWTBot plugins should be installed from [http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site SWTBot  update site for Eclipse 3.5]
-[http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site  SWTBot update site for Eclipse 3.6]
+ * if not, SWTBot plugins should be installed from 
+  * [http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site SWTBot  update site for Eclipse 3.5] 
+  * [http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site  SWTBot update site for Eclipse 3.6]
 
  
 == Eclipse library ==
