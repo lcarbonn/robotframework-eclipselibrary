@@ -15,8 +15,10 @@
   <property name="libdoc"  location="${pythonpath}/libdoc.py"/>
   <property name="javalibcore"  value="javalib-core-0.8.1-jar-with-dependencies.jar"/>
   <property name="eclipselauncher"  value="org.eclipse.equinox.launcher_1.0.201.R35x_v20090715_unsigned.jar"/>
+  <property name="eclipselauncher36"  value="org.eclipse.equinox.launcher_1.1.0.v20100507_unsigned.jar"/>
   <property name="jarfile"  value="eclipselibrary-${version}.jar"/>
   <property name="jarfilewithdep"  value="eclipselibrary-${version}-with-dependencies.jar"/>
+  <property name="jarfilewithdep36"  value="eclipselibrary-${version}-with-dependencies-e36.jar"/>
   
   <property name="classpath"  location="C:/outils/jdk1.5.0_12/lib/tools.jar;${dist}/${jarfilewithdep}"/>
 
@@ -25,6 +27,8 @@
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
     <mkdir dir="${build}"/>
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}"/>
   </target>
 
   <target name="compile" depends="init"
@@ -38,15 +42,11 @@
       debug="on"
     />
   </target>
+	
+  <target name="createjar" depends="compile"
+        description="generate the simple jar distribution" >
+    <delete file="${dist}/${jarfile}"/>
 
-  <target name="dist" depends="compile"
-        description="generate the distribution" >
-    <!-- Create the distribution directory -->
-    <mkdir dir="${dist}"/>
-
-  	<delete file="${dist}/${jarfile}"/>
-
-    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
     <jar jarfile="${dist}/${jarfile}"
        basedir="."
        includes="log4j.properties, conf.properties">
@@ -66,7 +66,10 @@
     </manifest>
     
     </jar>
+  </target>
 
+  <target name="createjardep35" depends="compile"
+        description="generate jar with dependencies for 3.5" >
   	<delete file="${dist}/${jarfilewithdep}"/>
   	
     <jar jarfile="${dist}/${jarfilewithdep}"
@@ -91,7 +94,39 @@
     
     </jar>
 
-    </target>
+  </target>
+
+  <target name="createjardep36" depends="compile"
+          description="generate jar with dependencies for 3.6" >
+      <delete file="${dist}/${jarfilewithdep36}"/>
+      
+      <jar jarfile="${dist}/${jarfilewithdep36}"
+         basedir="."
+          includes="log4j.properties, conf.properties">
+
+      <fileset dir="${build}"/>
+      <fileset dir="${src}"/>
+      <fileset dir="${gensrc}"/>
+      <zipfileset includes="**/*" src="lib/${javalibcore}"/>
+      <zipfileset includes="**/*" src="lib/${eclipselauncher36}"/>
+
+      <manifest>
+        <!-- Who is building this jar? -->
+        <attribute name="Built-By" value="Laurent Carbonnaux"/>
+        <attribute name="Main-Class" value="Main"/>
+        <!-- Information about the program itself -->
+        <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
+        <attribute name="Implementation-Title" value="EclipseLibrary"/>
+        <attribute name="Implementation-Version" value="${version}"/>
+      </manifest>
+      
+      </jar>
+
+  </target>
+  	
+  <target name="dist" depends="createjar, createjardep35, createjardep36"
+            description="generate the distributions">
+  </target>
 
   <target name="gendochtml"
         description="Keyword documentation generation">
