@@ -14,10 +14,11 @@ Robotframework Eclipse Library from v0.7 now works on :
  Before using Eclipse Library, you should install a plugin under Eclipse.
  * Robotframework Eclipse Library plugin for SWTBot update site
    `http://scrumvision.sourceforge.net/update-site/eclipselibrary`
+ 
  This plugin will ask you installing SWTBot normaly.
  * if not, SWTBot plugins should be installed from 
-  * [http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site SWTBot  update site for Eclipse 3.5] 
-  * [http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site  SWTBot update site for Eclipse 3.6]
+  * SWTBot  update site for Eclipse 3.5 : http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site
+  * SWTBot update site for Eclipse 3.6 : http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site
 
  
 == Eclipse library ==
@@ -29,9 +30,9 @@ OR
  * The Eclipse Equinox launcher (like `org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar`) that you should find under eclipse installation folder, under plugins
 Place files in 'lib' folder under your test suite
 
- Download the eclipsebot.bat robotframework script for Eclipse tests
- * [http://robotframework-eclipselibrary.googlecode.com/files/eclipsebot.bat]
- * _old run.py python not yet updated for PermGen jvm option)_
+ Download the eclipsebot.bat (or run.py) robotframework script for Eclipse tests
+ * [http://robotframework-eclipselibrary.googlecode.com/files/eclipsebot.bat eclipsebot.bat]
+ * [http://robotframework-eclipselibrary.googlecode.com/files/run.py run.py] python is now updated for PermGen jvm option
 
  Add Eclipse Library resource file in your test case as a resource.
  * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.html  EclipseLibraryKeywords.html]
@@ -43,6 +44,7 @@ Place files in 'lib' folder under your test suite
  Test your installation
  * Download [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/A_TestEclipseLibrary_installation.html installation test case]
  * Then launch in console : `eclipsebot.bat A_TestEclipseLibrary_installation.html`
+ * or `run.py A_TestEclipseLibrary_installation.html`
 
  Eclipse may throw a `PermGen error` or `OutOfMemory` exception.
  * It is then better to use [http://code.google.com/p/robotframework/wiki/JavaIntegration robotframework standalone jar] and set following parameters to the java command (eclipsebot.bat) :
