@@ -59,7 +59,7 @@ public class EclipseLaunchingKeywords {
 
     	if(error) return null;
     	
-		long timeout = 0;
+		long timeout = 2 * 60 * 1000;
         for (int i = 0; i < args.length; i++) {
 			if(args[i].equals(TIMEOUT) && i<(args.length-1)) {
 				timeout = Long.parseLong(args[i+1]);
@@ -75,13 +75,15 @@ public class EclipseLaunchingKeywords {
         	Thread.sleep(1000);
         	isBridgeInitialized = SWTBotBridge.isISBRIDGEINITIATED();
         	end = System.currentTimeMillis();
-        	if(timeout!=0) timeoutReached = ((end-start)<timeout);
+        	if(timeout!=0) timeoutReached = ((end-start)>timeout);
         }
         if(isBridgeInitialized) {
         	System.out.println("SWTBotBridge is initialized");
         }
         if(timeoutReached) {
-        	throw new Exception("timeout reached before end of initialization");
+        	throw new Exception("Timeout reached before end of initialization\n " +
+        			"  Check if EclipseLibrary plugin is installed" +
+        			"  Or use -timeout option in Start Eclipse keyword");
         }
     	return et;
     }
