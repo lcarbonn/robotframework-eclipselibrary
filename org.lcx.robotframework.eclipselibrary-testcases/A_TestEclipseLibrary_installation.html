@@ -50,7 +50,15 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name">Documentation</td>
-<td colspan="4">Test casse used to check robotframework EclipseLibrary installation</td>
+<td colspan="4">Test suite used to check robotframework EclipseLibrary installation.\n<br>
+Please check and adapt eclipse installation parameters in Launch Eclipse test case\n<br>
+\n<br>
+ * Eclipse is installed in -install parameter thru ${eclipse_install}\n<br>
+ * Workspace path used is in -data parameter thru ${eclipse_data}\n<br>
+ * Workspace should be a new empty one.\n<br>
+ * Other eclipse parameters should be set thru ${eclipse_params} \n<br>
+ \n<br>
+Change those settings according to your own installation</td>
 </tr>
 <tr>
 <td class="name">Library</td>
@@ -74,7 +82,40 @@ td.name, th.name {
 <td></td>
 </tr>
 </table>
-<table id="variables" border="1"></table>
+<table id="variables" border="1">
+<tr>
+<th class="name">Variable</th>
+<th colspan="4">Value</th>
+</tr>
+<tr>
+<td class="name">${eclipse_install}</td>
+<td>file:/d:/eclipse/eclipse35</td>
+<td># -install eclipse parameter to set eclipse installation directory</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${eclipse_data}</td>
+<td>file:/d:/bootstrap35-robot/rcpbot/workspace-blank</td>
+<td># -data eclipse parameter to set workspace</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${eclipse_params}</td>
+<td>-consolelog -debug</td>
+<td># other eclipse parameters to set for eclipse startup</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 <table id="testcases" border="1">
 <tr>
 <th class="name">Test Case</th>
@@ -84,8 +125,8 @@ td.name, th.name {
 <tr>
 <td class="name"><a name="test_Launch Eclipse">Launch Eclipse</a></td>
 <td>[Documentation]</td>
-<td colspan="3">Eclipse is installed in D:/eclipse/eclipse35\n<br>
- Workspace path used is D:/bootstrap35-robot/rcpbot/workspace-blank\n<br>
+<td colspan="3">Eclipse is installed in -install parameter\n<br>
+ Workspace path used is in -data parameter\n<br>
  Workspace should be a new empty one.\n<br>
  \n<br>
  Change those settings according to your own installation</td>
@@ -93,16 +134,16 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>Start Eclipse</td>
-<td>-consolelog</td>
-<td>-debug</td>
 <td>-install</td>
+<td>${eclipse_install}</td>
+<td>-data</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>file:/d:/eclipse/eclipse35</td>
-<td>-data</td>
-<td>file:/d:/bootstrap35-robot/rcpbot/workspace-blank</td>
+<td>${eclipse_data}</td>
+<td>${eclipse_params}</td>
+<td></td>
 </tr>
 <tr>
 <td class="name"></td>
