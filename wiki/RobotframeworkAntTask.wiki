@@ -1,5 +1,7 @@
 #summary This page explains how to use robotframework ant task.
 
+<wiki:toc max_depth="2" />
+
 = Introduction =
 `RobotAnt` is a [http://ant.apache.org/ ant] task for using robotframework from ant.
 
