@@ -43,9 +43,9 @@ If fork is set to false, then class mode will be used
 {{{
 <robotframework data_sources="Test.html" fork="false">
   <arg line="--help"/>
-  <bootclasspath>
+  <classpath>
    <pathelement location="lib/selenium-server.jar"/>
-  </bootclasspath>
+  </classpath>
 </robotframework>
 }}}
 This will do the same as :
