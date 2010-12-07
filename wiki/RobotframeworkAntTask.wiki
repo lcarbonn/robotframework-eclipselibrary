@@ -15,7 +15,7 @@ Ant task definition for `RobotAnt`task :
 {{{
 <taskdef name="robotframework"
    classname="org.lcx.robotframework.ant.RobotAnt"
-   classpath="ant-robotframework-0.1.jar"/>
+   classpath="ant-robotframework-<version>.jar"/>
 
 }}}
 
@@ -70,8 +70,9 @@ Use "jar" task attribute
 
 also you could change in robotant.properties file inside `RobotAnt` jar file
 
-
 = Parameters =
+`RobotAnt` propose some Robotframework [http://robotframework.googlecode.com/svn/tags/robotframework-2.5.4/doc/userguide/RobotFrameworkUserGuide.html#configuring-execution options] to be set as task attributes:
+
 || *Attribute* || *Description* || *Required* ||
 || name || set the --name option || No ||
 || suite || set the --suite option || No ||
@@ -80,3 +81,8 @@ also you could change in robotant.properties file inside `RobotAnt` jar file
 || outputdir || set the --outputdir option || No ||
 || loglevel || set the --loglevel option || No ||
 || debugfile || set the --debugfile option || No ||
+
+Other Robotframework options can be set using *arg with line* attribute:
+{{{
+   <arg line="--help"/>
+}}}
