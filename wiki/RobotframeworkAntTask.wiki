@@ -95,7 +95,9 @@ Complete sample:
     test="'Test search on google'"
     variablefile="path/vars.py"
     >
-  <arg line="--version"/>
+  <bootclasspath>
+   <pathelement location="lib/selenium-server.jar"/>
+  </bootclasspath>
   <arg line="--variable str:Hello"/>
 </robotframework>
 
