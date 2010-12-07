@@ -7,6 +7,16 @@
 
 `RobotAnt` uses the same parameters and propose the following ones
 
+= Task Definition =
+Ant task definition for RbbotAnt task :
+
+{{
+<taskdef name="robotframework"
+   classname="org.lcx.robotframework.ant.RobotAnt"
+   classpath="ant-robotframework-0.1.jar"/>
+
+}}
+
 = Jar or Class mods =
 `RobotAnt` use the jar standelone launcher for robotframework (actual v2.5.4.1)
 
