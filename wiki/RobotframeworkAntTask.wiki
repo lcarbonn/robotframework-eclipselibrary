@@ -19,7 +19,7 @@ Ant task definition for RbbotAnt task :
 
 }}}
 
-= Jar or Class mods =
+= Jar or Class modes =
 `RobotAnt` use the jar standelone launcher for robotframework (actual v2.5.4.1)
 
 robotframework-2.5.4.1.jar must be at root folder of the ant basedir.
