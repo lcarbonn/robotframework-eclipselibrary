@@ -4,10 +4,15 @@
 
 Robotframework ant task inherit from the core [http://ant.apache.org/manual/Tasks/jar.html java] task.
 
+Robotframework ant task use same parameters and propose the following ones
 
-= Details =
+= Parameters =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+|| Attribute || Description || Required ||
+| name | set the --name option | No |
+| suite | set the --suite option | No |
+| test | set the --test option | No |
+| variablefile | set the --variablefile option | No |
+| outputdir | set the --outputdir option | No |
+| loglevel | set the --loglevel option | No |
+| debugfile | set the --debugfile option | No |
