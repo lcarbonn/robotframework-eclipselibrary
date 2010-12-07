@@ -8,10 +8,12 @@
 
 `RobotAnt` ant task inherits from the core [http://ant.apache.org/manual/Tasks/jar.html java] task.
 
-`RobotAnt` uses the same parameters and propose the following ones
+`RobotAnt` uses the same parameters and propose specific ones
+
+[http://code.google.com/p/robotframework-eclipselibrary/downloads/list Download `RobotAnt` jar]
 
 = Task Definition =
-Ant task definition for `RobotAnt`task :
+Ant task definition for `RobotAnt`:
 
 {{{
 <taskdef name="robotframework"
