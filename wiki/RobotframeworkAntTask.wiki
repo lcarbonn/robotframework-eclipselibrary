@@ -1,13 +1,13 @@
-#summary This page explain how to use robotframework ant task.
+#summary This page explains how to use robotframework ant task.
 
 = Introduction =
+RobotAnt is a ant task for using robotframework from ant.
 
-Robotframework ant task inherit from the core [http://ant.apache.org/manual/Tasks/jar.html java] task.
+RobotAnt ant task inherits from the core [http://ant.apache.org/manual/Tasks/jar.html java] task.
 
-Robotframework ant task use same parameters and propose the following ones
+RobotAnt uses the same parameters and propose the following ones
 
 = Parameters =
-
 || *Attribute* || *Description* || *Required* ||
 || name || set the --name option || No ||
 || suite || set the --suite option || No ||
