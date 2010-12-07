@@ -24,10 +24,9 @@ Ant task definition for `RobotAnt`task :
 
 robotframework-2.5.4.1.jar must be at root folder of the ant basedir.
 
-Default execution is using external VM
-|| *mode* || *comment* || default ||
-|| fork || tests are run in another VM than Ant || Yes ||
-|| unfork || tests are run inside ant VM || No ||
+|| *mode* || *comment* || *default* ||
+|| fork || tests are run in another VM than Ant || X||
+|| unfork || tests are run inside ant VM ||  ||
 
 == Fork mode ==
 By default it uses the -jar option in fork mode (external VM)
