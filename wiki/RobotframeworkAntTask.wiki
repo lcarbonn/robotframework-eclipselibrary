@@ -3,7 +3,7 @@
 <wiki:toc max_depth="2" />
 
 = Introduction =
-`RobotAnt` is a [http://ant.apache.org/ ant] task for using robotframework from ant.
+`RobotAnt` is a [http://ant.apache.org/ ant] task for using robotframework inside ant build scripts.
 
 `RobotAnt` ant task inherits from the core [http://ant.apache.org/manual/Tasks/jar.html java] task.
 
