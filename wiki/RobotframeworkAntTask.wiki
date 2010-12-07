@@ -82,7 +82,27 @@ also you could change in robotant.properties file inside `RobotAnt` jar file
 || loglevel || set the --loglevel option || No ||
 || debugfile || set the --debugfile option || No ||
 
+Complete sample:
+{{{
+<robotframework 
+    jar="robotframework-selenium-2.5.4.1.jar"
+    data_sources="TestSelenium.html"
+    name="TestExecution Result"
+    loglevel="TRACE"
+    debugfile="jybot.log"
+    outputdir="resultats"
+    suite="TestSelenium"
+    test="'Test search on google'"
+    variablefile="path/vars.py"
+    >
+  <arg line="--version"/>
+  <arg line="--variable str:Hello"/>
+</robotframework>
+
+}}}
+
 Other Robotframework options can be set using *arg with line* attribute:
 {{{
    <arg line="--help"/>
+   <arg line="--variable str:Hello"/>
 }}}
