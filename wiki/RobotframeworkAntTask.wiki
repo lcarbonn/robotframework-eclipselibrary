@@ -10,7 +10,7 @@
 `RobotAnt` uses the same parameters and propose the following ones
 
 = Task Definition =
-Ant task definition for RbbotAnt task :
+Ant task definition for `RobotAnt`task :
 
 {{{
 <taskdef name="robotframework"
