@@ -52,10 +52,19 @@ This will do the same as :
 
 {{{java -classpath lib/selenium-server.jar:robotframework-2.5.4.1.jar org.robotframework.RobotFramework --help Test.html}}}
 
-== Specific jar or class ==
-As per java task, you can specify the jar and class RobotAnt task should use to replace default ones.
+== Specific a specific jar ==
+As per java task, you can specify the jar RobotAnt task should use to replace default ones.
+Use "jar" task attribute
+{{{
+<robotframework data_sources="Test.html" jar="path/myrobotjar.jar">
+  <arg line="--help"/>
+  <bootclasspath>
+   <pathelement location="lib/selenium-server.jar"/>
+  </bootclasspath>
+</robotframework>
+}}}
 
-also you could change in robotant.properties file
+also you could change in robotant.properties file inside `RobotAnt` jar file
 
 
 = Parameters =
