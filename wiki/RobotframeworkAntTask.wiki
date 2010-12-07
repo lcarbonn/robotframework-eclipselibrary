@@ -1,4 +1,5 @@
 #summary This page explains how to use robotframework ant task.
+#labels Featured
 
 <wiki:toc max_depth="2" />
 
