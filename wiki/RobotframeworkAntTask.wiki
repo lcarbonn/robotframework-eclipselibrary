@@ -1,7 +1,7 @@
 #summary This page explains how to use robotframework ant task.
 
 = Introduction =
-`RobotAnt` is a ant task for using robotframework from ant.
+`RobotAnt` is a [http://ant.apache.org/ ant] task for using robotframework from ant.
 
 `RobotAnt` ant task inherits from the core [http://ant.apache.org/manual/Tasks/jar.html java] task.
 
@@ -9,6 +9,7 @@
 
 = Jar or Class mods =
 `RobotAnt` use the jar standelone launcher for robotframework (actual v2.5.4.1)
+
 robotframework-2.5.4.1.jar must be at root folder of the ant basedir.
 
 == Jar mode ==
@@ -21,6 +22,7 @@ By default it uses the -jar option in fork mode (external VM)
   </bootclasspath>
 </robotframework>
 }}}
+
 This will do the same as :
 {{{java -Xbootclasspath lib/selenium-server.jar -jar robotframework-2.5.4.1.jar --help Test.html}}}
 
@@ -35,7 +37,13 @@ If fork is set to false, then class mode will be used
 </robotframework>
 }}}
 This will do the same as :
+
 {{{java -classpath lib/selenium-server.jar:robotframework-2.5.4.1.jar org.robotframework.RobotFramework --help Test.html}}}
+
+== Specific jar or class ==
+As per java task, you can specify the jar and class RobotAnt task should use to replace default ones.
+
+also you could change in robotant.properties file
 
 
 = Parameters =
