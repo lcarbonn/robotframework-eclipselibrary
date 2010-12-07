@@ -19,12 +19,17 @@ Ant task definition for `RobotAnt`task :
 
 }}}
 
-= Jar or Class modes =
+= Fork or unfork modes =
 `RobotAnt` use the jar standelone launcher for robotframework (actual v2.5.4.1)
 
 robotframework-2.5.4.1.jar must be at root folder of the ant basedir.
 
-== Jar mode ==
+Default execution is using external VM
+|| *mode* || *comment* || default ||
+|| fork || tests are run in another VM than Ant || Yes ||
+|| unfork || tests are run inside ant VM || No ||
+
+== Fork mode ==
 By default it uses the -jar option in fork mode (external VM)
 {{{
 <robotframework data_sources="Test.html">
@@ -38,7 +43,7 @@ By default it uses the -jar option in fork mode (external VM)
 This will do the same as :
 {{{java -Xbootclasspath lib/selenium-server.jar -jar robotframework-2.5.4.1.jar --help Test.html}}}
 
-== Class mode ==
+== Unfork mode ==
 If fork is set to false, then class mode will be used
 {{{
 <robotframework data_sources="Test.html" fork="false">
