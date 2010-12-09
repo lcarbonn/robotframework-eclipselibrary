@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<project name="RobotAnt" default="robotant" basedir=".">
+
+	<description>
+        Launching TestEclipse suite
+  </description>
+	<property name="version"  value="0.2"/>
+  <taskdef name="robotant"
+      classname="org.lcx.robotframework.ant.RobotAnt"
+      classpath="libext/ant-robotframework-${version}.jar"/>
+
+	<target name="robotant">
+		<robotant 
+        jar="libext/rfstandalone.jar"
+        data_sources="TestSamples"
+        loglevel="TRACE"
+        debugfile="robotant.log"
+        outputdir="resultats"
+        suite="TestWidgets"
+        maxmemory="512m"
+        >
+      <jvmarg line="-XX:MaxPermSize=256M"/>
+      <jvmarg line="-Xbootclasspath/a:lib/eclipselibrary-0.13-with-dependencies-e36.jar"/>
+		</robotant>
+	</target>
+
+</project>
+
