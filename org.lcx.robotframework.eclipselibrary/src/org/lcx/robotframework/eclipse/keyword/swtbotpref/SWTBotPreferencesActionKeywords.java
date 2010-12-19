@@ -13,6 +13,8 @@ import org.robotframework.javalib.annotation.RobotKeywords;
 public class SWTBotPreferencesActionKeywords {
 
 	private static String prefclassname = "org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences";
+	private static String DEFAULT_KEY = "DEFAULT_KEY";
+	private static String DEFAULT_POLL_DELAY = "DEFAULT_POLL_DELAY";
 	
 	private Object getKeyValue(String key) throws Exception {
 		return SWTBotBridge.getStaticField(prefclassname, key);
@@ -25,8 +27,8 @@ public class SWTBotPreferencesActionKeywords {
 	@RobotKeyword("Get SWTBotPreferences DEFAULT_KEY\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences DEFAULT_KEY |\n")
-        public String get_SWTBot_Preferences_DEFAULT_KEY() throws Exception {
-			return (String)getKeyValue("DEFAULT_KEY");
+        public String getSWTBotPreferencesDEFAULT_KEY() throws Exception {
+			return (String)getKeyValue(DEFAULT_KEY);
     	}
 
 	@RobotKeyword("Set SWTBotPreferences DEFAULT_KEY\n\n"
@@ -34,14 +36,14 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences DEFAULT_KEY | org.eclipse.swtbot.widget.key | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_DEFAULT_KEY(String value) throws Exception {
-			setKeyValue("DEFAULT_KEY", value);
+        public void setSWTBotPreferencesDEFAULT_KEY(String value) throws Exception {
+			setKeyValue(DEFAULT_KEY, value);
     	}
 
 	@RobotKeyword("Get SWTBotPreferences TIMEOUT in milliseconds\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences TIMEOUT |\n")
-        public Long get_SWTBot_Preferences_TIMEOUT() throws Exception {
+        public Long getSWTBotPreferencesTIMEOUT() throws Exception {
 			return ((Long)getKeyValue("TIMEOUT")).longValue();
     	}
 	
@@ -50,7 +52,7 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences TIMEOUT | 1 s | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_TIMEOUT(String value) throws Exception {
+        public void setSWTBotPreferencesTIMEOUT(String value) throws Exception {
 			System.out.println(value+":"+value.getClass().getName());
 			long l = TimeParser.parseMillisecond(value);
 			setKeyValue("TIMEOUT", l);
@@ -59,7 +61,7 @@ public class SWTBotPreferencesActionKeywords {
 	@RobotKeyword("Get SWTBotPreferences RECORDER_FILE_NAME\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences RECORDER_FILE_NAME |\n")
-        public String get_SWTBot_Preferences_RECORDER_FILE_NAME() throws Exception {
+        public String getSWTBotPreferencesRECORDER_FILE_NAME() throws Exception {
 			return (String)getKeyValue("RECORDER_FILE_NAME");
     	}
 
@@ -68,14 +70,14 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences RECORDER_FILE_NAME | filename | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_RECORDER_FILE_NAME(String value) throws Exception {
+        public void setSWTBotPreferencesRECORDER_FILE_NAME(String value) throws Exception {
 			setKeyValue("RECORDER_FILE_NAME", value);
     	}
 	
 	@RobotKeyword("Get SWTBotPreferences PLAYBACK_DELAY in milliseconds\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences PLAYBACK_DELAY |\n")
-        public long get_SWTBot_Preferences_PLAYBACK_DELAY() throws Exception {
+        public long getSWTBotPreferencesPLAYBACK_DELAY() throws Exception {
 			return ((Long)getKeyValue("PLAYBACK_DELAY")).longValue();
     	}
 
@@ -84,7 +86,7 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences PLAYBACK_DELAY | 10 ms | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_PLAYBACK_DELAY(String value) throws Exception {
+        public void setSWTBotPreferencesPLAYBACK_DELAY(String value) throws Exception {
 			long l = TimeParser.parseMillisecond(value);
 			setKeyValue("PLAYBACK_DELAY", l);
     	}
@@ -92,7 +94,7 @@ public class SWTBotPreferencesActionKeywords {
 	@RobotKeyword("Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT |\n")
-        public int get_SWTBot_Preferences_MAX_ERROR_SCREENSHOT_COUNT() throws Exception {
+        public int getSWTBotPreferencesMAX_ERROR_SCREENSHOT_COUNT() throws Exception {
 			return ((Integer)getKeyValue("MAX_ERROR_SCREENSHOT_COUNT")).intValue();
     	}
 
@@ -101,7 +103,7 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT | 20 | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_MAX_ERROR_SCREENSHOT_COUNT(String value) throws Exception {
+        public void setSWTBotPreferencesMAX_ERROR_SCREENSHOT_COUNT(String value) throws Exception {
 			int i = Integer.valueOf(value).intValue();
 			setKeyValue("MAX_ERROR_SCREENSHOT_COUNT", i);
     	}
@@ -109,7 +111,7 @@ public class SWTBotPreferencesActionKeywords {
 	@RobotKeyword("Get SWTBotPreferences SCREENSHOTS_DIR\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences SCREENSHOTS_DIR |\n")
-        public String get_SWTBot_Preferences_SCREENSHOTS_DIR() throws Exception {
+        public String getSWTBotPreferencesSCREENSHOTS_DIR() throws Exception {
 			return (String)getKeyValue("SCREENSHOTS_DIR");
     	}
 	@RobotKeyword("Set SWTBotPreferences SCREENSHOTS_DIR\n\n"
@@ -117,7 +119,7 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences SCREENSHOTS_DIR | ./screenshots | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_SCREENSHOTS_DIR(String value) throws Exception {
+        public void setSWTBotPreferencesSCREENSHOTS_DIR(String value) throws Exception {
 			setKeyValue("SCREENSHOTS_DIR", value);
     	}
 	
@@ -125,7 +127,7 @@ public class SWTBotPreferencesActionKeywords {
 	@RobotKeyword("Get SWTBotPreferences SCREENSHOT_FORMAT\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences SCREENSHOT_FORMAT |\n")
-        public String get_SWTBot_Preferences_SCREENSHOT_FORMAT() throws Exception {
+        public String getSWTBotPreferencesSCREENSHOT_FORMAT() throws Exception {
 			return (String)getKeyValue("SCREENSHOT_FORMAT");
     	}
 
@@ -135,14 +137,14 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences SCREENSHOT_FORMAT | PNG | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_SCREENSHOT_FORMAT(String value) throws Exception {
+        public void setSWTBotPreferencesSCREENSHOT_FORMAT(String value) throws Exception {
 			setKeyValue("SCREENSHOT_FORMAT", value);
     	}
 
 	@RobotKeyword("Get SWTBotPreferences KEYBOARD_LAYOUT\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences KEYBOARD_LAYOUT |\n")
-        public String get_SWTBot_Preferences_KEYBOARD_LAYOUT() throws Exception {
+        public String getSWTBotPreferencesKEYBOARD_LAYOUT() throws Exception {
 			return (String)getKeyValue("KEYBOARD_LAYOUT");
     	}
 	@RobotKeyword("Set SWTBotPreferences KEYBOARD_LAYOUT\n\n"
@@ -158,7 +160,7 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences KEYBOARD_LAYOUT | layout | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_KEYBOARD_LAYOUT(String value) throws Exception {
+        public void setSWTBotPreferencesKEYBOARD_LAYOUT(String value) throws Exception {
 			setKeyValue("KEYBOARD_LAYOUT", value);
     	}
 	
@@ -166,7 +168,7 @@ public class SWTBotPreferencesActionKeywords {
 	@RobotKeyword("Get SWTBotPreferences TYPE_INTERVAL in milliseconds\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences TYPE_INTERVAL |\n")
-        public int get_SWTBot_Preferences_TYPE_INTERVAL() throws Exception {
+        public int getSWTBotPreferencesTYPE_INTERVAL() throws Exception {
 			return ((Integer)getKeyValue("TYPE_INTERVAL")).intValue();
     	}
 	
@@ -175,7 +177,7 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences TYPE_INTERVAL | 20ms | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_TYPE_INTERVAL(String value) throws Exception {
+        public void setSWTBotPreferencesTYPE_INTERVAL(String value) throws Exception {
 			int i = ((Long)TimeParser.parseMillisecond(value)).intValue();
 			setKeyValue("TYPE_INTERVAL", i);
     	}
@@ -183,7 +185,7 @@ public class SWTBotPreferencesActionKeywords {
 	@RobotKeyword("Get SWTBotPreferences KEYBOARD_STRATEGY\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences KEYBOARD_STRATEGY |\n")
-        public String get_SWTBot_Preferences_KEYBOARD_STRATEGY() throws Exception {
+        public String getSWTBotPreferencesKEYBOARD_STRATEGY() throws Exception {
 			return (String)getKeyValue("KEYBOARD_STRATEGY");
     	}
 	@RobotKeyword("Set SWTBotPreferences KEYBOARD_STRATEGY\n\n"
@@ -191,15 +193,15 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences KEYBOARD_STRATEGY | org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_KEYBOARD_STRATEGY(String value) throws Exception {
+        public void setSWTBotPreferencesKEYBOARD_STRATEGY(String value) throws Exception {
 			setKeyValue("KEYBOARD_STRATEGY", value);
     	}
 
 	@RobotKeyword("Get SWTBotPreferences DEFAULT_POLL_DELAYL in milliseconds\n\n"
             + "Example:\n"
             + "| Get SWTBotPreferences DEFAULT_POLL_DELAY |\n")
-        public int get_SWTBot_Preferences_DEFAULT_POLL_DELAY() throws Exception {
-			return ((Integer)getKeyValue("DEFAULT_POLL_DELAY")).intValue();
+        public int getSWTBotPreferencesDEFAULT_POLL_DELAY() throws Exception {
+			return ((Integer)getKeyValue(DEFAULT_POLL_DELAY)).intValue();
     	}
 	
 	@RobotKeyword("Set SWTBotPreferences DEFAULT_POLL_DELAY in time format\n\n"
@@ -207,9 +209,9 @@ public class SWTBotPreferencesActionKeywords {
             + "Example:\n"
             + "| Set SWTBotPreferences DEFAULT_POLL_DELAY | 500ms | \n")
     @ArgumentNames({"value"})
-        public void set_SWTBot_Preferences_DEFAULT_POLL_DELAY(String value) throws Exception {
+        public void setSWTBotPreferencesDEFAULT_POLL_DELAY(String value) throws Exception {
 			int i = ((Long)TimeParser.parseMillisecond(value)).intValue();
-			setKeyValue("DEFAULT_POLL_DELAY", i);
+			setKeyValue(DEFAULT_POLL_DELAY, i);
     	}
 	
 }
