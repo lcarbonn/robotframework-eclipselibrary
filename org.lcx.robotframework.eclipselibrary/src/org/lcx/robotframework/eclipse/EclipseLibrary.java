@@ -7,12 +7,17 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+import org.apache.log4j.Logger;
 import org.robotframework.javalib.library.AnnotationLibrary;
 
+/**
+ * Eclipse Library annotation class
+ * @author laurent.carbonnaux
+ */
 public class EclipseLibrary extends AnnotationLibrary {
-	
-	private boolean debug = false;
 
+	private Logger log = LibraryLogger.getLogger();
+	
     public static final String ROBOT_LIBRARY_SCOPE = "GLOBAL";
     public static final String ROBOT_LIBRARY_VERSION = Configuration.getString("version"); //$NON-NLS-1$
 
@@ -42,12 +47,12 @@ public class EclipseLibrary extends AnnotationLibrary {
     }
 
     public Object runKeyword(String keywordName, Object[] args) {
-    	if(debug) {
-    		System.out.println("runKeyword:"+keywordName); //$NON-NLS-1$
-    		System.out.println("\targs:"+args.length); //$NON-NLS-1$
+    	if(log.isDebugEnabled()) {
+    		log.debug("runKeyword:"+keywordName); //$NON-NLS-1$
+    		log.debug("\targs:"+args.length); //$NON-NLS-1$
     		int i=0;
     		for (Object object : args) {
-    			System.out.println("\t\targ["+i+"]:"+object+", of class="+object.getClass().getName()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+    			log.debug("\t\targ["+i+"]:"+object+", of class="+object.getClass().getName()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
     			i++;
 			}
     	}

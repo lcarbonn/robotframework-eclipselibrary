@@ -10,15 +10,23 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.lcx.robotframework.eclipse.LibraryLogger;
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
 
+/**
+ * Bridge between EclipseLibrary and SWTBot plugin.
+ * The bridge is made thru EclipseLibrary plugin that redirect distant call to SWTBot plugin
+ * The bridge is opened by the EclipseLibrary plugin that give a reference to the SWTBotWorkbench
+ * @author laurent.carbonnaux
+ *
+ */
 public class SWTBotBridge {
-
-	private static boolean debug = false;
-	private static boolean startingdebug = false;
 	
+	private static Logger log = LibraryLogger.getLogger();
+
 	private static ClassLoader SWTBOTCLASSLOADER = null;
 	private static Object SWTWORKBENCHBOT = null;
 	
@@ -49,7 +57,11 @@ public class SWTBotBridge {
 	}
 	
 	public static Object callStaticMethod(String className, String methodName, Object... parameters) throws SWTBotBridgeException {
-		if(debug) System.out.println("=====================================");
+		if(log.isDebugEnabled()) {
+			log.debug("=====================================");
+			log.debug("called static method on class="+className);
+			log.debug("called static method="+methodName);
+		}
 		
 		try {
 			Class<?>[] parameterTypes = new Class[parameters.length];
@@ -59,12 +71,11 @@ public class SWTBotBridge {
 				}
 				parameterTypes[i] = getClass(parameters[i]);
 			}
-			if(debug) {
-				System.out.println("called static method="+methodName);
+			if(log.isDebugEnabled()) {
 				for (int i = 0; i < parameters.length; i++) {
-					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
+					log.debug("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
 				}
-				System.out.println("\t of class="+className);
+				log.debug("\t of class="+className);
 			}
 			
 			Class<?> c = loadClass(className);
@@ -80,7 +91,9 @@ public class SWTBotBridge {
 	}
 	
 	public static Object callMethod(Object instance, String methodName, Object... parameters) throws SWTBotBridgeException {
-		if(debug) System.out.println("=====================================");
+		if(log.isDebugEnabled()) {
+			log.debug("=====================================");
+		}
 		
 		try {
 			Object[] params = new Object[parameters.length];
@@ -97,18 +110,18 @@ public class SWTBotBridge {
 					params[i] = parameters[i];
 				}
 			}
-			if(debug) {
+			if(log.isDebugEnabled()) {
 				for(Method m : instance.getClass().getMethods()) {
-					System.out.println("method="+m);
+					log.debug("method="+m);
 					for(Class<?> c : m.getParameterTypes()) {
-						System.out.println("\tparamTypeClass="+c);
+						log.debug("\tparamTypeClass="+c);
 					}
 				}
-				System.out.println("called method="+methodName);
+				log.debug("called method="+methodName);
 				for (int i = 0; i < parameters.length; i++) {
-					System.out.println("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
+					log.debug("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
 				}
-				System.out.println("\t on instance of class="+instance.getClass().getName());
+				log.debug("\t on instance of class="+instance.getClass().getName());
 			}
 			
 			Method method = instance.getClass().getMethod(methodName, parameterTypes);
@@ -122,10 +135,10 @@ public class SWTBotBridge {
 	}
 
 	public static Object callMethodWithArray(Object instance, String methodName, Object arrayParameter) throws SWTBotBridgeException {
-		if(debug) {
-			System.out.println("=====================================");
-			System.out.println("called method="+methodName+", parametersClass="+arrayParameter.getClass().getName());
-			System.out.println("\t on instance of class="+instance.getClass().getName());
+		if(log.isDebugEnabled()) {
+			log.debug("=====================================");
+			log.debug("called method="+methodName+", parametersClass="+arrayParameter.getClass().getName());
+			log.debug("\t on instance of class="+instance.getClass().getName());
 		}
 
 		if(!arrayParameter.getClass().isArray()) {
@@ -133,11 +146,11 @@ public class SWTBotBridge {
 		}
 		
 		try {
-			if(debug) {
+			if(log.isDebugEnabled()) {
 				for(Method m : instance.getClass().getMethods()) {
-					System.out.println("method="+m);
+					log.debug("method="+m);
 					for(Class<?> c : m.getParameterTypes()) {
-						System.out.println("\tparamTypeClass="+c);
+						log.debug("\tparamTypeClass="+c);
 					}
 				}
 			}
@@ -151,16 +164,17 @@ public class SWTBotBridge {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	public static List<?> callMethodReturnPrimitiveList(Object instance, String methodName, Object... parameters) throws SWTBotBridgeException {
-		List ls = new ArrayList();
+		List<Object> ls = new ArrayList<Object>();
 		Object o = SWTBotBridge.callMethod(instance, methodName, parameters);
 
 		Object iterator = SWTBotBridge.callMethod(o, "iterator");
 		while((Boolean)SWTBotBridge.callMethod(iterator, "hasNext")) {
 			Object item = SWTBotBridge.callMethod(iterator, "next");
 
-			System.out.println("line="+item);
+			if(log.isDebugEnabled()){
+				log.debug("line="+item);
+			}
 
 			ls.add(item);
 		}
@@ -177,7 +191,9 @@ public class SWTBotBridge {
 			while((Boolean)SWTBotBridge.callMethod(iterator, "hasNext")) {
 				Object item = SWTBotBridge.callMethod(iterator, "next");
 
-				System.out.println("line="+item);
+				if(log.isDebugEnabled()){
+					log.debug("line="+item);
+				}
 
 				Constructor<?> c = clazz.getDeclaredConstructor(Object.class);
 				AbstractSWTBotObject localO = (AbstractSWTBotObject)c.newInstance(item);
@@ -196,7 +212,9 @@ public class SWTBotBridge {
 			int i = 0;
 			for (Object distO : o) {
 
-				if(debug) System.out.println("line="+distO);
+				if(log.isDebugEnabled()){
+					log.debug("line="+distO);
+				}
 				
 				Constructor<?> c = clazz.getDeclaredConstructor(Object.class);
 				AbstractSWTBotObject localO = (AbstractSWTBotObject)c.newInstance(distO);
@@ -233,14 +251,13 @@ public class SWTBotBridge {
 	}
 
 	public static Object getStaticField(String className, String fieldName) throws SWTBotBridgeException {
-		if(debug) System.out.println("=====================================");
+		if(log.isDebugEnabled()) {
+			log.debug("=====================================");
+			log.debug("called get static field="+fieldName);
+			log.debug("\t of class="+className);
+		}
 		
 		try {
-			if(debug) {
-				System.out.println("called get static field="+fieldName);
-				System.out.println("\t of class="+className);
-			}
-			
 			Class<?> c = loadClass(className);
 
 			Field field = c.getField(fieldName);
@@ -254,14 +271,13 @@ public class SWTBotBridge {
 	}
 	
 	public static void setStaticField(String className, String fieldName, Object value) throws SWTBotBridgeException {
-		if(debug) System.out.println("=====================================");
+		if(log.isDebugEnabled()) {
+			log.debug("=====================================");
+			log.debug("called set static field="+fieldName+", value="+value);
+			log.debug("\t of class="+className);
+		}
 		
 		try {
-			if(debug) {
-				System.out.println("called set static field="+fieldName+", value="+value);
-				System.out.println("\t of class="+className);
-			}
-			
 			Class<?> c = loadClass(className);
 
 			Field field = c.getField(fieldName);
@@ -275,16 +291,16 @@ public class SWTBotBridge {
 
 
 	public static void setSWTBOTCLASSLOADER(ClassLoader sWTBOTCLASSLOADER) {
-		if(startingdebug) {
-			System.out.println("SWTBOTCLASSLOADER cl before="+SWTBOTCLASSLOADER);
+		if(log.isDebugEnabled()) {
+			log.debug("SWTBOTCLASSLOADER cl before="+SWTBOTCLASSLOADER);
 		}
 		SWTBOTCLASSLOADER = sWTBOTCLASSLOADER;
 		if(sWTBOTCLASSLOADER==null) {
 			ISBRIDGEINITIATED = false;
 		}
 
-		if(startingdebug) {
-			System.out.println("SWTBOTCLASSLOADER cl after ="+SWTBOTCLASSLOADER);
+		if(log.isDebugEnabled()) {
+			log.debug("SWTBOTCLASSLOADER cl after ="+SWTBOTCLASSLOADER);
 		}
 	}
 
@@ -300,15 +316,15 @@ public class SWTBotBridge {
 
 
 	public static void setSWTWORKBENCHBOT(Object sWTWORKBENCHBOT) {
-		if(startingdebug) {
-			System.out.println("SWTWORKBENCHBOT before="+SWTWORKBENCHBOT);
+		if(log.isDebugEnabled()) {
+			log.debug("SWTWORKBENCHBOT before="+SWTWORKBENCHBOT);
 		}
 		
 		SWTWORKBENCHBOT = sWTWORKBENCHBOT;
 		ISBRIDGEINITIATED = (sWTWORKBENCHBOT!=null);
 
-		if(startingdebug) {
-			System.out.println("SWTWORKBENCHBOT after ="+SWTWORKBENCHBOT);
+		if(log.isDebugEnabled()) {
+			log.debug("SWTWORKBENCHBOT after ="+SWTWORKBENCHBOT);
 		}
 	}
 	
