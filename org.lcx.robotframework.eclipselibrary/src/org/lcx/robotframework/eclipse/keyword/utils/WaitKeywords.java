@@ -111,7 +111,7 @@ public class WaitKeywords {
             + "Example:\n"
             + "| Wait Until Shell Closes | 5 s | 10 ms |\n")
     @ArgumentNames({"timeout", "interval"})
-        public void waitUntilShellCloses(String... params) throws Exception {
+        public void waitUntilShellCloses(String... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
 		ICondition condition = Conditions.shellCloses(bot, shell);
@@ -124,7 +124,7 @@ public class WaitKeywords {
             + "Example:\n"
             + "| Wait Until Shell Is Active | This is the shell text | 5 s | 10 ms |\n")
     @ArgumentNames({"text", "*params"})
-        public void waitUntilShellIsActive(String text, String... params) throws Exception {
+        public void waitUntilShellIsActive(String text, String... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		ICondition condition = Conditions.shellIsActive(bot, text);
 		waitUntil(condition, params);
@@ -136,7 +136,7 @@ public class WaitKeywords {
             + "Example:\n"
             + "| Wait Until Table Has Rows | 5 s | 10 ms |\n")
     @ArgumentNames({"rowCount", "*params"})
-        public void waitUntilTableHasRows(String rowCount, String... params) throws Exception {
+        public void waitUntilTableHasRows(String rowCount, String... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	int rowCountI = Integer.valueOf(rowCount).intValue();
     	SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
@@ -150,7 +150,7 @@ public class WaitKeywords {
             + "Example:\n"
             + "| Wait While Last Widget Is Enabled | 5 s | 10 ms |\n")
     @ArgumentNames({"*params"})
-        public void waitWhileLastWidgetIsEnabled(String... params) throws Exception {
+        public void waitWhileLastWidgetIsEnabled(String... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	AbstractSWTBotControl widget = (AbstractSWTBotControl)Context.getCurrentWidget();
 		ICondition condition = Conditions.widgetIsEnabled(bot, widget);
@@ -163,7 +163,7 @@ public class WaitKeywords {
             + "Example:\n"
             + "| Wait While Shell Closes | 5 s | 10 ms |\n")
     @ArgumentNames({"*params"})
-        public void waitWhileShellCloses(String... params) throws Exception {
+        public void waitWhileShellCloses(String... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
 		ICondition condition = Conditions.shellCloses(bot, shell);
@@ -176,7 +176,7 @@ public class WaitKeywords {
             + "Example:\n"
             + "| Wait While Shell Is Active | This is the shell text | 5 s | 10 s | \n")
     @ArgumentNames({"text", "*params"})
-        public void waitWhileShellIsActive(String text, String... params) throws Exception {
+        public void waitWhileShellIsActive(String text, String... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		ICondition condition = Conditions.shellIsActive(bot, text);
 		waitWhile(condition, params);
@@ -188,7 +188,7 @@ public class WaitKeywords {
             + "Example:\n"
             + "| Wait While Table Has Rows | 5 s | 10 ms |\n")
     @ArgumentNames({"rowCount", "*params"})
-        public void waitWhileTableHasRows(String rowCount, String... params) throws Exception {
+        public void waitWhileTableHasRows(String rowCount, String... params) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	int rowCountI = Integer.valueOf(rowCount).intValue();
     	SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);

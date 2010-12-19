@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.eclipse.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class ViewMenuActionKeywords {
 	@RobotKeyword("Is the viewMenu checked\n\n"
             + "Example:\n"
             + "| Is ViewMenu Checked |\n")
-        public boolean isViewMenuChecked() throws Exception {
+        public boolean isViewMenuChecked() throws SWTBotBridgeException {
     		SWTBotViewMenu viewMenu = (SWTBotViewMenu)Context.getCurrentWidget(SWTBotViewMenu.class);
     		return viewMenu.isChecked();
     	}
@@ -22,8 +23,7 @@ public class ViewMenuActionKeywords {
 	@RobotKeyword("Click the viewMenu\n\n"
             + "Example:\n"
             + "| click ViewMenu |\n")
-//    @ArgumentNames({"text"})
-        public void clickViewMenu() throws Exception {
+        public void clickViewMenu() throws SWTBotBridgeException {
     		SWTBotViewMenu viewMenu = (SWTBotViewMenu)Context.getCurrentWidget(SWTBotViewMenu.class);
     		viewMenu.click();
     	}
@@ -31,8 +31,7 @@ public class ViewMenuActionKeywords {
 	@RobotKeyword("Get the text of the viewMenu\n\n"
             + "Example:\n"
             + "| Get ViewMenu Text |\n")
-//    @ArgumentNames({"text"})
-        public String getViewMenuText() throws Exception {
+        public String getViewMenuText() throws SWTBotBridgeException {
     		SWTBotViewMenu viewMenu = (SWTBotViewMenu)Context.getCurrentWidget(SWTBotViewMenu.class);
     		return viewMenu.getText();
     	}

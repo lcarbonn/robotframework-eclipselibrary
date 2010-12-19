@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.actionfact;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotMenu;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -15,7 +16,7 @@ public class MenuActionKeywords {
 	@RobotKeyword("Click on the menu\n\n"
             + "Example:\n"
             + "| Click Menu |\n")
-        public void clickMenu() throws Exception {
+        public void clickMenu() throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		menu.click();
     	}
@@ -23,7 +24,7 @@ public class MenuActionKeywords {
 	@RobotKeyword("Is the menu active\n\n"
             + "Example:\n"
             + "| Is Menu Active |\n")
-        public boolean isMenuActive() throws Exception {
+        public boolean isMenuActive() throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		return menu.isActive();
     	}
@@ -31,7 +32,7 @@ public class MenuActionKeywords {
 	@RobotKeyword("Is the menu enabled\n\n"
             + "Example:\n"
             + "| Is Menu Enabled |\n")
-        public boolean isMenuEnabled() throws Exception {
+        public boolean isMenuEnabled() throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		return menu.isEnabled();
     	}
@@ -39,7 +40,7 @@ public class MenuActionKeywords {
 	@RobotKeyword("Is the menu visible\n\n"
             + "Example:\n"
             + "| Is Menu Visible |\n")
-        public boolean isMenuVisible() throws Exception {
+        public boolean isMenuVisible() throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		return menu.isVisible();
     	}
@@ -48,7 +49,7 @@ public class MenuActionKeywords {
             + "Example:\n"
             + "| Get Menu Text |\n")
 //    @ArgumentNames({"text"})
-        public String getMenuText() throws Exception {
+        public String getMenuText() throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		return menu.getText();
     	}
@@ -57,7 +58,7 @@ public class MenuActionKeywords {
             + "Example:\n"
             + "| Get Menu Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getMenuTooltipText() throws Exception {
+        public String getMenuTooltipText() throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		return menu.getToolTipText();
     	}
@@ -66,7 +67,7 @@ public class MenuActionKeywords {
             + "Example:\n"
             + "| Set Focus On Menu |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnMenu() throws Exception {
+        public void setFocusOnMenu() throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		menu.setFocus();
     	}
@@ -75,7 +76,7 @@ public class MenuActionKeywords {
             + "Example:\n"
             + "| Find Sub Menu |\n")
     @ArgumentNames({"name"})
-        public void findSubMenu(String name) throws Exception {
+        public void findSubMenu(String name) throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		Context.setCurrentWidget(menu.menu(name));
     	}
@@ -83,7 +84,7 @@ public class MenuActionKeywords {
 	@RobotKeyword("Is the menu checked\n\n"
             + "Example:\n"
             + "| Is Menu Checked |\n")
-        public boolean isMenuChecked() throws Exception {
+        public boolean isMenuChecked() throws SWTBotBridgeException {
     		SWTBotMenu menu = (SWTBotMenu)Context.getCurrentWidget(SWTBotMenu.class);
     		return menu.isChecked();
     	}

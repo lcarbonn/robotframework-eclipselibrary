@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotCheckBox;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class CheckBoxActionKeywords {
 	@RobotKeyword("Click on the checkbox, (does not change the state, better use Select un Deselect)\n\n"
             + "Example:\n"
             + "| Click CheckBox |\n")
-        public void clickCheckBox() throws Exception {
+        public void clickCheckBox() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		checkbox.click();
     	}
@@ -22,7 +23,7 @@ public class CheckBoxActionKeywords {
 	@RobotKeyword("Select the checkbox\n\n"
             + "Example:\n"
             + "| Select CheckBox |\n")
-        public void selectCheckBox() throws Exception {
+        public void selectCheckBox() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		checkbox.select();
     	}
@@ -30,7 +31,7 @@ public class CheckBoxActionKeywords {
 	@RobotKeyword("Deselect the checkbox\n\n"
             + "Example:\n"
             + "| Deselect CheckBox |\n")
-        public void deselectCheckBox() throws Exception {
+        public void deselectCheckBox() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		checkbox.deselect();
     	}
@@ -38,7 +39,7 @@ public class CheckBoxActionKeywords {
 	@RobotKeyword("Is the checkbox checked\n\n"
             + "Example:\n"
             + "| Is CheckBox Checked |\n")
-        public boolean isCheckBoxChecked() throws Exception {
+        public boolean isCheckBoxChecked() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		return checkbox.isChecked();
     	}
@@ -46,7 +47,7 @@ public class CheckBoxActionKeywords {
 	@RobotKeyword("Is the checkbox active\n\n"
             + "Example:\n"
             + "| Is CheckBox Active |\n")
-        public boolean isCheckBoxActive() throws Exception {
+        public boolean isCheckBoxActive() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		return checkbox.isActive();
     	}
@@ -54,7 +55,7 @@ public class CheckBoxActionKeywords {
 	@RobotKeyword("Is the checkbox enabled\n\n"
             + "Example:\n"
             + "| Is CheckBox Enabled |\n")
-        public boolean isCheckBoxEnabled() throws Exception {
+        public boolean isCheckBoxEnabled() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		return checkbox.isEnabled();
     	}
@@ -62,7 +63,7 @@ public class CheckBoxActionKeywords {
 	@RobotKeyword("Is the checkbox visible\n\n"
             + "Example:\n"
             + "| Is CheckBox Visible |\n")
-        public boolean isCheckBoxVisible() throws Exception {
+        public boolean isCheckBoxVisible() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		return checkbox.isVisible();
     	}
@@ -71,7 +72,7 @@ public class CheckBoxActionKeywords {
             + "Example:\n"
             + "| Get CheckBox Text |\n")
 //    @ArgumentNames({"text"})
-        public String getCheckBoxText() throws Exception {
+        public String getCheckBoxText() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		return checkbox.getText();
     	}
@@ -80,7 +81,7 @@ public class CheckBoxActionKeywords {
             + "Example:\n"
             + "| Get CheckBox Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getCheckBoxTooltipText() throws Exception {
+        public String getCheckBoxTooltipText() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		return checkbox.getToolTipText();
     	}
@@ -89,7 +90,7 @@ public class CheckBoxActionKeywords {
             + "Example:\n"
             + "| Set Focus On CheckBox |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnCheckBox() throws Exception {
+        public void setFocusOnCheckBox() throws SWTBotBridgeException {
     		SWTBotCheckBox checkbox = (SWTBotCheckBox)Context.getCurrentWidget(SWTBotCheckBox.class);
     		checkbox.setFocus();
     	}

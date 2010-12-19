@@ -46,7 +46,9 @@ public class Color {
 	
 	private String format(int color) {
 		String r = Integer.toString(color, 16);
-		if(red<16) r = "0"+r;
+		if(red<16) {
+			r = "0"+r;
+		}
 		return r.toUpperCase();
 	}
 }

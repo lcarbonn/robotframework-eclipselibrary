@@ -5,6 +5,8 @@ package org.lcx.robotframework.swtbot.eclipse.finder.waits;
 
 import java.lang.reflect.Method;
 
+import org.apache.log4j.Logger;
+import org.lcx.robotframework.eclipse.LibraryLogger;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
@@ -14,6 +16,8 @@ import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotShell;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable;
 
 public class Conditions  {
+	
+	private static Logger log = LibraryLogger.getLogger();
 	
 	public static ICondition widgetIsEnabled(SWTWorkbenchBot SWTWorkbenchBot, AbstractSWTBotControl widget) 
 		throws SWTBotBridgeException {
@@ -27,7 +31,7 @@ public class Conditions  {
 			Condition cond = new Condition(o);
 			return cond;
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error in Conditions : widgetIsEnabled",e);
 			throw new SWTBotBridgeException("Error in Conditions : widgetIsEnabled", e);
 		}
 	}
@@ -44,7 +48,7 @@ public class Conditions  {
 			Condition cond = new Condition(o);
 			return cond;
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error in Conditions : shellCloses",e);
 			throw new SWTBotBridgeException("Error in Conditions : shellCloses", e);
 		}
 	}
@@ -61,7 +65,7 @@ public class Conditions  {
 			Condition cond = new Condition(o);
 			return cond;
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error in Conditions : shellIsActive",e);
 			throw new SWTBotBridgeException("Error in Conditions : shellIsActive", e);
 		}
 	}
@@ -78,8 +82,8 @@ public class Conditions  {
 			Condition cond = new Condition(o);
 			return cond;
 		} catch (Exception e) {
-			e.printStackTrace();
-			throw new SWTBotBridgeException("Error in Conditions : shellIsActive", e);
+			log.error("Error in Conditions : tableHasRows",e);
+			throw new SWTBotBridgeException("Error in Conditions : tableHasRows", e);
 		}
 	}
 }

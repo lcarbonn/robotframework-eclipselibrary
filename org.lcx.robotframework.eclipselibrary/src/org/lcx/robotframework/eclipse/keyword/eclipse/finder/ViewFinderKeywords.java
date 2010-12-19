@@ -20,7 +20,7 @@ public class ViewFinderKeywords {
             + "Example:\n"
             + "| Find Active View |\n")
 //    @ArgumentNames({"*params"})
-    public SWTBotView findActiveView() throws SWTBotBridgeException{
+    public SWTBotView findActiveView() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.activeView();
 	}
@@ -29,7 +29,7 @@ public class ViewFinderKeywords {
             + "Example:\n"
             + "| Find View By Id | id |\n")
     @ArgumentNames({"id"})
-    public SWTBotView findViewById(String id) throws SWTBotBridgeException{
+    public SWTBotView findViewById(String id) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.viewById(id);
 	}
@@ -38,7 +38,7 @@ public class ViewFinderKeywords {
             + "Example:\n"
             + "| Find View By Title | title |\n")
     @ArgumentNames({"tile"})
-    public SWTBotView findViewByTitle(String title) throws SWTBotBridgeException{
+    public SWTBotView findViewByTitle(String title) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.viewByTitle(title);
 	}
@@ -47,7 +47,7 @@ public class ViewFinderKeywords {
             + "Example:\n"
             + "| List All Views Title | \n")
 //    @ArgumentNames({"label"})
-    public String[] listAllViewsTitle() throws SWTBotBridgeException{
+    public String[] listAllViewsTitle() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	List<SWTBotView> views = bot.views();
 		String[] a = new String[views.size()];

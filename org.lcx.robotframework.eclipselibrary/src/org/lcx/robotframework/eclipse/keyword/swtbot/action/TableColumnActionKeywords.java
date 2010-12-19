@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableColumn;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class TableColumnActionKeywords {
 	@RobotKeyword("Click on the tableColumn\n\n"
             + "Example:\n"
             + "| Click TableColumn |\n")
-        public void clickTableColumn() throws Exception {
+        public void clickTableColumn() throws SWTBotBridgeException {
     		SWTBotTableColumn tableColumn = (SWTBotTableColumn)Context.getCurrentWidget(SWTBotTableColumn.class);
     		tableColumn.click();
     	}
@@ -22,7 +23,7 @@ public class TableColumnActionKeywords {
 	@RobotKeyword("Is the tableColumn active\n\n"
             + "Example:\n"
             + "| Is TableColumn Active |\n")
-        public boolean isTableColumnActive() throws Exception {
+        public boolean isTableColumnActive() throws SWTBotBridgeException {
     		SWTBotTableColumn tableColumn = (SWTBotTableColumn)Context.getCurrentWidget(SWTBotTableColumn.class);
     		return tableColumn.isActive();
     	}
@@ -30,7 +31,7 @@ public class TableColumnActionKeywords {
 	@RobotKeyword("Is the tableColumn enabled\n\n"
             + "Example:\n"
             + "| Is TableColumn Enabled |\n")
-        public boolean isTableColumnEnabled() throws Exception {
+        public boolean isTableColumnEnabled() throws SWTBotBridgeException {
     		SWTBotTableColumn tableColumn = (SWTBotTableColumn)Context.getCurrentWidget(SWTBotTableColumn.class);
     		return tableColumn.isEnabled();
     	}
@@ -38,7 +39,7 @@ public class TableColumnActionKeywords {
 	@RobotKeyword("Is the tableColumn visible\n\n"
             + "Example:\n"
             + "| Is TableColumn Visible |\n")
-        public boolean isTableColumnVisible() throws Exception {
+        public boolean isTableColumnVisible() throws SWTBotBridgeException {
     		SWTBotTableColumn tableColumn = (SWTBotTableColumn)Context.getCurrentWidget(SWTBotTableColumn.class);
     		return tableColumn.isVisible();
     	}
@@ -47,7 +48,7 @@ public class TableColumnActionKeywords {
             + "Example:\n"
             + "| Get TableColumn Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTableColumnText() throws Exception {
+        public String getTableColumnText() throws SWTBotBridgeException {
     		SWTBotTableColumn tableColumn = (SWTBotTableColumn)Context.getCurrentWidget(SWTBotTableColumn.class);
     		return tableColumn.getText();
     	}
@@ -56,7 +57,7 @@ public class TableColumnActionKeywords {
             + "Example:\n"
             + "| Get TableColumn Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTableColumnTooltipText() throws Exception {
+        public String getTableColumnTooltipText() throws SWTBotBridgeException {
     		SWTBotTableColumn tableColumn = (SWTBotTableColumn)Context.getCurrentWidget(SWTBotTableColumn.class);
     		return tableColumn.getToolTipText();
     	}
@@ -65,7 +66,7 @@ public class TableColumnActionKeywords {
             + "Example:\n"
             + "| Set Focus On TableColumn |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnTableColumn() throws Exception {
+        public void setFocusOnTableColumn() throws SWTBotBridgeException {
     		SWTBotTableColumn tableColumn = (SWTBotTableColumn)Context.getCurrentWidget(SWTBotTableColumn.class);
     		tableColumn.setFocus();
     	}

@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotList;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -15,7 +16,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Is the list active\n\n"
             + "Example:\n"
             + "| Is List Active |\n")
-        public boolean isListActive() throws Exception {
+        public boolean isListActive() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.isActive();
     	}
@@ -23,7 +24,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Is the list enabled\n\n"
             + "Example:\n"
             + "| Is List Enabled |\n")
-        public boolean isListEnabled() throws Exception {
+        public boolean isListEnabled() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.isEnabled();
     	}
@@ -31,7 +32,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Is the list visible\n\n"
             + "Example:\n"
             + "| Is List Visible |\n")
-        public boolean isListVisible() throws Exception {
+        public boolean isListVisible() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.isVisible();
     	}
@@ -39,8 +40,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Get the text of the list\n\n"
             + "Example:\n"
             + "| Get List Text |\n")
-//    @ArgumentNames({"text"})
-        public String getListText() throws Exception {
+        public String getListText() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.getText();
     	}
@@ -48,8 +48,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Get the tooltip text of the list\n\n"
             + "Example:\n"
             + "| Get List Tooltip Text |\n")
-//    @ArgumentNames({"text"})
-        public String getListTooltipText() throws Exception {
+        public String getListTooltipText() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.getToolTipText();
     	}
@@ -57,8 +56,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Set the focus on the list\n\n"
             + "Example:\n"
             + "| Set Focus On List |\n")
-//    @ArgumentNames({"text"})
-        public void setFocusOnList() throws Exception {
+        public void setFocusOnList() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		list.setFocus();
     	}
@@ -66,8 +64,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Get the items of the list\n\n"
             + "Example:\n"
             + "| Get List Items |\n")
-//    @ArgumentNames({"text"})
-        public String[] getListItems() throws Exception {
+        public String[] getListItems() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.getItems();
     	}
@@ -76,7 +73,7 @@ public class ListActionKeywords {
             + "Example:\n"
             + "| Get IndexOf Text In List |\n")
     @ArgumentNames({"text"})
-        public int getIndexOfTextInList(String text) throws Exception {
+        public int getIndexOfTextInList(String text) throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.indexOf(text);
     	}
@@ -85,7 +82,7 @@ public class ListActionKeywords {
             + "Example:\n"
             + "| Get Text Item At Index In List | 1 | \n")
     @ArgumentNames({"index"})
-        public String getTextItemAtIndexInList(String index) throws Exception {
+        public String getTextItemAtIndexInList(String index) throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		if(index!=null) {
 				Integer i = Integer.valueOf(index).intValue();
@@ -97,8 +94,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Count the items in the list\n\n"
             + "Example:\n"
             + "| Count List Items |\n")
-//    @ArgumentNames({"text"})
-        public int countListItems() throws Exception {
+        public int countListItems() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.itemCount();
     	}
@@ -107,7 +103,7 @@ public class ListActionKeywords {
             + "Example:\n"
             + "| Select Indexed Item In List | 0 |\n")
     @ArgumentNames({"index"})
-        public void selectIndexedItemInList(String index) throws Exception {
+        public void selectIndexedItemInList(String index) throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
 			int ind = Integer.valueOf(index).intValue();
     		list.select(ind);
@@ -117,7 +113,7 @@ public class ListActionKeywords {
             + "Example:\n"
             + "| Select Indexed Items In List | 0 | 1 |\n")
     @ArgumentNames({"*index"})
-        public void selectIndexedItemsInList(String... index) throws Exception {
+        public void selectIndexedItemsInList(String... index) throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		int[] indexes = new int[index.length];
     		for (int i = 0; i < index.length; i++) {
@@ -131,7 +127,7 @@ public class ListActionKeywords {
             + "Example:\n"
             + "| Select Item In List | item 0 | \n")
     @ArgumentNames({"text"})
-        public void selectItemInList(String text) throws Exception {
+        public void selectItemInList(String text) throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		list.select(text);
     	}
@@ -140,7 +136,7 @@ public class ListActionKeywords {
             + "Example:\n"
             + "| Select Items In List | item 0 | item 1 |\n")
     @ArgumentNames({"*text"})
-        public void selectItemsInList(String... text) throws Exception {
+        public void selectItemsInList(String... text) throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		list.select(text);
     	}
@@ -148,8 +144,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Get the selected items of the list\n\n"
             + "Example:\n"
             + "| Get Selected List Items |\n")
-//    @ArgumentNames({"text"})
-        public String[] getSelectedListItems() throws Exception {
+        public String[] getSelectedListItems() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.selection();
     	}
@@ -157,8 +152,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Get the count of selected items of the list\n\n"
             + "Example:\n"
             + "| Count List Selected Items |\n")
-//    @ArgumentNames({"text"})
-        public int countListSelectedItems() throws Exception {
+        public int countListSelectedItems() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		return list.selectionCount();
     	}
@@ -166,8 +160,7 @@ public class ListActionKeywords {
 	@RobotKeyword("Unselect all the items of the list\n\n"
             + "Example:\n"
             + "| Unselect All List Items |\n")
-//    @ArgumentNames({"text"})
-        public void unselectAllListItems() throws Exception {
+        public void unselectAllListItems() throws SWTBotBridgeException {
     		SWTBotList list = (SWTBotList)Context.getCurrentWidget(SWTBotList.class);
     		list.unselect();
     	}

@@ -22,7 +22,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| Find Active Editor |\n")
 //    @ArgumentNames({"*params"})
-    public SWTBotEditor findActiveEditor() throws SWTBotBridgeException{
+    public SWTBotEditor findActiveEditor() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.activeEditor();
 	}
@@ -31,7 +31,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| Close All Editors |\n")
 //    @ArgumentNames({"*params"})
-    public void closeAllEditors() throws SWTBotBridgeException{
+    public void closeAllEditors() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		bot.closeAllEditors();
 	}
@@ -40,7 +40,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| Save All Editors |\n")
 //    @ArgumentNames({"*params"})
-    public void saveAllEditors() throws SWTBotBridgeException{
+    public void saveAllEditors() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		bot.saveAllEditors();
 	}
@@ -49,7 +49,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| Find Editor By Id | id |\n")
     @ArgumentNames({"id"})
-    public SWTBotEditor findEditorById(String id) throws SWTBotBridgeException{
+    public SWTBotEditor findEditorById(String id) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.editorById(id);
 	}
@@ -58,7 +58,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| Find Editor By Title | title |\n")
     @ArgumentNames({"title"})
-    public SWTBotEditor findEditorByLabel(String title) throws SWTBotBridgeException{
+    public SWTBotEditor findEditorByLabel(String title) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.editorByTitle(title);
 	}
@@ -67,7 +67,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| List All Editors Title | \n")
 //    @ArgumentNames({"label"})
-    public String[] listAllEditorsTitle() throws SWTBotBridgeException{
+    public String[] listAllEditorsTitle() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	List<? extends SWTBotEditor> editors = bot.editors();
 		String[] a = new String[editors.size()];
@@ -83,7 +83,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| Find Active Eclipse Editor |\n")
 //    @ArgumentNames({"*params"})
-    public SWTBotEclipseEditor findActiveEclipseEditor() throws SWTBotBridgeException{
+    public SWTBotEclipseEditor findActiveEclipseEditor() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		SWTBotEditor editor = bot.activeEditor();
 		SWTBotEclipseEditor ee = editor.toTextEditor();
@@ -95,7 +95,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| Find Eclipse Editor By Id | id |\n")
     @ArgumentNames({"id"})
-    public SWTBotEclipseEditor findEclipseEditorById(String id) throws SWTBotBridgeException{
+    public SWTBotEclipseEditor findEclipseEditorById(String id) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		SWTBotEditor editor = bot.editorById(id);
 		editor.show();
@@ -108,7 +108,7 @@ public class EditorFinderKeywords {
             + "Example:\n"
             + "| Find Eclipse Editor By Title | title |\n")
     @ArgumentNames({"title"})
-    public SWTBotEclipseEditor findEclipseEditorByLabel(String title) throws SWTBotBridgeException{
+    public SWTBotEclipseEditor findEclipseEditorByLabel(String title) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();		
 		SWTBotEditor editor = bot.editorByTitle(title);
 		editor.show();

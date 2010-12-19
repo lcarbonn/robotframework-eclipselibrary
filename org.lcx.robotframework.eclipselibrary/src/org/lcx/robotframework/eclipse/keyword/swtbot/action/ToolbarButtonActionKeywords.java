@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class ToolbarButtonActionKeywords {
 	@RobotKeyword("Click on the toolbarButton\n\n"
             + "Example:\n"
             + "| Click ToolbarButton |\n")
-        public void clickToolbarButton() throws Exception {
+        public void clickToolbarButton() throws SWTBotBridgeException {
     		SWTBotToolbarButton toolbarButton = (SWTBotToolbarButton)Context.getCurrentWidget(SWTBotToolbarButton.class);
     		toolbarButton.click();
     	}
@@ -22,7 +23,7 @@ public class ToolbarButtonActionKeywords {
 	@RobotKeyword("Is the toolbarButton active\n\n"
             + "Example:\n"
             + "| Is ToolbarButton Active |\n")
-        public boolean isToolbarButtonActive() throws Exception {
+        public boolean isToolbarButtonActive() throws SWTBotBridgeException {
     		SWTBotToolbarButton toolbarButton = (SWTBotToolbarButton)Context.getCurrentWidget(SWTBotToolbarButton.class);
     		return toolbarButton.isActive();
     	}
@@ -30,7 +31,7 @@ public class ToolbarButtonActionKeywords {
 	@RobotKeyword("Is the toolbarButton enabled\n\n"
             + "Example:\n"
             + "| Is ToolbarButton Enabled |\n")
-        public boolean isToolbarButtonEnabled() throws Exception {
+        public boolean isToolbarButtonEnabled() throws SWTBotBridgeException {
     		SWTBotToolbarButton toolbarButton = (SWTBotToolbarButton)Context.getCurrentWidget(SWTBotToolbarButton.class);
     		return toolbarButton.isEnabled();
     	}
@@ -38,7 +39,7 @@ public class ToolbarButtonActionKeywords {
 	@RobotKeyword("Is the toolbarButton visible\n\n"
             + "Example:\n"
             + "| Is ToolbarButton Visible |\n")
-        public boolean isToolbarButtonVisible() throws Exception {
+        public boolean isToolbarButtonVisible() throws SWTBotBridgeException {
     		SWTBotToolbarButton toolbarButton = (SWTBotToolbarButton)Context.getCurrentWidget(SWTBotToolbarButton.class);
     		return toolbarButton.isVisible();
     	}
@@ -47,7 +48,7 @@ public class ToolbarButtonActionKeywords {
             + "Example:\n"
             + "| Get ToolbarButton Text |\n")
 //    @ArgumentNames({"text"})
-        public String getToolbarButtonText() throws Exception {
+        public String getToolbarButtonText() throws SWTBotBridgeException {
     		SWTBotToolbarButton toolbarButton = (SWTBotToolbarButton)Context.getCurrentWidget(SWTBotToolbarButton.class);
     		return toolbarButton.getText();
     	}
@@ -56,7 +57,7 @@ public class ToolbarButtonActionKeywords {
             + "Example:\n"
             + "| Get ToolbarButton Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getToolbarButtonTooltipText() throws Exception {
+        public String getToolbarButtonTooltipText() throws SWTBotBridgeException {
     		SWTBotToolbarButton toolbarButton = (SWTBotToolbarButton)Context.getCurrentWidget(SWTBotToolbarButton.class);
     		return toolbarButton.getToolTipText();
     	}
@@ -65,7 +66,7 @@ public class ToolbarButtonActionKeywords {
             + "Example:\n"
             + "| Set Focus On ToolbarButton |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnToolbarButton() throws Exception {
+        public void setFocusOnToolbarButton() throws SWTBotBridgeException {
     		SWTBotToolbarButton toolbarButton = (SWTBotToolbarButton)Context.getCurrentWidget(SWTBotToolbarButton.class);
     		toolbarButton.setFocus();
     	}

@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTabItem;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class TabItemActionKeywords {
 	@RobotKeyword("Is the tabItem active\n\n"
             + "Example:\n"
             + "| Is TabItem Active |\n")
-        public boolean isTabItemActive() throws Exception {
+        public boolean isTabItemActive() throws SWTBotBridgeException {
     		SWTBotTabItem tabItem = (SWTBotTabItem)Context.getCurrentWidget(SWTBotTabItem.class);
     		return tabItem.isActive();
     	}
@@ -22,7 +23,7 @@ public class TabItemActionKeywords {
 	@RobotKeyword("Is the tabItem enabled\n\n"
             + "Example:\n"
             + "| Is TabItem Enabled |\n")
-        public boolean isTabItemEnabled() throws Exception {
+        public boolean isTabItemEnabled() throws SWTBotBridgeException {
     		SWTBotTabItem tabItem = (SWTBotTabItem)Context.getCurrentWidget(SWTBotTabItem.class);
     		return tabItem.isEnabled();
     	}
@@ -30,7 +31,7 @@ public class TabItemActionKeywords {
 	@RobotKeyword("Is the tabItem visible\n\n"
             + "Example:\n"
             + "| Is TabItem Visible |\n")
-        public boolean isTabItemVisible() throws Exception {
+        public boolean isTabItemVisible() throws SWTBotBridgeException {
     		SWTBotTabItem tabItem = (SWTBotTabItem)Context.getCurrentWidget(SWTBotTabItem.class);
     		return tabItem.isVisible();
     	}
@@ -39,7 +40,7 @@ public class TabItemActionKeywords {
             + "Example:\n"
             + "| Get TabItem Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTabItemText() throws Exception {
+        public String getTabItemText() throws SWTBotBridgeException {
     		SWTBotTabItem tabItem = (SWTBotTabItem)Context.getCurrentWidget(SWTBotTabItem.class);
     		return tabItem.getText();
     	}
@@ -48,7 +49,7 @@ public class TabItemActionKeywords {
             + "Example:\n"
             + "| Get TabItem Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTabItemTooltipText() throws Exception {
+        public String getTabItemTooltipText() throws SWTBotBridgeException {
     		SWTBotTabItem tabItem = (SWTBotTabItem)Context.getCurrentWidget(SWTBotTabItem.class);
     		return tabItem.getToolTipText();
     	}
@@ -57,7 +58,7 @@ public class TabItemActionKeywords {
             + "Example:\n"
             + "| Set Focus On TabItem |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnTabItem() throws Exception {
+        public void setFocusOnTabItem() throws SWTBotBridgeException {
     		SWTBotTabItem tabItem = (SWTBotTabItem)Context.getCurrentWidget(SWTBotTabItem.class);
     		tabItem.setFocus();
     	}
@@ -66,7 +67,7 @@ public class TabItemActionKeywords {
             + "Example:\n"
             + "| Activate TabItem |\n")
 //    @ArgumentNames({"text"})
-        public void activateTabItem() throws Exception {
+        public void activateTabItem() throws SWTBotBridgeException {
     		SWTBotTabItem tabItem = (SWTBotTabItem)Context.getCurrentWidget(SWTBotTabItem.class);
     		tabItem.activate();
     	}

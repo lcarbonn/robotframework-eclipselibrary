@@ -51,7 +51,7 @@ public class SWTBotBridge {
 			Object instance = c.newInstance();
 			return instance;
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error in SWTBridge new instance", e);
 			throw new SWTBotBridgeException(e);
 		}
 	}

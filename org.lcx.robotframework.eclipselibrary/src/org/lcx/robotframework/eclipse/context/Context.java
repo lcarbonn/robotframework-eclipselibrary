@@ -49,7 +49,9 @@ public class Context {
 		Class<?> c = Context.currentContext().getWidget().getClass();
 		boolean isInstanceOf = false;
 		while(!isInstanceOf && !c.equals(Object.class)) {
-			if(c.equals(clazz)) isInstanceOf = true;	
+			if(c.equals(clazz)) {
+				isInstanceOf = true;	
+			}
 			c = c.getSuperclass();			
 		}
 		

@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotCombo;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -15,7 +16,7 @@ public class ComboActionKeywords {
 	@RobotKeyword("Get the number of items in the combo \n\n"
             + "Example:\n"
             + "| Count Items In Combo |\n")
-        public int countItemsInCombo() throws Exception {
+        public int countItemsInCombo() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.itemCount();
     	}
@@ -23,7 +24,7 @@ public class ComboActionKeywords {
 	@RobotKeyword("Get the items in the combo \n\n"
             + "Example:\n"
             + "| Get Combo Items |\n")
-        public String[] getComboItems() throws Exception {
+        public String[] getComboItems() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.items();
     	}
@@ -31,7 +32,7 @@ public class ComboActionKeywords {
 	@RobotKeyword("Get the text of the selection in the combo \n\n"
             + "Example:\n"
             + "| Get Selection Text In Combo |\n")
-        public String getSelectionTextInCombo() throws Exception {
+        public String getSelectionTextInCombo() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.selection();
     	}
@@ -39,7 +40,7 @@ public class ComboActionKeywords {
 	@RobotKeyword("Get the selection index in the combo \n\n"
             + "Example:\n"
             + "| Get Selection Index In Combo |\n")
-        public int getSelectionIndexInCombo() throws Exception {
+        public int getSelectionIndexInCombo() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.selectionIndex();
     	}
@@ -47,7 +48,7 @@ public class ComboActionKeywords {
 	@RobotKeyword("Set the focus on the combo \n\n"
             + "Example:\n"
             + "| Set Focus On Combo |\n")
-        public void setFocusOnCombo() throws Exception {
+        public void setFocusOnCombo() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		combo.setFocus();
     	}
@@ -56,7 +57,7 @@ public class ComboActionKeywords {
             + "Example:\n"
             + "| Get Selection Index In Combo | index |\n")
     @ArgumentNames({"index"})
-        public void setSelectionIndexInCombo(String index) throws Exception {
+        public void setSelectionIndexInCombo(String index) throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		int indexI = -1;
 			indexI = Integer.valueOf(index).intValue();
@@ -69,7 +70,7 @@ public class ComboActionKeywords {
             + "Example:\n"
             + "| Set Selection Text In Combo | text |\n")
     @ArgumentNames({"text"})
-        public void setSelectionTextInCombo(String text) throws Exception {
+        public void setSelectionTextInCombo(String text) throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		if(text!=null && text.length()>0) {
     			combo.setSelection(text);
@@ -80,7 +81,7 @@ public class ComboActionKeywords {
             + "Example:\n"
             + "| Set Combo Text|\n")
     @ArgumentNames({"text"})
-        public void setComboText(String text) throws Exception {
+        public void setComboText(String text) throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		if(text!=null && text.length()>0) {
     			combo.setText(text);
@@ -92,7 +93,7 @@ public class ComboActionKeywords {
             + "Example:\n"
             + "| Type Combo Text | text | 10 \n")
     @ArgumentNames({"text", "*interval"})
-        public void typeComboText(String text, String... interval) throws Exception {
+        public void typeComboText(String text, String... interval) throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		int intervalI = -1;
     		try {
@@ -115,7 +116,7 @@ public class ComboActionKeywords {
 	@RobotKeyword("Is the combo active\n\n"
             + "Example:\n"
             + "| Is Combo Active |\n")
-        public boolean isComboActive() throws Exception {
+        public boolean isComboActive() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.isActive();
     	}
@@ -123,7 +124,7 @@ public class ComboActionKeywords {
 	@RobotKeyword("Is the combo enabled\n\n"
             + "Example:\n"
             + "| Is Combo Enabled |\n")
-        public boolean isComboEnabled() throws Exception {
+        public boolean isComboEnabled() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.isEnabled();
     	}
@@ -131,7 +132,7 @@ public class ComboActionKeywords {
 	@RobotKeyword("Is the combo visible\n\n"
             + "Example:\n"
             + "| Is Combo Visible |\n")
-        public boolean isComboVisible() throws Exception {
+        public boolean isComboVisible() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.isVisible();
     	}
@@ -140,7 +141,7 @@ public class ComboActionKeywords {
             + "Example:\n"
             + "| Get Combo Text |\n")
 //    @ArgumentNames({"text"})
-        public String getComboText() throws Exception {
+        public String getComboText() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.getText();
     	}
@@ -149,7 +150,7 @@ public class ComboActionKeywords {
             + "Example:\n"
             + "| Get Combo Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getComboTooltipText() throws Exception {
+        public String getComboTooltipText() throws SWTBotBridgeException {
     		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
     		return combo.getToolTipText();
     	}

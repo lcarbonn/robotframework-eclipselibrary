@@ -5,6 +5,7 @@ package org.lcx.robotframework.eclipse.keyword.eclipse.action;
 
 import java.util.List;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEditor;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton;
@@ -17,7 +18,7 @@ public class EditorActionKeywords {
 	@RobotKeyword("Is the editor active\n\n"
             + "Example:\n"
             + "| Is Editor Active |\n")
-        public boolean isEditorActive() throws Exception {
+        public boolean isEditorActive() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		return editor.isActive();
     	}
@@ -26,7 +27,7 @@ public class EditorActionKeywords {
             + "Example:\n"
             + "| Close Editor |\n")
 //    @ArgumentNames({"text"})
-        public void closeEditor() throws Exception {
+        public void closeEditor() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		editor.close();
     	}
@@ -35,7 +36,7 @@ public class EditorActionKeywords {
             + "Example:\n"
             + "| Get Editor Title |\n")
 //    @ArgumentNames({"text"})
-        public String getEditorTitle() throws Exception {
+        public String getEditorTitle() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		return editor.getTitle();
     	}
@@ -44,7 +45,7 @@ public class EditorActionKeywords {
             + "Example:\n"
             + "| Show Editor |\n")
 //    @ArgumentNames({"text"})
-        public void showEditor() throws Exception {
+        public void showEditor() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		editor.show();
     	}
@@ -53,7 +54,7 @@ public class EditorActionKeywords {
             + "Example:\n"
             + "| Set Focus On Editor |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnEditor() throws Exception {
+        public void setFocusOnEditor() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		editor.setFocus();
     	}
@@ -62,7 +63,7 @@ public class EditorActionKeywords {
             + "Example:\n"
             + "| Get Editor ToolbarButtons tooltip |\n")
 //    @ArgumentNames({"text"})
-        public String[] getEditorToolbarButtons() throws Exception {
+        public String[] getEditorToolbarButtons() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		List<SWTBotToolbarButton> tbs = editor.getToolbarButtons();
     		String[] l = new String[tbs.size()];
@@ -78,7 +79,7 @@ public class EditorActionKeywords {
             + "Example:\n"
             + "| Save Editor |\n")
 //    @ArgumentNames({"text"})
-        public void saveEditor() throws Exception {
+        public void saveEditor() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		editor.save();
     	}
@@ -87,7 +88,7 @@ public class EditorActionKeywords {
             + "Example:\n"
             + "| Save And Close Editor |\n")
 //    @ArgumentNames({"text"})
-        public void saveAndCloseEditor() throws Exception {
+        public void saveAndCloseEditor() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		editor.saveAndClose();
     	}
@@ -95,7 +96,7 @@ public class EditorActionKeywords {
 	@RobotKeyword("Is the editor dirty\n\n"
             + "Example:\n"
             + "| Is Editor Dirty |\n")
-        public boolean isEditorDirty() throws Exception {
+        public boolean isEditorDirty() throws SWTBotBridgeException {
     		SWTBotEditor editor = (SWTBotEditor)Context.getCurrentWidget(SWTBotEditor.class);
     		return editor.isDirty();
     	}

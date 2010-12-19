@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotButton;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class ButtonActionKeywords {
 	@RobotKeyword("Click on the button\n\n"
             + "Example:\n"
             + "| Click Button |\n")
-        public void clickButton() throws Exception {
+        public void clickButton() throws SWTBotBridgeException {
     		SWTBotButton button = (SWTBotButton)Context.getCurrentWidget(SWTBotButton.class);
     		button.click();
     	}
@@ -22,7 +23,7 @@ public class ButtonActionKeywords {
 	@RobotKeyword("Is the button active\n\n"
             + "Example:\n"
             + "| Is Button Active |\n")
-        public boolean isButtonActive() throws Exception {
+        public boolean isButtonActive() throws SWTBotBridgeException {
     		SWTBotButton button = (SWTBotButton)Context.getCurrentWidget(SWTBotButton.class);
     		return button.isActive();
     	}
@@ -30,7 +31,7 @@ public class ButtonActionKeywords {
 	@RobotKeyword("Is the button enabled\n\n"
             + "Example:\n"
             + "| Is Button Enabled |\n")
-        public boolean isButtonEnabled() throws Exception {
+        public boolean isButtonEnabled() throws SWTBotBridgeException {
     		SWTBotButton button = (SWTBotButton)Context.getCurrentWidget(SWTBotButton.class);
     		return button.isEnabled();
     	}
@@ -38,7 +39,7 @@ public class ButtonActionKeywords {
 	@RobotKeyword("Is the button visible\n\n"
             + "Example:\n"
             + "| Is Button Visible |\n")
-        public boolean isButtonVisible() throws Exception {
+        public boolean isButtonVisible() throws SWTBotBridgeException {
     		SWTBotButton button = (SWTBotButton)Context.getCurrentWidget(SWTBotButton.class);
     		return button.isVisible();
     	}
@@ -47,7 +48,7 @@ public class ButtonActionKeywords {
             + "Example:\n"
             + "| Get Button Text |\n")
 //    @ArgumentNames({"text"})
-        public String getButtonText() throws Exception {
+        public String getButtonText() throws SWTBotBridgeException {
     		SWTBotButton button = (SWTBotButton)Context.getCurrentWidget(SWTBotButton.class);
     		return button.getText();
     	}
@@ -56,7 +57,7 @@ public class ButtonActionKeywords {
             + "Example:\n"
             + "| Get Button Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getButtonTooltipText() throws Exception {
+        public String getButtonTooltipText() throws SWTBotBridgeException {
     		SWTBotButton button = (SWTBotButton)Context.getCurrentWidget(SWTBotButton.class);
     		return button.getToolTipText();
     	}
@@ -65,7 +66,7 @@ public class ButtonActionKeywords {
             + "Example:\n"
             + "| Set Focus On Button |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnButton() throws Exception {
+        public void setFocusOnButton() throws SWTBotBridgeException {
     		SWTBotButton button = (SWTBotButton)Context.getCurrentWidget(SWTBotButton.class);
     		button.setFocus();
     	}

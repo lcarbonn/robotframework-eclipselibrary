@@ -6,6 +6,7 @@ package org.lcx.robotframework.eclipse.keyword.utils;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.keyword.swtbotpref.SWTBotPreferencesActionKeywords;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -25,7 +26,7 @@ public class SWTBotKeywords {
             + "| Capture Screenshot | screenshot.jpg |\n"
             + " will produced 20100131_screenshot.jpg for instance\n")
     @ArgumentNames({"fileName"})
-        public String captureScreenshot(String fileName) throws Exception {
+        public String captureScreenshot(String fileName) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotPreferencesActionKeywords pref = new SWTBotPreferencesActionKeywords();
     	Date now = new Date(System.currentTimeMillis());
@@ -40,7 +41,7 @@ public class SWTBotKeywords {
             + "| Set Capture Screenshot On Error | screenshot.jpg |\n"
             + " will produced 20100131_screenshot.jpg for instance\n")
     @ArgumentNames({"fileName"})
-        public void setCaptureScreenshotOnError(String fileName) throws Exception {
+        public void setCaptureScreenshotOnError(String fileName) {
 		
 			IS_CAPTURE_SCREENSHOT_ON_ERROR = true;
 			ERROR_SCREENSHOT_FILE_NAME = fileName;

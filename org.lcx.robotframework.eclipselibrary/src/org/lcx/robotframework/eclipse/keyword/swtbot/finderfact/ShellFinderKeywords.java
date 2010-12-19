@@ -19,7 +19,7 @@ public class ShellFinderKeywords {
             + "| Find Shell | text | index |\n"
             + "| Find Shell | text |  |\n")
     @ArgumentNames({"text", "*params"})
-    public SWTBotShell findShell(String text, String... params) throws SWTBotBridgeException{
+    public SWTBotShell findShell(String text, String... params) throws SWTBotBridgeException {
 		
     	int index = -1;
     	
@@ -47,7 +47,7 @@ public class ShellFinderKeywords {
             + "| Find Shell With Id | value | key | |\n"
             + "| Find Shell With Id | value | | |\n")
     @ArgumentNames({"value", "*params"})
-    public SWTBotShell findShellWithId(String value, String... params) throws SWTBotBridgeException{
+    public SWTBotShell findShellWithId(String value, String... params) throws SWTBotBridgeException {
 		
     	String key = null;
     	int index = -1;

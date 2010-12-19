@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotText;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -15,7 +16,7 @@ public class TextActionKeywords {
 	@RobotKeyword("Is the text active\n\n"
             + "Example:\n"
             + "| Is Text Active |\n")
-        public boolean isTextActive() throws Exception {
+        public boolean isTextActive() throws SWTBotBridgeException {
     		SWTBotText text = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
     		return text.isActive();
     	}
@@ -23,7 +24,7 @@ public class TextActionKeywords {
 	@RobotKeyword("Is the text enabled\n\n"
             + "Example:\n"
             + "| Is Text Enabled |\n")
-        public boolean isTextEnabled() throws Exception {
+        public boolean isTextEnabled() throws SWTBotBridgeException {
     		SWTBotText text = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
     		return text.isEnabled();
     	}
@@ -31,7 +32,7 @@ public class TextActionKeywords {
 	@RobotKeyword("Is the text visible\n\n"
             + "Example:\n"
             + "| Is Text Visible |\n")
-        public boolean isTextVisible() throws Exception {
+        public boolean isTextVisible() throws SWTBotBridgeException {
     		SWTBotText text = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
     		return text.isVisible();
     	}
@@ -40,7 +41,7 @@ public class TextActionKeywords {
             + "Example:\n"
             + "| Get Text Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTextText() throws Exception {
+        public String getTextText() throws SWTBotBridgeException {
     		SWTBotText text = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
     		return text.getText();
     	}
@@ -49,7 +50,7 @@ public class TextActionKeywords {
             + "Example:\n"
             + "| Get Text Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTextTooltipText() throws Exception {
+        public String getTextTooltipText() throws SWTBotBridgeException {
     		SWTBotText text = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
     		return text.getToolTipText();
     	}
@@ -58,7 +59,7 @@ public class TextActionKeywords {
             + "Example:\n"
             + "| Set Focus On Text |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnText() throws Exception {
+        public void setFocusOnText() throws SWTBotBridgeException {
     		SWTBotText text = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
     		text.setFocus();
     	}
@@ -67,7 +68,7 @@ public class TextActionKeywords {
 			+ "Example:\n"
             + "| Set Text Text | text | \n")
     @ArgumentNames({"text"})
-        public void setTextText(String text) throws Exception {
+        public void setTextText(String text) throws SWTBotBridgeException {
     		SWTBotText t = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
 			t.setText(text);
     	}
@@ -78,7 +79,7 @@ public class TextActionKeywords {
 			+ "Example:\n"
             + "| Type Text Text | text | \n")
     @ArgumentNames({"text"})
-        public void typeTextText(String text) throws Exception {
+        public void typeTextText(String text) throws SWTBotBridgeException {
     		SWTBotText t = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
 			t.typeText(text);
     	}
@@ -87,7 +88,7 @@ public class TextActionKeywords {
 			+ "Example:\n"
             + "| Type Text Text With Interval | text | \n")
     @ArgumentNames({"text", "interval"})
-        public void typeTextTextWithInterval(String text, String interval) throws Exception {
+        public void typeTextTextWithInterval(String text, String interval) throws SWTBotBridgeException {
     		SWTBotText t = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
     		Integer i = Integer.valueOf(interval).intValue();
 			t.typeText(text, i);
@@ -97,7 +98,7 @@ public class TextActionKeywords {
 			+ "Example:\n"
             + "| Select All Text | \n")
 //    @ArgumentNames({"text", "interval"})
-        public void selectAllText() throws Exception {
+        public void selectAllText() throws SWTBotBridgeException {
     		SWTBotText t = (SWTBotText)Context.getCurrentWidget(SWTBotText.class);
 			t.selectAll();
     	}

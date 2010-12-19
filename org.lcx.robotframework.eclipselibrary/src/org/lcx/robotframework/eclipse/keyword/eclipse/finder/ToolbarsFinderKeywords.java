@@ -5,6 +5,7 @@ package org.lcx.robotframework.eclipse.keyword.eclipse.finder;
 
 import java.util.List;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton;
@@ -24,7 +25,7 @@ public class ToolbarsFinderKeywords {
             + "Example:\n"
             + "| List Part All Toolbar Buttons Tooltip | \n")
 //    @ArgumentNames({"tooltip"})
-        public String[] listPartAllToolbarButtonsTooltip() throws Exception {
+        public String[] listPartAllToolbarButtonsTooltip() throws SWTBotBridgeException {
     		SWTBotWorkbenchPart part = (SWTBotWorkbenchPart)Context.getCurrentWidget();
    		
         	List<SWTBotToolbarButton> tbs = part.getToolbarButtons();
@@ -41,7 +42,7 @@ public class ToolbarsFinderKeywords {
             + "Example:\n"
             + "| Find Part Toolbar Button | tooltip | \n")
     @ArgumentNames({"tooltip"})
-        public SWTBotToolbarButton findPartToolbarButton(String tooltip) throws Exception {
+        public SWTBotToolbarButton findPartToolbarButton(String tooltip) throws SWTBotBridgeException {
     		SWTBotWorkbenchPart part = (SWTBotWorkbenchPart)Context.getCurrentWidget();
     		SWTBotToolbarButton b = part.toolbarButton(tooltip);
     		Context.setCurrentWidget(b);
@@ -52,7 +53,7 @@ public class ToolbarsFinderKeywords {
             + "Example:\n"
             + "| Find Part Toolbar Drop Down Button | tooltip | \n")
     @ArgumentNames({"tooltip"})
-        public SWTBotToolbarDropDownButton findPartToolbarDropDownButton(String tooltip) throws Exception {
+        public SWTBotToolbarDropDownButton findPartToolbarDropDownButton(String tooltip) throws SWTBotBridgeException {
     		SWTBotWorkbenchPart part = (SWTBotWorkbenchPart)Context.getCurrentWidget();
     		SWTBotToolbarDropDownButton b = part.toolbarDropDownButton(tooltip);
     		Context.setCurrentWidget(b);
@@ -63,7 +64,7 @@ public class ToolbarsFinderKeywords {
             + "Example:\n"
             + "| Find Part Toolbar Push Button | tooltip | \n")
     @ArgumentNames({"tooltip"})
-        public SWTBotToolbarPushButton findPartToolbarPushButton(String tooltip) throws Exception {
+        public SWTBotToolbarPushButton findPartToolbarPushButton(String tooltip) throws SWTBotBridgeException {
     		SWTBotWorkbenchPart part = (SWTBotWorkbenchPart)Context.getCurrentWidget();
     		SWTBotToolbarPushButton b = part.toolbarPushButton(tooltip);
     		Context.setCurrentWidget(b);
@@ -74,7 +75,7 @@ public class ToolbarsFinderKeywords {
             + "Example:\n"
             + "| Find Part Toolbar Radio Button | tooltip | \n")
     @ArgumentNames({"tooltip"})
-        public SWTBotToolbarRadioButton findPartToolbarRadioButton(String tooltip) throws Exception {
+        public SWTBotToolbarRadioButton findPartToolbarRadioButton(String tooltip) throws SWTBotBridgeException {
     		SWTBotWorkbenchPart part = (SWTBotWorkbenchPart)Context.getCurrentWidget();
     		SWTBotToolbarRadioButton b = part.toolbarRadioButton(tooltip);
     		Context.setCurrentWidget(b);
@@ -85,7 +86,7 @@ public class ToolbarsFinderKeywords {
             + "Example:\n"
             + "| Find Part Toolbar Toggle Button | tooltip | \n")
     @ArgumentNames({"tooltip"})
-        public SWTBotToolbarToggleButton findPartToolbarToggleButton(String tooltip) throws Exception {
+        public SWTBotToolbarToggleButton findPartToolbarToggleButton(String tooltip) throws SWTBotBridgeException {
     		SWTBotWorkbenchPart part = (SWTBotWorkbenchPart)Context.getCurrentWidget();
     		SWTBotToolbarToggleButton b = part.toolbarToggleButton(tooltip);
     		Context.setCurrentWidget(b);

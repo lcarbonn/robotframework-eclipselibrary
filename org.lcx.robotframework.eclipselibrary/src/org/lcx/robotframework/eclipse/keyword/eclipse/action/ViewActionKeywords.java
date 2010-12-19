@@ -5,6 +5,7 @@ package org.lcx.robotframework.eclipse.keyword.eclipse.action;
 
 import java.util.List;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotViewMenu;
@@ -27,7 +28,7 @@ public class ViewActionKeywords {
             + "Example:\n"
             + "| Close View |\n")
 //    @ArgumentNames({"text"})
-        public void closeView() throws Exception {
+        public void closeView() throws SWTBotBridgeException {
     		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
     		view.close();
     	}
@@ -36,7 +37,7 @@ public class ViewActionKeywords {
             + "Example:\n"
             + "| Get View Title |\n")
 //    @ArgumentNames({"text"})
-        public String getViewTitle() throws Exception {
+        public String getViewTitle() throws SWTBotBridgeException {
     		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
     		return view.getTitle();
     	}
@@ -45,7 +46,7 @@ public class ViewActionKeywords {
             + "Example:\n"
             + "| Show View |\n")
 //    @ArgumentNames({"text"})
-        public void showView() throws Exception {
+        public void showView() throws SWTBotBridgeException {
     		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
     		view.show();
     	}
@@ -54,7 +55,7 @@ public class ViewActionKeywords {
             + "Example:\n"
             + "| Set Focus On View |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnView() throws Exception {
+        public void setFocusOnView() throws SWTBotBridgeException {
     		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
     		view.setFocus();
     	}
@@ -63,7 +64,7 @@ public class ViewActionKeywords {
             + "Example:\n"
             + "| Get View Menu |\n")
     @ArgumentNames({"label", "*index"})
-        public void getViewMenu(String label, String... index) throws Exception {
+        public void getViewMenu(String label, String... index) throws SWTBotBridgeException {
     		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
     		int ind = -1;
     		try {
@@ -82,7 +83,7 @@ public class ViewActionKeywords {
             + "Example:\n"
             + "| Get View Menus Label |\n")
 //    @ArgumentNames({"text"})
-        public String[] getViewMenusLabel() throws Exception {
+        public String[] getViewMenusLabel() throws SWTBotBridgeException {
     		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
     		List<SWTBotViewMenu> tbs = view.menus();
     		String[] l = new String[tbs.size()];

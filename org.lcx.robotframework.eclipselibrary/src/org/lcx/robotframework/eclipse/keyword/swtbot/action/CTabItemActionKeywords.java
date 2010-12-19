@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotCTabItem;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class CTabItemActionKeywords {
 	@RobotKeyword("Is the cTabItem active\n\n"
             + "Example:\n"
             + "| Is CTabItem Active |\n")
-        public boolean isCTabItemActive() throws Exception {
+        public boolean isCTabItemActive() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		return cTabItem.isActive();
     	}
@@ -22,7 +23,7 @@ public class CTabItemActionKeywords {
 	@RobotKeyword("Is the cTabItem enabled\n\n"
             + "Example:\n"
             + "| Is CTabItem Enabled |\n")
-        public boolean isCTabItemEnabled() throws Exception {
+        public boolean isCTabItemEnabled() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		return cTabItem.isEnabled();
     	}
@@ -30,7 +31,7 @@ public class CTabItemActionKeywords {
 	@RobotKeyword("Is the cTabItem visible\n\n"
             + "Example:\n"
             + "| Is CTabItem Visible |\n")
-        public boolean isCTabItemVisible() throws Exception {
+        public boolean isCTabItemVisible() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		return cTabItem.isVisible();
     	}
@@ -39,7 +40,7 @@ public class CTabItemActionKeywords {
             + "Example:\n"
             + "| Get CTabItem Text |\n")
 //    @ArgumentNames({"text"})
-        public String getCTabItemText() throws Exception {
+        public String getCTabItemText() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		return cTabItem.getText();
     	}
@@ -48,7 +49,7 @@ public class CTabItemActionKeywords {
             + "Example:\n"
             + "| Get CTabItem Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getCTabItemTooltipText() throws Exception {
+        public String getCTabItemTooltipText() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		return cTabItem.getToolTipText();
     	}
@@ -57,7 +58,7 @@ public class CTabItemActionKeywords {
             + "Example:\n"
             + "| Set Focus On CTabItem |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnCTabItem() throws Exception {
+        public void setFocusOnCTabItem() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		cTabItem.setFocus();
     	}
@@ -66,7 +67,7 @@ public class CTabItemActionKeywords {
             + "Example:\n"
             + "| Activate CTabItem |\n")
 //    @ArgumentNames({"text"})
-        public void activateCTabItem() throws Exception {
+        public void activateCTabItem() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		cTabItem.activate();
     	}
@@ -75,7 +76,7 @@ public class CTabItemActionKeywords {
             + "Example:\n"
             + "| Close CTabItem |\n")
 //    @ArgumentNames({"text"})
-        public void closeCTabItem() throws Exception {
+        public void closeCTabItem() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		cTabItem.close();
     	}
@@ -84,7 +85,7 @@ public class CTabItemActionKeywords {
             + "Example:\n"
             + "| Show CTabItem |\n")
 //    @ArgumentNames({"text"})
-        public void showCTabItem() throws Exception {
+        public void showCTabItem() throws SWTBotBridgeException {
     		SWTBotCTabItem cTabItem = (SWTBotCTabItem)Context.getCurrentWidget(SWTBotCTabItem.class);
     		cTabItem.show();
     	}

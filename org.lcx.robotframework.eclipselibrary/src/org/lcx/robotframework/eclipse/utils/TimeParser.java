@@ -36,12 +36,16 @@ public class TimeParser {
 			hasChanged = false;
 			if(!isNumInProgress && (Character.isDigit(c) || c=='.')) {
 				isNumInProgress = true;
-				if(temp.toString().length()>0) listType.add(temp.toString().trim());
+				if(temp.toString().length()>0) {
+					listType.add(temp.toString().trim());
+				}
 				hasChanged = true;
 			}
 			if(isNumInProgress && !Character.isDigit(c) && c!='.') {
 				isNumInProgress = false;
-				if(temp.toString().length()>0) listValue.add(temp.toString().trim());
+				if(temp.toString().length()>0) {
+					listValue.add(temp.toString().trim());
+				}
 				hasChanged = true;
 			}
 			if(hasChanged) {
@@ -49,7 +53,9 @@ public class TimeParser {
 			}
 			temp.append(c);
 		}
-		if(temp.toString().length()>0) listType.add(temp.toString().trim());
+		if(temp.toString().length()>0) {
+			listType.add(temp.toString().trim());
+		}
 		
 		for (int i = 0; i < listType.size(); i++) {
 			String type = listType.get(i);
