@@ -3,11 +3,15 @@
  */
 package org.lcx.robotframework.eclipse.context;
 
+import org.apache.log4j.Logger;
+import org.lcx.robotframework.eclipse.LibraryLogger;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
 
 public class Context {
 
+	private static Logger log = LibraryLogger.getLogger();
+	
 	private static Context context;
 	
 	private AbstractSWTBotObject currentWidget;
@@ -24,7 +28,9 @@ public class Context {
 	}
 
 	public static void setCurrentWidget(AbstractSWTBotObject widget) {
-		//System.out.println("setCurrentWidget="+widget.getClass().getName());
+		if(log.isDebugEnabled()) {
+			log.debug(("Context.setCurrentWidget="+widget.getClass().getName()));
+		}
 		Context.currentContext().setWidget(widget);
 	}
 
