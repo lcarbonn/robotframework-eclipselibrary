@@ -5,6 +5,7 @@ package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
 import java.util.List;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTable;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableColumn;
@@ -19,7 +20,7 @@ public class TableActionKeywords {
 	@RobotKeyword("Is the table active\n\n"
             + "Example:\n"
             + "| Is Table Active |\n")
-        public boolean isTableActive() throws Exception {
+        public boolean isTableActive() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.isActive();
     	}
@@ -27,7 +28,7 @@ public class TableActionKeywords {
 	@RobotKeyword("Is the table enabled\n\n"
             + "Example:\n"
             + "| Is Table Enabled |\n")
-        public boolean isTableEnabled() throws Exception {
+        public boolean isTableEnabled() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.isEnabled();
     	}
@@ -35,7 +36,7 @@ public class TableActionKeywords {
 	@RobotKeyword("Is the table visible\n\n"
             + "Example:\n"
             + "| Is Table Visible |\n")
-        public boolean isTableVisible() throws Exception {
+        public boolean isTableVisible() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.isVisible();
     	}
@@ -44,7 +45,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTableText() throws Exception {
+        public String getTableText() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.getText();
     	}
@@ -53,7 +54,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTableTooltipText() throws Exception {
+        public String getTableTooltipText() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.getToolTipText();
     	}
@@ -62,7 +63,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Set Focus On Table |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnTable() throws Exception {
+        public void setFocusOnTable() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		table.setFocus();
     	}
@@ -73,7 +74,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Cell |\n")
     @ArgumentNames({"row", "column"})
-        public String getTableCell(String row, String column) throws Exception {
+        public String getTableCell(String row, String column) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		Integer r = Integer.valueOf(row).intValue();
     		Integer c = Integer.valueOf(column).intValue();
@@ -86,7 +87,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Cell With Column Name|\n")
     @ArgumentNames({"row", "columnName"})
-        public String getTableCellWithColumnName(String row, String columnName) throws Exception {
+        public String getTableCellWithColumnName(String row, String columnName) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		Integer r = Integer.valueOf(row).intValue();
     		return table.cell(r, columnName);
@@ -98,7 +99,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Click Table Cell|\n")
     @ArgumentNames({"row", "column"})
-        public void clickTableCell(String row, String column) throws Exception {
+        public void clickTableCell(String row, String column) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		Integer r = Integer.valueOf(row).intValue();
     		Integer c = Integer.valueOf(column).intValue();
@@ -109,7 +110,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Count Table Columns|\n")
 //    @ArgumentNames({"row", "column"})
-        public int countTableColumns() throws Exception {
+        public int countTableColumns() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.columnCount();
     	}
@@ -118,7 +119,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Count Table Rows|\n")
 //    @ArgumentNames({"row", "column"})
-        public int countTableRows() throws Exception {
+        public int countTableRows() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.rowCount();
     	}
@@ -127,7 +128,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Columns|\n")
 //    @ArgumentNames({"row", "column"})
-        public String[] getTableColumns() throws Exception {
+        public String[] getTableColumns() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		List<String> list = table.columns();
     		String[] a = new String[list.size()];
@@ -139,7 +140,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Table Contains Item |\n")
     @ArgumentNames({"text"})
-        public boolean tableContainsItem(String text) throws Exception {
+        public boolean tableContainsItem(String text) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.containsItem(text);
     	}
@@ -150,7 +151,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Double Click Table Cell|\n")
     @ArgumentNames({"row", "column"})
-        public void doubleClickTableCell(String row, String column) throws Exception {
+        public void doubleClickTableCell(String row, String column) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		Integer r = Integer.valueOf(row).intValue();
     		Integer c = Integer.valueOf(column).intValue();
@@ -162,7 +163,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Item At Row | 0 |\n")
     @ArgumentNames({"row"})
-        public SWTBotTableItem getTableItemAtRow(String row) throws Exception {
+        public SWTBotTableItem getTableItemAtRow(String row) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		Integer r = Integer.valueOf(row).intValue();
     		SWTBotTableItem item = table.getTableItem(r);
@@ -174,7 +175,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Item With Text | text |\n")
     @ArgumentNames({"text"})
-        public SWTBotTableItem getTableItemWithText(String text) throws Exception {
+        public SWTBotTableItem getTableItemWithText(String text) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		SWTBotTableItem item = table.getTableItem(text);
     		Context.setCurrentWidget(item);
@@ -185,7 +186,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Header With Text | text |\n")
     @ArgumentNames({"text"})
-        public SWTBotTableColumn getTableHeader(String text) throws Exception {
+        public SWTBotTableColumn getTableHeader(String text) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		SWTBotTableColumn header = table.header(text);
     		Context.setCurrentWidget(header);
@@ -197,7 +198,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Item Index | text |\n")
     @ArgumentNames({"text"})
-        public int getTableItemIndex(String text) throws Exception {
+        public int getTableItemIndex(String text) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.indexOf(text);
     	}
@@ -208,7 +209,7 @@ public class TableActionKeywords {
             + "\t column the column number, 0 based."
             + "| Get Table Item Index In Column Name | text | name | \n")
     @ArgumentNames({"text", "columnName"})
-        public int getTableItemIndexInColumnName(String text, String columnName) throws Exception {
+        public int getTableItemIndexInColumnName(String text, String columnName) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.indexOf(text, columnName);
     	}
@@ -219,7 +220,7 @@ public class TableActionKeywords {
             + "\t column the column number, 0 based."
             + "| Get Table Item Index In Column| text | 0 | \n")
     @ArgumentNames({"text", "column"})
-        public int getTableItemIndexInColumn(String text, String column) throws Exception {
+        public int getTableItemIndexInColumn(String text, String column) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		Integer c = Integer.valueOf(column).intValue();
     		return table.indexOf(text, c);
@@ -230,7 +231,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Get Table Column Index | columnName | \n")
     @ArgumentNames({"columnName"})
-        public int getTableColumnIndex(String columnName) throws Exception {
+        public int getTableColumnIndex(String columnName) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.indexOfColumn(columnName);
     	}
@@ -239,7 +240,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Select Indexed Items In Table | 0 | 1 |\n")
     @ArgumentNames({"*index"})
-        public void selectIndexedItemsInTable(String... index) throws Exception {
+        public void selectIndexedItemsInTable(String... index) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		int[] indexes = new int[index.length];
     		for (int i = 0; i < index.length; i++) {
@@ -253,7 +254,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Select Items In Table | item0 | item1 |\n")
     @ArgumentNames({"*text"})
-        public void selectItemsInTable(String... text) throws Exception {
+        public void selectItemsInTable(String... text) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		table.select(text);
     	}
@@ -262,7 +263,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Count Table Selected Items |\n")
 //    @ArgumentNames({"text"})
-        public int countTableSelectedItems() throws Exception {
+        public int countTableSelectedItems() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		return table.selectionCount();
     	}
@@ -271,7 +272,7 @@ public class TableActionKeywords {
             + "Example:\n"
             + "| Unselect All Table Items |\n")
 //    @ArgumentNames({"text"})
-        public void unselectAllTableItems() throws Exception {
+        public void unselectAllTableItems() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
     		table.unselect();
     	}

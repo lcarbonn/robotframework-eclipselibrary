@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToggleButton;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class ToggleButtonActionKeywords {
 	@RobotKeyword("Click on the toggleButton\n\n"
             + "Example:\n"
             + "| Click ToggleButton |\n")
-        public void clickToggleButton() throws Exception {
+        public void clickToggleButton() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		toggleButton.click();
     	}
@@ -22,7 +23,7 @@ public class ToggleButtonActionKeywords {
 	@RobotKeyword("Is the toggleButton active\n\n"
             + "Example:\n"
             + "| Is ToggleButton Active |\n")
-        public boolean isToggleButtonActive() throws Exception {
+        public boolean isToggleButtonActive() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		return toggleButton.isActive();
     	}
@@ -30,7 +31,7 @@ public class ToggleButtonActionKeywords {
 	@RobotKeyword("Is the toggleButton enabled\n\n"
             + "Example:\n"
             + "| Is ToggleButton Enabled |\n")
-        public boolean isToggleButtonEnabled() throws Exception {
+        public boolean isToggleButtonEnabled() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		return toggleButton.isEnabled();
     	}
@@ -38,7 +39,7 @@ public class ToggleButtonActionKeywords {
 	@RobotKeyword("Is the toggleButton visible\n\n"
             + "Example:\n"
             + "| Is ToggleButton Visible |\n")
-        public boolean isToggleButtonVisible() throws Exception {
+        public boolean isToggleButtonVisible() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		return toggleButton.isVisible();
     	}
@@ -47,7 +48,7 @@ public class ToggleButtonActionKeywords {
             + "Example:\n"
             + "| Get ToggleButton Text |\n")
 //    @ArgumentNames({"text"})
-        public String getToggleButtonText() throws Exception {
+        public String getToggleButtonText() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		return toggleButton.getText();
     	}
@@ -56,7 +57,7 @@ public class ToggleButtonActionKeywords {
             + "Example:\n"
             + "| Get ToggleButton Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getToggleButtonTooltipText() throws Exception {
+        public String getToggleButtonTooltipText() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		return toggleButton.getToolTipText();
     	}
@@ -65,7 +66,7 @@ public class ToggleButtonActionKeywords {
             + "Example:\n"
             + "| Set Focus On ToggleButton |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnToggleButton() throws Exception {
+        public void setFocusOnToggleButton() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		toggleButton.setFocus();
     	}
@@ -74,7 +75,7 @@ public class ToggleButtonActionKeywords {
             + "Example:\n"
             + "| Is ToggleButton Pressed |\n")
 //    @ArgumentNames({"text"})
-        public boolean isToggleButtonPressed() throws Exception {
+        public boolean isToggleButtonPressed() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		return toggleButton.isPressed();
     	}
@@ -83,7 +84,7 @@ public class ToggleButtonActionKeywords {
             + "Example:\n"
             + "| Press ToggleButton |\n")
 //    @ArgumentNames({"text"})
-        public void pressToggleButton() throws Exception {
+        public void pressToggleButton() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		toggleButton.press();
     	}
@@ -92,7 +93,7 @@ public class ToggleButtonActionKeywords {
             + "Example:\n"
             + "| Unpress ToggleButton |\n")
 //    @ArgumentNames({"text"})
-        public void unpressToggleButton() throws Exception {
+        public void unpressToggleButton() throws SWTBotBridgeException {
     		SWTBotToggleButton toggleButton = (SWTBotToggleButton)Context.getCurrentWidget(SWTBotToggleButton.class);
     		toggleButton.unpress();
     	}

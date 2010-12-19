@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.finderfact;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -16,7 +17,7 @@ public class ContextMenuFinderKeywords {
             + "Example:\n"
             + "| Find Context Menu | text | \n")
     @ArgumentNames({"text"})
-        public void findContextMenu(String text) throws Exception {
+        public void findContextMenu(String text) throws SWTBotBridgeException {
     	AbstractSWTBotControl widget = (AbstractSWTBotControl)Context.getCurrentWidget();
     	Context.setCurrentWidget(widget.contextMenu(text));
     }

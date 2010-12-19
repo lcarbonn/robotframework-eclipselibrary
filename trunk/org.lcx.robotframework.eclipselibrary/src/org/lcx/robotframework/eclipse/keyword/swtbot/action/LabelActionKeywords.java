@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotLabel;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class LabelActionKeywords {
 	@RobotKeyword("Get the label alignment\n\n"
             + "Example:\n"
             + "| Get Label Alignment |\n")
-        public int getLabelAlignment() throws Exception {
+        public int getLabelAlignment() throws SWTBotBridgeException {
     		SWTBotLabel label = (SWTBotLabel)Context.getCurrentWidget(SWTBotLabel.class);
     		return label.alignment();
     	}
@@ -22,7 +23,7 @@ public class LabelActionKeywords {
 	@RobotKeyword("Is the label active\n\n"
             + "Example:\n"
             + "| Is Label Active |\n")
-        public boolean isLabelActive() throws Exception {
+        public boolean isLabelActive() throws SWTBotBridgeException {
     		SWTBotLabel label = (SWTBotLabel)Context.getCurrentWidget(SWTBotLabel.class);
     		return label.isActive();
     	}
@@ -30,7 +31,7 @@ public class LabelActionKeywords {
 	@RobotKeyword("Is the label enabled\n\n"
             + "Example:\n"
             + "| Is Label Enabled |\n")
-        public boolean isLabelEnabled() throws Exception {
+        public boolean isLabelEnabled() throws SWTBotBridgeException {
     		SWTBotLabel label = (SWTBotLabel)Context.getCurrentWidget(SWTBotLabel.class);
     		return label.isEnabled();
     	}
@@ -38,7 +39,7 @@ public class LabelActionKeywords {
 	@RobotKeyword("Is the label visible\n\n"
             + "Example:\n"
             + "| Is Label Visible |\n")
-        public boolean isLabelVisible() throws Exception {
+        public boolean isLabelVisible() throws SWTBotBridgeException {
     		SWTBotLabel label = (SWTBotLabel)Context.getCurrentWidget(SWTBotLabel.class);
     		return label.isVisible();
     	}
@@ -47,7 +48,7 @@ public class LabelActionKeywords {
             + "Example:\n"
             + "| Get Label Text |\n")
 //    @ArgumentNames({"text"})
-        public String getLabelText() throws Exception {
+        public String getLabelText() throws SWTBotBridgeException {
     		SWTBotLabel label = (SWTBotLabel)Context.getCurrentWidget(SWTBotLabel.class);
     		return label.getText();
     	}
@@ -56,7 +57,7 @@ public class LabelActionKeywords {
             + "Example:\n"
             + "| Get Label Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getLabelTooltipText() throws Exception {
+        public String getLabelTooltipText() throws SWTBotBridgeException {
     		SWTBotLabel label = (SWTBotLabel)Context.getCurrentWidget(SWTBotLabel.class);
     		return label.getToolTipText();
     	}
@@ -65,7 +66,7 @@ public class LabelActionKeywords {
             + "Example:\n"
             + "| Set Focus On Label |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnLabel() throws Exception {
+        public void setFocusOnLabel() throws SWTBotBridgeException {
     		SWTBotLabel label = (SWTBotLabel)Context.getCurrentWidget(SWTBotLabel.class);
     		label.setFocus();
     	}

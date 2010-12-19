@@ -18,7 +18,7 @@ public class TrayItemFinderKeywords {
             + "Example:\n"
             + "| Find TrayItem | 0 |\n")
     @ArgumentNames({"index"})
-    public SWTBotTrayItem findTrayItem(String index) throws SWTBotBridgeException{
+    public SWTBotTrayItem findTrayItem(String index) throws SWTBotBridgeException {
 
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		if(index!=null) {
@@ -33,7 +33,7 @@ public class TrayItemFinderKeywords {
             + "Examples:\n"
             + "| Find TrayItem With Tooltip | tooltip | index |\n")
     @ArgumentNames({"tooltip", "*index"})
-	public SWTBotTrayItem findTrayItemWithTooltip(String tooltip, String... index) throws SWTBotBridgeException{
+	public SWTBotTrayItem findTrayItemWithTooltip(String tooltip, String... index) throws SWTBotBridgeException {
 		
     	int indexI = -1;
     	

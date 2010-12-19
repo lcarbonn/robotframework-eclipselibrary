@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.eclipse.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotPerspective;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class PerspectiveActionKeywords {
 	@RobotKeyword("Is the perspective active\n\n"
             + "Example:\n"
             + "| Is Perspective Active |\n")
-        public boolean isPerspectiveActive() throws Exception {
+        public boolean isPerspectiveActive() throws SWTBotBridgeException {
     		SWTBotPerspective perspective = (SWTBotPerspective)Context.getCurrentWidget(SWTBotPerspective.class);
     		return perspective.isActive();
     	}
@@ -23,7 +24,7 @@ public class PerspectiveActionKeywords {
             + "Example:\n"
             + "| Activate Perspective |\n")
 //    @ArgumentNames({"text"})
-        public void activatePerspective() throws Exception {
+        public void activatePerspective() throws SWTBotBridgeException {
     		SWTBotPerspective perspective = (SWTBotPerspective)Context.getCurrentWidget(SWTBotPerspective.class);
     		perspective.activate();
     	}
@@ -32,7 +33,7 @@ public class PerspectiveActionKeywords {
             + "Example:\n"
             + "| Get Perspective Label |\n")
 //    @ArgumentNames({"text"})
-        public String getPerspectiveLabel() throws Exception {
+        public String getPerspectiveLabel() throws SWTBotBridgeException {
     		SWTBotPerspective perspective = (SWTBotPerspective)Context.getCurrentWidget(SWTBotPerspective.class);
     		return perspective.getLabel();
     	}

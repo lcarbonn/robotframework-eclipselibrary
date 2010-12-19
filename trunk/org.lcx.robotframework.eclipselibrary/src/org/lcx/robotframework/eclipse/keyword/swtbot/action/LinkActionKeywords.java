@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotLink;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -15,7 +16,7 @@ public class LinkActionKeywords {
 	@RobotKeyword("Click on the link\n\n"
             + "Example:\n"
             + "| Click Link |\n")
-        public void clickLink() throws Exception {
+        public void clickLink() throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
     		link.click();
     	}
@@ -23,7 +24,7 @@ public class LinkActionKeywords {
 	@RobotKeyword("Is the link active\n\n"
             + "Example:\n"
             + "| Is Link Active |\n")
-        public boolean isLinkActive() throws Exception {
+        public boolean isLinkActive() throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
     		return link.isActive();
     	}
@@ -31,7 +32,7 @@ public class LinkActionKeywords {
 	@RobotKeyword("Is the link enabled\n\n"
             + "Example:\n"
             + "| Is Link Enabled |\n")
-        public boolean isLinkEnabled() throws Exception {
+        public boolean isLinkEnabled() throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
     		return link.isEnabled();
     	}
@@ -39,7 +40,7 @@ public class LinkActionKeywords {
 	@RobotKeyword("Is the link visible\n\n"
             + "Example:\n"
             + "| Is Link Visible |\n")
-        public boolean isLinkVisible() throws Exception {
+        public boolean isLinkVisible() throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
     		return link.isVisible();
     	}
@@ -47,8 +48,7 @@ public class LinkActionKeywords {
 	@RobotKeyword("Get the text of the link\n\n"
             + "Example:\n"
             + "| Get Link Text |\n")
-//    @ArgumentNames({"text"})
-        public String getLinkText() throws Exception {
+        public String getLinkText() throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
     		return link.getText();
     	}
@@ -56,8 +56,7 @@ public class LinkActionKeywords {
 	@RobotKeyword("Get the tooltip text of the link\n\n"
             + "Example:\n"
             + "| Get Link Tooltip Text |\n")
-//    @ArgumentNames({"text"})
-        public String getLinkTooltipText() throws Exception {
+        public String getLinkTooltipText() throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
     		return link.getToolTipText();
     	}
@@ -65,8 +64,7 @@ public class LinkActionKeywords {
 	@RobotKeyword("Set the focus on the link\n\n"
             + "Example:\n"
             + "| Set Focus On Link |\n")
-//    @ArgumentNames({"text"})
-        public void setFocusOnLink() throws Exception {
+        public void setFocusOnLink() throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
     		link.setFocus();
     	}
@@ -75,7 +73,7 @@ public class LinkActionKeywords {
             + "Example:\n"
             + "| Click On Link With HyperLink|\n")
     @ArgumentNames({"hyperLinkText"})
-        public void clickOnLinkWithHyperLink(String hyperLinkText) throws Exception {
+        public void clickOnLinkWithHyperLink(String hyperLinkText) throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
     		link.click(hyperLinkText);
     	}

@@ -4,6 +4,8 @@
 package org.lcx.robotframework.eclipse.keyword.eclipse.action;
 
 import java.util.List;
+
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotEclipseEditor;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotStyledText;
@@ -17,7 +19,7 @@ public class EclipseEditorActionKeywords {
 	@RobotKeyword("Is the eclipseEditor active\n\n"
             + "Example:\n"
             + "| Is EclipseEditor Active |\n")
-        public boolean isEclipseEditorActive() throws Exception {
+        public boolean isEclipseEditorActive() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.isActive();
     	}
@@ -26,7 +28,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Close EclipseEditor |\n")
 //    @ArgumentNames({"text"})
-        public void closeEclipseEditor() throws Exception {
+        public void closeEclipseEditor() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		eclipseEditor.close();
     	}
@@ -34,7 +36,7 @@ public class EclipseEditorActionKeywords {
 	@RobotKeyword("Is the eclipseEditor enabled\n\n"
             + "Example:\n"
             + "| Is EclipseEditor Enabled |\n")
-        public boolean isEclipseEditorEnabled() throws Exception {
+        public boolean isEclipseEditorEnabled() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.isEnabled();
     	}
@@ -43,7 +45,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor Title |\n")
 //    @ArgumentNames({"text"})
-        public String getEclipseEditorTitle() throws Exception {
+        public String getEclipseEditorTitle() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.getTitle();
     	}
@@ -52,7 +54,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor Text |\n")
 //    @ArgumentNames({"text"})
-        public String getEclipseEditorText() throws Exception {
+        public String getEclipseEditorText() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.getText();
     	}
@@ -61,7 +63,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Set EclipseEditor Text | text |\n")
     @ArgumentNames({"text"})
-        public void setEclipseEditorText(String text) throws Exception {
+        public void setEclipseEditorText(String text) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
 			eclipseEditor.setText(text);
     	}
@@ -70,7 +72,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Show EclipseEditor |\n")
 //    @ArgumentNames({"text"})
-        public void showEclipseEditor() throws Exception {
+        public void showEclipseEditor() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		eclipseEditor.show();
     	}
@@ -79,7 +81,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Set Focus On EclipseEditor |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnEclipseEditor() throws Exception {
+        public void setFocusOnEclipseEditor() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		eclipseEditor.setFocus();
     	}
@@ -88,7 +90,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Save EclipseEditor |\n")
 //    @ArgumentNames({"text"})
-        public void saveEclipseEditor() throws Exception {
+        public void saveEclipseEditor() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		eclipseEditor.save();
     	}
@@ -97,7 +99,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Save And Close EclipseEditor |\n")
 //    @ArgumentNames({"text"})
-        public void saveAndCloseEclipseEditor() throws Exception {
+        public void saveAndCloseEclipseEditor() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		eclipseEditor.saveAndClose();
     	}
@@ -105,7 +107,7 @@ public class EclipseEditorActionKeywords {
 	@RobotKeyword("Is the eclipseEditor dirty\n\n"
             + "Example:\n"
             + "| Is EclipseEditor Dirty |\n")
-        public boolean isEclipseEditorDirty() throws Exception {
+        public boolean isEclipseEditorDirty() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.isDirty();
     	}
@@ -113,7 +115,7 @@ public class EclipseEditorActionKeywords {
 	@RobotKeyword("Does the eclipse editor has bullet on the current line\n\n"
             + "Example:\n"
             + "| Eclipse Editor Has Bullet On Current Line |\n")
-        public boolean eclipseEditorHasBulletOnCurrentLine() throws Exception {
+        public boolean eclipseEditorHasBulletOnCurrentLine() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.hasBulletOnCurrentLine();
     	}
@@ -122,7 +124,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Eclipse Editor Has Bullet On Given Line | 0 | \n")
      @ArgumentNames({"line"})
-       public boolean eclipseEditorHasBulletOnGivenLine(String line) throws Exception {
+       public boolean eclipseEditorHasBulletOnGivenLine(String line) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		int i = Integer.valueOf(line).intValue();
     		return eclipseEditor.hasBulletOnLine(i);
@@ -134,7 +136,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Auto Complete Proposal For EclipseEditor | insertText | proposalText |\n")
      @ArgumentNames({"insertText", "proposalText"})
-       public void autoCompleteProposalForEclipseEditor(String insertText, String proposalText) throws Exception {
+       public void autoCompleteProposalForEclipseEditor(String insertText, String proposalText) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		eclipseEditor.autoCompleteProposal(insertText, proposalText);
     	}
@@ -144,7 +146,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get Auto Complete Proposals For EclipseEditor | insertText |\n")
      @ArgumentNames({"insertText"})
-       public String[] getAutoCompleteProposalsForEclipseEditor(String insertText) throws Exception {
+       public String[] getAutoCompleteProposalsForEclipseEditor(String insertText) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		List<String> l = eclipseEditor.getAutoCompleteProposals(insertText);
     		String[] a = new String[l.size()];
@@ -156,7 +158,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor Lines | \n")
 //     @ArgumentNames({"insertText"})
-       public String[] getEclipseEditorLines() throws Exception {
+       public String[] getEclipseEditorLines() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		List<String> l = eclipseEditor.getLines();
     		String[] a = new String[l.size()];
@@ -168,7 +170,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Count EclipseEditor Line | \n")
 //     @ArgumentNames({"insertText"})
-       public int countEclipseEditorLine() throws Exception {
+       public int countEclipseEditorLine() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.getLineCount();
     	}
@@ -177,7 +179,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Count EclipseEditor Quickfix Item | \n")
 //     @ArgumentNames({"insertText"})
-       public int countEclipseEditorQuickfixListItem() throws Exception {
+       public int countEclipseEditorQuickfixListItem() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.getQuickfixListItemCount();
     	}
@@ -186,7 +188,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor Quick Fixes | \n")
 //     @ArgumentNames({"insertText"})
-       public String[] getEclipseEditorQuickFixes() throws Exception {
+       public String[] getEclipseEditorQuickFixes() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		List<String> l = eclipseEditor.getQuickFixes();
     		String[] a = new String[l.size()];
@@ -198,7 +200,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor StyledText | \n")
 //     @ArgumentNames({"insertText"})
-       public SWTBotStyledText getEclipseEditorStyledText() throws Exception {
+       public SWTBotStyledText getEclipseEditorStyledText() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		SWTBotStyledText text = eclipseEditor.getStyledText();
     		Context.setCurrentWidget(text);
@@ -209,7 +211,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor Selection | \n")
 //     @ArgumentNames({"insertText"})
-       public String getEclipseEditorSelection() throws Exception {
+       public String getEclipseEditorSelection() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.getSelection();
     	}
@@ -218,7 +220,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor Text On Current Line | \n")
 //     @ArgumentNames({"insertText"})
-       public String getEclipseEditorTextOnCurrentLine() throws Exception {
+       public String getEclipseEditorTextOnCurrentLine() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.getTextOnCurrentLine();
     	}
@@ -227,7 +229,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor Text On Given Line | 0 |\n")
      @ArgumentNames({"line"})
-       public String getEclipseEditorTextOnGivenLine(String line) throws Exception {
+       public String getEclipseEditorTextOnGivenLine(String line) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		int i = Integer.valueOf(line).intValue();
     		return eclipseEditor.getTextOnLine(i);
@@ -237,7 +239,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Get EclipseEditor Tooltip Text | \n")
 //     @ArgumentNames({"line"})
-       public String getEclipseEditorTooltipText() throws Exception {
+       public String getEclipseEditorTooltipText() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		return eclipseEditor.getToolTipText();
     	}
@@ -246,7 +248,7 @@ public class EclipseEditorActionKeywords {
             + "Example:\n"
             + "| Insert EclipseEditor Text | text | \n")
     @ArgumentNames({"text"})
-        public void insertEclipseEditorText(String text) throws Exception {
+        public void insertEclipseEditorText(String text) throws SWTBotBridgeException {
     		SWTBotEclipseEditor editor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		editor.insertText(text);
     	}
@@ -257,7 +259,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Insert EclipseEditor Text At Position | 0 | 0 | text | \n")
     @ArgumentNames({"line", "column", "text"})
-        public void insertEclipseEditorTextAtPosition(String line, String column, String text) throws Exception {
+        public void insertEclipseEditorTextAtPosition(String line, String column, String text) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		if(line!=null && column!=null) {
 				Integer l = Integer.valueOf(line).intValue();
@@ -272,7 +274,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Navigate To EclipseEditor Position | 0 | 0 |\n")
     @ArgumentNames({"line", "column"})
-        public void navigateToEclipseEditorPosition(String line, String column) throws Exception {
+        public void navigateToEclipseEditorPosition(String line, String column) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		if(line!=null && column!=null) {
 				Integer l = Integer.valueOf(line).intValue();
@@ -285,7 +287,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Type EclipseEditor Text | text | \n")
     @ArgumentNames({"text"})
-        public void typeEclipseEditorText(String text) throws Exception {
+        public void typeEclipseEditorText(String text) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
 			eclipseEditor.typeText(text);
     	}
@@ -294,7 +296,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Type EclipseEditor Text With Interval | text | \n")
     @ArgumentNames({"text", "interval"})
-        public void typeEclipseEditorTextWithInterval(String text, String interval) throws Exception {
+        public void typeEclipseEditorTextWithInterval(String text, String interval) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		Integer i = Integer.valueOf(interval).intValue();
 			eclipseEditor.typeText(text, i);
@@ -307,7 +309,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Type EclipseEditor Text At Position | 0 | 0 | text |\n")
     @ArgumentNames({"line", "column", "text"})
-        public void typeEclipseEditorTextAtPosition(String line, String column, String text) throws Exception {
+        public void typeEclipseEditorTextAtPosition(String line, String column, String text) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		if(line!=null && column!=null) {
 				Integer l = Integer.valueOf(line).intValue();
@@ -320,7 +322,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Quickfix EclipseEditor | text |\n")
     @ArgumentNames({"text"})
-        public void quickfixEclipseEditor(String text) throws Exception {
+        public void quickfixEclipseEditor(String text) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
 			eclipseEditor.quickfix(text);
     	}
@@ -330,7 +332,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Quickfix Index EclipseEditor | 0 |\n")
     @ArgumentNames({"quickFixIndex"})
-        public void quickfixIndexEclipseEditor(String quickFixIndex) throws Exception {
+        public void quickfixIndexEclipseEditor(String quickFixIndex) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		Integer i = Integer.valueOf(quickFixIndex).intValue();
 			eclipseEditor.quickfix(i);
@@ -340,7 +342,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Select EclipseEditor Current Line |\n")
 //    @ArgumentNames({"line", "column"})
-        public void selectEclipseEditorCurrentLine() throws Exception {
+        public void selectEclipseEditorCurrentLine() throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
 			eclipseEditor.selectCurrentLine();
     	}
@@ -349,13 +351,12 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Select EclipseEditor Given Line |\n")
     @ArgumentNames({"line"})
-        public void selectEclipseEditorGivenLine(String line) throws Exception {
+        public void selectEclipseEditorGivenLine(String line) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		if(line!=null) {
 				Integer l = Integer.valueOf(line).intValue();
 				eclipseEditor.selectLine(l);
     		}    	
-
     	}
 
 	@RobotKeyword("Select eclipseEditor range\n\n"
@@ -365,7 +366,7 @@ public class EclipseEditorActionKeywords {
 			+ "Example:\n"
             + "| Select EclipseEditor Range | 0 | 0 | 10 | \n")
     @ArgumentNames({"line", "column", "length"})
-        public void selectEclipseEditorRange(String line, String column, String length) throws Exception {
+        public void selectEclipseEditorRange(String line, String column, String length) throws SWTBotBridgeException {
     		SWTBotEclipseEditor eclipseEditor = (SWTBotEclipseEditor)Context.getCurrentWidget(SWTBotEclipseEditor.class);
     		if(line!=null && column!=null && length!=null) {
 				Integer l = Integer.valueOf(line).intValue();

@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotSpinner;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -15,7 +16,7 @@ public class SpinnerActionKeywords {
 	@RobotKeyword("Is the spinner active\n\n"
             + "Example:\n"
             + "| Is Spinner Active |\n")
-        public boolean isSpinnerActive() throws Exception {
+        public boolean isSpinnerActive() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.isActive();
     	}
@@ -23,7 +24,7 @@ public class SpinnerActionKeywords {
 	@RobotKeyword("Is the spinner enabled\n\n"
             + "Example:\n"
             + "| Is Spinner Enabled |\n")
-        public boolean isSpinnerEnabled() throws Exception {
+        public boolean isSpinnerEnabled() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.isEnabled();
     	}
@@ -31,7 +32,7 @@ public class SpinnerActionKeywords {
 	@RobotKeyword("Is the spinner visible\n\n"
             + "Example:\n"
             + "| Is Spinner Visible |\n")
-        public boolean isSpinnerVisible() throws Exception {
+        public boolean isSpinnerVisible() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.isVisible();
     	}
@@ -40,7 +41,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Get Spinner Text |\n")
 //    @ArgumentNames({"text"})
-        public String getSpinnerText() throws Exception {
+        public String getSpinnerText() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.getText();
     	}
@@ -49,7 +50,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Get Spinner Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getSpinnerTooltipText() throws Exception {
+        public String getSpinnerTooltipText() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.getToolTipText();
     	}
@@ -58,7 +59,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Set Focus On Spinner |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnSpinner() throws Exception {
+        public void setFocusOnSpinner() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		spinner.setFocus();
     	}
@@ -67,7 +68,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Get Spinner Digits |\n")
 //    @ArgumentNames({"text"})
-        public int getSpinnerDigits() throws Exception {
+        public int getSpinnerDigits() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.getDigits();
     	}
@@ -76,7 +77,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Get Spinner Maximum |\n")
 //    @ArgumentNames({"text"})
-        public int getSpinnerMaximum() throws Exception {
+        public int getSpinnerMaximum() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.getMaximum();
     	}
@@ -85,7 +86,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Get Spinner Minimum |\n")
 //    @ArgumentNames({"text"})
-        public int getSpinnerMinimum() throws Exception {
+        public int getSpinnerMinimum() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.getMinimum();
     	}
@@ -94,7 +95,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Get Spinner Page Increment |\n")
 //    @ArgumentNames({"text"})
-        public int getSpinnerPageIncrement() throws Exception {
+        public int getSpinnerPageIncrement() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.getPageIncrement();
     	}
@@ -103,7 +104,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Get Spinner Selection |\n")
 //    @ArgumentNames({"text"})
-        public int getSpinnerSelection() throws Exception {
+        public int getSpinnerSelection() throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
     		return spinner.getSelection();
     	}
@@ -112,7 +113,7 @@ public class SpinnerActionKeywords {
             + "Example:\n"
             + "| Set Spinner Selection | 0 |\n")
     @ArgumentNames({"index"})
-        public void setSpinnerSelection(String index) throws Exception {
+        public void setSpinnerSelection(String index) throws SWTBotBridgeException {
     		SWTBotSpinner spinner = (SWTBotSpinner)Context.getCurrentWidget(SWTBotSpinner.class);
 			Integer i = Integer.valueOf(index).intValue();
 			spinner.setSelection(i);

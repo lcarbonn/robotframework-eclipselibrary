@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.actionfact;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotShell;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class ShellActionKeywords {
 	@RobotKeyword("Activate the shell\n\n"
             + "Example:\n"
             + "| Activate Shell |\n")
-        public void activateShell() throws Exception {
+        public void activateShell() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		shell.activate();
     	}
@@ -22,7 +23,7 @@ public class ShellActionKeywords {
 	@RobotKeyword("Is the shell active\n\n"
             + "Example:\n"
             + "| Is Shell Active |\n")
-        public boolean isShellActive() throws Exception {
+        public boolean isShellActive() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		return shell.isActive();
     	}
@@ -30,7 +31,7 @@ public class ShellActionKeywords {
 	@RobotKeyword("Is the shell enabled\n\n"
             + "Example:\n"
             + "| Is Shell Enabled |\n")
-        public boolean isShellEnabled() throws Exception {
+        public boolean isShellEnabled() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		return shell.isEnabled();
     	}
@@ -38,7 +39,7 @@ public class ShellActionKeywords {
 	@RobotKeyword("Is the shell visible\n\n"
             + "Example:\n"
             + "| Is Shell Visible |\n")
-        public boolean isShellVisible() throws Exception {
+        public boolean isShellVisible() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		return shell.isVisible();
     	}
@@ -47,7 +48,7 @@ public class ShellActionKeywords {
             + "Example:\n"
             + "| Get Shell Text |\n")
 //    @ArgumentNames({"text"})
-        public String getShellText() throws Exception {
+        public String getShellText() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		return shell.getText();
     	}
@@ -56,7 +57,7 @@ public class ShellActionKeywords {
             + "Example:\n"
             + "| Get Shell Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getShellTooltipText() throws Exception {
+        public String getShellTooltipText() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		return shell.getToolTipText();
     	}
@@ -65,7 +66,7 @@ public class ShellActionKeywords {
             + "Example:\n"
             + "| Set Focus On Shell |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnShell() throws Exception {
+        public void setFocusOnShell() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		shell.setFocus();
     	}
@@ -73,7 +74,7 @@ public class ShellActionKeywords {
 	@RobotKeyword("Is the shell open\n\n"
             + "Example:\n"
             + "| Is Shell Open |\n")
-        public boolean isShellOpen() throws Exception {
+        public boolean isShellOpen() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		return shell.isOpen();
     	}
@@ -81,7 +82,7 @@ public class ShellActionKeywords {
 	@RobotKeyword("Close the shell\n\n"
             + "Example:\n"
             + "| Close Shell |\n")
-        public void closeShell() throws Exception {
+        public void closeShell() throws SWTBotBridgeException {
     		SWTBotShell shell = (SWTBotShell)Context.getCurrentWidget(SWTBotShell.class);
     		shell.close();
     	}

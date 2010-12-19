@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.AbstractSWTBot;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -15,7 +16,7 @@ public class ColorActionKeywords {
             + "Example:\n"
             + "| ${color} | Get Background Color |\n"
             + "| Should Be Equal | ${color} | #FF00CC\n")
-        public String getBackgroundColor() throws Exception {
+        public String getBackgroundColor() throws SWTBotBridgeException {
 		AbstractSWTBot object = (AbstractSWTBot)Context.getCurrentWidget();
     		return object.backgroundColor().toString();
     	}
@@ -24,7 +25,7 @@ public class ColorActionKeywords {
             + "Example:\n"
             + "| ${color} | Get Foreground Color |\n"
             + "| Should Be Equal | ${color} | #FF00CC\n")
-        public String getForegroundColor() throws Exception {
+        public String getForegroundColor() throws SWTBotBridgeException {
 		AbstractSWTBot object = (AbstractSWTBot)Context.getCurrentWidget();
     		return object.foregroundColor().toString();
     	}

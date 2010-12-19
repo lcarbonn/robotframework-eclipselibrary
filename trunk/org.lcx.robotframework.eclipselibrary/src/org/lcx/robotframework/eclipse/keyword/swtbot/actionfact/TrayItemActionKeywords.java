@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.actionfact;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTrayItem;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -15,7 +16,7 @@ public class TrayItemActionKeywords {
 	@RobotKeyword("Is the trayItem active\n\n"
             + "Example:\n"
             + "| Is TrayItem Active |\n")
-        public boolean isTrayItemActive() throws Exception {
+        public boolean isTrayItemActive() throws SWTBotBridgeException {
     		SWTBotTrayItem trayItem = (SWTBotTrayItem)Context.getCurrentWidget(SWTBotTrayItem.class);
     		return trayItem.isActive();
     	}
@@ -23,7 +24,7 @@ public class TrayItemActionKeywords {
 	@RobotKeyword("Is the trayItem enabled\n\n"
             + "Example:\n"
             + "| Is TrayItem Enabled |\n")
-        public boolean isTrayItemEnabled() throws Exception {
+        public boolean isTrayItemEnabled() throws SWTBotBridgeException {
     		SWTBotTrayItem trayItem = (SWTBotTrayItem)Context.getCurrentWidget(SWTBotTrayItem.class);
     		return trayItem.isEnabled();
     	}
@@ -31,7 +32,7 @@ public class TrayItemActionKeywords {
 	@RobotKeyword("Is the trayItem visible\n\n"
             + "Example:\n"
             + "| Is TrayItem Visible |\n")
-        public boolean isTrayItemVisible() throws Exception {
+        public boolean isTrayItemVisible() throws SWTBotBridgeException {
     		SWTBotTrayItem trayItem = (SWTBotTrayItem)Context.getCurrentWidget(SWTBotTrayItem.class);
     		return trayItem.isVisible();
     	}
@@ -40,7 +41,7 @@ public class TrayItemActionKeywords {
             + "Example:\n"
             + "| Get TrayItem Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTrayItemText() throws Exception {
+        public String getTrayItemText() throws SWTBotBridgeException {
     		SWTBotTrayItem trayItem = (SWTBotTrayItem)Context.getCurrentWidget(SWTBotTrayItem.class);
     		return trayItem.getText();
     	}
@@ -49,7 +50,7 @@ public class TrayItemActionKeywords {
             + "Example:\n"
             + "| Get TrayItem Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTrayItemTooltipText() throws Exception {
+        public String getTrayItemTooltipText() throws SWTBotBridgeException {
     		SWTBotTrayItem trayItem = (SWTBotTrayItem)Context.getCurrentWidget(SWTBotTrayItem.class);
     		return trayItem.getToolTipText();
     	}
@@ -58,7 +59,7 @@ public class TrayItemActionKeywords {
             + "Example:\n"
             + "| Set Focus On TrayItem |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnTrayItem() throws Exception {
+        public void setFocusOnTrayItem() throws SWTBotBridgeException {
     		SWTBotTrayItem trayItem = (SWTBotTrayItem)Context.getCurrentWidget(SWTBotTrayItem.class);
     		trayItem.setFocus();
     	}
@@ -67,7 +68,7 @@ public class TrayItemActionKeywords {
             + "Example:\n"
             + "| Get TrayItem Menu With Name | name |\n")
     @ArgumentNames({"name"})
-        public void getTrayItemMenuWithName(String name) throws Exception {
+        public void getTrayItemMenuWithName(String name) throws SWTBotBridgeException {
     		SWTBotTrayItem trayItem = (SWTBotTrayItem)Context.getCurrentWidget(SWTBotTrayItem.class);
     		Context.setCurrentWidget(trayItem.menu(name));
     	}

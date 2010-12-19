@@ -7,7 +7,10 @@ package org.lcx.robotframework.eclipse.keyword.launch;
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.lang.reflect.Method;
 
+import org.apache.log4j.Logger;
+import org.lcx.robotframework.eclipse.LibraryLogger;
 import org.lcx.robotframework.eclipse.bridge.SWTBotBridge;
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.robotframework.javalib.annotation.ArgumentNames;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.robotframework.javalib.annotation.RobotKeywords;
@@ -19,9 +22,11 @@ public class EclipseLaunchingKeywords {
 	private boolean error = false;
 	private final static String ECLIPSE_LAUNCHER = "org.eclipse.equinox.launcher.Main";
 	
+	private Logger log = LibraryLogger.getLogger();
+	
     @RobotKeyword("Start Eclipse with the given arguments in a separate thread\n")
     @ArgumentNames({"*args"})
-    public void startEclipse(String[] args) throws Exception {
+    public void startEclipse(String[] args) throws SWTBotBridgeException {
     	startEclipseInSeparateThread(args);
     }
 
@@ -31,14 +36,14 @@ public class EclipseLaunchingKeywords {
      * @return Thread
      * @throws Exception
      */
-    public Thread startEclipseInSeparateThread(final String[] args) throws Exception {
+    public Thread startEclipseInSeparateThread(final String[] args) throws SWTBotBridgeException {
 
     	getMainMethod();
     	
 		UncaughtExceptionHandler eh = new UncaughtExceptionHandler() {
 			
 			public void uncaughtException(Thread t, Throwable e) {
-				e.printStackTrace();
+				log.error("Uncaught Exception in startEclipseInSeparateThread", e);
 				error=true;
 			}
 		};
@@ -49,7 +54,7 @@ public class EclipseLaunchingKeywords {
                 	internalLaunchEclipse(args);
                 } catch (Exception e) {
                 	error=true;
-                	e.printStackTrace();
+    				log.error("Erro createThread in startEclipseInSeparateThread", e);
                     throw new RuntimeException(e);
                 }
             }
@@ -57,7 +62,9 @@ public class EclipseLaunchingKeywords {
     	et.setUncaughtExceptionHandler(eh);
     	et.start();
 
-    	if(error) return null;
+    	if(error) {
+    		return null;
+    	}
     	
 		long timeout = 2 * 60 * 1000;
         for (int i = 0; i < args.length; i++) {
@@ -72,16 +79,22 @@ public class EclipseLaunchingKeywords {
         long end = start;
         while(!isBridgeInitialized && !timeoutReached) {
 			// Is bridge initialized?
-        	Thread.sleep(1000);
+        	try {
+            	Thread.sleep(1000);
+			} catch (Exception e) {
+				// nothing tod o
+			}
         	isBridgeInitialized = SWTBotBridge.isISBRIDGEINITIATED();
         	end = System.currentTimeMillis();
-        	if(timeout!=0) timeoutReached = ((end-start)>timeout);
+        	if(timeout!=0) {
+        		timeoutReached = ((end-start)>timeout);
+        	}
         }
         if(isBridgeInitialized) {
-        	System.out.println("SWTBotBridge is initialized");
+        	log.info("SWTBotBridge is initialized");
         }
         if(timeoutReached) {
-        	throw new Exception("Timeout reached before end of initialization\n " +
+        	throw new SWTBotBridgeException("Timeout reached before end of initialization\n " +
         			"  Check if EclipseLibrary plugin is installed" +
         			"  Or use -timeout option in Start Eclipse keyword");
         }
@@ -93,23 +106,25 @@ public class EclipseLaunchingKeywords {
     	return t;
     }
     
-    private void internalLaunchEclipse(String[] args) throws Exception {
+    private void internalLaunchEclipse(String[] args) throws SWTBotBridgeException {
     	try {
             Method mainMethod = getMainMethod();
             mainMethod.invoke(null, new Object[] { args });
            
     	} catch (Exception e) {
 			e.printStackTrace();
-			throw e;
+			throw new SWTBotBridgeException(e);
 		}
     }
     
-    private Method getMainMethod() throws ClassNotFoundException {
-        Class<?> clss = Class.forName(ECLIPSE_LAUNCHER);
+    private Method getMainMethod() throws SWTBotBridgeException {
         try {
+            Class<?> clss = Class.forName(ECLIPSE_LAUNCHER);
             return clss.getMethod("main", String[].class);
         } catch (NoSuchMethodException e) {
-            throw new RuntimeException("Class '" + ECLIPSE_LAUNCHER + "' doesn't have a main method.");
+            throw new SWTBotBridgeException("Class '" + ECLIPSE_LAUNCHER + "' doesn't have a main method.");
+        } catch (ClassNotFoundException e) {
+            throw new SWTBotBridgeException("Class '" + ECLIPSE_LAUNCHER + "' not found.");
         }
     }
     

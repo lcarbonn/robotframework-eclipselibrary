@@ -21,7 +21,7 @@ public class PerspectiveFinderKeywords {
             + "Example:\n"
             + "| Find Active Perspective |\n")
 //    @ArgumentNames({"*params"})
-    public SWTBotPerspective findActivePerspective() throws SWTBotBridgeException{
+    public SWTBotPerspective findActivePerspective() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.activePerspective();
 	}
@@ -30,7 +30,7 @@ public class PerspectiveFinderKeywords {
             + "Example:\n"
             + "| Reset Active Perspective |\n")
 //    @ArgumentNames({"*params"})
-    public SWTBotPerspective resetActivePerspective() throws SWTBotBridgeException{
+    public SWTBotPerspective resetActivePerspective() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.resetActivePerspective();
 	}
@@ -39,7 +39,7 @@ public class PerspectiveFinderKeywords {
             + "Example:\n"
             + "| Find Default Perspective |\n")
 //    @ArgumentNames({"*params"})
-    public SWTBotPerspective findDefaultPerspective() throws SWTBotBridgeException{
+    public SWTBotPerspective findDefaultPerspective() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.defaultPerspective();
 	}
@@ -49,7 +49,7 @@ public class PerspectiveFinderKeywords {
             + "Example:\n"
             + "| Find Perspective By Id | id |\n")
     @ArgumentNames({"id"})
-    public SWTBotPerspective findPerspectiveById(String id) throws SWTBotBridgeException{
+    public SWTBotPerspective findPerspectiveById(String id) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotPerspective persp = null;
     	try {
@@ -66,7 +66,7 @@ public class PerspectiveFinderKeywords {
             + "Example:\n"
             + "| Find Perspective By Label | label |\n")
     @ArgumentNames({"label"})
-    public SWTBotPerspective findPerspectiveByLabel(String label) throws SWTBotBridgeException{
+    public SWTBotPerspective findPerspectiveByLabel(String label) throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	SWTBotPerspective persp = null;
     	try {
@@ -83,7 +83,7 @@ public class PerspectiveFinderKeywords {
             + "Example:\n"
             + "| List All Perspectives Label | \n")
 //    @ArgumentNames({"label"})
-    public String[] listAllPerspectivesLabel() throws SWTBotBridgeException{
+    public String[] listAllPerspectivesLabel() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	List<SWTBotPerspective> perspectives = bot.perspectives();
 		String[] a = new String[perspectives.size()];
@@ -99,7 +99,7 @@ public class PerspectiveFinderKeywords {
             + "Example:\n"
             + "| List All Perspectives| \n")
 //    @ArgumentNames({"label"})
-    public SWTBotPerspective[] listAllPerspectives() throws SWTBotBridgeException{
+    public SWTBotPerspective[] listAllPerspectives() throws SWTBotBridgeException {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
     	List<SWTBotPerspective> perspectives = bot.perspectives();
     	SWTBotPerspective[] a = new SWTBotPerspective[perspectives.size()];

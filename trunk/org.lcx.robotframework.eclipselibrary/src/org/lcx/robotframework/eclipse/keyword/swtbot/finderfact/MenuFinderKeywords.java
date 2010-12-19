@@ -19,7 +19,7 @@ public class MenuFinderKeywords {
             + "| Find Menu | text | index |\n"
             + "| Find Menu | text |  |\n")
     @ArgumentNames({"text", "*params"})
-    public SWTBotMenu findMenu(String text, String... params) throws SWTBotBridgeException{
+    public SWTBotMenu findMenu(String text, String... params) throws SWTBotBridgeException {
 		
     	int index = -1;
     	
@@ -47,7 +47,7 @@ public class MenuFinderKeywords {
             + "| Find Menu With Id | value | key | |\n"
             + "| Find Menu With Id | value | | |\n")
     @ArgumentNames({"value", "*params"})
-    public SWTBotMenu findMenuWithId(String value, String... params) throws SWTBotBridgeException{
+    public SWTBotMenu findMenuWithId(String value, String... params) throws SWTBotBridgeException {
 		
     	String key = null;
     	int index = -1;

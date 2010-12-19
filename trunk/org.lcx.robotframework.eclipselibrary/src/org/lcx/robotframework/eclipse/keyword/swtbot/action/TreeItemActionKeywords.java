@@ -5,6 +5,7 @@ package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
 import java.util.List;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -17,7 +18,7 @@ public class TreeItemActionKeywords {
 	@RobotKeyword("Click on the tableItem\n\n"
             + "Example:\n"
             + "| Click TreeItem |\n")
-        public void clickTreeItem() throws Exception {
+        public void clickTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.click();
     	}
@@ -25,7 +26,7 @@ public class TreeItemActionKeywords {
 	@RobotKeyword("Is the treeItem active\n\n"
             + "Example:\n"
             + "| Is TreeItem Active |\n")
-        public boolean isTreeItemActive() throws Exception {
+        public boolean isTreeItemActive() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.isActive();
     	}
@@ -33,7 +34,7 @@ public class TreeItemActionKeywords {
 	@RobotKeyword("Is the treeItem enabled\n\n"
             + "Example:\n"
             + "| Is TreeItem Enabled |\n")
-        public boolean isTreeItemEnabled() throws Exception {
+        public boolean isTreeItemEnabled() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.isEnabled();
     	}
@@ -41,7 +42,7 @@ public class TreeItemActionKeywords {
 	@RobotKeyword("Is the treeItem visible\n\n"
             + "Example:\n"
             + "| Is TreeItem Visible |\n")
-        public boolean isTreeItemVisible() throws Exception {
+        public boolean isTreeItemVisible() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.isVisible();
     	}
@@ -50,7 +51,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Get TreeItem Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTreeItemText() throws Exception {
+        public String getTreeItemText() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.getText();
     	}
@@ -59,7 +60,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Get TreeItem Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTreeItemTooltipText() throws Exception {
+        public String getTreeItemTooltipText() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.getToolTipText();
     	}
@@ -68,7 +69,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Set Focus On TreeItem |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnTreeItem() throws Exception {
+        public void setFocusOnTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.setFocus();
     	}
@@ -77,7 +78,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Check TreeItem |\n")
 //    @ArgumentNames({"text"})
-        public void checkTreeItem() throws Exception {
+        public void checkTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.check();
     	}
@@ -86,7 +87,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| ToggleCheck TreeItem |\n")
 //    @ArgumentNames({"text"})
-        public void toggleCheckTreeItem() throws Exception {
+        public void toggleCheckTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.toggleCheck();
     	}
@@ -95,7 +96,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Is TreeItem Checked |\n")
 //    @ArgumentNames({"text"})
-        public boolean isTreeItemChecked() throws Exception {
+        public boolean isTreeItemChecked() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.isChecked();
     	}
@@ -104,7 +105,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Is TreeItem Expanded |\n")
 //    @ArgumentNames({"text"})
-        public boolean isTreeItemExpanded() throws Exception {
+        public boolean isTreeItemExpanded() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.isExpanded();
     	}
@@ -113,7 +114,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Is TreeItem Selected |\n")
 //    @ArgumentNames({"text"})
-        public boolean isTreeItemSelected() throws Exception {
+        public boolean isTreeItemSelected() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.isSelected();
     	}
@@ -122,7 +123,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Select TreeItem |\n")
 //    @ArgumentNames({"text"})
-        public void selectTreeItem() throws Exception {
+        public void selectTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem = treeItem.select();
     		Context.setCurrentWidget(treeItem);
@@ -132,7 +133,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Uncheck TreeItem |\n")
 //    @ArgumentNames({"text"})
-        public void uncheckTreeItem() throws Exception {
+        public void uncheckTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.uncheck();
     	}
@@ -142,7 +143,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Get TreeItem Column Cell |\n")
     @ArgumentNames({"column"})
-        public String getTreeItemColumnCell(String column) throws Exception {
+        public String getTreeItemColumnCell(String column) throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		Integer c = Integer.valueOf(column).intValue();
     		return treeItem.cell(c);
@@ -154,7 +155,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Get TreeItem Cell |\n")
     @ArgumentNames({"row", "column"})
-        public String getTreeItemCell(String row, String column) throws Exception {
+        public String getTreeItemCell(String row, String column) throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		Integer r = Integer.valueOf(row).intValue();
     		Integer c = Integer.valueOf(column).intValue();
@@ -165,7 +166,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Get TreeItem Cell |\n")
 //    @ArgumentNames({"row", "column"})
-        public void collapseTreeItem() throws Exception {
+        public void collapseTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.collapse();
     	}
@@ -174,7 +175,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Collapse TreeItem Node |\n")
     @ArgumentNames({"text"})
-        public void collapseTreeItemNode(String text) throws Exception {
+        public void collapseTreeItemNode(String text) throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.collapseNode(text);
     	}
@@ -183,7 +184,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Expand TreeItem |\n")
 //    @ArgumentNames({"row", "column"})
-        public void expandTreeItem() throws Exception {
+        public void expandTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.expand();
     	}
@@ -192,7 +193,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Expand TreeItem Nodes | text1 | text2 |\n")
     @ArgumentNames({"*text"})
-        public void expandTreeItemNodes(String... text) throws Exception {
+        public void expandTreeItemNodes(String... text) throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.expandNode(text);
 //    		Context.setCurrentWidget(treeItem.expandNode(text));
@@ -204,7 +205,7 @@ public class TreeItemActionKeywords {
             + "| find TreeItem Node | 0 | \n"
             + "| find TreeItem Node | text | 0 | \n")
     @ArgumentNames({"*params"})
-        public void findTreeItemNode(String... params) throws Exception {
+        public void findTreeItemNode(String... params) throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		int row = -1;
     		String text = null;
@@ -231,15 +232,18 @@ public class TreeItemActionKeywords {
 			} else if (text!=null && row!=-1){
 				treeItem = treeItem.getNode(text, row);
 			}
-			if(!(text==null && row == -1)) Context.setCurrentWidget(treeItem);
-			else throw new Exception("'Find TreeItem Node' keyword should receive 1 parameter at least but received 0");
+			if(!(text==null && row == -1)) {
+				Context.setCurrentWidget(treeItem);
+			} else {
+				throw new SWTBotBridgeException("'Find TreeItem Node' keyword should receive 1 parameter at least but received 0");
+			}
     	}
 
 	@RobotKeyword("Get the treeItem nodes\n\n"
             + "Example:\n"
             + "| Get TreeItem Nodes | \n")
 //    @ArgumentNames({"text", "index"})
-        public String[] getTreeItemNodes() throws Exception {
+        public String[] getTreeItemNodes() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		List<String> list = treeItem.getNodes();
     		String[] a = new String[list.size()];
@@ -251,7 +255,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Count TreeItem Rows | \n")
 //    @ArgumentNames({"text", "index"})
-        public int countTreeItemRows() throws Exception {
+        public int countTreeItemRows() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		return treeItem.rowCount();
     	}
@@ -259,7 +263,7 @@ public class TreeItemActionKeywords {
 	@RobotKeyword("Double Click on the treeItem\n\n"
             + "Example:\n"
             + "| Double Click TreeItem |\n")
-        public void doubleClickTreeItem() throws Exception {
+        public void doubleClickTreeItem() throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem.doubleClick();
     	}
@@ -268,7 +272,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Select TreeItem With Name | name |\n")
     @ArgumentNames({"name"})
-        public void selectTreeItemWithName(String name) throws Exception {
+        public void selectTreeItemWithName(String name) throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem = treeItem.select(name);
     		Context.setCurrentWidget(treeItem);
@@ -278,7 +282,7 @@ public class TreeItemActionKeywords {
             + "Example:\n"
             + "| Select TreeItem With Names | name1 | name2 | \n")
     @ArgumentNames({"*name"})
-        public void selectTreeItemWithNames(String... names) throws Exception {
+        public void selectTreeItemWithNames(String... names) throws SWTBotBridgeException {
     		SWTBotTreeItem treeItem = (SWTBotTreeItem)Context.getCurrentWidget(SWTBotTreeItem.class);
     		treeItem = treeItem.select(names);
     		Context.setCurrentWidget(treeItem);

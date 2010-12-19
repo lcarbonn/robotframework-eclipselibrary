@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotTableItem;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class TableItemActionKeywords {
 	@RobotKeyword("Click on the tableItem\n\n"
             + "Example:\n"
             + "| Click TableItem |\n")
-        public void clickTableItem() throws Exception {
+        public void clickTableItem() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		tableItem.click();
     	}
@@ -22,7 +23,7 @@ public class TableItemActionKeywords {
 	@RobotKeyword("Is the tableItem active\n\n"
             + "Example:\n"
             + "| Is TableItem Active |\n")
-        public boolean isTableItemActive() throws Exception {
+        public boolean isTableItemActive() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		return tableItem.isActive();
     	}
@@ -30,7 +31,7 @@ public class TableItemActionKeywords {
 	@RobotKeyword("Is the tableItem enabled\n\n"
             + "Example:\n"
             + "| Is TableItem Enabled |\n")
-        public boolean isTableItemEnabled() throws Exception {
+        public boolean isTableItemEnabled() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		return tableItem.isEnabled();
     	}
@@ -38,7 +39,7 @@ public class TableItemActionKeywords {
 	@RobotKeyword("Is the tableItem visible\n\n"
             + "Example:\n"
             + "| Is TableItem Visible |\n")
-        public boolean isTableItemVisible() throws Exception {
+        public boolean isTableItemVisible() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		return tableItem.isVisible();
     	}
@@ -47,7 +48,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| Get TableItem Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTableItemText() throws Exception {
+        public String getTableItemText() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		return tableItem.getText();
     	}
@@ -56,7 +57,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| Get TableItem Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getTableItemTooltipText() throws Exception {
+        public String getTableItemTooltipText() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		return tableItem.getToolTipText();
     	}
@@ -65,7 +66,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| Set Focus On TableItem |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnTableItem() throws Exception {
+        public void setFocusOnTableItem() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		tableItem.setFocus();
     	}
@@ -74,7 +75,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| Check TableItem |\n")
 //    @ArgumentNames({"text"})
-        public void checkTableItem() throws Exception {
+        public void checkTableItem() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		tableItem.check();
     	}
@@ -83,7 +84,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| ToggleCheck TableItem |\n")
 //    @ArgumentNames({"text"})
-        public void toggleCheckTableItem() throws Exception {
+        public void toggleCheckTableItem() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		tableItem.toggleCheck();
     	}
@@ -92,7 +93,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| Is TableItem Checked |\n")
 //    @ArgumentNames({"text"})
-        public boolean isTableItemChecked() throws Exception {
+        public boolean isTableItemChecked() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		return tableItem.isChecked();
     	}
@@ -101,7 +102,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| Is TableItem Grayed |\n")
 //    @ArgumentNames({"text"})
-        public boolean isTableItemGrayed() throws Exception {
+        public boolean isTableItemGrayed() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		return tableItem.isGrayed();
     	}
@@ -110,7 +111,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| Select TableItem |\n")
 //    @ArgumentNames({"text"})
-        public void selectTableItem() throws Exception {
+        public void selectTableItem() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		tableItem.select();
     	}
@@ -119,7 +120,7 @@ public class TableItemActionKeywords {
             + "Example:\n"
             + "| Uncheck TableItem |\n")
 //    @ArgumentNames({"text"})
-        public void uncheckTableItem() throws Exception {
+        public void uncheckTableItem() throws SWTBotBridgeException {
     		SWTBotTableItem tableItem = (SWTBotTableItem)Context.getCurrentWidget(SWTBotTableItem.class);
     		tableItem.uncheck();
     	}

@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotRadio;
 import org.robotframework.javalib.annotation.RobotKeyword;
@@ -14,7 +15,7 @@ public class RadioActionKeywords {
 	@RobotKeyword("Click on the radio\n\n"
             + "Example:\n"
             + "| Click Radio |\n")
-        public void clickRadio() throws Exception {
+        public void clickRadio() throws SWTBotBridgeException {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		radio.click();
     	}
@@ -22,7 +23,7 @@ public class RadioActionKeywords {
 	@RobotKeyword("Is the radio active\n\n"
             + "Example:\n"
             + "| Is Radio Active |\n")
-        public boolean isRadioActive() throws Exception {
+        public boolean isRadioActive() throws SWTBotBridgeException {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		return radio.isActive();
     	}
@@ -30,7 +31,7 @@ public class RadioActionKeywords {
 	@RobotKeyword("Is the radio enabled\n\n"
             + "Example:\n"
             + "| Is Radio Enabled |\n")
-        public boolean isRadioEnabled() throws Exception {
+        public boolean isRadioEnabled() throws SWTBotBridgeException {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		return radio.isEnabled();
     	}
@@ -38,7 +39,7 @@ public class RadioActionKeywords {
 	@RobotKeyword("Is the radio visible\n\n"
             + "Example:\n"
             + "| Is Radio Visible |\n")
-        public boolean isRadioVisible() throws Exception {
+        public boolean isRadioVisible() throws SWTBotBridgeException {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		return radio.isVisible();
     	}
@@ -47,7 +48,7 @@ public class RadioActionKeywords {
             + "Example:\n"
             + "| Get Radio Text |\n")
 //    @ArgumentNames({"text"})
-        public String getRadioText() throws Exception {
+        public String getRadioText() throws SWTBotBridgeException {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		return radio.getText();
     	}
@@ -56,7 +57,7 @@ public class RadioActionKeywords {
             + "Example:\n"
             + "| Get Radio Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getRadioTooltipText() throws Exception {
+        public String getRadioTooltipText() throws SWTBotBridgeException {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		return radio.getToolTipText();
     	}
@@ -65,7 +66,7 @@ public class RadioActionKeywords {
             + "Example:\n"
             + "| Set Focus On Radio |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnRadio() throws Exception {
+        public void setFocusOnRadio() throws SWTBotBridgeException {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		radio.setFocus();
     	}
@@ -73,7 +74,7 @@ public class RadioActionKeywords {
 	@RobotKeyword("Is the radio selected\n\n"
             + "Example:\n"
             + "| Is Radio Selected |\n")
-        public boolean isRadioSelected() throws Exception {
+        public boolean isRadioSelected() throws SWTBotBridgeException {
     		SWTBotRadio radio = (SWTBotRadio)Context.getCurrentWidget(SWTBotRadio.class);
     		return radio.isSelected();
     	}

@@ -3,6 +3,7 @@
  */
 package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotSlider;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -15,7 +16,7 @@ public class SliderActionKeywords {
 	@RobotKeyword("Is the slider active\n\n"
             + "Example:\n"
             + "| Is Slider Active |\n")
-        public boolean isSliderActive() throws Exception {
+        public boolean isSliderActive() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.isActive();
     	}
@@ -23,7 +24,7 @@ public class SliderActionKeywords {
 	@RobotKeyword("Is the slider enabled\n\n"
             + "Example:\n"
             + "| Is Slider Enabled |\n")
-        public boolean isSliderEnabled() throws Exception {
+        public boolean isSliderEnabled() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.isEnabled();
     	}
@@ -31,7 +32,7 @@ public class SliderActionKeywords {
 	@RobotKeyword("Is the slider visible\n\n"
             + "Example:\n"
             + "| Is Slider Visible |\n")
-        public boolean isSliderVisible() throws Exception {
+        public boolean isSliderVisible() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.isVisible();
     	}
@@ -40,7 +41,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Get Slider Text |\n")
 //    @ArgumentNames({"text"})
-        public String getSliderText() throws Exception {
+        public String getSliderText() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.getText();
     	}
@@ -49,7 +50,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Get Slider Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getSliderTooltipText() throws Exception {
+        public String getSliderTooltipText() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.getToolTipText();
     	}
@@ -58,7 +59,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Set Focus On Slider |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnSlider() throws Exception {
+        public void setFocusOnSlider() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		slider.setFocus();
     	}
@@ -67,7 +68,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Get Slider Maximum |\n")
 //    @ArgumentNames({"text"})
-        public int getSliderMaximum() throws Exception {
+        public int getSliderMaximum() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.getMaximum();
     	}
@@ -76,7 +77,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Get Slider Minimum |\n")
 //    @ArgumentNames({"text"})
-        public int getSliderMinimum() throws Exception {
+        public int getSliderMinimum() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.getMinimum();
     	}
@@ -85,7 +86,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Get Slider Page Increment |\n")
 //    @ArgumentNames({"text"})
-        public int getSliderPageIncrement() throws Exception {
+        public int getSliderPageIncrement() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.getPageIncrement();
     	}
@@ -94,7 +95,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Get Slider Selection |\n")
 //    @ArgumentNames({"text"})
-        public int getSliderSelection() throws Exception {
+        public int getSliderSelection() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.getSelection();
     	}
@@ -103,7 +104,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Get Slider Thumb |\n")
 //    @ArgumentNames({"text"})
-        public int getSliderThumb() throws Exception {
+        public int getSliderThumb() throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
     		return slider.getThumb();
     	}
@@ -112,7 +113,7 @@ public class SliderActionKeywords {
             + "Example:\n"
             + "| Set Slider Selection | 0 |\n")
     @ArgumentNames({"index"})
-        public void setSliderSelection(String index) throws Exception {
+        public void setSliderSelection(String index) throws SWTBotBridgeException {
     		SWTBotSlider slider = (SWTBotSlider)Context.getCurrentWidget(SWTBotSlider.class);
 			Integer i = Integer.valueOf(index).intValue();
 			slider.setSelection(i);

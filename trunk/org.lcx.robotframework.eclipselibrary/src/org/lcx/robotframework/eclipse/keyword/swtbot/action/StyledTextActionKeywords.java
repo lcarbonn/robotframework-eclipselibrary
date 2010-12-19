@@ -5,6 +5,7 @@ package org.lcx.robotframework.eclipse.keyword.swtbot.action;
 
 import java.util.List;
 
+import org.lcx.robotframework.eclipse.bridge.SWTBotBridgeException;
 import org.lcx.robotframework.eclipse.context.Context;
 import org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotStyledText;
 import org.robotframework.javalib.annotation.ArgumentNames;
@@ -17,7 +18,7 @@ public class StyledTextActionKeywords {
 	@RobotKeyword("Is the styledText active\n\n"
             + "Example:\n"
             + "| Is StyledText Active |\n")
-        public boolean isStyledTextActive() throws Exception {
+        public boolean isStyledTextActive() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.isActive();
     	}
@@ -25,7 +26,7 @@ public class StyledTextActionKeywords {
 	@RobotKeyword("Is the styledText enabled\n\n"
             + "Example:\n"
             + "| Is StyledText Enabled |\n")
-        public boolean isStyledTextEnabled() throws Exception {
+        public boolean isStyledTextEnabled() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.isEnabled();
     	}
@@ -33,7 +34,7 @@ public class StyledTextActionKeywords {
 	@RobotKeyword("Is the styledText visible\n\n"
             + "Example:\n"
             + "| Is StyledText Visible |\n")
-        public boolean isStyledTextVisible() throws Exception {
+        public boolean isStyledTextVisible() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.isVisible();
     	}
@@ -42,7 +43,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Get StyledText Text |\n")
 //    @ArgumentNames({"text"})
-        public String getStyledTextText() throws Exception {
+        public String getStyledTextText() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.getText();
     	}
@@ -51,7 +52,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Set StyledText Text | text |\n")
     @ArgumentNames({"text"})
-        public void setStyledTextText(String text) throws Exception {
+        public void setStyledTextText(String text) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
 			styledText.setText(text);
     	}
@@ -60,7 +61,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Get StyledText Tooltip Text |\n")
 //    @ArgumentNames({"text"})
-        public String getStyledTextTooltipText() throws Exception {
+        public String getStyledTextTooltipText() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.getToolTipText();
     	}
@@ -69,7 +70,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Set Focus On StyledText |\n")
 //    @ArgumentNames({"text"})
-        public void setFocusOnStyledText() throws Exception {
+        public void setFocusOnStyledText() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		styledText.setFocus();
     	}
@@ -78,7 +79,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Count StyledText Lines |\n")
 //    @ArgumentNames({"text"})
-        public int countStyledTextLines() throws Exception {
+        public int countStyledTextLines() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.getLineCount();
     	}
@@ -87,7 +88,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Get StyledText Selection |\n")
 //    @ArgumentNames({"text"})
-        public String getStyledTextSelection() throws Exception {
+        public String getStyledTextSelection() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.getSelection();
     	}
@@ -96,7 +97,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Get Text On Current StyledText Line |\n")
 //    @ArgumentNames({"text"})
-        public String getTextOnCurrentStyledTextLine() throws Exception {
+        public String getTextOnCurrentStyledTextLine() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.getTextOnCurrentLine();
     	}
@@ -105,7 +106,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Get Text On Given StyledText Line | 0 |\n")
     @ArgumentNames({"index"})
-        public String getTextOnGivenStyledTextLine(String index) throws Exception {
+        public String getTextOnGivenStyledTextLine(String index) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(index!=null) {
 				Integer i = Integer.valueOf(index).intValue();
@@ -118,7 +119,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Get StyledText Lines |\n")
 //    @ArgumentNames({"text"})
-        public String[] getStyledTextLines() throws Exception {
+        public String[] getStyledTextLines() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		List<String> list = styledText.getLines();
     		String[] a = new String[list.size()];
@@ -130,7 +131,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| StyledText Has Bullet On Current Line |\n")
 //    @ArgumentNames({"text"})
-        public boolean styledTextHasBulletOnCurrentLine() throws Exception {
+        public boolean styledTextHasBulletOnCurrentLine() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		return styledText.hasBulletOnCurrentLine();
     	}
@@ -139,7 +140,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| StyledText Has Bullet On Given Line |\n")
     @ArgumentNames({"index"})
-        public boolean styledTextHasBulletOnGivenLine(String index) throws Exception {
+        public boolean styledTextHasBulletOnGivenLine(String index) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(index!=null) {
 				Integer i = Integer.valueOf(index).intValue();
@@ -152,7 +153,7 @@ public class StyledTextActionKeywords {
             + "Example:\n"
             + "| Insert StyledText Text | text | \n")
     @ArgumentNames({"text"})
-        public void insertStyledTextText(String text) throws Exception {
+        public void insertStyledTextText(String text) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		styledText.insertText(text);
     	}
@@ -163,7 +164,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Insert StyledText Text At Position | 0 | 0 | text | \n")
     @ArgumentNames({"line", "column", "text"})
-        public void insertStyledTextTextAtPosition(String line, String column, String text) throws Exception {
+        public void insertStyledTextTextAtPosition(String line, String column, String text) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(line!=null && column!=null) {
 				Integer l = Integer.valueOf(line).intValue();
@@ -178,7 +179,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Navigate To StyledText Position | 0 | 0 |\n")
     @ArgumentNames({"line", "column"})
-        public void navigateToStyledTextPosition(String line, String column) throws Exception {
+        public void navigateToStyledTextPosition(String line, String column) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(line!=null && column!=null) {
 				Integer l = Integer.valueOf(line).intValue();
@@ -191,7 +192,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Select StyledText Current Line |\n")
 //    @ArgumentNames({"line", "column"})
-        public void selectStyledTextCurrentLine() throws Exception {
+        public void selectStyledTextCurrentLine() throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
 			styledText.selectCurrentLine();
     	}
@@ -200,7 +201,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Select StyledText Given Line |\n")
     @ArgumentNames({"line"})
-        public void selectStyledTextGivenLine(String line) throws Exception {
+        public void selectStyledTextGivenLine(String line) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(line!=null) {
 				Integer l = Integer.valueOf(line).intValue();
@@ -216,7 +217,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Select StyledText Range | 0 | 0 | 10 | \n")
     @ArgumentNames({"line", "column", "length"})
-        public void selectStyledTextRange(String line, String column, String length) throws Exception {
+        public void selectStyledTextRange(String line, String column, String length) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(line!=null && column!=null && length!=null) {
 				Integer l = Integer.valueOf(line).intValue();
@@ -230,7 +231,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Type StyledText Text | text | \n")
     @ArgumentNames({"text"})
-        public void typeStyledTextText(String text) throws Exception {
+        public void typeStyledTextText(String text) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
 			styledText.typeText(text);
     	}
@@ -242,7 +243,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Type StyledText Text With Interval | text | \n")
     @ArgumentNames({"text", "interval"})
-        public void typeStyledTextTextWithInterval(String text, String interval) throws Exception {
+        public void typeStyledTextTextWithInterval(String text, String interval) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		Integer i = Integer.valueOf(interval).intValue();
 			styledText.typeText(text, i);
@@ -257,7 +258,7 @@ public class StyledTextActionKeywords {
 			+ "Example:\n"
             + "| Type StyledText Text At Position | 0 | 0 | text |\n")
     @ArgumentNames({"line", "column", "text"})
-        public void typeStyledTextTextAtPosition(String line, String column, String text) throws Exception {
+        public void typeStyledTextTextAtPosition(String line, String column, String text) throws SWTBotBridgeException {
     		SWTBotStyledText styledText = (SWTBotStyledText)Context.getCurrentWidget(SWTBotStyledText.class);
     		if(line!=null && column!=null) {
 				Integer l = Integer.valueOf(line).intValue();

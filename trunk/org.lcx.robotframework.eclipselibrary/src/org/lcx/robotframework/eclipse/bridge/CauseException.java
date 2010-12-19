@@ -10,7 +10,9 @@ public class CauseException {
 	public static boolean findCauseException(Class<?> expected, Throwable actual) {
 		Throwable cause = actual;
 		while(cause!=null) {
-			if(cause.getClass().equals(expected)) return true;
+			if(cause.getClass().equals(expected)) {
+				return true;
+			}
 			cause = cause.getCause();
 		}
 		return false;
@@ -19,14 +21,15 @@ public class CauseException {
 	public static String getCauseExceptionMessage(String expected, Throwable actual) {
 		Throwable cause = actual;
 		while(cause!=null) {
-			if(cause.getClass().getName().startsWith(expected)) return cause.getMessage();
+			if(cause.getClass().getName().startsWith(expected)) {
+				return cause.getMessage();
+			}
 			cause = cause.getCause();
 		}
 		return null;
 	}
 	
 	public static SWTBotBridgeException generateException(Throwable cause) {
-		cause.printStackTrace();
 		String message = CauseException.getCauseExceptionMessage(SWTBOTException, cause);
 		if(message!=null) {
 			return new SWTBotBridgeException(message, cause);
