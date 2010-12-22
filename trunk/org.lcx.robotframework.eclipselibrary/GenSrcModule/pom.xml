@@ -20,7 +20,7 @@
   <build>
 
     <sourceDirectory>../gensrc</sourceDirectory>
-    <outputDirectory>target/classes</outputDirectory>
+    <outputDirectory>../build</outputDirectory>
 
   </build>
 

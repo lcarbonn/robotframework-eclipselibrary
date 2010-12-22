@@ -20,7 +20,7 @@
   <build>
 
     <sourceDirectory>../src</sourceDirectory>
-    <outputDirectory>target/classes</outputDirectory>
+    <outputDirectory>../build</outputDirectory>
 
   </build>
 
