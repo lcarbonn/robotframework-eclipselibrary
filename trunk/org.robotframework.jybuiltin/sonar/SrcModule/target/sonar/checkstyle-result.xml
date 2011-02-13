@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.1">
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\EclipseLibrary.java">
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\bridge\CauseException.java">
+<error line="6" column="1" severity="warning" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="8" column="31" severity="warning" message="Le nom &apos;SWTBOTException&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\bridge\SWTBotBridge.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="30" column="36" severity="warning" message="Le nom &apos;SWTBOTCLASSLOADER&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="31" column="31" severity="warning" message="Le nom &apos;SWTWORKBENCHBOT&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="33" column="32" severity="warning" message="Le nom &apos;ISBRIDGEINITIATED&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="39" column="67" severity="info" message="Clause throws redondante : &apos;NoSuchMethodException&apos; est une sous-classe de &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.coding.RedundantThrowsCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\bridge\SWTBotBridgeException.java">
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\Configuration.java">
+<error line="6" severity="warning" message="La classe Configuration devrait être déclarée finale." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\context\Context.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="26" column="9" severity="info" message="La méthode &apos;setWidget&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="37" column="9" severity="info" message="La méthode &apos;getWidget&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\EclipseLibrary.java">
+<error line="25" column="34" severity="warning" message="La variable &apos;instance&apos; devrait être privée et avoir des accesseurs." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="49" column="5" severity="info" message="La méthode &apos;runKeyword&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="62" column="5" severity="info" message="La méthode &apos;getKeywordArguments&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="66" column="5" severity="info" message="La méthode &apos;getKeywordDocumentation&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="70" column="5" severity="info" message="La méthode &apos;getKeywordNames&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\action\EclipseEditorActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="19" column="9" severity="info" message="La méthode &apos;isEclipseEditorActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\action\EditorActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="18" column="9" severity="info" message="La méthode &apos;isEditorActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\action\PerspectiveActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;isPerspectiveActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\action\ViewActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="19" column="9" severity="info" message="La méthode &apos;isViewActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="27" column="9" severity="info" message="La méthode &apos;closeView&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\action\ViewMenuActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;isViewMenuChecked&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\finder\EditorFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="21" column="9" severity="info" message="La méthode &apos;findActiveEditor&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\finder\PerspectiveFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="20" column="9" severity="info" message="La méthode &apos;findActivePerspective&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\finder\ToolbarsFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="24" column="9" severity="info" message="La méthode &apos;listPartAllToolbarButtonsTooltip&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\eclipse\finder\ViewFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="19" column="9" severity="info" message="La méthode &apos;findActiveView&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\launch\EclipseLaunchingKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="23" column="23" severity="info" message="Le mot-clef &apos;static&apos; n&apos;apparaît pas dans l&apos;ordre préconisé par les JLS." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="27" column="5" severity="info" message="La méthode &apos;startEclipse&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ButtonActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\CComboActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;countItemsInCCombo&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\CheckBoxActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickCheckBox&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\CLabelActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;getCLabelAlignment&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ColorActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;getBackgroundColor&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ComboActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;countItemsInCombo&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\CTabItemActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;isCTabItemActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\DateTimeActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="19" column="9" severity="info" message="La méthode &apos;isDateTimeActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\LabelActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;getLabelAlignment&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\LinkActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;clickLink&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ListActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;isListActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\RadioActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickRadio&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\SliderActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;isSliderActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\SpinnerActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;isSpinnerActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\StyledTextActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="18" column="9" severity="info" message="La méthode &apos;isStyledTextActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\TabItemActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;isTabItemActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\TableActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="20" column="9" severity="info" message="La méthode &apos;isTableActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\TableColumnActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickTableColumn&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\TableItemActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickTableItem&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\TextActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;isTextActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ToggleButtonActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickToggleButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ToolbarButtonActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickToolbarButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ToolbarDropDownButtonActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;clickToolbarDropDownButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ToolbarRadioButtonActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickToolbarRadioButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\ToolbarToggleButtonActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;clickToolbarToggleButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\TreeActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="19" column="9" severity="info" message="La méthode &apos;isTreeActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\action\TreeItemActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="18" column="9" severity="info" message="La méthode &apos;clickTreeItem&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\actionfact\MenuActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;clickMenu&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\actionfact\ShellActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="15" column="9" severity="info" message="La méthode &apos;activateShell&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\actionfact\TrayItemActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="9" severity="info" message="La méthode &apos;isTrayItemActive&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\ButtonFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\CComboFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findCCombo&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\CheckBoxFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findCheckBox&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\CLabelFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findCLabel&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\ComboBoxFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findCombo&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\CTabItemFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findCTabItem&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\DateTimeFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findDateTime&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\LabelFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findLabel&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\LinkFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findLink&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\ListFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findList&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\RadioFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findRadio&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\SliderFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findSlider&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\SpinnerFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findSpinner&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\StyledTextFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findStyledText&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\TabItemFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findTabItem&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\TableFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findTable&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\TextFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findText&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\ToggleButtonFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findToggleButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\ToolbarButtonFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findToolbarButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\ToolbarDropDownButtonFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findToolbarDropDownButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\ToolbarRadioButtonFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findToolbarRadioButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\ToolbarToggleButtonFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findToolbarToggleButton&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finder\TreeFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findTree&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finderfact\ContextMenuFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="16" column="5" severity="info" message="La méthode &apos;findContextMenu&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finderfact\MenuFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findMenu&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finderfact\ShellFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findShell&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbot\finderfact\TrayItemFinderKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;findTrayItem&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\swtbotpref\SWTBotPreferencesActionKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="17" column="31" severity="warning" message="Le nom &apos;DEFAULT_KEY&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="18" column="31" severity="warning" message="Le nom &apos;DEFAULT_POLL_DELAY&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\utils\SWTBotKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="20" column="31" severity="warning" message="La variable &apos;IS_CAPTURE_SCREENSHOT_ON_ERROR&apos; devrait être privée et avoir des accesseurs." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="20" column="31" severity="warning" message="Le nom &apos;IS_CAPTURE_SCREENSHOT_ON_ERROR&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="21" column="30" severity="warning" message="La variable &apos;ERROR_SCREENSHOT_FILE_NAME&apos; devrait être privée et avoir des accesseurs." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="21" column="30" severity="warning" message="Le nom &apos;ERROR_SCREENSHOT_FILE_NAME&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="23" column="9" severity="info" message="La méthode &apos;captureScreenshot&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\keyword\utils\WaitKeywords.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\LibraryLogger.java">
+<error line="19" column="1" severity="warning" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\eclipse\utils\TimeParser.java">
+<error line="9" column="1" severity="warning" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="12" column="9" severity="warning" message="La complexité cyclomatique de la classe est de 34 alors que le maximum autorisé est de 10." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
+<error line="16" column="36" severity="info" message="&apos;1000&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="69" column="62" severity="info" message="&apos;86400000d&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="75" column="63" severity="info" message="&apos;3600000d&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="77" column="30" severity="warning" message="La complexité de l&apos;expression booléenne est de 4, alors que le maximum autorisé est de 3." source="com.puppycrawl.tools.checkstyle.checks.metrics.BooleanExpressionComplexityCheck"/>
+<error line="83" column="65" severity="info" message="&apos;60000d&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="85" column="30" severity="warning" message="La complexité de l&apos;expression booléenne est de 4, alors que le maximum autorisé est de 3." source="com.puppycrawl.tools.checkstyle.checks.metrics.BooleanExpressionComplexityCheck"/>
+<error line="91" column="65" severity="info" message="&apos;1000d&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\commons\AbstractSWTBotObject.java">
+<error line="11" column="26" severity="warning" message="La variable &apos;distantObject&apos; devrait être privée et avoir des accesseurs." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="17" column="9" severity="info" message="La méthode &apos;getDistantObject&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="21" column="9" severity="info" message="La méthode &apos;toString&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="30" column="9" severity="info" message="La méthode &apos;hashCode&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="39" column="9" severity="info" message="La méthode &apos;equals&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\commons\Color.java">
+<error line="22" column="9" severity="info" message="La méthode &apos;getRed&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="25" column="9" severity="info" message="La méthode &apos;setRed&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="28" column="9" severity="info" message="La méthode &apos;getGreen&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="31" column="9" severity="info" message="La méthode &apos;setGreen&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="34" column="9" severity="info" message="La méthode &apos;getBlue&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="37" column="9" severity="info" message="La méthode &apos;setBlue&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="41" column="9" severity="info" message="La méthode &apos;toString&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="48" column="52" severity="info" message="&apos;16&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="49" column="24" severity="info" message="&apos;16&apos; devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\commons\ISWTBotObject.java">
+<error line="8" column="9" severity="info" message="Mot-clef &apos;public&apos; redondant." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\eclipse\finder\AbstractSWTBotFactory.java">
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\eclipse\finder\waits\Condition.java">
+<error line="15" column="9" severity="info" message="La méthode &apos;getCondition&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\eclipse\finder\waits\Conditions.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="18" column="1" severity="warning" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\swt\finder\utils\SWTUtils.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="13" column="1" severity="warning" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="17" column="22" severity="info" message="Le mot-clef &apos;static&apos; n&apos;apparaît pas dans l&apos;ordre préconisé par les JLS." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="17" column="36" severity="info" message="Le nom &apos;fileName&apos; n&apos;est pas conforme à l&apos;expression &apos;^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+<error line="18" column="22" severity="info" message="Le mot-clef &apos;static&apos; n&apos;apparaît pas dans l&apos;ordre préconisé par les JLS." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="18" column="36" severity="info" message="Le nom &apos;fileExt&apos; n&apos;est pas conforme à l&apos;expression &apos;^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\swt\finder\waits\ICondition.java">
+<error line="10" column="9" severity="info" message="Mot-clef &apos;public&apos; redondant." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\swt\finder\widgets\AbstractSWTBot.java">
+<error line="0" severity="error" message="Exception levée : java.lang.RuntimeException: Impossible d&apos;obtenir les informations relatives à SWTBotBridgeException." source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+<error line="19" column="9" severity="info" message="La méthode &apos;setFocus&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="D:\workspaces\Workspace_Mylyn_e35_sv3\org.lcx.robotframework.eclipselibrary\src\org\lcx\robotframework\swtbot\swt\finder\widgets\AbstractSWTBotControl.java">
+</file>
+</checkstyle>

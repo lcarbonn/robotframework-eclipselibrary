@@ -1,0 +1,228 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="RIDE" /> 
+<meta name="rf-template" content="False" /> 
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>A TestJyBuiltInLibrary</title>
+</head>
+<body>
+<h1>A TestJyBuiltInLibrary</h1>
+<table id="settings" border="1">
+<tr>
+<th class="name">Setting</th>
+<th colspan="4">Value</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>JyBuiltInLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table id="variables" border="1">
+<tr>
+<th class="name">Variable</th>
+<th colspan="4">Value</th>
+</tr>
+<tr>
+<td class="name">@{liste}</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table id="testcases" border="1">
+<tr>
+<th class="name">Test Case</th>
+<th>Action</th>
+<th colspan="3">Arguments</th>
+</tr>
+<tr>
+<td class="name"><a name="test_SimpleTest">SimpleTest</a></td>
+<td>Log Many</td>
+<td>un</td>
+<td>message</td>
+<td>de</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>plus</td>
+<td>@{liste}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>un</td>
+<td>commentaire</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${int}=</td>
+<td>Convert To Integer</td>
+<td>123</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Global Variable</td>
+<td>${GLOBAL_VARIABLE}</td>
+<td>${int}</td>
+<td>val1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>val2</td>
+<td>${TEST_NAME}</td>
+<td>@{liste}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Test Variable</td>
+<td>${testvar}</td>
+<td>test variable</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>First Test Step</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${arg1}=</td>
+<td>And Catenate</td>
+<td>${TEST_NAME}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>When Log</td>
+<td>${arg1}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Then Log</td>
+<td>jus a then log</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>And Log</td>
+<td>just a and log</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_SecondTest">SecondTest</a></td>
+<td>Second Test Step</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_For Debug">For Debug</a></td>
+<td>${random}=</td>
+<td>Evaluate</td>
+<td>random.randint(0, sys.maxint)</td>
+<td>random,sys</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>${random}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log Variables</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table id="keywords" border="1"></table>
+</body>
+</html>
