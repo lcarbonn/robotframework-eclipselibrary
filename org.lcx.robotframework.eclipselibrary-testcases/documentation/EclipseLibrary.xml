@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20101102 18:49:40" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
-<version>0.11</version>
+<keywordspec generated="20110221 13:07:40" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
+<version>0.14</version>
 <scope>global</scope>
 <doc>Documentation for test library `org.lcx.robotframework.eclipse.EclipseLibrary`.</doc>
 <kw name="Activate C Tab Item">
@@ -2770,91 +2770,11 @@ Example:
 <arguments>
 </arguments>
 </kw>
-<kw name="Get SWTBot Preferences DEFAULT KEY">
-<doc>Get SWTBotPreferences DEFAULT_KEY
-
-Example:
-| Get SWTBotPreferences DEFAULT_KEY |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences DEFAULT POLL DELAY">
-<doc>Get SWTBotPreferences DEFAULT_POLL_DELAYL in milliseconds
-
-Example:
-| Get SWTBotPreferences DEFAULT_POLL_DELAY |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences KEYBOARD LAYOUT">
-<doc>Get SWTBotPreferences KEYBOARD_LAYOUT
-
-Example:
-| Get SWTBotPreferences KEYBOARD_LAYOUT |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences KEYBOARD STRATEGY">
-<doc>Get SWTBotPreferences KEYBOARD_STRATEGY
-
-Example:
-| Get SWTBotPreferences KEYBOARD_STRATEGY |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences MAX ERROR SCREENSHOT COUNT">
-<doc>Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT
-
-Example:
-| Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences PLAYBACK DELAY">
-<doc>Get SWTBotPreferences PLAYBACK_DELAY in milliseconds
-
-Example:
-| Get SWTBotPreferences PLAYBACK_DELAY |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences RECORDER FILE NAME">
-<doc>Get SWTBotPreferences RECORDER_FILE_NAME
-
-Example:
-| Get SWTBotPreferences RECORDER_FILE_NAME |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences SCREENSHOT FORMAT">
-<doc>Get SWTBotPreferences SCREENSHOT_FORMAT
-
-Example:
-| Get SWTBotPreferences SCREENSHOT_FORMAT |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences SCREENSHOTS DIR">
-<doc>Get SWTBotPreferences SCREENSHOTS_DIR
-
-Example:
-| Get SWTBotPreferences SCREENSHOTS_DIR |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences TIMEOUT">
+<kw name="Get SWT Bot Preferences TIMEOUT">
 <doc>Get SWTBotPreferences TIMEOUT in milliseconds
 
 Example:
 | Get SWTBotPreferences TIMEOUT |</doc>
-<arguments>
-</arguments>
-</kw>
-<kw name="Get SWTBot Preferences TYPE INTERVAL">
-<doc>Get SWTBotPreferences TYPE_INTERVAL in milliseconds
-
-Example:
-| Get SWTBotPreferences TYPE_INTERVAL |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -3278,6 +3198,86 @@ Example:
 
 Example:
 | Get View Title |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesDEFAULT KEY">
+<doc>Get SWTBotPreferences DEFAULT_KEY
+
+Example:
+| Get SWTBotPreferences DEFAULT_KEY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesDEFAULT POLL DELAY">
+<doc>Get SWTBotPreferences DEFAULT_POLL_DELAYL in milliseconds
+
+Example:
+| Get SWTBotPreferences DEFAULT_POLL_DELAY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesKEYBOARD LAYOUT">
+<doc>Get SWTBotPreferences KEYBOARD_LAYOUT
+
+Example:
+| Get SWTBotPreferences KEYBOARD_LAYOUT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesKEYBOARD STRATEGY">
+<doc>Get SWTBotPreferences KEYBOARD_STRATEGY
+
+Example:
+| Get SWTBotPreferences KEYBOARD_STRATEGY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT">
+<doc>Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT
+
+Example:
+| Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesPLAYBACK DELAY">
+<doc>Get SWTBotPreferences PLAYBACK_DELAY in milliseconds
+
+Example:
+| Get SWTBotPreferences PLAYBACK_DELAY |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesRECORDER FILE NAME">
+<doc>Get SWTBotPreferences RECORDER_FILE_NAME
+
+Example:
+| Get SWTBotPreferences RECORDER_FILE_NAME |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesSCREENSHOT FORMAT">
+<doc>Get SWTBotPreferences SCREENSHOT_FORMAT
+
+Example:
+| Get SWTBotPreferences SCREENSHOT_FORMAT |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesSCREENSHOTS DIR">
+<doc>Get SWTBotPreferences SCREENSHOTS_DIR
+
+Example:
+| Get SWTBotPreferences SCREENSHOTS_DIR |</doc>
+<arguments>
+</arguments>
+</kw>
+<kw name="GetSWTBotPreferencesTYPE INTERVAL">
+<doc>Get SWTBotPreferences TYPE_INTERVAL in milliseconds
+
+Example:
+| Get SWTBotPreferences TYPE_INTERVAL |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -4560,6 +4560,15 @@ Example:
 <arg>text</arg>
 </arguments>
 </kw>
+<kw name="Set Eclipse Library Log Level">
+<doc>Set the eclipse library log level Use the log4j levels = OFF, FATAL, TRACE, ERROR, DEBUG, WARN, INFO, ALL.
+
+Example:
+| Set EclipseLibrary Log Level | DEBUG |</doc>
+<arguments>
+<arg>level</arg>
+</arguments>
+</kw>
 <kw name="Set Focus On Button">
 <doc>Set the focus on the button
 
@@ -4879,7 +4888,25 @@ Example:
 <arg>text</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences DEFAULT KEY">
+<kw name="Set SWT Bot Preferences TIMEOUT">
+<doc>Set SWTBotPreferences TIMEOUT in time format
+
+The timeout for finding widgets among other things. Defaults to 5000ms Example:
+| Set SWTBotPreferences TIMEOUT | 1 s |</doc>
+<arguments>
+<arg>value</arg>
+</arguments>
+</kw>
+<kw name="Set Text Text">
+<doc>Set text into text
+
+Example:
+| Set Text Text | text |</doc>
+<arguments>
+<arg>text</arg>
+</arguments>
+</kw>
+<kw name="SetSWTBotPreferencesDEFAULT KEY">
 <doc>Set SWTBotPreferences DEFAULT_KEY
 
 The default key used to match SWT widgets. Defaults to org.eclipse.swtbot.widget.key.Example:
@@ -4888,7 +4915,7 @@ The default key used to match SWT widgets. Defaults to org.eclipse.swtbot.widget
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences DEFAULT POLL DELAY">
+<kw name="SetSWTBotPreferencesDEFAULT POLL DELAY">
 <doc>Set SWTBotPreferences DEFAULT_POLL_DELAY in time format
 
 The default time delay between successive polling while waiting for a condition to be evaluated. Defaults to 500ms. Example:
@@ -4897,7 +4924,7 @@ The default time delay between successive polling while waiting for a condition 
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences KEYBOARD LAYOUT">
+<kw name="SetSWTBotPreferencesKEYBOARD LAYOUT">
 <doc>Set SWTBotPreferences KEYBOARD_LAYOUT
 
 The keyboard layout. This value is autodetected at runtime. This can be set using the system property 'org.eclipse.swtbot.keyboard.layout'. Note: the layout must be of the form foo.bar.baz.[MAC_][LANGUAGE_][COUNTRY_][VARIANT_] This expects a file named 'foo/bar/baz/[MAC_][LANGUAGE_][COUNTRY_][VARIANT_].keyboard'
@@ -4910,7 +4937,7 @@ Example:
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences KEYBOARD STRATEGY">
+<kw name="SetSWTBotPreferencesKEYBOARD STRATEGY">
 <doc>Set SWTBotPreferences KEYBOARD_STRATEGY
 
 The default keyboard strategy. Defaults to org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy Example:
@@ -4919,7 +4946,7 @@ The default keyboard strategy. Defaults to org.eclipse.swtbot.swt.finder.keyboar
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences MAX ERROR SCREENSHOT COUNT">
+<kw name="SetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT">
 <doc>Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT
 
 The maximum number of screenshots that SWTBot should capture. Defaults to 100. Example:
@@ -4928,7 +4955,7 @@ The maximum number of screenshots that SWTBot should capture. Defaults to 100. E
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences PLAYBACK DELAY">
+<kw name="SetSWTBotPreferencesPLAYBACK DELAY">
 <doc>Set SWTBotPreferences PLAYBACK_DELAY in time format
 
 The speed of playback in milliseconds. Defaults to 0 ms. Example:
@@ -4937,7 +4964,7 @@ The speed of playback in milliseconds. Defaults to 0 ms. Example:
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences RECORDER FILE NAME">
+<kw name="SetSWTBotPreferencesRECORDER FILE NAME">
 <doc>Set SWTBotPreferences RECORDER_FILE_NAME
 
 The name of the file in which the recorder records. Defaults to 'swtbot.record.txt'. Example:
@@ -4946,7 +4973,7 @@ The name of the file in which the recorder records. Defaults to 'swtbot.record.t
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences SCREENSHOT FORMAT">
+<kw name="SetSWTBotPreferencesSCREENSHOT FORMAT">
 <doc>Set SWTBotPreferences SCREENSHOT_FORMAT
 
 The screenshot image format to be used. Defaults to 'jpeg' The value must be one these: BMP, GIF, ICO, JPEG, JPG, PNG or TIFF. Example:
@@ -4955,7 +4982,7 @@ The screenshot image format to be used. Defaults to 'jpeg' The value must be one
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences SCREENSHOTS DIR">
+<kw name="SetSWTBotPreferencesSCREENSHOTS DIR">
 <doc>Set SWTBotPreferences SCREENSHOTS_DIR
 
 The directory in which screenshots should be generated. Defaults to './screenshots'. Example:
@@ -4964,31 +4991,13 @@ The directory in which screenshots should be generated. Defaults to './screensho
 <arg>value</arg>
 </arguments>
 </kw>
-<kw name="Set SWTBot Preferences TIMEOUT">
-<doc>Set SWTBotPreferences TIMEOUT in time format
-
-The timeout for finding widgets among other things. Defaults to 5000ms Example:
-| Set SWTBotPreferences TIMEOUT | 1 s |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
-</kw>
-<kw name="Set SWTBot Preferences TYPE INTERVAL">
+<kw name="SetSWTBotPreferencesTYPE INTERVAL">
 <doc>Set SWTBotPreferences TYPE_INTERVAL in time format
 
 The the time interval in milliseconds between typing characters in a string. Defaults to 50ms Example:
 | Set SWTBotPreferences TYPE_INTERVAL | 20ms |</doc>
 <arguments>
 <arg>value</arg>
-</arguments>
-</kw>
-<kw name="Set Text Text">
-<doc>Set text into text
-
-Example:
-| Set Text Text | text |</doc>
-<arguments>
-<arg>text</arg>
 </arguments>
 </kw>
 <kw name="Show C Tab Item">
