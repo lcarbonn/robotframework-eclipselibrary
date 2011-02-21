@@ -5,23 +5,84 @@
 	<description>
         Launching TestEclipse suite
   </description>
-	<property name="version"  value="0.2"/>
+	<property name="robotant"  value="libext/ant-robotframework-0.4.jar"/>
+	<property name="robotframework"  value="libext/robotframework-2.5.5.jar"/>
+	<property name="eclipselibrary"  value="lib/eclipselibrary-0.14-with-dependencies-e36.jar"/>
+  
   <taskdef name="robotant"
       classname="org.lcx.robotframework.ant.RobotAnt"
-      classpath="libext/ant-robotframework-${version}.jar"/>
+      classpath="${robotant}"/>
 
 	<target name="robotant">
 		<robotant 
-        jar="libext/rfstandalone.jar"
+        jar="${robotframework}"
+        data_sources="A_TestEclipseLibrary_installation.html"
+        loglevel="TRACE"
+        debugfile="robotant.log"
+        outputdir="results"
+        maxmemory="512m"
+        maxpermsize="256m"
+        >
+      <jvmarg line="-Xbootclasspath/a:${eclipselibrary}"/>
+		</robotant>
+	</target>
+      
+	<target name="TestWidgets">
+		<robotant 
+        jar="${robotframework}"
         data_sources="TestSamples"
         loglevel="TRACE"
         debugfile="robotant.log"
-        outputdir="resultats"
-        suite="TestWidgets"
+        outputdir="results"
+        suite="Test Widgets"
         maxmemory="512m"
+        maxpermsize="256m"
         >
-      <jvmarg line="-XX:MaxPermSize=256M"/>
-      <jvmarg line="-Xbootclasspath/a:lib/eclipselibrary-0.13-with-dependencies-e36.jar"/>
+      <jvmarg line="-Xbootclasspath/a:${eclipselibrary}"/>
+		</robotant>
+	</target>
+
+	<target name="TestPerspectiveAndView">
+		<robotant 
+        jar="${robotframework}"
+        data_sources="TestSamples"
+        loglevel="TRACE"
+        debugfile="robotant.log"
+        outputdir="results"
+        suite="TestPerspectiveAndView"
+        maxmemory="512m"
+        maxpermsize="256m"
+        >
+      <jvmarg line="-Xbootclasspath/a:${eclipselibrary}"/>
+		</robotant>
+	</target>
+
+	<target name="TestEditors">
+		<robotant 
+        jar="${robotframework}"
+        data_sources="TestSamples"
+        loglevel="TRACE"
+        debugfile="robotant.log"
+        outputdir="results"
+        suite="TestEditors"
+        maxmemory="512m"
+        maxpermsize="256m"
+        >
+      <jvmarg line="-Xbootclasspath/a:${eclipselibrary}"/>
+		</robotant>
+	</target>
+
+	<target name="TestSamples">
+		<robotant 
+        jar="${robotframework}"
+        data_sources="TestSamples"
+        loglevel="TRACE"
+        debugfile="robotant.log"
+        outputdir="results"
+        maxmemory="512m"
+        maxpermsize="256m"
+        >
+      <jvmarg line="-Xbootclasspath/a:${eclipselibrary}"/>
 		</robotant>
 	</target>
 
