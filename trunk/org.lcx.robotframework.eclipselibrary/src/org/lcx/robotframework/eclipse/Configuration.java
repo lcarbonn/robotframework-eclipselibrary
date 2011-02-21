@@ -1,3 +1,6 @@
+/*
+ * Copyright 2011 L. Carbonnaux
+ */
 package org.lcx.robotframework.eclipse;
 
 import java.util.MissingResourceException;

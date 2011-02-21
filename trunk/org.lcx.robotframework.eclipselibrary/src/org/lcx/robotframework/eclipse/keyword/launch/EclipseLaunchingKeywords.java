@@ -6,6 +6,7 @@ package org.lcx.robotframework.eclipse.keyword.launch;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.lang.reflect.Method;
+import java.security.Permission;
 
 import org.apache.log4j.Logger;
 import org.lcx.robotframework.eclipse.LibraryLogger;
@@ -23,7 +24,13 @@ public class EclipseLaunchingKeywords {
 	private final static String ECLIPSE_LAUNCHER = "org.eclipse.equinox.launcher.Main";
 	
 	private Logger log = LibraryLogger.getLogger();
+
+	 // install security manager to avoid System.exit() call from lib
+	public EclipseLaunchingKeywords() {
+	}
 	
+    
+
     @RobotKeyword("Start Eclipse with the given arguments in a separate thread\n")
     @ArgumentNames({"*args"})
     public void startEclipse(String[] args) throws SWTBotBridgeException {
@@ -38,12 +45,14 @@ public class EclipseLaunchingKeywords {
      */
     public Thread startEclipseInSeparateThread(final String[] args) throws SWTBotBridgeException {
 
-    	getMainMethod();
+        boolean isBridgeInitialized = false;
+        boolean timeoutReached = false;
+
+        getMainMethod();
     	
 		UncaughtExceptionHandler eh = new UncaughtExceptionHandler() {
 			
 			public void uncaughtException(Thread t, Throwable e) {
-				log.error("Uncaught Exception in startEclipseInSeparateThread", e);
 				error=true;
 			}
 		};
@@ -54,18 +63,15 @@ public class EclipseLaunchingKeywords {
                 	internalLaunchEclipse(args);
                 } catch (Exception e) {
                 	error=true;
-    				log.error("Erro createThread in startEclipseInSeparateThread", e);
                     throw new RuntimeException(e);
                 }
             }
         });
     	et.setUncaughtExceptionHandler(eh);
+		log.info("Eclipse start is requested");
+
     	et.start();
 
-    	if(error) {
-    		return null;
-    	}
-    	
 		long timeout = 2 * 60 * 1000;
         for (int i = 0; i < args.length; i++) {
 			if(args[i].equals(TIMEOUT) && i<(args.length-1)) {
@@ -73,11 +79,9 @@ public class EclipseLaunchingKeywords {
 			}
 		}
 
-        boolean isBridgeInitialized = false;
-        boolean timeoutReached = false;
         long start = System.currentTimeMillis();
         long end = start;
-        while(!isBridgeInitialized && !timeoutReached) {
+        while(!error && !isBridgeInitialized && !timeoutReached) {
 			// Is bridge initialized?
         	try {
             	Thread.sleep(1000);
@@ -94,6 +98,7 @@ public class EclipseLaunchingKeywords {
         	log.info("SWTBotBridge is initialized");
         }
         if(timeoutReached) {
+    		log.error("SWTBotBridge initialization failed or timeout reached");
         	throw new SWTBotBridgeException("Timeout reached before end of initialization\n " +
         			"  Check if EclipseLibrary plugin is installed" +
         			"  Or use -timeout option in Start Eclipse keyword");
@@ -107,13 +112,34 @@ public class EclipseLaunchingKeywords {
     }
     
     private void internalLaunchEclipse(String[] args) throws SWTBotBridgeException {
-    	try {
+		// install security manager to avoid System.exit() call from lib
+		SecurityManager       previousSecurityManager = System.getSecurityManager();
+
+		final SecurityManager securityManager         = new SecurityManager() {
+		    @Override public void checkPermission(final Permission permission) {
+		      if (permission.getName() != null && permission.getName().startsWith("exitVM")) {
+		        throw new SecurityException();
+		      }
+		    }
+		    @Override
+		    public void checkExit(int status) {
+		            if(status!=0) {
+		            	throw new SecurityException("Eclipse exit with status="+status+
+		            			", see log for detail and check StartEclipse keyword parameters");
+		            }
+		    }
+		  };
+		System.setSecurityManager(securityManager);
+
+		try {
             Method mainMethod = getMainMethod();
             mainMethod.invoke(null, new Object[] { args });
-           
-    	} catch (Exception e) {
-			e.printStackTrace();
-			throw new SWTBotBridgeException(e);
+		} catch (Exception e) {
+    		error = true;
+    		log.error(e.getCause().getMessage(), e.getCause());
+			throw new SWTBotBridgeException(e.getCause().getMessage(), e);
+		} finally {
+		  System.setSecurityManager(previousSecurityManager);
 		}
     }
     

@@ -7,7 +7,9 @@
   <!-- set global properties for this build -->
   <property name="src" location="src"/>
   <property name="gensrc" location="gensrc"/>
+  <property name="testsrc" location="testsrc"/>
   <property name="build" location="build"/>
+  <property name="reports" location="reports"/>
   <property name="dist"  location="C:/RobotFramework/TestEclipse/dist"/>
   <property name="doc"  value="C:/RobotFramework/TestEclipse/documentation"/>
   <property name="jython"  location="C:/RobotFramework/jython2.5.1/jython.bat"/>
@@ -29,12 +31,14 @@
     <mkdir dir="${build}"/>
     <!-- Create the distribution directory -->
     <mkdir dir="${dist}"/>
+    <!-- Create the junit report directory -->
+    <mkdir dir="${reports}"/>
   </target>
 
   <target name="compile" depends="init"
         description="compile the source " >
     <!-- Compile the java code from ${src} into ${build} -->
-    <javac srcdir="${src}:${gensrc}" destdir="${build}"
+    <javac srcdir="${src}:${gensrc}:${testsrc}" destdir="${build}"
       source="1.5"
       target="1.5"
       classpath="lib/${javalibcore}"
@@ -176,10 +180,39 @@
     <!-- Delete the ${build} and ${dist} directory trees -->
     <delete dir="${build}"/>
     <delete dir="${dist}"/>
+    <delete dir="${reports}"/>
   </target>
   
   <target name="debug">
     <echo message="jarfilewithdep : ${dist}/${jarfilewithdep}"/>
   </target>
+
+	<target name="test" depends="compile">
+	<junit printsummary="yes" haltonfailure="no" fork="yes">
+	  <classpath>
+	    <pathelement location="${build}"/>
+	    <pathelement path="${java.class.path}"/>
+	  </classpath>
+
+	  <formatter type="plain"/>
+      <formatter type="xml"/>
+
+	  <batchtest todir="${reports}">
+	    <fileset dir="${testsrc}">
+	      <include name="**/*Test*.java"/>
+	      <exclude name="**/AllTests.java"/>
+	    </fileset>
+	  </batchtest>
+	</junit>
+  </target>
+
+    <target name="testreport" depends="test">
+	<junitreport todir="${reports}">
+	  <fileset dir="${reports}">
+	    <include name="TEST-*.xml"/>
+	  </fileset>
+	  <report format="frames" todir="${reports}/html"/>
+	</junitreport>
+	  </target>
 </project>
 
