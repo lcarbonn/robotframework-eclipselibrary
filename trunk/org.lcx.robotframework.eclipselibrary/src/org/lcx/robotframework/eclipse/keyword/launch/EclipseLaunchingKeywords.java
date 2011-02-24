@@ -54,6 +54,7 @@ public class EclipseLaunchingKeywords {
 			
 			public void uncaughtException(Thread t, Throwable e) {
 				error=true;
+				throw new RuntimeException(e);
 			}
 		};
 
@@ -94,6 +95,11 @@ public class EclipseLaunchingKeywords {
         		timeoutReached = ((end-start)>timeout);
         	}
         }
+        
+    	if(error) {
+    		throw new SWTBotBridgeException();
+    	}
+        
         if(isBridgeInitialized) {
         	log.info("SWTBotBridge is initialized");
         }
