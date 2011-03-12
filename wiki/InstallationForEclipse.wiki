@@ -1,4 +1,4 @@
-#labels Featured,Installation
+#labels Featured,Installation,Eclipse
 = Installation For RCP/SWT application =
 
 Robotframework Eclipse Library from v0.12 now works on :
