@@ -1,0 +1,57 @@
+#labels Featured,Installation
+= Installation For RCP/SWT application =
+
+Robotframework Eclipse Library from v0.12 now works on :
+ * robotframework v2.5.6
+ * python v2.6
+ * jython v2.5.1
+ * RIDE v0.32
+ * Eclipse 3.5 and 3.6 (should work also on 3.4 but not tested!)
+ * SWTBot 2.0
+ * Javalib core 0.8.1 with dependencies
+
+== Eclipse Plugin ==
+ Before using Eclipse Library, you should install a plugin under Eclipse.
+ * Robotframework Eclipse Library plugin for SWTBot update site
+   `http://scrumvision.sourceforge.net/update-site/eclipselibrary`
+ 
+ This plugin will ask you installing SWTBot normaly.
+ * if not, SWTBot plugins should be installed from 
+  * SWTBot  update site for Eclipse 3.5 : `http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site`
+  * SWTBot update site for Eclipse 3.6 : `http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site`
+
+ 
+== Eclipse library ==
+ Download the latest eclipse library jar file.
+ * The jar with all dependencies [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x-with-dependencies.jar]
+OR
+ * The `EclipseLibrary` [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x.jar]
+ * The `JavalibCore`  [http://code.google.com/p/robotframework-javatools/downloads/list javalib-core-x.x.x-jar-with-dependencies.jar]
+ * The Eclipse Equinox launcher (like `org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar`) that you should find under eclipse installation folder, under plugins
+Place files in 'lib' folder under your test suite
+
+ Download the eclipsebot.bat (or run.py) robotframework script for Eclipse tests
+ * [http://robotframework-eclipselibrary.googlecode.com/files/eclipsebot.bat eclipsebot.bat]
+ * [http://robotframework-eclipselibrary.googlecode.com/files/run.py run.py] python is now updated for PermGen jvm option
+
+ Add Eclipse Library resource file in your test case as a resource.
+ * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.html  EclipseLibraryKeywords.html]
+
+ Add Eclipse Library xml keyword specification file under PYTHON_PATH for keyword completion under RIDE
+ * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml  EclipseLibrary.xml]
+
+== Running with Eclipse ==
+ Test your installation
+ * Download [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/A_TestEclipseLibrary_installation.html installation test case]
+ * Then launch in console : `eclipsebot.bat A_TestEclipseLibrary_installation.html`
+ * or `run.py A_TestEclipseLibrary_installation.html`
+
+ Eclipse may throw a `PermGen error` or `OutOfMemory` exception.
+ * It is then better to use [http://code.google.com/p/robotframework/wiki/JavaIntegration robotframework standalone jar] and set following parameters to the java command (eclipsebot.bat) :
+{{{
+@echo off
+set ECLIPSE_LIBRARY=lib/eclipselibrary-0.11-with-dependencies.jar
+set ROBOTFRAMEWORK=robotframework-2.5.4.1.jar
+java -Xms256m -Xmx512m -XX:PermSize=64M -XX:MaxPermSize=256M  -Xbootclasspath/a:%ECLIPSE_LIBRARY% -jar  %ROBOTFRAMEWORK% --debugfile jybot.log --loglevel TRACE --outputdir results %* 
+}}}
+ * eclipsebot --suite `TestPerspectiveAndView` `TestSamples`
