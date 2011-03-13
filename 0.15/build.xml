@@ -1,0 +1,295 @@
+<project name="EclipseLibrary" default="dist" basedir=".">
+    <description>
+        build file for RobotFramework Eclipse Library
+    </description>
+  <!-- get version property -->
+  <property file="conf.properties"/>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="gensrc" location="gensrc"/>
+  <property name="testsrc" location="testsrc"/>
+  <property name="build" location="build"/>
+  <property name="reports" location="reports"/>
+  <property name="dist"  location="C:/RobotFramework/TestEclipse/dist"/>
+  <property name="doc"  value="C:/RobotFramework/TestEclipse/documentation"/>
+  <property name="jython"  location="C:/RobotFramework/jython2.5.1/jython.bat"/>
+  <property name="pythonpath"  location="C:/RobotFramework/Python26/Lib/site-packages"/>
+  <property name="libdoc"  location="${pythonpath}/libdoc.py"/>
+  <property name="url" value="http://code.google.com/p/robotframework-eclipselibrary/"/>
+  <property name="gpl-licence" location="gpl-3.0.txt"/>
+	
+  <property name="javalibcore"  value="lib/javalib-core-0.8.1-jar-with-dependencies.jar"/>
+  <property name="eclipselauncher35"  value="lib-ext/org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar"/>
+  <property name="eclipselauncher36"  value="lib-ext/org.eclipse.equinox.launcher_1.1.0.v20100507.jar"/>
+
+  <property name="swtbot-jars"  value="lib-ext/org.eclipse.swtbot-2.0.3.20110219_0655-4d933cf-dev-e36/eclipse/plugins"/>
+  <property name="swtbot-plugin"  value="lib-ext/org.lcx.robotframework.swtbotplugin_1.2.0.201103090652.jar"/>
+	
+
+  <property name="jarfile"  value="eclipselibrary-${version}.jar"/>
+  <property name="jarfilewithdep35"  value="eclipselibrary-${version}-with-dependencies-e35.jar"/>
+  <property name="jarfilewithdep36"  value="eclipselibrary-${version}-with-dependencies-e36.jar"/>
+  <property name="jarfilewithdepswt"  value="eclipselibrary-${version}-with-dependencies-swt.jar"/>
+  
+  <property name="classpath"  location="C:/outils/jdk1.5.0_12/lib/tools.jar;${dist}/${jarfilewithdep35}"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}"/>
+    <!-- Create the junit report directory -->
+    <mkdir dir="${reports}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}:${gensrc}:${testsrc}" destdir="${build}"
+      source="1.5"
+      target="1.5"
+      classpath="${javalibcore}"
+      includeAntRuntime="false"
+      debug="on"
+    />
+  </target>
+	
+  <target name="createjar" depends="compile"
+        description="generate the simple jar distribution" >
+    <delete file="${dist}/${jarfile}"/>
+
+    <jar jarfile="${dist}/${jarfile}"
+       basedir="."
+       includes="log4j.properties, conf.properties, gpl-3.0.txt">
+
+    <fileset dir="${build}"/>
+    <fileset dir="${src}"/>
+    <fileset dir="${gensrc}"/>
+
+    <manifest>
+      <!-- Who is building this jar? -->
+      <attribute name="Built-By" value="Laurent Carbonnaux"/>
+      <attribute name="Main-Class" value="EclipseLibrary"/>
+      <!-- Information about the program itself -->
+      <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
+      <attribute name="Implementation-Title" value="EclipseLibrary"/>
+      <attribute name="Implementation-Version" value="${version}"/>
+      <attribute name="Implementation-URL" value="${url}"/>
+    	
+    </manifest>
+    
+    </jar>
+  </target>
+
+  <target name="createjardep35" depends="compile"
+        description="generate jar with dependencies for Eclipse 3.5" >
+    <delete file="${dist}/${jarfilewithdep35}"/>
+    
+    <mkdir dir="${dist}/temp35"/>
+    
+    <unzip src="${eclipselauncher35}" dest="${dist}/temp35"/>
+    
+    <jar jarfile="${dist}/${jarfilewithdep35}"
+      basedir="."
+      includes="log4j.properties, conf.properties, gpl-3.0.txt">
+    
+        <fileset dir="${build}"/>
+        <fileset dir="${src}"/>
+        <fileset dir="${gensrc}"/>
+        <zipfileset includes="**/*" src="${javalibcore}"/>
+        <fileset dir="${dist}/temp35">
+            <exclude name="**/*.SF"/>
+            <exclude name="**/*.RSA"/>
+            <exclude name="**/*.MF"/>
+        </fileset>
+        
+        <manifest>
+            <!-- Who is building this jar? -->
+            <attribute name="Built-By" value="Laurent Carbonnaux"/>
+            <attribute name="Main-Class" value="EclipseLibrary"/>
+            <!-- Information about the program itself -->
+            <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
+            <attribute name="Implementation-Title" value="EclipseLibrary for Eclipse 3.5"/>
+            <attribute name="Implementation-Version" value="${version}"/>
+            <attribute name="Implementation-URL" value="${url}"/>
+        </manifest>
+    
+    </jar>
+    <delete dir="${dist}/temp35"/>
+
+  </target>
+
+  <target name="createjardep36" depends="compile"
+          description="generate jar with dependencies for Eclipse 3.6" >
+    <delete file="${dist}/${jarfilewithdep36}"/>
+      
+    <mkdir dir="${dist}/temp36"/>
+
+    <unzip src="${eclipselauncher36}" dest="${dist}/temp36"/>
+  	
+    <jar jarfile="${dist}/${jarfilewithdep36}"
+        basedir="."
+        includes="log4j.properties, conf.properties, gpl-3.0.txt">
+    
+        <fileset dir="${build}"/>
+        <fileset dir="${src}"/>
+        <fileset dir="${gensrc}"/>
+        <zipfileset includes="**/*" src="${javalibcore}"/>
+        <fileset dir="${dist}/temp36">
+            <exclude name="**/*.SF"/>
+            <exclude name="**/*.RSA"/>
+            <exclude name="**/*.MF"/>
+        </fileset>
+        
+        <manifest>
+            <!-- Who is building this jar? -->
+            <attribute name="Built-By" value="Laurent Carbonnaux"/>
+            <attribute name="Main-Class" value="EclipseLibrary"/>
+            <!-- Information about the program itself -->
+            <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
+            <attribute name="Implementation-Title" value="EclipseLibrary for Eclipse 3.6"/>
+            <attribute name="Implementation-Version" value="${version}"/>
+            <attribute name="Implementation-URL" value="${url}"/>
+        </manifest>
+      
+    </jar>
+    <delete dir="${dist}/temp36"/>
+
+  </target>
+
+  <target name="createjardepswt" depends="compile"
+        description="generate jar with dependencies for SWT" >
+    <delete file="${dist}/${jarfilewithdepswt}"/>
+
+  	<mkdir dir="${dist}/tempswt"/>
+
+  	<unzip dest="${dist}/tempswt">
+  	    <patternset>
+  	        <include name="**/*"/>
+  	    </patternset>
+  	    <fileset dir="${swtbot-jars}">
+  	        <include name="**/*.jar"/>
+  	    </fileset>
+  	</unzip>
+    <jar jarfile="${dist}/${jarfilewithdepswt}"
+        basedir="."
+        includes="log4j.properties, conf.properties, gpl-3.0.txt">
+
+        <fileset dir="${build}"/>
+        <fileset dir="${src}"/>
+        <fileset dir="${gensrc}"/>
+        <zipfileset includes="**/*" src="${javalibcore}"/>
+        <fileset dir="${dist}/tempswt">
+          <exclude name="**/*.SF"/>
+          <exclude name="**/*.RSA"/>
+          <exclude name="**/*.MF"/>
+        </fileset>
+        <zipfileset includes="**/*" src="${swtbot-plugin}"/>
+    
+        <manifest>
+          <!-- Who is building this jar? -->
+          <attribute name="Built-By" value="Laurent Carbonnaux"/>
+          <attribute name="Main-Class" value="EclipseLibrary"/>
+          <!-- Information about the program itself -->
+          <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
+          <attribute name="Implementation-Title" value="EclipseLibrary for java/SWT"/>
+          <attribute name="Implementation-Version" value="${version}"/>
+          <attribute name="Implementation-URL" value="${url}"/>
+        </manifest>
+    
+    </jar>
+    <delete dir="${dist}/tempswt"/>
+
+  </target>
+  	
+  <target name="dist" depends="createjar, createjardep35, createjardep36, createjardepswt"
+            description="generate the distributions">
+  </target>
+
+  <target name="gendochtml"
+        description="Keyword documentation generation">
+    <mkdir dir="${doc}"/>
+    <delete file="${doc}/EclipseLibrary.html"/>
+
+    <!-- Gen the HTML keyword documentation -->
+    <exec executable="${jython}" dir=".">
+      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdep35}"/>
+      <env key="PYTHONPATH" path="${pythonpath}"/>
+      <arg value="-Dpython.path=${pythonpath}"/>
+      <arg value="${libdoc}"/>
+      <!--<arg value="-f HTML"/>-->
+      <!--<arg value="-N EclipseLibrary-${version}.html"/>-->
+      <arg value="-o"/>
+      <arg path="${doc}/EclipseLibrary.html"/>
+      <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
+    </exec>
+
+    </target>
+
+  <target name="gendocxml"
+        description="Keyword documentation generation">
+    <mkdir dir="${doc}"/>
+    <delete file="${doc}/EclipseLibrary.xml"/>
+
+    <!-- Gen the XML keyword file -->
+    <exec executable="${jython}" dir=".">
+      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdep35}"/>
+      <env key="PYTHONPATH" path="${pythonpath}"/>
+      <arg value="-Dpython.path=${pythonpath}"/>
+      <arg value="${libdoc}"/>
+      <!--<arg value="-f XML"/>-->
+      <!--<arg value="-N EclipseLibrary-${version}.xml"/>-->
+      <arg value="-o"/>
+      <arg path="${doc}/EclipseLibrary.xml"/>
+      <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
+    </exec>
+
+    </target>
+    
+  <target name="gendoc" depends="gendocxml, gendochtml"
+        description="Keyword documentations generation">
+  </target>
+	
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+    <delete dir="${reports}"/>
+  </target>
+  
+  <target name="debug">
+    <echo message="jarfilewithdep : ${dist}/${jarfilewithdep}"/>
+  </target>
+
+	<target name="test" depends="compile">
+	<junit printsummary="yes" haltonfailure="no" fork="yes">
+	  <classpath>
+	    <pathelement location="${build}"/>
+	    <pathelement path="${java.class.path}"/>
+	  </classpath>
+
+	  <formatter type="plain"/>
+      <formatter type="xml"/>
+
+	  <batchtest todir="${reports}">
+	    <fileset dir="${testsrc}">
+	      <include name="**/*Test*.java"/>
+	      <exclude name="**/AllTests.java"/>
+	    </fileset>
+	  </batchtest>
+	</junit>
+  </target>
+
+    <target name="testreport" depends="test">
+	<junitreport todir="${reports}">
+	  <fileset dir="${reports}">
+	    <include name="TEST-*.xml"/>
+	  </fileset>
+	  <report format="frames" todir="${reports}/html"/>
+	</junitreport>
+	  </target>
+</project>
+
