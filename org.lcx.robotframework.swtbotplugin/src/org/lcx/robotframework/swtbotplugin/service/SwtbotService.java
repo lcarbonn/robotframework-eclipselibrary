@@ -1,12 +1,11 @@
 package org.lcx.robotframework.swtbotplugin.service;
 
-import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
+import org.eclipse.swtbot.swt.finder.SWTBot;
 
-public class SwtbotService implements ISwtbotService {
+public class SwtbotService {
 
-	public SWTWorkbenchBot getSWTWorkbenchBot() {
-		SWTWorkbenchBot bot = new SWTWorkbenchBot();
+	public static SWTBot getSWTBot() {
+		SWTBot bot = new SWTBot();
 		return bot;
 	}
-	
 }

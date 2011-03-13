@@ -3,7 +3,7 @@
    <description name="Robotframework Eclipse Library plugin for SWTBot" url="http://scrumvision.sourceforge.net/update-site/eclipselibrary">
       Robotframework Eclipse Library plugin for SWTBot
    </description>
-   <feature url="features/org.lcx.robotframework.swtbot_feature_1.1.0.201011021400.jar" id="org.lcx.robotframework.swtbot_feature" version="1.1.0.201011021400">
+   <feature url="features/org.lcx.robotframework.swtbot_feature_1.2.0.201103130952.jar" id="org.lcx.robotframework.swtbot_feature" version="1.2.0.201103130952">
       <category name="RobotFramework EclipseLibrary"/>
    </feature>
    <category-def name="RobotFramework EclipseLibrary" label="RobotFramework EclipseLibrary"/>
