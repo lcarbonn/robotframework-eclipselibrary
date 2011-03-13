@@ -71,7 +71,9 @@ public class EclipseLaunchingKeywords {
     	et.setUncaughtExceptionHandler(eh);
 		log.info("Eclipse start is requested");
 
-    	et.start();
+		SecurityManager previousSecurityManager = setSecurityManager();
+
+		et.start();
 
 		long timeout = 2 * 60 * 1000;
         for (int i = 0; i < args.length; i++) {
@@ -109,17 +111,46 @@ public class EclipseLaunchingKeywords {
         			"  Check if EclipseLibrary plugin is installed" +
         			"  Or use -timeout option in Start Eclipse keyword");
         }
+        
+        resetSecurityManager(previousSecurityManager);
+        
     	return et;
     }
 
-    private Thread createThread(Runnable runnable) {
+	private Thread createThread(Runnable runnable) {
     	Thread t = new Thread(runnable);
     	return t;
     }
     
     private void internalLaunchEclipse(String[] args) throws SWTBotBridgeException {
+		try {
+            Method mainMethod = getMainMethod();
+            mainMethod.invoke(null, new Object[] { args });
+		} catch (Exception e) {
+    		error = true;
+    		log.error(e.getCause().getMessage(), e.getCause());
+			throw new SWTBotBridgeException(e.getCause().getMessage(), e);
+		}
+    }
+    
+    private Method getMainMethod() throws SWTBotBridgeException {
+        try {
+            Class<?> clss = Class.forName(ECLIPSE_LAUNCHER);
+            return clss.getMethod("main", String[].class);
+        } catch (NoSuchMethodException e) {
+            throw new SWTBotBridgeException("Class '" + ECLIPSE_LAUNCHER + "' doesn't have a main method.");
+        } catch (ClassNotFoundException e) {
+            throw new SWTBotBridgeException("Class '" + ECLIPSE_LAUNCHER + "' not found.");
+        }
+    }
+
+    private void resetSecurityManager(SecurityManager previousSecurityManager) {
+        System.setSecurityManager(previousSecurityManager);
+	}
+
+	private SecurityManager setSecurityManager() {
 		// install security manager to avoid System.exit() call from lib
-		SecurityManager       previousSecurityManager = System.getSecurityManager();
+		SecurityManager previousSecurityManager = System.getSecurityManager();
 
 		final SecurityManager securityManager         = new SecurityManager() {
 		    @Override public void checkPermission(final Permission permission) {
@@ -136,28 +167,7 @@ public class EclipseLaunchingKeywords {
 		    }
 		  };
 		System.setSecurityManager(securityManager);
+		return previousSecurityManager;
+	}
 
-		try {
-            Method mainMethod = getMainMethod();
-            mainMethod.invoke(null, new Object[] { args });
-		} catch (Exception e) {
-    		error = true;
-    		log.error(e.getCause().getMessage(), e.getCause());
-			throw new SWTBotBridgeException(e.getCause().getMessage(), e);
-		} finally {
-		  System.setSecurityManager(previousSecurityManager);
-		}
-    }
-    
-    private Method getMainMethod() throws SWTBotBridgeException {
-        try {
-            Class<?> clss = Class.forName(ECLIPSE_LAUNCHER);
-            return clss.getMethod("main", String[].class);
-        } catch (NoSuchMethodException e) {
-            throw new SWTBotBridgeException("Class '" + ECLIPSE_LAUNCHER + "' doesn't have a main method.");
-        } catch (ClassNotFoundException e) {
-            throw new SWTBotBridgeException("Class '" + ECLIPSE_LAUNCHER + "' not found.");
-        }
-    }
-    
 }

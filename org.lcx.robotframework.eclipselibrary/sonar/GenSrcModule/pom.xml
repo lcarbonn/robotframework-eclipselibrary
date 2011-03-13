@@ -19,8 +19,8 @@
 
   <build>
 
-    <sourceDirectory>../gensrc</sourceDirectory>
-    <outputDirectory>../build</outputDirectory>
+    <sourceDirectory>../../gensrc</sourceDirectory>
+    <outputDirectory>../../build</outputDirectory>
 
   </build>
 

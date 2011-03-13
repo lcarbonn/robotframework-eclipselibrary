@@ -19,8 +19,8 @@
 
   <build>
 
-    <sourceDirectory>../src</sourceDirectory>
-    <outputDirectory>../build</outputDirectory>
+    <sourceDirectory>../../src</sourceDirectory>
+    <outputDirectory>../../build</outputDirectory>
 
   </build>
 
