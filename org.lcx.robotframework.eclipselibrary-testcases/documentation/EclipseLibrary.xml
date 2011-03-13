@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20110221 13:07:40" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
-<version>0.14</version>
+<keywordspec generated="20110312 18:50:31" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
+<version>0.15</version>
 <scope>global</scope>
 <doc>Documentation for test library `org.lcx.robotframework.eclipse.EclipseLibrary`.</doc>
 <kw name="Activate C Tab Item">
@@ -4185,6 +4185,16 @@ Example:
 <arguments>
 </arguments>
 </kw>
+<kw name="Launch Application">
+<doc>Launches application with the given arguments.
+
+Example:
+| Launch Application | _com.acme.myapplication.MyApp_ | _C:\data.txt_ |</doc>
+<arguments>
+<arg>className</arg>
+<arg>*args</arg>
+</arguments>
+</kw>
 <kw name="List All Editors Title">
 <doc>List all the editors title
 
@@ -5032,10 +5042,33 @@ Example:
 <arguments>
 </arguments>
 </kw>
+<kw name="Start Application">
+<doc>Alias for `Launch Application` keyword</doc>
+<arguments>
+<arg>className</arg>
+<arg>*args</arg>
+</arguments>
+</kw>
+<kw name="Start Application In Separate Thread">
+<doc>Launches application in a separate thread with the given arguments. This is useful if your application does something that blocks eg. opens up a dialog.
+
+Example:
+| Start Application In Separate Thread | _com.acme.myapplication.MyApp_ |</doc>
+<arguments>
+<arg>className</arg>
+<arg>*args</arg>
+</arguments>
+</kw>
 <kw name="Start Eclipse">
 <doc>Start Eclipse with the given arguments in a separate thread</doc>
 <arguments>
 <arg>*args</arg>
+</arguments>
+</kw>
+<kw name="Start SWT Bot Bridge">
+<doc>Start the SWTBot bridge This is used for SWT application that run without Eclipse/RCP. For RCP application use StartEclipse keyword Example:
+| Start SWTBotBridge |</doc>
+<arguments>
 </arguments>
 </kw>
 <kw name="Styled Text Has Bullet On Current Line">
