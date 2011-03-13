@@ -5,9 +5,9 @@
 	<description>
         Launching TestEclipse suite
   </description>
-	<property name="robotant"  value="libext/ant-robotframework-0.4.jar"/>
-	<property name="robotframework"  value="libext/robotframework-2.5.5.jar"/>
-	<property name="eclipselibrary"  value="lib/eclipselibrary-0.14-with-dependencies-e36.jar"/>
+	<property name="robotant"  value="libext/ant-robotframework-0.5.jar"/>
+	<property name="robotframework"  value="libext/robotframework-2.5.6.jar"/>
+	<property name="eclipselibrary"  value="dist/eclipselibrary-0.15-with-dependencies-e36.jar"/>
   
   <taskdef name="robotant"
       classname="org.lcx.robotframework.ant.RobotAnt"
