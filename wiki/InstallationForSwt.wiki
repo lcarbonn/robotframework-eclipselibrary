@@ -1,31 +1,27 @@
 #labels Featured,Installation,SWT
 = Installation for Java/SWT =
 
-Robotframework Eclipse Library from v0.12 now works on :
- * robotframework v2.5.3
- * python v2.6
- * jython v2.5.1
- * RIDE v0.27
- * Eclipse 3.5 and 3.6 (should work also on 3.4 but not tested!)
- * SWTBot 2.0
- * Javalib core 0.8.1 with dependencies
+Since v0.15 Eclipse Library provide facilities to test Java/SWT application
+(outside RCP/Eclipse)
+
+For Eclipse RCP/SWT application see [InstallationForEclipse]
+
+Robotframework Eclipse Library compatibility :
+ * [Compatibility]
 
 == Eclipse library ==
  Download the latest `EclipseLibrary` jar file.
  * The jar with all dependencies for swt [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x-with-dependencies-swt.jar]
+ * The jar include EclipseLibrary itself, SWTBot for SWT testing, EclipseLibrary plugin (bridge to SWTBot) and Javalibcore for RobotFramework
 
- Download the eclipsebot.bat robotframework script for `EclipseLibrary` tests
- * [http://robotframework-eclipselibrary.googlecode.com/files/eclipsebot.bat eclipsebot.bat]
-
- Add `EclipseLibrary` resource file in your test case as a resource.
- * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.html  EclipseLibraryKeywords.html]
-
- Add `EclipseLibrary` xml keyword specification file under PYTHON_PATH for keyword completion under RIDE
- * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml  EclipseLibrary.xml]
+ Download the swtbot.bat robotframework script for `EclipseLibrary` tests
+ * [http://robotframework-eclipselibrary.googlecode.com/files/swtbot.bat swtbot.bat]
+ * swtbot.bat is a sample script that help you start your application test.
+ * swtbot.bat add all jars in the lib folder to the classpath and lunch robotframework
 
 == Running with your Java/SWT application ==
  Classpath should have:
  * your application!
- * SWT and also JFaces jars
- * `EclipseLibrary` jar with dependencies for swt to your classpath
+ * SWT and also JFaces jars (even if you don't use JFace, SWTBot need it)
+ * `EclipseLibrary` jar with dependencies for swt
  * and robotframework standalone jar

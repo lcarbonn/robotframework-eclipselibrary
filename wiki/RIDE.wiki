@@ -1,0 +1,13 @@
+#labels Featured,Installation
+= Using Eclipse Library in RIDE =
+
+ Add `EclipseLibrary` xml keyword specification file under PYTHON_PATH used for keyword completion under RIDE
+ * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml  EclipseLibrary.xml]
+
+ Latest Keywords documentation can be found
+ * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml  EclipseLibrary.html]
+
+ `EclipseLibrary` proposes also a simple resource file you can add in your test case as a resource.
+ I shows how to develop higher level keywords
+ * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.html  EclipseLibraryKeywords.html]
+

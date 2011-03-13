@@ -1,13 +1,13 @@
-#labels Featured,Installation
-= Installation =
+#labels Featured,Installation,Eclipse
+= Installation For RCP/SWT application =
 
-Robotframework Eclipse Library from v0.12 now works on :
- * robotframework v2.5.3
+Robotframework Eclipse Library from v0.15 now works on :
+ * robotframework v2.5.6
  * python v2.6
  * jython v2.5.1
- * RIDE v0.27
+ * RIDE v0.32
  * Eclipse 3.5 and 3.6 (should work also on 3.4 but not tested!)
- * SWTBot 2.0
+ * SWTBot 2.0.3
  * Javalib core 0.8.1 with dependencies
 
 == Eclipse Plugin ==
