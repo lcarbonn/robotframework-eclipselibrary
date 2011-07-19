@@ -1,0 +1,7 @@
+#labels Featured
+==Changes 0.16 version==
+=============================================
+Fixed Bugs:
+-------------------------------------------
+  * #Issue 8   SWTBot Pressshortcut support
+  * #Issue 9  Use rf logger instead of private
