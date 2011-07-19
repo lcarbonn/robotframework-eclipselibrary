@@ -25,18 +25,22 @@ public class AbstractSWTBot extends AbstractSWTBotObject {
 		SWTBotMenu menu = new SWTBotMenu(o);
 		return menu;
 	}
-	
-//	public AbstractSWTBot pressShortcut(int param0,int param1,char param2) {
-//		
-//	}
+
+	public AbstractSWTBot pressShortcut(int modificationKeys,int keyCode,char c) throws SWTBotBridgeException {
+		Object o = SWTBotBridge.callMethod(distantObject, "pressShortcut", modificationKeys, keyCode, c);
+		AbstractSWTBot bot = new AbstractSWTBot(o);
+		return bot;
+	}
 //	
 //	public AbstractSWTBot pressShortcut(org.eclipse.jface.bindings.keys.KeyStroke[]) {
 //		
 //	}
 	
-//	public AbstractSWTBot pressShortcut(int param0,char param1) {
-//		
-//	}
+	public AbstractSWTBot pressShortcut(int modificationKeys,char c) throws SWTBotBridgeException {
+		Object o = SWTBotBridge.callMethod(distantObject, "pressShortcut", modificationKeys, c);
+		AbstractSWTBot bot = new AbstractSWTBot(o);
+		return bot;
+	}
 
 	public boolean isEnabled() throws SWTBotBridgeException {
 		Boolean b = (Boolean)SWTBotBridge.callMethod(distantObject, "isEnabled");
