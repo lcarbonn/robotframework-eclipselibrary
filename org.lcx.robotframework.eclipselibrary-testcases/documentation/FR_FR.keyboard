@@ -39,18 +39,16 @@ _ _
 é é
 & &
 ² ²
-< <
-> shift <
-€ alt+ctrl+e
-~ alt+ctrl+é
-# alt+ctrl+"
-{ alt+ctrl+'
-[ alt+ctrl+(
-| alt+ctrl+-
-` alt+ctrl+è
-\ alt+ctrl+_
-^ alt+ctrl+ç
-@ alt+ctrl+à
-] alt+ctrl+)
-} alt+ctrl+=
-¤ alt+ctrl+$
+€ alt + ctrl + e
+~ alt + ctrl + é
+# alt + ctrl + "
+{ alt + ctrl + '
+[ alt + ctrl + (
+| alt + ctrl + -
+` alt + ctrl + è
+\ alt + ctrl + _
+^ alt + ctrl + ç
+@ alt + ctrl + à
+] alt + ctrl + )
+} alt + ctrl + =
+¤ alt + ctrl + $
