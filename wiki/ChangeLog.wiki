@@ -4,4 +4,4 @@
 Fixed Bugs:
 -------------------------------------------
   * #Issue 8   SWTBot Pressshortcut support
-  * #Issue 9  Use rf logger instead of private
+  * #Issue 10  Internal Refactoring
