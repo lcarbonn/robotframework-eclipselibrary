@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="View ATDD with Robot Framework article" />
-  <Content type="url" href="http://docs.google.com/gview?url=http://wiki.robotframework.googlecode.com/hg/publications/ATDD_with_RobotFramework.pdf&amp;embedded=true" />
+  <Content type="url" href="http://docs.google.com/gview?url=http://robotframework-eclipselibrary.googlecode.com/svn/wiki/publications/ATDD_with_RobotFramework_FR.pdf&amp;embedded=true" />
 </Module>
