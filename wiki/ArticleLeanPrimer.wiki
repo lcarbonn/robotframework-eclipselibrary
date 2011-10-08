@@ -1,7 +1,8 @@
+#labels Featured,Traduction
 Lean Primer article by Craig Larman and Bas Vodde
 
 Original on [http://www.leanprimer.com/ Lean Primer site]
 
 Online French Version (translated by [http://www.fabrice-aimetti.fr/ Fabrice Aimetti] and [http://lolcx.blogspot.com Laurent Carbonnaux]):
 
-<wiki:gadget url="http://robotframework-eclipselibrary.googlecode.com/svn/wiki/publications/lp-article-gadget.xml"  height="800" border="0" width="100%"/> 
+<wiki:gadget url="http://robotframework-eclipselibrary.googlecode.com/svn/wiki/publications/lp-article-gadget.xml"  height="1200" border="0" width="100%"/> 
