@@ -1,0 +1,7 @@
+Lean Primer article by Craig Larman and Bas Vodde
+
+Original on [http://www.leanprimer.com/ Lean Primer site]
+
+Online French Version (translated by [http://www.fabrice-aimetti.fr/ Fabrice Aimetti] and [http://lolcx.blogspot.com Laurent Carbonnaux]:
+
+<wiki:gadget url="http://wiki.robotframework.googlecode.com/hg/publications/lp-article-gadget.xml" height="800" border="0" width="100%"/> 
