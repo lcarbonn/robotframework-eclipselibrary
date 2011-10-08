@@ -1,0 +1,7 @@
+Acceptance Test-Driven Development with Robot Framework article by Craig Larman and Bas Vodde
+
+Original sur : http://code.google.com/p/robotframework/wiki/ATDDWithRobotFrameworkArticle
+
+Version Française en ligne:
+
+<wiki:gadget url="http://wiki.robotframework.googlecode.com/hg/publications/atdd-article-gadget.xml" height="200" border="0" /> 
