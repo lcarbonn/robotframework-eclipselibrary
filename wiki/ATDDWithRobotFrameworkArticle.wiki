@@ -4,4 +4,4 @@ Original on robotframework [http://code.google.com/p/robotframework/wiki/ATDDWit
 
 Online French Version:
 
-<wiki:gadget url="http://code.google.com/p/robotframework-eclipselibrary/source/browse/wiki/publications/atdd-article-gadget.xml" height="800" border="0" width="100%"/> 
+<wiki:gadget url="http://code.google.com/p/robotframework-eclipselibrary/source/browse/wiki/publications/atdd-article-gadget.xml"  height="800" border="0" width="100%"/> 
