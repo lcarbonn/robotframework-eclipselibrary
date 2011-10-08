@@ -1,7 +1,8 @@
+#labels Featured,Traduction
 Acceptance Test-Driven Development with Robot Framework article by Craig Larman and Bas Vodde
 
 Original on robotframework [http://code.google.com/p/robotframework/wiki/ATDDWithRobotFrameworkArticle site]
 
 Online French Version (translated by [http://lolcx.blogspot.com Laurent Carbonnaux]:
 
-<wiki:gadget url="http://robotframework-eclipselibrary.googlecode.com/svn/wiki/publications/atdd-article-gadget.xml"  height="800" border="0" width="100%"/> 
+<wiki:gadget url="http://robotframework-eclipselibrary.googlecode.com/svn/wiki/publications/atdd-article-gadget.xml"  height="1200" border="0" width="100%"/> 
