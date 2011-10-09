@@ -103,7 +103,7 @@ public class TreeActionKeywords {
 	
 	@RobotKeyword("Count the number of columns in the tree\n\n"
             + "Example:\n"
-            + "| Count Tree Columns|\n")
+            + "| Count Tree Columns |\n")
 //    @ArgumentNames({"row", "column"})
         public int countTreeColumns() throws SWTBotBridgeException {
     		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
@@ -112,7 +112,7 @@ public class TreeActionKeywords {
 
 	@RobotKeyword("Count the number of rows in the tree\n\n"
             + "Example:\n"
-            + "| Count Tree Rows|\n")
+            + "| Count Tree Rows |\n")
 //    @ArgumentNames({"row", "column"})
         public int countTreeRows() throws SWTBotBridgeException {
     		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
@@ -121,7 +121,7 @@ public class TreeActionKeywords {
 
 	@RobotKeyword("Count the number of columns in the tree\n\n"
             + "Example:\n"
-            + "| Get Tree Columns|\n")
+            + "| Get Tree Columns |\n")
 //    @ArgumentNames({"row", "column"})
         public String[] getTreeColumns() throws SWTBotBridgeException {
     		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);

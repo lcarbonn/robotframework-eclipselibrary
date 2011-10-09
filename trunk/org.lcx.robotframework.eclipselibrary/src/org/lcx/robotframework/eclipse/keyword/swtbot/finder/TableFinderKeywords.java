@@ -16,8 +16,8 @@ public class TableFinderKeywords {
 	
 	@RobotKeyword("Find the table with the given optional index\n\n"
             + "Example:\n"
-            + "| Find Table | index |  |\n"
-            + "| Find Table | |  |\n")
+            + "| Find Table | index |\n"
+            + "| Find Table | |\n")
     @ArgumentNames({"*params"})
     public SWTBotTable findTable(String... params) throws SWTBotBridgeException{
 		
@@ -42,8 +42,8 @@ public class TableFinderKeywords {
 	
 	@RobotKeyword("Find the table in the given group with optional and index\n\n"
             + "Example:\n"
-            + "| Find Table In Group | group | index | |\n"
-            + "| Find Table In Group | group | |  |\n")
+            + "| Find Table In Group | group | index |\n"
+            + "| Find Table In Group | group | |\n")
     @ArgumentNames({"group", "*params"})
     public SWTBotTable findTableInGroup(String group, String... params) throws SWTBotBridgeException{
 		

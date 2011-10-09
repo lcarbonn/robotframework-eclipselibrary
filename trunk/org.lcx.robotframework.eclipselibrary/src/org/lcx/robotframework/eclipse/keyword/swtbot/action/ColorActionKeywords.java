@@ -14,8 +14,8 @@ public class ColorActionKeywords {
 
 	@RobotKeyword("Get widget background color in RGB format\n\n"
             + "Example:\n"
-            + "| ${color} | Get Background Color |\n"
-            + "| Should Be Equal | ${color} | #FF00CC\n")
+            + "| ${color}= | Get Background Color |\n"
+            + "| Should Be Equal | ${color} | #FF00CC |\n")
         public String getBackgroundColor() throws SWTBotBridgeException {
 		AbstractSWTBot object = (AbstractSWTBot)Context.getCurrentWidget();
     		return object.backgroundColor().toString();
@@ -23,8 +23,8 @@ public class ColorActionKeywords {
 
 	@RobotKeyword("Get widget foreground color in RGB format\n\n"
             + "Example:\n"
-            + "| ${color} | Get Foreground Color |\n"
-            + "| Should Be Equal | ${color} | #FF00CC\n")
+            + "| ${color} = | Get Foreground Color |\n"
+            + "| Should Be Equal | ${color} | #FF00CC |\n")
         public String getForegroundColor() throws SWTBotBridgeException {
 		AbstractSWTBot object = (AbstractSWTBot)Context.getCurrentWidget();
     		return object.foregroundColor().toString();

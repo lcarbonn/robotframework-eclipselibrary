@@ -16,9 +16,11 @@ public class ShortcutActionKeywords {
 
 	@RobotKeyword("Press Shortcut on current selected widget\n\n"
             + "Example:\n"
-            + "Press Shortcut | ALT+CTRL+c |\n"
-            + "Press Shortcut | CTRL+F11 |\n"
-            + "modificationKeys : the combination of SWT.ALT | SWT.CTRL | SWT.SHIFT | SWT.COMMAND.\n"
+            + "| Press Shortcut | ALT+CTRL+c |\n"
+            + "| Press Shortcut | CTRL+F11 |\n"
+            + "| Press Shortcut | TAB |\n"
+            + "modification  keys are : the combination of ALT | CTRL | SHIFT | COMMAND.\n"
+            + "available key codes are : F1 to F12, UP, DOWN, LEFT, RIGHT, HOME, END, INSERT, PAGE_UP, PAGE_DOWN, TAB\n"
             + "c the character\n")
     @ArgumentNames({"shortcut"})
         public void pressShortcut(String shortcut) throws SWTBotBridgeException {

@@ -16,8 +16,8 @@ public class DateTimeFinderKeywords {
 	
 	@RobotKeyword("Find the dateTime with the given optionals index\n\n"
             + "Example:\n"
-            + "| Find DateTime | index |  |\n"
-            + "| Find DateTime | |  |\n")
+            + "| Find DateTime | index |\n"
+            + "| Find DateTime | |\n")
     @ArgumentNames({"*params"})
     public SWTBotDateTime findDateTime(String... params) throws SWTBotBridgeException{
 		
@@ -41,8 +41,8 @@ public class DateTimeFinderKeywords {
 	
 	@RobotKeyword("Find the dateTime in the given group with optionals index\n\n"
             + "Example:\n"
-            + "| Find DateTime In Group | group | index | |\n"
-            + "| Find DateTime In Group | group | |  |\n")
+            + "| Find DateTime In Group | group | index |\n"
+            + "| Find DateTime In Group | group | |\n")
     @ArgumentNames({"group", "*params"})
     public SWTBotDateTime findDateTimeInGroup(String group, String... params) throws SWTBotBridgeException{
 		

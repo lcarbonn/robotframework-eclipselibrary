@@ -85,7 +85,7 @@ public class TableActionKeywords {
 			+ "\t row the row number, 0 based."
             + "\t columnName the name of the column."
             + "Example:\n"
-            + "| Get Table Cell With Column Name|\n")
+            + "| Get Table Cell With Column Name |\n")
     @ArgumentNames({"row", "columnName"})
         public String getTableCellWithColumnName(String row, String columnName) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
@@ -97,7 +97,7 @@ public class TableActionKeywords {
 			+ "\t row the row number, 0 based."
             + "\t column the column number, 0 based."
             + "Example:\n"
-            + "| Click Table Cell|\n")
+            + "| Click Table Cell |\n")
     @ArgumentNames({"row", "column"})
         public void clickTableCell(String row, String column) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
@@ -108,7 +108,7 @@ public class TableActionKeywords {
 
 	@RobotKeyword("Count the number of columns in the table\n\n"
             + "Example:\n"
-            + "| Count Table Columns|\n")
+            + "| Count Table Columns |\n")
 //    @ArgumentNames({"row", "column"})
         public int countTableColumns() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
@@ -117,7 +117,7 @@ public class TableActionKeywords {
 
 	@RobotKeyword("Count the number of rows in the table\n\n"
             + "Example:\n"
-            + "| Count Table Rows|\n")
+            + "| Count Table Rows |\n")
 //    @ArgumentNames({"row", "column"})
         public int countTableRows() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
@@ -126,7 +126,7 @@ public class TableActionKeywords {
 
 	@RobotKeyword("Count the number of columns in the table\n\n"
             + "Example:\n"
-            + "| Get Table Columns|\n")
+            + "| Get Table Columns |\n")
 //    @ArgumentNames({"row", "column"})
         public String[] getTableColumns() throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
@@ -149,7 +149,7 @@ public class TableActionKeywords {
 			+ "\t row the row number, 0 based."
             + "\t column the column number, 0 based."
             + "Example:\n"
-            + "| Double Click Table Cell|\n")
+            + "| Double Click Table Cell |\n")
     @ArgumentNames({"row", "column"})
         public void doubleClickTableCell(String row, String column) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);
@@ -206,7 +206,7 @@ public class TableActionKeywords {
 	@RobotKeyword("Gets the index of the item matching the given item and the given column\n"
 			+ " , or -1 if the item does not exist in the table.\n\n"
             + "Example:\n"
-            + "\t column the column number, 0 based."
+            + "\t column the column number, 0 based.\n"
             + "| Get Table Item Index In Column Name | text | name | \n")
     @ArgumentNames({"text", "columnName"})
         public int getTableItemIndexInColumnName(String text, String columnName) throws SWTBotBridgeException {
@@ -217,8 +217,8 @@ public class TableActionKeywords {
 	@RobotKeyword("Gets the index of the item matching the given item and the given column\n"
 			+ " , or -1 if the item does not exist in the table.\n\n"
             + "Example:\n"
-            + "\t column the column number, 0 based."
-            + "| Get Table Item Index In Column| text | 0 | \n")
+            + "\t column the column number, 0 based.\n"
+            + "| Get Table Item Index In Column | text | 0 | \n")
     @ArgumentNames({"text", "column"})
         public int getTableItemIndexInColumn(String text, String column) throws SWTBotBridgeException {
     		SWTBotTable table = (SWTBotTable)Context.getCurrentWidget(SWTBotTable.class);

@@ -16,8 +16,8 @@ public class TreeFinderKeywords {
 	
 	@RobotKeyword("Find the tree with the given optional index\n\n"
             + "Example:\n"
-            + "| Find Tree | index |  |\n"
-            + "| Find Tree | |  |\n")
+            + "| Find Tree | index |\n"
+            + "| Find Tree | |\n")
     @ArgumentNames({"*params"})
     public SWTBotTree findTree(String... params) throws SWTBotBridgeException{
 		
@@ -42,8 +42,8 @@ public class TreeFinderKeywords {
 	
 	@RobotKeyword("Find the tree in the given group with optional and index\n\n"
             + "Example:\n"
-            + "| Find Tree In Group | group | index | |\n"
-            + "| Find Tree In Group | group | |  |\n")
+            + "| Find Tree In Group | group | index |\n"
+            + "| Find Tree In Group | group | |\n")
     @ArgumentNames({"group", "*params"})
     public SWTBotTree findTreeInGroup(String group, String... params) throws SWTBotBridgeException{
 		

@@ -71,7 +71,7 @@ public class LinkActionKeywords {
 	
 	@RobotKeyword("Click on the link with given text of the hyperlink in case there are more than one hyperlinks\n\n"
             + "Example:\n"
-            + "| Click On Link With HyperLink|\n")
+            + "| Click On Link With HyperLink |\n")
     @ArgumentNames({"hyperLinkText"})
         public void clickOnLinkWithHyperLink(String hyperLinkText) throws SWTBotBridgeException {
     		SWTBotLink link = (SWTBotLink)Context.getCurrentWidget(SWTBotLink.class);
