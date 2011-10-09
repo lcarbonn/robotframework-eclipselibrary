@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20110718 22:15:45" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
-<version>0.16</version>
+<keywordspec generated="20110927 22:42:41" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
+<version>0.17</version>
 <scope>global</scope>
 <doc>Documentation for test library `org.lcx.robotframework.eclipse.EclipseLibrary`.</doc>
 <kw name="Activate C Tab Item">
@@ -107,7 +107,7 @@ Example:
 <doc>Click on the link with given text of the hyperlink in case there are more than one hyperlinks
 
 Example:
-| Click On Link With HyperLink|</doc>
+| Click On Link With HyperLink |</doc>
 <arguments>
 <arg>hyperLinkText</arg>
 </arguments>
@@ -124,7 +124,7 @@ Example:
 <doc>Click on the given cell of table
 
 row the row number, 0 based.	 column the column number, 0 based.Example:
-| Click Table Cell|</doc>
+| Click Table Cell |</doc>
 <arguments>
 <arg>row</arg>
 <arg>column</arg>
@@ -336,7 +336,7 @@ Example:
 <doc>Count the number of columns in the table
 
 Example:
-| Count Table Columns|</doc>
+| Count Table Columns |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -344,7 +344,7 @@ Example:
 <doc>Count the number of rows in the table
 
 Example:
-| Count Table Rows|</doc>
+| Count Table Rows |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -360,7 +360,7 @@ Example:
 <doc>Count the number of columns in the tree
 
 Example:
-| Count Tree Columns|</doc>
+| Count Tree Columns |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -376,7 +376,7 @@ Example:
 <doc>Count the number of rows in the tree
 
 Example:
-| Count Tree Rows|</doc>
+| Count Tree Rows |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -424,7 +424,7 @@ Example:
 <doc>Double Click on the given cell of table
 
 row the row number, 0 based.	 column the column number, 0 based.Example:
-| Double Click Table Cell|</doc>
+| Double Click Table Cell |</doc>
 <arguments>
 <arg>row</arg>
 <arg>column</arg>
@@ -900,8 +900,8 @@ Example:
 <doc>Find the dateTime with the given optionals index
 
 Example:
-| Find DateTime | index |  |
-| Find DateTime | |  |</doc>
+| Find DateTime | index |
+| Find DateTime | |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
@@ -910,8 +910,8 @@ Example:
 <doc>Find the dateTime in the given group with optionals index
 
 Example:
-| Find DateTime In Group | group | index | |
-| Find DateTime In Group | group | |  |</doc>
+| Find DateTime In Group | group | index |
+| Find DateTime In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
@@ -1039,8 +1039,8 @@ Examples:
 <doc>Find the link with the given optionals index
 
 Example:
-| Find Link | index |  |
-| Find Link | |  |</doc>
+| Find Link | index |
+| Find Link | |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
@@ -1049,8 +1049,8 @@ Example:
 <doc>Find the link in the given group with optionals index
 
 Example:
-| Find Link In Group | group | index | |
-| Find Link In Group | group | |  |</doc>
+| Find Link In Group | group | index |
+| Find Link In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
@@ -1073,8 +1073,8 @@ Examples:
 <doc>Find the list with the given optional index
 
 Example:
-| Find List | index |  |
-| Find List | |  |</doc>
+| Find List | index |
+| Find List | |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
@@ -1083,8 +1083,8 @@ Example:
 <doc>Find the list in the given group with optional index
 
 Example:
-| Find List In Group | group | index | |
-| Find List In Group | group | |  |</doc>
+| Find List In Group | group | index |
+| Find List In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
@@ -1607,8 +1607,8 @@ Examples:
 <doc>Find the table with the given optional index
 
 Example:
-| Find Table | index |  |
-| Find Table | |  |</doc>
+| Find Table | index |
+| Find Table | |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
@@ -1617,8 +1617,8 @@ Example:
 <doc>Find the table in the given group with optional and index
 
 Example:
-| Find Table In Group | group | index | |
-| Find Table In Group | group | |  |</doc>
+| Find Table In Group | group | index |
+| Find Table In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
@@ -2089,8 +2089,8 @@ Examples:
 <doc>Find the tree with the given optional index
 
 Example:
-| Find Tree | index |  |
-| Find Tree | |  |</doc>
+| Find Tree | index |
+| Find Tree | |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
@@ -2099,8 +2099,8 @@ Example:
 <doc>Find the tree in the given group with optional and index
 
 Example:
-| Find Tree In Group | group | index | |
-| Find Tree In Group | group | |  |</doc>
+| Find Tree In Group | group | index |
+| Find Tree In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
@@ -2201,8 +2201,8 @@ insertText the text to be inserted before activating the auto-complete.Example:
 <doc>Get widget background color in RGB format
 
 Example:
-| ${color} | Get Background Color |
-| Should Be Equal | ${color} | #FF00CC</doc>
+| ${color}= | Get Background Color |
+| Should Be Equal | ${color} | #FF00CC |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -2242,7 +2242,7 @@ Example:
 <doc>Get the text limit of the ccombo
 
 Example:
-| Get CCombo Text Limit|</doc>
+| Get CCombo Text Limit |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -2452,8 +2452,8 @@ Example:
 <doc>Get widget foreground color in RGB format
 
 Example:
-| ${color} | Get Foreground Color |
-| Should Be Equal | ${color} | #FF00CC</doc>
+| ${color} = | Get Foreground Color |
+| Should Be Equal | ${color} | #FF00CC |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -2808,7 +2808,7 @@ row the row number, 0 based.	 column the column number, 0 based.Example:
 <doc>Get the text of the cell of the table at the given row and column name
 
 row the row number, 0 based.	 columnName the name of the column.Example:
-| Get Table Cell With Column Name|</doc>
+| Get Table Cell With Column Name |</doc>
 <arguments>
 <arg>row</arg>
 <arg>columnName</arg>
@@ -2843,7 +2843,7 @@ Example:
 <doc>Count the number of columns in the table
 
 Example:
-| Get Table Columns|</doc>
+| Get Table Columns |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -2877,7 +2877,8 @@ Example:
 <kw name="Get Table Item Index In Column">
 <doc>Gets the index of the item matching the given item and the given column , or -1 if the item does not exist in the table.
 
-Example: column the column number, 0 based.| Get Table Item Index In Column| text | 0 |</doc>
+Example: column the column number, 0 based.
+| Get Table Item Index In Column | text | 0 |</doc>
 <arguments>
 <arg>text</arg>
 <arg>column</arg>
@@ -2886,7 +2887,8 @@ Example: column the column number, 0 based.| Get Table Item Index In Column| tex
 <kw name="Get Table Item Index In Column Name">
 <doc>Gets the index of the item matching the given item and the given column , or -1 if the item does not exist in the table.
 
-Example: column the column number, 0 based.| Get Table Item Index In Column Name | text | name |</doc>
+Example: column the column number, 0 based.
+| Get Table Item Index In Column Name | text | name |</doc>
 <arguments>
 <arg>text</arg>
 <arg>columnName</arg>
@@ -3104,7 +3106,7 @@ row the row number, 0 based.	 columnName the name of the column.Example:
 <doc>Count the number of columns in the tree
 
 Example:
-| Get Tree Columns|</doc>
+| Get Tree Columns |</doc>
 <arguments>
 </arguments>
 </kw>
@@ -4258,7 +4260,11 @@ line the line number, 0 based.	 column the column number, 0 based.Example:
 <kw name="Press Shortcut">
 <doc>Press Shortcut on current selected widget
 
-Example: Press Shortcut | ALT+CTRL+c | Press Shortcut | CTRL+F11 | modificationKeys : the combination of SWT.ALT | SWT.CTRL | SWT.SHIFT | SWT.COMMAND. c the character</doc>
+Example:
+| Press Shortcut | ALT+CTRL+c |
+| Press Shortcut | CTRL+F11 |
+| Press Shortcut | TAB |
+modification  keys are : the combination of ALT | CTRL | SHIFT | COMMAND. available key codes are : F1 to F12, UP, DOWN, LEFT, RIGHT, HOME, END, INSERT, PAGE_UP, PAGE_DOWN, TAB c the character</doc>
 <arguments>
 <arg>shortcut</arg>
 </arguments>
@@ -4535,7 +4541,7 @@ Example:
 <doc>Set the text of the ccombo
 
 Example:
-| Set CCombo Text|</doc>
+| Set CCombo Text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
@@ -4563,7 +4569,7 @@ Example:
 <doc>Set the date with teh given pattern (see java SimpleDateFormat patterns)
 
 Example:
-| Set DateTime Date | yyyy.MM.dd | 2010.12.31</doc>
+| Set DateTime Date | yyyy.MM.dd | 2010.12.31 |</doc>
 <arguments>
 <arg>pattern</arg>
 <arg>date</arg>
