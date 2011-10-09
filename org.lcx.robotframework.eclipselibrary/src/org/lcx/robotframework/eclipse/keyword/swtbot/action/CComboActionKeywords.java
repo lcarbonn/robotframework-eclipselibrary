@@ -79,7 +79,7 @@ public class CComboActionKeywords {
 
 	@RobotKeyword("Set the text of the ccombo \n\n"
             + "Example:\n"
-            + "| Set CCombo Text|\n")
+            + "| Set CCombo Text |\n")
     @ArgumentNames({"text"})
         public void setCComboText(String text) throws SWTBotBridgeException {
     		SWTBotCCombo ccombo = (SWTBotCCombo)Context.getCurrentWidget(SWTBotCCombo.class);
@@ -90,7 +90,7 @@ public class CComboActionKeywords {
 
 	@RobotKeyword("Get the text limit of the ccombo \n\n"
             + "Example:\n"
-            + "| Get CCombo Text Limit|\n")
+            + "| Get CCombo Text Limit |\n")
 //    @ArgumentNames({"text"})
         public int getCComboTextLimit() throws SWTBotBridgeException {
     		SWTBotCCombo ccombo = (SWTBotCCombo)Context.getCurrentWidget(SWTBotCCombo.class);

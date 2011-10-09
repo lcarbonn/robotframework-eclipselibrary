@@ -16,8 +16,8 @@ public class LinkFinderKeywords {
 	
 	@RobotKeyword("Find the link with the given optionals index\n\n"
             + "Example:\n"
-            + "| Find Link | index |  |\n"
-            + "| Find Link | |  |\n")
+            + "| Find Link | index |\n"
+            + "| Find Link | |\n")
     @ArgumentNames({"*params"})
     public SWTBotLink findLink(String... params) throws SWTBotBridgeException{
 		
@@ -41,8 +41,8 @@ public class LinkFinderKeywords {
 	
 	@RobotKeyword("Find the link in the given group with optionals index\n\n"
             + "Example:\n"
-            + "| Find Link In Group | group | index | |\n"
-            + "| Find Link In Group | group | |  |\n")
+            + "| Find Link In Group | group | index |\n"
+            + "| Find Link In Group | group | |\n")
     @ArgumentNames({"group", "*params"})
     public SWTBotLink findLinkInGroup(String group, String... params) throws SWTBotBridgeException{
 		

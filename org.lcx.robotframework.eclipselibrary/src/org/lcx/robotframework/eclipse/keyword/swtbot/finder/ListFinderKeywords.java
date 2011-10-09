@@ -16,8 +16,8 @@ public class ListFinderKeywords {
 	
 	@RobotKeyword("Find the list with the given optional index\n\n"
             + "Example:\n"
-            + "| Find List | index |  |\n"
-            + "| Find List | |  |\n")
+            + "| Find List | index |\n"
+            + "| Find List | |\n")
     @ArgumentNames({"*params"})
     public SWTBotList findList(String... params) throws SWTBotBridgeException{
 		
@@ -41,8 +41,8 @@ public class ListFinderKeywords {
 	
 	@RobotKeyword("Find the list in the given group with optional index\n\n"
             + "Example:\n"
-            + "| Find List In Group | group | index | |\n"
-            + "| Find List In Group | group | |  |\n")
+            + "| Find List In Group | group | index |\n"
+            + "| Find List In Group | group | |\n")
     @ArgumentNames({"group", "*params"})
     public SWTBotList findListInGroup(String group, String... params) throws SWTBotBridgeException{
 		

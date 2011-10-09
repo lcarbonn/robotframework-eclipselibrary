@@ -84,7 +84,7 @@ public class DateTimeActionKeywords {
 
 	@RobotKeyword("Set the date with teh given pattern (see java SimpleDateFormat patterns)\n\n"
             + "Example:\n"
-            + "| Set DateTime Date | yyyy.MM.dd | 2010.12.31 \n")
+            + "| Set DateTime Date | yyyy.MM.dd | 2010.12.31 |\n")
     @ArgumentNames({"pattern", "date"})
         public void setDateTimeDate(String pattern, String date) throws SWTBotBridgeException {
     		SWTBotDateTime dateTime = (SWTBotDateTime)Context.getCurrentWidget(SWTBotDateTime.class);

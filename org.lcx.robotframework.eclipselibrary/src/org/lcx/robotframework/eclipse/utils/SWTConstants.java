@@ -8,7 +8,7 @@
  * Contributors:
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.lcx.robotframework.eclipse.keyword.swtbot.actionfact;
+package org.lcx.robotframework.eclipse.utils;
 
 
 /**
