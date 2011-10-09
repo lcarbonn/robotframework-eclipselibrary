@@ -1,4 +1,11 @@
 #labels Featured
+==Changes 0.17 version==
+=============================================
+Fixed Bugs:
+-------------------------------------------
+  * #Issue 11  Line return error in some keyword help
+  * #Issue 12  Error while parsing character for pressshortcut
+
 ==Changes 0.16 version==
 =============================================
 Fixed Bugs:
