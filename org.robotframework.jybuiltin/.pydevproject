@@ -7,5 +7,6 @@
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
 <path>/org.robotframework.jybuiltin/src/pysrc/Lib</path>
 <path>/org.robotframework.jybuiltin/src/jysrc</path>
+<path>/org.robotframework.jybuiltin/src-ext</path>
 </pydev_pathproperty>
 </pydev_project>

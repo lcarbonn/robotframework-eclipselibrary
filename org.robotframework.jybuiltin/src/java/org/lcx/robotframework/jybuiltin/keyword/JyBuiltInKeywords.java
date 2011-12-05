@@ -34,6 +34,7 @@ public class JyBuiltInKeywords {
         testMisc();
         testVariables();
         testRunKeyword();
+        testVerify();
         
 	}
 	
@@ -254,6 +255,25 @@ public class JyBuiltInKeywords {
         assertEquals("toto", slist.get(0));
         assertEquals(new Integer(12), slist.get(1));
         assertEquals(false, slist.get(2));
+        builtin.log("end testSecondVariables");
 	}
-	
+
+	private void testVerify() {
+		testEquals();
+	}
+
+	private void testEquals() {
+		builtin.log("start testEquals");
+		try {
+			builtin.fail("this is a failure");	
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("fail message="+e.getMessage());
+		}
+		
+//		builtin.should_be_true("'${TEST_VARIABLE}' == 'test'");
+//		builtin.should_be_equal(new PyString("${TEST_VARIABLE}"), new PyString("test"), "message");
+//		System.out.println("fail="+builtin.fail("failmessage"));
+		builtin.log("end testEquals");
+	}
 }

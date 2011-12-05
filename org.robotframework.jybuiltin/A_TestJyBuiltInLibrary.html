@@ -147,6 +147,13 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
+<td>Should Be True</td>
+<td>'${TEST_VARIABLE}' == 'test'</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>${arg1}=</td>
 <td>And Catenate</td>
 <td>${TEST_NAME}</td>
@@ -170,6 +177,13 @@ td.name, th.name {
 <td class="name"></td>
 <td>And Log</td>
 <td>just a and log</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Fail</td>
+<td>fail message</td>
 <td></td>
 <td></td>
 </tr>
@@ -213,6 +227,20 @@ td.name, th.name {
 <td>Log Variables</td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${var1}=</td>
+<td>Catenate</td>
+<td>test</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${var1}</td>
+<td>test</td>
 <td></td>
 </tr>
 <tr>

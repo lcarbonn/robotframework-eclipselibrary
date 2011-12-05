@@ -1,3 +1,6 @@
+/*
+ * Copyright 2011 L. Carbonnaux
+ */
 package org.robotframework.jybuiltin.interfaces;
 
 import org.python.core.PyObject;
@@ -174,12 +177,5 @@ public interface JyMisc {
 	 * @return
 	 */
 	public PyObject get_library_instance(String name);
-	
-        
-
-  
-
-
-
 
 }
