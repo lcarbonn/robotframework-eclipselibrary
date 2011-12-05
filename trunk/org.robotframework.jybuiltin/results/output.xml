@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 2.5.5 (Jython 2.5.1 on java1.6.0_23)" generated="20110213 17:58:24.345">
+<robot generator="Robot 2.5.5 (Jython 2.5.1 on java1.6.0_23)" generated="20110215 21:27:49.822">
 <suite source="d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html" name="A Testjybuiltinlibrary">
 <doc/>
 <metadata>
@@ -15,17 +15,17 @@
 <arg>plus</arg>
 <arg>@{liste}</arg>
 </arguments>
-<msg timestamp="20110213 17:58:25.361" level="TRACE">Arguments: [ u'un' | u'message' | u'de' | u'plus' | u'1' | u'2' | u'3' | u'4' ]</msg>
-<msg timestamp="20110213 17:58:25.377" level="INFO">un</msg>
-<msg timestamp="20110213 17:58:25.377" level="INFO">message</msg>
-<msg timestamp="20110213 17:58:25.377" level="INFO">de</msg>
-<msg timestamp="20110213 17:58:25.377" level="INFO">plus</msg>
-<msg timestamp="20110213 17:58:25.377" level="INFO">1</msg>
-<msg timestamp="20110213 17:58:25.377" level="INFO">2</msg>
-<msg timestamp="20110213 17:58:25.377" level="INFO">3</msg>
-<msg timestamp="20110213 17:58:25.377" level="INFO">4</msg>
-<msg timestamp="20110213 17:58:25.391" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:25.329" endtime="20110213 17:58:25.391"/>
+<msg timestamp="20110215 21:27:50.852" level="TRACE">Arguments: [ u'un' | u'message' | u'de' | u'plus' | u'1' | u'2' | u'3' | u'4' ]</msg>
+<msg timestamp="20110215 21:27:50.868" level="INFO">un</msg>
+<msg timestamp="20110215 21:27:50.868" level="INFO">message</msg>
+<msg timestamp="20110215 21:27:50.884" level="INFO">de</msg>
+<msg timestamp="20110215 21:27:50.884" level="INFO">plus</msg>
+<msg timestamp="20110215 21:27:50.884" level="INFO">1</msg>
+<msg timestamp="20110215 21:27:50.884" level="INFO">2</msg>
+<msg timestamp="20110215 21:27:50.884" level="INFO">3</msg>
+<msg timestamp="20110215 21:27:50.884" level="INFO">4</msg>
+<msg timestamp="20110215 21:27:50.884" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:50.838" endtime="20110215 21:27:50.884"/>
 </kw>
 <kw type="kw" timeout="" name="BuiltIn.Comment">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -33,19 +33,19 @@
 <arg>un</arg>
 <arg>commentaire</arg>
 </arguments>
-<msg timestamp="20110213 17:58:25.391" level="TRACE">Arguments: [ u'un' | u'commentaire' ]</msg>
-<msg timestamp="20110213 17:58:25.391" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:25.391" endtime="20110213 17:58:25.391"/>
+<msg timestamp="20110215 21:27:50.900" level="TRACE">Arguments: [ u'un' | u'commentaire' ]</msg>
+<msg timestamp="20110215 21:27:50.900" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:50.884" endtime="20110215 21:27:50.900"/>
 </kw>
 <kw type="kw" timeout="" name="${int} = BuiltIn.Convert To Integer">
 <doc>Converts the given item to an integer number.</doc>
 <arguments>
 <arg>123</arg>
 </arguments>
-<msg timestamp="20110213 17:58:25.391" level="TRACE">Arguments: [ u'123' ]</msg>
-<msg timestamp="20110213 17:58:25.407" level="TRACE">Return: 123</msg>
-<msg timestamp="20110213 17:58:25.407" level="INFO">${int} = 123</msg>
-<status status="PASS" starttime="20110213 17:58:25.391" endtime="20110213 17:58:25.407"/>
+<msg timestamp="20110215 21:27:50.900" level="TRACE">Arguments: [ u'123' ]</msg>
+<msg timestamp="20110215 21:27:50.900" level="TRACE">Return: 123</msg>
+<msg timestamp="20110215 21:27:50.900" level="INFO">${int} = 123</msg>
+<status status="PASS" starttime="20110215 21:27:50.900" endtime="20110215 21:27:50.900"/>
 </kw>
 <kw type="kw" timeout="" name="BuiltIn.Set Global Variable">
 <doc>Makes a variable available globally in all tests and suites.</doc>
@@ -57,10 +57,10 @@
 <arg>${TEST_NAME}</arg>
 <arg>@{liste}</arg>
 </arguments>
-<msg timestamp="20110213 17:58:25.407" level="TRACE">Arguments: [ u'${GLOBAL_VARIABLE}' | u'${int}' | u'val1' | u'val2' | u'${TEST_NAME}' | u'@{liste}' ]</msg>
-<msg timestamp="20110213 17:58:25.407" level="INFO">${GLOBAL_VARIABLE} = [123, u'val1', u'val2', u'SimpleTest', u'1', u'2', u'3', u'4']</msg>
-<msg timestamp="20110213 17:58:25.424" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:25.407" endtime="20110213 17:58:25.407"/>
+<msg timestamp="20110215 21:27:50.915" level="TRACE">Arguments: [ u'${GLOBAL_VARIABLE}' | u'${int}' | u'val1' | u'val2' | u'${TEST_NAME}' | u'@{liste}' ]</msg>
+<msg timestamp="20110215 21:27:50.915" level="INFO">${GLOBAL_VARIABLE} = [123, u'val1', u'val2', u'SimpleTest', u'1', u'2', u'3', u'4']</msg>
+<msg timestamp="20110215 21:27:50.915" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:50.900" endtime="20110215 21:27:50.915"/>
 </kw>
 <kw type="kw" timeout="" name="BuiltIn.Set Test Variable">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
@@ -68,202 +68,237 @@
 <arg>${testvar}</arg>
 <arg>test variable</arg>
 </arguments>
-<msg timestamp="20110213 17:58:25.424" level="TRACE">Arguments: [ u'${testvar}' | u'test variable' ]</msg>
-<msg timestamp="20110213 17:58:25.424" level="INFO">${testvar} = test variable</msg>
-<msg timestamp="20110213 17:58:25.424" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:25.424" endtime="20110213 17:58:25.424"/>
+<msg timestamp="20110215 21:27:50.931" level="TRACE">Arguments: [ u'${testvar}' | u'test variable' ]</msg>
+<msg timestamp="20110215 21:27:50.931" level="INFO">${testvar} = test variable</msg>
+<msg timestamp="20110215 21:27:50.931" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:50.931" endtime="20110215 21:27:50.931"/>
 </kw>
 <kw type="kw" timeout="" name="JyBuiltInLibrary.First Test Step">
 <doc>First Test Step</doc>
 <arguments>
 </arguments>
-<msg timestamp="20110213 17:58:25.424" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20110213 17:58:25.549" level="INFO">start testloglevel</msg>
-<msg timestamp="20110213 17:58:25.549" level="INFO">Log level changed from TRACE to INFO</msg>
-<msg timestamp="20110213 17:58:25.549" level="INFO">Log level changed from INFO to TRACE</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">Log level changed from TRACE to TRACE</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">end   testloglevel</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">start testLog</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">this is a INFO log</msg>
-<msg timestamp="20110213 17:58:25.563" level="DEBUG">this is a DEBUG log</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">One message</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">second message</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">third message</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">Only One message</msg>
-<msg timestamp="20110213 17:58:25.563" level="INFO">end   testLog</msg>
-<msg timestamp="20110213 17:58:26.563" level="INFO">Slept 1 second</msg>
-<msg timestamp="20110213 17:58:26.563" level="INFO">wait 1 sec</msg>
-<msg timestamp="20110213 17:58:27.579" level="INFO">Slept 1 second 3 milliseconds</msg>
-<msg timestamp="20110213 17:58:27.579" level="INFO">wait 1 sec and 3 ms</msg>
-<msg timestamp="20110213 17:58:28.579" level="INFO">Slept 1 second</msg>
-<msg timestamp="20110213 17:58:29.595" level="INFO">Slept 1 second 3 milliseconds</msg>
-<msg timestamp="20110213 17:58:29.595" level="INFO">catenate=Hello---world</msg>
-<msg timestamp="20110213 17:58:29.595" level="INFO">Set tags 'tag1', 'tag2' and 'tag3'.</msg>
-<msg timestamp="20110213 17:58:29.611" level="INFO">Removed tags 'tag2' and 'tag3'.</msg>
-<msg timestamp="20110213 17:58:29.611" level="INFO">library instance=JyBuiltInLibrary@11da53, class=org.python.core.PyObjectDerived</msg>
-<msg timestamp="20110213 17:58:29.627" level="INFO">evaluate=1397654427, class=org.python.core.PyInteger</msg>
-<msg timestamp="20110213 17:58:29.627" level="INFO">Set test message to:
+<msg timestamp="20110215 21:27:50.931" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20110215 21:27:51.072" level="INFO">start testloglevel</msg>
+<msg timestamp="20110215 21:27:51.072" level="INFO">Log level changed from TRACE to INFO</msg>
+<msg timestamp="20110215 21:27:51.072" level="INFO">Log level changed from INFO to TRACE</msg>
+<msg timestamp="20110215 21:27:51.072" level="INFO">Log level changed from TRACE to TRACE</msg>
+<msg timestamp="20110215 21:27:51.072" level="INFO">end   testloglevel</msg>
+<msg timestamp="20110215 21:27:51.088" level="INFO">start testLog</msg>
+<msg timestamp="20110215 21:27:51.088" level="INFO">this is a INFO log</msg>
+<msg timestamp="20110215 21:27:51.088" level="DEBUG">this is a DEBUG log</msg>
+<msg timestamp="20110215 21:27:51.088" level="INFO">One message</msg>
+<msg timestamp="20110215 21:27:51.088" level="INFO">second message</msg>
+<msg timestamp="20110215 21:27:51.088" level="INFO">third message</msg>
+<msg timestamp="20110215 21:27:51.088" level="INFO">Only One message</msg>
+<msg timestamp="20110215 21:27:51.088" level="INFO">end   testLog</msg>
+<msg timestamp="20110215 21:27:52.088" level="INFO">Slept 1 second</msg>
+<msg timestamp="20110215 21:27:52.088" level="INFO">wait 1 sec</msg>
+<msg timestamp="20110215 21:27:53.104" level="INFO">Slept 1 second 3 milliseconds</msg>
+<msg timestamp="20110215 21:27:53.104" level="INFO">wait 1 sec and 3 ms</msg>
+<msg timestamp="20110215 21:27:54.104" level="INFO">Slept 1 second</msg>
+<msg timestamp="20110215 21:27:55.119" level="INFO">Slept 1 second 3 milliseconds</msg>
+<msg timestamp="20110215 21:27:55.119" level="INFO">catenate=Hello---world</msg>
+<msg timestamp="20110215 21:27:55.119" level="INFO">Set tags 'tag1', 'tag2' and 'tag3'.</msg>
+<msg timestamp="20110215 21:27:55.135" level="INFO">Removed tags 'tag2' and 'tag3'.</msg>
+<msg timestamp="20110215 21:27:55.135" level="INFO">library instance=JyBuiltInLibrary@40f3c1, class=org.python.core.PyObjectDerived</msg>
+<msg timestamp="20110215 21:27:55.151" level="INFO">evaluate=1334022978, class=org.python.core.PyInteger</msg>
+<msg timestamp="20110215 21:27:55.151" level="INFO">Set test message to:
 This is a test message</msg>
-<msg timestamp="20110213 17:58:29.627" level="INFO">start testVariables</msg>
-<msg timestamp="20110213 17:58:29.627" level="INFO">start log_variables</msg>
-<msg timestamp="20110213 17:58:29.642" level="INFO">${/} = \</msg>
-<msg timestamp="20110213 17:58:29.642" level="INFO">${:} = ;</msg>
-<msg timestamp="20110213 17:58:29.642" level="INFO">${DEBUG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\jybot.log</msg>
-<msg timestamp="20110213 17:58:29.642" level="INFO">${EMPTY} = </msg>
-<msg timestamp="20110213 17:58:29.642" level="INFO">${EXECDIR} = D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin</msg>
-<msg timestamp="20110213 17:58:29.642" level="INFO">${False} = False</msg>
-<msg timestamp="20110213 17:58:29.642" level="INFO">${GLOBAL_VARIABLE} = [123, u'val1', u'val2', u'SimpleTest', u'1', u'2', u'3', u'4']</msg>
-<msg timestamp="20110213 17:58:29.657" level="INFO">${int} = 123</msg>
-<msg timestamp="20110213 17:58:29.657" level="INFO">${LOG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\log.html</msg>
-<msg timestamp="20110213 17:58:29.657" level="INFO">${None} = None</msg>
-<msg timestamp="20110213 17:58:29.657" level="INFO">${null} = None</msg>
-<msg timestamp="20110213 17:58:29.657" level="INFO">${OUTPUT_DIR} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results</msg>
-<msg timestamp="20110213 17:58:29.674" level="INFO">${OUTPUT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\output.xml</msg>
-<msg timestamp="20110213 17:58:29.674" level="INFO">${PREV_TEST_MESSAGE} = </msg>
-<msg timestamp="20110213 17:58:29.674" level="INFO">${PREV_TEST_NAME} = </msg>
-<msg timestamp="20110213 17:58:29.674" level="INFO">${PREV_TEST_STATUS} = </msg>
-<msg timestamp="20110213 17:58:29.674" level="INFO">${REPORT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\report.html</msg>
-<msg timestamp="20110213 17:58:29.674" level="INFO">${SPACE} =  </msg>
-<msg timestamp="20110213 17:58:29.674" level="INFO">${SUITE_NAME} = A Testjybuiltinlibrary</msg>
-<msg timestamp="20110213 17:58:29.688" level="INFO">${SUITE_SOURCE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html</msg>
-<msg timestamp="20110213 17:58:29.688" level="INFO">${SUMMARY_FILE} = NONE</msg>
-<msg timestamp="20110213 17:58:29.688" level="INFO">${TEMPDIR} = c:\windows\temp</msg>
-<msg timestamp="20110213 17:58:29.688" level="INFO">${TEST_NAME} = SimpleTest</msg>
-<msg timestamp="20110213 17:58:29.688" level="INFO">${testvar} = test variable</msg>
-<msg timestamp="20110213 17:58:29.688" level="INFO">${True} = True</msg>
-<msg timestamp="20110213 17:58:29.688" level="INFO">@{liste} = [ 1 | 2 | 3 | 4 ]</msg>
-<msg timestamp="20110213 17:58:29.704" level="INFO">@{TEST_TAGS} = [ tag1 ]</msg>
-<msg timestamp="20110213 17:58:29.704" level="INFO">${/} = \</msg>
-<msg timestamp="20110213 17:58:29.704" level="INFO">${:} = ;</msg>
-<msg timestamp="20110213 17:58:29.704" level="INFO">${DEBUG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\jybot.log</msg>
-<msg timestamp="20110213 17:58:29.704" level="INFO">${EMPTY} = </msg>
-<msg timestamp="20110213 17:58:29.704" level="INFO">${EXECDIR} = D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin</msg>
-<msg timestamp="20110213 17:58:29.720" level="INFO">${False} = False</msg>
-<msg timestamp="20110213 17:58:29.720" level="INFO">${GLOBAL_VARIABLE} = [123, u'val1', u'val2', u'SimpleTest', u'1', u'2', u'3', u'4']</msg>
-<msg timestamp="20110213 17:58:29.720" level="INFO">${int} = 123</msg>
-<msg timestamp="20110213 17:58:29.720" level="INFO">${LOG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\log.html</msg>
-<msg timestamp="20110213 17:58:29.720" level="INFO">${None} = None</msg>
-<msg timestamp="20110213 17:58:29.736" level="INFO">${null} = None</msg>
-<msg timestamp="20110213 17:58:29.736" level="INFO">${OUTPUT_DIR} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results</msg>
-<msg timestamp="20110213 17:58:29.736" level="INFO">${OUTPUT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\output.xml</msg>
-<msg timestamp="20110213 17:58:29.736" level="INFO">${PREV_TEST_MESSAGE} = </msg>
-<msg timestamp="20110213 17:58:29.736" level="INFO">${PREV_TEST_NAME} = </msg>
-<msg timestamp="20110213 17:58:29.736" level="INFO">${PREV_TEST_STATUS} = </msg>
-<msg timestamp="20110213 17:58:29.752" level="INFO">${REPORT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\report.html</msg>
-<msg timestamp="20110213 17:58:29.752" level="INFO">${SPACE} =  </msg>
-<msg timestamp="20110213 17:58:29.752" level="INFO">${SUITE_NAME} = A Testjybuiltinlibrary</msg>
-<msg timestamp="20110213 17:58:29.752" level="INFO">${SUITE_SOURCE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html</msg>
-<msg timestamp="20110213 17:58:29.752" level="INFO">${SUMMARY_FILE} = NONE</msg>
-<msg timestamp="20110213 17:58:29.752" level="INFO">${TEMPDIR} = c:\windows\temp</msg>
-<msg timestamp="20110213 17:58:29.767" level="INFO">${TEST_NAME} = SimpleTest</msg>
-<msg timestamp="20110213 17:58:29.767" level="INFO">${testvar} = test variable</msg>
-<msg timestamp="20110213 17:58:29.767" level="INFO">${True} = True</msg>
-<msg timestamp="20110213 17:58:29.767" level="INFO">@{liste} = [ 1 | 2 | 3 | 4 ]</msg>
-<msg timestamp="20110213 17:58:29.767" level="INFO">@{TEST_TAGS} = [ tag1 ]</msg>
-<msg timestamp="20110213 17:58:29.767" level="INFO">end log_variables</msg>
-<msg timestamp="20110213 17:58:29.767" level="INFO">begin get_variables</msg>
-<msg timestamp="20110213 17:58:29.767" level="INFO">	key=${/}, value=\, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${SUMMARY_FILE}, value=NONE, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${PREV_TEST_STATUS}, value=, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${int}, value=123, class=java.lang.Integer</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${testvar}, value=test variable, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${True}, value=true, class=java.lang.Boolean</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${SUITE_SOURCE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${LOG_FILE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\log.html, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${DEBUG_FILE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\jybot.log, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${None}, value=null</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${PREV_TEST_MESSAGE}, value=, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${EXECDIR}, value=D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${OUTPUT_FILE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\output.xml, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${OUTPUT_DIR}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${EMPTY}, value=, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.782" level="INFO">	key=${null}, value=null</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${:}, value=;, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${TEST_NAME}, value=SimpleTest, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${False}, value=false, class=java.lang.Boolean</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${PREV_TEST_NAME}, value=, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${REPORT_FILE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\report.html, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${GLOBAL_VARIABLE}, value=[123, u'val1', u'val2', u'SimpleTest', u'1', u'2', u'3', u'4'], class=org.python.core.PyList</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=@{TEST_TAGS}, value=[u'tag1'], class=org.python.core.PyList</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${SUITE_NAME}, value=A Testjybuiltinlibrary, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${SPACE}, value= , class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=${TEMPDIR}, value=c:\windows\temp, class=java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">	key=@{liste}, value=[u'1', u'2', u'3', u'4'], class=org.python.core.PyList</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">end get_variables</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">print ${False}=false</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">print replace=This is the SimpleTest test</msg>
-<msg timestamp="20110213 17:58:29.799" level="INFO">print replace=[u'1', u'2', u'3', u'4']</msg>
-<msg timestamp="20110213 17:58:29.813" level="INFO">TEST_NAME class=java.lang.String, o=SimpleTest</msg>
-<msg timestamp="20110213 17:58:29.813" level="INFO">GLOBAL_VARIABLE class=[Ljava.lang.Object;, o=[Ljava.lang.Object;@bd4dc2</msg>
-<msg timestamp="20110213 17:58:29.813" level="INFO">ss[0]=123 of class:java.lang.Integer</msg>
-<msg timestamp="20110213 17:58:29.813" level="INFO">ss[1]=val1 of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.813" level="INFO">ss[2]=val2 of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.813" level="INFO">ss[3]=SimpleTest of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.813" level="INFO">ss[4]=1 of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.813" level="INFO">ss[5]=2 of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">ss[6]=3 of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">ss[7]=4 of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">${GLOBAL_VARIABLE} = [u'global', 3, True, [toto, 12, false]]</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">GLOBAL_VARIABLE class=[Ljava.lang.Object;, o=[Ljava.lang.Object;@dbf79d</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">ss[0]=global of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">ss[1]=3 of class:java.lang.Integer</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">ss[2]=true of class:java.lang.Boolean</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">ss[3]=[toto, 12, false] of class:java.util.ArrayList</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">slist=toto of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">slist=12 of class:java.lang.Integer</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">slist=false of class:java.lang.Boolean</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">slist=added after of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.829" level="INFO">${GLOBAL_VARIABLE} = global</msg>
-<msg timestamp="20110213 17:58:29.845" level="INFO">${GLOBAL_VARIABLE} = [u'global', 3, True, [toto, 12, false, added after]]</msg>
-<msg timestamp="20110213 17:58:29.845" level="INFO">${SUITE_VARIABLE} = suite</msg>
-<msg timestamp="20110213 17:58:29.845" level="INFO">${TEST_VARIABLE} = test</msg>
-<msg timestamp="20110213 17:58:29.845" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:25.424" endtime="20110213 17:58:29.845"/>
+<msg timestamp="20110215 21:27:55.151" level="INFO">start testVariables</msg>
+<msg timestamp="20110215 21:27:55.151" level="INFO">start log_variables</msg>
+<msg timestamp="20110215 21:27:55.151" level="INFO">${/} = \</msg>
+<msg timestamp="20110215 21:27:55.151" level="INFO">${:} = ;</msg>
+<msg timestamp="20110215 21:27:55.151" level="INFO">${DEBUG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\jybot.log</msg>
+<msg timestamp="20110215 21:27:55.167" level="INFO">${EMPTY} = </msg>
+<msg timestamp="20110215 21:27:55.167" level="INFO">${EXECDIR} = D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin</msg>
+<msg timestamp="20110215 21:27:55.167" level="INFO">${False} = False</msg>
+<msg timestamp="20110215 21:27:55.167" level="INFO">${GLOBAL_VARIABLE} = [123, u'val1', u'val2', u'SimpleTest', u'1', u'2', u'3', u'4']</msg>
+<msg timestamp="20110215 21:27:55.167" level="INFO">${int} = 123</msg>
+<msg timestamp="20110215 21:27:55.167" level="INFO">${LOG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\log.html</msg>
+<msg timestamp="20110215 21:27:55.167" level="INFO">${None} = None</msg>
+<msg timestamp="20110215 21:27:55.183" level="INFO">${null} = None</msg>
+<msg timestamp="20110215 21:27:55.183" level="INFO">${OUTPUT_DIR} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results</msg>
+<msg timestamp="20110215 21:27:55.183" level="INFO">${OUTPUT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\output.xml</msg>
+<msg timestamp="20110215 21:27:55.183" level="INFO">${PREV_TEST_MESSAGE} = </msg>
+<msg timestamp="20110215 21:27:55.183" level="INFO">${PREV_TEST_NAME} = </msg>
+<msg timestamp="20110215 21:27:55.183" level="INFO">${PREV_TEST_STATUS} = </msg>
+<msg timestamp="20110215 21:27:55.183" level="INFO">${REPORT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\report.html</msg>
+<msg timestamp="20110215 21:27:55.183" level="INFO">${SPACE} =  </msg>
+<msg timestamp="20110215 21:27:55.197" level="INFO">${SUITE_NAME} = A Testjybuiltinlibrary</msg>
+<msg timestamp="20110215 21:27:55.197" level="INFO">${SUITE_SOURCE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html</msg>
+<msg timestamp="20110215 21:27:55.197" level="INFO">${SUMMARY_FILE} = NONE</msg>
+<msg timestamp="20110215 21:27:55.197" level="INFO">${TEMPDIR} = c:\windows\temp</msg>
+<msg timestamp="20110215 21:27:55.197" level="INFO">${TEST_NAME} = SimpleTest</msg>
+<msg timestamp="20110215 21:27:55.197" level="INFO">${testvar} = test variable</msg>
+<msg timestamp="20110215 21:27:55.197" level="INFO">${True} = True</msg>
+<msg timestamp="20110215 21:27:55.197" level="INFO">@{liste} = [ 1 | 2 | 3 | 4 ]</msg>
+<msg timestamp="20110215 21:27:55.213" level="INFO">@{TEST_TAGS} = [ tag1 ]</msg>
+<msg timestamp="20110215 21:27:55.213" level="INFO">${/} = \</msg>
+<msg timestamp="20110215 21:27:55.213" level="INFO">${:} = ;</msg>
+<msg timestamp="20110215 21:27:55.213" level="INFO">${DEBUG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\jybot.log</msg>
+<msg timestamp="20110215 21:27:55.213" level="INFO">${EMPTY} = </msg>
+<msg timestamp="20110215 21:27:55.213" level="INFO">${EXECDIR} = D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin</msg>
+<msg timestamp="20110215 21:27:55.213" level="INFO">${False} = False</msg>
+<msg timestamp="20110215 21:27:55.213" level="INFO">${GLOBAL_VARIABLE} = [123, u'val1', u'val2', u'SimpleTest', u'1', u'2', u'3', u'4']</msg>
+<msg timestamp="20110215 21:27:55.230" level="INFO">${int} = 123</msg>
+<msg timestamp="20110215 21:27:55.230" level="INFO">${LOG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\log.html</msg>
+<msg timestamp="20110215 21:27:55.230" level="INFO">${None} = None</msg>
+<msg timestamp="20110215 21:27:55.230" level="INFO">${null} = None</msg>
+<msg timestamp="20110215 21:27:55.230" level="INFO">${OUTPUT_DIR} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results</msg>
+<msg timestamp="20110215 21:27:55.230" level="INFO">${OUTPUT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\output.xml</msg>
+<msg timestamp="20110215 21:27:55.230" level="INFO">${PREV_TEST_MESSAGE} = </msg>
+<msg timestamp="20110215 21:27:55.244" level="INFO">${PREV_TEST_NAME} = </msg>
+<msg timestamp="20110215 21:27:55.244" level="INFO">${PREV_TEST_STATUS} = </msg>
+<msg timestamp="20110215 21:27:55.244" level="INFO">${REPORT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\report.html</msg>
+<msg timestamp="20110215 21:27:55.244" level="INFO">${SPACE} =  </msg>
+<msg timestamp="20110215 21:27:55.244" level="INFO">${SUITE_NAME} = A Testjybuiltinlibrary</msg>
+<msg timestamp="20110215 21:27:55.244" level="INFO">${SUITE_SOURCE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html</msg>
+<msg timestamp="20110215 21:27:55.244" level="INFO">${SUMMARY_FILE} = NONE</msg>
+<msg timestamp="20110215 21:27:55.244" level="INFO">${TEMPDIR} = c:\windows\temp</msg>
+<msg timestamp="20110215 21:27:55.260" level="INFO">${TEST_NAME} = SimpleTest</msg>
+<msg timestamp="20110215 21:27:55.260" level="INFO">${testvar} = test variable</msg>
+<msg timestamp="20110215 21:27:55.260" level="INFO">${True} = True</msg>
+<msg timestamp="20110215 21:27:55.260" level="INFO">@{liste} = [ 1 | 2 | 3 | 4 ]</msg>
+<msg timestamp="20110215 21:27:55.260" level="INFO">@{TEST_TAGS} = [ tag1 ]</msg>
+<msg timestamp="20110215 21:27:55.260" level="INFO">end log_variables</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">begin get_variables</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${/}, value=\, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${SUMMARY_FILE}, value=NONE, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${PREV_TEST_STATUS}, value=, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${int}, value=123, class=java.lang.Integer</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${testvar}, value=test variable, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${True}, value=true, class=java.lang.Boolean</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${SUITE_SOURCE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${LOG_FILE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\log.html, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${DEBUG_FILE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\jybot.log, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${None}, value=null</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${PREV_TEST_MESSAGE}, value=, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${EXECDIR}, value=D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${OUTPUT_FILE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\output.xml, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.276" level="INFO">	key=${OUTPUT_DIR}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${EMPTY}, value=, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${null}, value=null</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${:}, value=;, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${TEST_NAME}, value=SimpleTest, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${False}, value=false, class=java.lang.Boolean</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${PREV_TEST_NAME}, value=, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${REPORT_FILE}, value=d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\report.html, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${GLOBAL_VARIABLE}, value=[123, u'val1', u'val2', u'SimpleTest', u'1', u'2', u'3', u'4'], class=org.python.core.PyList</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=@{TEST_TAGS}, value=[u'tag1'], class=org.python.core.PyList</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${SUITE_NAME}, value=A Testjybuiltinlibrary, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${SPACE}, value= , class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=${TEMPDIR}, value=c:\windows\temp, class=java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">	key=@{liste}, value=[u'1', u'2', u'3', u'4'], class=org.python.core.PyList</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">end get_variables</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">print ${False}=false</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">print replace=This is the SimpleTest test</msg>
+<msg timestamp="20110215 21:27:55.292" level="INFO">print replace=[u'1', u'2', u'3', u'4']</msg>
+<msg timestamp="20110215 21:27:55.308" level="INFO">TEST_NAME class=java.lang.String, o=SimpleTest</msg>
+<msg timestamp="20110215 21:27:55.308" level="INFO">GLOBAL_VARIABLE class=[Ljava.lang.Object;, o=[Ljava.lang.Object;@155bd22</msg>
+<msg timestamp="20110215 21:27:55.308" level="INFO">ss[0]=123 of class:java.lang.Integer</msg>
+<msg timestamp="20110215 21:27:55.308" level="INFO">ss[1]=val1 of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.308" level="INFO">ss[2]=val2 of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.308" level="INFO">ss[3]=SimpleTest of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">ss[4]=1 of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">ss[5]=2 of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">ss[6]=3 of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">ss[7]=4 of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">${GLOBAL_VARIABLE} = [u'global', 3, True, [toto, 12, false]]</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">GLOBAL_VARIABLE class=[Ljava.lang.Object;, o=[Ljava.lang.Object;@4f12c2</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">ss[0]=global of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">ss[1]=3 of class:java.lang.Integer</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">ss[2]=true of class:java.lang.Boolean</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">ss[3]=[toto, 12, false] of class:java.util.ArrayList</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">slist=toto of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">slist=12 of class:java.lang.Integer</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">slist=false of class:java.lang.Boolean</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">slist=added after of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.322" level="INFO">${GLOBAL_VARIABLE} = global</msg>
+<msg timestamp="20110215 21:27:55.338" level="INFO">${GLOBAL_VARIABLE} = [u'global', 3, True, [toto, 12, false, added after]]</msg>
+<msg timestamp="20110215 21:27:55.338" level="INFO">${SUITE_VARIABLE} = suite</msg>
+<msg timestamp="20110215 21:27:55.338" level="INFO">${TEST_VARIABLE} = test</msg>
+<msg timestamp="20110215 21:27:55.338" level="INFO">start testEquals</msg>
+<msg timestamp="20110215 21:27:55.338" level="INFO">end testEquals</msg>
+<msg timestamp="20110215 21:27:55.355" level="INFO">at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.python.core.PyReflectedConstructor.constructProxy(PyReflectedConstructor.java:163)
+
+java.lang.Exception: java.lang.Exception: this is a failure</msg>
+<msg timestamp="20110215 21:27:55.385" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:50.931" endtime="20110215 21:27:55.385"/>
+</kw>
+<kw type="kw" timeout="" name="BuiltIn.Should Be True">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${TEST_VARIABLE}' == 'test'</arg>
+</arguments>
+<msg timestamp="20110215 21:27:55.401" level="TRACE">Arguments: [ u"'test' == 'test'" ]</msg>
+<msg timestamp="20110215 21:27:55.401" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:55.385" endtime="20110215 21:27:55.401"/>
 </kw>
 <kw type="kw" timeout="" name="${arg1} = BuiltIn.And Catenate">
 <doc>Catenates the given items together and returns the resulted string.</doc>
 <arguments>
 <arg>${TEST_NAME}</arg>
 </arguments>
-<msg timestamp="20110213 17:58:29.861" level="TRACE">Arguments: [ u'SimpleTest' ]</msg>
-<msg timestamp="20110213 17:58:29.861" level="TRACE">Return: u'SimpleTest'</msg>
-<msg timestamp="20110213 17:58:29.861" level="INFO">${arg1} = SimpleTest</msg>
-<status status="PASS" starttime="20110213 17:58:29.845" endtime="20110213 17:58:29.861"/>
+<msg timestamp="20110215 21:27:55.401" level="TRACE">Arguments: [ u'SimpleTest' ]</msg>
+<msg timestamp="20110215 21:27:55.417" level="TRACE">Return: u'SimpleTest'</msg>
+<msg timestamp="20110215 21:27:55.417" level="INFO">${arg1} = SimpleTest</msg>
+<status status="PASS" starttime="20110215 21:27:55.401" endtime="20110215 21:27:55.417"/>
 </kw>
 <kw type="kw" timeout="" name="BuiltIn.When Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${arg1}</arg>
 </arguments>
-<msg timestamp="20110213 17:58:29.861" level="TRACE">Arguments: [ u'SimpleTest' ]</msg>
-<msg timestamp="20110213 17:58:29.861" level="INFO">SimpleTest</msg>
-<msg timestamp="20110213 17:58:29.861" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:29.861" endtime="20110213 17:58:29.861"/>
+<msg timestamp="20110215 21:27:55.417" level="TRACE">Arguments: [ u'SimpleTest' ]</msg>
+<msg timestamp="20110215 21:27:55.417" level="INFO">SimpleTest</msg>
+<msg timestamp="20110215 21:27:55.417" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:55.417" endtime="20110215 21:27:55.417"/>
 </kw>
 <kw type="kw" timeout="" name="BuiltIn.Then Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>jus a then log</arg>
 </arguments>
-<msg timestamp="20110213 17:58:29.877" level="TRACE">Arguments: [ u'jus a then log' ]</msg>
-<msg timestamp="20110213 17:58:29.877" level="INFO">jus a then log</msg>
-<msg timestamp="20110213 17:58:29.877" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:29.877" endtime="20110213 17:58:29.877"/>
+<msg timestamp="20110215 21:27:55.417" level="TRACE">Arguments: [ u'jus a then log' ]</msg>
+<msg timestamp="20110215 21:27:55.433" level="INFO">jus a then log</msg>
+<msg timestamp="20110215 21:27:55.433" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:55.417" endtime="20110215 21:27:55.433"/>
 </kw>
 <kw type="kw" timeout="" name="BuiltIn.And Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>just a and log</arg>
 </arguments>
-<msg timestamp="20110213 17:58:29.877" level="TRACE">Arguments: [ u'just a and log' ]</msg>
-<msg timestamp="20110213 17:58:29.877" level="INFO">just a and log</msg>
-<msg timestamp="20110213 17:58:29.877" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:29.877" endtime="20110213 17:58:29.877"/>
+<msg timestamp="20110215 21:27:55.433" level="TRACE">Arguments: [ u'just a and log' ]</msg>
+<msg timestamp="20110215 21:27:55.433" level="INFO">just a and log</msg>
+<msg timestamp="20110215 21:27:55.433" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:55.433" endtime="20110215 21:27:55.433"/>
+</kw>
+<kw type="kw" timeout="" name="BuiltIn.Fail">
+<doc>Fails the test immediately with the given (optional) message.</doc>
+<arguments>
+<arg>fail message</arg>
+</arguments>
+<msg timestamp="20110215 21:27:55.448" level="TRACE">Arguments: [ u'fail message' ]</msg>
+<msg timestamp="20110215 21:27:55.480" level="FAIL">fail message</msg>
+<msg timestamp="20110215 21:27:55.480" level="DEBUG">Traceback (most recent call last):
+  File "D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin\dist\robotframework-2.5.5.jar\Lib\robot\running\keywords$py.class", line 106, in _run
+  File "D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin\dist\robotframework-2.5.5.jar\Lib\robot\running\handlers$py.class", line 104, in run
+  File "D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin\dist\robotframework-2.5.5.jar\Lib\robot\running\handlers$py.class", line 116, in _run
+  File "D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin\dist\robotframework-2.5.5.jar\Lib\robot\running\handlers$py.class", line 127, in _run_with_output_captured_and_signal_monitor
+  File "D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin\dist\robotframework-2.5.5.jar\Lib\robot\running\handlers$py.class", line 138, in _run_with_signal_monitoring
+  File "D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin\dist\robotframework-2.5.5.jar\Lib\robot\running\handlers$py.class", line 122, in &lt;lambda&gt;
+  File "D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin\dist\robotframework-2.5.5.jar\Lib\robot\libraries\BuiltIn$py.class", line 128, in fail</msg>
+<status status="FAIL" starttime="20110215 21:27:55.448" endtime="20110215 21:27:55.480"/>
 </kw>
 <tags>
 <tag>tag1</tag>
 </tags>
-<status status="PASS" starttime="20110213 17:58:25.329" endtime="20110213 17:58:29.892">This is a test message</status>
+<status status="FAIL" starttime="20110215 21:27:50.822" endtime="20110215 21:27:55.480">fail message</status>
 </test>
 <test critical="yes" timeout="" name="SecondTest">
 <doc/>
@@ -271,23 +306,24 @@ This is a test message</msg>
 <doc>Second Test Step</doc>
 <arguments>
 </arguments>
-<msg timestamp="20110213 17:58:29.907" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">start testSecondVariables</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">GLOBAL_VARIABLE class=[Ljava.lang.Object;, ss=[Ljava.lang.Object;@155bd22</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">ss[0]=global of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">ss[1]=3 of class:java.lang.Integer</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">ss[2]=true of class:java.lang.Boolean</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">ss[3]=[toto, 12, false, added after] of class:java.util.ArrayList</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">slist=toto of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">slist=12 of class:java.lang.Integer</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">slist=false of class:java.lang.Boolean</msg>
-<msg timestamp="20110213 17:58:29.907" level="INFO">slist=added after of class:java.lang.String</msg>
-<msg timestamp="20110213 17:58:29.907" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:29.907" endtime="20110213 17:58:29.907"/>
+<msg timestamp="20110215 21:27:55.494" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">start testSecondVariables</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">GLOBAL_VARIABLE class=[Ljava.lang.Object;, ss=[Ljava.lang.Object;@1900f17</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">ss[0]=global of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">ss[1]=3 of class:java.lang.Integer</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">ss[2]=true of class:java.lang.Boolean</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">ss[3]=[toto, 12, false, added after] of class:java.util.ArrayList</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">slist=toto of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">slist=12 of class:java.lang.Integer</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">slist=false of class:java.lang.Boolean</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">slist=added after of class:java.lang.String</msg>
+<msg timestamp="20110215 21:27:55.494" level="INFO">end testSecondVariables</msg>
+<msg timestamp="20110215 21:27:55.510" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:55.494" endtime="20110215 21:27:55.510"/>
 </kw>
 <tags>
 </tags>
-<status status="PASS" starttime="20110213 17:58:29.892" endtime="20110213 17:58:29.907"/>
+<status status="PASS" starttime="20110215 21:27:55.494" endtime="20110215 21:27:55.510"/>
 </test>
 <test critical="yes" timeout="" name="For Debug">
 <doc/>
@@ -297,72 +333,92 @@ This is a test message</msg>
 <arg>random.randint(0, sys.maxint)</arg>
 <arg>random,sys</arg>
 </arguments>
-<msg timestamp="20110213 17:58:29.924" level="TRACE">Arguments: [ u'random.randint(0, sys.maxint)' | u'random,sys' ]</msg>
-<msg timestamp="20110213 17:58:29.940" level="TRACE">Return: 567765671</msg>
-<msg timestamp="20110213 17:58:29.940" level="INFO">${random} = 567765671</msg>
-<status status="PASS" starttime="20110213 17:58:29.924" endtime="20110213 17:58:29.940"/>
+<msg timestamp="20110215 21:27:55.526" level="TRACE">Arguments: [ u'random.randint(0, sys.maxint)' | u'random,sys' ]</msg>
+<msg timestamp="20110215 21:27:55.526" level="TRACE">Return: 700333453</msg>
+<msg timestamp="20110215 21:27:55.526" level="INFO">${random} = 700333453</msg>
+<status status="PASS" starttime="20110215 21:27:55.526" endtime="20110215 21:27:55.526"/>
 </kw>
 <kw type="kw" timeout="" name="BuiltIn.Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${random}</arg>
 </arguments>
-<msg timestamp="20110213 17:58:29.940" level="TRACE">Arguments: [ 567765671 ]</msg>
-<msg timestamp="20110213 17:58:29.940" level="INFO">567765671</msg>
-<msg timestamp="20110213 17:58:29.940" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:29.940" endtime="20110213 17:58:29.940"/>
+<msg timestamp="20110215 21:27:55.526" level="TRACE">Arguments: [ 700333453 ]</msg>
+<msg timestamp="20110215 21:27:55.526" level="INFO">700333453</msg>
+<msg timestamp="20110215 21:27:55.526" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:55.526" endtime="20110215 21:27:55.526"/>
 </kw>
 <kw type="kw" timeout="" name="BuiltIn.Log Variables">
 <doc>Logs all variables in the current scope with given log level.</doc>
 <arguments>
 </arguments>
-<msg timestamp="20110213 17:58:29.954" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${/} = \</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${:} = ;</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${DEBUG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\jybot.log</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${EMPTY} = </msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${EXECDIR} = D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${False} = False</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${GLOBAL_VARIABLE} = [u'global', 3, True, [toto, 12, false, added after]]</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${LOG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\log.html</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${None} = None</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${null} = None</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${OUTPUT_DIR} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${OUTPUT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\output.xml</msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${PREV_TEST_MESSAGE} = </msg>
-<msg timestamp="20110213 17:58:29.954" level="INFO">${PREV_TEST_NAME} = SecondTest</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${PREV_TEST_STATUS} = PASS</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${random} = 567765671</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${REPORT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\report.html</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${SPACE} =  </msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${SUITE_NAME} = A Testjybuiltinlibrary</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${SUITE_SOURCE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${SUITE_VARIABLE} = suite</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${SUMMARY_FILE} = NONE</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${TEMPDIR} = c:\windows\temp</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${TEST_NAME} = For Debug</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">${True} = True</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">@{liste} = [ 1 | 2 | 3 | 4 ]</msg>
-<msg timestamp="20110213 17:58:29.970" level="INFO">@{TEST_TAGS} = [ ]</msg>
-<msg timestamp="20110213 17:58:29.970" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20110213 17:58:29.954" endtime="20110213 17:58:29.970"/>
+<msg timestamp="20110215 21:27:55.542" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${/} = \</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${:} = ;</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${DEBUG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\jybot.log</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${EMPTY} = </msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${EXECDIR} = D:\workspaces\Workspace_Mylyn_e35_sv3\org.robotframework.jybuiltin</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${False} = False</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${GLOBAL_VARIABLE} = [u'global', 3, True, [toto, 12, false, added after]]</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${LOG_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\log.html</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${None} = None</msg>
+<msg timestamp="20110215 21:27:55.542" level="INFO">${null} = None</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${OUTPUT_DIR} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${OUTPUT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\output.xml</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${PREV_TEST_MESSAGE} = </msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${PREV_TEST_NAME} = SecondTest</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${PREV_TEST_STATUS} = PASS</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${random} = 700333453</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${REPORT_FILE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\results\report.html</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${SPACE} =  </msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${SUITE_NAME} = A Testjybuiltinlibrary</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${SUITE_SOURCE} = d:\workspaces\workspace_mylyn_e35_sv3\org.robotframework.jybuiltin\a_testjybuiltinlibrary.html</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${SUITE_VARIABLE} = suite</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${SUMMARY_FILE} = NONE</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${TEMPDIR} = c:\windows\temp</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${TEST_NAME} = For Debug</msg>
+<msg timestamp="20110215 21:27:55.558" level="INFO">${True} = True</msg>
+<msg timestamp="20110215 21:27:55.573" level="INFO">@{liste} = [ 1 | 2 | 3 | 4 ]</msg>
+<msg timestamp="20110215 21:27:55.573" level="INFO">@{TEST_TAGS} = [ ]</msg>
+<msg timestamp="20110215 21:27:55.573" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:55.542" endtime="20110215 21:27:55.573"/>
+</kw>
+<kw type="kw" timeout="" name="${var1} = BuiltIn.Catenate">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>test</arg>
+</arguments>
+<msg timestamp="20110215 21:27:55.573" level="TRACE">Arguments: [ u'test' ]</msg>
+<msg timestamp="20110215 21:27:55.573" level="TRACE">Return: u'test'</msg>
+<msg timestamp="20110215 21:27:55.573" level="INFO">${var1} = test</msg>
+<status status="PASS" starttime="20110215 21:27:55.573" endtime="20110215 21:27:55.573"/>
+</kw>
+<kw type="kw" timeout="" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${var1}</arg>
+<arg>test</arg>
+</arguments>
+<msg timestamp="20110215 21:27:55.573" level="TRACE">Arguments: [ u'test' | u'test' ]</msg>
+<msg timestamp="20110215 21:27:55.588" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20110215 21:27:55.573" endtime="20110215 21:27:55.588"/>
 </kw>
 <tags>
 </tags>
-<status status="PASS" starttime="20110213 17:58:29.924" endtime="20110213 17:58:29.986"/>
+<status status="PASS" starttime="20110215 21:27:55.510" endtime="20110215 21:27:55.588"/>
 </test>
-<status status="PASS" starttime="20110213 17:58:24.502" endtime="20110213 17:58:29.986"/>
+<status status="FAIL" starttime="20110215 21:27:49.977" endtime="20110215 21:27:55.588"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0">Critical Tests</stat>
-<stat pass="3" fail="0">All Tests</stat>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
 </total>
 <tag>
-<stat info="" pass="1" fail="0">tag1</stat>
+<stat info="" pass="0" fail="1">tag1</stat>
 </tag>
 <suite>
-<stat pass="3" doc="A Testjybuiltinlibrary" fail="0">A Testjybuiltinlibrary</stat>
+<stat pass="2" doc="A Testjybuiltinlibrary" fail="1">A Testjybuiltinlibrary</stat>
 </suite>
 </statistics>
 <errors>

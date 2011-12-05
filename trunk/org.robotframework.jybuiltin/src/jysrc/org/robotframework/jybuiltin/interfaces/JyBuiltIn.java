@@ -1,6 +1,9 @@
+/*
+ * Copyright 2011 L. Carbonnaux
+ */
 package org.robotframework.jybuiltin.interfaces;
 
-public interface JyBuiltIn extends JyMisc, JyVariables {
+public interface JyBuiltIn extends JyMisc, JyVariables, JyVerify {
 
     /**
      * Executes the given keyword with the given arguments.

@@ -6,7 +6,7 @@
 from org.robotframework.jybuiltin.interfaces import JyBuiltIn
 from robot.libraries.BuiltIn import BuiltIn
 from java.util import HashMap
-from java.lang import Object
+from java.lang import Object, Exception
 from jarray import array
 
 class JyBuiltIn(JyBuiltIn):
@@ -117,3 +117,28 @@ class JyBuiltIn(JyBuiltIn):
         return BuiltIn().get_library_instance(name)
 
 ### end methods from class _Misc:
+
+### begin methods from class _Verify:
+
+    def fail(self, msg=None):
+        try:
+            BuiltIn().fail(msg)
+        except:
+            raise Exception(msg)
+        
+    def fatal_error(self, msg=None):
+        BuiltIn().fatal_error()
+        
+    def exit_for_loop(self):
+        BuiltIn().exit_for_loop()
+
+    def should_not_be_true(self, condition, msg=None):
+        BuiltIn().should_not_be_true(condition, msg)
+
+    def should_be_true(self, condition, msg=None):
+        BuiltIn().should_be_true(condition, msg)
+        
+    def should_be_equal(self, first, second, msg=None, values=True):
+        BuiltIn().should_be_equal(first, second, msg, values)
+
+### end methods from class _Verify:

@@ -1,3 +1,6 @@
+/*
+ * Copyright 2011 L. Carbonnaux
+ */
 package org.robotframework.jybuiltin;
 
 import org.python.core.Py;
@@ -39,7 +42,7 @@ public class JyBuiltInFactory {
         PythonInterpreter interpreter = new PythonInterpreter();
         // add the jar to the jython path
         String libfolder = getPath(this.getClass())+"/Lib";
-    	Py.getSystemState().path.insert(0, Py.newString(libfolder));
+    	Py.getSystemState().path.append(Py.newString(libfolder));
         
         interpreter.exec("from jyrobot.JyBuiltIn import JyBuiltIn");
         return interpreter.get("JyBuiltIn");

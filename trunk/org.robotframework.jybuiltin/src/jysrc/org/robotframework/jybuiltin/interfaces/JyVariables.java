@@ -1,3 +1,6 @@
+/*
+ * Copyright 2011 L. Carbonnaux
+ */
 package org.robotframework.jybuiltin.interfaces;
 
 import java.util.Map;
