@@ -2,7 +2,7 @@
 <feature
       id="org.lcx.robotframework.swtbot_feature"
       label="RobotFramework EclipseLibrary"
-      version="1.2.0.qualifier"
+      version="1.3.0.qualifier"
       provider-name="scrumvision.org"
       plugin="org.lcx.robotframework.swtbotplugin">
 
@@ -868,12 +868,6 @@ Public License instead of this License.  But first, please read
    <requires>
       <import plugin="org.eclipse.swtbot.eclipse.core" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.swtbot.eclipse.finder" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.eclipse.junit4.headless" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.eclipse.spy" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.eclipse.ui" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.go" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.junit4_x" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.swt.finder" version="2.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.swtbot" version="2.0.0" match="greaterOrEqual"/>
    </requires>
 
