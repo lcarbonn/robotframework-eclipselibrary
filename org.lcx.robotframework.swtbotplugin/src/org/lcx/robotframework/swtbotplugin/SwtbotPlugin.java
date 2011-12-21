@@ -61,7 +61,7 @@ public class SwtbotPlugin extends AbstractUIPlugin {
 		} catch (ClassNotFoundException e) {
 			// plugin is not started under robotframework, so not a problem
 			if(debug) System.out.println("SwtbotPlugin for RF on error");
-			e.printStackTrace();
+			if(debug) e.printStackTrace();
 		}
 		if(debug) System.out.println("SwtbotPlugin for RF started");
 		
