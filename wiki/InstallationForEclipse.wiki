@@ -42,6 +42,10 @@ Place files in 'lib' folder under your test suite
 == Running with Eclipse ==
  Test your installation
  * Download [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/A_TestEclipseLibrary_installation.html installation test case]
+ * You may have to change test parameters:
+||${eclipse_install} | file:/D:/eclipse/eclipse35 | # -install eclipse parameter to set eclipse installation directory	||	
+||${eclipse_data} | file:/d:/bootstrap35-robot/rcpbot/workspace-blank | # -data eclipse parameter to set workspace ||
+
  * Then launch in console : `eclipsebot.bat A_TestEclipseLibrary_installation.html`
  * or `run.py A_TestEclipseLibrary_installation.html`
 
