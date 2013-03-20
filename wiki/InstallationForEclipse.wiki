@@ -18,6 +18,7 @@ Robotframework Eclipse Library compatibility :
  * if not, SWTBot plugins should be installed from 
   * SWTBot  update site for Eclipse 3.5 : `http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site`
   * SWTBot update site for Eclipse 3.6 : `http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site`
+  * At least SWTBot for testing eclipse based plugins and applications (incubation) is needed
 
  
 == Eclipse library ==
