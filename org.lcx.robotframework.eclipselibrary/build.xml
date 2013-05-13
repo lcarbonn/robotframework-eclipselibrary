@@ -19,8 +19,8 @@
   <property name="gpl-licence" location="gpl-3.0.txt"/>
 	
   <property name="javalibcore"  value="lib/javalib-core-0.8.1-jar-with-dependencies.jar"/>
-  <property name="eclipselauncher35"  value="lib-ext/org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar"/>
-  <property name="eclipselauncher36"  value="lib-ext/org.eclipse.equinox.launcher_1.1.0.v20100507.jar"/>
+  <!--<property name="eclipselauncher35"  value="lib-ext/org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar"/>-->
+  <!--<property name="eclipselauncher36"  value="lib-ext/org.eclipse.equinox.launcher_1.1.0.v20100507.jar"/>-->
 
   <property name="swtbot-jars"  value="lib-ext/org.eclipse.swtbot-2.0.3.20110219_0655-4d933cf-dev-e36/eclipse/plugins"/>
   <property name="swtbot-plugin"  value="lib-ext/org.lcx.robotframework.swtbotplugin_1.2.0.201103090652.jar"/>
@@ -28,7 +28,7 @@
 
   <property name="jarfile"  value="eclipselibrary-${version}.jar"/>
   <property name="jarfilewithdep35"  value="eclipselibrary-${version}-with-dependencies-e35.jar"/>
-  <property name="jarfilewithdep36"  value="eclipselibrary-${version}-with-dependencies-e36.jar"/>
+  <property name="jarfilewithdep36"  value="eclipselibrary-${version}-with-dependencies.jar"/>
   <property name="jarfilewithdepswt"  value="eclipselibrary-${version}-with-dependencies-swt.jar"/>
   
   <property name="classpath"  location="C:/outils/jdk1.5.0_12/lib/tools.jar;${dist}/${jarfilewithdep35}"/>
@@ -83,51 +83,13 @@
     </jar>
   </target>
 
-  <target name="createjardep35" depends="compile"
-        description="generate jar with dependencies for Eclipse 3.5" >
-    <delete file="${dist}/${jarfilewithdep35}"/>
-    
-    <mkdir dir="${dist}/temp35"/>
-    
-    <unzip src="${eclipselauncher35}" dest="${dist}/temp35"/>
-    
-    <jar jarfile="${dist}/${jarfilewithdep35}"
-      basedir="."
-      includes="log4j.properties, conf.properties, gpl-3.0.txt">
-    
-        <fileset dir="${build}"/>
-        <fileset dir="${src}"/>
-        <fileset dir="${gensrc}"/>
-        <zipfileset includes="**/*" src="${javalibcore}"/>
-        <fileset dir="${dist}/temp35">
-            <exclude name="**/*.SF"/>
-            <exclude name="**/*.RSA"/>
-            <exclude name="**/*.MF"/>
-        </fileset>
-        
-        <manifest>
-            <!-- Who is building this jar? -->
-            <attribute name="Built-By" value="Laurent Carbonnaux"/>
-            <attribute name="Main-Class" value="EclipseLibrary"/>
-            <!-- Information about the program itself -->
-            <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
-            <attribute name="Implementation-Title" value="EclipseLibrary for Eclipse 3.5"/>
-            <attribute name="Implementation-Version" value="${version}"/>
-            <attribute name="Implementation-URL" value="${url}"/>
-        </manifest>
-    
-    </jar>
-    <delete dir="${dist}/temp35"/>
-
-  </target>
-
-  <target name="createjardep36" depends="compile"
-          description="generate jar with dependencies for Eclipse 3.6" >
+  <target name="createjardep" depends="compile"
+          description="generate jar with dependencies for Eclipse (from 3.5 and higher)" >
     <delete file="${dist}/${jarfilewithdep36}"/>
       
     <mkdir dir="${dist}/temp36"/>
 
-    <unzip src="${eclipselauncher36}" dest="${dist}/temp36"/>
+    <!--<unzip src="${eclipselauncher36}" dest="${dist}/temp36"/>-->
   	
     <jar jarfile="${dist}/${jarfilewithdep36}"
         basedir="."
@@ -204,7 +166,7 @@
 
   </target>
   	
-  <target name="dist" depends="createjar, createjardep35, createjardep36, createjardepswt"
+  <target name="dist" depends="createjar, createjardep, createjardepswt"
             description="generate the distributions">
   </target>
 
