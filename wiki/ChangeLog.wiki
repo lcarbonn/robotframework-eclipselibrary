@@ -1,4 +1,10 @@
 #labels Featured
+==Changes 0.18 version==
+=============================================
+Fixed Bugs:
+-------------------------------------------
+  * #Issue 6  Use Eclipse launcher from installation directory
+
 ==Changes 0.17 version==
 =============================================
 Fixed Bugs:
