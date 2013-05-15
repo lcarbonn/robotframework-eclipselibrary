@@ -1,5 +1,5 @@
 /*
- * Copyright 2010 L. Carbonnaux
+ * Copyright 2013 L. Carbonnaux
  */
 package org.lcx.robotframework.eclipse.keyword.launch;
 
@@ -33,10 +33,13 @@ public class StartBridgeKeywords {
 		try {
 			ClassLoader syscl = ClassLoader.getSystemClassLoader();
 			Class<?> service = syscl.loadClass("org.lcx.robotframework.swtbotplugin.service.SwtbotService");
-			Method m = service.getDeclaredMethod("getSWTBot");
-			Object swtbot = m.invoke(null);
+			Method mb = service.getDeclaredMethod("getSWTBot");
+			Object swtbot = mb.invoke(null);
+			Method mg = service.getDeclaredMethod("getSWTGefBot");
+			Object swtgefbot = mg.invoke(null);
 			SWTBotBridge.setSWTBOTCLASSLOADER(syscl);
 			SWTBotBridge.setSWTWORKBENCHBOT(swtbot);
+			SWTBotBridge.setSWTGEFBOT(swtgefbot);
 			
 							
 		} catch (Exception e) {

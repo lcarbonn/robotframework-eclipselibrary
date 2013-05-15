@@ -48,7 +48,7 @@ public class EclipseLaunchingTest {
 	public void testLoadEclipse() throws Exception {
 		long t1 = System.currentTimeMillis();
 
-		String pathToEclipse = "file:/D:/eclipse/eclipse-jee-helios-SR2-win32_OLD/eclipse";
+		String pathToEclipse = "file:/D:/eclipse/eclipse-jee-helios-SR2-win32/eclipse";
 		String pathToWorkspace = "file:/D:/bootstrap36-robot/worskspace_blank";
 		String[] args = new String[5];
 		args[0]="-install";

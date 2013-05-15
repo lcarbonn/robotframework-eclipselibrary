@@ -1,5 +1,5 @@
 /*
- * Copyright 2010 L. Carbonnaux
+ * Copyright 2013 L. Carbonnaux
  */
 package org.lcx.robotframework.eclipse.bridge;
 
@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.lcx.robotframework.eclipse.LibraryLogger;
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
 import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
+import org.lcx.robotframework.swtbot.eclipse.gef.finder.SWTGefBot;
 import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
 
 /**
@@ -29,8 +30,11 @@ public class SWTBotBridge {
 
 	private static ClassLoader SWTBOTCLASSLOADER = null;
 	private static Object SWTWORKBENCHBOT = null;
+	private static Object SWTGEFBOT = null;
 	
-	private static boolean ISBRIDGEINITIATED = false;
+	private static boolean ISSWTWKBOTINITIATED = false;
+	private static boolean ISSWTGEFBOTINITIATED = false;
+	
 	
 	private SWTBotBridge() {
 		super();
@@ -39,6 +43,7 @@ public class SWTBotBridge {
 	public static Class<?> loadClass(String className) throws NoSuchMethodException, Exception {
 		if(SWTBOTCLASSLOADER==null) {
 			SWTWorkbenchBot.getSWTWorkbenchBot();
+			SWTGefBot.getSWTWorkbenchBot();
 		}
 		Class<?> c = SWTBOTCLASSLOADER.loadClass(className);
 
@@ -296,7 +301,8 @@ public class SWTBotBridge {
 		}
 		SWTBOTCLASSLOADER = sWTBOTCLASSLOADER;
 		if(sWTBOTCLASSLOADER==null) {
-			ISBRIDGEINITIATED = false;
+			ISSWTGEFBOTINITIATED = false;
+			ISSWTWKBOTINITIATED = false;
 		}
 
 		if(log.isDebugEnabled()) {
@@ -306,7 +312,7 @@ public class SWTBotBridge {
 
 
 	public static boolean isISBRIDGEINITIATED() {
-		return ISBRIDGEINITIATED;
+		return ISSWTGEFBOTINITIATED && ISSWTWKBOTINITIATED;
 	}
 
 
@@ -321,11 +327,29 @@ public class SWTBotBridge {
 		}
 		
 		SWTWORKBENCHBOT = sWTWORKBENCHBOT;
-		ISBRIDGEINITIATED = (sWTWORKBENCHBOT!=null);
+		ISSWTWKBOTINITIATED = (sWTWORKBENCHBOT!=null);
 
 		if(log.isDebugEnabled()) {
 			log.debug("SWTWORKBENCHBOT after ="+SWTWORKBENCHBOT);
 		}
 	}
 	
+	public static Object getSWTGEFBOT() {
+		return SWTGEFBOT;
+	}
+
+
+	public static void setSWTGEFBOT(Object sWTGEFBOT) {
+		if(log.isDebugEnabled()) {
+			log.debug("SWTGEFBOT before="+SWTGEFBOT);
+		}
+		
+		SWTGEFBOT = sWTGEFBOT;
+		ISSWTGEFBOTINITIATED = (sWTGEFBOT!=null);
+
+		if(log.isDebugEnabled()) {
+			log.debug("SWTGEFBOT after ="+SWTGEFBOT);
+		}
+	}
+
 }

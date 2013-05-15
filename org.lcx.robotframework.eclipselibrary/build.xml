@@ -14,24 +14,24 @@
   <property name="doc"  value="C:/RobotFramework/TestEclipse/documentation"/>
   <property name="jython"  location="C:/RobotFramework/jython2.5.1/jython.bat"/>
   <property name="pythonpath"  location="C:/RobotFramework/Python26/Lib/site-packages"/>
-  <property name="libdoc"  location="${pythonpath}/libdoc.py"/>
+  <!--<property name="libdoc"  location="${pythonpath}/libdoc.py"/>-->
+  <property name="libdoc"  value="-m robot.libdoc"/>
   <property name="url" value="http://code.google.com/p/robotframework-eclipselibrary/"/>
   <property name="gpl-licence" location="gpl-3.0.txt"/>
 	
-  <property name="javalibcore"  value="lib/javalib-core-0.8.1-jar-with-dependencies.jar"/>
-  <!--<property name="eclipselauncher35"  value="lib-ext/org.eclipse.equinox.launcher_1.0.201.R35x_v20090715.jar"/>-->
-  <!--<property name="eclipselauncher36"  value="lib-ext/org.eclipse.equinox.launcher_1.1.0.v20100507.jar"/>-->
+  <property name="javalibcore"  value="lib/javalib-core-1.0.3.jar"/>
+  <property name="log4j"  value="lib/log4j-1.2.13.jar"/>
+  <property name="junit"  value="lib/junit-4.8.2.jar"/>
 
   <property name="swtbot-jars"  value="lib-ext/org.eclipse.swtbot-2.0.3.20110219_0655-4d933cf-dev-e36/eclipse/plugins"/>
   <property name="swtbot-plugin"  value="lib-ext/org.lcx.robotframework.swtbotplugin_1.2.0.201103090652.jar"/>
 	
 
   <property name="jarfile"  value="eclipselibrary-${version}.jar"/>
-  <property name="jarfilewithdep35"  value="eclipselibrary-${version}-with-dependencies-e35.jar"/>
-  <property name="jarfilewithdep36"  value="eclipselibrary-${version}-with-dependencies.jar"/>
+  <property name="jarfilewithdeprcp"  value="eclipselibrary-${version}-with-dependencies.jar"/>
   <property name="jarfilewithdepswt"  value="eclipselibrary-${version}-with-dependencies-swt.jar"/>
   
-  <property name="classpath"  location="C:/outils/jdk1.5.0_12/lib/tools.jar;${dist}/${jarfilewithdep35}"/>
+  <property name="classpath"  location="C:/outils/jdk1.6.0_23/lib/tools.jar;${javalibcore};${log4j};${junit};${dist}/${jarfilewithdeprcp}"/>
 
   <target name="init">
     <!-- Create the time stamp -->
@@ -48,9 +48,9 @@
         description="compile the source " >
     <!-- Compile the java code from ${src} into ${build} -->
     <javac srcdir="${src}:${gensrc}:${testsrc}" destdir="${build}"
-      source="1.5"
-      target="1.5"
-      classpath="${javalibcore}"
+      source="1.6"
+      target="1.6"
+      classpath="${javalibcore};${log4j};${junit}"
       includeAntRuntime="false"
       debug="on"
     />
@@ -85,13 +85,13 @@
 
   <target name="createjardep" depends="compile"
           description="generate jar with dependencies for Eclipse (from 3.5 and higher)" >
-    <delete file="${dist}/${jarfilewithdep36}"/>
+    <delete file="${dist}/${jarfilewithdeprcp}"/>
       
     <mkdir dir="${dist}/temp36"/>
 
     <!--<unzip src="${eclipselauncher36}" dest="${dist}/temp36"/>-->
   	
-    <jar jarfile="${dist}/${jarfilewithdep36}"
+    <jar jarfile="${dist}/${jarfilewithdeprcp}"
         basedir="."
         includes="log4j.properties, conf.properties, gpl-3.0.txt">
     
@@ -99,6 +99,7 @@
         <fileset dir="${src}"/>
         <fileset dir="${gensrc}"/>
         <zipfileset includes="**/*" src="${javalibcore}"/>
+		<zipfileset includes="**/*" src="${log4j}"/>
         <fileset dir="${dist}/temp36">
             <exclude name="**/*.SF"/>
             <exclude name="**/*.RSA"/>
@@ -111,9 +112,10 @@
             <attribute name="Main-Class" value="EclipseLibrary"/>
             <!-- Information about the program itself -->
             <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
-            <attribute name="Implementation-Title" value="EclipseLibrary for Eclipse 3.6"/>
+            <attribute name="Implementation-Title" value="EclipseLibrary for Eclipse 3.5 and higher"/>
             <attribute name="Implementation-Version" value="${version}"/>
             <attribute name="Implementation-URL" value="${url}"/>
+			<attribute name="Build-Jdk" value="1.6.0_23"/>
         </manifest>
       
     </jar>
@@ -143,6 +145,7 @@
         <fileset dir="${src}"/>
         <fileset dir="${gensrc}"/>
         <zipfileset includes="**/*" src="${javalibcore}"/>
+		<zipfileset includes="**/*" src="${log4j}"/>
         <fileset dir="${dist}/tempswt">
           <exclude name="**/*.SF"/>
           <exclude name="**/*.RSA"/>
@@ -159,8 +162,9 @@
           <attribute name="Implementation-Title" value="EclipseLibrary for java/SWT"/>
           <attribute name="Implementation-Version" value="${version}"/>
           <attribute name="Implementation-URL" value="${url}"/>
+          <attribute name="Build-Jdk" value="1.6.0_23"/>
         </manifest>
-    
+
     </jar>
     <delete dir="${dist}/tempswt"/>
 
@@ -177,15 +181,13 @@
 
     <!-- Gen the HTML keyword documentation -->
     <exec executable="${jython}" dir=".">
-      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdep35}"/>
-      <env key="PYTHONPATH" path="${pythonpath}"/>
-      <arg value="-Dpython.path=${pythonpath}"/>
+      <env key="JYTHONPATH" path="${pythonpath}"/>
+      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdeprcp}"/>
+	  <!--<arg value="-Dpython.path=${pythonpath}"/>-->
       <arg value="${libdoc}"/>
-      <!--<arg value="-f HTML"/>-->
-      <!--<arg value="-N EclipseLibrary-${version}.html"/>-->
-      <arg value="-o"/>
-      <arg path="${doc}/EclipseLibrary.html"/>
+	  <arg value="--version ${version}"/>
       <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
+      <arg path="${doc}/EclipseLibrary.html"/>
     </exec>
 
     </target>
@@ -197,15 +199,12 @@
 
     <!-- Gen the XML keyword file -->
     <exec executable="${jython}" dir=".">
-      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdep35}"/>
-      <env key="PYTHONPATH" path="${pythonpath}"/>
-      <arg value="-Dpython.path=${pythonpath}"/>
+      <env key="JYTHONPATH" path="${pythonpath}"/>
+      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdeprcp}"/>
       <arg value="${libdoc}"/>
-      <!--<arg value="-f XML"/>-->
-      <!--<arg value="-N EclipseLibrary-${version}.xml"/>-->
-      <arg value="-o"/>
-      <arg path="${doc}/EclipseLibrary.xml"/>
+	  <arg value="--version ${version}"/>
       <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
+      <arg path="${doc}/EclipseLibrary.xml"/>
     </exec>
 
     </target>
