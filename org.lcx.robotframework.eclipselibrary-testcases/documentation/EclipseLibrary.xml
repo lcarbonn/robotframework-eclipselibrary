@@ -1,5301 +1,6224 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec generated="20110927 22:42:41" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
-<version>0.17</version>
+<keywordspec generated="20130515 22:22:45" format="ROBOT" type="library" name="org.lcx.robotframework.eclipse.EclipseLibrary">
+<version>0.19</version>
 <scope>global</scope>
+<namedargs>no</namedargs>
 <doc>Documentation for test library `org.lcx.robotframework.eclipse.EclipseLibrary`.</doc>
 <kw name="Activate C Tab Item">
+<arguments>
+</arguments>
 <doc>Activate the cTabItem
 
 Example:
-| Activate CTabItem |</doc>
+| Activate CTabItem |
+</doc>
+</kw>
+<kw name="Activate Default Tool On Gef Editor">
 <arguments>
 </arguments>
+<doc>Activate default tool on Gef Editor
+
+Example:
+| Activate Default Tool on Gef Editor |
+</doc>
+</kw>
+<kw name="Activate Default Tool On Gef Viewer">
+<arguments>
+</arguments>
+<doc>Activate default tool on Gef Viewer
+
+Example:
+| Activate Default Tool on Gef Viewer |
+</doc>
 </kw>
 <kw name="Activate Perspective">
+<arguments>
+</arguments>
 <doc>Activate the perspective
 
 Example:
-| Activate Perspective |</doc>
-<arguments>
-</arguments>
+| Activate Perspective |
+</doc>
 </kw>
 <kw name="Activate Shell">
+<arguments>
+</arguments>
 <doc>Activate the shell
 
 Example:
-| Activate Shell |</doc>
-<arguments>
-</arguments>
+| Activate Shell |
+</doc>
 </kw>
 <kw name="Activate Tab Item">
+<arguments>
+</arguments>
 <doc>Activate the tabItem
 
 Example:
-| Activate TabItem |</doc>
+| Activate TabItem |
+</doc>
+</kw>
+<kw name="Activate Tool On Gef Editor">
 <arguments>
+<arg>*params</arg>
 </arguments>
+<doc>Activate tool with specified label and index on Gef Editor
+
+Example:
+| Activate Tool on Gef Editor | label |
+| Activate Tool on Gef Editor | label | index |
+</doc>
+</kw>
+<kw name="Activate Tool On Gef Viewer">
+<arguments>
+<arg>*params</arg>
+</arguments>
+<doc>Activate tool with specified label and index on Gef Viewer
+
+Example:
+| Activate Tool on Gef Viewer | label |
+| Activate Tool on Gef Viewer | label | index |
+</doc>
 </kw>
 <kw name="Auto Complete Proposal For Eclipse Editor">
-<doc>Auto completes the given proposal
-
-insertText the text to be inserted before activating the auto-complete.	 proposalText the auto-completion proposal to select from the list.Example:
-| Auto Complete Proposal For EclipseEditor | insertText | proposalText |</doc>
 <arguments>
 <arg>insertText</arg>
 <arg>proposalText</arg>
 </arguments>
+<doc>Auto completes the given proposal
+
+	 insertText the text to be inserted before activating the auto-complete.	 proposalText the auto-completion proposal to select from the list.Example:
+| Auto Complete Proposal For EclipseEditor | insertText | proposalText |
+</doc>
 </kw>
 <kw name="Capture Screenshot">
-<doc>Captures a screenshot to the given file name.
-
-The file name will be prefixed with timestamp Example:
-| Capture Screenshot | screenshot.jpg |
-will produced 20100131_screenshot.jpg for instance</doc>
 <arguments>
 <arg>fileName</arg>
 </arguments>
+<doc>Captures a screenshot to the given file name.
+
+ The file name will be prefixed with timestamp 
+Example:
+| Capture Screenshot | screenshot.jpg |
+ will produced 20100131_screenshot.jpg for instance
+</doc>
 </kw>
 <kw name="Check Table Item">
+<arguments>
+</arguments>
 <doc>Check the tableItem
 
 Example:
-| Check TableItem |</doc>
-<arguments>
-</arguments>
+| Check TableItem |
+</doc>
 </kw>
 <kw name="Check Tree Item">
+<arguments>
+</arguments>
 <doc>Check the treeItem
 
 Example:
-| Check TreeItem |</doc>
+| Check TreeItem |
+</doc>
+</kw>
+<kw name="Clear Gef Editor">
 <arguments>
 </arguments>
+<doc>Clear the cache of edit parts on Gef Editor
+
+Example:
+| Clear Gef Editor |
+</doc>
+</kw>
+<kw name="Clear Gef Viewer">
+<arguments>
+</arguments>
+<doc>Clear the cache of edit parts on Gef Viewer
+
+Example:
+| Clear Gef Viewer |
+</doc>
 </kw>
 <kw name="Click Button">
+<arguments>
+</arguments>
 <doc>Click on the button
 
 Example:
-| Click Button |</doc>
-<arguments>
-</arguments>
+| Click Button |
+</doc>
 </kw>
 <kw name="Click Check Box">
+<arguments>
+</arguments>
 <doc>Click on the checkbox, (does not change the state, better use Select un Deselect)
 
 Example:
-| Click CheckBox |</doc>
+| Click CheckBox |
+</doc>
+</kw>
+<kw name="Click Context Menu On Gef Editor">
 <arguments>
+<arg>label</arg>
 </arguments>
+<doc>Click on context menu on Gef Editor
+
+Example:
+| Click Context Menu On Gef Editor | label |
+</doc>
+</kw>
+<kw name="Click Context Menu On Gef Viewer">
+<arguments>
+<arg>label</arg>
+</arguments>
+<doc>Click on context menu on Gef Viewer
+
+Example:
+| Click Context Menu On Gef Viewer | label |
+</doc>
 </kw>
 <kw name="Click Link">
+<arguments>
+</arguments>
 <doc>Click on the link
 
 Example:
-| Click Link |</doc>
-<arguments>
-</arguments>
+| Click Link |
+</doc>
 </kw>
 <kw name="Click Menu">
+<arguments>
+</arguments>
 <doc>Click on the menu
 
 Example:
-| Click Menu |</doc>
-<arguments>
-</arguments>
+| Click Menu |
+</doc>
 </kw>
-<kw name="Click On Link With Hyper Link">
-<doc>Click on the link with given text of the hyperlink in case there are more than one hyperlinks
+<kw name="Click On Gef Editor">
+<arguments>
+<arg>xPosition</arg>
+<arg>yPosition</arg>
+</arguments>
+<doc>Click on the editor at the specified location on Gef Editor
 
 Example:
-| Click On Link With HyperLink |</doc>
+| Click On Gef Editor | xPosition | yPosition |
+</doc>
+</kw>
+<kw name="Click On Gef Viewer">
+<arguments>
+<arg>xPosition</arg>
+<arg>yPosition</arg>
+</arguments>
+<doc>Click on the viewer at the specified location on Gef Viewer
+
+Example:
+| Click On Gef Viewer | xPosition | yPosition |
+</doc>
+</kw>
+<kw name="Click On Link With Hyper Link">
 <arguments>
 <arg>hyperLinkText</arg>
 </arguments>
+<doc>Click on the link with given text of the hyperlink in case there are more than one hyperlinks
+
+Example:
+| Click On Link With HyperLink |
+</doc>
 </kw>
 <kw name="Click Radio">
+<arguments>
+</arguments>
 <doc>Click on the radio
 
 Example:
-| Click Radio |</doc>
-<arguments>
-</arguments>
+| Click Radio |
+</doc>
 </kw>
 <kw name="Click Table Cell">
-<doc>Click on the given cell of table
-
-row the row number, 0 based.	 column the column number, 0 based.Example:
-| Click Table Cell |</doc>
 <arguments>
 <arg>row</arg>
 <arg>column</arg>
 </arguments>
+<doc>Click on the given cell of table
+
+	 row the row number, 0 based.	 column the column number, 0 based.Example:
+| Click Table Cell |
+</doc>
 </kw>
 <kw name="Click Table Column">
+<arguments>
+</arguments>
 <doc>Click on the tableColumn
 
 Example:
-| Click TableColumn |</doc>
-<arguments>
-</arguments>
+| Click TableColumn |
+</doc>
 </kw>
 <kw name="Click Table Item">
+<arguments>
+</arguments>
 <doc>Click on the tableItem
 
 Example:
-| Click TableItem |</doc>
-<arguments>
-</arguments>
+| Click TableItem |
+</doc>
 </kw>
 <kw name="Click Toggle Button">
+<arguments>
+</arguments>
 <doc>Click on the toggleButton
 
 Example:
-| Click ToggleButton |</doc>
-<arguments>
-</arguments>
+| Click ToggleButton |
+</doc>
 </kw>
 <kw name="Click Toolbar Button">
+<arguments>
+</arguments>
 <doc>Click on the toolbarButton
 
 Example:
-| Click ToolbarButton |</doc>
-<arguments>
-</arguments>
+| Click ToolbarButton |
+</doc>
 </kw>
 <kw name="Click Toolbar Drop Down Button">
+<arguments>
+</arguments>
 <doc>Click on the toolbarDropDownButton
 
 Example:
-| Click ToolbarDropDownButton |</doc>
-<arguments>
-</arguments>
+| Click ToolbarDropDownButton |
+</doc>
 </kw>
 <kw name="Click Toolbar Radio Button">
+<arguments>
+</arguments>
 <doc>Click on the toolbarRadioButton
 
 Example:
-| Click ToolbarRadioButton |</doc>
-<arguments>
-</arguments>
+| Click ToolbarRadioButton |
+</doc>
 </kw>
 <kw name="Click Toolbar Toggle Button">
+<arguments>
+</arguments>
 <doc>Click on the toolbarToggleButton
 
 Example:
-| Click ToolbarToggleButton |</doc>
-<arguments>
-</arguments>
+| Click ToolbarToggleButton |
+</doc>
 </kw>
 <kw name="Click Tree Item">
+<arguments>
+</arguments>
 <doc>Click on the tableItem
 
 Example:
-| Click TreeItem |</doc>
-<arguments>
-</arguments>
+| Click TreeItem |
+</doc>
 </kw>
 <kw name="Click View Menu">
+<arguments>
+</arguments>
 <doc>Click the viewMenu
 
 Example:
-| click ViewMenu |</doc>
-<arguments>
-</arguments>
+| click ViewMenu |
+</doc>
 </kw>
 <kw name="Close All Editors">
+<arguments>
+</arguments>
 <doc>Close all editors
 
 Example:
-| Close All Editors |</doc>
-<arguments>
-</arguments>
+| Close All Editors |
+</doc>
 </kw>
 <kw name="Close C Tab Item">
+<arguments>
+</arguments>
 <doc>Close the cTabItem
 
 Example:
-| Close CTabItem |</doc>
-<arguments>
-</arguments>
+| Close CTabItem |
+</doc>
 </kw>
 <kw name="Close Eclipse Editor">
+<arguments>
+</arguments>
 <doc>Close the eclipseEditor
 
 Example:
-| Close EclipseEditor |</doc>
-<arguments>
-</arguments>
+| Close EclipseEditor |
+</doc>
 </kw>
 <kw name="Close Editor">
+<arguments>
+</arguments>
 <doc>Close the editor
 
 Example:
-| Close Editor |</doc>
-<arguments>
-</arguments>
+| Close Editor |
+</doc>
 </kw>
 <kw name="Close Shell">
+<arguments>
+</arguments>
 <doc>Close the shell
 
 Example:
-| Close Shell |</doc>
-<arguments>
-</arguments>
+| Close Shell |
+</doc>
 </kw>
 <kw name="Close View">
+<arguments>
+</arguments>
 <doc>Close the view
 
 Example:
-| Close View |</doc>
-<arguments>
-</arguments>
+| Close View |
+</doc>
 </kw>
 <kw name="Collapse Tree Item">
+<arguments>
+</arguments>
 <doc>Collapse the treeItem
 
 Example:
-| Get TreeItem Cell |</doc>
-<arguments>
-</arguments>
+| Get TreeItem Cell |
+</doc>
 </kw>
 <kw name="Collapse Tree Item Node">
+<arguments>
+<arg>text</arg>
+</arguments>
 <doc>Collapse the treeItem node with the given text
 
 Example:
-| Collapse TreeItem Node |</doc>
+| Collapse TreeItem Node |
+</doc>
+</kw>
+<kw name="Collapse Tree Node">
 <arguments>
 <arg>text</arg>
 </arguments>
-</kw>
-<kw name="Collapse Tree Node">
 <doc>Collapse the tree node with the given text
 
 Example:
-| Collapse Tree Node |</doc>
-<arguments>
-<arg>text</arg>
-</arguments>
+| Collapse Tree Node |
+</doc>
 </kw>
 <kw name="Count Eclipse Editor Line">
+<arguments>
+</arguments>
 <doc>Count the lines of the eclipse editor
 
 Example:
-| Count EclipseEditor Line |</doc>
-<arguments>
-</arguments>
+| Count EclipseEditor Line | 
+</doc>
 </kw>
 <kw name="Count Eclipse Editor Quickfix List Item">
+<arguments>
+</arguments>
 <doc>Count the quickfix item of the eclipse editor
 
 Example:
-| Count EclipseEditor Quickfix Item |</doc>
-<arguments>
-</arguments>
+| Count EclipseEditor Quickfix Item | 
+</doc>
 </kw>
 <kw name="Count Items In C Combo">
-<doc>Get the number of items in the ccombo
-
-Example:
-| Count Items In CCombo |</doc>
 <arguments>
 </arguments>
+<doc>Get the number of items in the ccombo 
+
+Example:
+| Count Items In CCombo |
+</doc>
 </kw>
 <kw name="Count Items In Combo">
-<doc>Get the number of items in the combo
-
-Example:
-| Count Items In Combo |</doc>
 <arguments>
 </arguments>
+<doc>Get the number of items in the combo 
+
+Example:
+| Count Items In Combo |
+</doc>
 </kw>
 <kw name="Count List Items">
+<arguments>
+</arguments>
 <doc>Count the items in the list
 
 Example:
-| Count List Items |</doc>
-<arguments>
-</arguments>
+| Count List Items |
+</doc>
 </kw>
 <kw name="Count List Selected Items">
+<arguments>
+</arguments>
 <doc>Get the count of selected items of the list
 
 Example:
-| Count List Selected Items |</doc>
-<arguments>
-</arguments>
+| Count List Selected Items |
+</doc>
 </kw>
 <kw name="Count Styled Text Lines">
+<arguments>
+</arguments>
 <doc>Count the styledText lines
 
 Example:
-| Count StyledText Lines |</doc>
-<arguments>
-</arguments>
+| Count StyledText Lines |
+</doc>
 </kw>
 <kw name="Count Table Columns">
+<arguments>
+</arguments>
 <doc>Count the number of columns in the table
 
 Example:
-| Count Table Columns |</doc>
-<arguments>
-</arguments>
+| Count Table Columns |
+</doc>
 </kw>
 <kw name="Count Table Rows">
+<arguments>
+</arguments>
 <doc>Count the number of rows in the table
 
 Example:
-| Count Table Rows |</doc>
-<arguments>
-</arguments>
+| Count Table Rows |
+</doc>
 </kw>
 <kw name="Count Table Selected Items">
+<arguments>
+</arguments>
 <doc>Get the count of selected items of the table
 
 Example:
-| Count Table Selected Items |</doc>
-<arguments>
-</arguments>
+| Count Table Selected Items |
+</doc>
 </kw>
 <kw name="Count Tree Columns">
+<arguments>
+</arguments>
 <doc>Count the number of columns in the tree
 
 Example:
-| Count Tree Columns |</doc>
-<arguments>
-</arguments>
+| Count Tree Columns |
+</doc>
 </kw>
 <kw name="Count Tree Item Rows">
+<arguments>
+</arguments>
 <doc>Count the treeItem rows (means children)
 
 Example:
-| Count TreeItem Rows |</doc>
-<arguments>
-</arguments>
+| Count TreeItem Rows | 
+</doc>
 </kw>
 <kw name="Count Tree Rows">
+<arguments>
+</arguments>
 <doc>Count the number of rows in the tree
 
 Example:
-| Count Tree Rows |</doc>
-<arguments>
-</arguments>
+| Count Tree Rows |
+</doc>
 </kw>
 <kw name="Count Tree Selected Items">
+<arguments>
+</arguments>
 <doc>Get the count of selected items of the tree
 
 Example:
-| Count Tree Selected Items |</doc>
-<arguments>
-</arguments>
+| Count Tree Selected Items |
+</doc>
 </kw>
 <kw name="Count Tree Visible Rows">
+<arguments>
+</arguments>
 <doc>Count the tree visible rows
 
 Example:
-| Count Tree Visible Rows |</doc>
-<arguments>
-</arguments>
+| Count Tree Visible Rows |
+</doc>
 </kw>
 <kw name="Deselect Check Box">
+<arguments>
+</arguments>
 <doc>Deselect the checkbox
 
 Example:
-| Deselect CheckBox |</doc>
-<arguments>
-</arguments>
+| Deselect CheckBox |
+</doc>
 </kw>
 <kw name="Deselect Toolbar Radio Button">
+<arguments>
+</arguments>
 <doc>Deselect the toolbarRadioButton
 
 Example:
-| Deselect ToolbarRadioButton |</doc>
-<arguments>
-</arguments>
+| Deselect ToolbarRadioButton |
+</doc>
 </kw>
 <kw name="Deselect Toolbar Toggle Button">
+<arguments>
+</arguments>
 <doc>Deselect the toolbarToggleButton
 
 Example:
-| Deselect ToolbarToggleButton |</doc>
+| Deselect ToolbarToggleButton |
+</doc>
+</kw>
+<kw name="Direct Edit Type On Gef Editor">
 <arguments>
+<arg>text</arg>
 </arguments>
+<doc>Type the given text into the graphical editor, presuming that it is already in 'direct edit' mode on Gef Editor
+
+Example:
+| Direct Edit Type On Gef Editor | text |
+</doc>
+</kw>
+<kw name="Direct Edit Type On Gef Viewer">
+<arguments>
+<arg>text</arg>
+</arguments>
+<doc>Type the given text into the graphical viewer, presuming that it is already in 'direct edit' mode on Gef Viewer
+
+Example:
+| Direct Edit Type On Gef Viewer | text |
+</doc>
+</kw>
+<kw name="Double Click On Gef Editor">
+<arguments>
+<arg>label</arg>
+</arguments>
+<doc>Double click on the edit part which owns the specified label at the top left hand corner of its bounds on Gef Editor
+
+Example:
+| Double Click On Gef Editor | label |
+</doc>
+</kw>
+<kw name="Double Click On Gef Viewer">
+<arguments>
+<arg>xPosition</arg>
+<arg>yPosition</arg>
+</arguments>
+<doc>Double click on the viewer at the specified location on Gef Viewer
+
+Example:
+| Double click On Gef Viewer | xPosition | yPosition |
+</doc>
 </kw>
 <kw name="Double Click Table Cell">
-<doc>Double Click on the given cell of table
-
-row the row number, 0 based.	 column the column number, 0 based.Example:
-| Double Click Table Cell |</doc>
 <arguments>
 <arg>row</arg>
 <arg>column</arg>
 </arguments>
+<doc>Double Click on the given cell of table
+
+	 row the row number, 0 based.	 column the column number, 0 based.Example:
+| Double Click Table Cell |
+</doc>
 </kw>
 <kw name="Double Click Tree Item">
+<arguments>
+</arguments>
 <doc>Double Click on the treeItem
 
 Example:
-| Double Click TreeItem |</doc>
+| Double Click TreeItem |
+</doc>
+</kw>
+<kw name="Drag Gef Editor">
 <arguments>
+<arg>fromXPosition</arg>
+<arg>fromYPosition</arg>
+<arg>xPosition</arg>
+<arg>yPosition</arg>
 </arguments>
+<doc>Drag and drop from the specified to the specified location on Gef Editor
+
+Example:
+| Drag Gef Editor | fromXPosition | fromYPosition | toXPosition | toYPosition |
+</doc>
+</kw>
+<kw name="Drag Gef Viewer">
+<arguments>
+<arg>fromXPosition</arg>
+<arg>fromYPosition</arg>
+<arg>xPosition</arg>
+<arg>yPosition</arg>
+</arguments>
+<doc>Drag and drop from the specified to the specified location on Gef Viewer
+
+Example:
+| Drag Gef Viewer | fromXPosition | fromYPosition | toXPosition | toYPosition |
+</doc>
 </kw>
 <kw name="Eclipse Editor Has Bullet On Current Line">
+<arguments>
+</arguments>
 <doc>Does the eclipse editor has bullet on the current line
 
 Example:
-| Eclipse Editor Has Bullet On Current Line |</doc>
-<arguments>
-</arguments>
+| Eclipse Editor Has Bullet On Current Line |
+</doc>
 </kw>
 <kw name="Eclipse Editor Has Bullet On Given Line">
-<doc>Does the eclipse editor has bullet on the given line
-
-Example:
-| Eclipse Editor Has Bullet On Given Line | 0 |</doc>
 <arguments>
 <arg>line</arg>
 </arguments>
+<doc>Does the eclipse editor has bullet on the given line
+
+Example:
+| Eclipse Editor Has Bullet On Given Line | 0 | 
+</doc>
 </kw>
 <kw name="Expand Tree Item">
+<arguments>
+</arguments>
 <doc>Expand the treeItem
 
 Example:
-| Expand TreeItem |</doc>
-<arguments>
-</arguments>
+| Expand TreeItem |
+</doc>
 </kw>
 <kw name="Expand Tree Item Nodes">
-<doc>Expands the given treeItem nodes
-
-Example:
-| Expand TreeItem Nodes | text1 | text2 |</doc>
 <arguments>
 <arg>*text</arg>
 </arguments>
-</kw>
-<kw name="Expand Tree Node">
-<doc>Expands the given tree node recursivly
+<doc>Expands the given treeItem nodes
 
 Example:
-| Expand Tree Node | text1 | true |</doc>
+| Expand TreeItem Nodes | text1 | text2 |
+</doc>
+</kw>
+<kw name="Expand Tree Node">
 <arguments>
 <arg>text</arg>
 <arg>recursive</arg>
 </arguments>
-</kw>
-<kw name="Expand Tree Nodes">
-<doc>Expands the given tree nodes
+<doc>Expands the given tree node recursivly
 
 Example:
-| Expand Tree Nodes | text1 | text2 |</doc>
+| Expand Tree Node | text1 | true |
+</doc>
+</kw>
+<kw name="Expand Tree Nodes">
 <arguments>
 <arg>*text</arg>
 </arguments>
+<doc>Expands the given tree nodes
+
+Example:
+| Expand Tree Nodes | text1 | text2 |
+</doc>
 </kw>
 <kw name="Find Active Eclipse Editor">
+<arguments>
+</arguments>
 <doc>Find the active eclipse editor
 
 Example:
-| Find Active Eclipse Editor |</doc>
-<arguments>
-</arguments>
+| Find Active Eclipse Editor |
+</doc>
 </kw>
 <kw name="Find Active Editor">
+<arguments>
+</arguments>
 <doc>Find the active editor
 
 Example:
-| Find Active Editor |</doc>
-<arguments>
-</arguments>
+| Find Active Editor |
+</doc>
 </kw>
 <kw name="Find Active Perspective">
+<arguments>
+</arguments>
 <doc>Find the active perspective
 
 Example:
-| Find Active Perspective |</doc>
-<arguments>
-</arguments>
+| Find Active Perspective |
+</doc>
 </kw>
 <kw name="Find Active View">
+<arguments>
+</arguments>
 <doc>Find the active view
 
 Example:
-| Find Active View |</doc>
-<arguments>
-</arguments>
+| Find Active View |
+</doc>
 </kw>
 <kw name="Find Button">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the button with the given optionals mnemonic and index
 
 Example:
 | Find Button | mnemonicText | index |
 | Find Button | mnemonicText |  |
 | Find Button | index |  |
-| Find Button | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Button | |  |
+</doc>
 </kw>
 <kw name="Find Button In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the button in the given group with optionals mnemonic and index
 
 Example:
 | Find Button In Group | group | mnemonicText | index |
 | Find Button In Group | group | mnemonicText | |
 | Find Button In Group | group | index | |
-| Find Button In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find Button In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Button With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the button with the given value and optionals key and index
 
 Examples:
 | Find Button With Id | value | key | index |
 | Find Button With Id | value | index | |
 | Find Button With Id | value | key | |
-| Find Button With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Button With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Button With Label">
+<arguments>
+<arg>label</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the button with the given label and optional index
 
 Examples:
 | Find Button With Label | label | index |
-| Find Button With Label | label | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>*index</arg>
-</arguments>
+| Find Button With Label | label | |
+</doc>
 </kw>
 <kw name="Find Button With Label In Group">
+<arguments>
+<arg>label</arg>
+<arg>group</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the button with the given label and group and optional index
 
 Examples:
 | Find Button With Label In Group | label | group | index |
-| Find Button With Label In Group | label | group | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>group</arg>
-<arg>*index</arg>
-</arguments>
+| Find Button With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Button With Tooltip">
+<arguments>
+<arg>tooltip</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the button with the given tooltip and optional index
 
 Examples:
-| Find Button With Tooltip | tooltip | index |</doc>
-<arguments>
-<arg>tooltip</arg>
-<arg>*index</arg>
-</arguments>
+| Find Button With Tooltip | tooltip | index |
+</doc>
 </kw>
 <kw name="Find Button With Tooltip In Group">
-<doc>Find the button with the given tooltip and group and optional index
-
-Examples:
-| Find Button With Tooltip In Group | tooltip | group | index |
-| Find Button With Tooltip In Group | tooltip | group | |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the button with the given tooltip and group and optional index
+
+Examples:
+| Find Button With Tooltip In Group | tooltip | group | index | 
+| Find Button With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find C Combo">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the ccombo with the given optionals mnemonic and index
 
 Example:
 | Find CCombo | mnemonicText | index |
 | Find CCombo | mnemonicText |  |
 | Find CCombo | index |  |
-| Find CCombo | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find CCombo | |  |
+</doc>
 </kw>
 <kw name="Find C Combo In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the ccombo in the given group with optionals mnemonic and index
 
 Example:
 | Find CCombo In Group | group | mnemonicText | index |
 | Find CCombo In Group | group | mnemonicText | |
 | Find CCombo In Group | group | index | |
-| Find CCombo In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find CCombo In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find C Combo With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the ccombo with the given value and optionals key and index
 
 Examples:
 | Find CCombo With Id | value | key | index |
 | Find CCombo With Id | value | index | |
 | Find CCombo With Id | value | key | |
-| Find CCombo With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find CCombo With Id | value | | |
+</doc>
 </kw>
 <kw name="Find C Combo With Label">
-<doc>Find the ccombo with the given label and optional index
-
-Examples:
-| Find CCombo With Label | label | index |
-| Find CCombo With Label | label | |</doc>
 <arguments>
 <arg>label</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find C Combo With Label In Group">
-<doc>Find the ccombo with the given label and group and optional index
+<doc>Find the ccombo with the given label and optional index
 
 Examples:
-| Find CCombo With Label In Group | label | group | index |
-| Find CCombo With Label In Group | label | group | |</doc>
+| Find CCombo With Label | label | index |
+| Find CCombo With Label | label | |
+</doc>
+</kw>
+<kw name="Find C Combo With Label In Group">
 <arguments>
 <arg>label</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the ccombo with the given label and group and optional index
+
+Examples:
+| Find CCombo With Label In Group | label | group | index |
+| Find CCombo With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find C Label">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the clabel with the given optionals mnemonic and index
 
 Example:
 | Find CLabel | mnemonicText | index |
 | Find CLabel | mnemonicText |  |
 | Find CLabel | index |  |
-| Find CLabel | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find CLabel | |  |
+</doc>
 </kw>
 <kw name="Find C Label In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the clabel in the given group with optionals mnemonic and index
 
 Example:
 | Find CLabel In Group | group | mnemonicText | index |
 | Find CLabel In Group | group | mnemonicText | |
 | Find CLabel In Group | group | index | |
-| Find CLabel In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find CLabel In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find C Label With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the clabel with the given value and optionals key and index
 
 Examples:
 | Find CLabel With Id | value | key | index |
 | Find CLabel With Id | value | index | |
 | Find CLabel With Id | value | key | |
-| Find CLabel With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find CLabel With Id | value | | |
+</doc>
 </kw>
 <kw name="Find C Tab Item">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the cTabItem with the given optionals mnemonic and index
 
 Example:
 | Find CTabItem | mnemonicText | index |
 | Find CTabItem | mnemonicText |  |
 | Find CTabItem | index |  |
-| Find CTabItem | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find CTabItem | |  |
+</doc>
 </kw>
 <kw name="Find C Tab Item In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the cTabItem in the given group with optionals mnemonic and index
 
 Example:
 | Find CTabItem In Group | group | mnemonicText | index |
 | Find CTabItem In Group | group | mnemonicText | |
 | Find CTabItem In Group | group | index | |
-| Find CTabItem In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find CTabItem In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find C Tab Item With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the cTabItem with the given value and optionals key and index
 
 Examples:
 | Find CTabItem With Id | value | key | index |
 | Find CTabItem With Id | value | index | |
 | Find CTabItem With Id | value | key | |
-| Find CTabItem With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find CTabItem With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Check Box">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the checkbox with the given optionals mnemonic and index
 
 Example:
 | Find CheckBox | mnemonicText | index |
 | Find CheckBox | mnemonicText |  |
 | Find CheckBox | index |  |
-| Find CheckBox | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find CheckBox | |  |
+</doc>
 </kw>
 <kw name="Find Check Box In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the checkbox in the given group with optionals mnemonic and index
 
 Example:
 | Find CheckBox In Group | group | mnemonicText | index |
 | Find CheckBox In Group | group | mnemonicText | |
 | Find CheckBox In Group | group | index | |
-| Find CheckBox In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find CheckBox In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Check Box With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the checkbox with the given value and optionals key and index
 
 Examples:
 | Find CheckBox With Id | value | key | index |
 | Find CheckBox With Id | value | index | |
 | Find CheckBox With Id | value | key | |
-| Find CheckBox With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find CheckBox With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Check Box With Label">
+<arguments>
+<arg>label</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the checkbox with the given label and optional index
 
 Examples:
 | Find CheckBox With Label | label | index |
-| Find CheckBox With Label | label | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>*index</arg>
-</arguments>
+| Find CheckBox With Label | label | |
+</doc>
 </kw>
 <kw name="Find Check Box With Label In Group">
+<arguments>
+<arg>label</arg>
+<arg>group</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the checkbox with the given label and group and optional index
 
 Examples:
 | Find CheckBox With Label In Group | label | group | index |
-| Find CheckBox With Label In Group | label | group | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>group</arg>
-<arg>*index</arg>
-</arguments>
+| Find CheckBox With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Check Box With Tooltip">
+<arguments>
+<arg>tooltip</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the checkbox with the given tooltip and optional index
 
 Examples:
-| Find CheckBox With Tooltip | tooltip | index |</doc>
-<arguments>
-<arg>tooltip</arg>
-<arg>*index</arg>
-</arguments>
+| Find CheckBox With Tooltip | tooltip | index |
+</doc>
 </kw>
 <kw name="Find Check Box With Tooltip In Group">
-<doc>Find the checkbox with the given tooltip and group and optional index
-
-Examples:
-| Find CheckBox With Tooltip In Group | tooltip | group | index |
-| Find CheckBox With Tooltip In Group | tooltip | group | |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the checkbox with the given tooltip and group and optional index
+
+Examples:
+| Find CheckBox With Tooltip In Group | tooltip | group | index | 
+| Find CheckBox With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Combo">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the combo with the given optionals mnemonic and index
 
 Example:
 | Find Combo | mnemonicText | index |
 | Find Combo | mnemonicText |  |
 | Find Combo | index |  |
-| Find Combo | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Combo | |  |
+</doc>
 </kw>
 <kw name="Find Combo In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the combo in the given group with optionals mnemonic and index
 
 Example:
 | Find Combo In Group | group | mnemonicText | index |
 | Find Combo In Group | group | mnemonicText | |
 | Find Combo In Group | group | index | |
-| Find Combo In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find Combo In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Combo With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the combo with the given value and optionals key and index
 
 Examples:
 | Find Combo With Id | value | key | index |
 | Find Combo With Id | value | index | |
 | Find Combo With Id | value | key | |
-| Find Combo With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Combo With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Combo With Label">
+<arguments>
+<arg>label</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the combo with the given label and optional index
 
 Examples:
 | Find Combo With Label | label | index |
-| Find Combo With Label | label | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>*index</arg>
-</arguments>
+| Find Combo With Label | label | |
+</doc>
 </kw>
 <kw name="Find Combo With Label In Group">
+<arguments>
+<arg>label</arg>
+<arg>group</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the combo with the given label and group and optional index
 
 Examples:
 | Find Combo With Label In Group | label | group | index |
-| Find Combo With Label In Group | label | group | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>group</arg>
-<arg>*index</arg>
-</arguments>
+| Find Combo With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Context Menu">
-<doc>Find the context menu with the given text
-
-Example:
-| Find Context Menu | text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Find the context menu with the given text
+
+Example:
+| Find Context Menu | text | 
+</doc>
 </kw>
 <kw name="Find Date Time">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the dateTime with the given optionals index
 
 Example:
 | Find DateTime | index |
-| Find DateTime | |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find DateTime | |
+</doc>
 </kw>
 <kw name="Find Date Time In Group">
-<doc>Find the dateTime in the given group with optionals index
-
-Example:
-| Find DateTime In Group | group | index |
-| Find DateTime In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
 </arguments>
+<doc>Find the dateTime in the given group with optionals index
+
+Example:
+| Find DateTime In Group | group | index |
+| Find DateTime In Group | group | |
+</doc>
 </kw>
 <kw name="Find Date Time With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the dateTime with the given value and optionals key and index
 
 Examples:
 | Find DateTime With Id | value | key | index |
 | Find DateTime With Id | value | index | |
 | Find DateTime With Id | value | key | |
-| Find DateTime With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find DateTime With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Date Time With Label">
-<doc>Find the dateTime with the given label and optional index
-
-Examples:
-| Find DateTime With Label | label | index |
-| Find DateTime With Label | label | |</doc>
 <arguments>
 <arg>label</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find Date Time With Label In Group">
-<doc>Find the dateTime with the given label and group and optional index
+<doc>Find the dateTime with the given label and optional index
 
 Examples:
-| Find DateTime With Label In Group | label | group | index |
-| Find DateTime With Label In Group | label | group | |</doc>
+| Find DateTime With Label | label | index |
+| Find DateTime With Label | label | |
+</doc>
+</kw>
+<kw name="Find Date Time With Label In Group">
 <arguments>
 <arg>label</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the dateTime with the given label and group and optional index
+
+Examples:
+| Find DateTime With Label In Group | label | group | index |
+| Find DateTime With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Default Perspective">
+<arguments>
+</arguments>
 <doc>Find the default perspective
 
 Example:
-| Find Default Perspective |</doc>
-<arguments>
-</arguments>
+| Find Default Perspective |
+</doc>
 </kw>
 <kw name="Find Eclipse Editor By Id">
+<arguments>
+<arg>id</arg>
+</arguments>
 <doc>Find the eclipse editor by its id
 
 Example:
-| Find Eclipse Editor By Id | id |</doc>
-<arguments>
-<arg>id</arg>
-</arguments>
+| Find Eclipse Editor By Id | id |
+</doc>
 </kw>
 <kw name="Find Eclipse Editor By Label">
+<arguments>
+<arg>title</arg>
+</arguments>
 <doc>Find the eclipse editor by its title
 
 Example:
-| Find Eclipse Editor By Title | title |</doc>
-<arguments>
-<arg>title</arg>
-</arguments>
+| Find Eclipse Editor By Title | title |
+</doc>
 </kw>
-<kw name="Find Editor By Id">
-<doc>Find the editor by its id
+<kw name="Find Edit Part Of Gef Editor">
+<arguments>
+<arg>label</arg>
+</arguments>
+<doc>Find the Gef EditPart with label of the current Gef Editor
 
 Example:
-| Find Editor By Id | id |</doc>
+| Find Edit Part Of Gef Editor | label |
+</doc>
+</kw>
+<kw name="Find Edit Part Of Gef Viewer">
+<arguments>
+<arg>label</arg>
+</arguments>
+<doc>Find the Gef EditPart with label of the current Gef Viewer
+
+Example:
+| Find Edit Part Of Gef Viewer | label |
+</doc>
+</kw>
+<kw name="Find Editor By Id">
 <arguments>
 <arg>id</arg>
 </arguments>
-</kw>
-<kw name="Find Editor By Label">
-<doc>Find the editor by its title
+<doc>Find the editor by its id
 
 Example:
-| Find Editor By Title | title |</doc>
+| Find Editor By Id | id |
+</doc>
+</kw>
+<kw name="Find Editor By Label">
 <arguments>
 <arg>title</arg>
 </arguments>
+<doc>Find the editor by its title
+
+Example:
+| Find Editor By Title | title |
+</doc>
+</kw>
+<kw name="Find GEF Editor">
+<arguments>
+<arg>*params</arg>
+</arguments>
+<doc>Find the GEF Editor with the given optionals fileName and index
+
+Example:
+| Find GEF Editor | fileName | index |
+| Find GEF Editor | fileName |  |
+</doc>
+</kw>
+<kw name="Find GEF View">
+<arguments>
+<arg>*params</arg>
+</arguments>
+<doc>Find the GEF View with the given optionals fileName and index
+
+Example:
+| Find GEF View | fileName | index |
+| Find GEF View | fileName |  |
+</doc>
+</kw>
+<kw name="Find GEF Viewer">
+<arguments>
+<arg>partTitle</arg>
+</arguments>
+<doc>Find the GEF Viewer with the given optionals partTitle
+
+Example:
+| Find GEF View | partTitle |
+</doc>
 </kw>
 <kw name="Find Label">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the label with the given optionals mnemonic and index
 
 Example:
 | Find Label | mnemonicText | index |
 | Find Label | mnemonicText |  |
 | Find Label | index |  |
-| Find Label | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Label | |  |
+</doc>
 </kw>
 <kw name="Find Label In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the label in the given group with optionals mnemonic and index
 
 Example:
 | Find Label In Group | group | mnemonicText | index |
 | Find Label In Group | group | mnemonicText | |
 | Find Label In Group | group | index | |
-| Find Label In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find Label In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Label With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the label with the given value and optionals key and index
 
 Examples:
 | Find Label With Id | value | key | index |
 | Find Label With Id | value | index | |
 | Find Label With Id | value | key | |
-| Find Label With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Label With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Link">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the link with the given optionals index
 
 Example:
 | Find Link | index |
-| Find Link | |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Link | |
+</doc>
 </kw>
 <kw name="Find Link In Group">
-<doc>Find the link in the given group with optionals index
-
-Example:
-| Find Link In Group | group | index |
-| Find Link In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
 </arguments>
+<doc>Find the link in the given group with optionals index
+
+Example:
+| Find Link In Group | group | index |
+| Find Link In Group | group | |
+</doc>
 </kw>
 <kw name="Find Link With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the link with the given value and optionals key and index
 
 Examples:
 | Find Link With Id | value | key | index |
 | Find Link With Id | value | index | |
 | Find Link With Id | value | key | |
-| Find Link With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Link With Id | value | | |
+</doc>
 </kw>
 <kw name="Find List">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the list with the given optional index
 
 Example:
 | Find List | index |
-| Find List | |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find List | |
+</doc>
 </kw>
 <kw name="Find List In Group">
-<doc>Find the list in the given group with optional index
-
-Example:
-| Find List In Group | group | index |
-| Find List In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
 </arguments>
+<doc>Find the list in the given group with optional index
+
+Example:
+| Find List In Group | group | index |
+| Find List In Group | group | |
+</doc>
 </kw>
 <kw name="Find List With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the list with the given value and optionals key and index
 
 Examples:
 | Find List With Id | value | key | index |
 | Find List With Id | value | index | |
 | Find List With Id | value | key | |
-| Find List With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find List With Id | value | | |
+</doc>
 </kw>
 <kw name="Find List With Label">
-<doc>Find the list with the given label and optional index
-
-Examples:
-| Find List With Label | label | index |
-| Find List With Label | label | |</doc>
 <arguments>
 <arg>label</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find List With Label In Group">
-<doc>Find the list with the given label and group and optional index
+<doc>Find the list with the given label and optional index
 
 Examples:
-| Find List With Label In Group | label | group | index |
-| Find List With Label In Group | label | group | |</doc>
+| Find List With Label | label | index |
+| Find List With Label | label | |
+</doc>
+</kw>
+<kw name="Find List With Label In Group">
 <arguments>
 <arg>label</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the list with the given label and group and optional index
+
+Examples:
+| Find List With Label In Group | label | group | index |
+| Find List With Label In Group | label | group | |
+</doc>
 </kw>
-<kw name="Find Menu">
-<doc>Find the menu with the given text and optional index
+<kw name="Find Main Edit Part Of Gef Editor">
+<arguments>
+</arguments>
+<doc>Find the Gef Main EditPart of the current Gef Editor
 
 Example:
-| Find Menu | text | index |
-| Find Menu | text |  |</doc>
+| Find Main Edit Part Of Gef Editor |
+</doc>
+</kw>
+<kw name="Find Main Edit Part Of Gef Viewer">
+<arguments>
+</arguments>
+<doc>Find the Gef Main EditPart of the current Gef Viewer
+
+Example:
+| Find Main Edit Part Of Gef Viewer |
+</doc>
+</kw>
+<kw name="Find Menu">
 <arguments>
 <arg>text</arg>
 <arg>*params</arg>
 </arguments>
-</kw>
-<kw name="Find Menu In Toolbar Drop Down Button">
-<doc>Find the submenu inside this menu item on the toolbarDropDownButton
+<doc>Find the menu with the given text and optional index
 
 Example:
-| Find Menu In ToolbarDropDownButton | text |</doc>
+| Find Menu | text | index |
+| Find Menu | text |  |
+</doc>
+</kw>
+<kw name="Find Menu In Toolbar Drop Down Button">
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Find the submenu inside this menu item on the toolbarDropDownButton
+
+Example:
+| Find Menu In ToolbarDropDownButton | text | 
+</doc>
 </kw>
 <kw name="Find Menu With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the menu with the given value and optionals key and index
 
 Examples:
 | Find Menu With Id | value | key | index |
 | Find Menu With Id | value | index | |
 | Find Menu With Id | value | key | |
-| Find Menu With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Menu With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Part Toolbar Button">
+<arguments>
+<arg>tooltip</arg>
+</arguments>
 <doc>Find the toolbarButton with the given tooltip for the workbench part in context
 
 Example:
-| Find Part Toolbar Button | tooltip |</doc>
+| Find Part Toolbar Button | tooltip | 
+</doc>
+</kw>
+<kw name="Find Part Toolbar Drop Down Button">
 <arguments>
 <arg>tooltip</arg>
 </arguments>
-</kw>
-<kw name="Find Part Toolbar Drop Down Button">
 <doc>Find the toolbar drop down Button with the given tooltip for the workbench part in context
 
 Example:
-| Find Part Toolbar Drop Down Button | tooltip |</doc>
+| Find Part Toolbar Drop Down Button | tooltip | 
+</doc>
+</kw>
+<kw name="Find Part Toolbar Push Button">
 <arguments>
 <arg>tooltip</arg>
 </arguments>
-</kw>
-<kw name="Find Part Toolbar Push Button">
 <doc>Find the toolbar push Button with the given tooltip for the workbench part in context
 
 Example:
-| Find Part Toolbar Push Button | tooltip |</doc>
+| Find Part Toolbar Push Button | tooltip | 
+</doc>
+</kw>
+<kw name="Find Part Toolbar Radio Button">
 <arguments>
 <arg>tooltip</arg>
 </arguments>
-</kw>
-<kw name="Find Part Toolbar Radio Button">
 <doc>Find the toolbar radio Button with the given tooltip for the workbench part in context
 
 Example:
-| Find Part Toolbar Radio Button | tooltip |</doc>
+| Find Part Toolbar Radio Button | tooltip | 
+</doc>
+</kw>
+<kw name="Find Part Toolbar Toggle Button">
 <arguments>
 <arg>tooltip</arg>
 </arguments>
-</kw>
-<kw name="Find Part Toolbar Toggle Button">
 <doc>Find the toolbar toggle Button with the given tooltip for the workbench part in context
 
 Example:
-| Find Part Toolbar Toggle Button | tooltip |</doc>
-<arguments>
-<arg>tooltip</arg>
-</arguments>
+| Find Part Toolbar Toggle Button | tooltip | 
+</doc>
 </kw>
 <kw name="Find Perspective By Id">
-<doc>Find the perspective by its id
-
-there's a bug in SWTBot at the moment, java.lang.IndexOutOfBoundsException is raised Example:
-| Find Perspective By Id | id |</doc>
 <arguments>
 <arg>id</arg>
 </arguments>
+<doc>Find the perspective by its id
+
+there's a bug in SWTBot at the moment, java.lang.IndexOutOfBoundsException is raised
+Example:
+| Find Perspective By Id | id |
+</doc>
 </kw>
 <kw name="Find Perspective By Label">
-<doc>Find the perspective by its label
-
-Example:
-| Find Perspective By Label | label |</doc>
 <arguments>
 <arg>label</arg>
 </arguments>
+<doc>Find the perspective by its label
+
+Example:
+| Find Perspective By Label | label |
+</doc>
 </kw>
 <kw name="Find Radio">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the radio with the given optionals mnemonic and index
 
 Example:
 | Find Radio | mnemonicText | index |
 | Find Radio | mnemonicText |  |
 | Find Radio | index |  |
-| Find Radio | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Radio | |  |
+</doc>
 </kw>
 <kw name="Find Radio In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the radio in the given group with optionals mnemonic and index
 
 Example:
 | Find Radio In Group | group | mnemonicText | index |
 | Find Radio In Group | group | mnemonicText | |
 | Find Radio In Group | group | index | |
-| Find Radio In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find Radio In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Radio With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the radio with the given value and optionals key and index
 
 Examples:
 | Find Radio With Id | value | key | index |
 | Find Radio With Id | value | index | |
 | Find Radio With Id | value | key | |
-| Find Radio With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Radio With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Radio With Label">
+<arguments>
+<arg>label</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the radio with the given label and optional index
 
 Examples:
 | Find Radio With Label | label | index |
-| Find Radio With Label | label | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>*index</arg>
-</arguments>
+| Find Radio With Label | label | |
+</doc>
 </kw>
 <kw name="Find Radio With Label In Group">
+<arguments>
+<arg>label</arg>
+<arg>group</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the radio with the given label and group and optional index
 
 Examples:
 | Find Radio With Label In Group | label | group | index |
-| Find Radio With Label In Group | label | group | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>group</arg>
-<arg>*index</arg>
-</arguments>
+| Find Radio With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Radio With Tooltip">
+<arguments>
+<arg>tooltip</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the radio with the given tooltip and optional index
 
 Examples:
-| Find Radio With Tooltip | tooltip | index |</doc>
-<arguments>
-<arg>tooltip</arg>
-<arg>*index</arg>
-</arguments>
+| Find Radio With Tooltip | tooltip | index |
+</doc>
 </kw>
 <kw name="Find Radio With Tooltip In Group">
-<doc>Find the radio with the given tooltip and group and optional index
-
-Examples:
-| Find Radio With Tooltip In Group | tooltip | group | index |
-| Find Radio With Tooltip In Group | tooltip | group | |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the radio with the given tooltip and group and optional index
+
+Examples:
+| Find Radio With Tooltip In Group | tooltip | group | index | 
+| Find Radio With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Shell">
-<doc>Find the shell with the given text and optional index
-
-Example:
-| Find Shell | text | index |
-| Find Shell | text |  |</doc>
 <arguments>
 <arg>text</arg>
 <arg>*params</arg>
 </arguments>
+<doc>Find the shell with the given text and optional index
+
+Example:
+| Find Shell | text | index |
+| Find Shell | text |  |
+</doc>
 </kw>
 <kw name="Find Shell With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the shell with the given value and optionals key and index
 
 Examples:
 | Find Shell With Id | value | key | index |
 | Find Shell With Id | value | index | |
 | Find Shell With Id | value | key | |
-| Find Shell With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Shell With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Slider">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the slider with the given optionals mnemonic and index
 
 Example:
 | Find Slider | mnemonicText | index |
 | Find Slider | mnemonicText |  |
 | Find Slider | index |  |
-| Find Slider | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Slider | |  |
+</doc>
 </kw>
 <kw name="Find Slider In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the slider in the given group with optionals mnemonic and index
 
 Example:
 | Find Slider In Group | group | mnemonicText | index |
 | Find Slider In Group | group | mnemonicText | |
 | Find Slider In Group | group | index | |
-| Find Slider In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find Slider In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Slider With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the slider with the given value and optionals key and index
 
 Examples:
 | Find Slider With Id | value | key | index |
 | Find Slider With Id | value | index | |
 | Find Slider With Id | value | key | |
-| Find Slider With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Slider With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Slider With Label">
+<arguments>
+<arg>label</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the slider with the given label and optional index
 
 Examples:
 | Find Slider With Label | label | index |
-| Find Slider With Label | label | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>*index</arg>
-</arguments>
+| Find Slider With Label | label | |
+</doc>
 </kw>
 <kw name="Find Slider With Label In Group">
+<arguments>
+<arg>label</arg>
+<arg>group</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the slider with the given label and group and optional index
 
 Examples:
 | Find Slider With Label In Group | label | group | index |
-| Find Slider With Label In Group | label | group | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>group</arg>
-<arg>*index</arg>
-</arguments>
+| Find Slider With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Slider With Tooltip">
+<arguments>
+<arg>tooltip</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the slider with the given tooltip and optional index
 
 Examples:
-| Find Slider With Tooltip | tooltip | index |</doc>
-<arguments>
-<arg>tooltip</arg>
-<arg>*index</arg>
-</arguments>
+| Find Slider With Tooltip | tooltip | index |
+</doc>
 </kw>
 <kw name="Find Slider With Tooltip In Group">
-<doc>Find the slider with the given tooltip and group and optional index
-
-Examples:
-| Find Slider With Tooltip In Group | tooltip | group | index |
-| Find Slider With Tooltip In Group | tooltip | group | |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the slider with the given tooltip and group and optional index
+
+Examples:
+| Find Slider With Tooltip In Group | tooltip | group | index | 
+| Find Slider With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Spinner">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the spinner with the given optionals mnemonic and index
 
 Example:
 | Find Spinner | mnemonicText | index |
 | Find Spinner | mnemonicText |  |
 | Find Spinner | index |  |
-| Find Spinner | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Spinner | |  |
+</doc>
 </kw>
 <kw name="Find Spinner In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the spinner in the given group with optionals mnemonic and index
 
 Example:
 | Find Spinner In Group | group | mnemonicText | index |
 | Find Spinner In Group | group | mnemonicText | |
 | Find Spinner In Group | group | index | |
-| Find Spinner In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find Spinner In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Spinner With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the spinner with the given value and optionals key and index
 
 Examples:
 | Find Spinner With Id | value | key | index |
 | Find Spinner With Id | value | index | |
 | Find Spinner With Id | value | key | |
-| Find Spinner With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Spinner With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Spinner With Label">
+<arguments>
+<arg>label</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the spinner with the given label and optional index
 
 Examples:
 | Find Spinner With Label | label | index |
-| Find Spinner With Label | label | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>*index</arg>
-</arguments>
+| Find Spinner With Label | label | |
+</doc>
 </kw>
 <kw name="Find Spinner With Label In Group">
+<arguments>
+<arg>label</arg>
+<arg>group</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the spinner with the given label and group and optional index
 
 Examples:
 | Find Spinner With Label In Group | label | group | index |
-| Find Spinner With Label In Group | label | group | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>group</arg>
-<arg>*index</arg>
-</arguments>
+| Find Spinner With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Spinner With Tooltip">
+<arguments>
+<arg>tooltip</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the spinner with the given tooltip and optional index
 
 Examples:
-| Find Spinner With Tooltip | tooltip | index |</doc>
-<arguments>
-<arg>tooltip</arg>
-<arg>*index</arg>
-</arguments>
+| Find Spinner With Tooltip | tooltip | index |
+</doc>
 </kw>
 <kw name="Find Spinner With Tooltip In Group">
-<doc>Find the spinner with the given tooltip and group and optional index
-
-Examples:
-| Find Spinner With Tooltip In Group | tooltip | group | index |
-| Find Spinner With Tooltip In Group | tooltip | group | |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the spinner with the given tooltip and group and optional index
+
+Examples:
+| Find Spinner With Tooltip In Group | tooltip | group | index | 
+| Find Spinner With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Styled Text">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the styleText with the given optionals mnemonic and index
 
 Example:
 | Find StyledText | mnemonicText | index |
 | Find StyledText | mnemonicText |  |
 | Find StyledText | index |  |
-| Find StyledText | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find StyledText | |  |
+</doc>
 </kw>
 <kw name="Find Styled Text In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the styledText in the given group with optionals mnemonic and index
 
 Example:
 | Find StyledText In Group | group | mnemonicText | index |
 | Find StyledText In Group | group | mnemonicText | |
 | Find StyledText In Group | group | index | |
-| Find StyledText In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find StyledText In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Styled Text With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the styledText with the given value and optionals key and index
 
 Examples:
 | Find StyledText With Id | value | key | index |
 | Find StyledText With Id | value | index | |
 | Find StyledText With Id | value | key | |
-| Find StyledText With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find StyledText With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Styled Text With Label">
-<doc>Find the styledText with the given label and optional index
-
-Examples:
-| Find StyledText With Label | label | index |
-| Find StyledText With Label | label | |</doc>
 <arguments>
 <arg>label</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find Styled Text With Label In Group">
-<doc>Find the styledText with the given label and group and optional index
+<doc>Find the styledText with the given label and optional index
 
 Examples:
-| Find StyledText With Label In Group | label | group | index |
-| Find StyledText With Label In Group | label | group | |</doc>
+| Find StyledText With Label | label | index |
+| Find StyledText With Label | label | |
+</doc>
+</kw>
+<kw name="Find Styled Text With Label In Group">
 <arguments>
 <arg>label</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the styledText with the given label and group and optional index
+
+Examples:
+| Find StyledText With Label In Group | label | group | index |
+| Find StyledText With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Sub Menu">
-<doc>Find the sub menu with the given name
-
-Example:
-| Find Sub Menu |</doc>
 <arguments>
 <arg>name</arg>
 </arguments>
+<doc>Find the sub menu with the given name
+
+Example:
+| Find Sub Menu |
+</doc>
+</kw>
+<kw name="Find SWT Bot Gef Viewer Of Gef Editor">
+<arguments>
+</arguments>
+<doc>Find the wrapped SWTBotGefViewer instance of the current Gef Editor
+
+Example:
+| Find SWTBotGefViewer Of Gef Editor |
+</doc>
+</kw>
+<kw name="Find SWT Bot Gef Viewer Of Gef View">
+<arguments>
+</arguments>
+<doc>Find the wrapped SWTBotGefViewer instance of the current Gef View
+
+Example:
+| Find SWTBotGefViewer Of Gef View |
+</doc>
 </kw>
 <kw name="Find Tab Item">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the tabItem with the given optionals mnemonic and index
 
 Example:
 | Find TabItem | mnemonicText | index |
 | Find TabItem | mnemonicText |  |
 | Find TabItem | index |  |
-| Find TabItem | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find TabItem | |  |
+</doc>
 </kw>
 <kw name="Find Tab Item In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the tabItem in the given group with optionals mnemonic and index
 
 Example:
 | Find TabItem In Group | group | mnemonicText | index |
 | Find TabItem In Group | group | mnemonicText | |
 | Find TabItem In Group | group | index | |
-| Find TabItem In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find TabItem In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Tab Item With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the tabItem with the given value and optionals key and index
 
 Examples:
 | Find TabItem With Id | value | key | index |
 | Find TabItem With Id | value | index | |
 | Find TabItem With Id | value | key | |
-| Find TabItem With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find TabItem With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Table">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the table with the given optional index
 
 Example:
 | Find Table | index |
-| Find Table | |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Table | |
+</doc>
 </kw>
 <kw name="Find Table In Group">
-<doc>Find the table in the given group with optional and index
-
-Example:
-| Find Table In Group | group | index |
-| Find Table In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
 </arguments>
+<doc>Find the table in the given group with optional and index
+
+Example:
+| Find Table In Group | group | index |
+| Find Table In Group | group | |
+</doc>
 </kw>
 <kw name="Find Table With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the table with the given value and optionals key and index
 
 Examples:
 | Find Table With Id | value | key | index |
 | Find Table With Id | value | index | |
 | Find Table With Id | value | key | |
-| Find Table With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Table With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Table With Label">
-<doc>Find the table with the given label and optional index
-
-Examples:
-| Find Table With Label | label | index |
-| Find Table With Label | label | |</doc>
 <arguments>
 <arg>label</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find Table With Label In Group">
-<doc>Find the table with the given label and group and optional index
+<doc>Find the table with the given label and optional index
 
 Examples:
-| Find Table With Label In Group | label | group | index |
-| Find Table With Label In Group | label | group | |</doc>
+| Find Table With Label | label | index |
+| Find Table With Label | label | |
+</doc>
+</kw>
+<kw name="Find Table With Label In Group">
 <arguments>
 <arg>label</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the table with the given label and group and optional index
+
+Examples:
+| Find Table With Label In Group | label | group | index |
+| Find Table With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Text">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the text with the given optionals mnemonic and index
 
 Example:
 | Find Text | mnemonicText | index |
 | Find Text | mnemonicText |  |
 | Find Text | index |  |
-| Find Text | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Text | |  |
+</doc>
 </kw>
 <kw name="Find Text In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the text in the given group with optionals mnemonic and index
 
 Example:
 | Find Text In Group | group | mnemonicText | index |
 | Find Text In Group | group | mnemonicText | |
 | Find Text In Group | group | index | |
-| Find Text In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find Text In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Text With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the text with the given value and optionals key and index
 
 Examples:
 | Find Text With Id | value | key | index |
 | Find Text With Id | value | index | |
 | Find Text With Id | value | key | |
-| Find Text With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Text With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Text With Label">
+<arguments>
+<arg>label</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the text with the given label and optional index
 
 Examples:
 | Find Text With Label | label | index |
-| Find Text With Label | label | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>*index</arg>
-</arguments>
+| Find Text With Label | label | |
+</doc>
 </kw>
 <kw name="Find Text With Label In Group">
+<arguments>
+<arg>label</arg>
+<arg>group</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the text with the given label and group and optional index
 
 Examples:
 | Find Text With Label In Group | label | group | index |
-| Find Text With Label In Group | label | group | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>group</arg>
-<arg>*index</arg>
-</arguments>
+| Find Text With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Text With Tooltip">
+<arguments>
+<arg>tooltip</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the text with the given tooltip and optional index
 
 Examples:
-| Find Text With Tooltip | tooltip | index |</doc>
-<arguments>
-<arg>tooltip</arg>
-<arg>*index</arg>
-</arguments>
+| Find Text With Tooltip | tooltip | index |
+</doc>
 </kw>
 <kw name="Find Text With Tooltip In Group">
-<doc>Find the text with the given tooltip and group and optional index
-
-Examples:
-| Find Text With Tooltip In Group | tooltip | group | index |
-| Find Text With Tooltip In Group | tooltip | group | |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the text with the given tooltip and group and optional index
+
+Examples:
+| Find Text With Tooltip In Group | tooltip | group | index | 
+| Find Text With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Toggle Button">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toggleButton with the given optionals mnemonic and index
 
 Example:
 | Find ToggleButton | mnemonicText | index |
 | Find ToggleButton | mnemonicText |  |
 | Find ToggleButton | index |  |
-| Find ToggleButton | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find ToggleButton | |  |
+</doc>
 </kw>
 <kw name="Find Toggle Button In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toggleButton in the given group with optionals mnemonic and index
 
 Example:
 | Find ToggleButton In Group | group | mnemonicText | index |
 | Find ToggleButton In Group | group | mnemonicText | |
 | Find ToggleButton In Group | group | index | |
-| Find ToggleButton In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToggleButton In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Toggle Button With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toggleButton with the given value and optionals key and index
 
 Examples:
 | Find ToggleButton With Id | value | key | index |
 | Find ToggleButton With Id | value | index | |
 | Find ToggleButton With Id | value | key | |
-| Find ToggleButton With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToggleButton With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Toggle Button With Label">
+<arguments>
+<arg>label</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the toggleButton with the given label and optional index
 
 Examples:
 | Find ToggleButton With Label | label | index |
-| Find ToggleButton With Label | label | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>*index</arg>
-</arguments>
+| Find ToggleButton With Label | label | |
+</doc>
 </kw>
 <kw name="Find Toggle Button With Label In Group">
+<arguments>
+<arg>label</arg>
+<arg>group</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the toggleButton with the given label and group and optional index
 
 Examples:
 | Find ToggleButton With Label In Group | label | group | index |
-| Find ToggleButton With Label In Group | label | group | |</doc>
-<arguments>
-<arg>label</arg>
-<arg>group</arg>
-<arg>*index</arg>
-</arguments>
+| Find ToggleButton With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find Toggle Button With Tooltip">
+<arguments>
+<arg>tooltip</arg>
+<arg>*index</arg>
+</arguments>
 <doc>Find the toggleButton with the given tooltip and optional index
 
 Examples:
-| Find ToggleButton With Tooltip | tooltip | index |</doc>
-<arguments>
-<arg>tooltip</arg>
-<arg>*index</arg>
-</arguments>
+| Find ToggleButton With Tooltip | tooltip | index |
+</doc>
 </kw>
 <kw name="Find Toggle Button With Tooltip In Group">
-<doc>Find the toggleButton with the given tooltip and group and optional index
-
-Examples:
-| Find ToggleButton With Tooltip In Group | tooltip | group | index |
-| Find ToggleButton With Tooltip In Group | tooltip | group | |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the toggleButton with the given tooltip and group and optional index
+
+Examples:
+| Find ToggleButton With Tooltip In Group | tooltip | group | index | 
+| Find ToggleButton With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Toolbar Button">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarToolbarButton with the given optionals mnemonic and index
 
 Example:
 | Find ToolbarButton | mnemonicText | index |
 | Find ToolbarButton | mnemonicText |  |
 | Find ToolbarButton | index |  |
-| Find ToolbarButton | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarButton | |  |
+</doc>
 </kw>
 <kw name="Find Toolbar Button In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarButton in the given group with optionals mnemonic and index
 
 Example:
 | Find ToolbarButton In Group | group | mnemonicText | index |
 | Find ToolbarButton In Group | group | mnemonicText | |
 | Find ToolbarButton In Group | group | index | |
-| Find ToolbarButton In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarButton In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Toolbar Button With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarButton with the given value and optionals key and index
 
 Examples:
 | Find ToolbarButton With Id | value | key | index |
 | Find ToolbarButton With Id | value | index | |
 | Find ToolbarButton With Id | value | key | |
-| Find ToolbarButton With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarButton With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Toolbar Button With Tooltip">
-<doc>Find the toolbarButton with the given tooltip and optional index
-
-Examples:
-| Find ToolbarButton With Tooltip | tooltip | index |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find Toolbar Button With Tooltip In Group">
-<doc>Find the toolbarButton with the given tooltip and group and optional index
+<doc>Find the toolbarButton with the given tooltip and optional index
 
 Examples:
-| Find ToolbarButton With Tooltip In Group | tooltip | group | index |
-| Find ToolbarButton With Tooltip In Group | tooltip | group | |</doc>
+| Find ToolbarButton With Tooltip | tooltip | index |
+</doc>
+</kw>
+<kw name="Find Toolbar Button With Tooltip In Group">
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the toolbarButton with the given tooltip and group and optional index
+
+Examples:
+| Find ToolbarButton With Tooltip In Group | tooltip | group | index | 
+| Find ToolbarButton With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Toolbar Drop Down Button">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarDropDownButton with the given optionals mnemonic and index
 
 Example:
 | Find ToolbarDropDownButton | mnemonicText | index |
 | Find ToolbarDropDownButton | mnemonicText |  |
 | Find ToolbarDropDownButton | index |  |
-| Find ToolbarDropDownButton | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarDropDownButton | |  |
+</doc>
 </kw>
 <kw name="Find Toolbar Drop Down Button In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarDropDownButton in the given group with optionals mnemonic and index
 
 Example:
 | Find ToolbarDropDownButton In Group | group | mnemonicText | index |
 | Find ToolbarDropDownButton In Group | group | mnemonicText | |
 | Find ToolbarDropDownButton In Group | group | index | |
-| Find ToolbarDropDownButton In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarDropDownButton In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Toolbar Drop Down Button With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarDropDownButton with the given value and optionals key and index
 
 Examples:
 | Find ToolbarDropDownButton With Id | value | key | index |
 | Find ToolbarDropDownButton With Id | value | index | |
 | Find ToolbarDropDownButton With Id | value | key | |
-| Find ToolbarDropDownButton With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarDropDownButton With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Toolbar Drop Down Button With Tooltip">
-<doc>Find the toolbarDropDownButton with the given tooltip and optional index
-
-Examples:
-| Find ToolbarDropDownButton With Tooltip | tooltip | index |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find Toolbar Drop Down Button With Tooltip In Group">
-<doc>Find the toolbarDropDownButton with the given tooltip and group and optional index
+<doc>Find the toolbarDropDownButton with the given tooltip and optional index
 
 Examples:
-| Find ToolbarDropDownButton With Tooltip In Group | tooltip | group | index |
-| Find ToolbarDropDownButton With Tooltip In Group | tooltip | group | |</doc>
+| Find ToolbarDropDownButton With Tooltip | tooltip | index |
+</doc>
+</kw>
+<kw name="Find Toolbar Drop Down Button With Tooltip In Group">
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the toolbarDropDownButton with the given tooltip and group and optional index
+
+Examples:
+| Find ToolbarDropDownButton With Tooltip In Group | tooltip | group | index | 
+| Find ToolbarDropDownButton With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Toolbar Radio Button">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarRadioButton with the given optionals mnemonic and index
 
 Example:
 | Find ToolbarRadioButton | mnemonicText | index |
 | Find ToolbarRadioButton | mnemonicText |  |
 | Find ToolbarRadioButton | index |  |
-| Find ToolbarRadioButton | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarRadioButton | |  |
+</doc>
 </kw>
 <kw name="Find Toolbar Radio Button In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarRadioButton in the given group with optionals mnemonic and index
 
 Example:
 | Find ToolbarRadioButton In Group | group | mnemonicText | index |
 | Find ToolbarRadioButton In Group | group | mnemonicText | |
 | Find ToolbarRadioButton In Group | group | index | |
-| Find ToolbarRadioButton In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarRadioButton In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Toolbar Radio Button With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarRadioButton with the given value and optionals key and index
 
 Examples:
 | Find ToolbarRadioButton With Id | value | key | index |
 | Find ToolbarRadioButton With Id | value | index | |
 | Find ToolbarRadioButton With Id | value | key | |
-| Find ToolbarRadioButton With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarRadioButton With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Toolbar Radio Button With Tooltip">
-<doc>Find the toolbarRadioButton with the given tooltip and optional index
-
-Examples:
-| Find ToolbarRadioButton With Tooltip | tooltip | index |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find Toolbar Radio Button With Tooltip In Group">
-<doc>Find the toolbarRadioButton with the given tooltip and group and optional index
+<doc>Find the toolbarRadioButton with the given tooltip and optional index
 
 Examples:
-| Find ToolbarRadioButton With Tooltip In Group | tooltip | group | index |
-| Find ToolbarRadioButton With Tooltip In Group | tooltip | group | |</doc>
+| Find ToolbarRadioButton With Tooltip | tooltip | index |
+</doc>
+</kw>
+<kw name="Find Toolbar Radio Button With Tooltip In Group">
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the toolbarRadioButton with the given tooltip and group and optional index
+
+Examples:
+| Find ToolbarRadioButton With Tooltip In Group | tooltip | group | index | 
+| Find ToolbarRadioButton With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Toolbar Toggle Button">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarToggleButton with the given optionals mnemonic and index
 
 Example:
 | Find ToolbarToggleButton | mnemonicText | index |
 | Find ToolbarToggleButton | mnemonicText |  |
 | Find ToolbarToggleButton | index |  |
-| Find ToolbarToggleButton | |  |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarToggleButton | |  |
+</doc>
 </kw>
 <kw name="Find Toolbar Toggle Button In Group">
+<arguments>
+<arg>group</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarToggleButton in the given group with optionals mnemonic and index
 
 Example:
 | Find ToolbarToggleButton In Group | group | mnemonicText | index |
 | Find ToolbarToggleButton In Group | group | mnemonicText | |
 | Find ToolbarToggleButton In Group | group | index | |
-| Find ToolbarToggleButton In Group | group | |  |</doc>
-<arguments>
-<arg>group</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarToggleButton In Group | group | |  |
+</doc>
 </kw>
 <kw name="Find Toolbar Toggle Button With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the toolbarToggleButton with the given value and optionals key and index
 
 Examples:
 | Find ToolbarToggleButton With Id | value | key | index |
 | Find ToolbarToggleButton With Id | value | index | |
 | Find ToolbarToggleButton With Id | value | key | |
-| Find ToolbarToggleButton With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find ToolbarToggleButton With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Toolbar Toggle Button With Tooltip">
-<doc>Find the toolbarToggleButton with the given tooltip and optional index
-
-Examples:
-| Find ToolbarToggleButton With Tooltip | tooltip | index |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find Toolbar Toggle Button With Tooltip In Group">
-<doc>Find the toolbarToggleButton with the given tooltip and group and optional index
+<doc>Find the toolbarToggleButton with the given tooltip and optional index
 
 Examples:
-| Find ToolbarToggleButton With Tooltip In Group | tooltip | group | index |
-| Find ToolbarToggleButton With Tooltip In Group | tooltip | group | |</doc>
+| Find ToolbarToggleButton With Tooltip | tooltip | index |
+</doc>
+</kw>
+<kw name="Find Toolbar Toggle Button With Tooltip In Group">
 <arguments>
 <arg>tooltip</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the toolbarToggleButton with the given tooltip and group and optional index
+
+Examples:
+| Find ToolbarToggleButton With Tooltip In Group | tooltip | group | index | 
+| Find ToolbarToggleButton With Tooltip In Group | tooltip | group | | 
+</doc>
 </kw>
 <kw name="Find Tray Item">
-<doc>Find the trayItem with the given index
-
-Example:
-| Find TrayItem | 0 |</doc>
 <arguments>
 <arg>index</arg>
 </arguments>
+<doc>Find the trayItem with the given index
+
+Example:
+| Find TrayItem | 0 |
+</doc>
 </kw>
 <kw name="Find Tray Item With Tooltip">
-<doc>Find the trayItem with the given tooltip and optional index
-
-Examples:
-| Find TrayItem With Tooltip | tooltip | index |</doc>
 <arguments>
 <arg>tooltip</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the trayItem with the given tooltip and optional index
+
+Examples:
+| Find TrayItem With Tooltip | tooltip | index |
+</doc>
 </kw>
 <kw name="Find Tree">
+<arguments>
+<arg>*params</arg>
+</arguments>
 <doc>Find the tree with the given optional index
 
 Example:
 | Find Tree | index |
-| Find Tree | |</doc>
-<arguments>
-<arg>*params</arg>
-</arguments>
+| Find Tree | |
+</doc>
 </kw>
 <kw name="Find Tree In Group">
-<doc>Find the tree in the given group with optional and index
-
-Example:
-| Find Tree In Group | group | index |
-| Find Tree In Group | group | |</doc>
 <arguments>
 <arg>group</arg>
 <arg>*params</arg>
 </arguments>
-</kw>
-<kw name="Find Tree Item Node">
-<doc>Find the treeItem node with the given text and / or at the given row if numeric
+<doc>Find the tree in the given group with optional and index
 
 Example:
-| find TreeItem Node | text |
-| find TreeItem Node | 0 |
-| find TreeItem Node | text | 0 |</doc>
+| Find Tree In Group | group | index |
+| Find Tree In Group | group | |
+</doc>
+</kw>
+<kw name="Find Tree Item Node">
 <arguments>
 <arg>*params</arg>
 </arguments>
-</kw>
-<kw name="Find Tree Tree Item">
-<doc>Find the tree treeItem with the given text
+<doc>Find the treeItem node with the given text and / or at the given row if numeric
 
 Example:
-| Find Tree TreeItem | text |</doc>
+| find TreeItem Node | text | 
+| find TreeItem Node | 0 | 
+| find TreeItem Node | text | 0 | 
+</doc>
+</kw>
+<kw name="Find Tree Tree Item">
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Find the tree treeItem with the given text
+
+Example:
+| Find Tree TreeItem | text |
+</doc>
 </kw>
 <kw name="Find Tree With Id">
+<arguments>
+<arg>value</arg>
+<arg>*params</arg>
+</arguments>
 <doc>Find the tree with the given value and optionals key and index
 
 Examples:
 | Find Tree With Id | value | key | index |
 | Find Tree With Id | value | index | |
 | Find Tree With Id | value | key | |
-| Find Tree With Id | value | | |</doc>
-<arguments>
-<arg>value</arg>
-<arg>*params</arg>
-</arguments>
+| Find Tree With Id | value | | |
+</doc>
 </kw>
 <kw name="Find Tree With Label">
-<doc>Find the tree with the given label and optional index
-
-Examples:
-| Find Tree With Label | label | index |
-| Find Tree With Label | label | |</doc>
 <arguments>
 <arg>label</arg>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Find Tree With Label In Group">
-<doc>Find the tree with the given label and group and optional index
+<doc>Find the tree with the given label and optional index
 
 Examples:
-| Find Tree With Label In Group | label | group | index |
-| Find Tree With Label In Group | label | group | |</doc>
+| Find Tree With Label | label | index |
+| Find Tree With Label | label | |
+</doc>
+</kw>
+<kw name="Find Tree With Label In Group">
 <arguments>
 <arg>label</arg>
 <arg>group</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Find the tree with the given label and group and optional index
+
+Examples:
+| Find Tree With Label In Group | label | group | index |
+| Find Tree With Label In Group | label | group | |
+</doc>
 </kw>
 <kw name="Find View By Id">
-<doc>Find the view by its id
-
-Example:
-| Find View By Id | id |</doc>
 <arguments>
 <arg>id</arg>
 </arguments>
-</kw>
-<kw name="Find View By Title">
-<doc>Find the view by its title
+<doc>Find the view by its id
 
 Example:
-| Find View By Title | title |</doc>
+| Find View By Id | id |
+</doc>
+</kw>
+<kw name="Find View By Title">
 <arguments>
 <arg>tile</arg>
 </arguments>
+<doc>Find the view by its title
+
+Example:
+| Find View By Title | title |
+</doc>
 </kw>
 <kw name="Get All Tree Items">
+<arguments>
+</arguments>
 <doc>Get all the tree treeItems text as a array of string
 
 Example:
-| Get All Tree Items |</doc>
-<arguments>
-</arguments>
+| Get All Tree Items |
+</doc>
 </kw>
 <kw name="Get Auto Complete Proposals For Eclipse Editor">
-<doc>Gets the auto completion proposal matching the given text
-
-insertText the text to be inserted before activating the auto-complete.Example:
-| Get Auto Complete Proposals For EclipseEditor | insertText |</doc>
 <arguments>
 <arg>insertText</arg>
 </arguments>
+<doc>Gets the auto completion proposal matching the given text
+
+	 insertText the text to be inserted before activating the auto-complete.Example:
+| Get Auto Complete Proposals For EclipseEditor | insertText |
+</doc>
 </kw>
 <kw name="Get Background Color">
+<arguments>
+</arguments>
 <doc>Get widget background color in RGB format
 
 Example:
 | ${color}= | Get Background Color |
-| Should Be Equal | ${color} | #FF00CC |</doc>
-<arguments>
-</arguments>
+| Should Be Equal | ${color} | #FF00CC |
+</doc>
 </kw>
 <kw name="Get Button Text">
+<arguments>
+</arguments>
 <doc>Get the text of the button
 
 Example:
-| Get Button Text |</doc>
-<arguments>
-</arguments>
+| Get Button Text |
+</doc>
 </kw>
 <kw name="Get Button Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the button
 
 Example:
-| Get Button Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Button Tooltip Text |
+</doc>
 </kw>
 <kw name="Get C Combo Items">
-<doc>Get the items in the ccombo
-
-Example:
-| Get CCombo Items |</doc>
 <arguments>
 </arguments>
+<doc>Get the items in the ccombo 
+
+Example:
+| Get CCombo Items |
+</doc>
 </kw>
 <kw name="Get C Combo Text">
+<arguments>
+</arguments>
 <doc>Get the text of the ccombo
 
 Example:
-| Get CCombo Text |</doc>
-<arguments>
-</arguments>
+| Get CCombo Text |
+</doc>
 </kw>
 <kw name="Get C Combo Text Limit">
-<doc>Get the text limit of the ccombo
-
-Example:
-| Get CCombo Text Limit |</doc>
 <arguments>
 </arguments>
+<doc>Get the text limit of the ccombo 
+
+Example:
+| Get CCombo Text Limit |
+</doc>
 </kw>
 <kw name="Get C Combo Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the ccombo
 
 Example:
-| Get CCombo Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get CCombo Tooltip Text |
+</doc>
 </kw>
 <kw name="Get C Label Alignment">
+<arguments>
+</arguments>
 <doc>Get the clabel alignment
 
 Example:
-| Get CLabel Alignment |</doc>
-<arguments>
-</arguments>
+| Get CLabel Alignment |
+</doc>
 </kw>
 <kw name="Get C Label Text">
+<arguments>
+</arguments>
 <doc>Get the text of the clabel
 
 Example:
-| Get CLabel Text |</doc>
-<arguments>
-</arguments>
+| Get CLabel Text |
+</doc>
 </kw>
 <kw name="Get C Label Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the clabel
 
 Example:
-| Get CLabel Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get CLabel Tooltip Text |
+</doc>
 </kw>
 <kw name="Get C Tab Item Text">
+<arguments>
+</arguments>
 <doc>Get the text of the cTabItem
 
 Example:
-| Get CTabItem Text |</doc>
-<arguments>
-</arguments>
+| Get CTabItem Text |
+</doc>
 </kw>
 <kw name="Get C Tab Item Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the cTabItem
 
 Example:
-| Get CTabItem Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get CTabItem Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Check Box Text">
+<arguments>
+</arguments>
 <doc>Get the text of the checkbox
 
 Example:
-| Get CheckBox Text |</doc>
-<arguments>
-</arguments>
+| Get CheckBox Text |
+</doc>
 </kw>
 <kw name="Get Check Box Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the checkbox
 
 Example:
-| Get CheckBox Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get CheckBox Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Combo Items">
-<doc>Get the items in the combo
-
-Example:
-| Get Combo Items |</doc>
 <arguments>
 </arguments>
+<doc>Get the items in the combo 
+
+Example:
+| Get Combo Items |
+</doc>
 </kw>
 <kw name="Get Combo Text">
+<arguments>
+</arguments>
 <doc>Get the text of the combo
 
 Example:
-| Get Combo Text |</doc>
-<arguments>
-</arguments>
+| Get Combo Text |
+</doc>
 </kw>
 <kw name="Get Combo Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the combo
 
 Example:
-| Get Combo Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Combo Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Date Time Date">
-<doc>Get the date with teh given pattern (see java SimpleDateFormat patterns)
-
-Example:
-| Get DateTime Date | yyyy.MM.dd |</doc>
 <arguments>
 <arg>pattern</arg>
 </arguments>
+<doc>Get the date with teh given pattern (see java SimpleDateFormat patterns)
+
+Example:
+| Get DateTime Date | yyyy.MM.dd |
+</doc>
 </kw>
 <kw name="Get Date Time Text">
+<arguments>
+</arguments>
 <doc>Get the text of the dateTime
 
 Example:
-| Get DateTime Text |</doc>
-<arguments>
-</arguments>
+| Get DateTime Text |
+</doc>
 </kw>
 <kw name="Get Date Time Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the dateTime
 
 Example:
-| Get DateTime Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get DateTime Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Lines">
+<arguments>
+</arguments>
 <doc>Gets the lines of the eclipse editor
 
 Example:
-| Get EclipseEditor Lines |</doc>
-<arguments>
-</arguments>
+| Get EclipseEditor Lines | 
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Quick Fixes">
+<arguments>
+</arguments>
 <doc>Gets the quick fixes of the eclipse editor
 
 Example:
-| Get EclipseEditor Quick Fixes |</doc>
-<arguments>
-</arguments>
+| Get EclipseEditor Quick Fixes | 
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Selection">
+<arguments>
+</arguments>
 <doc>Gets the eclipse editor selection
 
 Example:
-| Get EclipseEditor Selection |</doc>
-<arguments>
-</arguments>
+| Get EclipseEditor Selection | 
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Styled Text">
+<arguments>
+</arguments>
 <doc>Gets the eclipse editor styled text
 
 Example:
-| Get EclipseEditor StyledText |</doc>
-<arguments>
-</arguments>
+| Get EclipseEditor StyledText | 
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Text">
+<arguments>
+</arguments>
 <doc>Get the text of the eclipseEditor
 
 Example:
-| Get EclipseEditor Text |</doc>
-<arguments>
-</arguments>
+| Get EclipseEditor Text |
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Text On Current Line">
+<arguments>
+</arguments>
 <doc>Gets the eclipse editor text on current line
 
 Example:
-| Get EclipseEditor Text On Current Line |</doc>
-<arguments>
-</arguments>
+| Get EclipseEditor Text On Current Line | 
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Text On Given Line">
-<doc>Gets the eclipse editor text on given line
-
-Example:
-| Get EclipseEditor Text On Given Line | 0 |</doc>
 <arguments>
 <arg>line</arg>
 </arguments>
+<doc>Gets the eclipse editor text on given line
+
+Example:
+| Get EclipseEditor Text On Given Line | 0 |
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Title">
+<arguments>
+</arguments>
 <doc>Get the title of the eclipseEditor
 
 Example:
-| Get EclipseEditor Title |</doc>
-<arguments>
-</arguments>
+| Get EclipseEditor Title |
+</doc>
 </kw>
 <kw name="Get Eclipse Editor Tooltip Text">
+<arguments>
+</arguments>
 <doc>Gets the eclipse editor tooltip text
 
 Example:
-| Get EclipseEditor Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get EclipseEditor Tooltip Text | 
+</doc>
 </kw>
 <kw name="Get Editor Title">
+<arguments>
+</arguments>
 <doc>Get the title of the editor
 
 Example:
-| Get Editor Title |</doc>
-<arguments>
-</arguments>
+| Get Editor Title |
+</doc>
 </kw>
 <kw name="Get Editor Toolbar Buttons">
+<arguments>
+</arguments>
 <doc>Get editor toolbars tooltip
 
 Example:
-| Get Editor ToolbarButtons tooltip |</doc>
-<arguments>
-</arguments>
+| Get Editor ToolbarButtons tooltip |
+</doc>
 </kw>
 <kw name="Get Foreground Color">
+<arguments>
+</arguments>
 <doc>Get widget foreground color in RGB format
 
 Example:
 | ${color} = | Get Foreground Color |
-| Should Be Equal | ${color} | #FF00CC |</doc>
-<arguments>
-</arguments>
+| Should Be Equal | ${color} | #FF00CC |
+</doc>
 </kw>
 <kw name="Get Index Of Text In List">
+<arguments>
+<arg>text</arg>
+</arguments>
 <doc>Get the index of the given text in the list
 
 Example:
-| Get IndexOf Text In List |</doc>
-<arguments>
-<arg>text</arg>
-</arguments>
+| Get IndexOf Text In List |
+</doc>
 </kw>
 <kw name="Get Label Alignment">
+<arguments>
+</arguments>
 <doc>Get the label alignment
 
 Example:
-| Get Label Alignment |</doc>
-<arguments>
-</arguments>
+| Get Label Alignment |
+</doc>
 </kw>
 <kw name="Get Label Text">
+<arguments>
+</arguments>
 <doc>Get the text of the label
 
 Example:
-| Get Label Text |</doc>
-<arguments>
-</arguments>
+| Get Label Text |
+</doc>
 </kw>
 <kw name="Get Label Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the label
 
 Example:
-| Get Label Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Label Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Link Text">
+<arguments>
+</arguments>
 <doc>Get the text of the link
 
 Example:
-| Get Link Text |</doc>
-<arguments>
-</arguments>
+| Get Link Text |
+</doc>
 </kw>
 <kw name="Get Link Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the link
 
 Example:
-| Get Link Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Link Tooltip Text |
+</doc>
 </kw>
 <kw name="Get List Items">
+<arguments>
+</arguments>
 <doc>Get the items of the list
 
 Example:
-| Get List Items |</doc>
-<arguments>
-</arguments>
+| Get List Items |
+</doc>
 </kw>
 <kw name="Get List Text">
+<arguments>
+</arguments>
 <doc>Get the text of the list
 
 Example:
-| Get List Text |</doc>
-<arguments>
-</arguments>
+| Get List Text |
+</doc>
 </kw>
 <kw name="Get List Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the list
 
 Example:
-| Get List Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get List Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Menu Text">
+<arguments>
+</arguments>
 <doc>Get the text of the menu
 
 Example:
-| Get Menu Text |</doc>
-<arguments>
-</arguments>
+| Get Menu Text |
+</doc>
 </kw>
 <kw name="Get Menu Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the menu
 
 Example:
-| Get Menu Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Menu Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Perspective Label">
+<arguments>
+</arguments>
 <doc>Get the label of the perspective
 
 Example:
-| Get Perspective Label |</doc>
-<arguments>
-</arguments>
+| Get Perspective Label |
+</doc>
 </kw>
 <kw name="Get Radio Text">
+<arguments>
+</arguments>
 <doc>Get the text of the radio
 
 Example:
-| Get Radio Text |</doc>
-<arguments>
-</arguments>
+| Get Radio Text |
+</doc>
 </kw>
 <kw name="Get Radio Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the radio
 
 Example:
-| Get Radio Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Radio Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Selected List Items">
+<arguments>
+</arguments>
 <doc>Get the selected items of the list
 
 Example:
-| Get Selected List Items |</doc>
-<arguments>
-</arguments>
+| Get Selected List Items |
+</doc>
 </kw>
 <kw name="Get Selection Index In C Combo">
-<doc>Get the selection index in the ccombo
-
-Example:
-| Get Selection Index In CCombo |</doc>
 <arguments>
 </arguments>
+<doc>Get the selection index in the ccombo 
+
+Example:
+| Get Selection Index In CCombo |
+</doc>
 </kw>
 <kw name="Get Selection Index In Combo">
-<doc>Get the selection index in the combo
-
-Example:
-| Get Selection Index In Combo |</doc>
 <arguments>
 </arguments>
+<doc>Get the selection index in the combo 
+
+Example:
+| Get Selection Index In Combo |
+</doc>
 </kw>
 <kw name="Get Selection Text In C Combo">
-<doc>Get the text of the selection in the ccombo
-
-Example:
-| Get Selection Text In CCombo |</doc>
 <arguments>
 </arguments>
+<doc>Get the text of the selection in the ccombo 
+
+Example:
+| Get Selection Text In CCombo |
+</doc>
 </kw>
 <kw name="Get Selection Text In Combo">
-<doc>Get the text of the selection in the combo
-
-Example:
-| Get Selection Text In Combo |</doc>
 <arguments>
 </arguments>
+<doc>Get the text of the selection in the combo 
+
+Example:
+| Get Selection Text In Combo |
+</doc>
 </kw>
 <kw name="Get Shell Text">
+<arguments>
+</arguments>
 <doc>Get the text of the shell
 
 Example:
-| Get Shell Text |</doc>
-<arguments>
-</arguments>
+| Get Shell Text |
+</doc>
 </kw>
 <kw name="Get Shell Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the shell
 
 Example:
-| Get Shell Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Shell Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Slider Maximum">
+<arguments>
+</arguments>
 <doc>Get the slider maximum
 
 Example:
-| Get Slider Maximum |</doc>
-<arguments>
-</arguments>
+| Get Slider Maximum |
+</doc>
 </kw>
 <kw name="Get Slider Minimum">
+<arguments>
+</arguments>
 <doc>Get the slider minimum
 
 Example:
-| Get Slider Minimum |</doc>
-<arguments>
-</arguments>
+| Get Slider Minimum |
+</doc>
 </kw>
 <kw name="Get Slider Page Increment">
+<arguments>
+</arguments>
 <doc>Get the slider page increment
 
 Example:
-| Get Slider Page Increment |</doc>
-<arguments>
-</arguments>
+| Get Slider Page Increment |
+</doc>
 </kw>
 <kw name="Get Slider Selection">
+<arguments>
+</arguments>
 <doc>Get the slider selection
 
 Example:
-| Get Slider Selection |</doc>
-<arguments>
-</arguments>
+| Get Slider Selection |
+</doc>
 </kw>
 <kw name="Get Slider Text">
+<arguments>
+</arguments>
 <doc>Get the text of the slider
 
 Example:
-| Get Slider Text |</doc>
-<arguments>
-</arguments>
+| Get Slider Text |
+</doc>
 </kw>
 <kw name="Get Slider Thumb">
+<arguments>
+</arguments>
 <doc>Get the slider thumb
 
 Example:
-| Get Slider Thumb |</doc>
-<arguments>
-</arguments>
+| Get Slider Thumb |
+</doc>
 </kw>
 <kw name="Get Slider Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the slider
 
 Example:
-| Get Slider Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Slider Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Spinner Digits">
+<arguments>
+</arguments>
 <doc>Get the spinner digits
 
 Example:
-| Get Spinner Digits |</doc>
-<arguments>
-</arguments>
+| Get Spinner Digits |
+</doc>
 </kw>
 <kw name="Get Spinner Maximum">
+<arguments>
+</arguments>
 <doc>Get the spinner maximum
 
 Example:
-| Get Spinner Maximum |</doc>
-<arguments>
-</arguments>
+| Get Spinner Maximum |
+</doc>
 </kw>
 <kw name="Get Spinner Minimum">
+<arguments>
+</arguments>
 <doc>Get the spinner minimum
 
 Example:
-| Get Spinner Minimum |</doc>
-<arguments>
-</arguments>
+| Get Spinner Minimum |
+</doc>
 </kw>
 <kw name="Get Spinner Page Increment">
+<arguments>
+</arguments>
 <doc>Get the spinner page increment
 
 Example:
-| Get Spinner Page Increment |</doc>
-<arguments>
-</arguments>
+| Get Spinner Page Increment |
+</doc>
 </kw>
 <kw name="Get Spinner Selection">
+<arguments>
+</arguments>
 <doc>Get the spinner selection
 
 Example:
-| Get Spinner Selection |</doc>
-<arguments>
-</arguments>
+| Get Spinner Selection |
+</doc>
 </kw>
 <kw name="Get Spinner Text">
+<arguments>
+</arguments>
 <doc>Get the text of the spinner
 
 Example:
-| Get Spinner Text |</doc>
-<arguments>
-</arguments>
+| Get Spinner Text |
+</doc>
 </kw>
 <kw name="Get Spinner Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the spinner
 
 Example:
-| Get Spinner Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Spinner Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Styled Text Lines">
+<arguments>
+</arguments>
 <doc>Get the styledText lines
 
 Example:
-| Get StyledText Lines |</doc>
-<arguments>
-</arguments>
+| Get StyledText Lines |
+</doc>
 </kw>
 <kw name="Get Styled Text Selection">
+<arguments>
+</arguments>
 <doc>Get the styledText selection
 
 Example:
-| Get StyledText Selection |</doc>
-<arguments>
-</arguments>
+| Get StyledText Selection |
+</doc>
 </kw>
 <kw name="Get Styled Text Text">
+<arguments>
+</arguments>
 <doc>Get the text of the styledText
 
 Example:
-| Get StyledText Text |</doc>
-<arguments>
-</arguments>
+| Get StyledText Text |
+</doc>
 </kw>
 <kw name="Get Styled Text Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the styledText
 
 Example:
-| Get StyledText Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get StyledText Tooltip Text |
+</doc>
 </kw>
 <kw name="Get SWT Bot Preferences TIMEOUT">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences TIMEOUT in milliseconds
 
 Example:
-| Get SWTBotPreferences TIMEOUT |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences TIMEOUT |
+</doc>
 </kw>
 <kw name="Get Tab Item Text">
+<arguments>
+</arguments>
 <doc>Get the text of the tabItem
 
 Example:
-| Get TabItem Text |</doc>
-<arguments>
-</arguments>
+| Get TabItem Text |
+</doc>
 </kw>
 <kw name="Get Tab Item Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the tabItem
 
 Example:
-| Get TabItem Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get TabItem Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Table Cell">
-<doc>Get the text of the cell of the table at the given position
-
-row the row number, 0 based.	 column the column number, 0 based.Example:
-| Get Table Cell |</doc>
 <arguments>
 <arg>row</arg>
 <arg>column</arg>
 </arguments>
+<doc>Get the text of the cell of the table at the given position
+
+	 row the row number, 0 based.	 column the column number, 0 based.Example:
+| Get Table Cell |
+</doc>
 </kw>
 <kw name="Get Table Cell With Column Name">
-<doc>Get the text of the cell of the table at the given row and column name
-
-row the row number, 0 based.	 columnName the name of the column.Example:
-| Get Table Cell With Column Name |</doc>
 <arguments>
 <arg>row</arg>
 <arg>columnName</arg>
 </arguments>
+<doc>Get the text of the cell of the table at the given row and column name
+
+	 row the row number, 0 based.	 columnName the name of the column.Example:
+| Get Table Cell With Column Name |
+</doc>
 </kw>
 <kw name="Get Table Column Index">
-<doc>Gets the index of the column matching the given name , or -1 if the column does not exist in the table.
-
-Example:
-| Get Table Column Index | columnName |</doc>
 <arguments>
 <arg>columnName</arg>
 </arguments>
+<doc>Gets the index of the column matching the given name
+ , or -1 if the column does not exist in the table.
+
+Example:
+| Get Table Column Index | columnName | 
+</doc>
 </kw>
 <kw name="Get Table Column Text">
+<arguments>
+</arguments>
 <doc>Get the text of the tableColumn
 
 Example:
-| Get TableColumn Text |</doc>
-<arguments>
-</arguments>
+| Get TableColumn Text |
+</doc>
 </kw>
 <kw name="Get Table Column Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the tableColumn
 
 Example:
-| Get TableColumn Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get TableColumn Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Table Columns">
+<arguments>
+</arguments>
 <doc>Count the number of columns in the table
 
 Example:
-| Get Table Columns |</doc>
-<arguments>
-</arguments>
+| Get Table Columns |
+</doc>
 </kw>
 <kw name="Get Table Header">
+<arguments>
+<arg>text</arg>
+</arguments>
 <doc>Get the table header with the given text
 
 Example:
-| Get Table Header With Text | text |</doc>
-<arguments>
-<arg>text</arg>
-</arguments>
+| Get Table Header With Text | text |
+</doc>
 </kw>
 <kw name="Get Table Item At Row">
-<doc>Get the table item at the given row
-
-row the row number, 0 based.Example:
-| Get Table Item At Row | 0 |</doc>
 <arguments>
 <arg>row</arg>
 </arguments>
+<doc>Get the table item at the given row
+
+	 row the row number, 0 based.Example:
+| Get Table Item At Row | 0 |
+</doc>
 </kw>
 <kw name="Get Table Item Index">
-<doc>Gets the index of the item matching the given item , or -1 if the item does not exist in the table.
-
-Example:
-| Get Table Item Index | text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Gets the index of the item matching the given item
+ , or -1 if the item does not exist in the table.
+
+Example:
+| Get Table Item Index | text |
+</doc>
 </kw>
 <kw name="Get Table Item Index In Column">
-<doc>Gets the index of the item matching the given item and the given column , or -1 if the item does not exist in the table.
-
-Example: column the column number, 0 based.
-| Get Table Item Index In Column | text | 0 |</doc>
 <arguments>
 <arg>text</arg>
 <arg>column</arg>
 </arguments>
+<doc>Gets the index of the item matching the given item and the given column
+ , or -1 if the item does not exist in the table.
+
+Example:
+	 column the column number, 0 based.
+| Get Table Item Index In Column | text | 0 | 
+</doc>
 </kw>
 <kw name="Get Table Item Index In Column Name">
-<doc>Gets the index of the item matching the given item and the given column , or -1 if the item does not exist in the table.
-
-Example: column the column number, 0 based.
-| Get Table Item Index In Column Name | text | name |</doc>
 <arguments>
 <arg>text</arg>
 <arg>columnName</arg>
 </arguments>
+<doc>Gets the index of the item matching the given item and the given column
+ , or -1 if the item does not exist in the table.
+
+Example:
+	 column the column number, 0 based.
+| Get Table Item Index In Column Name | text | name | 
+</doc>
 </kw>
 <kw name="Get Table Item Text">
+<arguments>
+</arguments>
 <doc>Get the text of the tableItem
 
 Example:
-| Get TableItem Text |</doc>
-<arguments>
-</arguments>
+| Get TableItem Text |
+</doc>
 </kw>
 <kw name="Get Table Item Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the tableItem
 
 Example:
-| Get TableItem Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get TableItem Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Table Item With Text">
-<doc>Get the table item with the given text
-
-Example:
-| Get Table Item With Text | text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Get the table item with the given text
+
+Example:
+| Get Table Item With Text | text |
+</doc>
 </kw>
 <kw name="Get Table Text">
+<arguments>
+</arguments>
 <doc>Get the text of the table
 
 Example:
-| Get Table Text |</doc>
-<arguments>
-</arguments>
+| Get Table Text |
+</doc>
 </kw>
 <kw name="Get Table Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the table
 
 Example:
-| Get Table Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Table Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Text Item At Index In List">
+<arguments>
+<arg>index</arg>
+</arguments>
 <doc>Get the text of the item at the geiven index in the list
 
 Example:
-| Get Text Item At Index In List | 1 |</doc>
-<arguments>
-<arg>index</arg>
-</arguments>
+| Get Text Item At Index In List | 1 | 
+</doc>
 </kw>
 <kw name="Get Text On Current Styled Text Line">
+<arguments>
+</arguments>
 <doc>Get the text of the current line of the styledText
 
 Example:
-| Get Text On Current StyledText Line |</doc>
-<arguments>
-</arguments>
+| Get Text On Current StyledText Line |
+</doc>
 </kw>
 <kw name="Get Text On Given Styled Text Line">
-<doc>Get the text of the given line of the styledText
-
-Example:
-| Get Text On Given StyledText Line | 0 |</doc>
 <arguments>
 <arg>index</arg>
 </arguments>
+<doc>Get the text of the given line of the styledText
+
+Example:
+| Get Text On Given StyledText Line | 0 |
+</doc>
 </kw>
 <kw name="Get Text Text">
+<arguments>
+</arguments>
 <doc>Get the text of the text
 
 Example:
-| Get Text Text |</doc>
-<arguments>
-</arguments>
+| Get Text Text |
+</doc>
 </kw>
 <kw name="Get Text Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the text
 
 Example:
-| Get Text Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Text Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Toggle Button Text">
+<arguments>
+</arguments>
 <doc>Get the text of the toggleButton
 
 Example:
-| Get ToggleButton Text |</doc>
-<arguments>
-</arguments>
+| Get ToggleButton Text |
+</doc>
 </kw>
 <kw name="Get Toggle Button Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the toggleButton
 
 Example:
-| Get ToggleButton Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get ToggleButton Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Toolbar Button Text">
+<arguments>
+</arguments>
 <doc>Get the text of the toolbarButton
 
 Example:
-| Get ToolbarButton Text |</doc>
-<arguments>
-</arguments>
+| Get ToolbarButton Text |
+</doc>
 </kw>
 <kw name="Get Toolbar Button Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the toolbarButton
 
 Example:
-| Get ToolbarButton Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get ToolbarButton Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Toolbar Drop Down Button Text">
+<arguments>
+</arguments>
 <doc>Get the text of the toolbarDropDownButton
 
 Example:
-| Get ToolbarDropDownButton Text |</doc>
-<arguments>
-</arguments>
+| Get ToolbarDropDownButton Text |
+</doc>
 </kw>
 <kw name="Get Toolbar Drop Down Button Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the toolbarDropDownButton
 
 Example:
-| Get ToolbarDropDownButton Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get ToolbarDropDownButton Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Toolbar Radio Button Text">
+<arguments>
+</arguments>
 <doc>Get the text of the toolbarRadioButton
 
 Example:
-| Get ToolbarRadioButton Text |</doc>
-<arguments>
-</arguments>
+| Get ToolbarRadioButton Text |
+</doc>
 </kw>
 <kw name="Get Toolbar Radio Button Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the toolbarRadioButton
 
 Example:
-| Get ToolbarRadioButton Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get ToolbarRadioButton Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Toolbar Toggle Button Text">
+<arguments>
+</arguments>
 <doc>Get the text of the toolbarToggleButton
 
 Example:
-| Get ToolbarToggleButton Text |</doc>
-<arguments>
-</arguments>
+| Get ToolbarToggleButton Text |
+</doc>
 </kw>
 <kw name="Get Toolbar Toggle Button Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the toolbarToggleButton
 
 Example:
-| Get ToolbarToggleButton Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get ToolbarToggleButton Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Tray Item Menu With Name">
-<doc>Get the trayItem menu with the given name
-
-Example:
-| Get TrayItem Menu With Name | name |</doc>
 <arguments>
 <arg>name</arg>
 </arguments>
+<doc>Get the trayItem menu with the given name
+
+Example:
+| Get TrayItem Menu With Name | name |
+</doc>
 </kw>
 <kw name="Get Tray Item Text">
+<arguments>
+</arguments>
 <doc>Get the text of the trayItem
 
 Example:
-| Get TrayItem Text |</doc>
-<arguments>
-</arguments>
+| Get TrayItem Text |
+</doc>
 </kw>
 <kw name="Get Tray Item Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the trayItem
 
 Example:
-| Get TrayItem Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get TrayItem Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Tree Cell">
-<doc>Get the text of the cell of the tree at the given position
-
-row the row number, 0 based.	 column the column number, 0 based.Example:
-| Get Tree Cell |</doc>
 <arguments>
 <arg>row</arg>
 <arg>column</arg>
 </arguments>
+<doc>Get the text of the cell of the tree at the given position
+
+	 row the row number, 0 based.	 column the column number, 0 based.Example:
+| Get Tree Cell |
+</doc>
 </kw>
 <kw name="Get Tree Cell With Column Name">
-<doc>Get the text of the cell of the tree at the given row and column name
-
-row the row number, 0 based.	 columnName the name of the column.Example:
-| Get Tree Cell With Column Name |</doc>
 <arguments>
 <arg>row</arg>
 <arg>columnName</arg>
 </arguments>
+<doc>Get the text of the cell of the tree at the given row and column name
+
+	 row the row number, 0 based.	 columnName the name of the column.Example:
+| Get Tree Cell With Column Name |
+</doc>
 </kw>
 <kw name="Get Tree Columns">
+<arguments>
+</arguments>
 <doc>Count the number of columns in the tree
 
 Example:
-| Get Tree Columns |</doc>
-<arguments>
-</arguments>
+| Get Tree Columns |
+</doc>
 </kw>
 <kw name="Get Tree Item Cell">
-<doc>Get the text of the cell of the treeItem at the given position
-
-row the row number, 0 based.	 column the column number, 0 based.Example:
-| Get TreeItem Cell |</doc>
 <arguments>
 <arg>row</arg>
 <arg>column</arg>
 </arguments>
+<doc>Get the text of the cell of the treeItem at the given position
+
+	 row the row number, 0 based.	 column the column number, 0 based.Example:
+| Get TreeItem Cell |
+</doc>
 </kw>
 <kw name="Get Tree Item Column Cell">
-<doc>Get the text of the cell of the treeItem at the given column
-
-column the column number, 0 based.Example:
-| Get TreeItem Column Cell |</doc>
 <arguments>
 <arg>column</arg>
 </arguments>
+<doc>Get the text of the cell of the treeItem at the given column
+
+	 column the column number, 0 based.Example:
+| Get TreeItem Column Cell |
+</doc>
 </kw>
 <kw name="Get Tree Item Nodes">
+<arguments>
+</arguments>
 <doc>Get the treeItem nodes
 
 Example:
-| Get TreeItem Nodes |</doc>
-<arguments>
-</arguments>
+| Get TreeItem Nodes | 
+</doc>
 </kw>
 <kw name="Get Tree Item Text">
+<arguments>
+</arguments>
 <doc>Get the text of the treeItem
 
 Example:
-| Get TreeItem Text |</doc>
-<arguments>
-</arguments>
+| Get TreeItem Text |
+</doc>
 </kw>
 <kw name="Get Tree Item Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the treeItem
 
 Example:
-| Get TreeItem Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get TreeItem Tooltip Text |
+</doc>
 </kw>
 <kw name="Get Tree Text">
+<arguments>
+</arguments>
 <doc>Get the text of the tree
 
 Example:
-| Get Tree Text |</doc>
-<arguments>
-</arguments>
+| Get Tree Text |
+</doc>
 </kw>
 <kw name="Get Tree Tooltip Text">
+<arguments>
+</arguments>
 <doc>Get the tooltip text of the tree
 
 Example:
-| Get Tree Tooltip Text |</doc>
-<arguments>
-</arguments>
+| Get Tree Tooltip Text |
+</doc>
 </kw>
 <kw name="Get View Menu">
-<doc>Get a menu item matching the give label and optional index on the view
-
-Example:
-| Get View Menu |</doc>
 <arguments>
 <arg>label</arg>
 <arg>*index</arg>
 </arguments>
+<doc>Get a menu item matching the give label and optional index on the view
+
+Example:
+| Get View Menu |
+</doc>
 </kw>
 <kw name="Get View Menu Text">
+<arguments>
+</arguments>
 <doc>Get the text of the viewMenu
 
 Example:
-| Get ViewMenu Text |</doc>
-<arguments>
-</arguments>
+| Get ViewMenu Text |
+</doc>
 </kw>
 <kw name="Get View Menus Label">
+<arguments>
+</arguments>
 <doc>Get the list of menus label of the view
 
 Example:
-| Get View Menus Label |</doc>
-<arguments>
-</arguments>
+| Get View Menus Label |
+</doc>
 </kw>
 <kw name="Get View Title">
+<arguments>
+</arguments>
 <doc>Get the title of the view
 
 Example:
-| Get View Title |</doc>
-<arguments>
-</arguments>
+| Get View Title |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesDEFAULT KEY">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences DEFAULT_KEY
 
 Example:
-| Get SWTBotPreferences DEFAULT_KEY |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences DEFAULT_KEY |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesDEFAULT POLL DELAY">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences DEFAULT_POLL_DELAYL in milliseconds
 
 Example:
-| Get SWTBotPreferences DEFAULT_POLL_DELAY |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences DEFAULT_POLL_DELAY |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesKEYBOARD LAYOUT">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences KEYBOARD_LAYOUT
 
 Example:
-| Get SWTBotPreferences KEYBOARD_LAYOUT |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences KEYBOARD_LAYOUT |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesKEYBOARD STRATEGY">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences KEYBOARD_STRATEGY
 
 Example:
-| Get SWTBotPreferences KEYBOARD_STRATEGY |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences KEYBOARD_STRATEGY |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT
 
 Example:
-| Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesPLAYBACK DELAY">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences PLAYBACK_DELAY in milliseconds
 
 Example:
-| Get SWTBotPreferences PLAYBACK_DELAY |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences PLAYBACK_DELAY |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesRECORDER FILE NAME">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences RECORDER_FILE_NAME
 
 Example:
-| Get SWTBotPreferences RECORDER_FILE_NAME |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences RECORDER_FILE_NAME |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesSCREENSHOT FORMAT">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences SCREENSHOT_FORMAT
 
 Example:
-| Get SWTBotPreferences SCREENSHOT_FORMAT |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences SCREENSHOT_FORMAT |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesSCREENSHOTS DIR">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences SCREENSHOTS_DIR
 
 Example:
-| Get SWTBotPreferences SCREENSHOTS_DIR |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences SCREENSHOTS_DIR |
+</doc>
 </kw>
 <kw name="GetSWTBotPreferencesTYPE INTERVAL">
+<arguments>
+</arguments>
 <doc>Get SWTBotPreferences TYPE_INTERVAL in milliseconds
 
 Example:
-| Get SWTBotPreferences TYPE_INTERVAL |</doc>
-<arguments>
-</arguments>
+| Get SWTBotPreferences TYPE_INTERVAL |
+</doc>
 </kw>
 <kw name="Has Tree Items">
+<arguments>
+</arguments>
 <doc>Does the tree have items
 
 Example:
-| Has Tree Items |</doc>
-<arguments>
-</arguments>
+| Has Tree Items |
+</doc>
 </kw>
 <kw name="Insert Eclipse Editor Text">
-<doc>Insert text at the end of the eclipse editor
-
-Example:
-| Insert EclipseEditor Text | text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Insert text at the end of the eclipse editor 
+
+Example:
+| Insert EclipseEditor Text | text | 
+</doc>
 </kw>
 <kw name="Insert Eclipse Editor Text At Position">
-<doc>Insert text at the given location of the eclipseEditor
-
-line the line number, 0 based.	 column the column number, 0 based.Example:
-| Insert EclipseEditor Text At Position | 0 | 0 | text |</doc>
 <arguments>
 <arg>line</arg>
 <arg>column</arg>
 <arg>text</arg>
 </arguments>
+<doc>Insert text at the given location of the eclipseEditor 
+
+	 line the line number, 0 based.	 column the column number, 0 based.Example:
+| Insert EclipseEditor Text At Position | 0 | 0 | text | 
+</doc>
 </kw>
 <kw name="Insert Styled Text Text">
-<doc>Insert text at the end of the styledText
-
-Example:
-| Insert StyledText Text | text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Insert text at the end of the styledText 
+
+Example:
+| Insert StyledText Text | text | 
+</doc>
 </kw>
 <kw name="Insert Styled Text Text At Position">
-<doc>Insert text at the given location of the styledText
-
-line the line number, 0 based.	 column the column number, 0 based.Example:
-| Insert StyledText Text At Position | 0 | 0 | text |</doc>
 <arguments>
 <arg>line</arg>
 <arg>column</arg>
 <arg>text</arg>
 </arguments>
+<doc>Insert text at the given location of the styledText 
+
+	 line the line number, 0 based.	 column the column number, 0 based.Example:
+| Insert StyledText Text At Position | 0 | 0 | text | 
+</doc>
 </kw>
 <kw name="Is Button Active">
+<arguments>
+</arguments>
 <doc>Is the button active
 
 Example:
-| Is Button Active |</doc>
-<arguments>
-</arguments>
+| Is Button Active |
+</doc>
 </kw>
 <kw name="Is Button Enabled">
+<arguments>
+</arguments>
 <doc>Is the button enabled
 
 Example:
-| Is Button Enabled |</doc>
-<arguments>
-</arguments>
+| Is Button Enabled |
+</doc>
 </kw>
 <kw name="Is Button Visible">
+<arguments>
+</arguments>
 <doc>Is the button visible
 
 Example:
-| Is Button Visible |</doc>
-<arguments>
-</arguments>
+| Is Button Visible |
+</doc>
 </kw>
 <kw name="Is C Combo Active">
+<arguments>
+</arguments>
 <doc>Is the ccombo active
 
 Example:
-| Is CCombo Active |</doc>
-<arguments>
-</arguments>
+| Is CCombo Active |
+</doc>
 </kw>
 <kw name="Is C Combo Enabled">
+<arguments>
+</arguments>
 <doc>Is the ccombo enabled
 
 Example:
-| Is CCombo Enabled |</doc>
-<arguments>
-</arguments>
+| Is CCombo Enabled |
+</doc>
 </kw>
 <kw name="Is C Combo Visible">
+<arguments>
+</arguments>
 <doc>Is the ccombo visible
 
 Example:
-| Is CCombo Visible |</doc>
-<arguments>
-</arguments>
+| Is CCombo Visible |
+</doc>
 </kw>
 <kw name="Is C Label Active">
+<arguments>
+</arguments>
 <doc>Is the clabel active
 
 Example:
-| Is CLabel Active |</doc>
-<arguments>
-</arguments>
+| Is CLabel Active |
+</doc>
 </kw>
 <kw name="Is C Label Enabled">
+<arguments>
+</arguments>
 <doc>Is the clabel enabled
 
 Example:
-| Is CLabel Enabled |</doc>
-<arguments>
-</arguments>
+| Is CLabel Enabled |
+</doc>
 </kw>
 <kw name="Is C Label Visible">
+<arguments>
+</arguments>
 <doc>Is the clabel visible
 
 Example:
-| Is CLabel Visible |</doc>
-<arguments>
-</arguments>
+| Is CLabel Visible |
+</doc>
 </kw>
 <kw name="Is C Tab Item Active">
+<arguments>
+</arguments>
 <doc>Is the cTabItem active
 
 Example:
-| Is CTabItem Active |</doc>
-<arguments>
-</arguments>
+| Is CTabItem Active |
+</doc>
 </kw>
 <kw name="Is C Tab Item Enabled">
+<arguments>
+</arguments>
 <doc>Is the cTabItem enabled
 
 Example:
-| Is CTabItem Enabled |</doc>
-<arguments>
-</arguments>
+| Is CTabItem Enabled |
+</doc>
 </kw>
 <kw name="Is C Tab Item Visible">
+<arguments>
+</arguments>
 <doc>Is the cTabItem visible
 
 Example:
-| Is CTabItem Visible |</doc>
-<arguments>
-</arguments>
+| Is CTabItem Visible |
+</doc>
 </kw>
 <kw name="Is Check Box Active">
+<arguments>
+</arguments>
 <doc>Is the checkbox active
 
 Example:
-| Is CheckBox Active |</doc>
-<arguments>
-</arguments>
+| Is CheckBox Active |
+</doc>
 </kw>
 <kw name="Is Check Box Checked">
+<arguments>
+</arguments>
 <doc>Is the checkbox checked
 
 Example:
-| Is CheckBox Checked |</doc>
-<arguments>
-</arguments>
+| Is CheckBox Checked |
+</doc>
 </kw>
 <kw name="Is Check Box Enabled">
+<arguments>
+</arguments>
 <doc>Is the checkbox enabled
 
 Example:
-| Is CheckBox Enabled |</doc>
-<arguments>
-</arguments>
+| Is CheckBox Enabled |
+</doc>
 </kw>
 <kw name="Is Check Box Visible">
+<arguments>
+</arguments>
 <doc>Is the checkbox visible
 
 Example:
-| Is CheckBox Visible |</doc>
-<arguments>
-</arguments>
+| Is CheckBox Visible |
+</doc>
 </kw>
 <kw name="Is Combo Active">
+<arguments>
+</arguments>
 <doc>Is the combo active
 
 Example:
-| Is Combo Active |</doc>
-<arguments>
-</arguments>
+| Is Combo Active |
+</doc>
 </kw>
 <kw name="Is Combo Enabled">
+<arguments>
+</arguments>
 <doc>Is the combo enabled
 
 Example:
-| Is Combo Enabled |</doc>
-<arguments>
-</arguments>
+| Is Combo Enabled |
+</doc>
 </kw>
 <kw name="Is Combo Visible">
+<arguments>
+</arguments>
 <doc>Is the combo visible
 
 Example:
-| Is Combo Visible |</doc>
-<arguments>
-</arguments>
+| Is Combo Visible |
+</doc>
 </kw>
 <kw name="Is Date Time Active">
+<arguments>
+</arguments>
 <doc>Is the dateTime active
 
 Example:
-| Is DateTime Active |</doc>
-<arguments>
-</arguments>
+| Is DateTime Active |
+</doc>
 </kw>
 <kw name="Is Date Time Enabled">
+<arguments>
+</arguments>
 <doc>Is the dateTime enabled
 
 Example:
-| Is DateTime Enabled |</doc>
-<arguments>
-</arguments>
+| Is DateTime Enabled |
+</doc>
 </kw>
 <kw name="Is Date Time Visible">
+<arguments>
+</arguments>
 <doc>Is the dateTime visible
 
 Example:
-| Is DateTime Visible |</doc>
-<arguments>
-</arguments>
+| Is DateTime Visible |
+</doc>
 </kw>
 <kw name="Is Eclipse Editor Active">
+<arguments>
+</arguments>
 <doc>Is the eclipseEditor active
 
 Example:
-| Is EclipseEditor Active |</doc>
-<arguments>
-</arguments>
+| Is EclipseEditor Active |
+</doc>
 </kw>
 <kw name="Is Eclipse Editor Dirty">
+<arguments>
+</arguments>
 <doc>Is the eclipseEditor dirty
 
 Example:
-| Is EclipseEditor Dirty |</doc>
-<arguments>
-</arguments>
+| Is EclipseEditor Dirty |
+</doc>
 </kw>
 <kw name="Is Eclipse Editor Enabled">
+<arguments>
+</arguments>
 <doc>Is the eclipseEditor enabled
 
 Example:
-| Is EclipseEditor Enabled |</doc>
-<arguments>
-</arguments>
+| Is EclipseEditor Enabled |
+</doc>
 </kw>
 <kw name="Is Editor Active">
+<arguments>
+</arguments>
 <doc>Is the editor active
 
 Example:
-| Is Editor Active |</doc>
-<arguments>
-</arguments>
+| Is Editor Active |
+</doc>
 </kw>
 <kw name="Is Editor Dirty">
+<arguments>
+</arguments>
 <doc>Is the editor dirty
 
 Example:
-| Is Editor Dirty |</doc>
+| Is Editor Dirty |
+</doc>
+</kw>
+<kw name="Is Gef Editor Active">
 <arguments>
 </arguments>
+<doc>Is the Gef Editor active
+
+Example:
+| Is Gef Editor Active |
+</doc>
+</kw>
+<kw name="Is Gef Editor Dirty">
+<arguments>
+</arguments>
+<doc>Is the Gef Editor dirty
+
+Example:
+| Is Gef Editor dirty |
+</doc>
 </kw>
 <kw name="Is Label Active">
+<arguments>
+</arguments>
 <doc>Is the label active
 
 Example:
-| Is Label Active |</doc>
-<arguments>
-</arguments>
+| Is Label Active |
+</doc>
 </kw>
 <kw name="Is Label Enabled">
+<arguments>
+</arguments>
 <doc>Is the label enabled
 
 Example:
-| Is Label Enabled |</doc>
-<arguments>
-</arguments>
+| Is Label Enabled |
+</doc>
 </kw>
 <kw name="Is Label Visible">
+<arguments>
+</arguments>
 <doc>Is the label visible
 
 Example:
-| Is Label Visible |</doc>
-<arguments>
-</arguments>
+| Is Label Visible |
+</doc>
 </kw>
 <kw name="Is Link Active">
+<arguments>
+</arguments>
 <doc>Is the link active
 
 Example:
-| Is Link Active |</doc>
-<arguments>
-</arguments>
+| Is Link Active |
+</doc>
 </kw>
 <kw name="Is Link Enabled">
+<arguments>
+</arguments>
 <doc>Is the link enabled
 
 Example:
-| Is Link Enabled |</doc>
-<arguments>
-</arguments>
+| Is Link Enabled |
+</doc>
 </kw>
 <kw name="Is Link Visible">
+<arguments>
+</arguments>
 <doc>Is the link visible
 
 Example:
-| Is Link Visible |</doc>
-<arguments>
-</arguments>
+| Is Link Visible |
+</doc>
 </kw>
 <kw name="Is List Active">
+<arguments>
+</arguments>
 <doc>Is the list active
 
 Example:
-| Is List Active |</doc>
-<arguments>
-</arguments>
+| Is List Active |
+</doc>
 </kw>
 <kw name="Is List Enabled">
+<arguments>
+</arguments>
 <doc>Is the list enabled
 
 Example:
-| Is List Enabled |</doc>
-<arguments>
-</arguments>
+| Is List Enabled |
+</doc>
 </kw>
 <kw name="Is List Visible">
+<arguments>
+</arguments>
 <doc>Is the list visible
 
 Example:
-| Is List Visible |</doc>
-<arguments>
-</arguments>
+| Is List Visible |
+</doc>
 </kw>
 <kw name="Is Menu Active">
+<arguments>
+</arguments>
 <doc>Is the menu active
 
 Example:
-| Is Menu Active |</doc>
-<arguments>
-</arguments>
+| Is Menu Active |
+</doc>
 </kw>
 <kw name="Is Menu Checked">
+<arguments>
+</arguments>
 <doc>Is the menu checked
 
 Example:
-| Is Menu Checked |</doc>
-<arguments>
-</arguments>
+| Is Menu Checked |
+</doc>
 </kw>
 <kw name="Is Menu Enabled">
+<arguments>
+</arguments>
 <doc>Is the menu enabled
 
 Example:
-| Is Menu Enabled |</doc>
-<arguments>
-</arguments>
+| Is Menu Enabled |
+</doc>
 </kw>
 <kw name="Is Menu Visible">
+<arguments>
+</arguments>
 <doc>Is the menu visible
 
 Example:
-| Is Menu Visible |</doc>
-<arguments>
-</arguments>
+| Is Menu Visible |
+</doc>
 </kw>
 <kw name="Is Perspective Active">
+<arguments>
+</arguments>
 <doc>Is the perspective active
 
 Example:
-| Is Perspective Active |</doc>
-<arguments>
-</arguments>
+| Is Perspective Active |
+</doc>
 </kw>
 <kw name="Is Radio Active">
+<arguments>
+</arguments>
 <doc>Is the radio active
 
 Example:
-| Is Radio Active |</doc>
-<arguments>
-</arguments>
+| Is Radio Active |
+</doc>
 </kw>
 <kw name="Is Radio Enabled">
+<arguments>
+</arguments>
 <doc>Is the radio enabled
 
 Example:
-| Is Radio Enabled |</doc>
-<arguments>
-</arguments>
+| Is Radio Enabled |
+</doc>
 </kw>
 <kw name="Is Radio Selected">
+<arguments>
+</arguments>
 <doc>Is the radio selected
 
 Example:
-| Is Radio Selected |</doc>
-<arguments>
-</arguments>
+| Is Radio Selected |
+</doc>
 </kw>
 <kw name="Is Radio Visible">
+<arguments>
+</arguments>
 <doc>Is the radio visible
 
 Example:
-| Is Radio Visible |</doc>
-<arguments>
-</arguments>
+| Is Radio Visible |
+</doc>
 </kw>
 <kw name="Is Shell Active">
+<arguments>
+</arguments>
 <doc>Is the shell active
 
 Example:
-| Is Shell Active |</doc>
-<arguments>
-</arguments>
+| Is Shell Active |
+</doc>
 </kw>
 <kw name="Is Shell Enabled">
+<arguments>
+</arguments>
 <doc>Is the shell enabled
 
 Example:
-| Is Shell Enabled |</doc>
-<arguments>
-</arguments>
+| Is Shell Enabled |
+</doc>
 </kw>
 <kw name="Is Shell Open">
+<arguments>
+</arguments>
 <doc>Is the shell open
 
 Example:
-| Is Shell Open |</doc>
-<arguments>
-</arguments>
+| Is Shell Open |
+</doc>
 </kw>
 <kw name="Is Shell Visible">
+<arguments>
+</arguments>
 <doc>Is the shell visible
 
 Example:
-| Is Shell Visible |</doc>
-<arguments>
-</arguments>
+| Is Shell Visible |
+</doc>
 </kw>
 <kw name="Is Slider Active">
+<arguments>
+</arguments>
 <doc>Is the slider active
 
 Example:
-| Is Slider Active |</doc>
-<arguments>
-</arguments>
+| Is Slider Active |
+</doc>
 </kw>
 <kw name="Is Slider Enabled">
+<arguments>
+</arguments>
 <doc>Is the slider enabled
 
 Example:
-| Is Slider Enabled |</doc>
-<arguments>
-</arguments>
+| Is Slider Enabled |
+</doc>
 </kw>
 <kw name="Is Slider Visible">
+<arguments>
+</arguments>
 <doc>Is the slider visible
 
 Example:
-| Is Slider Visible |</doc>
-<arguments>
-</arguments>
+| Is Slider Visible |
+</doc>
 </kw>
 <kw name="Is Spinner Active">
+<arguments>
+</arguments>
 <doc>Is the spinner active
 
 Example:
-| Is Spinner Active |</doc>
-<arguments>
-</arguments>
+| Is Spinner Active |
+</doc>
 </kw>
 <kw name="Is Spinner Enabled">
+<arguments>
+</arguments>
 <doc>Is the spinner enabled
 
 Example:
-| Is Spinner Enabled |</doc>
-<arguments>
-</arguments>
+| Is Spinner Enabled |
+</doc>
 </kw>
 <kw name="Is Spinner Visible">
+<arguments>
+</arguments>
 <doc>Is the spinner visible
 
 Example:
-| Is Spinner Visible |</doc>
-<arguments>
-</arguments>
+| Is Spinner Visible |
+</doc>
 </kw>
 <kw name="Is Styled Text Active">
+<arguments>
+</arguments>
 <doc>Is the styledText active
 
 Example:
-| Is StyledText Active |</doc>
-<arguments>
-</arguments>
+| Is StyledText Active |
+</doc>
 </kw>
 <kw name="Is Styled Text Enabled">
+<arguments>
+</arguments>
 <doc>Is the styledText enabled
 
 Example:
-| Is StyledText Enabled |</doc>
-<arguments>
-</arguments>
+| Is StyledText Enabled |
+</doc>
 </kw>
 <kw name="Is Styled Text Visible">
+<arguments>
+</arguments>
 <doc>Is the styledText visible
 
 Example:
-| Is StyledText Visible |</doc>
-<arguments>
-</arguments>
+| Is StyledText Visible |
+</doc>
 </kw>
 <kw name="Is Tab Item Active">
+<arguments>
+</arguments>
 <doc>Is the tabItem active
 
 Example:
-| Is TabItem Active |</doc>
-<arguments>
-</arguments>
+| Is TabItem Active |
+</doc>
 </kw>
 <kw name="Is Tab Item Enabled">
+<arguments>
+</arguments>
 <doc>Is the tabItem enabled
 
 Example:
-| Is TabItem Enabled |</doc>
-<arguments>
-</arguments>
+| Is TabItem Enabled |
+</doc>
 </kw>
 <kw name="Is Tab Item Visible">
+<arguments>
+</arguments>
 <doc>Is the tabItem visible
 
 Example:
-| Is TabItem Visible |</doc>
-<arguments>
-</arguments>
+| Is TabItem Visible |
+</doc>
 </kw>
 <kw name="Is Table Active">
+<arguments>
+</arguments>
 <doc>Is the table active
 
 Example:
-| Is Table Active |</doc>
-<arguments>
-</arguments>
+| Is Table Active |
+</doc>
 </kw>
 <kw name="Is Table Column Active">
+<arguments>
+</arguments>
 <doc>Is the tableColumn active
 
 Example:
-| Is TableColumn Active |</doc>
-<arguments>
-</arguments>
+| Is TableColumn Active |
+</doc>
 </kw>
 <kw name="Is Table Column Enabled">
+<arguments>
+</arguments>
 <doc>Is the tableColumn enabled
 
 Example:
-| Is TableColumn Enabled |</doc>
-<arguments>
-</arguments>
+| Is TableColumn Enabled |
+</doc>
 </kw>
 <kw name="Is Table Column Visible">
+<arguments>
+</arguments>
 <doc>Is the tableColumn visible
 
 Example:
-| Is TableColumn Visible |</doc>
-<arguments>
-</arguments>
+| Is TableColumn Visible |
+</doc>
 </kw>
 <kw name="Is Table Enabled">
+<arguments>
+</arguments>
 <doc>Is the table enabled
 
 Example:
-| Is Table Enabled |</doc>
-<arguments>
-</arguments>
+| Is Table Enabled |
+</doc>
 </kw>
 <kw name="Is Table Item Active">
+<arguments>
+</arguments>
 <doc>Is the tableItem active
 
 Example:
-| Is TableItem Active |</doc>
-<arguments>
-</arguments>
+| Is TableItem Active |
+</doc>
 </kw>
 <kw name="Is Table Item Checked">
+<arguments>
+</arguments>
 <doc>Is the tableItem checked
 
 Example:
-| Is TableItem Checked |</doc>
-<arguments>
-</arguments>
+| Is TableItem Checked |
+</doc>
 </kw>
 <kw name="Is Table Item Enabled">
+<arguments>
+</arguments>
 <doc>Is the tableItem enabled
 
 Example:
-| Is TableItem Enabled |</doc>
-<arguments>
-</arguments>
+| Is TableItem Enabled |
+</doc>
 </kw>
 <kw name="Is Table Item Grayed">
+<arguments>
+</arguments>
 <doc>Is the tableItem grayed
 
 Example:
-| Is TableItem Grayed |</doc>
-<arguments>
-</arguments>
+| Is TableItem Grayed |
+</doc>
 </kw>
 <kw name="Is Table Item Visible">
+<arguments>
+</arguments>
 <doc>Is the tableItem visible
 
 Example:
-| Is TableItem Visible |</doc>
-<arguments>
-</arguments>
+| Is TableItem Visible |
+</doc>
 </kw>
 <kw name="Is Table Visible">
+<arguments>
+</arguments>
 <doc>Is the table visible
 
 Example:
-| Is Table Visible |</doc>
-<arguments>
-</arguments>
+| Is Table Visible |
+</doc>
 </kw>
 <kw name="Is Text Active">
+<arguments>
+</arguments>
 <doc>Is the text active
 
 Example:
-| Is Text Active |</doc>
-<arguments>
-</arguments>
+| Is Text Active |
+</doc>
 </kw>
 <kw name="Is Text Enabled">
+<arguments>
+</arguments>
 <doc>Is the text enabled
 
 Example:
-| Is Text Enabled |</doc>
-<arguments>
-</arguments>
+| Is Text Enabled |
+</doc>
 </kw>
 <kw name="Is Text Visible">
+<arguments>
+</arguments>
 <doc>Is the text visible
 
 Example:
-| Is Text Visible |</doc>
-<arguments>
-</arguments>
+| Is Text Visible |
+</doc>
 </kw>
 <kw name="Is Toggle Button Active">
+<arguments>
+</arguments>
 <doc>Is the toggleButton active
 
 Example:
-| Is ToggleButton Active |</doc>
-<arguments>
-</arguments>
+| Is ToggleButton Active |
+</doc>
 </kw>
 <kw name="Is Toggle Button Enabled">
+<arguments>
+</arguments>
 <doc>Is the toggleButton enabled
 
 Example:
-| Is ToggleButton Enabled |</doc>
-<arguments>
-</arguments>
+| Is ToggleButton Enabled |
+</doc>
 </kw>
 <kw name="Is Toggle Button Pressed">
-<doc>Does the toggleButton is pressed
-
-Example:
-| Is ToggleButton Pressed |</doc>
 <arguments>
 </arguments>
+<doc>Does the toggleButton is pressed 
+
+Example:
+| Is ToggleButton Pressed |
+</doc>
 </kw>
 <kw name="Is Toggle Button Visible">
+<arguments>
+</arguments>
 <doc>Is the toggleButton visible
 
 Example:
-| Is ToggleButton Visible |</doc>
-<arguments>
-</arguments>
+| Is ToggleButton Visible |
+</doc>
 </kw>
 <kw name="Is Toolbar Button Active">
+<arguments>
+</arguments>
 <doc>Is the toolbarButton active
 
 Example:
-| Is ToolbarButton Active |</doc>
-<arguments>
-</arguments>
+| Is ToolbarButton Active |
+</doc>
 </kw>
 <kw name="Is Toolbar Button Enabled">
+<arguments>
+</arguments>
 <doc>Is the toolbarButton enabled
 
 Example:
-| Is ToolbarButton Enabled |</doc>
-<arguments>
-</arguments>
+| Is ToolbarButton Enabled |
+</doc>
 </kw>
 <kw name="Is Toolbar Button Visible">
+<arguments>
+</arguments>
 <doc>Is the toolbarButton visible
 
 Example:
-| Is ToolbarButton Visible |</doc>
-<arguments>
-</arguments>
+| Is ToolbarButton Visible |
+</doc>
 </kw>
 <kw name="Is Toolbar Drop Down Button Active">
+<arguments>
+</arguments>
 <doc>Is the toolbarDropDownButton active
 
 Example:
-| Is ToolbarDropDownButton Active |</doc>
-<arguments>
-</arguments>
+| Is ToolbarDropDownButton Active |
+</doc>
 </kw>
 <kw name="Is Toolbar Drop Down Button Enabled">
+<arguments>
+</arguments>
 <doc>Is the toolbarDropDownButton enabled
 
 Example:
-| Is ToolbarDropDownButton Enabled |</doc>
-<arguments>
-</arguments>
+| Is ToolbarDropDownButton Enabled |
+</doc>
 </kw>
 <kw name="Is Toolbar Drop Down Button Visible">
+<arguments>
+</arguments>
 <doc>Is the toolbarDropDownButton visible
 
 Example:
-| Is ToolbarDropDownButton Visible |</doc>
-<arguments>
-</arguments>
+| Is ToolbarDropDownButton Visible |
+</doc>
 </kw>
 <kw name="Is Toolbar Radio Button Active">
+<arguments>
+</arguments>
 <doc>Is the toolbarRadioButton active
 
 Example:
-| Is ToolbarRadioButton Active |</doc>
-<arguments>
-</arguments>
+| Is ToolbarRadioButton Active |
+</doc>
 </kw>
 <kw name="Is Toolbar Radio Button Checked">
+<arguments>
+</arguments>
 <doc>Is the toolbarRadioButton checked
 
 Example:
-| Is ToolbarRadioButton Checked |</doc>
-<arguments>
-</arguments>
+| Is ToolbarRadioButton Checked |
+</doc>
 </kw>
 <kw name="Is Toolbar Radio Button Enabled">
+<arguments>
+</arguments>
 <doc>Is the toolbarRadioButton enabled
 
 Example:
-| Is ToolbarRadioButton Enabled |</doc>
-<arguments>
-</arguments>
+| Is ToolbarRadioButton Enabled |
+</doc>
 </kw>
 <kw name="Is Toolbar Radio Button Visible">
+<arguments>
+</arguments>
 <doc>Is the toolbarRadioButton visible
 
 Example:
-| Is ToolbarRadioButton Visible |</doc>
-<arguments>
-</arguments>
+| Is ToolbarRadioButton Visible |
+</doc>
 </kw>
 <kw name="Is Toolbar Toggle Button Active">
+<arguments>
+</arguments>
 <doc>Is the toolbarToggleButton active
 
 Example:
-| Is ToolbarToggleButton Active |</doc>
-<arguments>
-</arguments>
+| Is ToolbarToggleButton Active |
+</doc>
 </kw>
 <kw name="Is Toolbar Toggle Button Checked">
+<arguments>
+</arguments>
 <doc>Is the toolbarToggleButton checked
 
 Example:
-| Is ToolbarToggleButton Checked |</doc>
-<arguments>
-</arguments>
+| Is ToolbarToggleButton Checked |
+</doc>
 </kw>
 <kw name="Is Toolbar Toggle Button Enabled">
+<arguments>
+</arguments>
 <doc>Is the toolbarToggleButton enabled
 
 Example:
-| Is ToolbarToggleButton Enabled |</doc>
-<arguments>
-</arguments>
+| Is ToolbarToggleButton Enabled |
+</doc>
 </kw>
 <kw name="Is Toolbar Toggle Button Visible">
+<arguments>
+</arguments>
 <doc>Is the toolbarToggleButton visible
 
 Example:
-| Is ToolbarToggleButton Visible |</doc>
-<arguments>
-</arguments>
+| Is ToolbarToggleButton Visible |
+</doc>
 </kw>
 <kw name="Is Tray Item Active">
+<arguments>
+</arguments>
 <doc>Is the trayItem active
 
 Example:
-| Is TrayItem Active |</doc>
-<arguments>
-</arguments>
+| Is TrayItem Active |
+</doc>
 </kw>
 <kw name="Is Tray Item Enabled">
+<arguments>
+</arguments>
 <doc>Is the trayItem enabled
 
 Example:
-| Is TrayItem Enabled |</doc>
-<arguments>
-</arguments>
+| Is TrayItem Enabled |
+</doc>
 </kw>
 <kw name="Is Tray Item Visible">
+<arguments>
+</arguments>
 <doc>Is the trayItem visible
 
 Example:
-| Is TrayItem Visible |</doc>
-<arguments>
-</arguments>
+| Is TrayItem Visible |
+</doc>
 </kw>
 <kw name="Is Tree Active">
+<arguments>
+</arguments>
 <doc>Is the tree active
 
 Example:
-| Is Tree Active |</doc>
-<arguments>
-</arguments>
+| Is Tree Active |
+</doc>
 </kw>
 <kw name="Is Tree Enabled">
+<arguments>
+</arguments>
 <doc>Is the tree enabled
 
 Example:
-| Is Tree Enabled |</doc>
-<arguments>
-</arguments>
+| Is Tree Enabled |
+</doc>
 </kw>
 <kw name="Is Tree Item Active">
+<arguments>
+</arguments>
 <doc>Is the treeItem active
 
 Example:
-| Is TreeItem Active |</doc>
-<arguments>
-</arguments>
+| Is TreeItem Active |
+</doc>
 </kw>
 <kw name="Is Tree Item Checked">
+<arguments>
+</arguments>
 <doc>Is the treeItem checked
 
 Example:
-| Is TreeItem Checked |</doc>
-<arguments>
-</arguments>
+| Is TreeItem Checked |
+</doc>
 </kw>
 <kw name="Is Tree Item Enabled">
+<arguments>
+</arguments>
 <doc>Is the treeItem enabled
 
 Example:
-| Is TreeItem Enabled |</doc>
-<arguments>
-</arguments>
+| Is TreeItem Enabled |
+</doc>
 </kw>
 <kw name="Is Tree Item Expanded">
+<arguments>
+</arguments>
 <doc>Is the treeItem expanded
 
 Example:
-| Is TreeItem Expanded |</doc>
-<arguments>
-</arguments>
+| Is TreeItem Expanded |
+</doc>
 </kw>
 <kw name="Is Tree Item Selected">
+<arguments>
+</arguments>
 <doc>Is the treeItem selected
 
 Example:
-| Is TreeItem Selected |</doc>
-<arguments>
-</arguments>
+| Is TreeItem Selected |
+</doc>
 </kw>
 <kw name="Is Tree Item Visible">
+<arguments>
+</arguments>
 <doc>Is the treeItem visible
 
 Example:
-| Is TreeItem Visible |</doc>
-<arguments>
-</arguments>
+| Is TreeItem Visible |
+</doc>
 </kw>
 <kw name="Is Tree Visible">
+<arguments>
+</arguments>
 <doc>Is the tree visible
 
 Example:
-| Is Tree Visible |</doc>
-<arguments>
-</arguments>
+| Is Tree Visible |
+</doc>
 </kw>
 <kw name="Is View Active">
+<arguments>
+</arguments>
 <doc>Is the view active
 
 Example:
-| Is View Active |</doc>
-<arguments>
-</arguments>
+| Is View Active |
+</doc>
 </kw>
 <kw name="Is View Menu Checked">
+<arguments>
+</arguments>
 <doc>Is the viewMenu checked
 
 Example:
-| Is ViewMenu Checked |</doc>
-<arguments>
-</arguments>
+| Is ViewMenu Checked |
+</doc>
 </kw>
 <kw name="Launch Application">
-<doc>Launches application with the given arguments.
-
-Example:
-| Launch Application | _com.acme.myapplication.MyApp_ | _C:\data.txt_ |</doc>
 <arguments>
 <arg>className</arg>
 <arg>*args</arg>
 </arguments>
+<doc>Launches application with the given arguments.
+
+Example:
+| Launch Application | _com.acme.myapplication.MyApp_ | _C:\data.txt_ |
+</doc>
 </kw>
 <kw name="List All Editors Title">
+<arguments>
+</arguments>
 <doc>List all the editors title
 
 Example:
-| List All Editors Title |</doc>
-<arguments>
-</arguments>
+| List All Editors Title | 
+</doc>
 </kw>
 <kw name="List All Perspectives">
+<arguments>
+</arguments>
 <doc>List all the perspectives
 
 Example:
-| List All Perspectives|</doc>
-<arguments>
-</arguments>
+| List All Perspectives| 
+</doc>
 </kw>
 <kw name="List All Perspectives Label">
+<arguments>
+</arguments>
 <doc>List all the perspectives label
 
 Example:
-| List All Perspectives Label |</doc>
-<arguments>
-</arguments>
+| List All Perspectives Label | 
+</doc>
 </kw>
 <kw name="List All Views Title">
+<arguments>
+</arguments>
 <doc>List all the views title
 
 Example:
-| List All Views Title |</doc>
-<arguments>
-</arguments>
+| List All Views Title | 
+</doc>
 </kw>
 <kw name="List Part All Toolbar Buttons Tooltip">
+<arguments>
+</arguments>
 <doc>List all the toolbarButtons tooltip for the workbench part in context
 
 Example:
-| List Part All Toolbar Buttons Tooltip |</doc>
-<arguments>
-</arguments>
+| List Part All Toolbar Buttons Tooltip | 
+</doc>
 </kw>
 <kw name="Navigate To Eclipse Editor Position">
-<doc>Navigate to the given position in the eclipseEditor
-
-line the line number, 0 based.	 column the column number, 0 based.Example:
-| Navigate To EclipseEditor Position | 0 | 0 |</doc>
 <arguments>
 <arg>line</arg>
 <arg>column</arg>
 </arguments>
+<doc>Navigate to the given position in the eclipseEditor 
+
+	 line the line number, 0 based.	 column the column number, 0 based.Example:
+| Navigate To EclipseEditor Position | 0 | 0 |
+</doc>
 </kw>
 <kw name="Navigate To Styled Text Position">
-<doc>Navigate to the given position in the styledText
-
-line the line number, 0 based.	 column the column number, 0 based.Example:
-| Navigate To StyledText Position | 0 | 0 |</doc>
 <arguments>
 <arg>line</arg>
 <arg>column</arg>
 </arguments>
+<doc>Navigate to the given position in the styledText 
+
+	 line the line number, 0 based.	 column the column number, 0 based.Example:
+| Navigate To StyledText Position | 0 | 0 |
+</doc>
 </kw>
 <kw name="Press Shortcut">
+<arguments>
+<arg>shortcut</arg>
+</arguments>
 <doc>Press Shortcut on current selected widget
 
 Example:
 | Press Shortcut | ALT+CTRL+c |
 | Press Shortcut | CTRL+F11 |
 | Press Shortcut | TAB |
-modification  keys are : the combination of ALT | CTRL | SHIFT | COMMAND. available key codes are : F1 to F12, UP, DOWN, LEFT, RIGHT, HOME, END, INSERT, PAGE_UP, PAGE_DOWN, TAB c the character</doc>
-<arguments>
-<arg>shortcut</arg>
-</arguments>
+modification  keys are : the combination of ALT | CTRL | SHIFT | COMMAND.
+available key codes are : F1 to F12, UP, DOWN, LEFT, RIGHT, HOME, END, INSERT, PAGE_UP, PAGE_DOWN, TAB
+c the character
+</doc>
 </kw>
 <kw name="Press Toggle Button">
+<arguments>
+</arguments>
 <doc>Press the toggleButton
 
 Example:
-| Press ToggleButton |</doc>
-<arguments>
-</arguments>
+| Press ToggleButton |
+</doc>
 </kw>
 <kw name="Quickfix Eclipse Editor">
+<arguments>
+<arg>text</arg>
+</arguments>
 <doc>Applys a quick fix item with the given name to the eclipseEditor
 
 Example:
-| Quickfix EclipseEditor | text |</doc>
-<arguments>
-<arg>text</arg>
-</arguments>
+| Quickfix EclipseEditor | text |
+</doc>
 </kw>
 <kw name="Quickfix Index Eclipse Editor">
-<doc>Applys a quick fix item with the given index to the eclipseEditor
-
-quickFixIndex the index of the quickfix item to applyExample:
-| Quickfix Index EclipseEditor | 0 |</doc>
 <arguments>
 <arg>quickFixIndex</arg>
 </arguments>
+<doc>Applys a quick fix item with the given index to the eclipseEditor
+
+	 quickFixIndex the index of the quickfix item to applyExample:
+| Quickfix Index EclipseEditor | 0 |
+</doc>
 </kw>
 <kw name="Reset Active Perspective">
+<arguments>
+</arguments>
 <doc>Reset the active perspective
 
 Example:
-| Reset Active Perspective |</doc>
-<arguments>
-</arguments>
+| Reset Active Perspective |
+</doc>
 </kw>
 <kw name="Save All Editors">
+<arguments>
+</arguments>
 <doc>Save all editors
 
 Example:
-| Save All Editors |</doc>
-<arguments>
-</arguments>
+| Save All Editors |
+</doc>
 </kw>
 <kw name="Save And Close Eclipse Editor">
+<arguments>
+</arguments>
 <doc>Save and close the eclipseEditor
 
 Example:
-| Save And Close EclipseEditor |</doc>
-<arguments>
-</arguments>
+| Save And Close EclipseEditor |
+</doc>
 </kw>
 <kw name="Save And Close Editor">
+<arguments>
+</arguments>
 <doc>Save and close the editor
 
 Example:
-| Save And Close Editor |</doc>
-<arguments>
-</arguments>
+| Save And Close Editor |
+</doc>
 </kw>
 <kw name="Save Eclipse Editor">
+<arguments>
+</arguments>
 <doc>Save the eclipseEditor
 
 Example:
-| Save EclipseEditor |</doc>
-<arguments>
-</arguments>
+| Save EclipseEditor |
+</doc>
 </kw>
 <kw name="Save Editor">
+<arguments>
+</arguments>
 <doc>Save the editor
 
 Example:
-| Save Editor |</doc>
-<arguments>
-</arguments>
+| Save Editor |
+</doc>
 </kw>
 <kw name="Select All Text">
+<arguments>
+</arguments>
 <doc>Select the contents of the entire widget
 
 Example:
-| Select All Text |</doc>
-<arguments>
-</arguments>
+| Select All Text | 
+</doc>
 </kw>
 <kw name="Select Check Box">
+<arguments>
+</arguments>
 <doc>Select the checkbox
 
 Example:
-| Select CheckBox |</doc>
-<arguments>
-</arguments>
+| Select CheckBox |
+</doc>
 </kw>
 <kw name="Select Eclipse Editor Current Line">
-<doc>Select the current line of eclipseEditor
-
-Example:
-| Select EclipseEditor Current Line |</doc>
 <arguments>
 </arguments>
-</kw>
-<kw name="Select Eclipse Editor Given Line">
-<doc>Select the given line of eclipseEditor
+<doc>Select the current line of eclipseEditor 
 
 Example:
-| Select EclipseEditor Given Line |</doc>
+| Select EclipseEditor Current Line |
+</doc>
+</kw>
+<kw name="Select Eclipse Editor Given Line">
 <arguments>
 <arg>line</arg>
 </arguments>
+<doc>Select the given line of eclipseEditor 
+
+Example:
+| Select EclipseEditor Given Line |
+</doc>
 </kw>
 <kw name="Select Eclipse Editor Range">
-<doc>Select eclipseEditor range
-
-line the line number, 0 based.	 column the column number, 0 based.	 length the length of the selectionExample:
-| Select EclipseEditor Range | 0 | 0 | 10 |</doc>
 <arguments>
 <arg>line</arg>
 <arg>column</arg>
 <arg>length</arg>
 </arguments>
+<doc>Select eclipseEditor range
+
+	 line the line number, 0 based.	 column the column number, 0 based.	 length the length of the selectionExample:
+| Select EclipseEditor Range | 0 | 0 | 10 | 
+</doc>
 </kw>
-<kw name="Select Indexed Item In List">
-<doc>Select the indexed item in the list
+<kw name="Select Edit Part Of Gef Viewer">
+<arguments>
+<arg>label</arg>
+</arguments>
+<doc>Select this edit part as a single selection on Gef Viewer
 
 Example:
-| Select Indexed Item In List | 0 |</doc>
+| Select EditPart Of Gef Viewer | label |
+</doc>
+</kw>
+<kw name="Select Edit Part On Gef Editor">
+<arguments>
+<arg>label</arg>
+</arguments>
+<doc>Select this edit part as a single selection on Gef Editor
+
+Example:
+| Select EditPart On Gef Editor | label |
+</doc>
+</kw>
+<kw name="Select Indexed Item In List">
 <arguments>
 <arg>index</arg>
 </arguments>
+<doc>Select the indexed item in the list
+
+Example:
+| Select Indexed Item In List | 0 |
+</doc>
 </kw>
 <kw name="Select Indexed Items In List">
+<arguments>
+<arg>*index</arg>
+</arguments>
 <doc>Select the indexed item(s) in the list
 
 Example:
-| Select Indexed Items In List | 0 | 1 |</doc>
+| Select Indexed Items In List | 0 | 1 |
+</doc>
+</kw>
+<kw name="Select Indexed Items In Table">
 <arguments>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Select Indexed Items In Table">
 <doc>Select the indexed item(s) in the table
 
 Example:
-| Select Indexed Items In Table | 0 | 1 |</doc>
+| Select Indexed Items In Table | 0 | 1 |
+</doc>
+</kw>
+<kw name="Select Indexed Items In Tree">
 <arguments>
 <arg>*index</arg>
 </arguments>
-</kw>
-<kw name="Select Indexed Items In Tree">
 <doc>Select the indexed item(s) in the tree
 
 Example:
-| Select Indexed Items In Tree | 0 | 1 |</doc>
-<arguments>
-<arg>*index</arg>
-</arguments>
+| Select Indexed Items In Tree | 0 | 1 |
+</doc>
 </kw>
 <kw name="Select Item In List">
-<doc>Select the item with the given text in the list
-
-Example:
-| Select Item In List | item 0 |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Select the item with the given text in the list
+
+Example:
+| Select Item In List | item 0 | 
+</doc>
 </kw>
 <kw name="Select Items In List">
+<arguments>
+<arg>*text</arg>
+</arguments>
 <doc>Select the item(s) with the given text(s) in the list
 
 Example:
-| Select Items In List | item 0 | item 1 |</doc>
+| Select Items In List | item 0 | item 1 |
+</doc>
+</kw>
+<kw name="Select Items In Table">
 <arguments>
 <arg>*text</arg>
 </arguments>
-</kw>
-<kw name="Select Items In Table">
 <doc>Select the item(s) with the given text(s) in the table
 
 Example:
-| Select Items In Table | item0 | item1 |</doc>
+| Select Items In Table | item0 | item1 |
+</doc>
+</kw>
+<kw name="Select Items In Tree">
 <arguments>
 <arg>*text</arg>
 </arguments>
-</kw>
-<kw name="Select Items In Tree">
 <doc>Select the item(s) with the given text(s) in the tree
 
 Example:
-| Select Items In Tree | item0 | item1 |</doc>
-<arguments>
-<arg>*text</arg>
-</arguments>
+| Select Items In Tree | item0 | item1 |
+</doc>
 </kw>
 <kw name="Select Styled Text Current Line">
-<doc>Select the current line of styledText
-
-Example:
-| Select StyledText Current Line |</doc>
 <arguments>
 </arguments>
-</kw>
-<kw name="Select Styled Text Given Line">
-<doc>Select the given line of styledText
+<doc>Select the current line of styledText 
 
 Example:
-| Select StyledText Given Line |</doc>
+| Select StyledText Current Line |
+</doc>
+</kw>
+<kw name="Select Styled Text Given Line">
 <arguments>
 <arg>line</arg>
 </arguments>
+<doc>Select the given line of styledText 
+
+Example:
+| Select StyledText Given Line |
+</doc>
 </kw>
 <kw name="Select Styled Text Range">
-<doc>Select styledText range
-
-line the line number, 0 based.	 column the column number, 0 based.	 length the length of the selectionExample:
-| Select StyledText Range | 0 | 0 | 10 |</doc>
 <arguments>
 <arg>line</arg>
 <arg>column</arg>
 <arg>length</arg>
 </arguments>
+<doc>Select styledText range
+
+	 line the line number, 0 based.	 column the column number, 0 based.	 length the length of the selectionExample:
+| Select StyledText Range | 0 | 0 | 10 | 
+</doc>
 </kw>
 <kw name="Select Table Item">
+<arguments>
+</arguments>
 <doc>Select the tableItem
 
 Example:
-| Select TableItem |</doc>
-<arguments>
-</arguments>
+| Select TableItem |
+</doc>
 </kw>
 <kw name="Select Toolbar Radio Button">
+<arguments>
+</arguments>
 <doc>Select the toolbarRadioButton
 
 Example:
-| Select ToolbarRadioButton |</doc>
-<arguments>
-</arguments>
+| Select ToolbarRadioButton |
+</doc>
 </kw>
 <kw name="Select Toolbar Toggle Button">
+<arguments>
+</arguments>
 <doc>Select the toolbarToggleButton
 
 Example:
-| Select ToolbarToggleButton |</doc>
-<arguments>
-</arguments>
+| Select ToolbarToggleButton |
+</doc>
 </kw>
 <kw name="Select Tree Item">
+<arguments>
+</arguments>
 <doc>Select the treeItem
 
 Example:
-| Select TreeItem |</doc>
-<arguments>
-</arguments>
+| Select TreeItem |
+</doc>
 </kw>
 <kw name="Select Tree Item With Name">
-<doc>Select the treeItem with the given name
-
-Example:
-| Select TreeItem With Name | name |</doc>
 <arguments>
 <arg>name</arg>
 </arguments>
-</kw>
-<kw name="Select Tree Item With Names">
-<doc>Select the treeItem with the given names
+<doc>Select the treeItem with the given name
 
 Example:
-| Select TreeItem With Names | name1 | name2 |</doc>
+| Select TreeItem With Name | name |
+</doc>
+</kw>
+<kw name="Select Tree Item With Names">
 <arguments>
 <arg>*name</arg>
 </arguments>
-</kw>
-<kw name="Set C Combo Text">
-<doc>Set the text of the ccombo
+<doc>Select the treeItem with the given names
 
 Example:
-| Set CCombo Text |</doc>
+| Select TreeItem With Names | name1 | name2 | 
+</doc>
+</kw>
+<kw name="Set C Combo Text">
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Set the text of the ccombo 
+
+Example:
+| Set CCombo Text |
+</doc>
 </kw>
 <kw name="Set Capture Screenshot On Error">
-<doc>Set SWTBot to captures a screenshot to the given file name on error.
-
-The file name will be prefixed with timestamp Example:
-| Set Capture Screenshot On Error | screenshot.jpg |
-will produced 20100131_screenshot.jpg for instance</doc>
 <arguments>
 <arg>fileName</arg>
 </arguments>
+<doc>Set SWTBot to captures a screenshot to the given file name on error.
+
+ The file name will be prefixed with timestamp 
+Example:
+| Set Capture Screenshot On Error | screenshot.jpg |
+ will produced 20100131_screenshot.jpg for instance
+</doc>
 </kw>
 <kw name="Set Combo Text">
-<doc>Set the text of the combo
-
-Example:
-| Set Combo Text|</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
-</kw>
-<kw name="Set Date Time Date">
-<doc>Set the date with teh given pattern (see java SimpleDateFormat patterns)
+<doc>Set the text of the combo 
 
 Example:
-| Set DateTime Date | yyyy.MM.dd | 2010.12.31 |</doc>
+| Set Combo Text|
+</doc>
+</kw>
+<kw name="Set Date Time Date">
 <arguments>
 <arg>pattern</arg>
 <arg>date</arg>
 </arguments>
+<doc>Set the date with teh given pattern (see java SimpleDateFormat patterns)
+
+Example:
+| Set DateTime Date | yyyy.MM.dd | 2010.12.31 |
+</doc>
 </kw>
 <kw name="Set Eclipse Editor Text">
+<arguments>
+<arg>text</arg>
+</arguments>
 <doc>Set the text of the eclipseEditor
 
 Example:
-| Set EclipseEditor Text | text |</doc>
-<arguments>
-<arg>text</arg>
-</arguments>
+| Set EclipseEditor Text | text |
+</doc>
 </kw>
 <kw name="Set Eclipse Library Log Level">
-<doc>Set the eclipse library log level Use the log4j levels = OFF, FATAL, TRACE, ERROR, DEBUG, WARN, INFO, ALL.
-
-Example:
-| Set EclipseLibrary Log Level | DEBUG |</doc>
 <arguments>
 <arg>level</arg>
 </arguments>
+<doc>Set the eclipse library log level
+Use the log4j levels = OFF, FATAL, TRACE, ERROR, DEBUG, WARN, INFO, ALL.
+
+Example:
+| Set EclipseLibrary Log Level | DEBUG |
+</doc>
 </kw>
 <kw name="Set Focus On Button">
+<arguments>
+</arguments>
 <doc>Set the focus on the button
 
 Example:
-| Set Focus On Button |</doc>
-<arguments>
-</arguments>
+| Set Focus On Button |
+</doc>
 </kw>
 <kw name="Set Focus On C Combo">
-<doc>Set the focus on the ccombo
-
-Example:
-| Set Focus On CCombo |</doc>
 <arguments>
 </arguments>
+<doc>Set the focus on the ccombo 
+
+Example:
+| Set Focus On CCombo |
+</doc>
 </kw>
 <kw name="Set Focus On C Label">
+<arguments>
+</arguments>
 <doc>Set the focus on the clabel
 
 Example:
-| Set Focus On CLabel |</doc>
-<arguments>
-</arguments>
+| Set Focus On CLabel |
+</doc>
 </kw>
 <kw name="Set Focus On C Tab Item">
+<arguments>
+</arguments>
 <doc>Set the focus on the cTabItem
 
 Example:
-| Set Focus On CTabItem |</doc>
-<arguments>
-</arguments>
+| Set Focus On CTabItem |
+</doc>
 </kw>
 <kw name="Set Focus On Check Box">
+<arguments>
+</arguments>
 <doc>Set the focus on the checkbox
 
 Example:
-| Set Focus On CheckBox |</doc>
-<arguments>
-</arguments>
+| Set Focus On CheckBox |
+</doc>
 </kw>
 <kw name="Set Focus On Combo">
-<doc>Set the focus on the combo
-
-Example:
-| Set Focus On Combo |</doc>
 <arguments>
 </arguments>
+<doc>Set the focus on the combo 
+
+Example:
+| Set Focus On Combo |
+</doc>
 </kw>
 <kw name="Set Focus On Date Time">
+<arguments>
+</arguments>
 <doc>Set the focus on the dateTime
 
 Example:
-| Set Focus On DateTime |</doc>
-<arguments>
-</arguments>
+| Set Focus On DateTime |
+</doc>
 </kw>
 <kw name="Set Focus On Eclipse Editor">
+<arguments>
+</arguments>
 <doc>Set the focus on the eclipseEditor
 
 Example:
-| Set Focus On EclipseEditor |</doc>
-<arguments>
-</arguments>
+| Set Focus On EclipseEditor |
+</doc>
 </kw>
 <kw name="Set Focus On Editor">
+<arguments>
+</arguments>
 <doc>Set the focus on the editor
 
 Example:
-| Set Focus On Editor |</doc>
-<arguments>
-</arguments>
+| Set Focus On Editor |
+</doc>
 </kw>
 <kw name="Set Focus On Label">
+<arguments>
+</arguments>
 <doc>Set the focus on the label
 
 Example:
-| Set Focus On Label |</doc>
-<arguments>
-</arguments>
+| Set Focus On Label |
+</doc>
 </kw>
 <kw name="Set Focus On Link">
+<arguments>
+</arguments>
 <doc>Set the focus on the link
 
 Example:
-| Set Focus On Link |</doc>
-<arguments>
-</arguments>
+| Set Focus On Link |
+</doc>
 </kw>
 <kw name="Set Focus On List">
+<arguments>
+</arguments>
 <doc>Set the focus on the list
 
 Example:
-| Set Focus On List |</doc>
-<arguments>
-</arguments>
+| Set Focus On List |
+</doc>
 </kw>
 <kw name="Set Focus On Menu">
+<arguments>
+</arguments>
 <doc>Set the focus on the menu
 
 Example:
-| Set Focus On Menu |</doc>
-<arguments>
-</arguments>
+| Set Focus On Menu |
+</doc>
 </kw>
 <kw name="Set Focus On Radio">
+<arguments>
+</arguments>
 <doc>Set the focus on the radio
 
 Example:
-| Set Focus On Radio |</doc>
-<arguments>
-</arguments>
+| Set Focus On Radio |
+</doc>
 </kw>
 <kw name="Set Focus On Shell">
+<arguments>
+</arguments>
 <doc>Set the focus on the shell
 
 Example:
-| Set Focus On Shell |</doc>
-<arguments>
-</arguments>
+| Set Focus On Shell |
+</doc>
 </kw>
 <kw name="Set Focus On Slider">
+<arguments>
+</arguments>
 <doc>Set the focus on the slider
 
 Example:
-| Set Focus On Slider |</doc>
-<arguments>
-</arguments>
+| Set Focus On Slider |
+</doc>
 </kw>
 <kw name="Set Focus On Spinner">
+<arguments>
+</arguments>
 <doc>Set the focus on the spinner
 
 Example:
-| Set Focus On Spinner |</doc>
-<arguments>
-</arguments>
+| Set Focus On Spinner |
+</doc>
 </kw>
 <kw name="Set Focus On Styled Text">
+<arguments>
+</arguments>
 <doc>Set the focus on the styledText
 
 Example:
-| Set Focus On StyledText |</doc>
-<arguments>
-</arguments>
+| Set Focus On StyledText |
+</doc>
 </kw>
 <kw name="Set Focus On Tab Item">
+<arguments>
+</arguments>
 <doc>Set the focus on the tabItem
 
 Example:
-| Set Focus On TabItem |</doc>
-<arguments>
-</arguments>
+| Set Focus On TabItem |
+</doc>
 </kw>
 <kw name="Set Focus On Table">
+<arguments>
+</arguments>
 <doc>Set the focus on the table
 
 Example:
-| Set Focus On Table |</doc>
-<arguments>
-</arguments>
+| Set Focus On Table |
+</doc>
 </kw>
 <kw name="Set Focus On Table Column">
+<arguments>
+</arguments>
 <doc>Set the focus on the tableColumn
 
 Example:
-| Set Focus On TableColumn |</doc>
-<arguments>
-</arguments>
+| Set Focus On TableColumn |
+</doc>
 </kw>
 <kw name="Set Focus On Table Item">
+<arguments>
+</arguments>
 <doc>Set the focus on the tableItem
 
 Example:
-| Set Focus On TableItem |</doc>
-<arguments>
-</arguments>
+| Set Focus On TableItem |
+</doc>
 </kw>
 <kw name="Set Focus On Text">
+<arguments>
+</arguments>
 <doc>Set the focus on the text
 
 Example:
-| Set Focus On Text |</doc>
-<arguments>
-</arguments>
+| Set Focus On Text |
+</doc>
 </kw>
 <kw name="Set Focus On Toggle Button">
+<arguments>
+</arguments>
 <doc>Set the focus on the toggleButton
 
 Example:
-| Set Focus On ToggleButton |</doc>
-<arguments>
-</arguments>
+| Set Focus On ToggleButton |
+</doc>
 </kw>
 <kw name="Set Focus On Toolbar Button">
+<arguments>
+</arguments>
 <doc>Set the focus on the toolbarButton
 
 Example:
-| Set Focus On ToolbarButton |</doc>
-<arguments>
-</arguments>
+| Set Focus On ToolbarButton |
+</doc>
 </kw>
 <kw name="Set Focus On Toolbar Drop Down Button">
+<arguments>
+</arguments>
 <doc>Set the focus on the toolbarDropDownButton
 
 Example:
-| Set Focus On ToolbarDropDownButton |</doc>
-<arguments>
-</arguments>
+| Set Focus On ToolbarDropDownButton |
+</doc>
 </kw>
 <kw name="Set Focus On Toolbar Radio Button">
+<arguments>
+</arguments>
 <doc>Set the focus on the toolbarRadioButton
 
 Example:
-| Set Focus On ToolbarRadioButton |</doc>
-<arguments>
-</arguments>
+| Set Focus On ToolbarRadioButton |
+</doc>
 </kw>
 <kw name="Set Focus On Toolbar Toggle Button">
+<arguments>
+</arguments>
 <doc>Set the focus on the toolbarToggleButton
 
 Example:
-| Set Focus On ToolbarToggleButton |</doc>
-<arguments>
-</arguments>
+| Set Focus On ToolbarToggleButton |
+</doc>
 </kw>
 <kw name="Set Focus On Tray Item">
+<arguments>
+</arguments>
 <doc>Set the focus on the trayItem
 
 Example:
-| Set Focus On TrayItem |</doc>
-<arguments>
-</arguments>
+| Set Focus On TrayItem |
+</doc>
 </kw>
 <kw name="Set Focus On Tree">
+<arguments>
+</arguments>
 <doc>Set the focus on the tree
 
 Example:
-| Set Focus On Tree |</doc>
-<arguments>
-</arguments>
+| Set Focus On Tree |
+</doc>
 </kw>
 <kw name="Set Focus On Tree Item">
+<arguments>
+</arguments>
 <doc>Set the focus on the treeItem
 
 Example:
-| Set Focus On TreeItem |</doc>
-<arguments>
-</arguments>
+| Set Focus On TreeItem |
+</doc>
 </kw>
 <kw name="Set Focus On View">
+<arguments>
+</arguments>
 <doc>Set the focus on the view
 
 Example:
-| Set Focus On View |</doc>
-<arguments>
-</arguments>
+| Set Focus On View |
+</doc>
 </kw>
 <kw name="Set Selection Index In C Combo">
-<doc>Set the selection index in the ccombo
-
-Example:
-| Get Selection Index In CCombo | index |</doc>
 <arguments>
 <arg>index</arg>
 </arguments>
+<doc>Set the selection index in the ccombo 
+
+Example:
+| Get Selection Index In CCombo | index |
+</doc>
 </kw>
 <kw name="Set Selection Index In Combo">
-<doc>Set the selection index in the combo
-
-Example:
-| Get Selection Index In Combo | index |</doc>
 <arguments>
 <arg>index</arg>
 </arguments>
+<doc>Set the selection index in the combo 
+
+Example:
+| Get Selection Index In Combo | index |
+</doc>
 </kw>
 <kw name="Set Selection Text In C Combo">
-<doc>Set the selection text in the ccombo
-
-Example:
-| Set Selection Text In CCombo | text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Set the selection text in the ccombo 
+
+Example:
+| Set Selection Text In CCombo | text |
+</doc>
 </kw>
 <kw name="Set Selection Text In Combo">
-<doc>Set the selection text in the combo
-
-Example:
-| Set Selection Text In Combo | text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Set the selection text in the combo 
+
+Example:
+| Set Selection Text In Combo | text |
+</doc>
 </kw>
 <kw name="Set Slider Selection">
+<arguments>
+<arg>index</arg>
+</arguments>
 <doc>Set the slider selection
 
 Example:
-| Set Slider Selection | 0 |</doc>
+| Set Slider Selection | 0 |
+</doc>
+</kw>
+<kw name="Set Spinner Selection">
 <arguments>
 <arg>index</arg>
 </arguments>
-</kw>
-<kw name="Set Spinner Selection">
 <doc>Set the spinner selection
 
 Example:
-| Set Spinner Selection | 0 |</doc>
-<arguments>
-<arg>index</arg>
-</arguments>
+| Set Spinner Selection | 0 |
+</doc>
 </kw>
 <kw name="Set Styled Text Text">
+<arguments>
+<arg>text</arg>
+</arguments>
 <doc>Set the text of the styledText
 
 Example:
-| Set StyledText Text | text |</doc>
-<arguments>
-<arg>text</arg>
-</arguments>
+| Set StyledText Text | text |
+</doc>
 </kw>
 <kw name="Set SWT Bot Preferences TIMEOUT">
-<doc>Set SWTBotPreferences TIMEOUT in time format
-
-The timeout for finding widgets among other things. Defaults to 5000ms Example:
-| Set SWTBotPreferences TIMEOUT | 1 s |</doc>
 <arguments>
 <arg>value</arg>
 </arguments>
+<doc>Set SWTBotPreferences TIMEOUT in time format
+
+The timeout for finding widgets among other things. Defaults to 5000ms
+Example:
+| Set SWTBotPreferences TIMEOUT | 1 s | 
+</doc>
 </kw>
 <kw name="Set Text Text">
+<arguments>
+<arg>text</arg>
+</arguments>
 <doc>Set text into text
 
 Example:
-| Set Text Text | text |</doc>
-<arguments>
-<arg>text</arg>
-</arguments>
+| Set Text Text | text | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesDEFAULT KEY">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences DEFAULT_KEY
 
-The default key used to match SWT widgets. Defaults to org.eclipse.swtbot.widget.key.Example:
-| Set SWTBotPreferences DEFAULT_KEY | org.eclipse.swtbot.widget.key |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+ The default key used to match SWT widgets. Defaults to org.eclipse.swtbot.widget.key.Example:
+| Set SWTBotPreferences DEFAULT_KEY | org.eclipse.swtbot.widget.key | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesDEFAULT POLL DELAY">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences DEFAULT_POLL_DELAY in time format
 
-The default time delay between successive polling while waiting for a condition to be evaluated. Defaults to 500ms. Example:
-| Set SWTBotPreferences DEFAULT_POLL_DELAY | 500ms |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+The default time delay between successive polling while waiting for a condition to be evaluated. Defaults to 500ms.
+Example:
+| Set SWTBotPreferences DEFAULT_POLL_DELAY | 500ms | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesKEYBOARD LAYOUT">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences KEYBOARD_LAYOUT
 
-The keyboard layout. This value is autodetected at runtime. This can be set using the system property 'org.eclipse.swtbot.keyboard.layout'. Note: the layout must be of the form foo.bar.baz.[MAC_][LANGUAGE_][COUNTRY_][VARIANT_] This expects a file named 'foo/bar/baz/[MAC_][LANGUAGE_][COUNTRY_][VARIANT_].keyboard'
+The keyboard layout. This value is autodetected at runtime. This can be set using the system property 'org.eclipse.swtbot.keyboard.layout'.
+Note: the layout must be of the form foo.bar.baz.[MAC_][LANGUAGE_][COUNTRY_][VARIANT_] This expects a file named 'foo/bar/baz/[MAC_][LANGUAGE_][COUNTRY_][VARIANT_].keyboard'
 
-Eg: Layout Name       | Configuration File com.foo.bar.MAC.EN.US | com/foo/bar/MAC_EN_US.keyboard com.foo.bar.MAC.EN_GB | com/foo/bar/MAC_EN_GB.keyboard com.foo.bar.FR_FR     | com/foo/bar/FR_FR.keyboard com.foo.bar.DE        | /com/foo/bar/DE.keyboard
+Eg: Layout Name       | Configuration File
+com.foo.bar.MAC.EN.US | com/foo/bar/MAC_EN_US.keyboard
+com.foo.bar.MAC.EN_GB | com/foo/bar/MAC_EN_GB.keyboard
+com.foo.bar.FR_FR     | com/foo/bar/FR_FR.keyboard
+com.foo.bar.DE        | /com/foo/bar/DE.keyboard
 
 Example:
-| Set SWTBotPreferences KEYBOARD_LAYOUT | layout |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+| Set SWTBotPreferences KEYBOARD_LAYOUT | layout | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesKEYBOARD STRATEGY">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences KEYBOARD_STRATEGY
 
-The default keyboard strategy. Defaults to org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy Example:
-| Set SWTBotPreferences KEYBOARD_STRATEGY | org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+The default keyboard strategy. Defaults to org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy
+Example:
+| Set SWTBotPreferences KEYBOARD_STRATEGY | org.eclipse.swtbot.swt.finder.keyboard.AWTKeyboardStrategy | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesMAX ERROR SCREENSHOT COUNT">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT
 
-The maximum number of screenshots that SWTBot should capture. Defaults to 100. Example:
-| Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT | 20 |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+The maximum number of screenshots that SWTBot should capture. Defaults to 100.
+Example:
+| Set SWTBotPreferences MAX_ERROR_SCREENSHOT_COUNT | 20 | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesPLAYBACK DELAY">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences PLAYBACK_DELAY in time format
 
-The speed of playback in milliseconds. Defaults to 0 ms. Example:
-| Set SWTBotPreferences PLAYBACK_DELAY | 10 ms |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+The speed of playback in milliseconds. Defaults to 0 ms.
+Example:
+| Set SWTBotPreferences PLAYBACK_DELAY | 10 ms | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesRECORDER FILE NAME">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences RECORDER_FILE_NAME
 
-The name of the file in which the recorder records. Defaults to 'swtbot.record.txt'. Example:
-| Set SWTBotPreferences RECORDER_FILE_NAME | filename |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+The name of the file in which the recorder records. Defaults to 'swtbot.record.txt'.
+Example:
+| Set SWTBotPreferences RECORDER_FILE_NAME | filename | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesSCREENSHOT FORMAT">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences SCREENSHOT_FORMAT
 
-The screenshot image format to be used. Defaults to 'jpeg' The value must be one these: BMP, GIF, ICO, JPEG, JPG, PNG or TIFF. Example:
-| Set SWTBotPreferences SCREENSHOT_FORMAT | PNG |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+The screenshot image format to be used. Defaults to 'jpeg'
+The value must be one these: BMP, GIF, ICO, JPEG, JPG, PNG or TIFF.
+Example:
+| Set SWTBotPreferences SCREENSHOT_FORMAT | PNG | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesSCREENSHOTS DIR">
+<arguments>
+<arg>value</arg>
+</arguments>
 <doc>Set SWTBotPreferences SCREENSHOTS_DIR
 
-The directory in which screenshots should be generated. Defaults to './screenshots'. Example:
-| Set SWTBotPreferences SCREENSHOTS_DIR | ./screenshots |</doc>
-<arguments>
-<arg>value</arg>
-</arguments>
+The directory in which screenshots should be generated. Defaults to './screenshots'.
+Example:
+| Set SWTBotPreferences SCREENSHOTS_DIR | ./screenshots | 
+</doc>
 </kw>
 <kw name="SetSWTBotPreferencesTYPE INTERVAL">
-<doc>Set SWTBotPreferences TYPE_INTERVAL in time format
-
-The the time interval in milliseconds between typing characters in a string. Defaults to 50ms Example:
-| Set SWTBotPreferences TYPE_INTERVAL | 20ms |</doc>
 <arguments>
 <arg>value</arg>
 </arguments>
+<doc>Set SWTBotPreferences TYPE_INTERVAL in time format 
+
+The the time interval in milliseconds between typing characters in a string. Defaults to 50ms
+Example:
+| Set SWTBotPreferences TYPE_INTERVAL | 20ms | 
+</doc>
 </kw>
 <kw name="Show C Tab Item">
+<arguments>
+</arguments>
 <doc>Show the cTabItem
 
 Example:
-| Show CTabItem |</doc>
-<arguments>
-</arguments>
+| Show CTabItem |
+</doc>
 </kw>
 <kw name="Show Eclipse Editor">
+<arguments>
+</arguments>
 <doc>Show the eclipseEditor
 
 Example:
-| Show EclipseEditor |</doc>
-<arguments>
-</arguments>
+| Show EclipseEditor |
+</doc>
 </kw>
 <kw name="Show Editor">
+<arguments>
+</arguments>
 <doc>Show the editor
 
 Example:
-| Show Editor |</doc>
-<arguments>
-</arguments>
+| Show Editor |
+</doc>
 </kw>
 <kw name="Show View">
+<arguments>
+</arguments>
 <doc>Show the view
 
 Example:
-| Show View |</doc>
-<arguments>
-</arguments>
+| Show View |
+</doc>
 </kw>
 <kw name="Start Application">
-<doc>Alias for `Launch Application` keyword</doc>
 <arguments>
 <arg>className</arg>
 <arg>*args</arg>
 </arguments>
+<doc>Alias for `Launch Application` keyword
+</doc>
 </kw>
 <kw name="Start Application In Separate Thread">
-<doc>Launches application in a separate thread with the given arguments. This is useful if your application does something that blocks eg. opens up a dialog.
-
-Example:
-| Start Application In Separate Thread | _com.acme.myapplication.MyApp_ |</doc>
 <arguments>
 <arg>className</arg>
 <arg>*args</arg>
 </arguments>
+<doc>Launches application in a separate thread with the given arguments.
+This is useful if your application does something that blocks eg. opens up a dialog.
+
+Example:
+| Start Application In Separate Thread | _com.acme.myapplication.MyApp_ |
+</doc>
 </kw>
 <kw name="Start Eclipse">
-<doc>Start Eclipse with the given arguments in a separate thread</doc>
 <arguments>
 <arg>*args</arg>
 </arguments>
+<doc>Start Eclipse with the given arguments in a separate thread
+</doc>
 </kw>
 <kw name="Start SWT Bot Bridge">
-<doc>Start the SWTBot bridge This is used for SWT application that run without Eclipse/RCP. For RCP application use StartEclipse keyword Example:
-| Start SWTBotBridge |</doc>
 <arguments>
 </arguments>
+<doc>Start the SWTBot bridge
+This is used for SWT application that run without Eclipse/RCP.
+For RCP application use StartEclipse keyword
+Example:
+| Start SWTBotBridge |
+</doc>
 </kw>
 <kw name="Styled Text Has Bullet On Current Line">
+<arguments>
+</arguments>
 <doc>Does the current line has a bullet
 
 Example:
-| StyledText Has Bullet On Current Line |</doc>
-<arguments>
-</arguments>
+| StyledText Has Bullet On Current Line |
+</doc>
 </kw>
 <kw name="Styled Text Has Bullet On Given Line">
-<doc>Does the given line has a bullet
-
-Example:
-| StyledText Has Bullet On Given Line |</doc>
 <arguments>
 <arg>index</arg>
 </arguments>
+<doc>Does the given line has a bullet
+
+Example:
+| StyledText Has Bullet On Given Line |
+</doc>
 </kw>
 <kw name="Table Contains Item">
+<arguments>
+<arg>text</arg>
+</arguments>
 <doc>Does the table contains the given item
 
 Example:
-| Table Contains Item |</doc>
-<arguments>
-<arg>text</arg>
-</arguments>
+| Table Contains Item |
+</doc>
 </kw>
 <kw name="Toggle Check Table Item">
+<arguments>
+</arguments>
 <doc>ToogleCheck the tableItem
 
 Example:
-| ToggleCheck TableItem |</doc>
-<arguments>
-</arguments>
+| ToggleCheck TableItem |
+</doc>
 </kw>
 <kw name="Toggle Check Tree Item">
+<arguments>
+</arguments>
 <doc>ToogleCheck the treeItem
 
 Example:
-| ToggleCheck TreeItem |</doc>
-<arguments>
-</arguments>
+| ToggleCheck TreeItem |
+</doc>
 </kw>
 <kw name="Toggle Toolbar Radio Button">
+<arguments>
+</arguments>
 <doc>Toggle the toolbarRadioButton
 
 Example:
-| Toggle ToolbarRadioButton |</doc>
-<arguments>
-</arguments>
+| Toggle ToolbarRadioButton |
+</doc>
 </kw>
 <kw name="Toggle Toolbar Toggle Button">
+<arguments>
+</arguments>
 <doc>Toggle the toolbarToggleButton
 
 Example:
-| Toggle ToolbarToggleButton |</doc>
-<arguments>
-</arguments>
+| Toggle ToolbarToggleButton |
+</doc>
 </kw>
 <kw name="Type Eclipse Editor Text">
-<doc>Type text into eclipseEditor
-
-Example:
-| Type EclipseEditor Text | text |</doc>
 <arguments>
 <arg>text</arg>
 </arguments>
+<doc>Type text into eclipseEditor
+
+Example:
+| Type EclipseEditor Text | text | 
+</doc>
 </kw>
 <kw name="Type Eclipse Editor Text At Position">
-<doc>Type the text into the eclipseEditor at the given position
-
-line the line number, 0 based.	 column the column number, 0 based.	 the text to type.Example:
-| Type EclipseEditor Text At Position | 0 | 0 | text |</doc>
 <arguments>
 <arg>line</arg>
 <arg>column</arg>
 <arg>text</arg>
 </arguments>
+<doc>Type the text into the eclipseEditor at the given position
+
+	 line the line number, 0 based.	 column the column number, 0 based.	 the text to type.Example:
+| Type EclipseEditor Text At Position | 0 | 0 | text |
+</doc>
 </kw>
 <kw name="Type Eclipse Editor Text With Interval">
-<doc>Type text into eclipseEditor with the interval between consecutive key strokes
-
-Example:
-| Type EclipseEditor Text With Interval | text |</doc>
 <arguments>
 <arg>text</arg>
 <arg>interval</arg>
 </arguments>
+<doc>Type text into eclipseEditor with the interval between consecutive key strokes
+
+Example:
+| Type EclipseEditor Text With Interval | text | 
+</doc>
 </kw>
 <kw name="Uncheck Table Item">
+<arguments>
+</arguments>
 <doc>Uncheck the tableItem
 
 Example:
-| Uncheck TableItem |</doc>
-<arguments>
-</arguments>
+| Uncheck TableItem |
+</doc>
 </kw>
 <kw name="Uncheck Tree Item">
+<arguments>
+</arguments>
 <doc>Uncheck the treeItem
 
 Example:
-| Uncheck TreeItem |</doc>
-<arguments>
-</arguments>
+| Uncheck TreeItem |
+</doc>
 </kw>
 <kw name="Unpress Toggle Button">
+<arguments>
+</arguments>
 <doc>Unpress the toggleButton
 
 Example:
-| Unpress ToggleButton |</doc>
-<arguments>
-</arguments>
+| Unpress ToggleButton |
+</doc>
 </kw>
 <kw name="Unselect All List Items">
+<arguments>
+</arguments>
 <doc>Unselect all the items of the list
 
 Example:
-| Unselect All List Items |</doc>
-<arguments>
-</arguments>
+| Unselect All List Items |
+</doc>
 </kw>
 <kw name="Unselect All Table Items">
+<arguments>
+</arguments>
 <doc>Unselect all the items of the table
 
 Example:
-| Unselect All Table Items |</doc>
-<arguments>
-</arguments>
+| Unselect All Table Items |
+</doc>
 </kw>
 <kw name="Unselect All Tree Items">
+<arguments>
+</arguments>
 <doc>Unselect all the items of the tree
 
 Example:
-| Unselect All Tree Items |</doc>
-<arguments>
-</arguments>
+| Unselect All Tree Items |
+</doc>
 </kw>
 <kw name="Wait Until Last Widget Is Enabled">
-<doc>Wait until the last selected widget is enabled or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
-
-Example:
-| Wait Until Last Widget Is Enabled | 5 s | 10 ms |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
-</kw>
-<kw name="Wait Until Shell Closes">
-<doc>Wait until the last selected shell widget closes or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
+<doc>Wait until the last selected widget is enabled
+or the optional timeout is reached.
+The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait Until Shell Closes | 5 s | 10 ms |</doc>
+| Wait Until Last Widget Is Enabled | 5 s | 10 ms |
+</doc>
+</kw>
+<kw name="Wait Until Shell Closes">
 <arguments>
 <arg>timeout</arg>
 <arg>interval</arg>
 </arguments>
+<doc>Wait until the last selected shell widget closes
+or the optional timeout is reached.
+The optional interval is the delay between evaluating the condition after it has failed
+
+Example:
+| Wait Until Shell Closes | 5 s | 10 ms |
+</doc>
 </kw>
 <kw name="Wait Until Shell Is Active">
-<doc>Wait until shell with given text is active or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
-
-Example:
-| Wait Until Shell Is Active | This is the shell text | 5 s | 10 ms |</doc>
 <arguments>
 <arg>text</arg>
 <arg>*params</arg>
 </arguments>
+<doc>Wait until shell with given text is active
+or the optional timeout is reached.
+The optional interval is the delay between evaluating the condition after it has failed
+
+Example:
+| Wait Until Shell Is Active | This is the shell text | 5 s | 10 ms |
+</doc>
 </kw>
 <kw name="Wait Until Table Has Rows">
-<doc>Wait until the last selected table have the proper number of rows or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
-
-Example:
-| Wait Until Table Has Rows | 5 s | 10 ms |</doc>
 <arguments>
 <arg>rowCount</arg>
 <arg>*params</arg>
 </arguments>
+<doc>Wait until the last selected table have the proper number of rows
+or the optional timeout is reached.
+The optional interval is the delay between evaluating the condition after it has failed
+
+Example:
+| Wait Until Table Has Rows | 5 s | 10 ms |
+</doc>
 </kw>
 <kw name="Wait While Last Widget Is Enabled">
-<doc>Wait while the last selected widget is enabled or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
-
-Example:
-| Wait While Last Widget Is Enabled | 5 s | 10 ms |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
+<doc>Wait while the last selected widget is enabled
+or the optional timeout is reached.
+The optional interval is the delay between evaluating the condition after it has failed
+
+Example:
+| Wait While Last Widget Is Enabled | 5 s | 10 ms |
+</doc>
 </kw>
 <kw name="Wait While Shell Closes">
-<doc>Wait while the last selected shell widget closes or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
-
-Example:
-| Wait While Shell Closes | 5 s | 10 ms |</doc>
 <arguments>
 <arg>*params</arg>
 </arguments>
-</kw>
-<kw name="Wait While Shell Is Active">
-<doc>Wait while shell with given text is active or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
+<doc>Wait while the last selected shell widget closes
+or the optional timeout is reached.
+The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait While Shell Is Active | This is the shell text | 5 s | 10 s |</doc>
+| Wait While Shell Closes | 5 s | 10 ms |
+</doc>
+</kw>
+<kw name="Wait While Shell Is Active">
 <arguments>
 <arg>text</arg>
 <arg>*params</arg>
 </arguments>
-</kw>
-<kw name="Wait While Table Has Rows">
-<doc>Wait while the last selected table have the proper number of rows or the optional timeout is reached. The optional interval is the delay between evaluating the condition after it has failed
+<doc>Wait while shell with given text is active
+or the optional timeout is reached.
+The optional interval is the delay between evaluating the condition after it has failed
 
 Example:
-| Wait While Table Has Rows | 5 s | 10 ms |</doc>
+| Wait While Shell Is Active | This is the shell text | 5 s | 10 s | 
+</doc>
+</kw>
+<kw name="Wait While Table Has Rows">
 <arguments>
 <arg>rowCount</arg>
 <arg>*params</arg>
 </arguments>
+<doc>Wait while the last selected table have the proper number of rows
+or the optional timeout is reached.
+The optional interval is the delay between evaluating the condition after it has failed
+
+Example:
+| Wait While Table Has Rows | 5 s | 10 ms |
+</doc>
 </kw>
 </keywordspec>
