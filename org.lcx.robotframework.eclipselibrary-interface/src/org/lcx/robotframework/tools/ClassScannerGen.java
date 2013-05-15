@@ -13,7 +13,14 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
+import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEditor;
+import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
+import org.eclipse.swtbot.eclipse.gef.finder.SWTGefBot;
+import org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefEditor;
+import org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefView;
+import org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefViewer;
 import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.widgets.AbstractSWTBotControl;
 import org.lcx.robotframework.swtbot.eclipse.finder.AbstractSWTBotFactory;
@@ -21,7 +28,7 @@ import org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory;
 
 public class ClassScannerGen {
 
-	public static String directory = "D:/workspaces/Workspace_Mylyn_e35_sv3/org.lcx.robotframework.eclipselibrary-interface/gensrc/";
+	public static String directory = "D:/workspaces/workspace_rfswtbot/org.lcx.robotframework.eclipselibrary-interface/gensrc/";
 	public static String javaext = ".java";
 	
 	public static String oldPackage = "org.eclipse.swtbot";
@@ -49,6 +56,7 @@ public class ClassScannerGen {
 //			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.AbstractSWTBot");
 //			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.AbstractSWTBotControl");
 
+			/*
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotButton");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotCCombo");
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.widgets.SWTBotCheckBox");
@@ -97,6 +105,17 @@ public class ClassScannerGen {
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBotFactory", AbstractSWTBotFactory.class, false);
 			scanner.scanClass("org.eclipse.swtbot.swt.finder.SWTBot", SWTBotFactory.class, false);
 			scanner.scanClass("org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot", SWTBot.class, false);
+*/
+			
+			// GEF generation added on May 2013
+			
+			scanner.scanClass("org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefConnectionEditPart");
+			scanner.scanClass("org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefEditPart");
+			scanner.scanClass("org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefEditor", SWTBotEditor.class, true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefView", SWTBotView.class, true);
+			scanner.scanClass("org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefViewer");
+
+			scanner.scanClass("org.eclipse.swtbot.eclipse.gef.finder.SWTGefBot", SWTWorkbenchBot.class, false);
 
 			
 		} catch (Exception e) {

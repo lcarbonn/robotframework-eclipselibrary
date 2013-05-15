@@ -28,7 +28,6 @@ public class ClassScanner {
 			scanner.scanClass(SWTBotFactory.class);
 			scanner.scanClass(SWTBot.class);
 			scanner.scanClass(SWTBotWorkbenchPart.class);
-
 			
 		} catch (Exception e) {
 			e.printStackTrace();
