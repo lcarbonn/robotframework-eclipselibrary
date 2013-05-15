@@ -5,9 +5,9 @@
 	<description>
         Launching TestEclipse suite
   </description>
-	<property name="robotant"  value="libext/ant-robotframework-0.5.jar"/>
-	<property name="robotframework"  value="libext/robotframework-2.5.6.jar"/>
-	<property name="eclipselibrary"  value="dist/eclipselibrary-0.15-with-dependencies-e36.jar"/>
+	<property name="robotant"  value="libext/ant-robotframework-0.7.jar"/>
+	<property name="robotframework"  value="libext/robotframework-2.7b2.jar"/>
+	<property name="eclipselibrary"  value="dist/eclipselibrary-0.17-with-dependencies-e36.jar"/>
   
   <taskdef name="robotant"
       classname="org.lcx.robotframework.ant.RobotAnt"
@@ -16,6 +16,7 @@
 	<target name="robotant">
 		<robotant 
         jar="${robotframework}"
+		fork="true"
         data_sources="A_TestEclipseLibrary_installation.html"
         loglevel="TRACE"
         debugfile="robotant.log"
@@ -30,6 +31,7 @@
 	<target name="TestWidgets">
 		<robotant 
         jar="${robotframework}"
+		fork="true"
         data_sources="TestSamples"
         loglevel="TRACE"
         debugfile="robotant.log"
@@ -45,6 +47,7 @@
 	<target name="TestPerspectiveAndView">
 		<robotant 
         jar="${robotframework}"
+		fork="true"
         data_sources="TestSamples"
         loglevel="TRACE"
         debugfile="robotant.log"
@@ -60,6 +63,7 @@
 	<target name="TestEditors">
 		<robotant 
         jar="${robotframework}"
+		fork="true"
         data_sources="TestSamples"
         loglevel="TRACE"
         debugfile="robotant.log"
@@ -75,6 +79,7 @@
 	<target name="TestSamples">
 		<robotant 
         jar="${robotframework}"
+		fork="true"
         data_sources="TestSamples"
         loglevel="TRACE"
         debugfile="robotant.log"
