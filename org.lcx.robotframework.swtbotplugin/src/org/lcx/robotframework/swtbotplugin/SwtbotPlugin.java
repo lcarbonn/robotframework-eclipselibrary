@@ -3,6 +3,7 @@ package org.lcx.robotframework.swtbotplugin;
 import java.lang.reflect.Method;
 
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
+import org.eclipse.swtbot.eclipse.gef.finder.SWTGefBot;
 import org.eclipse.ui.IStartup;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -58,6 +59,12 @@ public class SwtbotPlugin extends AbstractUIPlugin {
 			Method ms = bridge.getDeclaredMethod("setSWTWORKBENCHBOT", oclass);
 			ms.invoke(null, bot);
 			
+			// set the SWTGefBot reference to the eclipse library bridge
+			SWTGefBot gefbot = new SWTGefBot();
+			Class<?> gclass = syscl.loadClass("java.lang.Object");
+			Method gs = bridge.getDeclaredMethod("setSWTGEFBOT", gclass);
+			gs.invoke(null, gefbot);
+
 		} catch (ClassNotFoundException e) {
 			// plugin is not started under robotframework, so not a problem
 			if(debug) System.out.println("SwtbotPlugin for RF on error");
