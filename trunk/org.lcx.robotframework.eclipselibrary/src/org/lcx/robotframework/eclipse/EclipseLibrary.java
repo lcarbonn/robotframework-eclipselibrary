@@ -64,6 +64,10 @@ public class EclipseLibrary extends AnnotationLibrary {
     }
 
     public String getKeywordDocumentation(String keywordName) {
+    	if (keywordName.equals("__intro__")) {
+            //return getIntro();
+    		return "";
+    	}
         return annotationLibrary.getKeywordDocumentation(keywordName);
     }
 
@@ -90,5 +94,5 @@ public class EclipseLibrary extends AnnotationLibrary {
         }
         return newArgs;
     }
-	
+    
 }
