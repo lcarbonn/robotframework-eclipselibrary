@@ -35,12 +35,8 @@ public class StartBridgeKeywords {
 			Class<?> service = syscl.loadClass("org.lcx.robotframework.swtbotplugin.service.SwtbotService");
 			Method mb = service.getDeclaredMethod("getSWTBot");
 			Object swtbot = mb.invoke(null);
-			Method mg = service.getDeclaredMethod("getSWTGefBot");
-			Object swtgefbot = mg.invoke(null);
 			SWTBotBridge.setSWTBOTCLASSLOADER(syscl);
 			SWTBotBridge.setSWTWORKBENCHBOT(swtbot);
-			SWTBotBridge.setSWTGEFBOT(swtgefbot);
-			
 							
 		} catch (Exception e) {
 			// plugin is not started under robotframework, so not a problem
