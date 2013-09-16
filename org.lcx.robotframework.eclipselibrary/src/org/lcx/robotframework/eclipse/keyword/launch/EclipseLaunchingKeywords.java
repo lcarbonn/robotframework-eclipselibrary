@@ -85,8 +85,8 @@ public class EclipseLaunchingKeywords {
     	et.setUncaughtExceptionHandler(eh);
 		log.info("Eclipse start is requested");
 
-		// Change the eclipse escurity manager in order to be able to launch it
-		SecurityManager previousSecurityManager = setSecurityManager();
+		// Change the eclipse security manager in order to be able to launch it
+		//SecurityManager previousSecurityManager = setSecurityManager();
 
 		// Start the thread Eclipse
 		et.start();
@@ -126,7 +126,7 @@ public class EclipseLaunchingKeywords {
         }
         
         // reset eclipse security manager to previous one
-        resetSecurityManager(previousSecurityManager);
+        //resetSecurityManager(previousSecurityManager);
         
     	return et;
     }

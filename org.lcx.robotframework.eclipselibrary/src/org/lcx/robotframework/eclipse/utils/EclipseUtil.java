@@ -33,8 +33,13 @@ public class EclipseUtil {
 		if(pathToEclipse!=null) {
 			URL url = new URL(pathToEclipse);
 			File eclipseLauncherJar = findTheJar(url.getFile());
-			log.debug("\t eclipseLauncherJar="+eclipseLauncherJar.getAbsolutePath());
-			loadTheJar(eclipseLauncherJar);
+			if(eclipseLauncherJar==null) {
+				log.debug("\t eclipse launcher jar not found=");
+			}
+			else {
+				log.debug("\t eclipseLauncherJar="+eclipseLauncherJar.getAbsolutePath());
+				loadTheJar(eclipseLauncherJar);
+			}
 		}
 	}
 

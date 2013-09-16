@@ -23,9 +23,8 @@
   <property name="log4j"  value="lib/log4j-1.2.13.jar"/>
   <property name="junit"  value="lib/junit-4.8.2.jar"/>
 
-  <property name="swtbot-jars"  value="lib-ext/org.eclipse.swtbot-2.0.3.20110219_0655-4d933cf-dev-e36/eclipse/plugins"/>
-  <property name="swtbot-plugin"  value="lib-ext/org.lcx.robotframework.swtbotplugin_1.2.0.201103090652.jar"/>
-	
+  <property name="swtbot-jars"  value="lib-ext"/>
+  <!--<property name="swtbot-plugin"  value="lib-ext/org.lcx.robotframework.swtbotplugin_1.2.0.201103090652.jar"/>-->
 
   <property name="jarfile"  value="eclipselibrary-${version}.jar"/>
   <property name="jarfilewithdeprcp"  value="eclipselibrary-${version}-with-dependencies.jar"/>
@@ -151,7 +150,6 @@
           <exclude name="**/*.RSA"/>
           <exclude name="**/*.MF"/>
         </fileset>
-        <zipfileset includes="**/*" src="${swtbot-plugin}"/>
     
         <manifest>
           <!-- Who is building this jar? -->
@@ -166,7 +164,7 @@
         </manifest>
 
     </jar>
-    <delete dir="${dist}/tempswt"/>
+    <!--<delete dir="${dist}/tempswt"/>-->
 
   </target>
   	
@@ -181,9 +179,10 @@
 
     <!-- Gen the HTML keyword documentation -->
     <exec executable="${jython}" dir=".">
-      <env key="JYTHONPATH" path="${pythonpath}"/>
+      <env key="PYTHONPATH" path="${pythonpath}"/>
+	  <env key="JYTHONPATH" path="${pythonpath}"/>
       <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdeprcp}"/>
-	  <!--<arg value="-Dpython.path=${pythonpath}"/>-->
+	  <arg value="-Dpython.path=${pythonpath}"/>
       <arg value="${libdoc}"/>
 	  <arg value="--version ${version}"/>
       <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>
