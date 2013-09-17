@@ -25,3 +25,15 @@ Robotframework Eclipse Library compatibility :
  * SWT and also JFaces jars (even if you don't use JFace, SWTBot need it)
  * `EclipseLibrary` jar with dependencies for swt
  * and robotframework standalone jar
+
+== Some feedbacks ==
+ * Cannot load 32-bit SWT libraries on 64-bit JVM
+just change java 64 to java 32
+
+ * Take care, this test only SWT widgets, not AWT.
+For AWT or Swing, please use swing library
+
+ * Can't find a control
+people should add "Start SWTBotBridge" keywords after "Start Application"
+when use "Start Application", it will block testcase , prefer "Start Application In Separate Thread"
+
