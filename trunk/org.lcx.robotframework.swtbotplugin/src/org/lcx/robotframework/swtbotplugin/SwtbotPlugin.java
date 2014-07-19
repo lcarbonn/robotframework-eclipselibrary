@@ -1,10 +1,5 @@
 package org.lcx.robotframework.swtbotplugin;
 
-import java.lang.reflect.Method;
-
-import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
-import org.eclipse.swtbot.eclipse.gef.finder.SWTGefBot;
-import org.eclipse.ui.IStartup;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -14,20 +9,15 @@ import org.osgi.framework.BundleContext;
 public class SwtbotPlugin extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.lcx.robotframework.swtbotplugin";
-	
-	private static final boolean debug = false;
+	public static final String PLUGIN_ID = "org.lcx.robotframework.eclplugin"; //$NON-NLS-1$
 
 	// The shared instance
 	private static SwtbotPlugin plugin;
 	
-	
-	// XXX reconsider if this is necessary
-	public static class SwtbotPluginStartup implements IStartup {
+	private static final boolean debug = true;
 
-		public void earlyStartup() {
-			// ignore
-		}
+	public static boolean isDebug() {
+		return debug;
 	}
 	
 	/**
@@ -42,36 +32,20 @@ public class SwtbotPlugin extends AbstractUIPlugin {
 	 */
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
-		plugin = this;
-		
-		if(debug) System.out.println("SwtbotPlugin for RF starting");
-		// set the plugin class loader to the eclipse library bridge
-		try {
-			ClassLoader syscl = ClassLoader.getSystemClassLoader();
-			Class<?> bridge = syscl.loadClass("org.lcx.robotframework.eclipse.bridge.SWTBotBridge");
-			Class<?> clclass = syscl.loadClass("java.lang.ClassLoader");
-			Method m = bridge.getDeclaredMethod("setSWTBOTCLASSLOADER", clclass);
-			m.invoke(null, this.getClass().getClassLoader());
-			
-			// set the SWTWorkbenchBot reference to the eclipse library bridge
-			SWTWorkbenchBot bot = new SWTWorkbenchBot();
-			Class<?> oclass = syscl.loadClass("java.lang.Object");
-			Method ms = bridge.getDeclaredMethod("setSWTWORKBENCHBOT", oclass);
-			ms.invoke(null, bot);
-			
-			// set the SWTGefBot reference to the eclipse library bridge
-			SWTGefBot gefbot = new SWTGefBot();
-			Class<?> gclass = syscl.loadClass("java.lang.Object");
-			Method gs = bridge.getDeclaredMethod("setSWTGEFBOT", gclass);
-			gs.invoke(null, gefbot);
+		plugin = this;		
 
-		} catch (ClassNotFoundException e) {
+		if(debug) System.out.println("RfPlugin for RF starting");
+		try {
+			
+			SwtbotThread thread = new SwtbotThread();
+			thread.start();
+
+		} catch (Exception e) {
 			// plugin is not started under robotframework, so not a problem
-			if(debug) System.out.println("SwtbotPlugin for RF on error");
+			if(debug) System.out.println("RfPlugin for RF on error");
 			if(debug) e.printStackTrace();
 		}
-		if(debug) System.out.println("SwtbotPlugin for RF started");
-		
+
 	}
 
 	/*
@@ -91,4 +65,5 @@ public class SwtbotPlugin extends AbstractUIPlugin {
 	public static SwtbotPlugin getDefault() {
 		return plugin;
 	}
+
 }
