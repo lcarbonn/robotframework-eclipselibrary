@@ -13,8 +13,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.lcx.robotframework.eclipse.LibraryLogger;
 import org.lcx.robotframework.swtbot.commons.AbstractSWTBotObject;
-import org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot;
-import org.lcx.robotframework.swtbot.eclipse.gef.finder.SWTGefBot;
 import org.lcx.robotframework.swtbot.swt.finder.waits.ICondition;
 
 /**
@@ -42,9 +40,11 @@ public class SWTBotBridge {
 	
 	public static Class<?> loadClass(String className) throws NoSuchMethodException, Exception {
 		if(SWTBOTCLASSLOADER==null) {
-			SWTWorkbenchBot.getSWTWorkbenchBot();
-			SWTGefBot.getSWTWorkbenchBot();
+			log.debug("First instanciation of Bots");
+//			SWTWorkbenchBot.getSWTWorkbenchBot();
+//			SWTGefBot.getSWTWorkbenchBot();
 		}
+		log.debug("Load class by SWTBOTCLASSLOADER: "+className);
 		Class<?> c = SWTBOTCLASSLOADER.loadClass(className);
 
 		return c;
@@ -97,7 +97,9 @@ public class SWTBotBridge {
 	
 	public static Object callMethod(Object instance, String methodName, Object... parameters) throws SWTBotBridgeException {
 		if(log.isDebugEnabled()) {
-			log.debug("=====================================");
+			log.debug("=================CallMathod====================");
+			log.debug("\t called method="+methodName);
+			log.debug("\t on instance of class="+instance.getClass().getName());
 		}
 		
 		try {
@@ -127,6 +129,7 @@ public class SWTBotBridge {
 					log.debug("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
 				}
 				log.debug("\t on instance of class="+instance.getClass().getName());
+				log.debug("=================CallMathod end====================");
 			}
 			
 			Method method = instance.getClass().getMethod(methodName, parameterTypes);
@@ -297,7 +300,7 @@ public class SWTBotBridge {
 
 	public static void setSWTBOTCLASSLOADER(ClassLoader sWTBOTCLASSLOADER) {
 		if(log.isDebugEnabled()) {
-			log.debug("SWTBOTCLASSLOADER cl before="+SWTBOTCLASSLOADER);
+			log.debug("SWTBOTCLASSLOADER set by plugin : cl before="+SWTBOTCLASSLOADER);
 		}
 		SWTBOTCLASSLOADER = sWTBOTCLASSLOADER;
 		if(sWTBOTCLASSLOADER==null) {
@@ -306,7 +309,7 @@ public class SWTBotBridge {
 		}
 
 		if(log.isDebugEnabled()) {
-			log.debug("SWTBOTCLASSLOADER cl after ="+SWTBOTCLASSLOADER);
+			log.debug("SWTBOTCLASSLOADER set by plugin : cl after ="+SWTBOTCLASSLOADER);
 		}
 	}
 
@@ -323,14 +326,14 @@ public class SWTBotBridge {
 
 	public static void setSWTWORKBENCHBOT(Object sWTWORKBENCHBOT) {
 		if(log.isDebugEnabled()) {
-			log.debug("SWTWORKBENCHBOT before="+SWTWORKBENCHBOT);
+			log.debug("SWTWORKBENCHBOT set by plugin : before="+SWTWORKBENCHBOT);
 		}
 		
 		SWTWORKBENCHBOT = sWTWORKBENCHBOT;
 		ISSWTWKBOTINITIATED = (sWTWORKBENCHBOT!=null);
 
 		if(log.isDebugEnabled()) {
-			log.debug("SWTWORKBENCHBOT after ="+SWTWORKBENCHBOT);
+			log.debug("SWTWORKBENCHBOT set by plugin : after ="+SWTWORKBENCHBOT);
 		}
 	}
 	
@@ -341,14 +344,14 @@ public class SWTBotBridge {
 
 	public static void setSWTGEFBOT(Object sWTGEFBOT) {
 		if(log.isDebugEnabled()) {
-			log.debug("SWTGEFBOT before="+SWTGEFBOT);
+			log.debug("SWTGEFBOT set by plugin : before="+SWTGEFBOT);
 		}
 		
 		SWTGEFBOT = sWTGEFBOT;
 		ISSWTGEFBOTINITIATED = (sWTGEFBOT!=null);
 
 		if(log.isDebugEnabled()) {
-			log.debug("SWTGEFBOT after ="+SWTGEFBOT);
+			log.debug("SWTGEFBOT set by plugin : after ="+SWTGEFBOT);
 		}
 	}
 
