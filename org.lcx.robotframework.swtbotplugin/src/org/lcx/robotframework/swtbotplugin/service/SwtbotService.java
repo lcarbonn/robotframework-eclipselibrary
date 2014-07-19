@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 L. Carbonnaux
+ * Copyright 2014 L. Carbonnaux
  */
 package org.lcx.robotframework.swtbotplugin.service;
 
