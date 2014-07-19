@@ -164,7 +164,7 @@
         </manifest>
 
     </jar>
-    <!--<delete dir="${dist}/tempswt"/>-->
+    <delete dir="${dist}/tempswt"/>
 
   </target>
   	
