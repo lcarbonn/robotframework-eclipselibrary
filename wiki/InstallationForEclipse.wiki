@@ -20,7 +20,7 @@ Robotframework Eclipse Library compatibility :
  
 == Eclipse library ==
  Download the latest eclipse library jar file.
- Since google code doesn't support anymore new downloads, files are shared [https://drive.google.com/folderview?id=0B9-7aWAWw2o8VHQ4V3JlU3d5bkU&usp=sharing here]
+ Since google code doesn't support anymore new downloads, files are shared [https://drive.google.com/folderview?id=0B9-7aWAWw2o8VHQ4V3JlU3d5bkU&usp=sharing#list here]
  * The jar with all dependencies : eclipselibrary-x.x-with-dependencies.jar
 where x.x is the version
 
