@@ -1,4 +1,12 @@
 #labels Featured
+==Changes 0.20 version==
+=============================================
+Fixed Bugs:
+-------------------------------------------
+  * #Issue 14  Support of GEF applications
+  * #Issue 15  Update JavaLib core version
+  * #Issue 17  Support of Eclipse E4 applications
+
 ==Changes 0.18 version==
 =============================================
 Fixed Bugs:
