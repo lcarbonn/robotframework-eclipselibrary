@@ -14,36 +14,35 @@ Robotframework Eclipse Library compatibility :
  * Robotframework Eclipse Library plugin for SWTBot update site
    `http://scrumvision.sourceforge.net/update-site/eclipselibrary`
  
- This plugin will ask you installing SWTBot normaly.
- * if not, SWTBot plugins should be installed from 
-  * SWTBot  update site for Eclipse 3.5 : `http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site`
-  * SWTBot update site for Eclipse 3.6 : `http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site`
-  * At least SWTBot for testing eclipse based plugins and applications (incubation) is needed
+ This plugin should ask you installing SWTBot normaly.
+ * if not, install form Eclipse
 
  
 == Eclipse library ==
  Download the latest eclipse library jar file.
- * The jar with all dependencies [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x-with-dependencies.jar]
+ Since google code doesn't support anymore new downloads, files are shared [https://drive.google.com/folderview?id=0B9-7aWAWw2o8VHQ4V3JlU3d5bkU&usp=sharing here]
+ * The jar with all dependencies : eclipselibrary-x.x-with-dependencies.jar
+where x.x is the version
 OR
- * The `EclipseLibrary` [http://code.google.com/p/robotframework-eclipselibrary/downloads/list eclipselibrary-x.x.jar]
- * The `JavalibCore`  [http://code.google.com/p/robotframework-javatools/downloads/list javalib-core-x.x.x-jar-with-dependencies.jar]
- * Since 0.18 version, the Eclipse Equinox launcher is now detected directly into the eclipse installation directorynder plugins
+ * The `EclipseLibrary` : eclipselibrary-x.x.jar
+ * The `JavalibCore` : [http://code.google.com/p/robotframework-javatools/downloads/list javalib-core-x.x.x-jar-with-dependencies.jar]
 
 Place files in 'lib' folder under your test suite
 
  Download the eclipsebot.bat robotframework script for Eclipse tests
- * [http://robotframework-eclipselibrary.googlecode.com/files/eclipsebot.bat eclipsebot.bat]
- * [http://robotframework-eclipselibrary.googlecode.com/files/run.py run.py] python is now updated for PermGen jvm option
+ * eclipsebot.bat
+ * run.py python is now updated for PermGen jvm option
 
  Add Eclipse Library resource file in your test case as a resource.(For sample user keywords)
- * [http://robotframework-eclipselibrary.googlecode.com/files/EclipseLibraryKeywords.html  EclipseLibraryKeywords.html]
+ * EclipseLibraryKeywords.html
 
  Add Eclipse Library xml keyword specification file under PYTHON_PATH for keyword completion under RIDE
- * [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/documentation/EclipseLibrary.xml  EclipseLibrary.xml]
+ * EclipseLibrary.xml
+ * EclipseLibrary.html
 
 == Running with Eclipse ==
  Test your installation
- * Download [http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/A_TestEclipseLibrary_installation.html installation test case]
+ * Download the installation test case : A_TestEclipseLibrary_installation.html
  * You may have to change test parameters as per your configuration:
 ||${eclipse_install} || file:/D:/eclipse/eclipse36 || # -install eclipse parameter to set eclipse installation directory	||	
 ||${eclipse_data} || file:/d:/bootstrap36-robot/rcpbot/workspace-blank || # -data eclipse parameter to set workspace ||
@@ -57,7 +56,7 @@ Place files in 'lib' folder under your test suite
  * It is then better to use [http://code.google.com/p/robotframework/wiki/JavaIntegration robotframework standalone jar] and set following parameters to the java command (eclipsebot.bat) :
 {{{
 @echo off
-set ECLIPSE_LIBRARY=lib/eclipselibrary-0.18-with-dependencies.jar
+set ECLIPSE_LIBRARY=lib/eclipselibrary-0.20-with-dependencies.jar
 set ROBOTFRAMEWORK=robotframework-2.7.7.jar
 java -Xms256m -Xmx512m -XX:PermSize=64M -XX:MaxPermSize=256M  -Xbootclasspath/a:%ECLIPSE_LIBRARY% -jar  %ROBOTFRAMEWORK% --debugfile jybot.log --loglevel TRACE --outputdir results %* 
 }}}
