@@ -41,6 +41,13 @@ Place files in 'lib' folder under your test suite
  * EclipseLibrary.xml
  * EclipseLibrary.html
 
+== E4 application ==
+For using eclipselibrary with E4 application, you should change the start level of the plugin in your product.
+This is done in config.ini under configuration folder.
+
+Here an example : reference\:file\:org.lcx.robotframework.swtbotplugin_1.5.0.201407171327.jar@4\:start
+
+
 == Running with Eclipse ==
  Test your installation
  * Download the installation test case : A_TestEclipseLibrary_installation.html
