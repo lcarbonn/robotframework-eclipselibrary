@@ -12,7 +12,7 @@ Robotframework Eclipse Library compatibility :
 == Eclipse Plugin ==
  Before using Eclipse Library, you should install a plugin under Eclipse.
  * Robotframework Eclipse Library plugin for SWTBot update site
-   `http://scrumvision.sourceforge.net/update-site/eclipselibrary`
+   `http://update-site.scrumvision.org/`
  
  This plugin should ask you installing SWTBot normaly.
  * if not, install form Eclipse Marketplace
