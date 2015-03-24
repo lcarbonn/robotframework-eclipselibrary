@@ -1,0 +1,31 @@
+# Eclipse Library concepts #
+
+Robotframework Eclipse Library is based on [SWTBot tool](http://www.eclipse.org/swtbot/).
+
+## Eclipse Library Mechanism ##
+  * Eclipse Library call SWTBot thru java reflexion API.
+  * The Eclipse Library plugin make the interface between Eclipse Library and its keywords and the Eclipse internal SWTBot plugin.
+
+## Using Eclipse Library keywords on widgets ##
+  * Eclipse Library manage a widget context.
+  * Only one widget is present in the context at one time.
+  * That means, you should put a widget into the context before calling methods on it.
+  * All keywords begining with "Find" will put the retieved widget in the context.
+  * Then you can call widget specific keywords on it.
+
+## Time Format ##
+`EclipseLibrary` use the same format of time than [RobotFramework](http://robotframework.googlecode.com/svn/tags/robotframework-2.5.4/doc/userguide/RobotFrameworkUserGuide.html#time-format)
+
+Example : 1d 2h 3m 4s 5ms
+
+## Eclipse Library limitations ##
+  * Eclipse Library uses _at the moment_ only standards eclipse components and SWT widgets.
+  * It interacts with simple SWTBot widget finders and actions
+  * Snapshots are now working (since v0.4)
+  * All direct SWT classes actions are not yet implemented (except SWT colors)
+  * keyboard shorcuts keywords and keyboard layout are not yet implemented
+
+## Sample test cases ##
+Those test cases are used for kind of unit testing of the library.
+You could use it as per samples.
+  * http://robotframework-eclipselibrary.googlecode.com/svn/trunk/org.lcx.robotframework.eclipselibrary-testcases/
