@@ -10,10 +10,10 @@
   <property name="testsrc" location="testsrc"/>
   <property name="build" location="build"/>
   <property name="reports" location="reports"/>
-  <property name="dist"  location="C:/RobotFramework/TestEclipse/dist"/>
-  <property name="doc"  value="C:/RobotFramework/TestEclipse/documentation"/>
-  <property name="jython"  location="C:/RobotFramework/jython2.5.1/jython.bat"/>
-  <property name="pythonpath"  location="C:/RobotFramework/Python26/Lib/site-packages"/>
+  <property name="dist"  location="D:/Dev/wsgit/org.lcx.robotframework.eclipselibrary-testcases/dist"/>
+  <property name="doc"  value="D:/Dev/wsgit/org.lcx.robotframework.eclipselibrary-testcases/documentation"/>
+  <property name="jython"  location="C:/Tools/jython2.5.4rc1/jython.bat"/>
+  <property name="pythonpath"  location="C:/Python27/Lib/site-packages"/>
   <!--<property name="libdoc"  location="${pythonpath}/libdoc.py"/>-->
   <property name="libdoc"  value="-m robot.libdoc"/>
   <property name="url" value="http://code.google.com/p/robotframework-eclipselibrary/"/>
@@ -30,7 +30,7 @@
   <property name="jarfilewithdeprcp"  value="eclipselibrary-${version}-with-dependencies.jar"/>
   <property name="jarfilewithdepswt"  value="eclipselibrary-${version}-with-dependencies-swt.jar"/>
   
-  <property name="classpath"  location="C:/outils/jdk1.6.0_23/lib/tools.jar;${javalibcore};${log4j};${junit};${dist}/${jarfilewithdeprcp}"/>
+  <property name="classpath"  location="C:/Tools/Java/jdk1.7.0_51/lib/tools.jar;${javalibcore};${log4j};${junit};${dist}/${jarfilewithdeprcp}"/>
 
   <target name="init">
     <!-- Create the time stamp -->
@@ -179,9 +179,10 @@
 
     <!-- Gen the HTML keyword documentation -->
     <exec executable="${jython}" dir=".">
-      <env key="PYTHONPATH" path="${pythonpath}"/>
+      <!--<env key="PYTHONPATH" path="${pythonpath}"/>
 	  <env key="JYTHONPATH" path="${pythonpath}"/>
-      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdeprcp}"/>
+	  -->
+      <env key="CLASSPATH" path="${dist}/${jarfilewithdeprcp}"/>
 	  <arg value="-Dpython.path=${pythonpath}"/>
       <arg value="${libdoc}"/>
 	  <arg value="--version ${version}"/>
@@ -198,8 +199,8 @@
 
     <!-- Gen the XML keyword file -->
     <exec executable="${jython}" dir=".">
-      <env key="JYTHONPATH" path="${pythonpath}"/>
-      <env key="CLASSPATH" path="C:\outils\jdk1.5.0_12\lib\tools.jar;${dist}/${jarfilewithdeprcp}"/>
+      <!--<env key="JYTHONPATH" path="${pythonpath}"/>-->
+      <env key="CLASSPATH" path="${dist}/${jarfilewithdeprcp}"/>
       <arg value="${libdoc}"/>
 	  <arg value="--version ${version}"/>
       <arg value="org.lcx.robotframework.eclipse.EclipseLibrary"/>

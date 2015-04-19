@@ -2,17 +2,17 @@
 <feature
       id="org.lcx.robotframework.swtbot_feature"
       label="RobotFramework EclipseLibrary"
-      version="1.4.0.qualifier"
+      version="1.5.0.qualifier"
       provider-name="scrumvision.org"
       plugin="org.lcx.robotframework.swtbotplugin">
 
-   <description url="http://code.google.com/p/robotframework-eclipselibrary/">
+   <description url="https://github.com/lcarbonn/robotframework-eclipselibrary">
       Robot Framework test library for Eclipse RCP applications using
 SWT
    </description>
 
-   <copyright url="http://code.google.com/p/robotframework-eclipselibrary/">
-      Copyright (c) 2010 L.Carbonnaux.
+   <copyright url="https://github.com/lcarbonn/robotframework-eclipselibrary">
+      Copyright (c) 2015 L.Carbonnaux.
    </copyright>
 
    <license url="http://www.gnu.org/licenses/gpl.html">
@@ -862,7 +862,7 @@ Public License instead of this License.  But first, please read
    </license>
 
    <url>
-      <update label="Robotframework Eclipse Library plugin for SWTBot" url="http://scrumvision.sourceforge.net/update-site/eclipselibrary"/>
+      <update label="Robotframework Eclipse Library plugin for SWTBot" url="http://update-site.scrumvision.org/"/>
    </url>
 
    <requires>

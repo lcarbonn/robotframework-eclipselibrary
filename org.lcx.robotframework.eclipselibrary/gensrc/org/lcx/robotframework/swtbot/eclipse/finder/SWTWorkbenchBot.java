@@ -30,6 +30,7 @@ public class SWTWorkbenchBot extends SWTBot {
 		System.out.println("Instanciation of SWTWorkbenchBot");
 		
 		distantObject = SWTBotBridge.getSWTWORKBENCHBOT();
+		//TODO if eclipse is not started, throw a nupexcep
 		Object o = SWTBotBridge.callMethod(distantObject, "getFinder");
 		SWTBotBridge.callMethod(o, "setShouldFindInvisibleControls", true);
 		SWTBotBridge.setStaticField("org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences",

@@ -47,6 +47,21 @@ public class ShortcutParser {
 	 * @return
 	 */
 	public static char parseCar(String text) throws SWTBotBridgeException {
+		//Check if keycode is passed
+		String[] s = text.split("\\+");
+		for (int i = 0; i < s.length; i++) {
+			String ks = s[i].trim();
+			if(ks.equalsIgnoreCase("SPACE")) {
+				return ' ';
+			}
+			else if(ks.equalsIgnoreCase("ENTER")) {
+				return '\r';
+			}
+			else if(ks.equalsIgnoreCase("CR")) {
+				return '\r';
+			}
+		}
+		
 		if(text.length()>0) return text.charAt(text.length()-1);
 		throw new SWTBotBridgeException("No character specified");
 	}

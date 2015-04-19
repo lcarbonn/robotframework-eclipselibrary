@@ -13,6 +13,8 @@ import org.eclipse.swt.custom.CTabFolder;
 import org.eclipse.swt.custom.CTabItem;
 import org.eclipse.swt.custom.StyleRange;
 import org.eclipse.swt.custom.StyledText;
+import org.eclipse.swt.events.KeyEvent;
+import org.eclipse.swt.events.KeyListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.GlyphMetrics;
@@ -546,9 +548,54 @@ public class View extends ViewPart {
 		Bullet bullet0 = new Bullet (style0);
 		text.setLineBullet(1, 2, bullet0);
 		
-		Text t = new Text(composite, SWT.BORDER);
-		t.setText("this is the text");
+		final Text t = new Text(composite, SWT.BORDER);
+		t.setText("this is the text in the text widget");
 		t.setToolTipText("this is the tooltip text");
+		
+		t.addKeyListener(new KeyListener() {
+            @Override
+            public void keyReleased(KeyEvent keyEvent) {
+              
+            }
+           @Override
+            public void keyPressed(KeyEvent e) {
+                String string = "";
+                
+                if ((e.stateMask & SWT.ALT) != 0) string += "ALT - keyCode = " + e.keyCode;
+				if ((e.stateMask & SWT.CTRL) != 0) string += "CTRL - keyCode = " + e.keyCode;
+				if ((e.stateMask & SWT.SHIFT) != 0) string += "SHIFT - keyCode = " + e.keyCode;
+ 
+				if(e.keyCode == SWT.SPACE)
+				{
+					string += " SPACE - keyCode = " + e.keyCode;
+				}
+
+				if(e.keyCode == SWT.CR)
+				{
+					string += " ENTER - keyCode = " + e.keyCode;
+				}
+ 
+				if(e.keyCode == SWT.ESC)
+				{
+					string += " ESCAPE - keyCode = " + e.keyCode;
+				}
+ 
+               
+                // Method for autocompletion
+                if ((e.character == SWT.SPACE) && ((e.stateMask & SWT.CTRL) != 0)) {
+	                string = "CTRL+SPACE";
+	                //I think here it loads all data related to that project.
+                }
+                if ((e.character == SWT.CR) && ((e.stateMask & SWT.CTRL) != 0)) {
+	                string = "CTRL+ENTER";
+	                //I think here it loads all data related to that project.
+                }
+
+                t.setText(string);
+                System.out.println(string);
+           }
+       });
+
 		
 	}
 

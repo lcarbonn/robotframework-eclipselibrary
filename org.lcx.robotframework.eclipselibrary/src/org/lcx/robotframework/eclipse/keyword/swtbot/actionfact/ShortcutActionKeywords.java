@@ -21,7 +21,9 @@ public class ShortcutActionKeywords {
             + "| Press Shortcut | TAB |\n"
             + "modification  keys are : the combination of ALT | CTRL | SHIFT | COMMAND.\n"
             + "available key codes are : F1 to F12, UP, DOWN, LEFT, RIGHT, HOME, END, INSERT, PAGE_UP, PAGE_DOWN, TAB\n"
-            + "c the character\n")
+            + "c the character\n"
+            + "use SPACE (like CTRL+SPACE) for space keypad\n"
+    		+ "use ENTER or CR (like CTRL+ENTER) for enter keypad\n")
     @ArgumentNames({"shortcut"})
         public void pressShortcut(String shortcut) throws SWTBotBridgeException {
     		AbstractSWTBot obot = (AbstractSWTBot)Context.getCurrentWidget(AbstractSWTBot.class);

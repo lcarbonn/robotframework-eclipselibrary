@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="Robotframework Eclipse Library plugin for SWTBot" url="http://scrumvision.sourceforge.net/update-site/eclipselibrary">
+   <description name="Robotframework Eclipse Library plugin for SWTBot" url="http://update-site.scrumvision.org/">
       Robotframework Eclipse Library plugin for SWTBot
    </description>
    <feature url="features/org.lcx.robotframework.swtbot_feature_1.5.0.201407191429.jar" id="org.lcx.robotframework.swtbot_feature" version="1.5.0.201407191429">

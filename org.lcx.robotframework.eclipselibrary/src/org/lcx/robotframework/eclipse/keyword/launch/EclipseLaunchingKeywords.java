@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 L. Carbonnaux
+ * Copyright 2015 L. Carbonnaux
  */
 
 package org.lcx.robotframework.eclipse.keyword.launch;
@@ -8,7 +8,6 @@ import java.lang.Thread.UncaughtExceptionHandler;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URLClassLoader;
-import java.security.Permission;
 
 import org.apache.log4j.Logger;
 import org.lcx.robotframework.eclipse.LibraryLogger;
@@ -178,30 +177,30 @@ public class EclipseLaunchingKeywords {
         }
     }
 
-    private void resetSecurityManager(SecurityManager previousSecurityManager) {
-        System.setSecurityManager(previousSecurityManager);
-	}
-
-	private SecurityManager setSecurityManager() {
-		// install security manager to avoid System.exit() called from lib
-		SecurityManager previousSecurityManager = System.getSecurityManager();
-
-		final SecurityManager securityManager         = new SecurityManager() {
-		    @Override public void checkPermission(final Permission permission) {
-		      if (permission.getName() != null && permission.getName().startsWith("exitVM")) {
-		        throw new SecurityException();
-		      }
-		    }
-		    @Override
-		    public void checkExit(int status) {
-		            if(status!=0) {
-		            	throw new SecurityException("Eclipse exit with status="+status+
-		            			", see log for detail and check StartEclipse keyword parameters");
-		            }
-		    }
-		  };
-		System.setSecurityManager(securityManager);
-		return previousSecurityManager;
-	}
-
+//    private void resetSecurityManager(SecurityManager previousSecurityManager) {
+//        System.setSecurityManager(previousSecurityManager);
+//	}
+//
+//	private SecurityManager setSecurityManager() {
+//		// install security manager to avoid System.exit() called from lib
+//		SecurityManager previousSecurityManager = System.getSecurityManager();
+//
+//		final SecurityManager securityManager         = new SecurityManager() {
+//		    @Override public void checkPermission(final Permission permission) {
+//		      if (permission.getName() != null && permission.getName().startsWith("exitVM")) {
+//		        throw new SecurityException();
+//		      }
+//		    }
+//		    @Override
+//		    public void checkExit(int status) {
+//		            if(status!=0) {
+//		            	throw new SecurityException("Eclipse exit with status="+status+
+//		            			", see log for detail and check StartEclipse keyword parameters");
+//		            }
+//		    }
+//		  };
+//		System.setSecurityManager(securityManager);
+//		return previousSecurityManager;
+//	}
+//
 }
