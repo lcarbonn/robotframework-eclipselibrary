@@ -110,11 +110,11 @@
             <attribute name="Built-By" value="Laurent Carbonnaux"/>
             <attribute name="Main-Class" value="EclipseLibrary"/>
             <!-- Information about the program itself -->
-            <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
+            <attribute name="Implementation-Vendor" value="laurent.carbonnaux.org"/>
             <attribute name="Implementation-Title" value="EclipseLibrary for Eclipse 3.5 and higher"/>
             <attribute name="Implementation-Version" value="${version}"/>
             <attribute name="Implementation-URL" value="${url}"/>
-			<attribute name="Build-Jdk" value="1.6.0_23"/>
+			<attribute name="Build-Jdk" value="1.7.0_51"/>
         </manifest>
       
     </jar>
@@ -156,11 +156,11 @@
           <attribute name="Built-By" value="Laurent Carbonnaux"/>
           <attribute name="Main-Class" value="EclipseLibrary"/>
           <!-- Information about the program itself -->
-          <attribute name="Implementation-Vendor" value="ScrumVision.org"/>
+          <attribute name="Implementation-Vendor" value="laurent.carbonnaux.org"/>
           <attribute name="Implementation-Title" value="EclipseLibrary for java/SWT"/>
           <attribute name="Implementation-Version" value="${version}"/>
           <attribute name="Implementation-URL" value="${url}"/>
-          <attribute name="Build-Jdk" value="1.6.0_23"/>
+          <attribute name="Build-Jdk" value="1.7.0_51"/>
         </manifest>
 
     </jar>
