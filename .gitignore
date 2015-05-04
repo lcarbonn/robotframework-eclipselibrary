@@ -1,0 +1,5 @@
+# ignored files and folders
+build/
+results/
+screenshots/
+EclipseLibrary.log
