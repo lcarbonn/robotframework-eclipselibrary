@@ -5,18 +5,30 @@
   <modelVersion>4.0.0</modelVersion>
 
   <!-- The Basics -->
-  <groupId>swtbotplugin</groupId>
-  <artifactId>swtbotplugin</artifactId>
-  <name>swtbotplugin</name>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  
+   <parent>
+		<groupId>org.lcx.robotframework</groupId>
+		<artifactId>org.lcx.robotframework.parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+  
+  
+  <artifactId>org.lcx.robotframework.swtbotplugin</artifactId>
+  <version>1.5.0-SNAPSHOT</version>
+  <packaging>eclipse-plugin</packaging>
+  
+  
+
+  
+  
+  
 
   <properties>
     <sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>
   </properties>
 
   <!-- Build Settings -->
-  <build>
+  <!-- <build>
    <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -28,17 +40,17 @@
       </plugin>
     </plugins>
 
-  </build>
+  </build> -->
 
-  <modules>
+<!--   <modules>
     <module>sonar/coremodule</module>
-  </modules>
+  </modules> -->
 
   <!-- Environment Settings -->
-  <pluginRepositories>
+<!--   <pluginRepositories>
     <pluginRepository>
       <id>Codehaus repository</id>
       <url>http://repository.codehaus.org</url>
     </pluginRepository>
   </pluginRepositories>
-</project>
+ --></project>

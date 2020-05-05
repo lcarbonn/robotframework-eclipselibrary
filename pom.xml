@@ -71,6 +71,9 @@
 	<!-- the modules that should be built together -->
 	<modules>
 		<module>org.lcx.robotframework.tp</module>
+		<module>org.lcx.robotframework.swtbotplugin</module>
+		<module>org.lcx.robotframework.eclipselibrary</module>
+		<module>org.lcx.robotframework.swtbot.feature</module>
 		<!--  <module>org.lcx.robotframework.swtbot-feature</module>
 		<module>org.lcx.robotframework.swtbot-repository</module>   -->
 	</modules>

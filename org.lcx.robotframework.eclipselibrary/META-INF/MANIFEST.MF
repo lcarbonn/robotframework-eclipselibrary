@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eclipselibrary
+Bundle-SymbolicName: org.lcx.robotframework.eclipselibrary
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: lib-ext/javalib-core-0.8.1-jar-with-dependencies.jar,
+ .

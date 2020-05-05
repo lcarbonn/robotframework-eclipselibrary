@@ -1,0 +1,45 @@
+target "RobotFramework SimRel0320"
+
+with source requirements 
+
+
+
+
+location "http://download.eclipse.org/releases/2020-03" {
+	
+	// A FILTRER LA DEDANS ...
+	
+	
+	org.eclipse.rcp.feature.group
+	org.eclipse.ant.core
+	org.apache.commons.io
+	org.eclipse.pde.feature.group
+	org.eclipse.emf.ant
+	org.eclipse.emf.sdk.feature.group
+	org.eclipse.emf.codegen.ecore.feature.group
+	org.eclipse.emf.importer.ecore 
+	org.eclipse.emf.importer 
+	org.eclipse.ant.launching
+	org.eclipse.core.runtime
+
+	org.junit
+	org.eclipse.jdt.junit.runtime
+	org.eclipse.sdk.feature.group
+	
+}
+
+// Add support for java 11 (removed javax.annotation)...
+/* location "https://download.eclipse.org/tools/orbit/downloads/drops/R20200224183213/repository" {
+	javax.annotation
+} */
+
+location "https://download.eclipse.org/technology/swtbot/releases/latest/" {
+org.eclipse.swtbot.junit4_x
+org.eclipse.swtbot.eclipse.test.junit.feature.group
+org.eclipse.swtbot.nebula.nattable.feature.group
+org.eclipse.swtbot.eclipse.gef.feature.group
+}
+
+
+
+

@@ -1,5 +1,7 @@
 # ignored files and folders
 build/
 results/
+bin/
 screenshots/
+target/
 EclipseLibrary.log

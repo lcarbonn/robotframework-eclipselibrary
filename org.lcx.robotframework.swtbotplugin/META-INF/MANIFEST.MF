@@ -5,10 +5,11 @@ Bundle-SymbolicName: org.lcx.robotframework.swtbotplugin;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.lcx.robotframework.swtbotplugin.SwtbotPlugin
 Bundle-Vendor: scrumvision.org
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: org.osgi.framework;version="1.3.0"
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.swtbot.eclipse.finder,
  org.eclipse.swtbot.eclipse.gef.finder
+Automatic-Module-Name: org.lcx.robotframework.swtbotplugin
