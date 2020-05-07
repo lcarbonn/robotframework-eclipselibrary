@@ -10,10 +10,10 @@
   <property name="testsrc" location="testsrc"/>
   <property name="build" location="build"/>
   <property name="reports" location="reports"/>
-  <property name="dist"  location="D:/Dev/wsgit/org.lcx.robotframework.eclipselibrary-testcases/dist"/>
-  <property name="doc"  value="D:/Dev/wsgit/org.lcx.robotframework.eclipselibrary-testcases/documentation"/>
+  <property name="dist"  location="C:/Users/jbeaumont/Documents/ALTRAN/git_repository/tas/robotframework-eclipselibrary/org.lcx.robotframework.eclipselibrary-testcases/dist"/>
+  <property name="doc"  value="C:/Users/jbeaumont/Documents/ALTRAN/git_repository/tas/robotframework-eclipselibrary/org.lcx.robotframework.eclipselibrary-testcases/documentation"/>
   <property name="jython"  location="C:/Tools/jython2.5.4rc1/jython.bat"/>
-  <property name="pythonpath"  location="C:/Python27/Lib/site-packages"/>
+  <property name="pythonpath"  location="C:/robot/app/Portable Python-3.7.6 x64/App/Python/Lib/site-packages"/>
   <!--<property name="libdoc"  location="${pythonpath}/libdoc.py"/>-->
   <property name="libdoc"  value="-m robot.libdoc"/>
   <property name="url" value="http://code.google.com/p/robotframework-eclipselibrary/"/>

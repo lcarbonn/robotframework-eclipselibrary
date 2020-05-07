@@ -62,6 +62,11 @@ public class AbstractSWTBot extends AbstractSWTBotObject {
 		return s;
 	}
 	
+	public String getId() throws SWTBotBridgeException {
+		String s = (String)SWTBotBridge.callMethod(distantObject, "getId");
+		return s;
+	}
+	
 	public Color backgroundColor() throws SWTBotBridgeException {
 		Object color = SWTBotBridge.callMethod(distantObject, "backgroundColor");
 		Integer red = (Integer)SWTBotBridge.callMethod(color, "getRed");

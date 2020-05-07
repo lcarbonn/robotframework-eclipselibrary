@@ -53,6 +53,15 @@ public class LabelActionKeywords {
     		return label.getText();
     	}
 	
+	@RobotKeyword("Get the Id of the label\n\n"
+            + "Example:\n"
+            + "| Get Label Id |\n")
+//    @ArgumentNames({"text"})
+        public String getLabelId() throws SWTBotBridgeException {
+    		SWTBotLabel label = (SWTBotLabel)Context.getCurrentWidget(SWTBotLabel.class);
+    		return label.getId();
+    	}
+	
 	@RobotKeyword("Get the tooltip text of the label\n\n"
             + "Example:\n"
             + "| Get Label Tooltip Text |\n")

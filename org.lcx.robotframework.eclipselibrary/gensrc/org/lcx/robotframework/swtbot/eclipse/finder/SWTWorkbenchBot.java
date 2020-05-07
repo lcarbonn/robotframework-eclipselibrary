@@ -66,6 +66,14 @@ public class SWTWorkbenchBot extends SWTBot {
 		return w;
 	}
 
+	//public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.activePart()
+	public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView activePart() throws SWTBotBridgeException {
+		Object o = SWTBotBridge.callMethod(distantObject, "activePart");
+		org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView w = new SWTBotView(o);
+		Context.setCurrentWidget(w);
+		return w;
+	}
+		
 	//public void org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.closeAllEditors()
 	public void closeAllEditors() throws SWTBotBridgeException {
 		SWTBotBridge.callMethod(distantObject, "closeAllEditors");
@@ -168,6 +176,29 @@ public class SWTWorkbenchBot extends SWTBot {
 		return w;
 	}
 
+	//public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.viewByTitle(java.lang.String)
+		public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView viewByPartName(java.lang.String param0) throws SWTBotBridgeException {
+			Object o = SWTBotBridge.callMethod(distantObject, "viewByPartName", param0);
+			org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView w = new SWTBotView(o);
+			Context.setCurrentWidget(w);
+			return w;
+		}
+	//public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.partById(java.lang.String)
+	public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView partById(java.lang.String param0) throws SWTBotBridgeException {
+		Object o = SWTBotBridge.callMethod(distantObject, "partById", param0);
+		org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView w = new SWTBotView(o);
+		Context.setCurrentWidget(w);
+		return w;
+	}
+
+	//public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.partByTitle(java.lang.String)
+	public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView partByTitle(java.lang.String param0) throws SWTBotBridgeException {
+		Object o = SWTBotBridge.callMethod(distantObject, "partByTitle", param0);
+		org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView w = new SWTBotView(o);
+		Context.setCurrentWidget(w);
+		return w;
+	}
+
 	//public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.view(org.hamcrest.Matcher)
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.views()
 	@SuppressWarnings("unchecked")
@@ -176,6 +207,12 @@ public class SWTWorkbenchBot extends SWTBot {
 
 	}
 
-	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.views(org.hamcrest.Matcher)
+	//public org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.part(org.hamcrest.Matcher)
+	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.SWTWorkbenchBot.parts()
+	@SuppressWarnings("unchecked")
+	public java.util.List<org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView> parts() throws SWTBotBridgeException {
+		return (List)SWTBotBridge.callMethodReturnSWTBotList(distantObject, "parts", org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotView.class);
+
+	}
 
 }

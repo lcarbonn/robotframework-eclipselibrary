@@ -33,6 +33,15 @@ public class ViewActionKeywords {
     		view.close();
     	}
 
+	@RobotKeyword("Get the Id of the view\n\n"
+            + "Example:\n"
+            + "| Get View Id |\n")
+//    @ArgumentNames({"text"})
+        public String getViewId() throws SWTBotBridgeException {
+    		SWTBotView view = (SWTBotView)Context.getCurrentWidget(SWTBotView.class);
+    		return view.getId();
+    	}
+	
 	@RobotKeyword("Get the title of the view\n\n"
             + "Example:\n"
             + "| Get View Title |\n")

@@ -42,6 +42,15 @@ public class ViewFinderKeywords {
     	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
 		return bot.viewByTitle(title);
 	}
+	
+	@RobotKeyword("Find the view by its part title\n\n"
+            + "Example:\n"
+            + "| Find View By Part Title | title |\n")
+    @ArgumentNames({"tile"})
+    public SWTBotView findViewByPartTitle(String title) throws SWTBotBridgeException {
+    	SWTWorkbenchBot bot = SWTWorkbenchBot.getSWTWorkbenchBot();
+		return bot.viewByPartName(title);
+	}
 
 	@RobotKeyword("List all the views title\n\n"
             + "Example:\n"

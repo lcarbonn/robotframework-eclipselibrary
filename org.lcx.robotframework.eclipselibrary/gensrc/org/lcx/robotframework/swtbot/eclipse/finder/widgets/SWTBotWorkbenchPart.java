@@ -39,6 +39,12 @@ public class SWTBotWorkbenchPart extends AbstractSWTBotObject {
 		return (String)SWTBotBridge.callMethod(distantObject, "getTitle");
 	}
 
+	//public org.eclipse.ui.IWorkbenchPartReference org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart.getReference()
+	//public java.lang.String org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart.getTitle()
+	public java.lang.String getId() throws SWTBotBridgeException {
+		return (String)SWTBotBridge.callMethod(distantObject, "getId");
+	}
+		
 	//public java.util.List org.lcx.robotframework.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart.getToolbarButtons()
 	@SuppressWarnings("unchecked")
 	public java.util.List<org.lcx.robotframework.swtbot.swt.finder.widgets.SWTBotToolbarButton> getToolbarButtons() throws SWTBotBridgeException {

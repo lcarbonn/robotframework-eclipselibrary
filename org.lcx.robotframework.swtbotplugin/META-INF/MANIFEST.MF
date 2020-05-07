@@ -11,5 +11,9 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.swtbot.eclipse.finder,
- org.eclipse.swtbot.eclipse.gef.finder
-Automatic-Module-Name: org.lcx.robotframework.swtbotplugin
+ org.eclipse.swtbot.eclipse.gef.finder,
+ org.eclipse.swtbot.e4.finder,
+ org.eclipse.e4.core.contexts,
+ org.eclipse.e4.ui.workbench,
+ org.eclipse.e4.ui.model.workbench,
+ org.eclipse.swtbot.nebula.nattable.finder

@@ -1,14 +1,11 @@
 /*
  * Copyright 2010 L. Carbonnaux
+ * 2020 - AnnotationLibrary upgrade and remote library extension - J. Beaumont
  */
 package org.lcx.robotframework.eclipse;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-
-import org.apache.log4j.Logger;
 import org.robotframework.javalib.library.AnnotationLibrary;
+import org.robotframework.remoteserver.RemoteServer;
 
 /**
  * Eclipse Library annotation class
@@ -16,74 +13,39 @@ import org.robotframework.javalib.library.AnnotationLibrary;
  */
 public class EclipseLibrary extends AnnotationLibrary {
 
-	private Logger log = LibraryLogger.getLogger();
-	
-    public static final String ROBOT_LIBRARY_SCOPE = "GLOBAL";
+	public static final String ROBOT_LIBRARY_SCOPE = "GLOBAL";
     public static final String ROBOT_LIBRARY_VERSION = Configuration.getString("version"); //$NON-NLS-1$
-
-    private final AnnotationLibrary annotationLibrary = new AnnotationLibrary("org/lcx/robotframework/eclipse/keyword/**/*.class");
+    public static final String KEYWORD_PATTERN = "org/lcx/robotframework/eclipse/keyword/**/*.class";
     public static EclipseLibrary instance;
 
     public EclipseLibrary() {
-        this(Collections.<String>emptyList());
-    }
-    
-    @SuppressWarnings("serial")
-	protected EclipseLibrary(final String keywordPattern) {
-        this(new ArrayList<String>() {{ add(keywordPattern); }});
-    }
-
-    protected EclipseLibrary(Collection<String>  keywordPatterns) {
-        addKeywordPatterns(keywordPatterns);
-//        disableOutput();
-//        setDefaultTimeouts();
+        super();
+        addKeywordPattern(KEYWORD_PATTERN);
+        // init annotations
+        createKeywordFactory();
         instance = this;
     }
+    
+    // ******************************
+    // AnnotationLibrary overrides
+    // ******************************
 
-    private void addKeywordPatterns(Collection<String> keywordPatterns) {
-        for (String pattern : keywordPatterns) {
-            annotationLibrary.addKeywordPattern(pattern);
-        }
-    }
-
+    @Override
     public Object runKeyword(String keywordName, Object[] args) {
-    	if(log.isDebugEnabled()) {
-    		log.debug("runKeyword:"+keywordName); //$NON-NLS-1$
-    		log.debug("\targs:"+args.length); //$NON-NLS-1$
-    		int i=0;
-    		for (Object object : args) {
-    			log.debug("\t\targ["+i+"]:"+object+", of class="+object.getClass().getName()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-    			i++;
-			}
-    	}
-        return annotationLibrary.runKeyword(keywordName, toStrings(args));
+        return super.runKeyword(keywordName, toStrings(args));
     }
+    
+    // ******************************
+    // Internal Methods
+    // ******************************
 
-    public String[] getKeywordArguments(String keywordName) {
-        return annotationLibrary.getKeywordArguments(keywordName);
-    }
-
-    public String getKeywordDocumentation(String keywordName) {
-    	if (keywordName.equals("__intro__")) {
-            //return getIntro();
-    		return "";
-    	}
-        return annotationLibrary.getKeywordDocumentation(keywordName);
-    }
-
-    public String[] getKeywordNames() {
-        return annotationLibrary.getKeywordNames();
-    }
-
-//    private void setDefaultTimeouts() {
-//        new TimeoutKeywords().setJemmyTimeouts("10");
-//    }
-
-//    private void disableOutput() {
-//        JemmyProperties.setCurrentOutput(TestOut.getNullOutput());
-//    }
-
-    private Object[] toStrings(Object[] args) {
+    /**
+     * Convert all arguments in the object array to string
+     *
+     * @param args The arguments
+     * @return The arguments converted in String
+     */
+     private Object[] toStrings(Object[] args) {
         Object[] newArgs = new Object[args.length];
         for (int i = 0; i < newArgs.length; i++) {
             if (args[i].getClass().isArray()) {
@@ -95,4 +57,19 @@ public class EclipseLibrary extends AnnotationLibrary {
         return newArgs;
     }
     
+    /**
+     * Starts a server in port 8270 with the library to allow remote library in Robot Framework using jrobotremoteserver
+     * this repository can be found at https://github.com/robotframework/jrobotremoteserver
+     *
+     * @param args
+     * @throws Exception
+     */
+	public static void main(String[] args) throws Exception {
+		// use jrobotremoteserver to start library as a server in port 8270
+		RemoteServer.configureLogging();
+        RemoteServer server = new RemoteServer(8270);
+        server.putLibrary("/", new EclipseLibrary());
+        server.start();
+    }
+	
 }

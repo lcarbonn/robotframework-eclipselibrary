@@ -146,6 +146,15 @@ public class ComboActionKeywords {
     		return combo.getText();
     	}
 	
+	@RobotKeyword("Get the Id of the combo\n\n"
+            + "Example:\n"
+            + "| Get Combo Id |\n")
+//    @ArgumentNames({"text"})
+        public String getComboId() throws SWTBotBridgeException {
+    		SWTBotCombo combo = (SWTBotCombo)Context.getCurrentWidget(SWTBotCombo.class);
+    		return combo.getId();
+    	}
+	
 	@RobotKeyword("Get the tooltip text of the combo\n\n"
             + "Example:\n"
             + "| Get Combo Tooltip Text |\n")

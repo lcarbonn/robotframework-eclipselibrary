@@ -1,5 +1,6 @@
 /*
  * Copyright 2013 L. Carbonnaux
+ * 2020 Nebula Nattable extension by J. Beaumont
  */
 package org.lcx.robotframework.eclipse.bridge;
 
@@ -29,9 +30,11 @@ public class SWTBotBridge {
 	private static ClassLoader SWTBOTCLASSLOADER = null;
 	private static Object SWTWORKBENCHBOT = null;
 	private static Object SWTGEFBOT = null;
+	private static Object SWTNATTABLEBOT = null;
 	
 	private static boolean ISSWTWKBOTINITIATED = false;
 	private static boolean ISSWTGEFBOTINITIATED = false;
+	private static boolean ISSWTNATTABLEBOTINITIATED = false;
 	
 	
 	private SWTBotBridge() {
@@ -97,7 +100,7 @@ public class SWTBotBridge {
 	
 	public static Object callMethod(Object instance, String methodName, Object... parameters) throws SWTBotBridgeException {
 		if(log.isDebugEnabled()) {
-			log.debug("=================CallMathod====================");
+			log.debug("=================CallMethod====================");
 			log.debug("\t called method="+methodName);
 			log.debug("\t on instance of class="+instance.getClass().getName());
 		}
@@ -118,18 +121,12 @@ public class SWTBotBridge {
 				}
 			}
 			if(log.isDebugEnabled()) {
-				for(Method m : instance.getClass().getMethods()) {
-					log.debug("method="+m);
-					for(Class<?> c : m.getParameterTypes()) {
-						log.debug("\tparamTypeClass="+c);
-					}
-				}
 				log.debug("called method="+methodName);
 				for (int i = 0; i < parameters.length; i++) {
 					log.debug("\t with param="+parameters[i]+", of class="+parameterTypes[i]);
 				}
 				log.debug("\t on instance of class="+instance.getClass().getName());
-				log.debug("=================CallMathod end====================");
+				log.debug("=================CallMethod end====================");
 			}
 			
 			Method method = instance.getClass().getMethod(methodName, parameterTypes);
@@ -138,6 +135,12 @@ public class SWTBotBridge {
 			Object o = method.invoke(instance, params);
 			return o;
 		} catch (Exception e) {
+			for(Method m : instance.getClass().getMethods()) {
+				log.debug("method="+m);
+				for(Class<?> c : m.getParameterTypes()) {
+					log.debug("\tparamTypeClass="+c);
+				}
+			}
 			throw CauseException.generateException(e);
 		}
 	}
@@ -306,6 +309,7 @@ public class SWTBotBridge {
 		if(sWTBOTCLASSLOADER==null) {
 			ISSWTGEFBOTINITIATED = false;
 			ISSWTWKBOTINITIATED = false;
+			ISSWTNATTABLEBOTINITIATED = false;
 		}
 
 		if(log.isDebugEnabled()) {
@@ -315,7 +319,7 @@ public class SWTBotBridge {
 
 
 	public static boolean isISBRIDGEINITIATED() {
-		return ISSWTGEFBOTINITIATED && ISSWTWKBOTINITIATED;
+		return ISSWTGEFBOTINITIATED && ISSWTWKBOTINITIATED && ISSWTNATTABLEBOTINITIATED;
 	}
 
 
@@ -352,6 +356,24 @@ public class SWTBotBridge {
 
 		if(log.isDebugEnabled()) {
 			log.debug("SWTGEFBOT set by plugin : after ="+SWTGEFBOT);
+		}
+	}
+	
+	public static Object getSWTNATTABLEBOT() {
+		return SWTNATTABLEBOT;
+	}
+
+
+	public static void setSWTNATTABLEBOT(Object sWTNATTABLEBOT) {
+		if(log.isDebugEnabled()) {
+			log.debug("SWTNATTABLEBOT set by plugin : before="+SWTNATTABLEBOT);
+		}
+		
+		SWTNATTABLEBOT = sWTNATTABLEBOT;
+		ISSWTNATTABLEBOTINITIATED = (sWTNATTABLEBOT!=null);
+
+		if(log.isDebugEnabled()) {
+			log.debug("SWTNATTABLEBOT set by plugin : after ="+SWTNATTABLEBOT);
 		}
 	}
 

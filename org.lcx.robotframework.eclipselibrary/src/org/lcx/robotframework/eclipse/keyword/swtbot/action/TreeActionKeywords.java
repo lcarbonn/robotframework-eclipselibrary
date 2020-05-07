@@ -49,6 +49,15 @@ public class TreeActionKeywords {
     		return tree.getText();
     	}
 	
+	@RobotKeyword("Get the Id of the tree\n\n"
+            + "Example:\n"
+            + "| Get Tree Id |\n")
+//    @ArgumentNames({"text"})
+        public String getTreeId() throws SWTBotBridgeException {
+    		SWTBotTree tree = (SWTBotTree)Context.getCurrentWidget(SWTBotTree.class);
+    		return tree.getId();
+    	}
+	
 	@RobotKeyword("Get the tooltip text of the tree\n\n"
             + "Example:\n"
             + "| Get Tree Tooltip Text |\n")
