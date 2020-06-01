@@ -2,9 +2,6 @@ target "RobotFramework SimRel0320"
 
 with source requirements 
 
-
-
-
 location "http://download.eclipse.org/releases/2020-03" {
 	
 	// A FILTRER LA DEDANS ...
@@ -28,6 +25,18 @@ location "http://download.eclipse.org/releases/2020-03" {
 	
 }
 
+
+// Nebula general
+location "http://download.eclipse.org/nebula/releases/latest" {
+}
+
+// Nebula nattable
+location "http://download.eclipse.org/nattable/snapshots/latest/repository" {
+	org.eclipse.nebula.widgets.nattable.core
+}
+
+ 
+
 // Add support for java 11 (removed javax.annotation)...
 /* location "https://download.eclipse.org/tools/orbit/downloads/drops/R20200224183213/repository" {
 	javax.annotation
@@ -37,6 +46,8 @@ location "https://download.eclipse.org/technology/swtbot/releases/latest/" {
 org.eclipse.swtbot.junit4_x
 org.eclipse.swtbot.eclipse.test.junit.feature.group
 org.eclipse.swtbot.nebula.nattable.feature.group
+org.eclipse.swtbot.nebula.nattable.finder
+org.eclipse.swtbot.nebula.nattable.feature.jar
 org.eclipse.swtbot.eclipse.gef.feature.group
 }
 

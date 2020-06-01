@@ -17,3 +17,4 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.e4.ui.workbench,
  org.eclipse.e4.ui.model.workbench,
  org.eclipse.swtbot.nebula.nattable.finder
+Automatic-Module-Name: org.lcx.robotframework.swtbotplugin

@@ -16,15 +16,7 @@ import java.util.TreeMap;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotEditor;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
-import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotWorkbenchPart;
-import org.eclipse.swtbot.eclipse.gef.finder.SWTGefBot;
-import org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefEditor;
-import org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefView;
-import org.eclipse.swtbot.eclipse.gef.finder.widgets.SWTBotGefViewer;
-import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.widgets.AbstractSWTBotControl;
-import org.lcx.robotframework.swtbot.eclipse.finder.AbstractSWTBotFactory;
-import org.lcx.robotframework.swtbot.swt.finder.SWTBotFactory;
 
 public class ClassScannerGen {
 
