@@ -5,7 +5,8 @@ Bundle-SymbolicName: org.lcx.robotframework.eclipselibrary
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .,
  lib/javalib-core-1.0.3.jar,
- lib/jrobotremoteserver-4.0.0.jar
+ lib/jrobotremoteserver-4.0.0.jar,
+ lib/robotframework-3.2.1.jar
 Require-Bundle: org.apache.log4j;bundle-version="1.2.15",
  org.eclipse.swtbot.nebula.nattable.finder,
  org.junit

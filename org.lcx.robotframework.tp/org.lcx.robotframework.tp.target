@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="RobotFramework SimRel0320" sequenceNumber="1599055460">
+<target name="RobotFramework SimRel0320" sequenceNumber="1599497989">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.rcp.feature.group" version="4.16.0.v20200604-0951"/>
@@ -24,7 +24,7 @@
       <repository location="http://download.eclipse.org/nebula/releases/latest"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.nebula.widgets.nattable.core" version="2.0.0.202009011200"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.core" version="2.0.0.202009021600"/>
       <repository location="http://download.eclipse.org/nattable/snapshots/latest/repository"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
