@@ -13,6 +13,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.swtbot.eclipse.gef.finder;bundle-version="2.0.4",
  org.eclipse.gef;bundle-version="3.5.1"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: org.lcx.robotframework.swtbot.eclipse.finder.widgets,
  org.lcx.robotframework.swtbot.swt.finder

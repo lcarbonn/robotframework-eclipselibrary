@@ -9,7 +9,10 @@ Bundle-ClassPath: .,
  lib/robotframework-3.2.1.jar
 Require-Bundle: org.apache.log4j;bundle-version="1.2.15",
  org.eclipse.swtbot.nebula.nattable.finder,
- org.junit
+ org.junit,
+ org.eclipse.swt
 Export-Package: org.lcx.robotframework.swtbot.eclipse.finder,
  org.lcx.robotframework.swtbot.eclipse.finder.widgets,
  org.lcx.robotframework.swtbot.swt.finder
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: org.lcx.robotframework.eclipselibrary
