@@ -1,8 +1,8 @@
-target "RobotFramework SimRel0320"
+target "RobotFramework SimRel0920"
 
 with source requirements 
 
-location "http://download.eclipse.org/releases/2020-06" {
+location "http://download.eclipse.org/releases/2020-09" {
 	
 	// A FILTRER LA DEDANS ...
 	
@@ -38,9 +38,10 @@ location "http://download.eclipse.org/nattable/snapshots/latest/repository" {
  
 
 // Add support for java 11 (removed javax.annotation)...
-/* location "https://download.eclipse.org/tools/orbit/downloads/drops/R20200224183213/repository" {
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20200831200620/repository" {
 	javax.annotation
-} */
+}
+
 
 location "https://download.eclipse.org/technology/swtbot/releases/latest/" {
 org.eclipse.swtbot.junit4_x
