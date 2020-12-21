@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="RobotFramework SimRel0920" sequenceNumber="1601292784">
+<target name="RobotFramework SimRel1220" sequenceNumber="1608566883">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.rcp.feature.group" version="4.17.0.v20200902-1800"/>
+      <unit id="org.eclipse.rcp.feature.group" version="4.18.0.v20201202-1800"/>
       <unit id="org.eclipse.ant.core" version="3.5.800.v20200608-1251"/>
       <unit id="org.apache.commons.io" version="2.6.0.v20190123-2029"/>
-      <unit id="org.eclipse.pde.feature.group" version="3.14.500.v20200902-1800"/>
+      <unit id="org.eclipse.pde.feature.group" version="3.14.600.v20201202-1800"/>
       <unit id="org.eclipse.emf.ant" version="2.11.0.v20200324-0723"/>
-      <unit id="org.eclipse.emf.sdk.feature.group" version="2.23.0.v20200822-0801"/>
-      <unit id="org.eclipse.emf.codegen.ecore.feature.group" version="2.23.0.v20200701-0840"/>
+      <unit id="org.eclipse.emf.sdk.feature.group" version="2.24.0.v20200917-1439"/>
+      <unit id="org.eclipse.emf.codegen.ecore.feature.group" version="2.24.0.v20200917-1423"/>
       <unit id="org.eclipse.emf.importer.ecore" version="2.10.0.v20200324-0723"/>
       <unit id="org.eclipse.emf.importer" version="2.12.0.v20190321-1539"/>
       <unit id="org.eclipse.ant.launching" version="1.2.1000.v20200610-1458"/>
-      <unit id="org.eclipse.core.runtime" version="3.19.0.v20200724-1004"/>
+      <unit id="org.eclipse.core.runtime" version="3.20.0.v20201027-1526"/>
       <unit id="org.junit" version="4.13.0.v20200204-1500"/>
-      <unit id="org.eclipse.jdt.junit.runtime" version="3.5.300.v20200720-0748"/>
-      <unit id="org.eclipse.sdk.feature.group" version="4.17.0.v20200902-1800"/>
-      <repository location="http://download.eclipse.org/releases/2020-09"/>
+      <unit id="org.eclipse.jdt.junit.runtime" version="3.5.400.v20201120-2059"/>
+      <unit id="org.eclipse.sdk.feature.group" version="4.18.0.v20201202-1800"/>
+      <repository location="http://download.eclipse.org/releases/2020-12"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <repository location="http://download.eclipse.org/nebula/releases/latest"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.nebula.widgets.nattable.core" version="2.0.0.202009221320"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.core" version="2.0.0.202012161455"/>
       <repository location="http://download.eclipse.org/nattable/snapshots/latest/repository"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">

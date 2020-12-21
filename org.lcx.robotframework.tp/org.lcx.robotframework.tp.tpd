@@ -1,8 +1,8 @@
-target "RobotFramework SimRel0920"
+target "RobotFramework SimRel1220"
 
 with source requirements 
 
-location "http://download.eclipse.org/releases/2020-09" {
+location "http://download.eclipse.org/releases/2020-12" {
 	
 	// A FILTRER LA DEDANS ...
 	
