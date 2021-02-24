@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="RobotFramework SimRel1220" sequenceNumber="1608566883">
+<target name="RobotFramework SimRel1220" sequenceNumber="1614175591">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.rcp.feature.group" version="4.18.0.v20201202-1800"/>
@@ -24,12 +24,12 @@
       <repository location="http://download.eclipse.org/nebula/releases/latest"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.nebula.widgets.nattable.core" version="2.0.0.202012161455"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.core" version="2.0.1.202102181509"/>
       <repository location="http://download.eclipse.org/nattable/snapshots/latest/repository"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="javax.annotation" version="1.3.5.v20200504-1837"/>
-      <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20200831200620/repository"/>
+      <unit id="javax.annotation" version="1.3.5.v20200909-1856"/>
+      <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20201130205003/repository"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.swtbot.junit4_x" version="3.0.0.202006031738"/>

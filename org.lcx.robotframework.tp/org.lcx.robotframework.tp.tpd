@@ -38,7 +38,7 @@ location "http://download.eclipse.org/nattable/snapshots/latest/repository" {
  
 
 // Add support for java 11 (removed javax.annotation)...
-location "https://download.eclipse.org/tools/orbit/downloads/drops/R20200831200620/repository" {
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20201130205003/repository" {
 	javax.annotation
 }
 
