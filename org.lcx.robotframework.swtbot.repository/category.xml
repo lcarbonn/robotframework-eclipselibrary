@@ -6,5 +6,8 @@
    <feature id="org.lcx.robotframework.swtbot.feature">
       <category name="RobotFramework EclipseLibrary"/>
    </feature>
+   <feature id="org.lcx.robotframework.swtbot.feature.source">
+      <category name="RobotFramework EclipseLibrary"/>
+   </feature>
    <category-def name="RobotFramework EclipseLibrary" label="RobotFramework EclipseLibrary"/>
 </site>
