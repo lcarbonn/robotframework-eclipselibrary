@@ -1,8 +1,8 @@
-target "RobotFramework SimRel0621"
+target "RobotFramework SimRel1221"
 
 with source requirements 
 
-location "http://download.eclipse.org/releases/2021-09" {
+location "http://download.eclipse.org/releases/2021-12" {
 	
 	// A FILTRER LA DEDANS ...
 	
@@ -38,7 +38,7 @@ location "http://download.eclipse.org/nattable/snapshots/latest/repository" {
  
 
 // Add support for java 11 (removed javax.annotation)...
-location "https://download.eclipse.org/tools/orbit/downloads/drops/R20210825222808/repository" {
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20211213173813/repository" {
 	javax.annotation
 }
 
