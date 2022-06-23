@@ -39,7 +39,7 @@
 						<artifact>
 							<groupId>org.lcx.robotframework</groupId>
 							<artifactId>org.lcx.robotframework.tp</artifactId>
-							<version>4.23.0</version>
+							<version>4.24.0</version>
 						</artifact>
 					</target>
 					<environments>
