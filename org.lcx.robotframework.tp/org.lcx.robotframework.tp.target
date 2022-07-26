@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="RobotFramework SimRel0622" sequenceNumber="1658846817">
+<target name="RobotFramework SimRel0622" sequenceNumber="1658846904">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.rcp.feature.group" version="4.24.0.v20220607-0700"/>
@@ -39,7 +39,7 @@
       <unit id="org.eclipse.swtbot.nebula.nattable.finder" version="4.0.0.202206011610"/>
       <unit id="org.eclipse.swtbot.nebula.nattable.feature.jar" version="4.0.0.202206011610"/>
       <unit id="org.eclipse.swtbot.eclipse.gef.feature.group" version="4.0.0.202206011610"/>
-      <repository location="https://download.eclipse.org/technology/swtbot/releases/latest/"/>
+      <repository location="https://download.eclipse.org/technology/swtbot/releases/4.0.0/"/>
     </location>
   </locations>
 </target>

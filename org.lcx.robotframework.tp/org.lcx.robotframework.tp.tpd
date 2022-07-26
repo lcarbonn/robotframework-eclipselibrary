@@ -43,7 +43,7 @@ location "https://download.eclipse.org/tools/orbit/downloads/drops/R202205311853
 }
 
 
-location "https://download.eclipse.org/technology/swtbot/releases/latest/" {
+location "https://download.eclipse.org/technology/swtbot/releases/4.0.0/" {
 org.eclipse.swtbot.junit4_x
 org.eclipse.swtbot.eclipse.test.junit.feature.group
 org.eclipse.swtbot.nebula.nattable.feature.group
