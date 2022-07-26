@@ -865,14 +865,6 @@ Public License instead of this License.  But first, please read
       <update label="Robotframework Eclipse Library plugin for SWTBot" url="http://update-site.scrumvision.org/"/>
    </url>
 
-   <requires>
-      <import plugin="org.eclipse.swtbot.eclipse.core" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.eclipse.finder" version="2.0.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.swtbot" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.go" version="2.0.3" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtbot.eclipse.gef.finder" version="2.0.4" match="greaterOrEqual"/>
-   </requires>
-
    <plugin
          id="org.lcx.robotframework.swtbotplugin"
          download-size="0"
