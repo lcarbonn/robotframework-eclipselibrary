@@ -26,11 +26,11 @@ location "http://download.eclipse.org/releases/2022-06" {
 
 
 // Nebula general
-location "http://download.eclipse.org/nebula/releases/latest" {
+location "http://download.eclipse.org/nebula/releases/2.7.1" {
 }
 
 // Nebula nattable
-location "http://download.eclipse.org/nattable/snapshots/latest/repository" {
+location "http://download.eclipse.org/nattable/snapshots/36/repository" {
 	org.eclipse.nebula.widgets.nattable.core
 }
 
