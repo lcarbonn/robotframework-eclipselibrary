@@ -1,8 +1,8 @@
-target "RobotFramework SimRel0622"
+target "RobotFramework SimRel0922"
 
 with source requirements 
 
-location "http://download.eclipse.org/releases/2022-06" {
+location "https://download.eclipse.org/releases/2022-09" {
 	
 	// A FILTRER LA DEDANS ...
 	
@@ -26,18 +26,18 @@ location "http://download.eclipse.org/releases/2022-06" {
 
 
 // Nebula general
-location "http://download.eclipse.org/nebula/releases/2.7.1" {
+location "https://download.eclipse.org/nebula/releases/2.7.2" {
 }
 
 // Nebula nattable
-location "http://download.eclipse.org/nattable/snapshots/36/repository" {
+location "https://download.eclipse.org/nattable/snapshots/42/repository" {
 	org.eclipse.nebula.widgets.nattable.core
 }
 
  
 
 // Add support for java 11 (removed javax.annotation)...
-location "https://download.eclipse.org/tools/orbit/downloads/drops/R20220531185310/repository" {
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20220830213456/repository" {
 	javax.annotation
 	org.apache.log4j
 }
