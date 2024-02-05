@@ -1,8 +1,8 @@
-target "RobotFramework SimRel0623"
+target "RobotFramework SimRel1223"
 
 with source requirements 
 
-location "https://download.eclipse.org/releases/2023-06" {
+location "https://download.eclipse.org/releases/2023-12" {
 	
 	// A FILTRER LA DEDANS ...
 	
@@ -22,7 +22,6 @@ location "https://download.eclipse.org/releases/2023-06" {
 	org.eclipse.jdt.junit.runtime
 	org.eclipse.sdk.feature.group
 	
-	javax.annotation
 	org.apache.log4j
 	
 }
