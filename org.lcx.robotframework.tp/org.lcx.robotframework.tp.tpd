@@ -28,7 +28,7 @@ location "https://download.eclipse.org/releases/2023-12" {
 
 
 // Nebula nattable
-location "https://download.eclipse.org/nattable/snapshots/latest/repository" {
+location "https://download.eclipse.org/nattable/releases/2.2.1/repository" {
 	org.eclipse.nebula.widgets.nattable.core
 }
 
