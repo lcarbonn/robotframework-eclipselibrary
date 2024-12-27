@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="RobotFramework SimRel0324" sequenceNumber="1710846909">
+<target name="RobotFramework SimRel-2024-12" sequenceNumber="1735292658">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.rcp.feature.group" version="4.31.0.v20240229-0520"/>
-      <unit id="org.eclipse.ant.core" version="3.7.300.v20231214-1526"/>
+      <unit id="org.eclipse.rcp.feature.group" version="4.34.0.v20241120-1800"/>
+      <unit id="org.eclipse.ant.core" version="3.7.500.v20241028-1712"/>
       <unit id="org.apache.commons.io" version="2.8.0.v20210415-0900"/>
-      <unit id="org.eclipse.pde.feature.group" version="3.15.300.v20240229-0520"/>
-      <unit id="org.eclipse.emf.ant" version="2.12.0.v20230211-1150"/>
-      <unit id="org.eclipse.emf.sdk.feature.group" version="2.37.0.v20240203-1010"/>
-      <unit id="org.eclipse.emf.codegen.ecore.feature.group" version="2.37.0.v20240203-1010"/>
-      <unit id="org.eclipse.emf.importer.ecore" version="2.11.0.v20230211-1150"/>
-      <unit id="org.eclipse.emf.importer" version="2.13.0.v20230211-1150"/>
-      <unit id="org.eclipse.ant.launching" version="1.4.300.v20240110-1213"/>
-      <unit id="org.eclipse.core.runtime" version="3.31.0.v20240215-1631"/>
-      <unit id="org.junit" version="4.13.2.v20230809-1000"/>
-      <unit id="org.eclipse.jdt.junit.runtime" version="3.7.400.v20231214-1952"/>
-      <unit id="org.eclipse.sdk.feature.group" version="4.31.0.v20240229-1022"/>
-      <unit id="org.apache.log4j" version="1.2.24.v20221221-2012"/>
-      <repository location="https://download.eclipse.org/releases/2024-03"/>
+      <unit id="org.eclipse.pde.feature.group" version="3.16.100.v20241120-1800"/>
+      <unit id="org.eclipse.emf.ant" version="2.13.0.v20240604-0832"/>
+      <unit id="org.eclipse.emf.sdk.feature.group" version="2.40.0.v20241018-1213"/>
+      <unit id="org.eclipse.emf.codegen.ecore.feature.group" version="2.40.0.v20240911-1442"/>
+      <unit id="org.eclipse.emf.importer.ecore" version="2.12.0.v20240604-0832"/>
+      <unit id="org.eclipse.emf.importer" version="2.14.0.v20240604-0832"/>
+      <unit id="org.eclipse.ant.launching" version="1.4.600.v20241028-1712"/>
+      <unit id="org.eclipse.core.runtime" version="3.32.0.v20241003-0436"/>
+      <unit id="org.junit" version="4.13.2.v20240929-1000"/>
+      <unit id="org.eclipse.jdt.junit.runtime" version="3.7.500.v20240702-1918"/>
+      <unit id="org.eclipse.sdk.feature.group" version="4.34.0.v20241120-1800"/>
+      <unit id="org.apache.log4j" version="1.2.25"/>
+      <repository location="https://download.eclipse.org/releases/2024-12"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.nebula.widgets.nattable.core" version="2.3.0.202402191815"/>
-      <repository location="https://download.eclipse.org/nattable/releases/2.3.0/repository"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.core" version="2.5.0.202411280718"/>
+      <repository location="https://download.eclipse.org/nattable/releases/2.5.0/repository"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.swtbot.junit4_x" version="4.1.0.202306071420"/>
-      <unit id="org.eclipse.swtbot.eclipse.test.junit.feature.group" version="4.1.0.202306071420"/>
-      <unit id="org.eclipse.swtbot.nebula.nattable.feature.group" version="4.1.0.202306071420"/>
-      <unit id="org.eclipse.swtbot.nebula.nattable.finder" version="4.1.0.202306071420"/>
-      <unit id="org.eclipse.swtbot.nebula.nattable.feature.jar" version="4.1.0.202306071420"/>
-      <unit id="org.eclipse.swtbot.eclipse.gef.feature.group" version="4.1.0.202306071420"/>
-      <repository location="https://download.eclipse.org/technology/swtbot/releases/4.1.0/"/>
+      <unit id="org.eclipse.swtbot.junit4_x" version="4.2.1.202406141605"/>
+      <unit id="org.eclipse.swtbot.eclipse.test.junit.feature.group" version="4.2.1.202406141605"/>
+      <unit id="org.eclipse.swtbot.nebula.nattable.feature.group" version="4.2.1.202406141605"/>
+      <unit id="org.eclipse.swtbot.nebula.nattable.finder" version="4.2.1.202406141605"/>
+      <unit id="org.eclipse.swtbot.nebula.nattable.feature.jar" version="4.2.1.202406141605"/>
+      <unit id="org.eclipse.swtbot.eclipse.gef.feature.group" version="4.2.1.202406141605"/>
+      <repository location="https://download.eclipse.org/technology/swtbot/releases/4.2.1/"/>
     </location>
   </locations>
 </target>
