@@ -14,5 +14,5 @@ Require-Bundle: org.apache.log4j,
 Export-Package: org.lcx.robotframework.swtbot.eclipse.finder,
  org.lcx.robotframework.swtbot.eclipse.finder.widgets,
  org.lcx.robotframework.swtbot.swt.finder
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: org.lcx.robotframework.eclipselibrary
